@@ -1,0 +1,17 @@
+﻿## Interface: 11300
+## Title: WoWchinese-Quests
+## Version: CLASSIC.01
+## Notes_en: AddOn displays the translated quest informations.
+## Notes: Dodatek wyswietla przetlumaczone questy.
+## Author: Platine
+## eMail: platine.wow@gmail.com
+## WWW: https://wowpopolsku.pl
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: QTR_PS, QTR_SAVED, QTR_MISSING, QTR_GOSSIP, QTR_CONTROL
+## SavedVariablesPerCharacter: QTR_PC
+
+QuestData_cn_classic.lua
+Gossip_CN.lua
+WoWchinese_Quests.lua
+WoWchinese_Quests.xml
