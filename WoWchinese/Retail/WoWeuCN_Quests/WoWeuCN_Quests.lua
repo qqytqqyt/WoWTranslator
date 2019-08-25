@@ -1,4 +1,4 @@
-﻿-- Addon: WoWpoPolsku_Quests (wersja: 8.09) 2019.08.11
+﻿-- Addon: WoWpoPolsku_Quests (wersja: 8.09) 2019.08.25
 -- Opis: AddOn wyświetla przetłumaczone questy w języku polskim.
 -- Autor: Platine  (e-mail: platine.wow@gmail.com)
 -- Addon project page: https://wowpopolsku.pl
@@ -1084,15 +1084,18 @@ function QTR_Gossip_Show()
          end
          if (GetNumGossipOptions()>0) then    -- są jeszcze przyciski funkcji dodatkowych
             local pozycja=GetNumGossipActiveQuests()+GetNumGossipAvailableQuests()+1;
-            local titleButton="";
+            local titleButton;
             for i = 1, GetNumGossipOptions(), 1 do 
-               titleButton=getglobal("GossipTitleButton"..tostring(pozycja+i)):GetText();
-               Hash = StringHash(titleButton);
-               if ( GS_Gossip[Hash] ) then   -- istnieje tłumaczenie tekstu dodatkowego
-                  getglobal("GossipTitleButton"..tostring(pozycja+i)):SetText(GS_Gossip[Hash]);
-                  getglobal("GossipTitleButton"..tostring(pozycja+i)):SetFont(QTR_Font2, 13);
-               else
-                  QTR_GOSSIP[Nazwa_NPC..'@'..tostring(Hash)] = titleButton;
+               titleButton=getglobal("GossipTitleButton"..tostring(pozycja+i));
+               if (titleButton:GetText()) then
+                  Hash = StringHash(titleButton:GetText());
+                  if ( GS_Gossip[Hash] ) then   -- istnieje tłumaczenie tekstu dodatkowego
+                     local bez_polskich = BezPL(GS_Gossip[Hash]);
+                     titleButton:SetText(bez_polskich);
+                     --getglobal(titleButton):SetFont(QTR_Font2, 13);
+                  else
+                     QTR_GOSSIP[Nazwa_NPC..'@'..tostring(Hash)] = titleButton:GetText();
+                  end
                end
             end
          end         
@@ -1100,6 +1103,30 @@ function QTR_Gossip_Show()
    end
 end
 
+
+-- Funkcja usuwa polskie znaki z podanego tekstu
+function BezPL(txt)
+   local wyn;
+   wyn=string.gsub(txt, 'ą', 'a');
+   wyn=string.gsub(wyn, 'ć', 'c');
+   wyn=string.gsub(wyn, 'ę', 'e');
+   wyn=string.gsub(wyn, 'ń', 'n');
+   wyn=string.gsub(wyn, 'ł', 'l');
+   wyn=string.gsub(wyn, 'ó', 'o');
+   wyn=string.gsub(wyn, 'ś', 's');
+   wyn=string.gsub(wyn, 'ź', 'z');
+   wyn=string.gsub(wyn, 'ż', 'z');
+   wyn=string.gsub(wyn, 'Ą', 'A');
+   wyn=string.gsub(wyn, 'Ć', 'C');
+   wyn=string.gsub(wyn, 'Ę', 'E');
+   wyn=string.gsub(wyn, 'Ń', 'N');
+   wyn=string.gsub(wyn, 'Ł', 'L');
+   wyn=string.gsub(wyn, 'Ó', 'O');
+   wyn=string.gsub(wyn, 'Ś', 'S');
+   wyn=string.gsub(wyn, 'Ź', 'Z');
+   wyn=string.gsub(wyn, 'Ż', 'Z');
+   return wyn;
+end
 
 -- Otworzono okienko QuestLogPopupDetailFrame lub QuestMapDetailsScrollFrame lub QuestGuru lub Immersion
 function QTR_QuestPrepare(zdarzenie)
