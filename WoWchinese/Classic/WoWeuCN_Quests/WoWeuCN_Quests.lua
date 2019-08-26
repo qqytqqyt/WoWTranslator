@@ -50,36 +50,44 @@ local curr_goss = "X";
 local curr_hash = 0;
 local Original_Font1 = "Fonts\\MORPHEUS.ttf";
 local Original_Font2 = "Fonts\\FRIZQT__.ttf";
-local p_race = {
-  ["Dwarf"] = { W1="矮人", W2="矮人" },
-  ["Gnome"] = { W1="侏儒", W2="侏儒" },
-  ["Human"] = { W1="人类", W2="人类" },
-  ["Night Elf"] = { W1="暗夜精灵", W2="暗夜精灵" },
-  ["Orc"] = { W1="兽人", W2="兽人" },
-  ["Tauren"] = { W1="牛头人", W2="牛头人" },
-  ["Troll"] = { W1="巨魔", W2="巨魔" },
-  ["Undead"] = { W1="亡灵", W2="亡灵" },
+local p_race ={
+      [10] = { W1="血精灵", W2="血精灵" }, 
+      ["Dark Iron Dwarf"] = { W1="黑铁矮人", W2="黑铁矮人" },
+      [11] = { W1="德莱尼", W2="德莱尼" },
+      [3] = { W1="矮人", W2="矮人" },
+      [7] = { W1="侏儒", W2="侏儒" },
+      ["Goblin"] = { W1="哥布林", W2="哥布林" },
+      ["Highmountain Tauren"] = { W1="高岭牛头人", W2="高岭牛头人" },
+      [1] = { W1="人类", W2="人类" },
+      [4] = { W1="暗夜精灵", W2="暗夜精灵" },
+      [2] = { W1="兽人", W2="兽人" },
+      [6] = { W1="牛头人", W2="牛头人" },
+      [8] = { W1="巨魔", W2="巨魔" },
+      [5] = { W1="亡灵", W2="亡灵" }, }
+  
 local p_class = {
-  ["Druid"] = { W1="德鲁伊", W2="德鲁伊" },
-  ["Hunter"] = { W1="猎人", W2="猎人" },
-  ["Mage"] = { W1="法师", W2="法师" },
-  ["Paladin"] = { W1="圣骑士", W2="圣骑士" },
-  ["Priest"] = { W1="牧师", W2="牧师" },
-  ["Rogue"] = { W1="盗贼", W2="盗贼"},
-  ["Shaman"] = { W1="萨满", W2="萨满" },
-  ["Warlock"] = { W1="术士", W2="术士" },
-  ["Warrior"] = { W1="战士", W2="战士" }, }
-if (p_race[QTR_race]) then      
-  player_race = { W1=p_race[QTR_race].W1, W2=p_race[QTR_race].W2 };
+      [6] = { W1="死亡骑士", W2="死亡骑士" },
+      [11] = { W1="德鲁伊", W2="德鲁伊" },
+      [3] = { W1="猎人", W2="猎人" },
+      [8] = { W1="法师", W2="法师" },
+      [2] = { W1="圣骑士", W2="圣骑士" },
+      [5] = { W1="牧师", W2="牧师" },
+      [4] = { W1="盗贼", W2="盗贼"},
+      [7] = { W1="萨满", W2="萨满" },
+      [9] = { W1="术士", W2="术士" },
+      [1] = { W1="战士", W2="战士" }, }
+
+if (p_race[QTR_race_Id]) then      
+   player_race = { W1=p_race[QTR_race_Id].W1, W2=p_race[QTR_race_Id].W2 };
 else   
-  player_race = { W1=QTR_race, W2=QTR_race };
-  print ("|cff55ff00QTR - 新种族: "..QTR_race);
+   player_race = { W1=QTR_race, W2=QTR_race };
+   print ("|cff55ff00QTR - 新种族: "..QTR_race);
 end
-if (p_class[QTR_class]) then
-  player_class = { W1=p_class[QTR_class].W1, W2=p_class[QTR_class].W2 };
+if (p_class[QTR_class_Id]) then
+   player_class = { W1=p_class[QTR_class_Id].W1, W2=p_class[QTR_class_Id].W2 };
 else
-  player_class = { W1=QTR_class, W2=QTR_class };
-  print ("|cff55ff00QTR - 新职业: "..QTR_class);
+   player_class = { W1=QTR_class, W2=QTR_class };
+   print ("|cff55ff00QTR - 新职业: "..QTR_class_Id);
 end
 
 -- Global variables initialtion
