@@ -20,7 +20,7 @@ QTR_Messages = {
     reqitems   = "需要道具:", 
     itemchoose1= "你可以从中选取一件奖励:", 
     itemchoose2= "选取一件奖励:", 
-    itemreceiv1= "你将得到奖励:", 
+    itemreceiv1= "你还将得到:", 
     itemreceiv2= "你将得到奖励:", 
     learnspell = "学会法术:", 
     multipleID = "该翻译可能不能准确反映原文本", 
@@ -31,18 +31,12 @@ QTR_Messages = {
     active     = "激活插件", 
     mode       = "选择插件模式", 
     mode1      = "直接替换任务窗口文本", 
-    mode2      = "使用新窗口显示翻译文本", 
-    options1   = "模式 1 额外选项:", 
+    options1   = "额外选项:", 
     transtitle = "翻译任务标题", 
-    options2   = "模式 2 额外选项:", 
-    height1    = "窗口高度 350|425 (默认)", 
-    height2    = "窗口高度 430|525", 
-    width1     = "窗口宽度 320|320 (默认)", 
-    width2     = "窗口宽度 495|495", 
  }; 
 
-QTR_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\SourceHanSansCN-Regular.ttf"; 
-QTR_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\SourceHanSansCN-Regular.ttf"; 
+QTR_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
+QTR_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
 
 QTR_QuestData = {  
     ["1"]={["Title"]="坎瑞萨德的任务", ["Objectives"]="与坎瑞萨德交谈，回复你的天赋、武器、与坐骑。", ["Description"]="欢迎你从死亡的世界归来。NEW_LINENEW_LINE在过去的时代你骄傲的挺立，是你族人之中的英雄。而现在你既堕落又破碎不过是个过去的遗物。站到我面前吧，我将唤醒你过去的荣光。NEW_LINENEW_LINE我会回复你失去的力量，让你再次完整归一。 ", ["Progress"]="", ["Completion"]="", ["Translator"]=""},
@@ -4476,7 +4470,7 @@ QTR_QuestData = {
     ["9276"]={["Title"]="进攻塞布提拉", ["Objectives"]="杀死8个暗松影法师和8个暗松猎头者，然后向远行者营地的远行者索兰娜复命。", ["Description"]="YOUR_CLASS，远行者营地的兵力相当分散，我们迫切需要你的帮助。我奉命骚扰附近的暗松巨魔营地。根据作战计划，不能让暗松巨魔有任何喘息的机会，要闹得他们不得安宁，然后再伺机发动反攻，将这帮家伙统统消灭。NEW_LINENEW_LINE因此，我们需要所有冒险者伸出援手，帮我们削减巨魔的数量。NEW_LINENEW_LINE你愿意前往东边的塞布提拉，给巨魔们一点苦头吃吗？", ["Progress"]="你在札布泰拉的攻击行动进行的怎么样了?", ["Completion"]="很好，很好!你处理的非常好，让我们来看看你能否接下更困难一点的任务。", ["Translator"]=""},
     ["9277"]={["Title"]="突袭塞布努瓦", ["Objectives"]="杀死10个暗松驭豹者和10个暗松妖术师，然后向远行者营地的远行者索兰娜复命。", ["Description"]="接下来的这项任务稍微有点挑战性。南边的塞布努瓦聚集了一批更强的暗松巨魔。我们要继续削减巨魔的数量；因此，我派你前往塞布努瓦对付暗松巨魔，随便你用什么方法，杀死他们就成。NEW_LINENEW_LINEYOUR_NAME，怎么样？你准备好了吗？", ["Progress"]="你在札布诺瓦的攻击完成了吗?", ["Completion"]="不可思议!你真的应该和队长谈谈加入远行者的事!NEW_LINENEW_LINE好了，YOUR_NAME，你已给了我们需要的空间喘口气，继续增强我们的军力。事实上，依据你的估计根本没有那么多食人妖!或许我们现在可以加入安宁地攻打死亡之域的行列?NEW_LINENEW_LINE我想你有获得一些经验吧。拿去，这是你的奖赏。", ["Translator"]=""},
     ["9278"]={["Title"]="欢迎！", ["Objectives"]="将碧蓝岗哨礼品券交给碧蓝岗哨的亚埃雷尔。", ["Description"]="欢迎来到魔兽世界！NEW_LINENEW_LINE为了感谢您购买魔兽世界典藏版，请将这张礼券交给碧蓝岗哨的亚埃雷尔。您将得到一份特别的礼物：陪伴您踏上冒险旅途的小宠物！NEW_LINENEW_LINE再次感谢您的支持，请尽情享受魔兽世界的乐趣吧！", ["Progress"]="您好!很高兴见到您!NEW_LINENEW_LINE我看到您手里拿着一张特殊的礼品券，把它交给我，您就可以得到一件特殊的礼品!", ["Completion"]="您一定会成为一个真正的英雄，YOUR_NAME。欢迎您来到艾泽拉斯世界，请从我们为您精心准备的特殊礼品中挑选一件吧!", ["Translator"]=""},
-    ["9279"]={["Title"]="你活下来了！", ["Objectives"]="与埃门谷坠毁点的普罗尼图斯谈一谈。", ["Description"]="别管我的伤势了，YOUR_GENDER(兄弟;姐妹)。我们当中有任何人能够活下来，就已经是个奇迹了！NEW_LINENEW_LINE看来你对目前的情况并不是很清楚，毕竟你一直休眠了好几周的时间。NEW_LINENEW_LINE迁跃的途中发生了一些事，埃索达也因此坠毁了。许多人都已经死了。NEW_LINENEW_LINE但我一直确信你还活着，YOUR_NAME。有你在为我们努力的话，我想我们的情况很快就能转危为安的！普罗尼图斯让我在你醒了之后把你叫去他那里，他就在山脚下等着你呢。沿路向西南走过去就可以找到他了。", ["Progress"]="", ["Completion"]="YOUR_NAME，以我永恒的灵魂之名，见到你真好!我不知道为什么艾克索达会失事。只有这部分船上的我们还活着。NEW_LINENEW_LINE如果我们要救所有能救的人时间就不多了!", ["Translator"]=""},
+    ["9279"]={["Title"]="你活下来了！", ["Objectives"]="与埃门谷坠毁点的普罗尼图斯谈一谈。", ["Description"]="别管我的伤势了，YOUR_CLASS YOUR_RACE YOUR_GENDER(兄弟;姐妹)。我们当中有任何人能够活下来，就已经是个奇迹了！NEW_LINENEW_LINE看来你对目前的情况并不是很清楚，毕竟你一直休眠了好几周的时间。NEW_LINENEW_LINE迁跃的途中发生了一些事，埃索达也因此坠毁了。许多人都已经死了。NEW_LINENEW_LINE但我一直确信你还活着，YOUR_NAME。有你在为我们努力的话，我想我们的情况很快就能转危为安的！普罗尼图斯让我在你醒了之后把你叫去他那里，他就在山脚下等着你呢。沿路向西南走过去就可以找到他了。", ["Progress"]="", ["Completion"]="YOUR_NAME，以我永恒的灵魂之名，见到你真好!我不知道为什么艾克索达会失事。只有这部分船上的我们还活着。NEW_LINENEW_LINE如果我们要救所有能救的人时间就不多了!", ["Translator"]=""},
     ["9280"]={["Title"]="补充治疗水晶", ["Objectives"]="从附近的峡谷蛾身上取得8瓶蛾血，然后将它们交给埃门谷坠毁点的普罗尼图斯。", ["Description"]="我们目前最紧迫的问题就是，治疗水晶的存量已经几乎为零了。我们必须立刻补充这种水晶。NEW_LINENEW_LINE但糟糕的是，目前补充水晶的唯一可行办法就是从周围的蛾类生物血液中分解出有用的物质，因为它们的血液中含有某种非常合适的替代品。NEW_LINENEW_LINE这些蛾类生物在谷中遍地都是，西北方更加集中一些。", ["Progress"]="", ["Completion"]="", ["Translator"]=""},
     ["9281"]={["Title"]="清理道路", ["Objectives"]="杀死10只巨型纺丝蜘蛛和10只鬼爪破坏者，然后向幽魂之地安迪尔林庄园的学徒沃尔伊复命。", ["Description"]="魔导师坎迪瑞斯派我来这里猎杀那些具有攻击性的野生动物。如果能解除这些家伙构成的威胁，我们就准备在这块地方建立一座前哨站，监视亡灵天灾的动向。NEW_LINENEW_LINE要说我在做学徒时学会了什么诀窍，那就是把事情委托给别人来做——尤其是那些有生命危险的事情！NEW_LINENEW_LINE如果你感兴趣的话，就去西边和南边猎杀巨型纺丝蜘蛛和鬼爪破坏者，我会给你一笔不小的报酬。", ["Progress"]="你完成了我要你去做的任务吗，YOUR_NAME?", ["Completion"]="谢谢你帮我的忙，YOUR_NAME。想到要冒险通过离死亡之域这么近的树林真是令人害怕。", ["Translator"]=""},
     ["9282"]={["Title"]="远行者营地", ["Objectives"]="太阳圣殿的魔导师坎迪瑞斯要你去跟幽魂之地远行者营地的游侠维恩娜谈一谈。", ["Description"]="YOUR_NAME，魔导师和远行者不可能随时保持看法一致。但是说到达尔坎，我们都认为必须设法击败他和他的军团。NEW_LINENEW_LINE东北方远行者营地的游侠维恩娜掌握了敌人的重要信息。去跟她谈谈，看看能不能帮上忙。", ["Progress"]="嗯，YOUR_NAME?", ["Completion"]="坎德立斯派你来的?我有个任务要交给你，YOUR_CLASS。", ["Translator"]=""},

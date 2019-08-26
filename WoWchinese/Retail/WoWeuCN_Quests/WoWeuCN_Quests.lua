@@ -752,16 +752,16 @@ function QTR_QuestPrepare(questEvent)
 --            QTR_ToggleButton4:Disable();
 --         end
       if ( QTR_QuestData[str_ID] ) then	-- ...but there is a translation in the database
-         QTR_ToggleButton1:SetText("Quest ID="..str_ID.." (EN)");
-         QTR_ToggleButton2:SetText("Quest ID="..str_ID.." (EN)");
+         QTR_ToggleButton1:SetText("Quest ID="..str_ID);
+         QTR_ToggleButton2:SetText("Quest ID="..str_ID);
          if (isQuestGuru()) then
-            QTR_ToggleButton3:SetText("Quest ID="..str_ID.." (EN)");
+            QTR_ToggleButton3:SetText("Quest ID="..str_ID);
          end
          if (isImmersion()) then
-            QTR_ToggleButton4:SetText("Quest ID="..str_ID.." (EN)");
+            QTR_ToggleButton4:SetText("Quest ID="..str_ID);
          end
          if (isStoryline()) then
-            QTR_ToggleButton5:SetText("Quest ID="..str_ID.." (EN)");
+            QTR_ToggleButton5:SetText("Quest ID="..str_ID);
          end
       else
          QTR_ToggleButton1:SetText("Quest ID="..str_ID);
@@ -886,19 +886,19 @@ function QTR_Translate_Off(typ)
 --      MapQuestInfoRewardsFrame.ItemChooseText:SetText(QTR_MessOrig.itemreceiv1);
       numer_ID = QTR_quest_EN.id;
       if (numer_ID>0 and QTR_QuestData[str_ID]) then	-- restore original subtitle version
-         QTR_ToggleButton0:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
-         QTR_ToggleButton1:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
-         QTR_ToggleButton2:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
+         QTR_ToggleButton0:SetText("Quest ID="..QTR_quest_EN.id);
+         QTR_ToggleButton1:SetText("Quest ID="..QTR_quest_EN.id);
+         QTR_ToggleButton2:SetText("Quest ID="..QTR_quest_EN.id);
          if (QuestGuru ~= nil ) then
-            QTR_ToggleButton3:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
+            QTR_ToggleButton3:SetText("Quest ID="..QTR_quest_EN.id);
          end
          if (ImmersionFrame ~= nil ) then
-            QTR_ToggleButton4:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
+            QTR_ToggleButton4:SetText("Quest ID="..QTR_quest_EN.id);
             QTR_Immersion_OFF();
             ImmersionFrame.TalkBox.TextFrame.Text:RepeatTexts();   --reload text
          end
          if (isStoryline()) then
-            QTR_ToggleButton5:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
+            QTR_ToggleButton5:SetText("Quest ID="..QTR_quest_EN.id);
             QTR_Storyline_OFF(1);
          end
          QuestInfoTitleHeader:SetText(QTR_quest_EN.title);

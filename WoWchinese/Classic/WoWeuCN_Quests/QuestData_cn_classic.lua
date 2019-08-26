@@ -21,7 +21,7 @@ QTR_Messages = {
     itemchoose1= "你可以从中选取一件奖励:", 
     itemchoose2= "选取一件奖励:", 
     itemreceiv1= "你将得到奖励:", 
-    itemreceiv2= "你将得到奖励:", 
+    itemreceiv2= "你还将得到:", 
     learnspell = "学会法术:", 
     multipleID = "该翻译可能不能准确反映原文本", 
     currquests = "当前任务", 
@@ -31,18 +31,12 @@ QTR_Messages = {
     active     = "激活插件", 
     mode       = "选择插件模式", 
     mode1      = "直接替换任务窗口文本", 
-    mode2      = "使用新窗口显示翻译文本", 
-    options1   = "模式 1 额外选项:", 
+    options1   = "额外选项:", 
     transtitle = "翻译任务标题", 
-    options2   = "模式 2 额外选项:", 
-    height1    = "窗口高度 350|425 (默认)", 
-    height2    = "窗口高度 430|525", 
-    width1     = "窗口宽度 320|320 (默认)", 
-    width2     = "窗口宽度 495|495", 
  }; 
 
-QTR_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\SourceHanSansCN-Regular.ttf"; 
-QTR_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\SourceHanSansCN-Regular.ttf"; 
+QTR_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
+QTR_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
 
 QTR_QuestData = {  
     ["1"]={["Title"]="坎瑞萨德的任务", ["Objectives"]="与坎瑞萨德交谈，回复你的天赋、武器、与坐骑。", ["Description"]="欢迎你从死亡的世界归来。NEW_LINENEW_LINE在过去的时代你骄傲的挺立，是你族人之中的英雄。而现在你既堕落又破碎不过是个过去的遗物。站到我面前吧，我将唤醒你过去的荣光。NEW_LINENEW_LINE我会回复你失去的力量，让你再次完整归一。 ", ["Progress"]="", ["Completion"]="", ["Translator"]=""},
