@@ -1,7 +1,7 @@
 ﻿-- Polska baza przetłumaczonych tekstów (GOSSIP)
 -- dodatku WoWpoPolsku-Quests (https://wowpopolsku.pl)
 
-GS_lang = "PL";
+GS_lang = "CN";
 GS_date = "2019-08-18";
 GS_base = "436";
 

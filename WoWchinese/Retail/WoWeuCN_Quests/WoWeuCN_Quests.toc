@@ -1,17 +1,16 @@
 ﻿## Interface: 80200
-## Title: WoWpoPolsku-Quests
+## Title: WoWeuCN-Quests
 ## Version: 8.09
-## Notes_en: AddOn displays the translated quest informations.
-## Notes: Dodatek wyswietla przetlumaczone questy.
-## Author: Platine
-## eMail: platine.wow@gmail.com
-## WWW: https://wowpopolsku.pl
+## Notes_en: AddOn displays the translated quest informations in Chinese.
+## Notes: Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
+## Author: qqytqqyt
+## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: QTR_PS, QTR_SAVED, QTR_MISSING, QTR_GOSSIP
 ## SavedVariablesPerCharacter: QTR_PC
 
-QuestData_pl.lua
-Gossip_PL.lua
-WoWpoPolsku_Quests.lua
-WoWpoPolsku_Quests.xml
+QuestData_cn.lua
+Gossip_CN.lua
+WoWeuCN_Quests.lua
+WoWeuCN_Quests.xml
