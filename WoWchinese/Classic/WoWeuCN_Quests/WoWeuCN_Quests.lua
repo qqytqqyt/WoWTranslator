@@ -1,6 +1,6 @@
 ﻿-- Addon: WoWeuCN-Quests
 -- Author: qqytqqyt
--- Inspired by: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
+-- Credit to: Platine https://wowpopolsku.pl
 
 -- Local variables
 local QTR_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
@@ -52,12 +52,9 @@ local Original_Font1 = "Fonts\\MORPHEUS.ttf";
 local Original_Font2 = "Fonts\\FRIZQT__.ttf";
 local p_race ={
       [10] = { W1="血精灵", W2="血精灵" }, 
-      ["Dark Iron Dwarf"] = { W1="黑铁矮人", W2="黑铁矮人" },
       [11] = { W1="德莱尼", W2="德莱尼" },
       [3] = { W1="矮人", W2="矮人" },
       [7] = { W1="侏儒", W2="侏儒" },
-      ["Goblin"] = { W1="哥布林", W2="哥布林" },
-      ["Highmountain Tauren"] = { W1="高岭牛头人", W2="高岭牛头人" },
       [1] = { W1="人类", W2="人类" },
       [4] = { W1="暗夜精灵", W2="暗夜精灵" },
       [2] = { W1="兽人", W2="兽人" },
@@ -66,7 +63,6 @@ local p_race ={
       [5] = { W1="亡灵", W2="亡灵" }, }
   
 local p_class = {
-      [6] = { W1="死亡骑士", W2="死亡骑士" },
       [11] = { W1="德鲁伊", W2="德鲁伊" },
       [3] = { W1="猎人", W2="猎人" },
       [8] = { W1="法师", W2="法师" },
@@ -156,9 +152,9 @@ end
 function QTR_SlashCommand(msg)
    if (msg=="on" or msg=="ON") then
       if (QTR_PS["active"]=="1") then
-         print ("QTR - 翻译模块已启用.");
+         print ("WoWeuCN - 翻译模块已启用.");
       else
-         print ("|cffffff00QTR - 翻译模块已启用.");
+         print ("|cffffff00WoWeuCN - 翻译模块已启用.");
          QTR_PS["active"] = "1";
          QTR_ToggleButton0:Enable();
          QTR_ToggleButton1:Enable();
@@ -173,9 +169,9 @@ function QTR_SlashCommand(msg)
       end
    elseif (msg=="off" or msg=="OFF") then
       if (QTR_PS["active"]=="0") then
-         print ("QTR - 翻译模块已关闭.");
+         print ("WoWeuCN - 翻译模块已关闭.");
       else
-         print ("|cffffff00QTR - 翻译模块已关闭.");
+         print ("|cffffff00WoWeuCN - 翻译模块已关闭.");
          QTR_PS["active"] = "0";
          QTR_ToggleButton0:Disable();
          QTR_ToggleButton1:Disable();
@@ -190,35 +186,35 @@ function QTR_SlashCommand(msg)
       end
    elseif (msg=="title on" or msg=="TITLE ON" or msg=="title 1") then
       if (QTR_PS["transtilte"]=="1") then
-         print ("QTR - 翻译标题 : 启用.");
+         print ("WoWeuCN - 翻译标题 : 启用.");
       else
-         print ("|cffffff00QTR - 翻译标题 : 启用.");
+         print ("|cffffff00WoWeuCN - 翻译标题 : 启用.");
          QTR_PS["transtitle"] = "1";
          QuestInfoTitleHeader:SetFont(QTR_Font1, 18);
       end
    elseif (msg=="title off" or msg=="TITLE OFF" or msg=="title 0") then
       if (QTR_PS["transtilte"]=="0") then
-         print ("QTR - 翻译标题 : 禁用.");
+         print ("WoWeuCN - 翻译标题 : 禁用.");
       else
-         print ("|cffffff00QTR - 翻译标题 : 禁用.");
+         print ("|cffffff00WoWeuCN - 翻译标题 : 禁用.");
          QTR_PS["transtitle"] = "0";
          QuestInfoTitleHeader:SetFont(Original_Font1, 18);
       end
    elseif (msg=="title" or msg=="TITLE") then
       if (QTR_PS["transtilte"]=="1") then
-         print ("QTR - 翻译标题状态 : 启用.");
+         print ("WoWeuCN - 翻译标题状态 : 启用.");
       else
-         print ("QTR - 翻译标题状态 : 禁用.");
+         print ("WoWeuCN - 翻译标题状态 : 禁用.");
       end
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
    else
-      print ("QTR - EUCN - 指令说明:");
-      print ("      /qtr on  - 启用翻译模块");
-      print ("      /qtr off - 禁用翻译模块");
-      print ("      /qtr title on  - 启用标题翻译");
-      print ("      /qtr title off - 禁用标题翻译");
+      print ("WoWeuCN - 指令说明:");
+      print ("      /WoWeuCN on - 启用翻译模块");
+      print ("      /WoWeuCN off - 禁用翻译模块");
+      print ("      /WoWeuCN title on - 启用标题翻译");
+      print ("      /WoWeuCN title off - 禁用标题翻译");
    end
 end
 
@@ -562,7 +558,7 @@ function QTR_OnEvent(self, event, name, ...)
    if (event=="ADDON_LOADED" and name=="WoWeuCN_Quests") then
       SlashCmdList["WOWEUCN_QUESTS"] = function(msg) QTR_SlashCommand(msg); end
       SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
-      SLASH_WOWEUCN_QUESTS2 = "/qtr";
+      SLASH_WOWEUCN_QUESTS2 = "/woweucn";
       QTR_CheckVars();
       -- Create interface Options in Blizzard-Interface-Addons
       QTR_BlizzardOptions();

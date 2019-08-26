@@ -1,6 +1,6 @@
 ﻿-- Addon: WoWeuCN-Quests
 -- Author: qqytqqyt
--- Inspired by: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
+-- Credit to: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
 
 -- Local variables
 local QTR_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
@@ -160,9 +160,9 @@ end
 function QTR_SlashCommand(msg)
    if (msg=="on" or msg=="ON") then
       if (QTR_PS["active"]=="1") then
-         print ("QTR - 翻译模块已启用.");
+         print ("WOWeuCN - 翻译模块已启用.");
       else
-         print ("|cffffff00QTR - 翻译模块已启用.");
+         print ("|cffffff00WOWeuCN - 翻译模块已启用.");
          QTR_PS["active"] = "1";
          QTR_ToggleButton0:Enable();
          QTR_ToggleButton1:Enable();
@@ -177,9 +177,9 @@ function QTR_SlashCommand(msg)
       end
    elseif (msg=="off" or msg=="OFF") then
       if (QTR_PS["active"]=="0") then
-         print ("QTR - 翻译模块已关闭.");
+         print ("WOWeuCN - 翻译模块已关闭.");
       else
-         print ("|cffffff00QTR - 翻译模块已关闭.");
+         print ("|cffffff00WOWeuCN - 翻译模块已关闭.");
          QTR_PS["active"] = "0";
          QTR_ToggleButton0:Disable();
          QTR_ToggleButton1:Disable();
@@ -194,35 +194,35 @@ function QTR_SlashCommand(msg)
       end
    elseif (msg=="title on" or msg=="TITLE ON" or msg=="title 1") then
       if (QTR_PS["transtilte"]=="1") then
-         print ("QTR - 翻译标题 : 启用.");
+         print ("WOWeuCN - 翻译标题 : 启用.");
       else
-         print ("|cffffff00QTR - 翻译标题 : 启用.");
+         print ("|cffffff00WOWeuCN - 翻译标题 : 启用.");
          QTR_PS["transtitle"] = "1";
          QuestInfoTitleHeader:SetFont(QTR_Font1, 18);
       end
    elseif (msg=="title off" or msg=="TITLE OFF" or msg=="title 0") then
       if (QTR_PS["transtilte"]=="0") then
-         print ("QTR - 翻译标题 : 禁用.");
+         print ("WOWeuCN - 翻译标题 : 禁用.");
       else
-         print ("|cffffff00QTR - 翻译标题 : 禁用.");
+         print ("|cffffff00WOWeuCN - 翻译标题 : 禁用.");
          QTR_PS["transtitle"] = "0";
          QuestInfoTitleHeader:SetFont(Original_Font1, 18);
       end
    elseif (msg=="title" or msg=="TITLE") then
       if (QTR_PS["transtilte"]=="1") then
-         print ("QTR - 翻译标题状态 : 启用.");
+         print ("WOWeuCN - 翻译标题状态 : 启用.");
       else
-         print ("QTR - 翻译标题状态 : 禁用.");
+         print ("WOWeuCN - 翻译标题状态 : 禁用.");
       end
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
    else
-      print ("QTR - EUCN - 指令说明:");
-      print ("      /qtr on  - 启用翻译模块");
-      print ("      /qtr off - 禁用翻译模块");
-      print ("      /qtr title on  - 启用标题翻译");
-      print ("      /qtr title off - 禁用标题翻译");
+      print ("WOWeuCN - 指令说明:");
+      print ("      /woweucn on  - 启用翻译模块");
+      print ("      /woweucn off - 禁用翻译模块");
+      print ("      /woweucn title on  - 启用标题翻译");
+      print ("      /woweucn title off - 禁用标题翻译");
    end
 end
 
@@ -563,7 +563,7 @@ function QTR_OnEvent(self, event, name, ...)
    if (event=="ADDON_LOADED" and name=="WoWeuCN_Quests") then
       SlashCmdList["WOWEUCN_QUESTS"] = function(msg) QTR_SlashCommand(msg); end
       SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
-      SLASH_WOWEUCN_QUESTS2 = "/qtr";
+      SLASH_WOWEUCN_QUESTS2 = "/woweucn";
       QTR_CheckVars();
       -- Create interface Options in Blizzard-Interface-Addons
       QTR_BlizzardOptions();
