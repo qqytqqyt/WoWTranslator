@@ -2,13 +2,13 @@
 -- Author: qqytqqyt
 -- Inspired by: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
 
--- Zmienne lokalne
+-- Local variables
 local QTR_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local QTR_onDebug = false;      
 local QTR_name = UnitName("player");
 local QTR_class= UnitClass("player");
-local QTR_race = UnitRace("player");
-local QTR_sex = UnitSex("player");     -- 1:neutral,  2:męski,  3:żeński
+local QTR_race, QTR_race_file, QTR_race_Id = UnitRace("player");
+local QTR_sex = UnitSex("player");     -- 1:neutral,  2:male,  3:female
 local QTR_waitTable = {};
 local QTR_waitFrame = nil;
 local QTR_MessOrig = {
@@ -85,7 +85,10 @@ local p_class = {
       ["Rogue"] = { W1="盗贼", W2="盗贼"},
       ["Shaman"] = { W1="萨满", W2="萨满" },
       ["Warlock"] = { W1="术士", W2="术士" },
-      ["Warrior"] = { W1="战士", W2="战士" }, }
+      ["Warrior"] = { W1="战士", W2="战士" }, 
+      ["Druid"] = { W1="德鲁伊", W2="德鲁伊" },
+}
+      
 if (p_race[QTR_race]) then      
    player_race = { W1=p_race[QTR_race].W1, W2=p_race[QTR_race].W2 };
 else   
@@ -99,25 +102,7 @@ else
    print ("|cff55ff00QTR - 新职业: "..QTR_class);
 end
 
-
-local function StringHash(text)           -- funkcja tworząca Hash (32-bitowa liczba) podanego tekstu
-  local counter = 1;
-  local pomoc = 0;
-  local dlug = string.len(text);
-  for i = 1, dlug, 3 do 
-    counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
-    pomoc = (string.byte(text,i)*16776193);
-    counter = counter + pomoc;
-    pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
-    counter = counter + pomoc;
-    pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
-    counter = counter + pomoc;
-  end
-  return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
-end
-
-
--- Zmienne programowe zapisane na stałe na komputerze
+-- Global variables initialtion
 function QTR_CheckVars()
   if (not QTR_PS) then
      QTR_PS = {};
@@ -128,23 +113,17 @@ function QTR_CheckVars()
   if (not QTR_MISSING) then
      QTR_MISSING = {};
   end
-  -- inicjalizacja: tłumaczenia włączone
+  -- Initiation - active
   if (not QTR_PS["active"]) then
      QTR_PS["active"] = "1";
   end
-  -- inicjalizacja: tłumaczenie tytułu questu włączone
+  -- Initiation - title translation
   if (not QTR_PS["transtitle"] ) then
      QTR_PS["transtitle"] = "0";   
   end
-  -- zmienna specjalna dostępności funkcji GetQuestID 
+  -- Special variable of the GetQuestID function availability
   if ( QTR_PS["isGetQuestID"] ) then
      isGetQuestID=QTR_PS["isGetQuestID"];
-  end;
-  -- okresowe wyświetlanie reklam o dodatku 
-  if (not QTR_PS["reklama"] ) then
-     QTR_PS["text1"] = "0";
-     QTR_PS["text2"] = "1";
-     QTR_PS["channel"] = "0";
   end;
   if (not QTR_PS["other1"] ) then
      QTR_PS["other1"] = "1";
@@ -155,43 +134,18 @@ function QTR_CheckVars()
   if (not QTR_PS["other3"] ) then
      QTR_PS["other3"] = "1";
   end;
-  if (not QTR_PS["channel"] ) then
-     QTR_PS["channel"] = "0";
-  end;
-   -- zapis wersji patcha Wow'a
+   -- Path version info
   if (not QTR_PS["patch"]) then
      QTR_PS["patch"] = GetBuildInfo();
   end
-  -- jeszcze nazwa gracza w przepadkach / per character
+  -- Saved variables per character
   if (not QTR_PC) then
      QTR_PC = {};
   end
-  if (not QTR_PC["name1"] ) then
-     QTR_PC["name1"] = QTR_name;
-  end;
-  if (not QTR_PC["name2"] ) then
-     QTR_PC["name2"] = QTR_name;
-  end;
-  if (not QTR_PC["name3"] ) then
-     QTR_PC["name3"] = QTR_name;
-  end;
-  if (not QTR_PC["name4"] ) then
-     QTR_PC["name4"] = QTR_name;
-  end;
-  if (not QTR_PC["name5"] ) then
-     QTR_PC["name5"] = QTR_name;
-  end;
-  if (not QTR_PC["name6"] ) then
-     QTR_PC["name6"] = QTR_name;
-  end;
-  if (not QTR_PC["name7"] ) then
-     QTR_PC["name7"] = QTR_name;
-  end;
-  QTR_GS = {};       -- tablica na teksty oryginalne
 end
 
 
--- Sprawdza dostępność funkcji specjalnej Wow'a: GetQuestID()
+-- Checks the availability of Wow's special function: GetQuestID()
 function DetectEmuServer()
   QTR_PS["isGetQuestID"]="0";
   isGetQuestID="0";
@@ -207,9 +161,9 @@ end
 function QTR_SlashCommand(msg)
    if (msg=="on" or msg=="ON") then
       if (QTR_PS["active"]=="1") then
-         print ("QTR - tłumaczenie są włączone.");
+         print ("QTR - 翻译模块已启用.");
       else
-         print ("|cffffff00QTR - włączam tłumaczenie.");
+         print ("|cffffff00QTR - 翻译模块已启用.");
          QTR_PS["active"] = "1";
          QTR_ToggleButton0:Enable();
          QTR_ToggleButton1:Enable();
@@ -224,9 +178,9 @@ function QTR_SlashCommand(msg)
       end
    elseif (msg=="off" or msg=="OFF") then
       if (QTR_PS["active"]=="0") then
-         print ("QTR - tłumaczenia są wyłączone.");
+         print ("QTR - 翻译模块已关闭.");
       else
-         print ("|cffffff00QTR - wyłączam tłumaczenia.");
+         print ("|cffffff00QTR - 翻译模块已关闭.");
          QTR_PS["active"] = "0";
          QTR_ToggleButton0:Disable();
          QTR_ToggleButton1:Disable();
@@ -241,35 +195,35 @@ function QTR_SlashCommand(msg)
       end
    elseif (msg=="title on" or msg=="TITLE ON" or msg=="title 1") then
       if (QTR_PS["transtilte"]=="1") then
-         print ("QTR - tłumaczenie tytułów jest włączone.");
+         print ("QTR - 翻译标题 : 启用.");
       else
-         print ("|cffffff00QTR - włączam tłumaczenie tytułów.");
+         print ("|cffffff00QTR - 翻译标题 : 启用.");
          QTR_PS["transtitle"] = "1";
          QuestInfoTitleHeader:SetFont(QTR_Font1, 18);
       end
    elseif (msg=="title off" or msg=="TITLE OFF" or msg=="title 0") then
       if (QTR_PS["transtilte"]=="0") then
-         print ("QTR - tłumaczenie tytułów jest wyłączone.");
+         print ("QTR - 翻译标题 : 禁用.");
       else
-         print ("|cffffff00QTR - wyłączam tłumaczenie tytułów.");
+         print ("|cffffff00QTR - 翻译标题 : 禁用.");
          QTR_PS["transtitle"] = "0";
          QuestInfoTitleHeader:SetFont(Original_Font1, 18);
       end
    elseif (msg=="title" or msg=="TITLE") then
       if (QTR_PS["transtilte"]=="1") then
-         print ("QTR - tłumaczenie tytułów jest włączone.");
+         print ("QTR - 翻译标题状态 : 启用.");
       else
-         print ("QTR - tłumaczenie tytułów jest wyłączone.");
+         print ("QTR - 翻译标题状态 : 禁用.");
       end
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
    else
-      print ("QTR - menu szybkich komend addonu:");
-      print ("      /qtr on  - włącza tłumaczenia");
-      print ("      /qtr off - wyłącza tłumaczenia");
-      print ("      /qtr title on  - włącza tłumaczenie tytułu");
-      print ("      /qtr title off - wyłącza tłumaczenie tytułu");
+      print ("QTR - EUCN - 指令说明:");
+      print ("      /qtr on  - 启用翻译模块");
+      print ("      /qtr off - 禁用翻译模块");
+      print ("      /qtr title on  - 启用标题翻译");
+      print ("      /qtr title off - 禁用标题翻译");
    end
 end
 
@@ -281,13 +235,6 @@ function QTR_SetCheckButtonState()
   QTRCheckOther1:SetChecked(QTR_PS["other1"]=="1");
   QTRCheckOther2:SetChecked(QTR_PS["other2"]=="1");
   QTRCheckOther3:SetChecked(QTR_PS["other3"]=="1");
-  QTREditP1:SetText(QTR_PC["name1"]);
-  QTREditP2:SetText(QTR_PC["name2"]);
-  QTREditP3:SetText(QTR_PC["name3"]);
-  QTREditP4:SetText(QTR_PC["name4"]);
-  QTREditP5:SetText(QTR_PC["name5"]);
-  QTREditP6:SetText(QTR_PC["name6"]);
-  QTREditP7:SetText(QTR_PC["name7"]);
 end
 
 
@@ -305,7 +252,7 @@ function QTR_BlizzardOptions()
   QTROptionsHeader:SetJustifyV("TOP");
   QTROptionsHeader:ClearAllPoints();
   QTROptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  QTROptionsHeader:SetText("WoWeuCN-Quests, ver. "..QTR_version.." ("..QTR_base..") by Platine © 2010-2019");
+  QTROptionsHeader:SetText("WoWeuCN-Quests, ver. "..QTR_version.." ("..QTR_base..") by qqytqqyt © 2019");
 
   local QTRDateOfBase = QTROptions:CreateFontString(nil, "ARTWORK");
   QTRDateOfBase:SetFontObject(GameFontNormalLarge);
@@ -313,7 +260,7 @@ function QTR_BlizzardOptions()
   QTRDateOfBase:SetJustifyV("TOP");
   QTRDateOfBase:ClearAllPoints();
   QTRDateOfBase:SetPoint("TOPRIGHT", QTROptionsHeader, "TOPRIGHT", 0, -22);
-  QTRDateOfBase:SetText("Data bazy tłumaczeń: "..QTR_date);
+  QTRDateOfBase:SetText("翻译数据库版本日期: "..QTR_date);
   QTRDateOfBase:SetFont(QTR_Font2, 16);
 
   local QTRCheckButton0 = CreateFrame("CheckButton", "QTRCheckButton0", QTROptions, "OptionsCheckButtonTemplate");
@@ -337,50 +284,24 @@ function QTR_BlizzardOptions()
   QTRCheckButton3Text:SetFont(QTR_Font2, 13);
   QTRCheckButton3Text:SetText(QTR_Interface.transtitle);
   
-  local QTRIntegration0 = QTROptions:CreateFontString(nil, "ARTWORK");
-  QTRIntegration0:SetFontObject(GameFontWhite);
-  QTRIntegration0:SetJustifyH("LEFT");
-  QTRIntegration0:SetJustifyV("TOP");
-  QTRIntegration0:ClearAllPoints();
-  QTRIntegration0:SetPoint("TOPLEFT", QTRCheckButton3, "BOTTOMLEFT", 0, -20);
-  QTRIntegration0:SetFont(QTR_Font2, 13);
-  QTRIntegration0:SetText("与其他插件集成:");
+--  local QTRIntegration0 = QTROptions:CreateFontString(nil, "ARTWORK");
+--  QTRIntegration0:SetFontObject(GameFontWhite);
+--  QTRIntegration0:SetJustifyH("LEFT");
+--  QTRIntegration0:SetJustifyV("TOP");
+--  QTRIntegration0:ClearAllPoints();
+--  QTRIntegration0:SetPoint("TOPLEFT", QTRCheckButton3, "BOTTOMLEFT", 0, -20);
+--  QTRIntegration0:SetFont(QTR_Font2, 13);
+--  QTRIntegration0:SetText("与其他插件集成:");
   
-  local QTRIntegration1 = QTROptions:CreateFontString(nil, "ARTWORK");
-  QTRIntegration1:SetFontObject(GameFontNormal);
-  QTRIntegration1:SetJustifyH("LEFT");
-  QTRIntegration1:SetJustifyV("TOP");
-  QTRIntegration1:ClearAllPoints();
-  QTRIntegration1:SetPoint("TOPLEFT", QTRIntegration0, "TOPRIGHT", 15, 0);
-  QTRIntegration1:SetFont(QTR_Font2, 13);
-  QTRIntegration1:SetText("QuestGuru,  Immersion,  Storyline");
+--  local QTRIntegration1 = QTROptions:CreateFontString(nil, "ARTWORK");
+--  QTRIntegration1:SetFontObject(GameFontNormal);
+--  QTRIntegration1:SetJustifyH("LEFT");
+--  QTRIntegration1:SetJustifyV("TOP");
+--  QTRIntegration1:ClearAllPoints();
+--  QTRIntegration1:SetPoint("TOPLEFT", QTRIntegration0, "TOPRIGHT", 15, 0);
+--  QTRIntegration1:SetFont(QTR_Font2, 13);
+--  QTRIntegration1:SetText("QuestGuru,  Immersion,  Storyline");
 
-
---  if (ImmersionFrame ~= nil ) then
---     local QTRslider = CreateFrame("Slider", "QTRslider", QTROptions, "OptionsSliderTemplate");
---     QTRslider:SetPoint("TOPLEFT", QTRIntegration0, "BOTTOMLEFT", 0, -40);
---     QTRslider:SetMinMaxValues(0.5, 3.0);
---     QTRslider.minValue, QTRslider.maxValue = QTRslider:GetMinMaxValues();
---     QTRslider.Low:SetText(QTRslider.minValue.." sek");
---     QTRslider.High:SetText(QTRslider.maxValue.." sek");
---     getglobal(QTRslider:GetName() .. 'Text'):SetText('Opóźnienie Immersion');
---     getglobal(QTRslider:GetName() .. 'Text'):SetFont(QTR_Font2, 13);
---     QTRslider:SetValue(QTR_PS["delayImmersion"]);
---     QTRslider:SetValueStep(0.1);
---     QTRslider:SetScript("OnValueChanged", function(self,event,arg1) 
---                                           QTR_PS["delayImmersion"]=string.format("%.1f",event); 
---                                           QTRsliderVal:SetText(QTR_PS["delayImmersion"]);
---                                           end);
---     QTRsliderVal = QTROptions:CreateFontString(nil, "ARTWORK");
---     QTRsliderVal:SetFontObject(GameFontNormal);
---     QTRsliderVal:SetJustifyH("CENTER");
---     QTRsliderVal:SetJustifyV("TOP");
---     QTRsliderVal:ClearAllPoints();
---     QTRsliderVal:SetPoint("CENTER", QTRslider, "CENTER", 0, -12);
---     QTRsliderVal:SetFont(QTR_Font2, 13);
---     QTRsliderVal:SetText(QTR_PS["delayImmersion"]);   
---     end
-  
 end
 
 
@@ -397,9 +318,9 @@ function QTR_SaveQuest(event)
       QTR_SAVED[QTR_quest_EN.id.." COMPLETE"]=GetRewardText();        -- save original text to future translation
    end
    if (QTR_SAVED[QTR_quest_EN.id.." TITLE"]==nil) then
-      QTR_SAVED[QTR_quest_EN.id.." TITLE"]=GetTitleText();            -- zapisz tytył w przypadku tylko Zakończenia
+      QTR_SAVED[QTR_quest_EN.id.." TITLE"]=GetTitleText();            -- save title in case of End only
    end
-   QTR_SAVED[QTR_quest_EN.id.." PLAYER"]=QTR_name..'@'..QTR_race..'@'..QTR_class;  -- zapisz dane gracza
+   QTR_SAVED[QTR_quest_EN.id.." PLAYER"]=QTR_name..'@'..QTR_race..'@'..QTR_class;  -- save player data
 end
 
 
@@ -441,7 +362,7 @@ function QTR_ON_OFF()
    end
 end
 
--- Pierwsza funkcja wywoływana po załadowaniu dodatku
+-- First function called after the add-in has been loaded
 function QTR_OnLoad()
    QTR = CreateFrame("Frame");
    QTR:SetScript("OnEvent", QTR_OnEvent);
@@ -453,7 +374,7 @@ function QTR_OnLoad()
 --   QTR:RegisterEvent("QUEST_FINISHED");
 --   QTR:RegisterEvent("QUEST_GREETING");
 
-   -- przycisk z nr ID questu w QuestFrame (NPC)
+   -- Quest ID button in QuestFrame 
    QTR_ToggleButton0 = CreateFrame("Button",nil, QuestFrame, "UIPanelButtonTemplate");
    QTR_ToggleButton0:SetWidth(150);
    QTR_ToggleButton0:SetHeight(20);
@@ -463,8 +384,8 @@ function QTR_OnLoad()
    QTR_ToggleButton0:SetPoint("TOPLEFT", QuestFrame, "TOPLEFT", 92, -25);
    QTR_ToggleButton0:SetScript("OnClick", QTR_ON_OFF);
    
-   -- przycisk z nr ID questu w QuestLogPopupDetailFrame
-   QTR_ToggleButton1 = CreateFrame("Button",nil, QuestLogPopupDetailFrame, "UIPanelButtonTemplate");
+   -- Quest ID button in Quest Log Popup Detail Frame
+   QTR_ToggleButton1 = CreateFrame("Button", nil, QuestLogPopupDetailFrame, "UIPanelButtonTemplate");
    QTR_ToggleButton1:SetWidth(150);
    QTR_ToggleButton1:SetHeight(20);
    QTR_ToggleButton1:SetText("Quest ID=?");
@@ -473,8 +394,8 @@ function QTR_OnLoad()
    QTR_ToggleButton1:SetPoint("TOPLEFT", QuestLogPopupDetailFrame, "TOPLEFT", 40, -31);
    QTR_ToggleButton1:SetScript("OnClick", QTR_ON_OFF);
 
-   -- przycisk z nr ID questu w QuestMapDetailsScrollFrame
-   QTR_ToggleButton2 = CreateFrame("Button",nil, QuestMapDetailsScrollFrame, "UIPanelButtonTemplate");
+   -- Quest ID button in QuestMapDetailsScrollFrame
+   QTR_ToggleButton2 = CreateFrame("Button", nil, QuestMapDetailsScrollFrame, "UIPanelButtonTemplate");
    QTR_ToggleButton2:SetWidth(150);
    QTR_ToggleButton2:SetHeight(20);
    QTR_ToggleButton2:SetText("Quest ID=?");
@@ -483,22 +404,22 @@ function QTR_OnLoad()
    QTR_ToggleButton2:SetPoint("TOPLEFT", QuestMapDetailsScrollFrame, "TOPLEFT", 116, 29);
    QTR_ToggleButton2:SetScript("OnClick", QTR_ON_OFF);
 
-   -- funkcja wywoływana po kliknięciu na nazwę questu w QuestTracker   
+   -- function called after clicking on the quest name in QuestTracker
    hooksecurefunc(QUEST_TRACKER_MODULE, "OnBlockHeaderClick", QTR_PrepareReload);
    
-   -- funkcja wywoływana po kliknięciu na nazwę questu w QuestMapFrame
+   -- Function called after clicking on the quest name in QuestMapFrame
    hooksecurefunc("QuestMapFrame_ShowQuestDetails", QTR_PrepareReload);
    
    isQuestGuru();
    isImmersion();
-   isStoryline();       -- może być jeszcze nie załadowany, bo nazwa po QTR
+   isStoryline();       -- may not be loaded yet, because the name after QTR
 end
 
 
 function isQuestGuru()
    if (QuestGuru ~= nil ) then
       if (QTR_ToggleButton3==nil) then
-         -- przycisk z nr ID questu w QuestGuru
+         -- Quest ID button in QuestGuru
          QTR_ToggleButton3 = CreateFrame("Button",nil, QuestGuru, "UIPanelButtonTemplate");
          QTR_ToggleButton3:SetWidth(150);
          QTR_ToggleButton3:SetHeight(20);
@@ -507,7 +428,7 @@ function isQuestGuru()
          QTR_ToggleButton3:ClearAllPoints();
          QTR_ToggleButton3:SetPoint("TOPLEFT", QuestGuru, "TOPLEFT", 330, -33);
          QTR_ToggleButton3:SetScript("OnClick", QTR_ON_OFF);
-         -- uaktualniono dane w QuestLogu
+         -- QuestLog data updated
          QuestGuru:HookScript("OnUpdate", function() QTR_PrepareReload() end);
       end
       return true;
@@ -520,7 +441,7 @@ end
 function isImmersion()
    if (ImmersionFrame ~= nil ) then
       if (QTR_ToggleButton4==nil) then
-         -- przycisk z nr ID questu
+         -- Quest ID button
          QTR_ToggleButton4 = CreateFrame("Button",nil, ImmersionFrame.TalkBox, "UIPanelButtonTemplate");
          QTR_ToggleButton4:SetWidth(150);
          QTR_ToggleButton4:SetHeight(20);
@@ -529,10 +450,10 @@ function isImmersion()
          QTR_ToggleButton4:ClearAllPoints();
          QTR_ToggleButton4:SetPoint("TOPLEFT", ImmersionFrame.TalkBox, "TOPRIGHT", -200, -116);
          QTR_ToggleButton4:SetScript("OnClick", QTR_ON_OFF);
-         -- otworzono okno dodatku Immersion : wywołanie przez OnEvent
+         -- The Immersion plugin window opened: calling by OnEvent
          ImmersionFrame.TalkBox:HookScript("OnHide",function() QTR_ToggleButton4:Hide(); end);
-         QTR_ToggleButton4:Disable();     -- nie można na razie przyciskać
-         QTR_ToggleButton4:Hide();        -- wstępnie przycisk niewidoczny (bo może jest wybór questów)
+         QTR_ToggleButton4:Disable();     -- Cannot be pressed yet
+         QTR_ToggleButton4:Hide();        -- Initially invisible button (because maybe there is a selection of quests)
       end
       return true;
    else   
@@ -544,8 +465,8 @@ end
 function isStoryline()
    if (Storyline_NPCFrame ~= nil ) then
       if (QTR_ToggleButton5==nil) then
-         -- przycisk z nr ID questu
-         QTR_ToggleButton5 = CreateFrame("Button",nil, Storyline_NPCFrameChat, "UIPanelButtonTemplate");
+         -- Quest ID button
+         QTR_ToggleButton5 = CreateFrame("Button", nil, Storyline_NPCFrameChat, "UIPanelButtonTemplate");
          QTR_ToggleButton5:SetWidth(150);
          QTR_ToggleButton5:SetHeight(20);
          QTR_ToggleButton5:SetText("Quest ID=?");
@@ -556,7 +477,7 @@ function isStoryline()
          Storyline_NPCFrameObjectivesContent:HookScript("OnShow", function() QTR_Storyline_Objectives() end);
          Storyline_NPCFrameRewards:HookScript("OnShow", function() QTR_Storyline_Rewards() end);
          Storyline_NPCFrameChat:HookScript("OnHide", function() QTR_Storyline_Hide() end);
---         QTR_ToggleButton5:Disable();     -- nie można przyciskać
+--         QTR_ToggleButton5:Disable();     -- Cannot be pressed
       end
       return true;
    else
@@ -565,7 +486,7 @@ function isStoryline()
 end
 
 
--- Określa aktualny numer ID questu z różnych metod
+-- Specifies the current quest ID number from various methods
 function QTR_GetQuestID()
    if (QTR_onDebug) then
       print('WANTED ID');   
@@ -588,7 +509,7 @@ function QTR_GetQuestID()
       if (isImmersion() and ImmersionFrame:IsVisible()) then
          local nameOrig=ImmersionFrame.TalkBox.NameFrame.Name:GetText();
          local i = 1;
-         while GetQuestLogTitle(i) do    -- przeglądaj wszystkie questy w QuestLogu
+         while GetQuestLogTitle(i) do    -- Browse all quests in QuestLog
             local questTitle, level, questTag, isHeader, isCollapsed, isComplete, isDaily, questID = GetQuestLogTitle(i);
             if (questTitle==nameOrig) then
                quest_ID = questID;
@@ -600,7 +521,7 @@ function QTR_GetQuestID()
       if (isStoryline() and Storyline_NPCFrameTitle:IsVisible()) then
          local nameOrig=Storyline_NPCFrameTitle:GetText();
          local i = 1;
-         while GetQuestLogTitle(i) do    -- przeglądaj wszystkie questy w QuestLogu
+         while GetQuestLogTitle(i) do    -- Browse all quests in QuestLog
             local questTitle, level, questTag, isHeader, isCollapsed, isComplete, isDaily, questID = GetQuestLogTitle(i);
             if (questTitle==nameOrig) then
                quest_ID = questID;
@@ -634,9 +555,9 @@ end
 
 
 
--- Wywoływane przy przechwytywanych zdarzeniach
+-- Even handlers
 function QTR_OnEvent(self, event, name, ...)
-   isStoryline();       -- utwórz przycisk, gdy Storyline aktywny
+   isStoryline();       -- Create a button when Storyline is active
    if (QTR_onDebug) then
       print('OnEvent-event: '..event);   
    end   
@@ -645,7 +566,7 @@ function QTR_OnEvent(self, event, name, ...)
       SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
       SLASH_WOWEUCN_QUESTS2 = "/qtr";
       QTR_CheckVars();
-      -- twórz interface Options w Blizzard-Interface-Addons
+      -- Create interface Options in Blizzard-Interface-Addons
       QTR_BlizzardOptions();
       print ("|cffffff00WoWeuCN-Quests ver. "..QTR_version.." - "..QTR_Messages.loaded);
       QTR:UnregisterEvent("ADDON_LOADED");
@@ -658,7 +579,7 @@ function QTR_OnEvent(self, event, name, ...)
          QTR_QuestPrepare(event);
       elseif (isStoryline()) then
          if (not QTR_wait(1,QTR_Storyline_Quest)) then
-         -- opóźnienie 1 sek
+         -- 1 sec delay
          end
       end
    elseif (isImmersion() and event=="QUEST_ACCEPTED") then
@@ -666,10 +587,10 @@ function QTR_OnEvent(self, event, name, ...)
    end
 end
 
--- Otworzono okienko QuestLogPopupDetailFrame lub QuestMapDetailsScrollFrame lub QuestGuru lub Immersion
-function QTR_QuestPrepare(zdarzenie)
+-- QuestLogPopupDetailFrame or QuestMapDetailsScrollFrame or QuestGuru or Immersion window opened
+function QTR_QuestPrepare(questEvent)
    if (isQuestGuru()) then
-      if (QTR_PS["other1"]=="0") then       -- jest aktywny QuestGuru, ale nie zezwolono na tłumaczenie
+      if (QTR_PS["other1"]=="0") then       -- QuestGuru is active but translation is not allowed
          QTR_ToggleButton3:Hide();
          return;
       else   
@@ -684,7 +605,7 @@ function QTR_QuestPrepare(zdarzenie)
       end   
    end
    if (isImmersion()) then
-      if (QTR_PS["other2"]=="0") then       -- jest aktywny Immersion, ale nie zezwolono na tłumaczenie
+      if (QTR_PS["other2"]=="0") then       -- Immersion is active but translation is not allowed
          QTR_ToggleButton4:Hide();
          return
       else
@@ -705,11 +626,11 @@ function QTR_QuestPrepare(zdarzenie)
          if (q_ID>0) then
             QTR_ToggleButton5:Show();
          end
-      else        -- nie zezwolono na tłumaczenie
+      else        -- No translation allowed
          return
      end      
    end
-   if ( QTR_PS["active"]=="1" ) then	-- tłumaczenia włączone
+   if ( QTR_PS["active"]=="1" ) then	-- Translation activated
       QTR_ToggleButton0:Enable();
       QTR_ToggleButton1:Enable();
       QTR_ToggleButton2:Enable();
@@ -720,7 +641,7 @@ function QTR_QuestPrepare(zdarzenie)
          QTR_ToggleButton4:Enable();
       end
       curr_trans = "1";
-      if ( QTR_QuestData[str_ID] ) then   -- wyświetlaj tylko, gdy istnieje tłumaczenie
+      if ( QTR_QuestData[str_ID] ) then   -- Display only when there is a translation
          QTR_quest_LG.title = QTR_ExpandUnitInfo(QTR_QuestData[str_ID]["Title"]);
          QTR_quest_EN.title = GetTitleText();
          if (QTR_quest_EN.title=="") then
@@ -728,7 +649,7 @@ function QTR_QuestPrepare(zdarzenie)
          end
          QTR_quest_LG.details = QTR_ExpandUnitInfo(QTR_QuestData[str_ID]["Description"]);
          QTR_quest_LG.objectives = QTR_ExpandUnitInfo(QTR_QuestData[str_ID]["Objectives"]);
-         if (zdarzenie=="QUEST_DETAIL") then
+         if (questEvent=="QUEST_DETAIL") then
             QTR_quest_EN.details = GetQuestText();
             QTR_quest_EN.objectives = GetObjectiveText();
             QTR_quest_EN.itemchoose = QTR_MessOrig.itemchoose1;
@@ -749,17 +670,17 @@ function QTR_QuestPrepare(zdarzenie)
                QTR_quest_EN.objectives = QuestInfoObjectivesText:GetText();
             end
          end   
-         if (zdarzenie=="QUEST_PROGRESS") then
+         if (questEvent=="QUEST_PROGRESS") then
             QTR_quest_EN.progress = GetProgressText();
             QTR_quest_LG.progress = QTR_ExpandUnitInfo(QTR_QuestData[str_ID]["Progress"]);
             if (strlen(QTR_quest_EN.progress)>0 and strlen(QTR_quest_LG.progress)==0) then
                QTR_MISSING[QTR_quest_EN.id.." PROGRESS"]=QTR_quest_EN.progress;     -- save missing translation part
             end
-            if (strlen(QTR_quest_LG.progress)==0) then      -- treść jest pusta, a otworzono okienko Progress
+            if (strlen(QTR_quest_LG.progress)==0) then      -- The content is empty and the Progress window has been opened
                QTR_quest_LG.progress = QTR_ExpandUnitInfo('YOUR_NAME');
             end
          end
-         if (zdarzenie=="QUEST_COMPLETE") then
+         if (questEvent=="QUEST_COMPLETE") then
             QTR_quest_EN.completion = GetRewardText();
             QTR_quest_LG.completion = QTR_ExpandUnitInfo(QTR_QuestData[str_ID]["Completion"]);
             QTR_quest_EN.itemchoose = QTR_MessOrig.itemchoose2;
@@ -787,7 +708,7 @@ function QTR_QuestPrepare(zdarzenie)
             QTR_ToggleButton5:SetText("Quest ID="..QTR_quest_LG.id.." ("..QTR_lang..")");
          end
          QTR_Translate_On(1);
-      else	      -- nie ma przetłumaczonego takiego questu
+      else	      -- Quest cannot be translated
          QTR_ToggleButton0:Disable();
          QTR_ToggleButton1:Disable();
          QTR_ToggleButton2:Disable();
@@ -819,9 +740,9 @@ function QTR_QuestPrepare(zdarzenie)
             QTR_ToggleButton5:SetText("Quest ID="..str_ID);
          end
          QTR_Translate_On(0);
-         QTR_SaveQuest(zdarzenie);
-      end -- jest przetłumaczony quest w bazie
-   else	-- tłumaczenia wyłączone
+         QTR_SaveQuest(questEvent);
+      end -- The quest is translated in the database
+   else	-- Translations off...
       QTR_ToggleButton0:Disable();
       QTR_ToggleButton1:Disable();
       QTR_ToggleButton2:Disable();
@@ -831,7 +752,7 @@ function QTR_QuestPrepare(zdarzenie)
 --         if (isImmersion()) then
 --            QTR_ToggleButton4:Disable();
 --         end
-      if ( QTR_QuestData[str_ID] ) then	-- ale jest tłumaczenie w bazie
+      if ( QTR_QuestData[str_ID] ) then	-- ...but there is a translation in the database
          QTR_ToggleButton1:SetText("Quest ID="..str_ID.." (EN)");
          QTR_ToggleButton2:SetText("Quest ID="..str_ID.." (EN)");
          if (isQuestGuru()) then
@@ -856,13 +777,13 @@ function QTR_QuestPrepare(zdarzenie)
             QTR_ToggleButton5:SetText("Quest ID="..str_ID);
          end
       end
-   end	-- tłumaczenia są włączone
+   end	-- Translation actviated
 end
 
 
--- wyświetla tłumaczenie
+-- Displays the translation
 function QTR_Translate_On(typ)
-   if (QTR_PS["transtitle"]=="1") then    -- wyświetl przetłumaczony tytuł
+   if (QTR_PS["transtitle"]=="1") then    -- view translated title
       QuestInfoTitleHeader:SetFont(QTR_Font1, 18);
       QuestProgressTitleText:SetFont(QTR_Font1, 18);
    end
@@ -893,7 +814,7 @@ function QTR_Translate_On(typ)
       QuestInfoRewardsFrame.ItemReceiveText:SetText(QTR_Messages.itemreceiv1);
       numer_ID = QTR_quest_LG.id;
       str_ID = tostring(numer_ID);
-      if (numer_ID>0 and QTR_QuestData[str_ID]) then	-- przywróć przetłumaczoną wersję napisów
+      if (numer_ID>0 and QTR_QuestData[str_ID]) then	-- restore translated subtitle version
          if (QTR_PS["transtitle"]=="1") then
             QuestInfoTitleHeader:SetText(QTR_quest_LG.title);
             QuestProgressTitleText:SetText(QTR_quest_LG.title);
@@ -906,8 +827,8 @@ function QTR_Translate_On(typ)
          end
          if (isImmersion()) then
             QTR_ToggleButton4:SetText("Quest ID="..QTR_quest_LG.id.." ("..QTR_lang..")");
-            if (not QTR_wait(0.2,QTR_Immersion)) then    -- wywołaj podmienianie danych po 0.2 sek
-               -- opóźnienie 0.2 sek
+            if (not QTR_wait(0.2,QTR_Immersion)) then    -- trigger data exchange after 0.2 sec
+               -- delay 0.2 sec
             end
          end
          if (isStoryline() and Storyline_NPCFrame:IsVisible()) then
@@ -927,7 +848,7 @@ function QTR_Translate_On(typ)
          QuestInfoRewardsFrame.ItemReceiveText:SetText(QTR_Messages.itemreceiv1);
          if ((ImmersionFrame ~= nil ) and (ImmersionFrame.TalkBox:IsVisible() )) then
             if (not QTR_wait(0.2,QTR_Immersion_Static)) then
-               -- podmiana tekstu z opóźnieniem 0.2 sek
+               -- delay 0.2 sec
             end
          end
       end
@@ -935,7 +856,7 @@ function QTR_Translate_On(typ)
 end
 
 
--- wyświetla oryginalny tekst
+-- Displays the original text
 function QTR_Translate_Off(typ)
    QuestInfoTitleHeader:SetFont(Original_Font1, 18);
    QuestProgressTitleText:SetFont(Original_Font1, 18);
@@ -965,7 +886,7 @@ function QTR_Translate_Off(typ)
 --      MapQuestInfoRewardsFrame.ItemReceiveText:SetText(QTR_MessOrig.itemreceiv1);
 --      MapQuestInfoRewardsFrame.ItemChooseText:SetText(QTR_MessOrig.itemreceiv1);
       numer_ID = QTR_quest_EN.id;
-      if (numer_ID>0 and QTR_QuestData[str_ID]) then	-- przywróć oryginalną wersję napisów
+      if (numer_ID>0 and QTR_QuestData[str_ID]) then	-- restore original subtitle version
          QTR_ToggleButton0:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
          QTR_ToggleButton1:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
          QTR_ToggleButton2:SetText("Quest ID="..QTR_quest_EN.id.." (EN)");
@@ -994,7 +915,7 @@ function QTR_Translate_Off(typ)
       if (curr_trans == "0") then
          if ((ImmersionFrame ~= nil ) and (ImmersionFrame.TalkBox:IsVisible() )) then
             if (not QTR_wait(0.2,QTR_Immersion_OFF_Static)) then
-               -- podmiana tekstu z opóźnieniem 0.2 sek
+               -- text replacement with a delay of 0.2 sec
             end
          end
       end
@@ -1003,7 +924,7 @@ end
 
 
 function QTR_delayed3()
-   QTR_ToggleButton4:SetText("wybierz wpierw quest");
+   QTR_ToggleButton4:SetText("请先选择人物");
    QTR_ToggleButton4:Hide();
    if (not QTR_wait(1,QTR_delayed4)) then
    ---
@@ -1033,7 +954,7 @@ function QTR_delayed4()
 end;      
 
 
-function QTR_PrepareDelay(czas)     -- wywoływane po kliknięciu na nazwę questu z listy NPC
+function QTR_PrepareDelay(czas)     -- called after clicking on the quest name from the NPC list
    if (czas==1) then
       if (not QTR_wait(1,QTR_PrepareReload)) then
       ---
@@ -1052,69 +973,69 @@ function QTR_PrepareReload()
 end;      
 
 
-function QTR_Immersion()   -- wywoływanie tłumaczenia z opóźnieniem 0.2 sek
+function QTR_Immersion()   -- calling translation with a delay of 0.2 sec
   ImmersionContentFrame.ObjectivesText:SetFont(QTR_Font2, 14);
   ImmersionContentFrame.ObjectivesText:SetText(QTR_quest_LG.objectives);
   ImmersionFrame.TalkBox.NameFrame.Name:SetFont(QTR_Font1, 20);
   ImmersionFrame.TalkBox.NameFrame.Name:SetText(QTR_quest_LG.title);
   ImmersionFrame.TalkBox.TextFrame.Text:SetFont(QTR_Font2, 14);
-  if (strlen(QTR_quest_EN.details)>0) then                                    -- mamy zdarzenie DETAILS
+  if (strlen(QTR_quest_EN.details)>0) then                                    -- we have a DETAILS event
      ImmersionFrame.TalkBox.TextFrame.Text:SetText(QTR_quest_LG.details);
   elseif (strlen(QTR_quest_EN.completion)>0) then
      ImmersionFrame.TalkBox.TextFrame.Text:SetText(QTR_quest_LG.completion);
   else
      ImmersionFrame.TalkBox.TextFrame.Text:SetText(QTR_quest_LG.progress);
   end
-  QTR_Immersion_Static();        -- inne statyczne dane
+  QTR_Immersion_Static();        -- other static data
 end
 
 
 function QTR_Immersion_Static() 
   ImmersionContentFrame.ObjectivesHeader:SetFont(QTR_Font1, 18);
-  ImmersionContentFrame.ObjectivesHeader:SetText(QTR_Messages.objectives);  -- "Zadanie"
+  ImmersionContentFrame.ObjectivesHeader:SetText(QTR_Messages.objectives);  
   ImmersionContentFrame.RewardsFrame.Header:SetFont(QTR_Font1, 18);
-  ImmersionContentFrame.RewardsFrame.Header:SetText(QTR_Messages.rewards);  -- "Nagroda"
+  ImmersionContentFrame.RewardsFrame.Header:SetText(QTR_Messages.rewards);  
   ImmersionContentFrame.RewardsFrame.ItemChooseText:SetFont(QTR_Font2, 13);
-  ImmersionContentFrame.RewardsFrame.ItemChooseText:SetText(QTR_Messages.itemchoose1); -- "Możesz wybrać nagrodę:"
+  ImmersionContentFrame.RewardsFrame.ItemChooseText:SetText(QTR_Messages.itemchoose1); 
   ImmersionContentFrame.RewardsFrame.ItemReceiveText:SetFont(QTR_Font2, 13);
-  ImmersionContentFrame.RewardsFrame.ItemReceiveText:SetText(QTR_Messages.itemreceiv1); -- "Otrzymasz w nagrodę:"
+  ImmersionContentFrame.RewardsFrame.ItemReceiveText:SetText(QTR_Messages.itemreceiv1); 
   ImmersionContentFrame.RewardsFrame.XPFrame.ReceiveText:SetFont(QTR_Font2, 13);
-  ImmersionContentFrame.RewardsFrame.XPFrame.ReceiveText:SetText(QTR_Messages.experience);  -- "Doświadczenie"
+  ImmersionContentFrame.RewardsFrame.XPFrame.ReceiveText:SetText(QTR_Messages.experience);  
   ImmersionFrame.TalkBox.Elements.Progress.ReqText:SetFont(QTR_Font1, 18);
-  ImmersionFrame.TalkBox.Elements.Progress.ReqText:SetText(QTR_Messages.reqitems);  -- "Wymagane itemy:"
+  ImmersionFrame.TalkBox.Elements.Progress.ReqText:SetText(QTR_Messages.reqitems);  
 end
 
 
-function QTR_Immersion_OFF()   -- wywoływanie oryginału
+function QTR_Immersion_OFF()  
   ImmersionContentFrame.ObjectivesText:SetFont(Original_Font2, 14);
   ImmersionContentFrame.ObjectivesText:SetText(QTR_quest_EN.objectives);
   ImmersionFrame.TalkBox.NameFrame.Name:SetFont(Original_Font1, 20);
   ImmersionFrame.TalkBox.NameFrame.Name:SetText(QTR_quest_EN.title);
   ImmersionFrame.TalkBox.TextFrame.Text:SetFont(Original_Font2, 14);
-  if (strlen(QTR_quest_EN.details)>0) then                                    -- przywróć oryginalny tekst
+  if (strlen(QTR_quest_EN.details)>0) then                                  
      ImmersionFrame.TalkBox.TextFrame.Text:SetText(QTR_quest_EN.details);
   elseif (strlen(QTR_quest_EN.progress)>0) then
      ImmersionFrame.TalkBox.TextFrame.Text:SetText(QTR_quest_EN.progress);
   else
      ImmersionFrame.TalkBox.TextFrame.Text:SetText(QTR_quest_EN.completion);
   end
-  QTR_Immersion_OFF_Static();       -- inne statyczne dane
+  QTR_Immersion_OFF_Static();       
 end
 
 
 function QTR_Immersion_OFF_Static()
   ImmersionContentFrame.ObjectivesHeader:SetFont(Original_Font1, 18);
-  ImmersionContentFrame.ObjectivesHeader:SetText(QTR_MessOrig.objectives);  -- "Zadanie"
+  ImmersionContentFrame.ObjectivesHeader:SetText(QTR_MessOrig.objectives);  
   ImmersionContentFrame.RewardsFrame.Header:SetFont(Original_Font1, 18);
-  ImmersionContentFrame.RewardsFrame.Header:SetText(QTR_MessOrig.rewards);  -- "Nagroda"
+  ImmersionContentFrame.RewardsFrame.Header:SetText(QTR_MessOrig.rewards); 
   ImmersionContentFrame.RewardsFrame.ItemChooseText:SetFont(Original_Font2, 13);
-  ImmersionContentFrame.RewardsFrame.ItemChooseText:SetText(QTR_MessOrig.itemchoose1); -- "Możesz wybrać nagrodę:"
+  ImmersionContentFrame.RewardsFrame.ItemChooseText:SetText(QTR_MessOrig.itemchoose1); 
   ImmersionContentFrame.RewardsFrame.ItemReceiveText:SetFont(Original_Font2, 13);
-  ImmersionContentFrame.RewardsFrame.ItemReceiveText:SetText(QTR_MessOrig.itemreceiv1); -- "Otrzymasz w nagrodę:"
+  ImmersionContentFrame.RewardsFrame.ItemReceiveText:SetText(QTR_MessOrig.itemreceiv1); 
   ImmersionContentFrame.RewardsFrame.XPFrame.ReceiveText:SetFont(Original_Font2, 13);
-  ImmersionContentFrame.RewardsFrame.XPFrame.ReceiveText:SetText(QTR_MessOrig.experience);  -- "Doświadczenie"
+  ImmersionContentFrame.RewardsFrame.XPFrame.ReceiveText:SetText(QTR_MessOrig.experience);  
   ImmersionFrame.TalkBox.Elements.Progress.ReqText:SetFont(Original_Font1, 18);
-  ImmersionFrame.TalkBox.Elements.Progress.ReqText:SetText(QTR_MessOrig.reqitems);  -- "Wymagane itemy:"
+  ImmersionFrame.TalkBox.Elements.Progress.ReqText:SetText(QTR_MessOrig.reqitems);
 end
 
 
@@ -1244,19 +1165,12 @@ function QTR_Storyline_OFF(nr)
 end
 
 
--- podmieniaj specjane znaki w tekście
+-- replace special characters in the text
 function QTR_ExpandUnitInfo(msg)
    msg = string.gsub(msg, "NEW_LINE", "\n");
-   msg = string.gsub(msg, "YOUR_NAME1", QTR_PC["name1"]);
-   msg = string.gsub(msg, "YOUR_NAME2", QTR_PC["name2"]);
-   msg = string.gsub(msg, "YOUR_NAME3", QTR_PC["name3"]);
-   msg = string.gsub(msg, "YOUR_NAME4", QTR_PC["name4"]);
-   msg = string.gsub(msg, "YOUR_NAME5", QTR_PC["name5"]);
-   msg = string.gsub(msg, "YOUR_NAME6", QTR_PC["name6"]);
-   msg = string.gsub(msg, "YOUR_NAME7", QTR_PC["name7"]);
    msg = string.gsub(msg, "YOUR_NAME", QTR_name);
    
--- jeszcze obsłużyć YOUR_GENDER(x;y)
+-- player gender YOUR_GENDER(x;y)
    local nr_1, nr_2, nr_3 = 0;
    local QTR_forma = "";
    local nr_poz = string.find(msg, "YOUR_GENDER");    -- gdy nie znalazł, jest: nil
@@ -1276,9 +1190,9 @@ function QTR_ExpandUnitInfo(msg)
                nr_3 = nr_3 + 1;
             end
             if (string.sub(msg, nr_3, nr_3) == ")") then
-               if (QTR_sex==3) then        -- forma żeńska
+               if (QTR_sex==3) then        -- female form
                   QTR_forma = string.sub(msg,nr_2+1,nr_3-1);
-               else                        -- forma męska
+               else                        -- male form
                   QTR_forma = string.sub(msg,nr_1+1,nr_2-1);
                end
                msg = string.sub(msg,1,nr_poz-1) .. QTR_forma .. string.sub(msg,nr_3+1);
@@ -1288,44 +1202,12 @@ function QTR_ExpandUnitInfo(msg)
       nr_poz = string.find(msg, "YOUR_GENDER");
    end
 
--- jeszcze obsłużyć NPC_GENDER(x;y)
-   local nr_1, nr_2, nr_3 = 0;
-   local QTR_forma = "";
-   local nr_poz = string.find(msg, "NPC_GENDER");    -- gdy nie znalazł, jest: nil
-   while (nr_poz and nr_poz>0) do
-      nr_1 = nr_poz + 1;   
-      while (string.sub(msg, nr_1, nr_1) ~= "(") do
-         nr_1 = nr_1 + 1;
-      end
-      if (string.sub(msg, nr_1, nr_1) == "(") then
-         nr_2 =  nr_1 + 1;
-         while (string.sub(msg, nr_2, nr_2) ~= ";") do
-            nr_2 = nr_2 + 1;
-         end
-         if (string.sub(msg, nr_2, nr_2) == ";") then
-            nr_3 = nr_2 + 1;
-            while (string.sub(msg, nr_3, nr_3) ~= ")") do
-               nr_3 = nr_3 + 1;
-            end
-            if (string.sub(msg, nr_3, nr_3) == ")") then
-               if (QTR_sex==3) then        -- forma żeńska
-                  QTR_forma = string.sub(msg,nr_2+1,nr_3-1);
-               else                        -- forma męska
-                  QTR_forma = string.sub(msg,nr_1+1,nr_2-1);
-               end
-               msg = string.sub(msg,1,nr_poz-1) .. QTR_forma .. string.sub(msg,nr_3+1);
-            end   
-         end
-      end
-      nr_poz = string.find(msg, "NPC_GENDER");
-   end
-
    if (QTR_sex==3) then        
-      msg = string.gsub(msg, "YOUR_RACE", player_race.W2);                        -- Wołacz - pozostałe wystąpienia
-      msg = string.gsub(msg, "YOUR_CLASS", player_class.W2);                      -- Wołacz - pozostałe wystąpienia
+      msg = string.gsub(msg, "YOUR_RACE", player_race.W2);                       
+      msg = string.gsub(msg, "YOUR_CLASS", player_class.W2);                      
    else                    
-      msg = string.gsub(msg, "YOUR_RACE", player_race.W1);                        -- Wołacz - pozostałe wystąpienia
-      msg = string.gsub(msg, "YOUR_CLASS", player_class.W1);                      -- Wołacz - pozostałe wystąpienia
+      msg = string.gsub(msg, "YOUR_RACE", player_race.W1);                      
+      msg = string.gsub(msg, "YOUR_CLASS", player_class.W1);                  
    end
    
    return msg;
