@@ -41,8 +41,8 @@ QTR_Messages = {
     width2     = "窗口宽度 495|495", 
  }; 
 
-QTR_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\Microsoft YaHei.ttf"; 
-QTR_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\Microsoft YaHei.ttf"; 
+QTR_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\SourceHanSansCN-Regular.ttf"; 
+QTR_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\SourceHanSansCN-Regular.ttf"; 
 
 QTR_QuestData = {  
     ["1"]={["Title"]="坎瑞萨德的任务", ["Objectives"]="与坎瑞萨德交谈，回复你的天赋、武器、与坐骑。", ["Description"]="欢迎你从死亡的世界归来。NEW_LINENEW_LINE在过去的时代你骄傲的挺立，是你族人之中的英雄。而现在你既堕落又破碎不过是个过去的遗物。站到我面前吧，我将唤醒你过去的荣光。NEW_LINENEW_LINE我会回复你失去的力量，让你再次完整归一。 ", ["Progress"]="", ["Completion"]="", ["Translator"]=""},

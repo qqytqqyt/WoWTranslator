@@ -48,8 +48,8 @@ local last_text = 0;
 local curr_trans = "1";
 local curr_goss = "X";
 local curr_hash = 0;
-local Original_Font1 = "Fonts\\Microsoft YaHei.ttf";
-local Original_Font2 = "Fonts\\Microsoft YaHei.ttf";
+local Original_Font1 = "Fonts\\MORPHEUS.ttf";
+local Original_Font2 = "Fonts\\FRIZQT__.ttf";
 local p_race = {
   ["Blood Elf"] = { W1="血精灵", W2="血精灵" }, 
   ["Dark Iron Dwarf"] = { W1="黑铁矮人", W2="黑铁矮人" },
@@ -126,9 +126,6 @@ function QTR_CheckVars()
   end
   if (not QTR_MISSING) then
      QTR_MISSING = {};
-  end
-  if (not QTR_GOSSIP) then
-     QTR_GOSSIP = {};
   end
   if (not QTR_CONTROL) then
      QTR_CONTROL = {};
@@ -451,22 +448,6 @@ function QTR_ON_OFF()
 end
 
 
-function GS_ON_OFF()
-   if (curr_goss=="1") then         -- wyłącz tłumaczenie - pokaż oryginalny tekst
-      curr_goss="0";
-      GossipGreetingText:SetText(QTR_GS[curr_hash]);
-      GossipGreetingText:SetFont(Original_Font2, 13);      
-      QTR_ToggleButtonGS:SetText("Gossip-Hash=["..tostring(curr_hash).."] EN");
-   else                             -- pokaż tłumaczenie PL
-      curr_goss="1";
-      local Greeting_PL = GS_Gossip[curr_hash];
-      GossipGreetingText:SetText(QTR_ExpandUnitInfo(Greeting_PL));
-      GossipGreetingText:SetFont(QTR_Font2, 13);      
-      QTR_ToggleButtonGS:SetText("Gossip-Hash=["..tostring(curr_hash).."] PL");
-   end
-end
-
-
 -- Pierwsza funkcja wywoływana po załadowaniu dodatku
 function QTR_OnLoad()
    QTR = CreateFrame("Frame");
@@ -478,7 +459,6 @@ function QTR_OnLoad()
    QTR:RegisterEvent("QUEST_COMPLETE");
 --   QTR:RegisterEvent("QUEST_FINISHED");
 --   QTR:RegisterEvent("QUEST_GREETING");
-   QTR:RegisterEvent("GOSSIP_SHOW");
 
    -- przycisk z nr ID questu w QuestFrame (NPC)
    QTR_ToggleButton0 = CreateFrame("Button",nil, QuestFrame, "UIPanelButtonTemplate");
@@ -510,15 +490,6 @@ function QTR_OnLoad()
    QTR_ToggleButton2:SetPoint("TOPLEFT", QuestMapDetailsScrollFrame, "TOPLEFT", 116, 29);
    QTR_ToggleButton2:SetScript("OnClick", QTR_ON_OFF);
 
-   -- przycisk z nr HASH gossip w QuestMapDetailsScrollFrame
-   QTR_ToggleButtonGS = CreateFrame("Button",nil, GossipFrameGreetingPanel, "UIPanelButtonTemplate");
-   QTR_ToggleButtonGS:SetWidth(220);
-   QTR_ToggleButtonGS:SetHeight(20);
-   QTR_ToggleButtonGS:SetText("Gossip-Hash=?");
-   QTR_ToggleButtonGS:Show();
-   QTR_ToggleButtonGS:ClearAllPoints();
-   QTR_ToggleButtonGS:SetPoint("TOPLEFT", GossipFrameGreetingPanel, "TOPLEFT", 90, -50);
-   QTR_ToggleButtonGS:SetScript("OnClick", GS_ON_OFF);
 
    -- funkcja wywoływana po kliknięciu na nazwę questu w QuestTracker   
 --   hooksecurefunc(QUEST_TRACKER_MODULE, "OnBlockHeaderClick", QTR_PrepareReload);
@@ -656,12 +627,12 @@ function QTR_GetQuestID()
    
    if (quest_ID==nil) then
       if (QTR_onDebug) then
-         print('Nie znalazł ID');
+         print('ID not found');
       end   
       quest_ID=0;
    else   
       if (QTR_onDebug) then
-         print('Znalazł ID='..tostring(quest_ID));
+         print('Found ID='..tostring(quest_ID));
       end   
    end   
    
@@ -698,68 +669,8 @@ function QTR_OnEvent(self, event, name, ...)
          -- opóźnienie 1 sek
          end
       end	-- QuestFrame is Visible
-   elseif (event=="GOSSIP_SHOW") then
-      QTR_Gossip_Show();
    elseif (isImmersion() and event=="QUEST_ACCEPTED") then
       QTR_delayed3();
-   end
-end
-
-
--- Otworzono okienko rozmowy z NPC
-function QTR_Gossip_Show()
-   local Nazwa_NPC = GossipFrameNpcNameText:GetText();
-   curr_hash = 0;
-   if (Nazwa_NPC) then
-      local Greeting_Text = GossipGreetingText:GetText();
-      if (string.find(Greeting_Text,"@")==nil) then         -- nie jest to tekst po polsku
-         Nazwa_NPC = string.gsub(Nazwa_NPC, '"', '\"');
-         Greeting_Text = string.gsub(Greeting_Text, '"', '\"');
-         local Czysty_Text = string.gsub(Greeting_Text, '\r', '');
-         Czysty_Text = string.gsub(Czysty_Text, '\n', '$B');
-         Czysty_Text = string.gsub(Czysty_Text, QTR_name, '$N');
-         Czysty_Text = string.gsub(Czysty_Text, string.upper(QTR_name), '$N$');
-         Czysty_Text = string.gsub(Czysty_Text, QTR_race, '$R');
-         Czysty_Text = string.gsub(Czysty_Text, string.lower(QTR_race), '$R');
-         Czysty_Text = string.gsub(Czysty_Text, QTR_class, '$C');
-         Czysty_Text = string.gsub(Czysty_Text, string.lower(QTR_class), '$C');
-         Czysty_Text = string.gsub(Czysty_Text, '$N$', '');
-         Czysty_Text = string.gsub(Czysty_Text, '$N', '');
-         Czysty_Text = string.gsub(Czysty_Text, '$B', '');
-         Czysty_Text = string.gsub(Czysty_Text, '$R', '');
-         Czysty_Text = string.gsub(Czysty_Text, '$C', '');
-         local Hash = StringHash(Czysty_Text);
-         curr_hash = Hash;
-         QTR_GS[Hash] = Greeting_Text;                      -- zapis oryginalnego tekstu
-         if ( GS_Gossip[Hash] ) then   -- istnieje tłumaczenie tekstu GOSSIP tego NPC
-            curr_goss = "1";
-            local Greeting_PL = GS_Gossip[Hash];
-            GossipGreetingText:SetText(QTR_ExpandUnitInfo(Greeting_PL));
-            GossipGreetingText:SetFont(QTR_Font2, 13);
-            QTR_ToggleButtonGS:SetText("Gossip-Hash=["..tostring(Hash).."] PL");
-            QTR_ToggleButtonGS:Enable();
-         else                               -- nie ma tłumaczenia w bazie GOSSIP
-            curr_goss = "0";
-            -- zapis do pliku
-            QTR_GOSSIP[Nazwa_NPC..'@'..tostring(Hash)] = Greeting_Text;
-            QTR_ToggleButtonGS:SetText("Gossip-Hash=["..tostring(Hash).."] EN");
-            QTR_ToggleButtonGS:Disable();
-         end
-         if (GetNumGossipOptions()>0) then    -- są jeszcze przyciski funkcji dodatkowych
-            local pozycja=GetNumGossipActiveQuests()+GetNumGossipAvailableQuests()+1;
-            local titleButton="";
-            for i = 1, GetNumGossipOptions(), 1 do 
-               titleButton=getglobal("GossipTitleButton"..tostring(pozycja+i)):GetText();
-               Hash = StringHash(titleButton);
-               if ( GS_Gossip[Hash] ) then   -- istnieje tłumaczenie tekstu dodatkowego
-                  getglobal("GossipTitleButton"..tostring(pozycja+i)):SetText(GS_Gossip[Hash]);
-                  getglobal("GossipTitleButton"..tostring(pozycja+i)):SetFont(QTR_Font2, 13);
-               else
-                  QTR_GOSSIP[Nazwa_NPC..'@'..tostring(Hash)] = titleButton;
-               end
-            end
-         end
-      end
    end
 end
 
@@ -888,7 +799,7 @@ function QTR_QuestPrepare(zdarzenie)
                QTR_MISSING[QTR_quest_EN.id.." PROGRESS"]=QTR_quest_EN.progress;     -- save missing translation part
             end
             if (strlen(QTR_quest_LG.progress)==0) then      -- treść jest pusta, a otworzono okienko Progress
-               QTR_quest_LG.progress = QTR_ExpandUnitInfo('Dobrze ci idzie, YOUR_NAME');
+               QTR_quest_LG.progress = QTR_ExpandUnitInfo('YOUR_NAME');
             end
          end
          if (zdarzenie=="QUEST_COMPLETE") then
@@ -944,7 +855,7 @@ function QTR_QuestPrepare(zdarzenie)
          if (isImmersion()) then
             if (q_ID==0) then
                if (ImmersionFrame.TitleButtons:IsVisible()) then
-                  QTR_ToggleButton4:SetText("wybierz wpierw quest");
+                 QTR_ToggleButton4:SetText("请先选择人物");
                end
             else
                QTR_ToggleButton4:SetText("Quest ID="..str_ID);
