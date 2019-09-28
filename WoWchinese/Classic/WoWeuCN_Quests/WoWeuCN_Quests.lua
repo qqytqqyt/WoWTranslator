@@ -6,8 +6,8 @@
 local QTR_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local QTR_onDebug = false;      
 local QTR_name = UnitName("player");
-local QTR_class= UnitClass("player");
-local QTR_race = UnitRace("player");
+local QTR_class, QTR_class_file, QTR_class_Id= UnitClass("player");
+local QTR_race, QTR_race_file, QTR_race_Id = UnitRace("player");
 local QTR_sex = UnitSex("player");     -- 1:neutral,  2:male,  3:female
 local QTR_waitTable = {};
 local QTR_waitFrame = nil;
@@ -48,8 +48,8 @@ local last_text = 0;
 local curr_trans = "1";
 local curr_goss = "X";
 local curr_hash = 0;
-local Original_Font1 = "Fonts\\MORPHEUS.ttf";
-local Original_Font2 = "Fonts\\FRIZQT__.ttf";
+local Original_Font1 = QuestFontHighlight:GetFont();
+local Original_Font2, Original_Font2_Size = QuestInfoDescriptionText:GetFont();
 local p_race ={
       [10] = { W1="血精灵", W2="血精灵" }, 
       [11] = { W1="德莱尼", W2="德莱尼" },
@@ -77,13 +77,13 @@ if (p_race[QTR_race_Id]) then
    player_race = { W1=p_race[QTR_race_Id].W1, W2=p_race[QTR_race_Id].W2 };
 else   
    player_race = { W1=QTR_race, W2=QTR_race };
-   print ("|cff55ff00QTR - 新种族: "..QTR_race);
+   print ("|cff55ff00WoWeuCN - 新种族: "..QTR_race_Id);
 end
 if (p_class[QTR_class_Id]) then
    player_class = { W1=p_class[QTR_class_Id].W1, W2=p_class[QTR_class_Id].W2 };
 else
    player_class = { W1=QTR_class, W2=QTR_class };
-   print ("|cff55ff00QTR - 新职业: "..QTR_class_Id);
+   print ("|cff55ff00WoWeuCN - 新职业: "..QTR_class_Id);
 end
 
 -- Global variables initialtion
@@ -243,19 +243,20 @@ function QTR_BlizzardOptions()
   QTROptionsHeader:SetJustifyV("TOP");
   QTROptionsHeader:ClearAllPoints();
   QTROptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  QTROptionsHeader:SetText("WoWeuCN-Quests, ver. "..QTR_version.." ("..QTR_base..") by qqytqqyt © 2019");
+  QTROptionsHeader:SetText("WoWeuCN-Quests, ver. "..QTR_version.." by qqytqqyt © 2019");
+  QTROptionsHeader:SetFont(QTR_Font2, 16);
 
-  local QTRDateOfBase = QTROptions:CreateFontString(nil, "ARTWORK");
-  QTRDateOfBase:SetFontObject(GameFontNormalLarge);
-  QTRDateOfBase:SetJustifyH("LEFT"); 
-  QTRDateOfBase:SetJustifyV("TOP");
-  QTRDateOfBase:ClearAllPoints();
-  QTRDateOfBase:SetPoint("TOPRIGHT", QTROptionsHeader, "TOPRIGHT", 0, -22);
-  QTRDateOfBase:SetText("翻译数据库版本日期: "..QTR_date);
-  QTRDateOfBase:SetFont(QTR_Font2, 16);
+  local QTRPlayer = QTROptions:CreateFontString(nil, "ARTWORK");
+  QTRPlayer:SetFontObject(GameFontNormalLarge);
+  QTRPlayer:SetJustifyH("LEFT"); 
+  QTRPlayer:SetJustifyV("TOP");
+  QTRPlayer:ClearAllPoints();
+  QTRPlayer:SetPoint("TOPRIGHT", QTROptionsHeader, "TOPRIGHT", 0, -22);
+  QTRPlayer:SetText("作者 : "..QTR_Messages.author);
+  QTRPlayer:SetFont(QTR_Font2, 16);
 
   local QTRCheckButton0 = CreateFrame("CheckButton", "QTRCheckButton0", QTROptions, "OptionsCheckButtonTemplate");
-  QTRCheckButton0:SetPoint("TOPLEFT", QTROptionsHeader, "BOTTOMLEFT", 0, -20);
+  QTRCheckButton0:SetPoint("TOPLEFT", QTROptionsHeader, "BOTTOMLEFT", 0, -44);
   QTRCheckButton0:SetScript("OnClick", function(self) if (QTR_PS["active"]=="1") then QTR_PS["active"]="0" else QTR_PS["active"]="1" end; end);
   QTRCheckButton0Text:SetFont(QTR_Font2, 13);
   QTRCheckButton0Text:SetText(QTR_Interface.active);
@@ -379,12 +380,12 @@ function QTR_OnLoad()
    
    -- Quest ID button in Quest Log Popup Detail Frame
    QTR_ToggleButton1 = CreateFrame("Button",nil, QuestLogFrame, "UIPanelButtonTemplate");
-   QTR_ToggleButton1:SetWidth(150);
-   QTR_ToggleButton1:SetHeight(20);
+   QTR_ToggleButton1:SetWidth(120);
+   QTR_ToggleButton1:SetHeight(15);
    QTR_ToggleButton1:SetText("Quest ID=?");
    QTR_ToggleButton1:Show();
    QTR_ToggleButton1:ClearAllPoints();
-   QTR_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 178, -58);
+   QTR_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 218, -58);
    QTR_ToggleButton1:SetScript("OnClick", QTR_ON_OFF);
 
    -- Quest ID button in QuestMapDetailsScrollFrame
@@ -913,9 +914,7 @@ end
 function QTR_Translate_Off(typ)
    QuestInfoTitleHeader:SetFont(Original_Font1, 18);
    QuestInfoTitleHeader:SetText(QTR_quest_EN.title);
---   QuestProgressTitleText:SetText(QTR_quest_EN.title);        
---   QuestProgressTitleText:SetFont(Original_Font1, 18);
-   
+
    QuestLogQuestTitle:SetFont(Original_Font1, 18);
    QuestLogQuestTitle:SetText(QTR_quest_EN.title);
    
@@ -933,19 +932,15 @@ function QTR_Translate_Off(typ)
    QuestProgressRequiredItemsText:SetFont(Original_Font1, 18);
    QuestProgressRequiredItemsText:SetText(QTR_MessOrig.reqitems);
    
---   MapQuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, 11);
---   MapQuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, 11);
-   QuestInfoSpellObjectiveLearnLabel:SetFont(Original_Font2, 13);
+   QuestInfoSpellObjectiveLearnLabel:SetFont(Original_Font2, Original_Font2_Size);
    QuestInfoSpellObjectiveLearnLabel:SetText(QTR_MessOrig.learnspell);
-   QuestInfoXPFrame.ReceiveText:SetFont(Original_Font2, 13);
+   QuestInfoXPFrame.ReceiveText:SetFont(Original_Font2, Original_Font2_Size);
    QuestInfoXPFrame.ReceiveText:SetText(QTR_MessOrig.experience);
    if (typ==1) then			-- full switchover (there is a translation)
-      QuestLogItemChooseText:SetFont(Original_Font2, 13);
+      QuestLogItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
       QuestLogItemChooseText:SetText(QTR_MessOrig.itemchoose1);
-      QuestLogItemReceiveText:SetFont(Original_Font2, 13);
+      QuestLogItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
       QuestLogItemReceiveText:SetText(QTR_MessOrig.itemreceiv1);
---      MapQuestInfoRewardsFrame.ItemReceiveText:SetText(QTR_MessOrig.itemreceiv1);
---      MapQuestInfoRewardsFrame.ItemChooseText:SetText(QTR_MessOrig.itemreceiv1);
       numer_ID = QTR_quest_EN.id;
       if (numer_ID>0 and QTR_QuestData[str_ID]) then	-- restore original subtitle version
          QTR_ToggleButton0:SetText("Quest ID="..QTR_quest_EN.id);
@@ -963,24 +958,24 @@ function QTR_Translate_Off(typ)
             QTR_ToggleButton5:SetText("Quest ID="..QTR_quest_EN.id);
             QTR_Storyline_OFF(1);
          end
-         QuestLogQuestDescription:SetFont(Original_Font2, 13);
+         QuestLogQuestDescription:SetFont(Original_Font2, Original_Font2_Size);
          QuestLogQuestDescription:SetText(QTR_quest_EN.details);
-         QuestInfoDescriptionText:SetFont(Original_Font2, 13);
+         QuestInfoDescriptionText:SetFont(Original_Font2, Original_Font2_Size);
          QuestInfoDescriptionText:SetText(QTR_quest_EN.details);
-         QuestInfoObjectivesText:SetFont(Original_Font2, 13);
+         QuestInfoObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
          QuestInfoObjectivesText:SetText(QTR_quest_EN.objectives);
          
-         QuestLogObjectivesText:SetFont(Original_Font2, 13);
+         QuestLogObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
          QuestLogObjectivesText:SetText(QTR_quest_EN.objectives);
          
-         QuestProgressText:SetFont(Original_Font2, 13);
+         QuestProgressText:SetFont(Original_Font2, Original_Font2_Size);
          QuestProgressText:SetText(QTR_quest_EN.progress);
-         QuestInfoRewardText:SetFont(Original_Font2, 13);
+         QuestInfoRewardText:SetFont(Original_Font2, Original_Font2_Size);
          QuestInfoRewardText:SetText(QTR_quest_EN.completion);
          
-         QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, 13);
+         QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
          QuestInfoRewardsFrame.ItemChooseText:SetText(QTR_quest_EN.itemchoose);
-         QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, 13);
+         QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
          QuestInfoRewardsFrame.ItemReceiveText:SetText(QTR_quest_EN.itemreceive);
       end
    else   
