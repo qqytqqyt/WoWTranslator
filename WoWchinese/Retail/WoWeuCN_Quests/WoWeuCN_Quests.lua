@@ -33,7 +33,11 @@ local QTR_quest_EN = {
       progress = "",
       completion = "",
       itemchoose = "",
-      itemreceive = "", };      
+      itemreceive = "", 
+      descriptionFont = "",
+      descriptionSize = 13,
+      headlineFont = "",
+      headlineSize = 18};      
 local QTR_quest_LG = {
       id = 0,
       title = "",
@@ -49,8 +53,8 @@ local last_text = 0;
 local curr_trans = "1";
 local curr_goss = "X";
 local curr_hash = 0;
-local Original_Font1 = "Fonts\\MORPHEUS.ttf";
-local Original_Font2 = "Fonts\\FRIZQT__.ttf";
+local Original_Font1, Original_Font1_Size = GameFontNormal:GetFont();
+local Original_Font2, Original_Font2_Size = QuestInfoDescriptionText:GetFont();
 local p_race = {
       [10] = { W1="血精灵", W2="血精灵" }, 
       ["Dark Iron Dwarf"] = { W1="黑铁矮人", W2="黑铁矮人" },
@@ -252,18 +256,19 @@ function QTR_BlizzardOptions()
   QTROptionsHeader:ClearAllPoints();
   QTROptionsHeader:SetPoint("TOPLEFT", 16, -16);
   QTROptionsHeader:SetText("WoWeuCN-Quests, ver. "..QTR_version.." ("..QTR_base..") by qqytqqyt © 2019");
+  QTROptionsHeader:SetFont(QTR_Font2, 16);
 
-  local QTRDateOfBase = QTROptions:CreateFontString(nil, "ARTWORK");
-  QTRDateOfBase:SetFontObject(GameFontNormalLarge);
-  QTRDateOfBase:SetJustifyH("LEFT"); 
-  QTRDateOfBase:SetJustifyV("TOP");
-  QTRDateOfBase:ClearAllPoints();
-  QTRDateOfBase:SetPoint("TOPRIGHT", QTROptionsHeader, "TOPRIGHT", 0, -22);
-  QTRDateOfBase:SetText("翻译数据库版本日期: "..QTR_date);
-  QTRDateOfBase:SetFont(QTR_Font2, 16);
+  local QTRPlayer = QTROptions:CreateFontString(nil, "ARTWORK");
+  QTRPlayer:SetFontObject(GameFontNormalLarge);
+  QTRPlayer:SetJustifyH("LEFT"); 
+  QTRPlayer:SetJustifyV("TOP");
+  QTRPlayer:ClearAllPoints();
+  QTRPlayer:SetPoint("TOPRIGHT", QTROptionsHeader, "TOPRIGHT", 0, -22);
+  QTRPlayer:SetText("作者 : "..QTR_Messages.author);
+  QTRPlayer:SetFont(QTR_Font2, 16);
 
   local QTRCheckButton0 = CreateFrame("CheckButton", "QTRCheckButton0", QTROptions, "OptionsCheckButtonTemplate");
-  QTRCheckButton0:SetPoint("TOPLEFT", QTROptionsHeader, "BOTTOMLEFT", 0, -20);
+  QTRCheckButton0:SetPoint("TOPLEFT", QTROptionsHeader, "BOTTOMLEFT", 0, -44);
   QTRCheckButton0:SetScript("OnClick", function(self) if (QTR_PS["active"]=="1") then QTR_PS["active"]="0" else QTR_PS["active"]="1" end; end);
   QTRCheckButton0Text:SetFont(QTR_Font2, 13);
   QTRCheckButton0Text:SetText(QTR_Interface.active);
@@ -867,17 +872,18 @@ function QTR_Translate_Off(typ)
    QuestInfoDescriptionHeader:SetText(QTR_MessOrig.details);
    QuestProgressRequiredItemsText:SetFont(Original_Font1, 18);
    QuestProgressRequiredItemsText:SetText(QTR_MessOrig.reqitems);
-   QuestInfoDescriptionText:SetFont(Original_Font2, 13);
-   QuestInfoObjectivesText:SetFont(Original_Font2, 13);
-   QuestProgressText:SetFont(Original_Font2, 13);
-   QuestInfoRewardText:SetFont(Original_Font2, 13);
-   QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, 13);
-   QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, 13);
+   QuestInfoDescriptionText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestProgressText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoRewardText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
+   
 --   MapQuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, 11);
 --   MapQuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, 11);
-   QuestInfoSpellObjectiveLearnLabel:SetFont(Original_Font2, 13);
+   QuestInfoSpellObjectiveLearnLabel:SetFont(Original_Font2, Original_Font2_Size);
    QuestInfoSpellObjectiveLearnLabel:SetText(QTR_MessOrig.learnspell);
-   QuestInfoXPFrame.ReceiveText:SetFont(Original_Font2, 13);
+   QuestInfoXPFrame.ReceiveText:SetFont(Original_Font2, Original_Font2_Size);
    QuestInfoXPFrame.ReceiveText:SetText(QTR_MessOrig.experience);
    if (typ==1) then			-- pełne przełączenie (jest tłumaczenie)
       QuestInfoRewardsFrame.ItemChooseText:SetText(QTR_MessOrig.itemchoose1);

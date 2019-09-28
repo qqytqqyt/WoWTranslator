@@ -1,4 +1,4 @@
-QTR_base = "20292";   -- version
+QTR_base = "CLASSIC 1.0.1";   -- version
 QTR_date = "2019-08-21"; -- date of creation base
 
 QTR_lang = "CN";      -- language
@@ -26,6 +26,7 @@ QTR_Messages = {
     multipleID = "该翻译可能不能准确反映原文本", 
     currquests = "当前任务", 
     avaiquests = "可用任务", 
+    author     = "Firemaw (EU classic) - Nekonia",
  }; 
  QTR_Interface = { 
     active     = "激活插件", 
