@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ChineseConverter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9ecab500adebae88, processorArchitecture=MSIL">
+      <HintPath>..\packages\ChineseConverter.1.0.0\lib\net20\ChineseConverter.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlAgilityPack, Version=1.11.12.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
       <HintPath>..\packages\HtmlAgilityPack.1.11.12\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
@@ -49,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crawler.cs" />
+    <Compile Include="HtmlRetriever.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quest.cs" />

@@ -62,6 +62,11 @@ namespace QuestTextRetriever
             File.WriteAllText(outputPath, sb.ToString());
         }
 
+        public void ExecuteApi(string outputPath)
+        {
+
+        }
+
         public string PrintLine(Quest quest)
         {
             var text = m_template.Replace("$Id$", quest.Id).Replace("$Title$", quest.Title).Replace("$Objectives$", quest.Objectives).Replace("$Description$", quest.Description)
