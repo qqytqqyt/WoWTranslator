@@ -124,6 +124,9 @@ function QTR_CheckVars()
   if (not QTR_PS["transtitle"] ) then
      QTR_PS["transtitle"] = "0";   
   end
+  if (not QTR_PS["transobjectives"] ) then
+     QTR_PS["transobjectives"] = "1";   
+  end
   -- Special variable of the GetQuestID function availability
   if ( QTR_PS["isGetQuestID"] ) then
      isGetQuestID=QTR_PS["isGetQuestID"];
@@ -196,6 +199,7 @@ function QTR_SlashCommand(msg)
          end
          QTR_Translate_Off(1);
       end
+      -- title option
    elseif (msg=="title on" or msg=="TITLE ON" or msg=="title 1") then
       if (QTR_PS["transtilte"]=="1") then
          print ("WOWeuCN - 翻译标题 : 启用.");
@@ -210,13 +214,33 @@ function QTR_SlashCommand(msg)
       else
          print ("|cffffff00WOWeuCN - 翻译标题 : 禁用.");
          QTR_PS["transtitle"] = "0";
-         QuestInfoTitleHeader:SetFont(Original_Font1, 18);
       end
    elseif (msg=="title" or msg=="TITLE") then
       if (QTR_PS["transtilte"]=="1") then
          print ("WOWeuCN - 翻译标题状态 : 启用.");
       else
          print ("WOWeuCN - 翻译标题状态 : 禁用.");
+      end
+      -- objectives option
+   elseif (msg=="objectives on" or msg=="OBJECTIVES ON" or msg=="objectives 1") then
+      if (QTR_PS["transobjectives"]=="1") then
+         print ("WOWeuCN - 翻译任务目标 : 启用.");
+      else
+         print ("|cffffff00WOWeuCN - 翻译任务目标 : 启用.");
+         QTR_PS["transobjectives"] = "1";
+      end
+   elseif (msg=="objectives off" or msg=="OBJECTIVES OFF" or msg=="objectives 0") then
+      if (QTR_PS["transobjectives"]=="0") then
+         print ("WOWeuCN - 翻译任务目标 : 禁用.");
+      else
+         print ("|cffffff00WOWeuCN - 翻译任务目标 : 禁用.");
+         QTR_PS["transobjectives"] = "0";
+      end
+   elseif (msg=="objectives" or msg=="OBJECTIVES") then
+      if (QTR_PS["transobjectives"]=="1") then
+         print ("WOWeuCN - 翻译任务目标状态 : 启用.");
+      else
+         print ("WOWeuCN - 翻译任务目标状态 : 禁用.");
       end
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
@@ -227,6 +251,8 @@ function QTR_SlashCommand(msg)
       print ("      /woweucn off - 禁用翻译模块");
       print ("      /woweucn title on  - 启用标题翻译");
       print ("      /woweucn title off - 禁用标题翻译");
+      print ("      /woweucn objectives on  - 启用任务目标翻译");
+      print ("      /woweucn objectives off - 禁用任务目标翻译");
    end
 end
 
@@ -235,6 +261,7 @@ end
 function QTR_SetCheckButtonState()
   QTRCheckButton0:SetChecked(QTR_PS["active"]=="1");
   QTRCheckButton3:SetChecked(QTR_PS["transtitle"]=="1");
+  QTRCheckButton4:SetChecked(QTR_PS["transobjectives"]=="1");
   QTRCheckOther1:SetChecked(QTR_PS["other1"]=="1");
   QTRCheckOther2:SetChecked(QTR_PS["other2"]=="1");
   QTRCheckOther3:SetChecked(QTR_PS["other3"]=="1");
@@ -287,6 +314,12 @@ function QTR_BlizzardOptions()
   QTRCheckButton3:SetScript("OnClick", function(self) if (QTR_PS["transtitle"]=="0") then QTR_PS["transtitle"]="1" else QTR_PS["transtitle"]="0" end; end);
   QTRCheckButton3Text:SetFont(QTR_Font2, 13);
   QTRCheckButton3Text:SetText(QTR_Interface.transtitle);
+  
+  local QTRCheckButton4 = CreateFrame("CheckButton", "QTRCheckButton4", QTROptions, "OptionsCheckButtonTemplate");
+  QTRCheckButton4:SetPoint("TOPLEFT", QTROptionsMode1, "BOTTOMLEFT", 0, -25);
+  QTRCheckButton4:SetScript("OnClick", function(self) if (QTR_PS["transobjectives"]=="0") then QTR_PS["transobjectives"]="1" else QTR_PS["transobjectives"]="0" end; end);
+  QTRCheckButton4Text:SetFont(QTR_Font2, 13);
+  QTRCheckButton4Text:SetText(QTR_Interface.transobjectives);
   
 --  local QTRIntegration0 = QTROptions:CreateFontString(nil, "ARTWORK");
 --  QTRIntegration0:SetFontObject(GameFontWhite);
@@ -681,7 +714,7 @@ function QTR_QuestPrepare(questEvent)
                QTR_MISSING[QTR_quest_EN.id.." PROGRESS"]=QTR_quest_EN.progress;     -- save missing translation part
             end
             if (strlen(QTR_quest_LG.progress)==0) then      -- The content is empty and the Progress window has been opened
-               QTR_quest_LG.progress = QTR_ExpandUnitInfo('YOUR_NAME');
+               QTR_quest_LG.progress = '';
             end
          end
          if (questEvent=="QUEST_COMPLETE") then
@@ -694,7 +727,22 @@ function QTR_QuestPrepare(questEvent)
             if (strlen(QTR_quest_EN.completion)>0 and strlen(QTR_quest_LG.completion)==0) then
                QTR_MISSING[QTR_quest_EN.id.." COMPLETE"]=QTR_quest_EN.completion;     -- save missing translation part
             end
-         end         
+         end     
+         -- missing data
+         if (QTR_quest_EN.details ~= nil and strlen(QTR_quest_EN.details)>0 and strlen(QTR_quest_LG.details)==0) then
+          QTR_quest_LG.details = QTR_quest_EN.details;
+         end
+         if (QTR_quest_EN.objectives ~= nil and strlen(QTR_quest_EN.objectives)>0 and strlen(QTR_quest_LG.objectives)==0) then
+          QTR_quest_LG.objectives = QTR_quest_EN.objectives;
+         end
+         if (QTR_quest_EN.progress ~= nil and strlen(QTR_quest_EN.progress)>0 and strlen(QTR_quest_LG.progress)==0) then
+          QTR_quest_LG.progress = QTR_quest_EN.progress;
+         end
+         if (QTR_quest_EN.completion ~= nil and strlen(QTR_quest_EN.completion)>0 and strlen(QTR_quest_LG.completion)==0) then
+          QTR_quest_LG.completion = QTR_quest_EN.completion;
+         end
+         
+
          QTR_ToggleButton0:SetText("Quest ID="..QTR_quest_LG.id.." ("..QTR_lang..")");
          QTR_ToggleButton1:SetText("Quest ID="..QTR_quest_LG.id.." ("..QTR_lang..")");
          QTR_ToggleButton2:SetText("Quest ID="..QTR_quest_LG.id.." ("..QTR_lang..")");
@@ -791,8 +839,10 @@ function QTR_Translate_On(typ)
       QuestInfoTitleHeader:SetFont(QTR_Font1, 18);
       QuestProgressTitleText:SetFont(QTR_Font1, 18);
    end
-   QuestInfoObjectivesHeader:SetFont(QTR_Font1, 18);
-   QuestInfoObjectivesHeader:SetText(QTR_Messages.objectives);
+   if (QTR_PS["transobjectives"]=="1") then
+      QuestInfoObjectivesHeader:SetFont(QTR_Font1, 18);
+      QuestInfoObjectivesHeader:SetText(QTR_Messages.objectives);
+   end
    QuestInfoRewardsFrame.Header:SetFont(QTR_Font1, 18);
    QuestInfoRewardsFrame.Header:SetText(QTR_Messages.rewards);
    QuestInfoDescriptionHeader:SetFont(QTR_Font1, 18);
@@ -840,7 +890,9 @@ function QTR_Translate_On(typ)
             QTR_Storyline(1);
          end
          QuestInfoDescriptionText:SetText(QTR_quest_LG.details);
-         QuestInfoObjectivesText:SetText(QTR_quest_LG.objectives);
+         if (QTR_PS["transobjectives"]=="1") then
+            QuestInfoObjectivesText:SetText(QTR_quest_LG.objectives);
+         end
          QuestProgressText:SetText(QTR_quest_LG.progress);
          QuestInfoRewardText:SetText(QTR_quest_LG.completion);
 --         QuestInfoRewardsFrame.ItemChooseText:SetText(QTR_quest_LG.itemchoose);
@@ -1173,7 +1225,7 @@ end
 -- replace special characters in the text
 function QTR_ExpandUnitInfo(msg)
    msg = string.gsub(msg, "NEW_LINE", "\n");
-   msg = string.gsub(msg, "YOUR_NAME", QTR_name);
+   msg = string.gsub(msg, "{name}", QTR_name);
    
 -- player gender YOUR_GENDER(x;y)
    local nr_1, nr_2, nr_3 = 0;
@@ -1208,11 +1260,11 @@ function QTR_ExpandUnitInfo(msg)
    end
 
    if (QTR_sex==3) then        
-      msg = string.gsub(msg, "YOUR_RACE", player_race.W2);                       
-      msg = string.gsub(msg, "YOUR_CLASS", player_class.W2);                      
+      msg = string.gsub(msg, "{race}", player_race.W2);                       
+      msg = string.gsub(msg, "{class}", player_class.W2);                      
    else                    
-      msg = string.gsub(msg, "YOUR_RACE", player_race.W1);                      
-      msg = string.gsub(msg, "YOUR_CLASS", player_class.W1);                  
+      msg = string.gsub(msg, "{race}", player_race.W1);                      
+      msg = string.gsub(msg, "{class}", player_class.W1);                  
    end
    
    return msg;
