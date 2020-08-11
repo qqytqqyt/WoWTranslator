@@ -1,5 +1,5 @@
-﻿QTR_base = "8.0.1";   -- version
-QTR_date = "2020-08-08"; -- date of creation base
+﻿QTR_base = "8.0.2";   -- version
+QTR_date = "2020-08-09"; -- date of creation base
 
 QTR_lang = "CN";      -- language
 
