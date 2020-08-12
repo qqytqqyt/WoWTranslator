@@ -7,7 +7,7 @@
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: QTR_PS, QTR_SAVED, QTR_MISSING
+## SavedVariables: QTR_PS, QTR_SAVED, QTR_MISSING, QTR_QuestToolTips, QTR_QuestIndex
 ## SavedVariablesPerCharacter: QTR_PC
 
 QuestData_cn.lua
