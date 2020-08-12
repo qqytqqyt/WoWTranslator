@@ -13,7 +13,7 @@ local QTR_waitTable = {};
 local QTR_waitFrame = nil;
 local QTR_MessOrig = {
       details    = "Description", 
-      objectives = "Objectives", 
+      objectives = "Quest Objectives", 
       rewards    = "Rewards", 
       itemchoose1= "You will be able to choose one of these rewards:", 
       itemchoose2= "Choose one of these rewards:", 
@@ -630,21 +630,22 @@ end
 
 -- QuestLogPopupDetailFrame or QuestMapDetailsScrollFrame or QuestGuru or Immersion window opened
 function QTR_QuestPrepare(questEvent)
-   if (isQuestGuru()) then
-      if (QTR_PS["other1"]=="0") then       -- QuestGuru is active but translation is not allowed
-         QTR_ToggleButton3:Hide();
-         return;
-      else   
-         QTR_ToggleButton3:Show();
-         if (QuestGuru:IsVisible() and (curr_trans=="0")) then
-            QTR_Translate_Off(1);
-            local questTitle, level, questTag, isHeader, isCollapsed, isComplete, isDaily, questID = GetQuestLogTitle(GetQuestLogSelection());
-            if (QTR_quest_EN.id==questID) then
-               return;
-            end
-         end
-      end   
-   end
+  -- not usable
+   --if (isQuestGuru()) then
+      --if (QTR_PS["other1"]=="0") then       -- QuestGuru is active but translation is not allowed
+      --   QTR_ToggleButton3:Hide();
+      --   return;
+   --else   
+      --   QTR_ToggleButton3:Show();
+      --   if (QuestGuru:IsVisible() and (curr_trans=="0")) then
+      --      QTR_Translate_Off(1);
+      --     local questTitle, level, questTag, isHeader, isCollapsed, isComplete, isDaily, questID = GetQuestLogTitle(GetQuestLogSelection());
+      --      if (QTR_quest_EN.id==questID) then
+      --         return;
+      --      end
+      --   end
+      --end   
+   --end
    if (isImmersion()) then
       if (QTR_PS["other2"]=="0") then       -- Immersion is active but translation is not allowed
          QTR_ToggleButton4:Hide();
@@ -688,6 +689,8 @@ function QTR_QuestPrepare(questEvent)
          if (QTR_quest_EN.title=="") then
             QTR_quest_EN.title=GetQuestLogTitle(GetQuestLogSelection());
          end
+         -- 9.0
+         -- QTR_quest_EN.title = C_QuestLog.GetTitleForQuestID(str_ID); 
          QTR_quest_LG.details = QTR_ExpandUnitInfo(QTR_QuestData[str_ID]["Description"]);
          QTR_quest_LG.objectives = QTR_ExpandUnitInfo(QTR_QuestData[str_ID]["Objectives"]);
          if (questEvent=="QUEST_DETAIL") then
@@ -732,18 +735,25 @@ function QTR_QuestPrepare(questEvent)
                QTR_MISSING[QTR_quest_EN.id.." COMPLETE"]=QTR_quest_EN.completion;     -- save missing translation part
             end
          end     
+
          -- missing data
          if (QTR_quest_EN.details ~= nil and strlen(QTR_quest_EN.details)>0 and strlen(QTR_quest_LG.details)==0) then
           QTR_quest_LG.details = QTR_quest_EN.details;
+          QuestInfoDescriptionHeader:SetFont(Original_Font1, 18);
+          QuestInfoDescriptionText:SetFont(Original_Font2, Original_Font2_Size);
          end
          if (QTR_quest_EN.objectives ~= nil and strlen(QTR_quest_EN.objectives)>0 and strlen(QTR_quest_LG.objectives)==0) then
           QTR_quest_LG.objectives = QTR_quest_EN.objectives;
+          QuestInfoObjectivesHeader:SetFont(Original_Font1, 18);
+          QuestInfoObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
          end
          if (QTR_quest_EN.progress ~= nil and strlen(QTR_quest_EN.progress)>0 and strlen(QTR_quest_LG.progress)==0) then
           QTR_quest_LG.progress = QTR_quest_EN.progress;
+          QuestProgressText:SetFont(Original_Font2, Original_Font2_Size);
          end
          if (QTR_quest_EN.completion ~= nil and strlen(QTR_quest_EN.completion)>0 and strlen(QTR_quest_LG.completion)==0) then
           QTR_quest_LG.completion = QTR_quest_EN.completion;
+          QuestInfoRewardText:SetFont(Original_Font2, Original_Font2_Size);
          end
          
 
@@ -846,17 +856,15 @@ function QTR_Translate_On(typ)
    if (QTR_PS["transobjectives"]=="1") then
       QuestInfoObjectivesHeader:SetFont(QTR_Font1, 18);
       QuestInfoObjectivesHeader:SetText(QTR_Messages.objectives);
+      QuestInfoObjectivesText:SetFont(QTR_Font2, 13);
    end
    QuestInfoRewardsFrame.Header:SetFont(QTR_Font1, 18);
    QuestInfoRewardsFrame.Header:SetText(QTR_Messages.rewards);
    QuestInfoDescriptionHeader:SetFont(QTR_Font1, 18);
    QuestInfoDescriptionHeader:SetText(QTR_Messages.details);
+   QuestInfoDescriptionText:SetFont(QTR_Font2, 13);
    QuestProgressRequiredItemsText:SetFont(QTR_Font1, 18);
    QuestProgressRequiredItemsText:SetText(QTR_Messages.reqitems);
-   QuestInfoDescriptionText:SetFont(QTR_Font2, 13);
-   QuestInfoObjectivesText:SetFont(QTR_Font2, 13);
-   QuestProgressText:SetFont(QTR_Font2, 13);
-   QuestInfoRewardText:SetFont(QTR_Font2, 13);
    QuestInfoRewardsFrame.ItemChooseText:SetFont(QTR_Font2, 13);
    QuestInfoRewardsFrame.ItemReceiveText:SetFont(QTR_Font2, 13);
    QuestInfoSpellObjectiveLearnLabel:SetFont(QTR_Font2, 13);
@@ -893,17 +901,47 @@ function QTR_Translate_On(typ)
             QTR_ToggleButton5:SetText("Quest ID="..QTR_quest_LG.id.." ("..QTR_lang..")");
             QTR_Storyline(1);
          end
-         QuestInfoDescriptionText:SetText(QTR_quest_LG.details);
-         if (QTR_PS["transobjectives"]=="1") then
-            QuestInfoObjectivesText:SetText(QTR_quest_LG.objectives);
-         end
-         QuestProgressText:SetText(QTR_quest_LG.progress);
+         if (QTR_quest_LG.details ~= QTR_quest_EN.details) then
+          QuestInfoDescriptionText:SetFont(QTR_Font2, 13);
+          QuestInfoDescriptionText:SetText(QTR_quest_LG.details);
+        end
+        if (QTR_PS["transobjectives"]=="1" and QTR_quest_LG.objectives ~= QTR_quest_EN.objectives) then
+          QuestInfoObjectivesText:SetFont(QTR_Font2, 13);
+          QuestInfoObjectivesText:SetText(QTR_quest_LG.objectives);
+        end
+        if (QTR_quest_LG.progress ~= QTR_quest_EN.progress) then
+          QuestProgressText:SetText(QTR_quest_LG.progress);
+          QuestProgressText:SetFont(QTR_Font2, 13);
+       end
+       if (QTR_quest_LG.completion ~= QTR_quest_EN.completion) then
          QuestInfoRewardText:SetText(QTR_quest_LG.completion);
+         QuestInfoRewardText:SetFont(QTR_Font2, 13);
+       end
 --         QuestInfoRewardsFrame.ItemChooseText:SetText(QTR_quest_LG.itemchoose);
 --         QuestInfoRewardsFrame.ItemReceiveText:SetText(QTR_quest_LG.itemreceive);
       end
    else
+      
+      QuestInfoTitleHeader:SetFont(Original_Font1, 18);
+      QuestProgressTitleText:SetFont(Original_Font1, 18);
+      QuestInfoObjectivesHeader:SetFont(Original_Font1, 18);
+      QuestInfoObjectivesHeader:SetText(QTR_MessOrig.objectives);
+      QuestInfoRewardsFrame.Header:SetFont(Original_Font1, 18);
+      QuestInfoRewardsFrame.Header:SetText(QTR_MessOrig.rewards);
+      QuestInfoDescriptionHeader:SetFont(Original_Font1, 18);
+      QuestInfoDescriptionHeader:SetText(QTR_MessOrig.details);
+      QuestProgressRequiredItemsText:SetFont(Original_Font1, 18);
+      QuestProgressRequiredItemsText:SetText(QTR_MessOrig.reqitems);
+      QuestInfoDescriptionText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestProgressText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoRewardText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
+
       if (curr_trans == "1") then
+        print('not rans')
+        
          QuestInfoRewardsFrame.ItemChooseText:SetText(QTR_Messages.itemchoose1);
          QuestInfoRewardsFrame.ItemReceiveText:SetText(QTR_Messages.itemreceiv1);
          if ((ImmersionFrame ~= nil ) and (ImmersionFrame.TalkBox:IsVisible() )) then
@@ -1183,7 +1221,6 @@ function QTR_Storyline(nr)
       Storyline_API.playNext(Storyline_NPCFrameModelsYou);  -- reload
    end
 end
-
 
 function QTR_Storyline_OFF(nr)
    if (QTR_onDebug) then

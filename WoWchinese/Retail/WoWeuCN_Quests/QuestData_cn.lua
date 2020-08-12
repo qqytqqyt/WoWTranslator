@@ -1,5 +1,5 @@
 ﻿QTR_base = "8.0.2";   -- version
-QTR_date = "2020-08-09"; -- date of creation base
+QTR_date = "2020-08-12"; -- date of creation base
 
 QTR_lang = "CN";      -- language
 
@@ -30,8 +30,6 @@ QTR_Messages = {
  }; 
  QTR_Interface = { 
     active     = "激活插件", 
-    mode       = "选择插件模式", 
-    mode1      = "直接替换任务窗口文本", 
     options1   = "额外选项:", 
     transtitle = "翻译任务标题", 
     transobjectives = "翻译任务目标"
