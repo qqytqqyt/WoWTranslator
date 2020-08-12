@@ -166,6 +166,31 @@ function DetectEmuServer()
   end
 end
 
+-- scann
+local function EnumerateTooltipLines_helper(...)
+	local texts = '';
+    for i = 1, select("#", ...) do
+        local region = select(i, ...)
+        if region and region:GetObjectType() == "FontString" then
+			local text = region:GetText() -- string or nil
+			if (text ~= nil) then
+				print(text)
+				texts = texts .. text			
+			end
+        end
+	end
+	return texts
+end
+
+function EnumerateTooltipLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
+    return EnumerateTooltipLines_helper(tooltip:GetRegions())
+end
+
+function qcQuestInformationTooltipSetup() -- *
+	qcQuestInformationTooltip = CreateFrame("GameTooltip", "qcQuestInformationTooltip", UIParent, "GameTooltipTemplate")
+	qcQuestInformationTooltip:SetFrameStrata("TOOLTIP")
+end
+
 
 -- commands
 function QTR_SlashCommand(msg)
@@ -246,6 +271,28 @@ function QTR_SlashCommand(msg)
       else
          print ("WOWeuCN - 翻译任务目标状态 : 禁用.");
       end
+    elseif (msg=="reset" or msg=="RESET") then
+      QTR_QuestIndex = 1;
+      print("Reset");
+   elseif (msg=="scan" or msg=="SCAN") then
+      if (QTR_QuestToolTips == nil) then
+        QTR_QuestToolTips = {} 
+      end
+      if (QTR_QuestIndex == nil) then
+        QTR_QuestIndex = 1
+      end
+      for i = QTR_QuestIndex, QTR_QuestIndex + 500 do
+        qcQuestInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+        qcQuestInformationTooltip:ClearLines()
+        qcQuestInformationTooltip:SetHyperlink('quest:' .. i)
+        qcQuestInformationTooltip:Show()
+        local text =  EnumerateTooltipLines(qcQuestInformationTooltip)
+        if (text ~= '' and text ~= nil) then
+          QTR_QuestToolTips[i .. ''] = text
+          print(i)
+        end
+      end
+      QTR_QuestIndex = QTR_QuestIndex + 500
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
@@ -450,6 +497,8 @@ function QTR_OnLoad()
    
    -- Function called after clicking on the quest name in QuestMapFrame
    hooksecurefunc("QuestMapFrame_ShowQuestDetails", QTR_PrepareReload);
+   
+   qcQuestInformationTooltipSetup();
    
    isQuestGuru();
    isImmersion();
