@@ -6,7 +6,7 @@
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: WoWeuCN_Tooltips_PS, WoWeuCN_Tooltips_SpellToolTips0, WoWeuCN_Tooltips_SpellToolTips100000, WoWeuCN_Tooltips_SpellToolTips200000, WoWeuCN_Tooltips_SpellToolTips300000, WoWeuCN_Tooltips_SpellToolIndex
+## SavedVariables: WoWeuCN_Tooltips_PS, WoWeuCN_Tooltips_SpellToolTips0, WoWeuCN_Tooltips_SpellToolTips100000, WoWeuCN_Tooltips_SpellToolTips200000, WoWeuCN_Tooltips_SpellToolTips300000, WoWeuCN_Tooltips_SpellToolIndex, WoWeuCN_Tooltips_ItemToolTips0, WoWeuCN_Tooltips_ItemToolTips100000, WoWeuCN_Tooltips_ItemIndex
 ## SavedVariablesPerCharacter: WoWeuCN_Tooltips_PC
 
 TooltipsData_cn.lua
