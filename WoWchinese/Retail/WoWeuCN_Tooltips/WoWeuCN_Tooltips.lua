@@ -24,9 +24,13 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_PS["active"]) then
      WoWeuCN_Tooltips_PS["active"] = "1";
   end
-  -- Initiation - title translation
+  -- Initiation - spell translation
   if (not WoWeuCN_Tooltips_PS["transspell"] ) then
      WoWeuCN_Tooltips_PS["transspell"] = "1";   
+  end
+  -- Initiation - item translation
+  if (not WoWeuCN_Tooltips_PS["transitem"] ) then
+     WoWeuCN_Tooltips_PS["transitem"] = "1";   
   end
    -- Path version info
   if (not WoWeuCN_Tooltips_PS["patch"]) then
@@ -107,28 +111,50 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton2:Disable();
       end
       -- spell option
-   elseif (msg=="spell on" or msg=="SPELL ON" or msg=="spell 1") then
-      if (WoWeuCN_Tooltips_PS["transspell"]=="1") then
-         print ("WOWeuCN - 翻译法术Tooltips : 启用.");
-      else
-         print ("|cffffff00WOWeuCN - 翻译法术Tooltips : 启用.");
-         WoWeuCN_Tooltips_PS["transspell"] = "1";
-         QuestInfoTitleHeader:SetFont(WoWeuCN_Tooltips_Font1, 18);
-      end
-   elseif (msg=="spell off" or msg=="spell OFF" or msg=="spell 0") then
-      if (WoWeuCN_Tooltips_PS["transspell"]=="0") then
-         print ("WOWeuCN - 翻译法术Tooltips : 禁用.");
-      else
-         print ("|cffffff00WOWeuCN - 翻译法术Tooltips : 禁用.");
-         WoWeuCN_Tooltips_PS["transspell"] = "0";
-      end
-   elseif (msg=="spell" or msg=="SPELL") then
-      if (WoWeuCN_Tooltips_PS["transspell"]=="1") then
-         print ("WOWeuCN - 翻译法术Tooltips : 启用.");
-      else
-         print ("WOWeuCN - 翻译法术Tooltips : 禁用.");
-      end
-    --SPELL
+      elseif (msg=="spell on" or msg=="SPELL ON" or msg=="spell 1") then
+          if (WoWeuCN_Tooltips_PS["transspell"]=="1") then
+            print ("WOWeuCN - 翻译法术Tooltips : 启用.");
+          else
+            print ("|cffffff00WOWeuCN - 翻译法术Tooltips : 启用.");
+            WoWeuCN_Tooltips_PS["transspell"] = "1";
+          end
+      elseif (msg=="spell off" or msg=="spell OFF" or msg=="spell 0") then
+          if (WoWeuCN_Tooltips_PS["transspell"]=="0") then
+            print ("WOWeuCN - 翻译法术Tooltips : 禁用.");
+          else
+            print ("|cffffff00WOWeuCN - 翻译法术Tooltips : 禁用.");
+            WoWeuCN_Tooltips_PS["transspell"] = "0";
+          end
+      elseif (msg=="spell" or msg=="SPELL") then
+          if (WoWeuCN_Tooltips_PS["transspell"]=="1") then
+            print ("WOWeuCN - 翻译法术Tooltips : 启用.");
+          else
+            print ("WOWeuCN - 翻译法术Tooltips : 禁用.");
+          end
+      
+      -- item option
+      elseif (msg=="item on" or msg=="ITEM ON" or msg=="item 1") then
+        if (WoWeuCN_Tooltips_PS["transitem"]=="1") then
+          print ("WOWeuCN - 翻译道具Tooltips : 启用.");
+        else
+          print ("|cffffff00WOWeuCN - 翻译道具Tooltips : 启用.");
+          WoWeuCN_Tooltips_PS["transitem"] = "1";
+        end
+    elseif (msg=="item off" or msg=="ITEM OFF" or msg=="item 0") then
+        if (WoWeuCN_Tooltips_PS["transitem"]=="0") then
+          print ("WOWeuCN - 翻译道具Tooltips : 禁用.");
+        else
+          print ("|cffffff00WOWeuCN - 翻译道具Tooltips : 禁用.");
+          WoWeuCN_Tooltips_PS["transitem"] = "0";
+        end
+    elseif (msg=="item" or msg=="ITEM") then
+        if (WoWeuCN_Tooltips_PS["transitem"]=="1") then
+          print ("WOWeuCN - 翻译道具Tooltips : 启用.");
+        else
+          print ("WOWeuCN - 翻译道具Tooltips : 禁用.");
+        end
+
+    --spell scan
     elseif (msg=="back" or msg=="BACK") then
       WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex - 5000;
       print(WoWeuCN_Tooltips_SpellToolIndex);
@@ -203,7 +229,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       end
     end
     WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex + 5000
--- item
+    -- item scan
     elseif (msg=="itemback" or msg=="ITEMBACK") then
       WoWeuCN_Tooltips_ItemIndex = WoWeuCN_Tooltips_ItemIndex - 5000;
       print(WoWeuCN_Tooltips_ItemIndex);
@@ -249,6 +275,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
         end
       end
       WoWeuCN_Tooltips_ItemIndex = WoWeuCN_Tooltips_ItemIndex + 5000
+      
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
         InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
@@ -258,6 +285,8 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       print ("      /woweucn-tooltips off - 禁用Tooltips翻译模块");
       print ("      /woweucn-tooltips spell on  - 启用法术Tooltips翻译");
       print ("      /woweucn-tooltips spell off - 禁用法术Tooltips翻译");
+      print ("      /woweucn-tooltips item on  - 启用道具Tooltips翻译");
+      print ("      /woweucn-tooltips item off - 禁用道具Tooltips翻译");
    end
 end
 
