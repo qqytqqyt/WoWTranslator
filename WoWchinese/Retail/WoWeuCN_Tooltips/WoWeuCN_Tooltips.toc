@@ -1,0 +1,14 @@
+﻿## Interface: 80300
+## Title: WoWeuCN-Tooltips
+## Version: 8.0.2
+## Notes_en: AddOn displays the translated tooltips informations in Chinese.
+## Author: qqytqqyt
+## eMail: ytong007@hotmail.com
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: WoWeuCN_Tooltips_PS, WoWeuCN_Tooltips_SpellToolTips0, WoWeuCN_Tooltips_SpellToolTips100000, WoWeuCN_Tooltips_SpellToolTips200000, WoWeuCN_Tooltips_SpellToolTips300000, WoWeuCN_Tooltips_SpellToolIndex
+## SavedVariablesPerCharacter: WoWeuCN_Tooltips_PC
+
+TooltipsData_cn.lua
+WoWeuCN_Tooltips.lua
+WoWeuCN_Tooltips.xml
