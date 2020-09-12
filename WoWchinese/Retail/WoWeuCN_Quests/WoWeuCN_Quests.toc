@@ -7,8 +7,8 @@
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: QTR_PS, QTR_SAVED, QTR_MISSING, QTR_QuestToolTips, QTR_QuestIndex
-## SavedVariablesPerCharacter: QTR_PC
+## SavedVariables: WoWeuCN_Quests_PS, WoWeuCN_Quests_SAVED, WoWeuCN_Quests_MISSING, WoWeuCN_Quests_QuestToolTips, WoWeuCN_Quests_QuestIndex
+## SavedVariablesPerCharacter: WoWeuCN_Quests_PC
 
 QuestData_cn.lua
 WoWeuCN_Quests.lua

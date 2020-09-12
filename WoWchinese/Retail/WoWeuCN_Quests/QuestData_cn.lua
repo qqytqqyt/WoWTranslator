@@ -1,10 +1,10 @@
-﻿QTR_base = "8.0.2";   -- version
-QTR_date = "2020-08-12"; -- date of creation base
+﻿WoWeuCN_Quests_base = "8.0.2";   -- version
+WoWeuCN_Quests_date = "2020-08-12"; -- date of creation base
 
-QTR_lang = "CN";      -- language
+WoWeuCN_Quests_lang = "CN";      -- language
 
 -- Localization
-QTR_Messages = {   
+WoWeuCN_Quests_Messages = {   
     loaded     = "加载完成", 
     isactive   = "已启用", 
     isinactive = "未启用", 
@@ -28,17 +28,17 @@ QTR_Messages = {
     avaiquests = "可用任务", 
     author     = "Silvermoon (EU) - Daifish",
  }; 
- QTR_Interface = { 
+ WoWeuCN_Quests_Interface = { 
     active     = "激活插件", 
     options1   = "额外选项:", 
     transtitle = "翻译任务标题", 
     transobjectives = "翻译任务目标"
  }; 
 
-QTR_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
-QTR_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
+WoWeuCN_Quests_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
+WoWeuCN_Quests_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
 
-QTR_QuestData = 
+WoWeuCN_Quests_QuestData = 
 {  
     ["2"]={["Title"]="尖爪的爪子", ["Objectives"]="将尖爪的爪子交给银风避难所的塞娜尼·雷心。", ["Description"]="强大的角鹰兽尖爪已经被你杀死了，它的爪子将成为你胜利的象征。NEW_LINENEW_LINE银风避难所的塞娜尼·雷心一定会对你的战利品感兴趣的。", ["Progress"]="", ["Completion"]="", ["Translator"]=""},
     ["11"]={["Title"]="悬赏河爪豺狼人", ["Objectives"]="给兵营的瑞尼尔副队长带去8个彩色豺狼人臂章。", ["Description"]="有人在艾尔文森林的边界处看见了豺狼人，这些野蛮的动物在这儿肯定不会干什么好事。在了望塔南边的树林里有一大群豺狼人到处游荡，凭我们自己的兵力很难应付他们。NEW_LINENEW_LINE任何帮忙清除这些豺狼人的勇士都会受到暴风城军方的嘉奖。把他们的彩色豺狼人臂章带给我以证明你杀了他们。", ["Progress"]="", ["Completion"]="", ["Translator"]=""},

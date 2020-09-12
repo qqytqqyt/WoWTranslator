@@ -2,7 +2,7 @@
    <Frame name="WoWeuCNQuestsFrame" parent="UIParent" hidden="true">
       <Scripts>
          <OnLoad>
-            QTR_OnLoad()
+            WoWeuCN_Quests_OnLoad()
          </OnLoad>
       </Scripts>
    </Frame>
