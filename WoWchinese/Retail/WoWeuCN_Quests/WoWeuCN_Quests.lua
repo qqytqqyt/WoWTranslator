@@ -320,7 +320,32 @@ function WoWeuCN_Quests_SetCheckButtonState()
   WoWeuCN_QuestsCheckOther3:SetChecked(WoWeuCN_Quests_PS["other3"]=="1");
 end
 
-
+function WoweuCN_LoadOriginalHeaders()
+  if QuestInfoDescriptionHeader:GetText() ~= nil and QuestInfoDescriptionHeader:GetText() ~= WoWeuCN_Quests_Messages.details then
+	WoWeuCN_Quests_MessOrig.details = QuestInfoDescriptionHeader:GetText()
+  end
+  if QuestInfoObjectivesHeader:GetText() ~= nil and QuestInfoObjectivesHeader:GetText() ~= WoWeuCN_Quests_Messages.objectives then
+	WoWeuCN_Quests_MessOrig.objectives = QuestInfoObjectivesHeader:GetText()
+  end
+  if QuestInfoRewardsFrame.Header:GetText() ~= nil and QuestInfoRewardsFrame.Header:GetText() ~= WoWeuCN_Quests_Messages.rewards then
+	WoWeuCN_Quests_MessOrig.rewards = QuestInfoRewardsFrame.Header:GetText()
+  end
+  if QuestInfoRewardsFrame.ItemChooseText:GetText() ~= nil and QuestInfoRewardsFrame.ItemChooseText:GetText() ~= WoWeuCN_Quests_Messages.itemchoose1 then
+	WoWeuCN_Quests_MessOrig.itemchoose1 = QuestInfoRewardsFrame.ItemChooseText:GetText()
+  end
+  if QuestInfoRewardsFrame.ItemReceiveText:GetText() ~= nil and QuestInfoRewardsFrame.ItemReceiveText:GetText() ~= WoWeuCN_Quests_Messages.itemreceiv1 then
+	WoWeuCN_Quests_MessOrig.itemreceiv1 = QuestInfoRewardsFrame.ItemReceiveText:GetText()
+  end
+  if QuestInfoSpellObjectiveLearnLabel:GetText() ~= nil and QuestInfoSpellObjectiveLearnLabel:GetText() ~= WoWeuCN_Quests_Messages.learnspell then
+	WoWeuCN_Quests_MessOrig.learnspell = QuestInfoSpellObjectiveLearnLabel:GetText()
+  end
+  if QuestProgressRequiredMoneyText:GetText() ~= nil and QuestProgressRequiredMoneyText:GetText() ~= WoWeuCN_Quests_Messages.reqmoney then
+	WoWeuCN_Quests_MessOrig.reqmoney = QuestProgressRequiredMoneyText:GetText()
+  end
+  if QuestProgressRequiredItemsText:GetText() ~= nil and QuestProgressRequiredItemsText:GetText() ~= WoWeuCN_Quests_Messages.reqitems then
+	WoWeuCN_Quests_MessOrig.reqitems = QuestProgressRequiredItemsText:GetText()
+  end
+end
 
 function WoWeuCN_Quests_BlizzardOptions()
   -- Create main frame for information text
@@ -482,7 +507,7 @@ function WoWeuCN_Quests_OnLoad()
    hooksecurefunc("QuestMapFrame_ShowQuestDetails", WoWeuCN_Quests_PrepareReload);
    
    qcQuestInformationTooltipSetup();
-   
+   WoweuCN_LoadOriginalHeaders();
 end
 
 local lastToolTipId = 0;
@@ -668,6 +693,7 @@ end
 
 -- Displays the translation
 function WoWeuCN_Quests_Translate_On(typ)
+   WoweuCN_LoadOriginalHeaders()
    if (WoWeuCN_Quests_PS["transtitle"]=="1") then    -- view translated title
       QuestInfoTitleHeader:SetFont(WoWeuCN_Quests_Font1, 18);
       QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
@@ -776,8 +802,6 @@ function WoWeuCN_Quests_Translate_Off(typ)
    if (typ==1) then			-- pełne przełączenie (jest tłumaczenie)
       QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_MessOrig.itemchoose1);
       QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_MessOrig.itemreceiv1);
---      MapQuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_MessOrig.itemreceiv1);
---      MapQuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_MessOrig.itemreceiv1);
       numer_ID = WoWeuCN_Quests_quest_EN.id;
       if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore original subtitle version
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
@@ -790,8 +814,6 @@ function WoWeuCN_Quests_Translate_Off(typ)
          QuestInfoObjectivesText:SetText(WoWeuCN_Quests_quest_EN.objectives);
          QuestProgressText:SetText(WoWeuCN_Quests_quest_EN.progress);
          QuestInfoRewardText:SetText(WoWeuCN_Quests_quest_EN.completion);
---         QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_quest_EN.itemchoose);
---         QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_quest_EN.itemreceive);
       end
    end
 end
