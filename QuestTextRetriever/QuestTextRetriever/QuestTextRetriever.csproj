@@ -58,8 +58,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quest.cs" />
     <Compile Include="Retriever.cs" />
+    <Compile Include="ItemReader.cs" />
     <Compile Include="SpellReader.cs" />
-    <Compile Include="SpellTips.cs" />
+    <Compile Include="Tooltip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

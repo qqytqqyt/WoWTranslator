@@ -43,6 +43,11 @@ function WoWeuCN_Tooltips_CheckVars()
 end
 
 
+local function loadAllItemData()
+  loadItemData0();
+  loadItemData100000();
+end
+
 local function loadAllSpellData()
   loadSpellData0();
   loadSpellData50000();
@@ -156,7 +161,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
 
     --spell scan
     elseif (msg=="back" or msg=="BACK") then
-      WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex - 5000;
+      WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex - 500;
       print(WoWeuCN_Tooltips_SpellToolIndex);
     elseif (msg=="reset" or msg=="RESET") then
       WoWeuCN_Tooltips_SpellToolIndex = 1;
@@ -201,7 +206,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
     if (WoWeuCN_Tooltips_SpellToolIndex == nil) then
       WoWeuCN_Tooltips_SpellToolIndex = 1
     end
-    for i = WoWeuCN_Tooltips_SpellToolIndex, WoWeuCN_Tooltips_SpellToolIndex + 5000 do
+    for i = WoWeuCN_Tooltips_SpellToolIndex, WoWeuCN_Tooltips_SpellToolIndex + 500 do
       qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
       qcSpellInformationTooltip:ClearLines()
       qcSpellInformationTooltip:SetHyperlink('spell:' .. i)
@@ -228,13 +233,17 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
         print(i)
       end
     end
-    WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex + 5000
+    WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex + 500
     -- item scan
     elseif (msg=="itemback" or msg=="ITEMBACK") then
-      WoWeuCN_Tooltips_ItemIndex = WoWeuCN_Tooltips_ItemIndex - 5000;
+      WoWeuCN_Tooltips_ItemIndex = WoWeuCN_Tooltips_ItemIndex - 500;
       print(WoWeuCN_Tooltips_ItemIndex);
     elseif (msg=="itemreset" or msg=="ITEMRESET") then
       WoWeuCN_Tooltips_ItemIndex = 1;
+      print("Reset");
+    elseif (msg=="itemclear" or msg=="ITEMCLEAR") then
+      WoWeuCN_Tooltips_ItemToolTips0 = {} 
+      WoWeuCN_Tooltips_ItemToolTips100000 = {} 
       print("Reset");
     elseif (msg=="itemscan" or msg=="ITEMSCAN") then
       if (WoWeuCN_Tooltips_ItemToolTips0 == nil) then
@@ -246,14 +255,15 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       if (WoWeuCN_Tooltips_ItemIndex == nil) then
         WoWeuCN_Tooltips_ItemIndex = 1
       end
-      for i = WoWeuCN_Tooltips_ItemIndex, WoWeuCN_Tooltips_ItemIndex + 5000 do
+      for i = WoWeuCN_Tooltips_ItemIndex, WoWeuCN_Tooltips_ItemIndex + 500 do
         local itemType, itemSubType, _, _, _, _, classID, subclassID = select(6, GetItemInfo(i))
-        if (classID~=nil and classID ~= 2 and classID ~= 4) then
+        if (classID~=nil) then
           qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
           qcSpellInformationTooltip:ClearLines()
           qcSpellInformationTooltip:SetHyperlink('item:' .. i .. ':0:0:0:0:0:0:0')
           qcSpellInformationTooltip:Show()
           local text = EnumerateTooltipStyledLines(qcSpellInformationTooltip)
+          text = text .. '{{{' .. classID .. '}}}'
           if (text ~= '' and text ~= nil) then
             if (i >=0 and i < 100000) then
               if (WoWeuCN_Tooltips_ItemToolTips0[i .. ''] == nil or string.len(WoWeuCN_Tooltips_ItemToolTips0[i .. '']) < string.len(text)) then
@@ -274,7 +284,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
           end
         end
       end
-      WoWeuCN_Tooltips_ItemIndex = WoWeuCN_Tooltips_ItemIndex + 5000
+      WoWeuCN_Tooltips_ItemIndex = WoWeuCN_Tooltips_ItemIndex + 500
       
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
@@ -365,7 +375,7 @@ function WoWeuCN_Tooltips_OnLoad()
 
    qcSpellInformationTooltipSetup();
    loadAllSpellData()
-   loadItemData()
+   loadAllItemData()
 end
 
 function OnTooltipItem(self, tooltip)
@@ -380,8 +390,7 @@ function OnTooltipItem(self, tooltip)
   end
 
   local itemID = string.match(itemLink, 'Hitem:(%d+):')
-  local str_id = tostring(itemID)
-  local itemData = WoWeuCN_Tooltips_ItemData[str_id]
+  local itemData = GetItemData(itemID)
   if ( itemData ) then  
     tooltip:AddLine(" ")
     for i = 1, #itemData do
@@ -389,6 +398,21 @@ function OnTooltipItem(self, tooltip)
       tooltip:AddLine(region, 1, 1, 1, 1)
     end
   end
+end
+
+function GetItemData(id)
+  if (id == nil) then
+    return nil
+  end
+  local str_id = tostring(id)
+  local num_id = tonumber(id)
+  if (num_id >= 0 and num_id < 50000) then
+    return  WoWeuCN_Tooltips_ItemData_0[str_id]
+  elseif (num_id >= 10000 and num_id < 200000) then
+    return  WoWeuCN_Tooltips_ItemData_100000[str_id]
+  end
+
+  return nil
 end
 
 function OnTooltipSpell(self, tooltip)
