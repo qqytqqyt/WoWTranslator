@@ -13,6 +13,15 @@ namespace QuestTextRetriever
         {
         }
 
+        private readonly static List<string> BlackListedPostfix = new List<string>()
+        {
+            "瞬发",
+            "冷却时间",
+            "施法时间",
+            "需引导",
+            "被动"
+        };
+
         private static string TrimTextAfter(string textContent, string separator)
         {
             var content = textContent.Split(new string[] { separator }, StringSplitOptions.None)[0];
@@ -22,6 +31,7 @@ namespace QuestTextRetriever
         public void Read(string spellTipPath, List<Tooltip> spellTipsList)
         {
             var lines = File.ReadAllLines(spellTipPath);
+            var usedId = new HashSet<string>();
             foreach (var line in lines)
             {
                 var spellTips = new Tooltip();
@@ -31,6 +41,13 @@ namespace QuestTextRetriever
                     .Trim();
 
                 spellTips.Id = id;
+                if (usedId.Contains(id))
+                    continue;
+                else
+                {
+                    usedId.Add(id);
+                }
+
                 if (!text.Contains("{{"))
                     continue;
                 text = text.Replace("]] \"","]]\"").Replace("]]  \"", "]]\"");
@@ -42,22 +59,26 @@ namespace QuestTextRetriever
                 {
                     textContent = TrimTextAfter(textContent, "{{");
 
+                    // remove red text
+                    if (textContent.Contains(@"|cffff2020"))
+                        textContent = textContent.Replace(@"|cffff2020", string.Empty).Replace(@"|r", string.Empty);
+                    if (textContent.Contains(@"|cffff2121"))
+                        textContent = textContent.Replace(@"|cffff2121", string.Empty).Replace(@"|r", string.Empty);
+
                     var tipLine = textContent.Split(new string[] { "}}" }, StringSplitOptions.None)[0];
                     textContent = TrimTextAfter(textContent, "[[");
                     var r = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    if (r.Length > 5)
-                        r = r.Substring(0, 5);
                     textContent = TrimTextAfter(textContent, "[[");
                     var g = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    if (r.Length > 5)
-                        g = g.Substring(0, 5);
                     textContent = TrimTextAfter(textContent, "[[");
                     var b = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    if (r.Length > 5)
-                        b = b.Substring(0, 5);
                     textContent = TrimTextAfter(textContent, "]]");
                     var spellTipLine = new TooltipLine();
                     spellTipLine.Line = tipLine;
+
+                    // red
+                    if (r == "0.99999779462814" && g == "0.12548992037773" && b == "0.12548992037773")
+                        continue;
 
                     spellTipLine.R = Math.Round(double.Parse(r), 2);
                     spellTipLine.G = Math.Round(double.Parse(g), 2);
@@ -72,7 +93,7 @@ namespace QuestTextRetriever
         public void Write(string outputPath)
         {
             var spellTipList = new List<Tooltip>();
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\ITEMdata.txt", spellTipList);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList);
 
             var sb = new StringBuilder();
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
@@ -80,20 +101,21 @@ namespace QuestTextRetriever
             var currentBlock = 0;
             foreach (var spellTips in spellTipOrderedList)
             {
-                if (int.Parse(spellTips.Id) >= currentBlock + 50000)
+                if (int.Parse(spellTips.Id) >= currentBlock + 100000)
                 {
                     sb.AppendLine(" };").AppendLine("end").AppendLine();
-                    currentBlock += 50000;
+                    currentBlock += 100000;
                     currentIndex = 0;
                 }
 
                 if (currentIndex == 0)
                 {
                     sb.AppendLine("function loadSpellData" + currentBlock + "()");
-                    sb.AppendLine("WoWeuCN_Tooltips_SpellData_" + currentBlock + " = {");
+                    sb.AppendLine("  WoWeuCN_Tooltips_SpellData_" + currentBlock + " = {");
                 }
 
-                sb.Append("[\"").Append(spellTips.Id).Append("\"]={");
+                var tempSb = new StringBuilder();
+                tempSb.Append("  [\"").Append(spellTips.Id).Append("\"]={");
                 foreach (var spellTipLine in spellTips.TooltipLines)
                 {
                     int r = (int)(spellTipLine.R * 255);
@@ -101,7 +123,7 @@ namespace QuestTextRetriever
                     int b = (int)(spellTipLine.B * 255);
                     if (r == 255 && g == 255 && b == 255)
                     {
-                        sb.Append("\"").Append(spellTipLine.Line).Append("\",");
+                        tempSb.Append("\"").Append(spellTipLine.Line).Append("\",");
                     }
                     else
                     {
@@ -127,17 +149,26 @@ namespace QuestTextRetriever
 
                         text = colourText + text + "|r";
                         text = text.Replace(colourText + "|r", string.Empty);
-                        sb.Append("\"").Append(text).Append("\",");
+                        tempSb.Append("\"").Append(text).Append("\",");
                     }
                 }
 
-                if (spellTips.TooltipLines.Any())
-                    sb.Remove(sb.Length - 1, 1);
+                currentIndex++;
+                // remove empty spelltips
+                if (spellTips.TooltipLines.Count < 2)
+                    spellTips.TooltipLines.Clear();
+                else if (spellTips.TooltipLines.Count <= 4 && BlackListedPostfix.Any(b => spellTips.TooltipLines.Last().Line.EndsWith(b)))
+                    spellTips.TooltipLines.Clear();
+
+                if (!spellTips.TooltipLines.Any())
+                    continue;
+
+                sb.Append(tempSb);
+                sb.Remove(sb.Length - 1, 1);
 
                 sb.Append("},");
                 sb.AppendLine();
 
-                currentIndex++;
             }
             //foreach (var spellTips in spellTipList.OrderBy(q => int.Parse(q.Id)))
             //{
@@ -154,7 +185,8 @@ namespace QuestTextRetriever
             //    sb.AppendLine();
             //}
 
-            sb.Append("};");
+            sb.Append("};").AppendLine();
+            sb.Append("end");
             File.WriteAllText(outputPath, sb.ToString());
         }
     }

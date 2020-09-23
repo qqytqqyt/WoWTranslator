@@ -173,11 +173,14 @@ local function EnumerateTooltipLines_helper(...)
     for i = 1, select("#", ...) do
         local region = select(i, ...)
         if region and region:GetObjectType() == "FontString" then
-			local text = region:GetText() -- string or nil
-			if (text ~= nil) then
-				print(text)
-				texts = texts .. text			
-			end
+          local text = region:GetText() -- string or nil
+          if (text ~= nil) then
+            if (i == 4 or i == 38)
+              text = "{" .. text .. "}"
+            print(i)
+            print(text)
+            texts = texts .. text			
+          end
         end
 	end
 	return texts

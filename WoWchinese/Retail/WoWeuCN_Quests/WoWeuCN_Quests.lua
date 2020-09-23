@@ -154,6 +154,63 @@ function WoWeuCN_Quests_CheckVars()
   end
 end
 
+local QTR_waitFrame = nil;
+local QTR_waitTable = {};
+
+function QTR_wait(delay, func, ...)
+  if(type(delay)~="number" or type(func)~="function") then
+    return false;
+  end
+  if (QTR_waitFrame == nil) then
+    QTR_waitFrame = CreateFrame("Frame","QTR_WaitFrame", UIParent);
+    QTR_waitFrame:SetScript("onUpdate",function (self,elapse)
+      local count = #QTR_waitTable;
+      local i = 1;
+      while(i<=count) do
+        local waitRecord = tremove(QTR_waitTable,i);
+        local d = tremove(waitRecord,1);
+        local f = tremove(waitRecord,1);
+        local p = tremove(waitRecord,1);
+        if(d>elapse) then
+          tinsert(QTR_waitTable,i,{d-elapse,f,p});
+          i = i + 1;
+        else
+          count = count - 1;
+          f(unpack(p));
+        end
+      end
+    end);
+  end
+  tinsert(QTR_waitTable,{delay,func,{...}});
+  return true;
+end
+
+
+local function scanAuto(startIndex, attempt, counter)
+  if (startIndex > 80000) then
+    return;
+  end
+  for i = startIndex, startIndex + 100 do
+    qcQuestInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+    qcQuestInformationTooltip:ClearLines()
+    qcQuestInformationTooltip:SetHyperlink('quest:' .. i)
+    qcQuestInformationTooltip:Show()
+    local text =  EnumerateTooltipLines(qcQuestInformationTooltip)
+    if (text ~= '' and text ~= nil) then
+      WoWeuCN_Quests_QuestToolTips[i .. ''] = text
+      print(i)
+    end
+  end
+  print(attempt)
+  print(counter)
+  WoWeuCN_Quests_QuestIndex = startIndex
+  if (counter >= 10) then
+    QTR_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
+  else
+    QTR_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
 
 -- Checks the availability of Wow's special function: GetQuestID()
 function DetectEmuServer()
@@ -273,9 +330,15 @@ function WoWeuCN_Quests_SlashCommand(msg)
       else
          print ("WOWeuCN - 翻译任务目标状态 : 禁用.");
       end
+    elseif (msg=="back" or msg=="BACK") then
+      WoWeuCN_Quests_QuestIndex = WoWeuCN_Quests_QuestIndex - 500;
+      print(WoWeuCN_Quests_QuestIndex);
     elseif (msg=="reset" or msg=="RESET") then
       WoWeuCN_Quests_QuestIndex = 1;
       print("Reset");
+    elseif (msg=="reset 60000" or msg=="RESET 60000") then
+      WoWeuCN_Quests_QuestIndex = 60000;
+      print("Reset 60000");
    elseif (msg=="scan" or msg=="SCAN") then
       if (WoWeuCN_Quests_QuestToolTips == nil) then
         WoWeuCN_Quests_QuestToolTips = {} 
@@ -295,6 +358,14 @@ function WoWeuCN_Quests_SlashCommand(msg)
         end
       end
       WoWeuCN_Quests_QuestIndex = WoWeuCN_Quests_QuestIndex + 500
+    elseif (msg=="scanauto" or msg=="SCANAUTO") then
+      if (WoWeuCN_Quests_QuestToolTips == nil) then
+        WoWeuCN_Quests_QuestToolTips = {} 
+      end
+      if (WoWeuCN_Quests_QuestIndex == nil) then
+        WoWeuCN_Quests_QuestIndex = 1
+      end
+      QTR_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
