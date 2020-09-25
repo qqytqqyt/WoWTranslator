@@ -20,4 +20,11 @@ WoWeuCN_Tooltips_Interface = {
     transspell = "翻译法术提示", 
     transitem  = "翻译道具提示"
  }; 
-
+ 
+ WoWeuCN_Tooltips_ItemData_0 = {};
+ WoWeuCN_Tooltips_ItemData_100000 = {};
+ 
+ WoWeuCN_Tooltips_SpellData_0 = {};
+ WoWeuCN_Tooltips_SpellData_100000 = {};
+ WoWeuCN_Tooltips_SpellData_200000 = {};
+ WoWeuCN_Tooltips_SpellData_300000 = {};
