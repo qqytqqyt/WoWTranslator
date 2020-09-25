@@ -1,4 +1,4 @@
-﻿WoWeuCN_Quests_base = "8.0.2";   -- version
+﻿WoWeuCN_Quests_base = "9.0.1";   -- version
 WoWeuCN_Quests_date = "2020-08-12"; -- date of creation base
 
 WoWeuCN_Quests_lang = "CN";      -- language
