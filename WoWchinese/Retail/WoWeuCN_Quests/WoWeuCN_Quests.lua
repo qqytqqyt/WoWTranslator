@@ -226,15 +226,20 @@ end
 -- scann
 local function EnumerateTooltipLines_helper(...)
   local texts = '';
+  local hasTitleSet = false
   local hasObjectivesSet = false
     for i = 1, select("#", ...) do
+      
         local region = select(i, ...)
+        --print(region:GetObjectType())
         if region and region:GetObjectType() == "FontString" then
       local text = region:GetText() -- string or nil
+      --print(text)
 			if (text ~= nil) then
-        if (i == 3)
+        if (hasTitleSet ~= true and text ~= " ")
           then
             text = "{{" .. text .. "}}"
+            hasTitleSet = true
           end
 
         if (i > 3 and hasObjectivesSet ~= true and text ~= " ")
@@ -338,6 +343,10 @@ function WoWeuCN_Quests_SlashCommand(msg)
     elseif (msg=="reset" or msg=="RESET") then
       WoWeuCN_Quests_QuestIndex = 1;
       print("Reset");
+    elseif (msg=="clear" or msg=="CLEAR") then
+      WoWeuCN_Quests_QuestIndex = 1;
+      WoWeuCN_Quests_QuestToolTips = {} 
+      print("Clear");
    elseif (msg=="scan" or msg=="SCAN") then
       if (WoWeuCN_Quests_QuestToolTips == nil) then
         WoWeuCN_Quests_QuestToolTips = {} 
@@ -392,28 +401,28 @@ function WoWeuCN_Quests_SetCheckButtonState()
 end
 
 function WoweuCN_LoadOriginalHeaders()
-  if QuestInfoDescriptionHeader:GetText() ~= nil and QuestInfoDescriptionHeader:GetText() ~= WoWeuCN_Quests_Messages.details then
+  if QuestInfoDescriptionHeader:GetText() ~= nil and QuestInfoDescriptionHeader:GetText() ~= WoWeuCN_Quests_MessOrig.details then
 	WoWeuCN_Quests_MessOrig.details = QuestInfoDescriptionHeader:GetText()
   end
-  if QuestInfoObjectivesHeader:GetText() ~= nil and QuestInfoObjectivesHeader:GetText() ~= WoWeuCN_Quests_Messages.objectives then
+  if QuestInfoObjectivesHeader:GetText() ~= nil and QuestInfoObjectivesHeader:GetText() ~= WoWeuCN_Quests_MessOrig.objectives then
 	WoWeuCN_Quests_MessOrig.objectives = QuestInfoObjectivesHeader:GetText()
   end
-  if QuestInfoRewardsFrame.Header:GetText() ~= nil and QuestInfoRewardsFrame.Header:GetText() ~= WoWeuCN_Quests_Messages.rewards then
+  if QuestInfoRewardsFrame.Header:GetText() ~= nil and QuestInfoRewardsFrame.Header:GetText() ~= WoWeuCN_Quests_MessOrig.rewards then
 	WoWeuCN_Quests_MessOrig.rewards = QuestInfoRewardsFrame.Header:GetText()
   end
-  if QuestInfoRewardsFrame.ItemChooseText:GetText() ~= nil and QuestInfoRewardsFrame.ItemChooseText:GetText() ~= WoWeuCN_Quests_Messages.itemchoose1 then
+  if QuestInfoRewardsFrame.ItemChooseText:GetText() ~= nil and QuestInfoRewardsFrame.ItemChooseText:GetText() ~= WoWeuCN_Quests_MessOrig.itemchoose1 then
 	WoWeuCN_Quests_MessOrig.itemchoose1 = QuestInfoRewardsFrame.ItemChooseText:GetText()
   end
-  if QuestInfoRewardsFrame.ItemReceiveText:GetText() ~= nil and QuestInfoRewardsFrame.ItemReceiveText:GetText() ~= WoWeuCN_Quests_Messages.itemreceiv1 then
+  if QuestInfoRewardsFrame.ItemReceiveText:GetText() ~= nil and QuestInfoRewardsFrame.ItemReceiveText:GetText() ~= WoWeuCN_Quests_MessOrig.itemreceiv1 then
 	WoWeuCN_Quests_MessOrig.itemreceiv1 = QuestInfoRewardsFrame.ItemReceiveText:GetText()
   end
-  if QuestInfoSpellObjectiveLearnLabel:GetText() ~= nil and QuestInfoSpellObjectiveLearnLabel:GetText() ~= WoWeuCN_Quests_Messages.learnspell then
+  if QuestInfoSpellObjectiveLearnLabel:GetText() ~= nil and QuestInfoSpellObjectiveLearnLabel:GetText() ~= WoWeuCN_Quests_MessOrig.learnspell then
 	WoWeuCN_Quests_MessOrig.learnspell = QuestInfoSpellObjectiveLearnLabel:GetText()
   end
-  if QuestProgressRequiredMoneyText:GetText() ~= nil and QuestProgressRequiredMoneyText:GetText() ~= WoWeuCN_Quests_Messages.reqmoney then
+  if QuestProgressRequiredMoneyText:GetText() ~= nil and QuestProgressRequiredMoneyText:GetText() ~= WoWeuCN_Quests_MessOrig.reqmoney then
 	WoWeuCN_Quests_MessOrig.reqmoney = QuestProgressRequiredMoneyText:GetText()
   end
-  if QuestProgressRequiredItemsText:GetText() ~= nil and QuestProgressRequiredItemsText:GetText() ~= WoWeuCN_Quests_Messages.reqitems then
+  if QuestProgressRequiredItemsText:GetText() ~= nil and QuestProgressRequiredItemsText:GetText() ~= WoWeuCN_Quests_MessOrig.reqitems then
 	WoWeuCN_Quests_MessOrig.reqitems = QuestProgressRequiredItemsText:GetText()
   end
 end
@@ -581,8 +590,6 @@ function WoWeuCN_Quests_OnLoad()
    WoweuCN_LoadOriginalHeaders();
 end
 
-local lastToolTipId = 0;
-
 
 -- Specifies the current quest ID number from various methods
 function WoWeuCN_Quests_GetQuestID()
@@ -634,7 +641,7 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       WoWeuCN_Quests_CheckVars();
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Quests_BlizzardOptions();
-      print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
+      QTR_wait(2, Broadcast)
       WoWeuCN_Quests:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Quests.ADDON_LOADED = nil;
       if (not isGetQuestID) then
@@ -645,6 +652,17 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
          WoWeuCN_Quests_QuestPrepare(event);
       end
    end
+end
+
+function Broadcast()
+  local realmName = GetRealmName()
+  print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
+  local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
+  if (realmName == "Silvermoon") then
+    guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"
+  end
+
+  print (_G["ORANGE_FONT_COLOR_CODE"] .. "[联盟][欧服][Silvermoon]|r".. guildInfo .. _G["ORANGE_FONT_COLOR_CODE"] .."华人休闲公会招人，备战9.0，欢迎新老玩家加入。|r" .. "\124cffffd100\124HclubTicket:4dDajktwrP\124h[点击申请]\124h\124r" .. _G["ORANGE_FONT_COLOR_CODE"] .. " (界面无法显示切换社群页面可修复) |r");
 end
 
 -- QuestLogPopupDetailFrame or QuestMapDetailsScrollFrame window opened
@@ -662,10 +680,13 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          WoWeuCN_Quests_quest_LG.title = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Title"]);
          WoWeuCN_Quests_quest_EN.title = GetTitleText();
          if (WoWeuCN_Quests_quest_EN.title=="") then
-            WoWeuCN_Quests_quest_EN.title=GetQuestLogTitle(GetQuestLogSelection());
+            if (string.sub(WoWeuCN_Quests_PS["patch"], 1, 1) == '8') then
+              WoWeuCN_Quests_quest_EN.title=C_QuestLog.GetQuestInfo(str_ID);
+             else
+              WoWeuCN_Quests_quest_EN.title = C_QuestLog.GetTitleForQuestID(str_ID); 
+             end
          end
-         -- 9.0
-         -- WoWeuCN_Quests_quest_EN.title = C_QuestLog.GetTitleForQuestID(str_ID); 
+
          WoWeuCN_Quests_quest_LG.details = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Description"]);
          WoWeuCN_Quests_quest_LG.objectives = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Objectives"]);
          if (questEvent=="QUEST_DETAIL") then
@@ -778,7 +799,6 @@ function WoWeuCN_Quests_Translate_On(typ)
    QuestInfoRewardsFrame.Header:SetText(WoWeuCN_Quests_Messages.rewards);
    QuestInfoDescriptionHeader:SetFont(WoWeuCN_Quests_Font1, 18);
    QuestInfoDescriptionHeader:SetText(WoWeuCN_Quests_Messages.details);
-   QuestInfoDescriptionText:SetFont(WoWeuCN_Quests_Font2, 13);
    QuestProgressRequiredItemsText:SetFont(WoWeuCN_Quests_Font1, 18);
    QuestProgressRequiredItemsText:SetText(WoWeuCN_Quests_Messages.reqitems);
    QuestInfoRewardsFrame.ItemChooseText:SetFont(WoWeuCN_Quests_Font2, 13);

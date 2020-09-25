@@ -513,9 +513,26 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       WoWeuCN_Tooltips_CheckVars();
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Tooltips_BlizzardOptions();
-      print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
+      QTR_wait(2, Broadcast)
       WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Tooltips.ADDON_LOADED = nil;
    end
+end
+
+function Broadcast()
+  local realmName = GetRealmName()
+  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
+  local realmName = GetRealmName()
+  local name,_,_,enabled = GetAddOnInfo('WoWeuCN_Quests')
+  if (enabled == true) then
+    return
+  end
+
+  local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
+  if (realmName == "Silvermoon") then
+    guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"
+  end
+
+  print (_G["ORANGE_FONT_COLOR_CODE"] .. "[联盟][欧服][Silvermoon]|r".. guildInfo .. _G["ORANGE_FONT_COLOR_CODE"] .."华人休闲公会招人，备战9.0，欢迎新老玩家加入。|r" .. "\124cffffd100\124HclubTicket:4dDajktwrP\124h[点击申请]\124h\124r" .. _G["ORANGE_FONT_COLOR_CODE"] .. " (界面无法显示切换社群页面可修复) |r");
 end
 
