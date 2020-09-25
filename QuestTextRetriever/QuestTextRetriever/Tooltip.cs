@@ -19,11 +19,11 @@ namespace QuestTextRetriever
     {
         public string Line { get; set; }
 
-        public double R { get; set; }
+        public double R { get; set; } = 1;
 
-        public double G { get; set; }
+        public double G { get; set; } = 1;
 
-        public double B { get; set; }
+        public double B { get; set; } = 1;
     }
 
 }

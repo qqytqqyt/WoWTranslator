@@ -19,6 +19,7 @@ namespace QuestTextRetriever.Utils
             "点神圣伤害",
             "点奥术伤害",
             "点混乱伤害",
+            "点流血伤害",
         };
 
         public static string TrimTextAfter(this string textContent, string separator)

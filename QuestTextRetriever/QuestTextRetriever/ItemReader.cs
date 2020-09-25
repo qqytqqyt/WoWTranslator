@@ -105,8 +105,9 @@ namespace QuestTextRetriever
                     {
                         foreach (var grayedOutIndicator in StringUtils.GrayedOutIndicatorText)
                         {
-                            var matches = Regex.Matches(itemTipLine.Line, @"(\d+)" + grayedOutIndicator);
-                            foreach (var match in matches.OfType<Match>())
+                            var matches = Regex.Matches(itemTipLine.Line, @"(\d+(,\d+)*)" + grayedOutIndicator).OfType<Match>().ToList();
+                            var orderedMatches = matches.OrderByDescending(m => m.Length);
+                            foreach (var match in orderedMatches)
                             {
                                 var result = match.Result("$1");
                                 result = "|cff7f7f7f" + result + "|r";
@@ -121,6 +122,8 @@ namespace QuestTextRetriever
                 if (itemTips.TooltipLines.Any(t => t.Line == @"炉石"))
                     continue;
 
+                if (itemTips.TooltipLines.Count == 1)
+                    itemTips.TooltipLines.Add(new TooltipLine() { Line = " " });
                 itemTipsList.Add(itemTips);
             }
         }

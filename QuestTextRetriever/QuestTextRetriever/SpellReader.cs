@@ -83,7 +83,7 @@ namespace QuestTextRetriever
 
                     foreach (var grayedOutIndicator in StringUtils.GrayedOutIndicatorText)
                     {
-                        var matches = Regex.Matches(spellTipLine.Line, @"(\d+)" + grayedOutIndicator);
+                        var matches = Regex.Matches(spellTipLine.Line, @"(\d+(,\d+)*)" + grayedOutIndicator);
                         foreach (var match in matches.OfType<Match>())
                         {
                             var result = match.Result("$1");
