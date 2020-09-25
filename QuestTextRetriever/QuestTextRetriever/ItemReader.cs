@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
@@ -18,20 +19,6 @@ namespace QuestTextRetriever
             "你尚未收藏过此外观",
         };
 
-        private static string TrimTextAfter(string textContent, string separator)
-        {
-            var content = textContent.Split(new string[] { separator }, StringSplitOptions.None)[0];
-            return textContent.Substring(content.Length + separator.Length);
-        }
-
-        private static string FirstBetween(string textContent, string start, string end)
-        {
-            if (!textContent.Contains(start))
-                return string.Empty;
-
-            return textContent.Split(new string[] { start }, StringSplitOptions.None)[1].Split(new string[] { end }, StringSplitOptions.None)[0];
-        }
-
         public void Read(string tooltipPath, List<Tooltip> itemTipsList)
         {
             var lines = File.ReadAllLines(tooltipPath);
@@ -44,7 +31,7 @@ namespace QuestTextRetriever
                     .Split(new[] {"\"]"}, StringSplitOptions.None)[0]
                     .Trim();
 
-                var type = FirstBetween(text, "{{{", "}}}");
+                var type = text.FirstBetween("{{{", "}}}");
 
                 if (usedId.Contains(id))
                     continue;
@@ -66,16 +53,16 @@ namespace QuestTextRetriever
                 while (!string.IsNullOrEmpty(textContent) && !textContent.TrimStart().StartsWith("{{{"))
                 {
                     currentIndex++;
-                    textContent = TrimTextAfter(textContent, "{{");
+                    textContent = textContent.TrimTextAfter("{{");
 
-                    var tipLine = textContent.Split(new string[] { "}}" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "[[");
-                    var r = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "[[");
-                    var g = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "[[");
-                    var b = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "]]");
+                    var tipLine = textContent.GetTextBefore("}}");
+                    textContent = textContent.TrimTextAfter("[[");
+                    var r = textContent.GetTextBefore("]]");
+                    textContent = textContent.TrimTextAfter("[[");
+                    var g = textContent.GetTextBefore("]]");
+                    textContent = textContent.TrimTextAfter("[[");
+                    var b = textContent.GetTextBefore("]]");
+                    textContent = textContent.TrimTextAfter("]]");
 
                     var itemTipLine = new TooltipLine();
 

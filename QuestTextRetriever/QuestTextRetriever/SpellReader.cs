@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
@@ -21,12 +22,6 @@ namespace QuestTextRetriever
             "需引导",
             "被动"
         };
-
-        private static string TrimTextAfter(string textContent, string separator)
-        {
-            var content = textContent.Split(new string[] { separator }, StringSplitOptions.None)[0];
-            return textContent.Substring(content.Length + separator.Length);
-        }
 
         public void Read(string spellTipPath, List<Tooltip> spellTipsList)
         {
@@ -57,7 +52,7 @@ namespace QuestTextRetriever
 
                 while (!string.IsNullOrEmpty(textContent))
                 {
-                    textContent = TrimTextAfter(textContent, "{{");
+                    textContent = textContent.TrimTextAfter("{{");
 
                     // remove red text
                     if (textContent.Contains(@"|cffff2020"))
@@ -65,14 +60,15 @@ namespace QuestTextRetriever
                     if (textContent.Contains(@"|cffff2121"))
                         textContent = textContent.Replace(@"|cffff2121", string.Empty).Replace(@"|r", string.Empty);
 
-                    var tipLine = textContent.Split(new string[] { "}}" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "[[");
-                    var r = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "[[");
-                    var g = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "[[");
-                    var b = textContent.Split(new string[] { "]]" }, StringSplitOptions.None)[0];
-                    textContent = TrimTextAfter(textContent, "]]");
+                    var tipLine = textContent.GetTextBefore("}}");
+                    textContent = textContent.TrimTextAfter("[[");
+                    var r = textContent.GetTextBefore("]]");
+                    textContent = textContent.TrimTextAfter("[[");
+                    var g = textContent.GetTextBefore("]]");
+                    textContent = textContent.TrimTextAfter("[[");
+                    var b = textContent.GetTextBefore("]]");
+                    textContent = textContent.TrimTextAfter("]]");
+
                     var spellTipLine = new TooltipLine();
                     spellTipLine.Line = tipLine;
 

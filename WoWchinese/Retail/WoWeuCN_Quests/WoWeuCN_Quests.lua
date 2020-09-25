@@ -330,15 +330,14 @@ function WoWeuCN_Quests_SlashCommand(msg)
       else
          print ("WOWeuCN - 翻译任务目标状态 : 禁用.");
       end
+
+    -- dev scan
     elseif (msg=="back" or msg=="BACK") then
       WoWeuCN_Quests_QuestIndex = WoWeuCN_Quests_QuestIndex - 500;
       print(WoWeuCN_Quests_QuestIndex);
     elseif (msg=="reset" or msg=="RESET") then
       WoWeuCN_Quests_QuestIndex = 1;
       print("Reset");
-    elseif (msg=="reset 60000" or msg=="RESET 60000") then
-      WoWeuCN_Quests_QuestIndex = 60000;
-      print("Reset 60000");
    elseif (msg=="scan" or msg=="SCAN") then
       if (WoWeuCN_Quests_QuestToolTips == nil) then
         WoWeuCN_Quests_QuestToolTips = {} 
@@ -366,6 +365,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
         WoWeuCN_Quests_QuestIndex = 1
       end
       QTR_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
+
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
