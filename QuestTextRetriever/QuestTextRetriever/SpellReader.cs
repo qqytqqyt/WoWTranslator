@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using QuestTextRetriever.Utils;
 
@@ -79,6 +80,18 @@ namespace QuestTextRetriever
                     spellTipLine.R = Math.Round(double.Parse(r), 2);
                     spellTipLine.G = Math.Round(double.Parse(g), 2);
                     spellTipLine.B = Math.Round(double.Parse(b), 2);
+
+                    foreach (var grayedOutIndicator in StringUtils.GrayedOutIndicatorText)
+                    {
+                        var matches = Regex.Matches(spellTipLine.Line, @"(\d+)" + grayedOutIndicator);
+                        foreach (var match in matches.OfType<Match>())
+                        {
+                            var result = match.Result("$1");
+                            result = "|cff7f7f7f" + result + "|r";
+                            spellTipLine.Line = spellTipLine.Line.Replace(match.Value, result + grayedOutIndicator);
+                        }
+                    }
+
                     spellTips.TooltipLines.Add(spellTipLine);
                 }
 

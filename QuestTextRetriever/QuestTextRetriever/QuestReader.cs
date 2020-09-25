@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
+using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
@@ -28,72 +29,70 @@ namespace QuestTextRetriever
                     .Trim();
 
                 objective.Id = id;
-                var otherObjective = objectives.FirstOrDefault(o => o.Id == id);
-                var textContent = text.Split(new[] {"= \""}, StringSplitOptions.None)[1]
-                    .Split(new[] {"\","}, StringSplitOptions.None)[0]
-                    .Trim();
 
-                var contents = textContent.Split(' ');
-                if (contents.Length < 2)
-                {
-                    if (otherObjective == null)
-                    {
-                        objective.Objectives = string.Empty;
-                        objectives.Add(objective);
-                    }
+                var textContent = text.TrimTextAfter(@"{{");
 
-                    continue;
-                }
-
-                var textTitle = textContent.Split(' ')[0];
+                var textTitle = textContent.GetTextBefore(@"}}");
 
                 objective.Title = textTitle;
 
-                textContent = textContent.Split(' ')[1].Split(new[] {"要求："}, StringSplitOptions.None)[0];
-                objective.Objectives = textContent.Trim();
+                textContent = text.TrimTextAfter(@"}}");
+                var textObjective = textContent.FirstBetween("{{", "}}");
+
+                if (!textObjective.StartsWith("要求："))
+                    objective.Objectives = textObjective;
+
+                var otherObjective = objectives.FirstOrDefault(o => o.Id == id);
 
                 if (otherObjective == null)
                     objectives.Add(objective);
+                else
+                {
+                    objectives.Remove(otherObjective);
+                    objectives.Add(objective);
+                }
             }
         }
 
         public void ExecuteJson(string outputPath)
         {
             var objectives = new List<QuestObjectives>();
+            var apis = new List<QuestApi>();
+
             ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\QuestCompletist.lua",
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail_objectives_0-70000.lua",
                 objectives);
             ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWeuCN_Quests_beta.lua",
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr_objectives_0-70000.lua",
                 objectives);
-            var sb = new StringBuilder();
+
             var dirPath = new DirectoryInfo(m_dirPath);
-            var questObjects = new List<Quest>();
+            ReadQuestApis(dirPath, apis);
+
             var usedId = new HashSet<string>();
-            foreach (var filePath in dirPath.GetFiles(@"*.json"))
+            var questObjects = new List<Quest>();
+            foreach (var questApi in apis)
             {
-                var text = File.ReadAllText(filePath.FullName);
-                var questApi = JsonConvert.DeserializeObject<QuestApi>(text);
+                usedId.Add(questApi.Id);
 
                 var questObject = new Quest();
-                usedId.Add(questApi.Id);
                 questObject.Id = questApi.Id;
                 questObject.Title = questApi.Title;
-                var objective = objectives.FirstOrDefault(o => o.Id == questApi.Id);
-                if (objective != null)
-                    questObject.Objectives = objective.Objectives;
-                else
-                    questObject.Objectives = string.Empty;
 
-                questObject.Description = questApi.Description?.Replace("\"", string.Empty).Replace("“", string.Empty)
-                    .Replace("”", string.Empty);
+                var objective = objectives.FirstOrDefault(o => o.Id == questApi.Id);
+                questObject.Objectives = objective != null ? objective.Objectives : string.Empty;
+
+                questObject.Description = questApi.Description;
                 questObject.Progress = string.Empty;
                 questObject.Completion = string.Empty;
                 questObjects.Add(questObject);
             }
 
+            // Objectives not present in apis
             foreach (var questObjective in objectives.Where(o => !usedId.Contains(o.Id)))
             {
+                usedId.Add(questObjective.Id);
+
                 var questObject = new Quest();
                 questObject.Id = questObjective.Id;
                 questObject.Title = questObjective.Title;
@@ -104,7 +103,7 @@ namespace QuestTextRetriever
                 questObjects.Add(questObject);
             }
 
-            var sbQuestToCheck = new StringBuilder();
+            var sb = new StringBuilder();
             foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
             {
                 var line = PrintLine(questObject);
@@ -115,9 +114,19 @@ namespace QuestTextRetriever
                 sb.AppendLine(line);
             }
 
-            File.WriteAllText(outputPath + ".log", sbQuestToCheck.ToString());
             var finalText = sb.ToString();
             File.WriteAllText(outputPath, finalText);
+        }
+
+        private static void ReadQuestApis(DirectoryInfo dirPath, List<QuestApi> apis)
+        {
+            foreach (var filePath in dirPath.GetFiles(@"*.json"))
+            {
+                var text = File.ReadAllText(filePath.FullName);
+                var questApi = JsonConvert.DeserializeObject<QuestApi>(text);
+                questApi.Description = questApi.Description?.Replace("\"", string.Empty).Replace("“", string.Empty);
+                apis.Add(questApi);
+            }
         }
 
         //public void Execute(string outputPath, string samplePath)

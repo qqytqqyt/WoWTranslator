@@ -10,5 +10,7 @@
 ## SavedVariablesPerCharacter: WoWeuCN_Tooltips_PC
 
 TooltipsData_cn.lua
+ItemData_cn.lua
+SpellData_cn.lua
 WoWeuCN_Tooltips.lua
 WoWeuCN_Tooltips.xml

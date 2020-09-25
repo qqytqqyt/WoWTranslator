@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using QuestTextRetriever.Utils;
 
@@ -71,7 +72,8 @@ namespace QuestTextRetriever
                     itemTipLine.G = Math.Round(double.Parse(g), 2);
                     itemTipLine.B = Math.Round(double.Parse(b), 2);
                     var gearApproved = true;
-                    if (itemTips.Type == "4" || itemTips.Type == "2")
+                    var isGear = itemTips.Type == "4" || itemTips.Type == "2";
+                    if (isGear)
                     {
                         gearApproved = false;
                         // name
@@ -98,6 +100,20 @@ namespace QuestTextRetriever
                     // red
                     if (r == "0.99999779462814" && g == "0.12548992037773" && b == "0.12548992037773")
                         continue;
+
+                    if (isGear)
+                    {
+                        foreach (var grayedOutIndicator in StringUtils.GrayedOutIndicatorText)
+                        {
+                            var matches = Regex.Matches(itemTipLine.Line, @"(\d+)" + grayedOutIndicator);
+                            foreach (var match in matches.OfType<Match>())
+                            {
+                                var result = match.Result("$1");
+                                result = "|cff7f7f7f" + result + "|r";
+                                itemTipLine.Line = itemTipLine.Line.Replace(match.Value, result + grayedOutIndicator);
+                            }
+                        }
+                    }
 
                     itemTips.TooltipLines.Add(itemTipLine);
                 }

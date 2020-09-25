@@ -10,8 +10,8 @@ namespace QuestTextRetriever
     {
         static void Main(string[] args)
         {
-            //var itemReader = new ItemReader();
-            //itemReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\itemoutput1-100000.txt");
+            var itemReader = new ItemReader();
+            itemReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\itemoutput1-100000.txt");
 
 
             var spellReader = new SpellReader();
@@ -20,8 +20,8 @@ namespace QuestTextRetriever
             //var retriever = new Retriever(@"D:\qqytqqyt\Documents\OwnProjects\Translator\686500-Wow-ChineseDB-master\Wow-ChineseDB\quest_template.sql", @"D:\qqytqqyt\Documents\OwnProjects\Translator\template.txt");
             //retriever.Execute(@"D:\qqytqqyt\Documents\OwnProjects\Translator\output.txt");
 
-            //var htmlRetriever = new HtmlRetriever(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WowHead\", @"D:\qqytqqyt\Documents\OwnProjects\Translator\template.txt");
-            //htmlRetriever.ExecuteJson(@"D:\qqytqqyt\Documents\OwnProjects\Translator\outputretail.txt");
+            //var questReader = new QuestReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WowHead\", @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
+            //questReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail.txt");
         }
     }
 }
