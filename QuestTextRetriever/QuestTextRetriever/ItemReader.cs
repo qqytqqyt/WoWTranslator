@@ -20,7 +20,7 @@ namespace QuestTextRetriever
             "你尚未收藏过此外观",
         };
 
-        public void Read(string tooltipPath, List<Tooltip> itemTipsList)
+        public void Read(string tooltipPath, List<Tooltip> itemTipsList, HashSet<string> usedIds)
         {
             var lines = File.ReadAllLines(tooltipPath);
             var usedId = new HashSet<string>();
@@ -28,6 +28,9 @@ namespace QuestTextRetriever
             {
                 var itemTips = new Tooltip();
                 var text = line.Trim();
+                if (string.IsNullOrEmpty(text))
+                    continue;
+
                 var id = text.Split(new string[] {"[\""}, StringSplitOptions.None)[1]
                     .Split(new[] {"\"]"}, StringSplitOptions.None)[0]
                     .Trim();
@@ -124,14 +127,34 @@ namespace QuestTextRetriever
 
                 if (itemTips.TooltipLines.Count == 1)
                     itemTips.TooltipLines.Add(new TooltipLine() { Line = " " });
-                itemTipsList.Add(itemTips);
+
+
+                if (usedIds.Contains(id))
+                {
+                    var otherObjective = itemTipsList.FirstOrDefault(o => o.Id == id);
+
+                    if (otherObjective == null)
+                        itemTipsList.Add(itemTips);
+                    else
+                    {
+                        itemTipsList.Remove(otherObjective);
+                        itemTipsList.Add(itemTips);
+                    }
+                }
+                else
+                {
+                    usedIds.Add(id);
+                    itemTipsList.Add(itemTips);
+                }
             }
         }
 
         public void Write(string outputPath)
         {
             var itemTipList = new List<Tooltip>();
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\item0-100000.lua", itemTipList);
+            var usedIds = new HashSet<string>();
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\ptr-item0-200000.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\beta-item0-200000.lua", itemTipList, usedIds);
 
             var sb = new StringBuilder();
             var itemTipOrderedList = itemTipList.OrderBy(q => int.Parse(q.Id)).ToList();

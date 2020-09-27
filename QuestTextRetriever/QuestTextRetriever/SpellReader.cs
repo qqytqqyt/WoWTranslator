@@ -24,7 +24,7 @@ namespace QuestTextRetriever
             "被动"
         };
 
-        public void Read(string spellTipPath, List<Tooltip> spellTipsList)
+        public void Read(string spellTipPath, List<Tooltip> spellTipsList, HashSet<string> usedIds)
         {
             var lines = File.ReadAllLines(spellTipPath);
             var usedId = new HashSet<string>();
@@ -95,14 +95,31 @@ namespace QuestTextRetriever
                     spellTips.TooltipLines.Add(spellTipLine);
                 }
 
-                spellTipsList.Add(spellTips);
+                if (usedIds.Contains(id))
+                {
+                    var otherObjective = spellTipsList.FirstOrDefault(o => o.Id == id);
+
+                    if (otherObjective == null)
+                        spellTipsList.Add(spellTips);
+                    else
+                    {
+                        spellTipsList.Remove(otherObjective);
+                        spellTipsList.Add(spellTips);
+                    }
+                }
+                else
+                {
+                    usedIds.Add(id);
+                    spellTipsList.Add(spellTips);
+                }
             }
         }
 
         public void Write(string outputPath)
         {
             var spellTipList = new List<Tooltip>();
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList);
+            var usedIds = new HashSet<string>();
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList, usedIds);
 
             var sb = new StringBuilder();
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
