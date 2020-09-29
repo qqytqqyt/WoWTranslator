@@ -520,13 +520,17 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
 end
 
 function Broadcast()
-  local realmName = GetRealmName()
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
-  local realmName = GetRealmName()
   local name,_,_,enabled = GetAddOnInfo('WoWeuCN_Quests')
   if (enabled == true) then
     return
   end
+  local regionCode = GetCurrentRegion()
+  if (regionCode ~= 3) then
+    print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
+    return
+  end
+  local realmName = GetRealmName()
 
   local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
   if (realmName == "Silvermoon") then
