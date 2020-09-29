@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using QuestTextRetriever.Models;
 using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
@@ -83,8 +84,9 @@ namespace QuestTextRetriever
 
                     foreach (var grayedOutIndicator in StringUtils.GrayedOutIndicatorText)
                     {
-                        var matches = Regex.Matches(spellTipLine.Line, @"(\d+(,\d+)*)" + grayedOutIndicator);
-                        foreach (var match in matches.OfType<Match>())
+                        var matches = Regex.Matches(spellTipLine.Line, @"(\d+(,\d+)*)" + grayedOutIndicator).OfType<Match>().ToList();
+                        var orderedMatches = matches.OrderByDescending(m => m.Length);
+                        foreach (var match in orderedMatches)
                         {
                             var result = match.Result("$1");
                             result = "|cff7f7f7f" + result + "|r";

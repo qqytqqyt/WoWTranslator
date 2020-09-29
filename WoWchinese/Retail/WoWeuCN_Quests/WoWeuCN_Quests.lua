@@ -126,7 +126,7 @@ function WoWeuCN_Quests_CheckVars()
   end
   -- Initiation - title translation
   if (not WoWeuCN_Quests_PS["transtitle"] ) then
-     WoWeuCN_Quests_PS["transtitle"] = "0";   
+     WoWeuCN_Quests_PS["transtitle"] = "1";   
   end
   if (not WoWeuCN_Quests_PS["transobjectives"] ) then
      WoWeuCN_Quests_PS["transobjectives"] = "1";   
@@ -655,8 +655,14 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
 end
 
 function Broadcast()
-  local realmName = GetRealmName()
   print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
+  local regionCode = GetCurrentRegion()
+  if (regionCode ~= 3) then
+    print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
+    return
+  end
+
+  local realmName = GetRealmName()
   local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
   if (realmName == "Silvermoon") then
     guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"

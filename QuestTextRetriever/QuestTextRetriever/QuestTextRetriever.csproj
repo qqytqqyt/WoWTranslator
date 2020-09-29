@@ -56,12 +56,12 @@
     <Compile Include="QuestReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Quest.cs" />
+    <Compile Include="Models\Quest.cs" />
     <Compile Include="Retriever.cs" />
     <Compile Include="ItemReader.cs" />
     <Compile Include="SpellReader.cs" />
     <Compile Include="Utils\StringUtils.cs" />
-    <Compile Include="Tooltip.cs" />
+    <Compile Include="Models\Tooltip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

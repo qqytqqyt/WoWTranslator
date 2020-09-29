@@ -3,10 +3,6 @@ WoWeuCN_Tooltips_date = "2020-09-23"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
--- Localization
-WoWeuCN_Tooltips_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
-WoWeuCN_Tooltips_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
-
 WoWeuCN_Tooltips_Messages = {   
     loaded     = "加载完成", 
     isactive   = "已启用", 
