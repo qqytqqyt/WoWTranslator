@@ -60,14 +60,23 @@ namespace QuestTextRetriever
             var objectives = new List<QuestObjectives>();
             var apis = new List<QuestApi>();
 
+            //ReadObjectives(
+            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail_objectives_0-70000.lua",
+            //    objectives);
+            //ReadObjectives(
+            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr_objectives_0-70000.lua",
+            //    objectives);
+            //ReadObjectives(
+            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta_objectives_0-70000.lua",
+            //    objectives);
             ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail_objectives_0-70000.lua",
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36165.lua",
                 objectives);
             ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr_objectives_0-70000.lua",
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36165.2.lua",
                 objectives);
             ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta_objectives_0-70000.lua",
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.36216.lua",
                 objectives);
 
             var dirPath = new DirectoryInfo(m_dirPath);
