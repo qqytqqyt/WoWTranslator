@@ -661,14 +661,6 @@ function Broadcast()
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
     return
   end
-
-  local realmName = GetRealmName()
-  local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
-  if (realmName == "Silvermoon") then
-    guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"
-  end
-
-  print (_G["ORANGE_FONT_COLOR_CODE"] .. "[联盟][欧服][Silvermoon]|r".. guildInfo .. _G["ORANGE_FONT_COLOR_CODE"] .."华人休闲公会招人，备战9.0，欢迎新老玩家加入。|r" .. "\124cffffd100\124HclubTicket:4dDajktwrP\124h[点击申请]\124h\124r" .. _G["ORANGE_FONT_COLOR_CODE"] .. " (界面无法显示切换社群页面可修复) |r");
 end
 
 -- QuestLogPopupDetailFrame or QuestMapDetailsScrollFrame window opened
@@ -686,11 +678,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          WoWeuCN_Quests_quest_LG.title = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Title"]);
          WoWeuCN_Quests_quest_EN.title = GetTitleText();
          if (WoWeuCN_Quests_quest_EN.title=="") then
-            if (string.sub(WoWeuCN_Quests_PS["patch"], 1, 1) == '8') then
-              WoWeuCN_Quests_quest_EN.title=C_QuestLog.GetQuestInfo(str_ID);
-             else
-              WoWeuCN_Quests_quest_EN.title = C_QuestLog.GetTitleForQuestID(str_ID); 
-             end
+            WoWeuCN_Quests_quest_EN.title = C_QuestLog.GetTitleForQuestID(str_ID); 
          end
 
          WoWeuCN_Quests_quest_LG.details = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Description"]);

@@ -413,6 +413,10 @@ function WoWeuCN_Tooltips_OnLoad()
    GameTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpell(..., GameTooltip) end)
    GameTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
 
+   if (_G.ElvUISpellBookTooltip ~= nil) then
+    _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
+   end
+   
    qcSpellInformationTooltipSetup();
    loadAllSpellData()
    loadAllItemData()
@@ -459,6 +463,30 @@ function GetItemData(id)
   end
 
   return nil
+end
+
+function OnTooltipSpellElvUi(self)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transspell"]=="0") then
+    return
+  end
+	-- Case for linked spell
+  local name,id = self:GetSpell()
+  local spellData = GetSpellData(id)
+  if ( spellData ) then
+    local lines = self:NumLines()
+    for i= 1, lines do
+      local line = _G[("GameTooltipTextLeft%d"):format(i)]
+      if line and line:GetText() and line:GetText():find(spellData[1]) then
+        return
+      end
+    end
+  
+    self:AddLine(" ")
+    for i = 1, #spellData do
+      local region = spellData[i]
+      self:AddLine(region, 1, 1, 1, 1)
+    end
+  end
 end
 
 function OnTooltipSpell(self, tooltip)
@@ -528,13 +556,5 @@ function Broadcast()
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
     return
   end
-  local realmName = GetRealmName()
-
-  local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
-  if (realmName == "Silvermoon") then
-    guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"
-  end
-
-  print (_G["ORANGE_FONT_COLOR_CODE"] .. "[联盟][欧服][Silvermoon]|r".. guildInfo .. _G["ORANGE_FONT_COLOR_CODE"] .."华人休闲公会招人，备战9.0，欢迎新老玩家加入。|r" .. "\124cffffd100\124HclubTicket:4dDajktwrP\124h[点击申请]\124h\124r" .. _G["ORANGE_FONT_COLOR_CODE"] .. " (界面无法显示切换社群页面可修复) |r");
 end
 
