@@ -107,7 +107,7 @@ local function scanAuto(startIndex, attempt, counter)
   print(attempt)
   print(counter)
   WoWeuCN_Tooltips_SpellToolIndex = startIndex
-  if (counter >= 5) then
+  if (counter >= 8) then
     QTR_wait(0.5, scanAuto, startIndex + 250, attempt + 1, 0)
   else
     QTR_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
@@ -118,7 +118,7 @@ local function scanItemAuto(startIndex, attempt, counter)
   if (startIndex > 200000) then
     return;
   end
-  for i = startIndex, startIndex + 300 do
+  for i = startIndex, startIndex + 150 do
     local itemType, itemSubType, _, _, _, _, classID, subclassID = select(6, GetItemInfo(i))
     if (classID~=nil) then
       qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
@@ -150,10 +150,10 @@ local function scanItemAuto(startIndex, attempt, counter)
   print(attempt)
   print(counter)
   WoWeuCN_Tooltips_ItemIndex = startIndex
-  if (counter >= 5) then
-    QTR_wait(0.8, scanItemAuto, startIndex + 300, attempt + 1, 0)
+  if (counter >= 8) then
+    QTR_wait(0.5, scanItemAuto, startIndex + 150, attempt + 1, 0)
   else
-    QTR_wait(0.8, scanItemAuto, startIndex, attempt + 1, counter + 1)
+    QTR_wait(0.5, scanItemAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
