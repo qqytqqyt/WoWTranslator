@@ -412,11 +412,19 @@ function WoWeuCN_Tooltips_OnLoad()
    
    GameTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpell(..., GameTooltip) end)
    GameTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   ItemRefTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   GameTooltipTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
 
+   EmbeddedItemTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   ShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   ShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   ItemRefShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   ItemRefShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   
    if (_G.ElvUISpellBookTooltip ~= nil) then
     _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
    end
-   
+
    qcSpellInformationTooltipSetup();
    loadAllSpellData()
    loadAllItemData()
@@ -435,17 +443,17 @@ function OnTooltipItem(self, tooltip)
   local itemID = string.match(itemLink, 'Hitem:(%d+):')
   local itemData = GetItemData(itemID)
   if ( itemData ) then  
-    local lines = tooltip:NumLines()
+    local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
       if line and line:GetText() and line:GetText():find(itemData[1]) then
         return
       end
     end
-    tooltip:AddLine(" ")
+    self:AddLine(" ")
     for i = 1, #itemData do
       local region = itemData[i]
-      tooltip:AddLine(region, 1, 1, 1, 1)
+      self:AddLine(region, 1, 1, 1, 1)
     end
   end
 end
@@ -497,7 +505,7 @@ function OnTooltipSpell(self, tooltip)
   local name,id = self:GetSpell()
   local spellData = GetSpellData(id)
   if ( spellData ) then
-    local lines = tooltip:NumLines()
+    local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
       if line and line:GetText() and line:GetText():find(spellData[1]) then
@@ -505,10 +513,10 @@ function OnTooltipSpell(self, tooltip)
       end
     end
   
-    tooltip:AddLine(" ")
+    self:AddLine(" ")
     for i = 1, #spellData do
       local region = spellData[i]
-      tooltip:AddLine(region, 1, 1, 1, 1)
+      self:AddLine(region, 1, 1, 1, 1)
     end
   end
 end
