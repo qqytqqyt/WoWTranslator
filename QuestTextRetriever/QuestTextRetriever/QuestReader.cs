@@ -78,6 +78,15 @@ namespace QuestTextRetriever
             ReadObjectives(
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.36216.lua",
                 objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36512.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36532.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36639.lua",
+                objectives);
 
             var dirPath = new DirectoryInfo(m_dirPath);
             ReadQuestApis(dirPath, apis);

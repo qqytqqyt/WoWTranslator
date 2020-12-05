@@ -125,6 +125,9 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells.lua", spellTipList, usedIds
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\classic_spells.lua", spellTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.36216.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36512.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36532.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36710.lua", spellTipList, usedIds);
             var sb = new StringBuilder();
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;

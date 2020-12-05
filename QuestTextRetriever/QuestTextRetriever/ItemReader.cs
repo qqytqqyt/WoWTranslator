@@ -159,6 +159,9 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\classic_items.lua", itemTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.36216.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36512.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36532.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36710.lua", itemTipList, usedIds);
             var sb = new StringBuilder();
             var itemTipOrderedList = itemTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
