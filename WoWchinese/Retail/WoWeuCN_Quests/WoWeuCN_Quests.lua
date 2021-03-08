@@ -690,12 +690,12 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
             WoWeuCN_Quests_quest_LG.itemchoose = WoWeuCN_Quests_Messages.itemchoose1;
             WoWeuCN_Quests_quest_EN.itemreceive = WoWeuCN_Quests_MessOrig.itemreceiv1;
             WoWeuCN_Quests_quest_LG.itemreceive = WoWeuCN_Quests_Messages.itemreceiv1;
-            if (strlen(WoWeuCN_Quests_quest_EN.details)>0 and strlen(WoWeuCN_Quests_quest_LG.details)==0) then
-               WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." DESCRIPTION"]=WoWeuCN_Quests_quest_EN.details;     -- save missing translation part
-            end
-            if (strlen(WoWeuCN_Quests_quest_EN.objectives)>0 and strlen(WoWeuCN_Quests_quest_LG.objectives)==0) then
-               WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." OBJECTIVE"]=WoWeuCN_Quests_quest_EN.objectives;    -- save missing translation part
-            end
+            --if (strlen(WoWeuCN_Quests_quest_EN.details)>0 and strlen(WoWeuCN_Quests_quest_LG.details)==0) then
+            --   WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." DESCRIPTION"]=WoWeuCN_Quests_quest_EN.details;     -- save missing translation part
+            --end
+            --if (strlen(WoWeuCN_Quests_quest_EN.objectives)>0 and strlen(WoWeuCN_Quests_quest_LG.objectives)==0) then
+            --   WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." OBJECTIVE"]=WoWeuCN_Quests_quest_EN.objectives;    -- save missing translation part
+            --end
          else   
             if (WoWeuCN_Quests_quest_LG.details ~= QuestInfoDescriptionText:GetText()) then
                WoWeuCN_Quests_quest_EN.details = QuestInfoDescriptionText:GetText();
@@ -707,12 +707,12 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          if (questEvent=="QUEST_PROGRESS") then
             WoWeuCN_Quests_quest_EN.progress = GetProgressText();
             WoWeuCN_Quests_quest_LG.progress = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Progress"]);
-            if (strlen(WoWeuCN_Quests_quest_EN.progress)>0 and strlen(WoWeuCN_Quests_quest_LG.progress)==0) then
-               WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." PROGRESS"]=WoWeuCN_Quests_quest_EN.progress;     -- save missing translation part
-            end
-            if (strlen(WoWeuCN_Quests_quest_LG.progress)==0) then      -- The content is empty and the Progress window has been opened
-               WoWeuCN_Quests_quest_LG.progress = '';
-            end
+            --if (strlen(WoWeuCN_Quests_quest_EN.progress)>0 and strlen(WoWeuCN_Quests_quest_LG.progress)==0) then
+            --   WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." PROGRESS"]=WoWeuCN_Quests_quest_EN.progress;     -- save missing translation part
+            --end
+            --if (strlen(WoWeuCN_Quests_quest_LG.progress)==0) then      -- The content is empty and the Progress window has been opened
+            --   WoWeuCN_Quests_quest_LG.progress = '';
+            --end
          end
          if (questEvent=="QUEST_COMPLETE") then
             WoWeuCN_Quests_quest_EN.completion = GetRewardText();
@@ -721,9 +721,9 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
             WoWeuCN_Quests_quest_LG.itemchoose = WoWeuCN_Quests_Messages.itemchoose2;
             WoWeuCN_Quests_quest_EN.itemreceive = WoWeuCN_Quests_MessOrig.itemreceiv2;
             WoWeuCN_Quests_quest_LG.itemreceive = WoWeuCN_Quests_Messages.itemreceiv2;
-            if (strlen(WoWeuCN_Quests_quest_EN.completion)>0 and strlen(WoWeuCN_Quests_quest_LG.completion)==0) then
-               WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." COMPLETE"]=WoWeuCN_Quests_quest_EN.completion;     -- save missing translation part
-            end
+            --if (strlen(WoWeuCN_Quests_quest_EN.completion)>0 and strlen(WoWeuCN_Quests_quest_LG.completion)==0) then
+            --   WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." COMPLETE"]=WoWeuCN_Quests_quest_EN.completion;     -- save missing translation part
+            --end
          end     
 
          -- missing data
@@ -760,7 +760,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..str_ID);
         
          WoWeuCN_Quests_Translate_On(0);
-         WoWeuCN_Quests_SaveQuest(questEvent);
+         --WoWeuCN_Quests_SaveQuest(questEvent);
       end -- The quest is translated in the database
    else	-- Translations off...
       WoWeuCN_Quests_ToggleButton0:Disable();
