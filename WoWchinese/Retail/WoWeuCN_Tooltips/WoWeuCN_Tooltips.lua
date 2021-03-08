@@ -77,7 +77,7 @@ local function scanAuto(startIndex, attempt, counter)
   if (startIndex > 400000) then
     return;
   end
-  for i = startIndex, startIndex + 250 do
+  for i = startIndex, startIndex + 150 do
     qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
     qcSpellInformationTooltip:ClearLines()
     qcSpellInformationTooltip:SetHyperlink('spell:' .. i)
@@ -108,7 +108,7 @@ local function scanAuto(startIndex, attempt, counter)
   print(counter)
   WoWeuCN_Tooltips_SpellToolIndex = startIndex
   if (counter >= 8) then
-    QTR_wait(0.5, scanAuto, startIndex + 250, attempt + 1, 0)
+    QTR_wait(0.5, scanAuto, startIndex + 150, attempt + 1, 0)
   else
     QTR_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
   end
