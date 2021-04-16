@@ -52,14 +52,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Crawler.cs" />
-    <Compile Include="QuestReader.cs" />
+    <Compile Include="Crawlers\JournalCrawler.cs" />
+    <Compile Include="Crawlers\Crawler.cs" />
+    <Compile Include="Extensions\DBReaderExtensions.cs" />
+    <Compile Include="Extensions\FieldStructureEntry.cs" />
+    <Compile Include="Models\JournalEncounter.cs" />
+    <Compile Include="Readers\JournalReader.cs" />
+    <Compile Include="Readers\QuestCacheReader.cs" />
+    <Compile Include="Readers\UnitReader.cs" />
+    <Compile Include="Readers\QuestReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Quest.cs" />
     <Compile Include="Retriever.cs" />
-    <Compile Include="ItemReader.cs" />
-    <Compile Include="SpellReader.cs" />
+    <Compile Include="Readers\ItemReader.cs" />
+    <Compile Include="Readers\SpellReader.cs" />
     <Compile Include="Utils\StringUtils.cs" />
     <Compile Include="Models\Tooltip.cs" />
   </ItemGroup>

@@ -9,144 +9,112 @@ using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
-    public class QuestReader
+    public class JournalReader
     {
-        public QuestReader(string dirPath, string templateFilePath)
+        private static List<int> m_whiteList = new List<int>
+        {
+            247,248,249,250,251,252,253,254,255,256,257,258,259,260,261,262,745,746,747,748,749,750,751,752
+        };
+
+        public JournalReader(string dirPath)
         {
             m_dirPath = dirPath;
-            m_template = File.ReadAllText(templateFilePath);
-        }
-
-
-        public void ReadObjectives(string objectivesPath, List<QuestObjectives> objectives)
-        {
-            var lines = File.ReadAllLines(objectivesPath);
-            foreach (var line in lines)
-            {
-                var objective = new QuestObjectives();
-                var text = line.Trim();
-                var id = text.Split(new[] {"[\""}, StringSplitOptions.None)[1]
-                    .Split(new[] {"\"]"}, StringSplitOptions.None)[0]
-                    .Trim();
-
-                objective.Id = id;
-
-                var textContent = text.TrimTextAfter(@"{{");
-
-                var textTitle = textContent.GetTextBefore(@"}}");
-
-                objective.Title = textTitle;
-
-                textContent = text.TrimTextAfter(@"}}");
-                var textObjective = textContent.FirstBetween("{{", "}}");
-
-                if (!textObjective.StartsWith("要求："))
-                    objective.Objectives = textObjective;
-
-                var otherObjective = objectives.FirstOrDefault(o => o.Id == id);
-
-                if (otherObjective == null)
-                    objectives.Add(objective);
-                else
-                {
-                    objectives.Remove(otherObjective);
-                    objectives.Add(objective);
-                }
-            }
         }
 
         public void ExecuteJson(string outputPath)
         {
-            var objectives = new List<QuestObjectives>();
-            var apis = new List<QuestApi>();
-
-            //ReadObjectives(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail_objectives_0-70000.lua",
-            //    objectives);
-            //ReadObjectives(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr_objectives_0-70000.lua",
-            //    objectives);
-            //ReadObjectives(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta_objectives_0-70000.lua",
-            //    objectives);
-            ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36165.lua",
-                objectives);
-            ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36165.2.lua",
-                objectives);
-            ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.36216.lua",
-                objectives);
-            ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36512.lua",
-                objectives);
-            ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36532.lua",
-                objectives);
-            ReadObjectives(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36639.lua",
-                objectives);
-
+            var encounters = new List<JournalEncounter>();
+            
             var dirPath = new DirectoryInfo(m_dirPath);
-            ReadQuestApis(dirPath, apis);
-
-            var usedId = new HashSet<string>();
-            var questObjects = new List<Quest>();
-            foreach (var questApi in apis)
-            {
-                usedId.Add(questApi.Id);
-
-                var questObject = new Quest();
-                questObject.Id = questApi.Id;
-                questObject.Title = questApi.Title;
-
-                var objective = objectives.FirstOrDefault(o => o.Id == questApi.Id);
-                questObject.Objectives = objective != null ? objective.Objectives : string.Empty;
-
-                questObject.Description = questApi.Description;
-                questObject.Progress = string.Empty;
-                questObject.Completion = string.Empty;
-                questObjects.Add(questObject);
-            }
-
-            // Objectives not present in apis
-            foreach (var questObjective in objectives.Where(o => !usedId.Contains(o.Id)))
-            {
-                usedId.Add(questObjective.Id);
-
-                var questObject = new Quest();
-                questObject.Id = questObjective.Id;
-                questObject.Title = questObjective.Title;
-                questObject.Objectives = questObjective.Objectives;
-                questObject.Description = string.Empty;
-                questObject.Progress = string.Empty;
-                questObject.Completion = string.Empty;
-                questObjects.Add(questObject);
-            }
+            ReadQuestApis(dirPath, encounters);
 
             var sb = new StringBuilder();
-            foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
+            var processedInstance = new List<int>();
+            
+            foreach (var instanceEncounters in encounters.GroupBy(c => c.Instance.Id).ToList().OrderBy(l => l.ToList()[0].Instance.Id))
             {
-                var line = PrintLine(questObject);
-                //line = SpecialTreatment(line);
-                line = line.Replace(Environment.NewLine, @"NEW_LINE").Replace("\n", @"NEW_LINE");
-                line = ReplaceGender(line);
-                //line = ReplacePlayer(line, questObject, sbQuestToCheck);
-                sb.AppendLine(line);
+                var instanceBosses = instanceEncounters.OrderBy(i => i.Id).ToList();
+                if (!m_whiteList.Contains(instanceBosses[0].Instance.Id))
+                    continue;
+
+                processedInstance.Add(instanceBosses[0].Instance.Id);
+                sb.Append("[b][size=150%][color=royalblue]");
+                sb.Append(instanceBosses[0].Instance.Name);
+                sb.Append("[/color][/size][/b]").AppendLine();
+
+                sb.Append("[quote]内容[/quote]").AppendLine();
+
+                foreach (var instanceBoss in instanceBosses)
+                {
+                    sb.Append("[h]").Append(instanceBoss.Name).Append("[/h]").AppendLine();
+                    sb.Append("[quote]").Append(instanceBoss.Description).AppendLine();
+
+                    sb.Append("[h]概况说明[/h]").AppendLine();
+                    sb.Append("[list][*]整体战术：").AppendLine();
+                    sb.Append("[*]坦克：").AppendLine();
+                    sb.Append("[*]治疗：").AppendLine();
+                    sb.Append("[*]伤害输出：").Append("[/list]").AppendLine();
+
+                    sb.Append("[h]").Append("技能列表").Append("[/h]").AppendLine();
+                    sb.Append("[list]");
+                    foreach (var section in instanceBoss.Sections)
+                    {
+                        WriteSections(sb, section, string.Empty);
+                    }
+                    sb.AppendLine("[/list]");
+
+                    sb.Append("[h]").Append("掉落列表").Append("[/h]").AppendLine();
+                    sb.Append("[quote]");
+                    foreach (var instanceBossItem in instanceBoss.Items)
+                    {
+                        sb.Append($"[dict][{instanceBossItem.Item.Name}][url=https://cn.tbc.wowhead.com/item={instanceBossItem.Item.Id}]{instanceBossItem.Item.Name}[/url]");
+                        sb.AppendLine("[/dict]");
+                    }
+                    sb.Append("[/quote]");
+                    sb.AppendLine("[/quote]");
+
+                    sb.AppendLine();
+                }
+
+                sb.AppendLine();
             }
 
             var finalText = sb.ToString();
             File.WriteAllText(outputPath, finalText);
+
         }
 
-        private static void ReadQuestApis(DirectoryInfo dirPath, List<QuestApi> apis)
+        private void WriteSections(StringBuilder sb, JournalSection section, string prefix)
+        {
+            //sb.Append(prefix);
+            sb.Append("[*][color=skyblue]");
+            sb.Append(section.Title);
+            sb.Append("[/color]");
+            if (!string.IsNullOrEmpty(section.Body_Text))
+            {
+                sb.Append(" : ").AppendLine(section.Body_Text);
+            }
+            
+            if (section.Sections.Any())
+            {
+                sb.Append("[list]");
+                foreach (var subSection in section.Sections)
+                {
+                    WriteSections(sb, subSection, prefix + "-");
+                }
+                sb.Append("[/list]");
+            }
+
+        }
+
+        private static void ReadQuestApis(DirectoryInfo dirPath, List<JournalEncounter> apis)
         {
             foreach (var filePath in dirPath.GetFiles(@"*.json"))
             {
                 var text = File.ReadAllText(filePath.FullName);
-                var questApi = JsonConvert.DeserializeObject<QuestApi>(text);
-                questApi.Description = questApi.Description?.Replace("\"", string.Empty).Replace("“", string.Empty);
+                var questApi = JsonConvert.DeserializeObject<JournalEncounter>(text);
+                if (questApi == null)
+                    continue;
                 apis.Add(questApi);
             }
         }
