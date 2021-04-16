@@ -343,3 +343,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database 
 healthchecksdb
+
+# datainfo
+ClassicCodex/
+Questie/
+WowHead*/
+Journals/
