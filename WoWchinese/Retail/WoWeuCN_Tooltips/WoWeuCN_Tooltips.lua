@@ -34,6 +34,10 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_PS["transitem"] ) then
      WoWeuCN_Tooltips_PS["transitem"] = "1";   
   end
+    -- Initiation - unit translation
+  if (not WoWeuCN_Tooltips_PS["transunit"] ) then
+     WoWeuCN_Tooltips_PS["transunit"] = "1";   
+  end
    -- Path version info
   if (not WoWeuCN_Tooltips_PS["patch"]) then
      WoWeuCN_Tooltips_PS["patch"] = GetBuildInfo();
@@ -45,25 +49,25 @@ function WoWeuCN_Tooltips_CheckVars()
 end
 
 -- wait functions from QTR
-local QTR_waitFrame = nil;
-local QTR_waitTable = {};
+local WoWeuCN_Tooltips_waitFrame = nil;
+local WoWeuCN_Tooltips_waitTable = {};
 
-function QTR_wait(delay, func, ...)
+function WoWeuCN_Tooltips_wait(delay, func, ...)
   if(type(delay)~="number" or type(func)~="function") then
     return false;
   end
-  if (QTR_waitFrame == nil) then
-    QTR_waitFrame = CreateFrame("Frame","QTR_WaitFrame", UIParent);
-    QTR_waitFrame:SetScript("onUpdate",function (self,elapse)
-      local count = #QTR_waitTable;
+  if (WoWeuCN_Tooltips_waitFrame == nil) then
+    WoWeuCN_Tooltips_waitFrame = CreateFrame("Frame","WoWeuCN_Tooltips_waitFrame", UIParent);
+    WoWeuCN_Tooltips_waitFrame:SetScript("onUpdate",function (self,elapse)
+      local count = #WoWeuCN_Tooltips_waitTable;
       local i = 1;
       while(i<=count) do
-        local waitRecord = tremove(QTR_waitTable,i);
+        local waitRecord = tremove(WoWeuCN_Tooltips_waitTable,i);
         local d = tremove(waitRecord,1);
         local f = tremove(waitRecord,1);
         local p = tremove(waitRecord,1);
         if(d>elapse) then
-          tinsert(QTR_waitTable,i,{d-elapse,f,p});
+          tinsert(WoWeuCN_Tooltips_waitTable,i,{d-elapse,f,p});
           i = i + 1;
         else
           count = count - 1;
@@ -72,7 +76,7 @@ function QTR_wait(delay, func, ...)
       end
     end);
   end
-  tinsert(QTR_waitTable,{delay,func,{...}});
+  tinsert(WoWeuCN_Tooltips_waitTable,{delay,func,{...}});
   return true;
 end
 
@@ -111,9 +115,43 @@ local function scanAuto(startIndex, attempt, counter)
   print(counter)
   WoWeuCN_Tooltips_SpellToolIndex = startIndex
   if (counter >= 8) then
-    QTR_wait(0.5, scanAuto, startIndex + 150, attempt + 1, 0)
+    WoWeuCN_Tooltips_wait(0.5, scanAuto, startIndex + 150, attempt + 1, 0)
   else
-    QTR_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
+    WoWeuCN_Tooltips_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
+local function scanUnitAuto(startIndex, attempt, counter)
+  if (startIndex > 200000) then
+    return;
+  end
+  for i = startIndex, startIndex + 250 do
+    qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+    qcSpellInformationTooltip:ClearLines()
+    local guid = "Creature-0-0-0-0-"..i.."-0000000000";
+    qcSpellInformationTooltip:SetHyperlink('unit:' .. guid)
+    qcSpellInformationTooltip:Show()
+    local text =  EnumerateTooltipStyledLines(qcSpellInformationTooltip)
+    if (text ~= '' and text ~= nil) then
+     if (i >=0 and i < 100000) then
+      if (WoWeuCN_Tooltips_UnitToolTips0[i .. ''] == nil or string.len(WoWeuCN_Tooltips_UnitToolTips0[i .. '']) < string.len(text)) then
+        WoWeuCN_Tooltips_UnitToolTips0[i .. ''] = text
+      end
+    elseif (i >=100000 and i < 200000) then
+      if (WoWeuCN_Tooltips_UnitToolTips100000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_UnitToolTips100000[i .. '']) < string.len(text)) then
+        WoWeuCN_Tooltips_UnitToolTips100000[i .. ''] = text
+      end
+    end
+    end
+    print(i)
+  end
+  print(attempt)
+  print(counter)
+  WoWeuCN_Tooltips_UnitIndex = startIndex
+  if (counter >= 3) then
+    WoWeuCN_Tooltips_wait(0.5, scanUnitAuto, startIndex + 250, attempt + 1, 0)
+  else
+    WoWeuCN_Tooltips_wait(0.5, scanUnitAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
@@ -154,9 +192,9 @@ local function scanItemAuto(startIndex, attempt, counter)
   print(counter)
   WoWeuCN_Tooltips_ItemIndex = startIndex
   if (counter >= 8) then
-    QTR_wait(0.5, scanItemAuto, startIndex + 150, attempt + 1, 0)
+    WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex + 150, attempt + 1, 0)
   else
-    QTR_wait(0.5, scanItemAuto, startIndex, attempt + 1, counter + 1)
+    WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
@@ -172,6 +210,10 @@ local function loadAllSpellData()
   loadSpellData300000();
 end
 
+local function loadAllUnitData()
+  loadUnitData0();
+  loadUnitData100000();
+end
 
 local function EnumerateTooltipStyledLines_helper(...)
   local texts = '';
@@ -228,49 +270,6 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton1:Disable();
          WoWeuCN_Tooltips_ToggleButton2:Disable();
       end
-      -- spell option
-      elseif (msg=="spell on" or msg=="SPELL ON" or msg=="spell 1") then
-          if (WoWeuCN_Tooltips_PS["transspell"]=="1") then
-            print ("WOWeuCN - 翻译法术Tooltips : 启用.");
-          else
-            print ("|cffffff00WOWeuCN - 翻译法术Tooltips : 启用.");
-            WoWeuCN_Tooltips_PS["transspell"] = "1";
-          end
-      elseif (msg=="spell off" or msg=="spell OFF" or msg=="spell 0") then
-          if (WoWeuCN_Tooltips_PS["transspell"]=="0") then
-            print ("WOWeuCN - 翻译法术Tooltips : 禁用.");
-          else
-            print ("|cffffff00WOWeuCN - 翻译法术Tooltips : 禁用.");
-            WoWeuCN_Tooltips_PS["transspell"] = "0";
-          end
-      elseif (msg=="spell" or msg=="SPELL") then
-          if (WoWeuCN_Tooltips_PS["transspell"]=="1") then
-            print ("WOWeuCN - 翻译法术Tooltips : 启用.");
-          else
-            print ("WOWeuCN - 翻译法术Tooltips : 禁用.");
-          end
-      
-      -- item option
-      elseif (msg=="item on" or msg=="ITEM ON" or msg=="item 1") then
-        if (WoWeuCN_Tooltips_PS["transitem"]=="1") then
-          print ("WOWeuCN - 翻译道具Tooltips : 启用.");
-        else
-          print ("|cffffff00WOWeuCN - 翻译道具Tooltips : 启用.");
-          WoWeuCN_Tooltips_PS["transitem"] = "1";
-        end
-    elseif (msg=="item off" or msg=="ITEM OFF" or msg=="item 0") then
-        if (WoWeuCN_Tooltips_PS["transitem"]=="0") then
-          print ("WOWeuCN - 翻译道具Tooltips : 禁用.");
-        else
-          print ("|cffffff00WOWeuCN - 翻译道具Tooltips : 禁用.");
-          WoWeuCN_Tooltips_PS["transitem"] = "0";
-        end
-    elseif (msg=="item" or msg=="ITEM") then
-        if (WoWeuCN_Tooltips_PS["transitem"]=="1") then
-          print ("WOWeuCN - 翻译道具Tooltips : 启用.");
-        else
-          print ("WOWeuCN - 翻译道具Tooltips : 禁用.");
-        end
 
     --spell scan
     elseif (msg=="back" or msg=="BACK") then
@@ -305,7 +304,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
         WoWeuCN_Tooltips_SpellToolIndex = 1
       end
 
-      QTR_wait(0.1, scanAuto, WoWeuCN_Tooltips_SpellToolIndex, 1, 0)
+      WoWeuCN_Tooltips_wait(0.1, scanAuto, WoWeuCN_Tooltips_SpellToolIndex, 1, 0)
 
     -- item scan
     elseif (msg=="itemreset" or msg=="ITEMRESET") then
@@ -317,6 +316,25 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       WoWeuCN_Tooltips_ItemIndex = 1
       print("Clear");
     
+    -- unit
+    elseif (msg=="unitclear" or msg=="UNITCLEAR") then
+      WoWeuCN_Tooltips_UnitToolTips0 = {} 
+      WoWeuCN_Tooltips_UnitToolTips100000 = {} 
+      WoWeuCN_Tooltips_UnitIndex = 1
+      print("Clear");
+    elseif (msg=="unitscanauto" or msg=="UNITSCANAUTO") then
+      if (WoWeuCN_Tooltips_UnitToolTips0 == nil) then
+        WoWeuCN_Tooltips_UnitToolTips0 = {} 
+      end
+      if (WoWeuCN_Tooltips_UnitToolTips100000 == nil) then
+        WoWeuCN_Tooltips_UnitToolTips100000 = {} 
+      end
+      if (WoWeuCN_Tooltips_UnitIndex == nil) then
+        WoWeuCN_Tooltips_UnitIndex = 1
+      end
+
+      WoWeuCN_Tooltips_wait(0.1, scanUnitAuto, WoWeuCN_Tooltips_UnitIndex, 1, 0)
+
     -- item auto scan
     elseif (msg=="itemscanauto" or msg=="ITEMSCANAUTO") then      
       if (WoWeuCN_Tooltips_ItemIndex == nil) then
@@ -328,7 +346,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       if (WoWeuCN_Tooltips_ItemToolTips100000 == nil) then
         WoWeuCN_Tooltips_ItemToolTips100000 = {} 
       end
-      QTR_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
+      WoWeuCN_Tooltips_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
         InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
@@ -336,10 +354,6 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       print ("WOWeuCN-Tooltips - 指令说明:");
       print ("      /woweucn-tooltips on  - 启用Tooltips翻译模块");
       print ("      /woweucn-tooltips off - 禁用Tooltips翻译模块");
-      print ("      /woweucn-tooltips spell on  - 启用法术Tooltips翻译");
-      print ("      /woweucn-tooltips spell off - 禁用法术Tooltips翻译");
-      print ("      /woweucn-tooltips item on  - 启用道具Tooltips翻译");
-      print ("      /woweucn-tooltips item off - 禁用道具Tooltips翻译");
    end
 end
 
@@ -349,6 +363,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton0:SetChecked(WoWeuCN_Tooltips_PS["active"]=="1");
   WoWeuCN_TooltipsCheckButton3:SetChecked(WoWeuCN_Tooltips_PS["transspell"]=="1");
   WoWeuCN_TooltipsCheckButton4:SetChecked(WoWeuCN_Tooltips_PS["transitem"]=="1");
+  WoWeuCN_TooltipsCheckButton5:SetChecked(WoWeuCN_Tooltips_PS["transunit"]=="1");
 end
 
 
@@ -405,6 +420,12 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton4Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton4Text:SetText(WoWeuCN_Tooltips_Interface.transitem);
   
+  local WoWeuCN_TooltipsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton5", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
+  WoWeuCN_TooltipsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -45);
+  WoWeuCN_TooltipsCheckButton5:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transunit"]=="0") then WoWeuCN_Tooltips_PS["transunit"]="1" else WoWeuCN_Tooltips_PS["transunit"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton5Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton5Text:SetText(WoWeuCN_Tooltips_Interface.transunit);
+  
 end
 
 -- First function called after the add-in has been loaded
@@ -423,6 +444,8 @@ function WoWeuCN_Tooltips_OnLoad()
    ShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
    ItemRefShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
    ItemRefShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+
+   GameTooltip:HookScript("OnTooltipSetUnit", function(...) OnTooltipUnit(..., GameTooltip) end)
    
    if (_G.ElvUISpellBookTooltip ~= nil) then
     _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
@@ -431,6 +454,50 @@ function WoWeuCN_Tooltips_OnLoad()
    qcSpellInformationTooltipSetup();
    loadAllSpellData()
    loadAllItemData()
+   loadAllUnitData()
+end
+
+function OnTooltipUnit(self, tooltip)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transunit"]=="0") then
+    return
+  end
+	-- Case for linked unit
+  local unitName, unit = self:GetUnit()
+  if (unit == nil) then 
+    return
+  end
+
+  local unitGUID = UnitGUID(unit);
+  local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-", unitGUID);
+  local unitData = GetUnitData(npc_id)
+
+  if ( unitData ) then  
+    self:AddLine(" ")
+    for i = 1, #unitData do
+      local region = unitData[i]
+
+      if (i < 2) then
+        self:AddLine(_G["ORANGE_FONT_COLOR_CODE"] .. region .. "|r", 1, 1, 1, 1)
+        else
+        self:AddLine(region, 1, 1, 1, 1)
+        end
+    end
+  end
+end
+
+function GetUnitData(id)
+  if (id == nil) then
+    return nil
+  end
+  local str_id = tostring(id)
+  local num_id = tonumber(id)
+  if (num_id >= 0 and num_id < 100000) then
+    return  WoWeuCN_Tooltips_UnitData_0[str_id]
+  elseif (num_id >= 100000 and num_id < 200000) then
+    return  WoWeuCN_Tooltips_UnitData_100000[str_id]
+  end
+
+  return nil
 end
 
 function OnTooltipItem(self, tooltip)
@@ -467,9 +534,9 @@ function GetItemData(id)
   end
   local str_id = tostring(id)
   local num_id = tonumber(id)
-  if (num_id >= 0 and num_id < 50000) then
+  if (num_id >= 0 and num_id < 100000) then
     return  WoWeuCN_Tooltips_ItemData_0[str_id]
-  elseif (num_id >= 10000 and num_id < 200000) then
+  elseif (num_id >= 100000 and num_id < 200000) then
     return  WoWeuCN_Tooltips_ItemData_100000[str_id]
   end
 
@@ -550,7 +617,7 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       WoWeuCN_Tooltips_CheckVars();
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Tooltips_BlizzardOptions();
-      QTR_wait(2, Broadcast)
+      WoWeuCN_Tooltips_wait(2, Broadcast)
       WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Tooltips.ADDON_LOADED = nil;
    end
