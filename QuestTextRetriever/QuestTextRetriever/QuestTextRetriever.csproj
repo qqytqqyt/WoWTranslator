@@ -59,6 +59,7 @@
     <Compile Include="Models\JournalEncounter.cs" />
     <Compile Include="Readers\JournalReader.cs" />
     <Compile Include="Readers\QuestCacheReader.cs" />
+    <Compile Include="Readers\QuestieUnitReader.cs" />
     <Compile Include="Readers\UnitReader.cs" />
     <Compile Include="Readers\QuestReader.cs" />
     <Compile Include="Program.cs" />

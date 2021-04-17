@@ -30,7 +30,7 @@ namespace QuestTextRetriever
             //journalReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\outputngatw.txt");
 
             var unitReader = new UnitReader();
-            unitReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\questie_units_38339_zhcn.txt");
+            unitReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.txt");
 
             //var questCacheReader =
             //    new QuestCacheReader(

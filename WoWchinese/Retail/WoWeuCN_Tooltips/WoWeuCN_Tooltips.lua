@@ -10,6 +10,9 @@ local last_text = 0;
 
 -- Global variables initialtion
 function WoWeuCN_Tooltips_CheckVars()
+  if (not WoWeuCN_Tooltips_LastAnnounceDate) then
+    WoWeuCN_Tooltips_LastAnnounceDate = 0;
+  end
   if (not WoWeuCN_Tooltips_PS) then
      WoWeuCN_Tooltips_PS = {};
   end
@@ -564,5 +567,18 @@ function Broadcast()
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
     return
   end
+  if (time() - WoWeuCN_Tooltips_LastAnnounceDate < WowenCN_Tooltips_WeekDiff) then
+    return
+  end
+
+  WoWeuCN_Tooltips_LastAnnounceDate = time()
+  local realmName = GetRealmName()
+
+  local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
+  if (realmName == "Silvermoon") then
+    --guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"
+  end
+
+  print(_G["ORANGE_FONT_COLOR_CODE"] .. "Silvermoon 联盟公会" .. guildInfo .. _G["ORANGE_FONT_COLOR_CODE"] .. "招收治疗DPS加入我们开荒M团本的团队与大米冲层队伍。同时欢迎休闲玩家来欢乐打大米PVP评级。入会咨询/申请请|r" .. "\124cffffd100\124HclubTicket:wyPXGRUyyb\124h[点击加入社群]\124h\124r" .. _G["ORANGE_FONT_COLOR_CODE"] .. "（链接已修复）。|r");
 end
 

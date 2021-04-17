@@ -1,12 +1,10 @@
-﻿using System;
+﻿using QuestTextRetriever.Models;
+using QuestTextRetriever.Utils;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using QuestTextRetriever.Models;
-using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
@@ -31,13 +29,13 @@ namespace QuestTextRetriever
             var usedId = new HashSet<string>();
             foreach (var line in lines)
             {
-                var spellTips = new Tooltip();
+                var unitTips = new Tooltip();
                 var text = line.Trim();
                 var id = text.Split(new string[] { "[\"" }, StringSplitOptions.None)[1]
                     .Split(new[] { "\"]" }, StringSplitOptions.None)[0]
                     .Trim();
 
-                spellTips.Id = id;
+                unitTips.Id = id;
                 if (usedId.Contains(id))
                     continue;
                 else
@@ -77,7 +75,7 @@ namespace QuestTextRetriever
                         break;
 
                     // red
-                    spellTips.TooltipLines.Add(spellTipLine);
+                    unitTips.TooltipLines.Add(spellTipLine);
                     
                 }
 
@@ -86,17 +84,17 @@ namespace QuestTextRetriever
                     var otherObjective = spellTipsList.FirstOrDefault(o => o.Id == id);
 
                     if (otherObjective == null)
-                        spellTipsList.Add(spellTips);
+                        spellTipsList.Add(unitTips);
                     else
                     {
                         spellTipsList.Remove(otherObjective);
-                        spellTipsList.Add(spellTips);
+                        spellTipsList.Add(unitTips);
                     }
                 }
                 else
                 {
                     usedIds.Add(id);
-                    spellTipsList.Add(spellTips);
+                    spellTipsList.Add(unitTips);
                 }
             }
         }
@@ -120,86 +118,43 @@ namespace QuestTextRetriever
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
-            foreach (var spellTips in spellTipOrderedList)
+            foreach (var unitTips in spellTipOrderedList)
             {
-                if (int.Parse(spellTips.Id) >= currentBlock + 100000)
+                if (int.Parse(unitTips.Id) >= currentBlock + 100000)
                 {
                     sb.AppendLine(" };").AppendLine("end").AppendLine();
                     currentBlock += 100000;
                     currentIndex = 0;
                 }
 
+                if (currentIndex == 0)
+                {
+                    sb.AppendLine("function loadUnitData" + currentBlock + "()");
+                    sb.AppendLine("  WoWeuCN_Tooltips_UnitData_" + currentBlock + " = {");
+                }
+
                 var tempSb = new StringBuilder();
-                if (isItem)
+                tempSb.Append("  [\"").Append(unitTips.Id).Append("\"]={");
+                foreach (var spellTipLine in unitTips.TooltipLines)
                 {
-                    tempSb.Append("  [").Append(spellTips.Id).Append("] = ");
-                    foreach (var spellTipLine in spellTips.TooltipLines)
-                    {
                         tempSb.Append("\"").Append(spellTipLine.Line).Append("\",");
-                        break;
-                    }
-
-                    currentIndex++;
-
-
-                    if (!spellTips.TooltipLines.Any())
-                        continue;
-
-                    if (spellTips.TooltipLines[0].Line.All(c => c < 256))
-                        continue;
-                    
-                    sb.Append(tempSb);
-                    
-                    sb.AppendLine();
                 }
-                else
-                {
-                    tempSb.Append("  [").Append(spellTips.Id).Append("] = {");
-                    foreach (var spellTipLine in spellTips.TooltipLines)
-                    {
-                        tempSb.Append("\"").Append(spellTipLine.Line).Append("\",");
-                        break;
-                    }
 
-                    currentIndex++;
-                    
-                    if (!spellTips.TooltipLines.Any())
-                        continue;
+                currentIndex++;
+                // remove empty spelltips
+                if (!unitTips.TooltipLines.Any())
+                    continue;
 
-                    if (spellTips.TooltipLines[0].Line.All(c => c < 256))
-                        continue;
+                sb.Append(tempSb);
+                sb.Remove(sb.Length - 1, 1);
 
-                    if (spellTips.TooltipLines.Count < 2)
-                        tempSb.Append("nil");
-                    else
-                        tempSb.Append("\"").Append(spellTips.TooltipLines[1].Line).Append("\"");
-
-                    tempSb.Append("},");
-
-                    sb.Append(tempSb);
-
-
-                    sb.AppendLine();
-                }
+                sb.Append("},");
+                sb.AppendLine();
 
             }
-            //foreach (var spellTips in spellTipList.OrderBy(q => int.Parse(q.Id)))
-            //{
-            //    sb.Append("[\"").Append(spellTips.Id).Append("\"]={");
-            //    foreach (var spellTipLine in spellTips.SpellTipLines)
-            //    {
-            //        sb.Append("{\"").Append(spellTipLine.Line).Append("\",").Append(spellTipLine.R).Append(",")
-            //            .Append(spellTipLine.G).Append(",").Append(spellTipLine.B).Append("},");
-            //    }
-            //    if (spellTips.SpellTipLines.Any())
-            //        sb.Remove(sb.Length - 1, 1);
 
-            //    sb.Append("},");
-            //    sb.AppendLine();
-            //}
-
-            //sb.Append("};").AppendLine();
-            //sb.Append("end");
+            sb.Append("};").AppendLine();
+            sb.Append("end");
             File.WriteAllText(outputPath, sb.ToString());
         }
     }

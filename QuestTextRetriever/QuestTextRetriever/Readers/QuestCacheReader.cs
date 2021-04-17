@@ -21,11 +21,34 @@ namespace QuestTextRetriever.Readers
         public void Execute(string outputPath)
         {
             var questObjects = new List<Quest>();
+            ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache_38339_zhcn.wdb", questObjects);
+
+            var sb = new StringBuilder();
+            foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
+            {
+                var line = PrintLine(questObject);
+                //line = SpecialTreatment(line);
+                line = line.Replace(Environment.NewLine, @"NEW_LINE").Replace("\n", @"NEW_LINE");
+                line = line.Replace(@"$r", @"{race}").Replace(@"$R", @"{race}");
+                line = line.Replace(@"$c", @"{class}").Replace(@"$C", @"{class}");
+                line = line.Replace(@"$n", @"{name}").Replace(@"$N", @"{name}");
+                line = line.Replace(@"$b", @"NEW_LINE").Replace(@"$B", @"NEW_LINE");
+                line = ReplaceGender(line);
+                //line = ReplacePlayer(line, questObject, sbQuestToCheck);
+                sb.AppendLine(line);
+            }
+
+            var finalText = sb.ToString();
+            File.WriteAllText(outputPath, finalText);
+        }
+
+        public static void ReadQuestCache(string fileName, List<Quest> questObjects)
+        {
             var index = 0;
             try
             {
-                using (var ms = new MemoryStream(File.ReadAllBytes(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache38339zhcn.wdb"))
+                using (var ms = new MemoryStream(File.ReadAllBytes(fileName
+                    ))
                 )
                 {
                     using (var dbReader = new BinaryReader(ms, Encoding.UTF8))
@@ -97,7 +120,7 @@ namespace QuestTextRetriever.Readers
                             quest.Id = id.ToString();
                             quest.Title = title;
                             quest.Objectives = objective;
-                            quest.Description = description.Replace("\"", "\\\"");
+                            quest.Description = ReplaceGender(description.Replace("\"", "\\\""));
 
                             questObjects.Add(quest);
                         }
@@ -108,24 +131,6 @@ namespace QuestTextRetriever.Readers
             {
                 Console.Write(index);
             }
-
-            var sb = new StringBuilder();
-            foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
-            {
-                var line = PrintLine(questObject);
-                //line = SpecialTreatment(line);
-                line = line.Replace(Environment.NewLine, @"NEW_LINE").Replace("\n", @"NEW_LINE");
-                line = line.Replace(@"$r", @"{race}").Replace(@"$R", @"{race}");
-                line = line.Replace(@"$c", @"{class}").Replace(@"$C", @"{class}");
-                line = line.Replace(@"$n", @"{name}").Replace(@"$N", @"{name}");
-                line = line.Replace(@"$b", @"NEW_LINE").Replace(@"$B", @"NEW_LINE");
-                line = ReplaceGender(line);
-                //line = ReplacePlayer(line, questObject, sbQuestToCheck);
-                sb.AppendLine(line);
-            }
-
-            var finalText = sb.ToString();
-            File.WriteAllText(outputPath, finalText);
         }
 
         private static string ReplaceGender(string text)

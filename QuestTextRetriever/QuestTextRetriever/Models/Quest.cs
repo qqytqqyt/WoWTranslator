@@ -10,11 +10,11 @@
 
         public string Description { get; set; }
 
-        public string Progress { get; set; }
+        public string Progress { get; set; } = string.Empty;
 
-        public string Completion { get; set; }
+        public string Completion { get; set; } = string.Empty;
 
-        public string Translator { get; set; }
+        public string Translator { get; set; } = string.Empty;
     }
 
     public class QuestApi

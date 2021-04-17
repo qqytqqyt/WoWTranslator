@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
 using QuestTextRetriever.Models;
+using QuestTextRetriever.Readers;
 using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
@@ -59,6 +60,7 @@ namespace QuestTextRetriever
         {
             var objectives = new List<QuestObjectives>();
             var apis = new List<QuestApi>();
+            var cachedQuests = new List<Quest>();
 
             //ReadObjectives(
             //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail_objectives_0-70000.lua",
@@ -97,9 +99,16 @@ namespace QuestTextRetriever
             var dirPath = new DirectoryInfo(m_dirPath);
             ReadQuestApis(dirPath, apis);
 
+            QuestCacheReader.ReadQuestCache(@"", cachedQuests);
+
             var usedId = new HashSet<string>();
             var questObjects = new List<Quest>();
-            foreach (var questApi in apis)
+            foreach (var cachedQuest in cachedQuests)
+            {
+                usedId.Add(cachedQuest.Id);
+            }
+
+            foreach (var questApi in apis.Where(a => !usedId.Contains(a.Id)))
             {
                 usedId.Add(questApi.Id);
 
