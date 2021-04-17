@@ -1,6 +1,6 @@
-﻿## Interface: 90002
+﻿## Interface: 90005
 ## Title: WoWeuCN-Quests
-## Version: 9.0.2.0
+## Version: 9.0.5.1
 ## Notes_en: AddOn displays the translated quest informations in Chinese.
 ## Notes: Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
 ## Author: qqytqqyt
@@ -8,7 +8,7 @@
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
 ## SavedVariables: WoWeuCN_Quests_PS, WoWeuCN_Quests_SAVED, WoWeuCN_Quests_MISSING, WoWeuCN_Quests_QuestToolTips, WoWeuCN_Quests_QuestIndex
-## SavedVariablesPerCharacter: WoWeuCN_Quests_PC
+## SavedVariablesPerCharacter: WoWeuCN_Quests_PC, WoWeuCN_Quests_LastAnnounceDate
 
 QuestData_cn.lua
 WoWeuCN_Quests.lua

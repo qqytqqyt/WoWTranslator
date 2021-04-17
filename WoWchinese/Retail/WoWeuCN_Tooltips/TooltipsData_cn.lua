@@ -3,6 +3,8 @@ WoWeuCN_Tooltips_date = "2022-03-08"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
+WowenCN_Tooltips_WeekDiff = 86400
+
 WoWeuCN_Tooltips_Messages = {   
     loaded     = "加载完成", 
     isactive   = "已启用", 
