@@ -1,16 +1,18 @@
-﻿using QuestTextRetriever.Models;
-using QuestTextRetriever.Utils;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using QuestTextRetriever.Models;
+using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
-    public class UnitReader
+    public class QuestieUnitReader
     {
-        public UnitReader()
+        public QuestieUnitReader()
         {
         }
 
@@ -112,52 +114,92 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36710.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_36753.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_905.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.lua", spellTipList, usedIds);
             var isItem = false;
             var sb = new StringBuilder();
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
-            foreach (var unitTips in spellTipOrderedList)
+            foreach (var spellTips in spellTipOrderedList)
             {
-                if (int.Parse(unitTips.Id) >= currentBlock + 100000)
+                if (int.Parse(spellTips.Id) >= currentBlock + 100000)
                 {
                     sb.AppendLine(" };").AppendLine("end").AppendLine();
                     currentBlock += 100000;
                     currentIndex = 0;
                 }
 
-                if (currentIndex == 0)
-                {
-                    sb.AppendLine("function loadUnitData" + currentBlock + "()");
-                    sb.AppendLine("  WoWeuCN_Tooltips_UnitData_" + currentBlock + " = {");
-                }
-
                 var tempSb = new StringBuilder();
-                tempSb.Append("  [\"").Append(unitTips.Id).Append("\"]={");
-                foreach (var spellTipLine in unitTips.TooltipLines)
+                if (isItem)
                 {
+                    tempSb.Append("  [").Append(spellTips.Id).Append("] = ");
+                    foreach (var spellTipLine in spellTips.TooltipLines)
+                    {
                         tempSb.Append("\"").Append(spellTipLine.Line).Append("\",");
+                        break;
+                    }
+
+                    currentIndex++;
+
+
+                    if (!spellTips.TooltipLines.Any())
+                        continue;
+
+                    if (spellTips.TooltipLines[0].Line.All(c => c < 256))
+                        continue;
+                    
+                    sb.Append(tempSb);
+                    
+                    sb.AppendLine();
                 }
+                else
+                {
+                    tempSb.Append("  [").Append(spellTips.Id).Append("] = {");
+                    foreach (var spellTipLine in spellTips.TooltipLines)
+                    {
+                        tempSb.Append("\"").Append(spellTipLine.Line).Append("\",");
+                        break;
+                    }
 
-                currentIndex++;
-                // remove empty spelltips
-                if (!unitTips.TooltipLines.Any())
-                    continue;
+                    currentIndex++;
+                    
+                    if (!spellTips.TooltipLines.Any())
+                        continue;
 
-                if (unitTips.TooltipLines[0].Line.All(c => c < 256))
-                    continue;
+                    if (spellTips.TooltipLines[0].Line.All(c => c < 256))
+                        continue;
 
-                sb.Append(tempSb);
-                sb.Remove(sb.Length - 1, 1);
+                    if (spellTips.TooltipLines.Count < 2)
+                        tempSb.Append("nil");
+                    else
+                        tempSb.Append("\"").Append(spellTips.TooltipLines[1].Line).Append("\"");
 
-                sb.Append("},");
-                sb.AppendLine();
+                    tempSb.Append("},");
+
+                    sb.Append(tempSb);
+
+
+                    sb.AppendLine();
+                }
 
             }
+            //foreach (var spellTips in spellTipList.OrderBy(q => int.Parse(q.Id)))
+            //{
+            //    sb.Append("[\"").Append(spellTips.Id).Append("\"]={");
+            //    foreach (var spellTipLine in spellTips.SpellTipLines)
+            //    {
+            //        sb.Append("{\"").Append(spellTipLine.Line).Append("\",").Append(spellTipLine.R).Append(",")
+            //            .Append(spellTipLine.G).Append(",").Append(spellTipLine.B).Append("},");
+            //    }
+            //    if (spellTips.SpellTipLines.Any())
+            //        sb.Remove(sb.Length - 1, 1);
 
-            sb.Append("};").AppendLine();
-            sb.Append("end");
+            //    sb.Append("},");
+            //    sb.AppendLine();
+            //}
+
+            //sb.Append("};").AppendLine();
+            //sb.Append("end");
             File.WriteAllText(outputPath, sb.ToString());
         }
     }

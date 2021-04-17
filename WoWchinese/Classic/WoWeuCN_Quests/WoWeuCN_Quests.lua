@@ -179,15 +179,16 @@ local function scanAuto(startIndex, attempt, counter)
    print(startIndex)
   end
   
-  local title = C_QuestLog.GetQuestInfo(startIndex)
-  if (title ~= '' and title ~= nil) then
-   print(title)
-   counter = 3
+  for i = startIndex, startIndex + 150 do
+   local title = C_QuestLog.GetQuestInfo(i)
+   if (title ~= '' and title ~= nil) then
+    print(title)
+   end
   end
   
   WoWeuCN_Quests_QuestIndex = startIndex
-  if (counter >= 3) then
-    WoWeuCN_Quests_wait(0.2, scanAuto, startIndex + 1, attempt + 1, 0)
+  if (counter >= 5) then
+    WoWeuCN_Quests_wait(0.2, scanAuto, startIndex + 150, attempt + 1, 0)
   else
     WoWeuCN_Quests_wait(0.2, scanAuto, startIndex, attempt + 1, counter + 1)
   end

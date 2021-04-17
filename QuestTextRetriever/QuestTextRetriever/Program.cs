@@ -30,7 +30,7 @@ namespace QuestTextRetriever
             //journalReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\outputngatw.txt");
 
             var unitReader = new UnitReader();
-            unitReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.txt");
+            unitReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retails_units_905_zhcn.txt");
 
             //var questCacheReader =
             //    new QuestCacheReader(
@@ -94,7 +94,7 @@ namespace QuestTextRetriever
 
 
 
-
+            
             //var retriever = new Retriever(@"D:\qqytqqyt\Documents\OwnProjects\Translator\686500-Wow-ChineseDB-master\Wow-ChineseDB\quest_template.sql", @"D:\qqytqqyt\Documents\OwnProjects\Translator\template.txt");
             //retriever.Execute(@"D:\qqytqqyt\Documents\OwnProjects\Translator\output.txt");
 
