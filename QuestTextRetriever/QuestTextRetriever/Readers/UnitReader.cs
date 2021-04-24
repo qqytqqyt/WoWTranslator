@@ -112,17 +112,35 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36710.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_36753.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_905.lua", spellTipList, usedIds);
-            var isItem = false;
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_905.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.lua", spellTipList, usedIds);
             var sb = new StringBuilder();
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
+            var maxUnitId = 1;
+            var countA = 0;
+            int countB = 0;
+            var text = "";
+            var idIndexMapping = new int[100001];
             foreach (var unitTips in spellTipOrderedList)
             {
                 if (int.Parse(unitTips.Id) >= currentBlock + 100000)
                 {
                     sb.AppendLine(" };").AppendLine("end").AppendLine();
+
+                    sb.AppendLine("WoWeuCN_Tooltips_UnitIndexData_" + currentBlock + " = {");
+                    for (int i = 1; i <= maxUnitId; ++i)
+                    {
+                        if (idIndexMapping[i] != 0)
+                            sb.AppendLine().Append(idIndexMapping[i]).Append(",");
+                        else
+                            sb.Append("nil,");
+                    }
+                    sb.AppendLine().Append("};").AppendLine();
+                    maxUnitId = 1;
+                    idIndexMapping = new int[100001];
+
                     currentBlock += 100000;
                     currentIndex = 0;
                 }
@@ -131,32 +149,52 @@ namespace QuestTextRetriever
                 {
                     sb.AppendLine("function loadUnitData" + currentBlock + "()");
                     sb.AppendLine("  WoWeuCN_Tooltips_UnitData_" + currentBlock + " = {");
+                    currentIndex = 1;
                 }
 
                 var tempSb = new StringBuilder();
-                tempSb.Append("  [\"").Append(unitTips.Id).Append("\"]={");
+                tempSb.Append("\"");
                 foreach (var spellTipLine in unitTips.TooltipLines)
                 {
-                        tempSb.Append("\"").Append(spellTipLine.Line).Append("\",");
+                    tempSb.Append(spellTipLine.Line).Append("£");
                 }
 
-                currentIndex++;
                 // remove empty spelltips
                 if (!unitTips.TooltipLines.Any())
+                {
+                    countA++;
                     continue;
+                }
 
                 if (unitTips.TooltipLines[0].Line.All(c => c < 256))
+                {
+                    text += unitTips.TooltipLines[0].Line;
+                    countB++;
                     continue;
+                }
 
                 sb.Append(tempSb);
                 sb.Remove(sb.Length - 1, 1);
 
-                sb.Append("},");
-                sb.AppendLine();
+                sb.Append("\",").AppendLine();
+
+                idIndexMapping[int.Parse(unitTips.Id) - currentBlock] = currentIndex;
+                maxUnitId = int.Parse(unitTips.Id) - currentBlock;
+                currentIndex++;
 
             }
 
             sb.Append("};").AppendLine();
+            sb.AppendLine("WoWeuCN_Tooltips_UnitIndexData_" + currentBlock + " = {");
+            for (int i = 1; i <= maxUnitId; ++i)
+            {
+                if (idIndexMapping[i] != 0)
+                    sb.AppendLine().Append(idIndexMapping[i]).Append(",");
+                else
+                    sb.Append("nil,");
+            }
+            sb.AppendLine().Append("};").AppendLine();
+
             sb.Append("end");
             File.WriteAllText(outputPath, sb.ToString());
         }

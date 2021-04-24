@@ -136,11 +136,26 @@ namespace QuestTextRetriever
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
+            var maxSpellId = 1;
+            var idIndexMapping = new int[100001];
             foreach (var spellTips in spellTipOrderedList)
             {
                 if (int.Parse(spellTips.Id) >= currentBlock + 100000)
                 {
                     sb.AppendLine(" };").AppendLine("end").AppendLine();
+
+                    sb.AppendLine("WoWeuCN_Tooltips_SpellIndexData_" + currentBlock + " = {");
+                    for (int i = 1; i <= maxSpellId; ++i)
+                    {
+                        if (idIndexMapping[i] != 0)
+                            sb.AppendLine().Append(idIndexMapping[i]).Append(",");
+                        else
+                            sb.Append("nil,");
+                    }
+                    sb.AppendLine().Append("};").AppendLine();
+                    maxSpellId = 1;
+                    idIndexMapping = new int[100001];
+
                     currentBlock += 100000;
                     currentIndex = 0;
                 }
@@ -149,10 +164,11 @@ namespace QuestTextRetriever
                 {
                     sb.AppendLine("function loadSpellData" + currentBlock + "()");
                     sb.AppendLine("  WoWeuCN_Tooltips_SpellData_" + currentBlock + " = {");
+                    currentIndex = 1;
                 }
 
                 var tempSb = new StringBuilder();
-                tempSb.Append("  [\"").Append(spellTips.Id).Append("\"]={");
+                tempSb.Append("\"");
                 foreach (var spellTipLine in spellTips.TooltipLines)
                 {
                     int r = (int)(spellTipLine.R * 255);
@@ -160,7 +176,7 @@ namespace QuestTextRetriever
                     int b = (int)(spellTipLine.B * 255);
                     if (r == 255 && g == 255 && b == 255)
                     {
-                        tempSb.Append("\"").Append(spellTipLine.Line).Append("\",");
+                        tempSb.Append(spellTipLine.Line).Append("£");
                     }
                     else
                     {
@@ -186,11 +202,10 @@ namespace QuestTextRetriever
 
                         text = colourText + text + "|r";
                         text = text.Replace(colourText + "|r", string.Empty);
-                        tempSb.Append("\"").Append(text).Append("\",");
+                        tempSb.Append(text).Append("£");
                     }
                 }
 
-                currentIndex++;
                 // remove empty spelltips
                 if (spellTips.TooltipLines.Count < 2)
                     spellTips.TooltipLines.Clear();
@@ -202,10 +217,12 @@ namespace QuestTextRetriever
 
                 sb.Append(tempSb);
                 sb.Remove(sb.Length - 1, 1);
+                sb.Append("\",").AppendLine();
 
-                sb.Append("},");
-                sb.AppendLine();
 
+                idIndexMapping[int.Parse(spellTips.Id) - currentBlock] = currentIndex;
+                maxSpellId = int.Parse(spellTips.Id) - currentBlock;
+                currentIndex++;
             }
             //foreach (var spellTips in spellTipList.OrderBy(q => int.Parse(q.Id)))
             //{
@@ -223,7 +240,18 @@ namespace QuestTextRetriever
             //}
 
             sb.Append("};").AppendLine();
+            sb.AppendLine("WoWeuCN_Tooltips_SpellIndexData_" + currentBlock + " = {");
+            for (int i = 1; i <= maxSpellId; ++i)
+            {
+                if (idIndexMapping[i] != 0)
+                    sb.AppendLine().Append(idIndexMapping[i]).Append(",");
+                else
+                    sb.Append("nil,");
+            }
+            sb.AppendLine().Append("};").AppendLine();
+
             sb.Append("end");
+
             File.WriteAllText(outputPath, sb.ToString());
         }
     }

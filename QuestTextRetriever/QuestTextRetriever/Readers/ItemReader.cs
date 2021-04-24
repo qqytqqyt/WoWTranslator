@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -161,33 +162,37 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\ptr-item0-200000.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\beta-item0-200000.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\classic_items.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\classic_items.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.36216.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36512.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36532.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36710.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.36753.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
             // Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\tbc_items_38225.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\tbc_items_38225.lua", itemTipList, usedIds);
             var sb = new StringBuilder();
             var itemTipOrderedList = itemTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
-            var idIndexMapping = new Dictionary<int, int>();
+            var idIndexMapping = new int[100001];
+            var maxItemId = 1;
             foreach (var itemTips in itemTipOrderedList)
             {
                 if (int.Parse(itemTips.Id) >= currentBlock + 100000)
                 {
                     sb.AppendLine(" };").AppendLine("end").AppendLine();
                     sb.AppendLine("WoWeuCN_Tooltips_ItemIndexData_" + currentBlock + " = {");
-                    foreach (var pair in idIndexMapping)
+                    for (int i = 1; i <= maxItemId; ++i)
                     {
-                        sb.Append("[\"").Append(pair.Key).Append("\"]=").Append(pair.Value).AppendLine(",");
+                        if (idIndexMapping[i] != 0)
+                            sb.AppendLine().Append(idIndexMapping[i]).Append(",");
+                        else
+                            sb.Append("nil,");
                     }
-                    sb.Append("};").AppendLine();
-
-                    idIndexMapping.Clear();
+                    sb.AppendLine().Append("};").AppendLine();
+                    maxItemId = 1;
+                    idIndexMapping = new int[100001];
                     currentBlock += 100000;
                     currentIndex = 0;
                 }
@@ -242,21 +247,26 @@ namespace QuestTextRetriever
                     sb.Remove(sb.Length - 1, 1);
 
                 sb.Append("\",").AppendLine();
-               
+                
                 currentIndex++;
-                idIndexMapping[int.Parse(itemTips.Id)] = currentIndex;
+                idIndexMapping[int.Parse(itemTips.Id)-currentBlock] = currentIndex;
+                maxItemId = int.Parse(itemTips.Id) - currentBlock;
             }
 
             sb.Append("};").AppendLine();
 
             // last block index
             sb.AppendLine("WoWeuCN_Tooltips_ItemIndexData_" + currentBlock + " = {");
-            foreach (var pair in idIndexMapping)
+            for (int i = 1; i <= maxItemId; ++i)
             {
-                sb.Append("[\"").Append(pair.Key).Append("\"]=").Append(pair.Value).AppendLine(",");
+                if (idIndexMapping[i] != 0)
+                    sb.AppendLine().Append(idIndexMapping[i]).Append(",");
+                else
+                    sb.Append("nil,");
             }
-            sb.Append("};").AppendLine();
-            
+            sb.AppendLine().Append("};").AppendLine();
+
+
             sb.Append("end");
 
             //foreach (var itemTips in itemTipList.OrderBy(q => int.Parse(q.Id)))
