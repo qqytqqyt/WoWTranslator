@@ -166,19 +166,28 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36512.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36532.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36710.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items_36753.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.36753.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
             // Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\tbc_items_38225.lua", itemTipList, usedIds);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\tbc_items_38225.lua", itemTipList, usedIds);
             var sb = new StringBuilder();
             var itemTipOrderedList = itemTipList.OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
+            var idIndexMapping = new Dictionary<int, int>();
             foreach (var itemTips in itemTipOrderedList)
             {
                 if (int.Parse(itemTips.Id) >= currentBlock + 100000)
                 {
                     sb.AppendLine(" };").AppendLine("end").AppendLine();
+                    sb.AppendLine("WoWeuCN_Tooltips_ItemIndexData_" + currentBlock + " = {");
+                    foreach (var pair in idIndexMapping)
+                    {
+                        sb.Append("[\"").Append(pair.Key).Append("\"]=").Append(pair.Value).AppendLine(",");
+                    }
+                    sb.Append("};").AppendLine();
+
+                    idIndexMapping.Clear();
                     currentBlock += 100000;
                     currentIndex = 0;
                 }
@@ -189,7 +198,9 @@ namespace QuestTextRetriever
                     sb.AppendLine("WoWeuCN_Tooltips_ItemData_" + currentBlock + " = {");
                 }
 
-                sb.Append("[\"").Append(itemTips.Id).Append("\"]={");
+               // sb.Append("[\"").Append(itemTips.Id).Append("\"]={");
+
+                sb.Append("\"");
                 foreach (var itemTipLine in itemTips.TooltipLines)
                 {
                     int r = (int)(itemTipLine.R * 255);
@@ -197,7 +208,7 @@ namespace QuestTextRetriever
                     int b = (int)(itemTipLine.B * 255);
                     if (r == 255 && g == 255 && b == 255)
                     {
-                        sb.Append("\"").Append(itemTipLine.Line).Append("\",");
+                        sb.Append(itemTipLine.Line).Append("£");
                     }
                     else
                     {
@@ -223,18 +234,31 @@ namespace QuestTextRetriever
 
                         text = colourText + text + "|r";
                         text = text.Replace(colourText + "|r", string.Empty);
-                        sb.Append("\"").Append(text).Append("\",");
+                        sb.Append(text).Append("£");
                     }
                 }
 
                 if (itemTips.TooltipLines.Any())
                     sb.Remove(sb.Length - 1, 1);
 
-                sb.Append("},");
-                sb.AppendLine();
-
+                sb.Append("\",").AppendLine();
+               
                 currentIndex++;
+                idIndexMapping[int.Parse(itemTips.Id)] = currentIndex;
             }
+
+            sb.Append("};").AppendLine();
+
+            // last block index
+            sb.AppendLine("WoWeuCN_Tooltips_ItemIndexData_" + currentBlock + " = {");
+            foreach (var pair in idIndexMapping)
+            {
+                sb.Append("[\"").Append(pair.Key).Append("\"]=").Append(pair.Value).AppendLine(",");
+            }
+            sb.Append("};").AppendLine();
+            
+            sb.Append("end");
+
             //foreach (var itemTips in itemTipList.OrderBy(q => int.Parse(q.Id)))
             //{
             //    sb.Append("[\"").Append(itemTips.Id).Append("\"]={");
@@ -250,8 +274,6 @@ namespace QuestTextRetriever
             //    sb.AppendLine();
             //}
 
-            sb.Append("};").AppendLine();
-            sb.Append("end");
             File.WriteAllText(outputPath, sb.ToString());
         }
     }
