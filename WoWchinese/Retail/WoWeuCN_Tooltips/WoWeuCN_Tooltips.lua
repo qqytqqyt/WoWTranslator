@@ -457,6 +457,17 @@ function WoWeuCN_Tooltips_OnLoad()
    loadAllUnitData()
 end
 
+function split(s, delimiter)
+  if (s == nil) then
+    return nil
+  end
+  result = {};
+  for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+      table.insert(result, match);
+  end
+  return result;
+end
+
 function GetFirstLineColorCode(...)
   local colorCode = _G["ORANGE_FONT_COLOR_CODE"]
   for regionIndex = 1, select("#", ...) do
@@ -509,14 +520,26 @@ function GetUnitData(id)
   end
   local str_id = tostring(id)
   local num_id = tonumber(id)
+  local dataIndex = nil
   if (num_id >= 0 and num_id < 100000) then
-    return  WoWeuCN_Tooltips_UnitData_0[str_id]
+    dataIndex = WoWeuCN_Tooltips_UnitIndexData_0[num_id]
   elseif (num_id >= 100000 and num_id < 200000) then
-    return  WoWeuCN_Tooltips_UnitData_100000[str_id]
+    dataIndex = WoWeuCN_Tooltips_UnitIndexData_100000[num_id - 100000]
+  end
+
+  if (dataIndex == nil) then
+    return nil
+  end
+
+  if (num_id >= 0 and num_id < 100000) then
+    return split(WoWeuCN_Tooltips_UnitData_0[dataIndex], '£')
+  elseif (num_id >= 100000 and num_id < 200000) then
+    return split(WoWeuCN_Tooltips_UnitData_100000[dataIndex], '£')
   end
 
   return nil
 end
+
 
 function OnTooltipItem(self, tooltip)
   if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transitem"]=="0") then
@@ -551,11 +574,22 @@ function GetItemData(id)
     return nil
   end
   local str_id = tostring(id)
-  local num_id = tonumber(id)
+  local num_id = tonumber(id) 
+  local dataIndex = nil
   if (num_id >= 0 and num_id < 100000) then
-    return  WoWeuCN_Tooltips_ItemData_0[str_id]
+    dataIndex = WoWeuCN_Tooltips_ItemIndexData_0[num_id]
   elseif (num_id >= 100000 and num_id < 200000) then
-    return  WoWeuCN_Tooltips_ItemData_100000[str_id]
+    dataIndex = WoWeuCN_Tooltips_ItemIndexData_100000[num_id - 100000]
+  end
+
+  if (dataIndex == nil) then
+    return nil
+  end
+
+  if (num_id >= 0 and num_id < 100000) then
+    return split(WoWeuCN_Tooltips_ItemData_0[dataIndex], '£')
+  elseif (num_id >= 100000 and num_id < 200000) then
+    return split(WoWeuCN_Tooltips_ItemData_100000[dataIndex], '£')
   end
 
   return nil
@@ -614,14 +648,30 @@ function GetSpellData(id)
     return nil
   end
   local str_id = tostring(id)
+  local num_id = tonumber(id)
+  local dataIndex = nil
   if (id >= 0 and id < 100000) then
-    return  WoWeuCN_Tooltips_SpellData_0[str_id]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_0[num_id]
   elseif (id >= 100000 and id < 200000) then
-    return  WoWeuCN_Tooltips_SpellData_100000[str_id]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_100000[num_id - 100000]
   elseif (id >= 200000 and id < 300000) then
-    return  WoWeuCN_Tooltips_SpellData_200000[str_id]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_200000[num_id - 200000]
   elseif (id >= 300000 and id < 400000) then
-    return  WoWeuCN_Tooltips_SpellData_300000[str_id]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
+  end
+
+  if (dataIndex == nil) then
+    return nil
+  end
+
+  if (id >= 0 and id < 100000) then
+    return   split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
+  elseif (id >= 100000 and id < 200000) then
+    return  split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
+  elseif (id >= 200000 and id < 300000) then
+    return  split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
+  elseif (id >= 300000 and id < 400000) then
+    return  split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
   end
 
   return nil
