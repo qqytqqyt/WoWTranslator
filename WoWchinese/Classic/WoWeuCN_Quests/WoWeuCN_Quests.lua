@@ -869,8 +869,14 @@ function Broadcast()
      return
    end
 
+   local name,title,_,enabled = GetAddOnInfo('WoWeuCN_Tooltips')
+   if (title == nil) then
+      local addonName = _G["GREEN_FONT_COLOR_CODE"] .. "Tooltips Translator - Chinese|r"
+      print ("|cffffff00欢迎使用任务汉化插件。如需法术/道具等汉化请安装 " .. addonName .. " 翻译插件。|r");
+   end
+
    local name, _, rank = GetGuildInfo("player");
-   if (name == nil or rank > 1) then
+   if (name == nil or rank > 2) then
       return
    end
    if (time() - WoWeuCN_Quests_LastAnnounceDate < WowenCN_Quests_WeekDiff) then
