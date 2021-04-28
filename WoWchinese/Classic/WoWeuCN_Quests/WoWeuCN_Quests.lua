@@ -4,6 +4,7 @@
 
 -- Local variables
 local WoWeuCN_Quests_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
+local WoWeuCN_Quests_CtrFrame = CreateFrame("FRAME", "WoWEenCN-BubblesFrame");
 local WoWeuCN_Quests_onDebug = false;      
 local WoWeuCN_Quests_name = UnitName("player");
 local WoWeuCN_Quests_class, WoWeuCN_Quests_class_file, WoWeuCN_Quests_class_Id= UnitClass("player");
@@ -73,6 +74,13 @@ local p_class = {
       [9] = { W1="术士", W2="术士" },
       [1] = { W1="战士", W2="战士" }, }
 
+local Y_Race1=UnitRace("player");
+local Y_Race2=string.lower(UnitRace("player"));
+local Y_Race3=string.upper(UnitRace("player"));
+local Y_Class1=UnitClass("player");
+local Y_Class2=string.lower(UnitClass("player"));
+local Y_Class3=string.upper(UnitClass("player"));
+
 if (p_race[WoWeuCN_Quests_race_Id]) then      
    player_race = { W1=p_race[WoWeuCN_Quests_race_Id].W1, W2=p_race[WoWeuCN_Quests_race_Id].W2 };
 else   
@@ -92,7 +100,7 @@ function WoWeuCN_Quests_CheckVars()
      WoWeuCN_Quests_PS = {};
   end
   if (not WoWeuCN_Quests_LastAnnounceDate) then
-   WoWeuCN_Quests_LastAnnounceDate = 0;
+     WoWeuCN_Quests_LastAnnounceDate = 0;
   end
   if (not WoWeuCN_Quests_SAVED) then
      WoWeuCN_Quests_SAVED = {};
@@ -110,6 +118,14 @@ function WoWeuCN_Quests_CheckVars()
   -- Initiation - title translation
   if (not WoWeuCN_Quests_PS["transtitle"] ) then
      WoWeuCN_Quests_PS["transtitle"] = "1";   
+  end
+  -- Initiation - chat
+  if (not WoWeuCN_Quests_PS["transchat"]) then
+     WoWeuCN_Quests_PS["transchat"] = "1";
+  end
+  -- Initiation - font
+  if (not WoWeuCN_Quests_PS["overwritefonts"]) then
+     WoWeuCN_Quests_PS["overwritefonts"] = "0";
   end
   -- Special variable of the GetQuestID function availability
   if ( WoWeuCN_Quests_PS["isGetQuestID"] ) then
@@ -242,6 +258,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
          end
          WoWeuCN_Quests_Translate_Off(1);
       end
+   -- title setting
    elseif (msg=="title on" or msg=="TITLE ON" or msg=="title 1") then
       if (WoWeuCN_Quests_PS["transtilte"]=="1") then
          print ("WoWeuCN - 翻译标题 : 启用.");
@@ -264,6 +281,28 @@ function WoWeuCN_Quests_SlashCommand(msg)
       else
          print ("WoWeuCN - 翻译标题状态 : 禁用.");
       end
+   -- chat setting
+   elseif (msg=="chat on" or msg=="CHAT ON" or msg=="chat 1") then
+      if (WoWeuCN_Quests_PS["transchat"]=="1") then
+         print ("WoWeuCN - 翻译NPC对话 : 启用.");
+      else
+         print ("|cffffff00WoWeuCN - 翻译NPC对话 : 启用.");
+         WoWeuCN_Quests_PS["transchat"] = "1";
+      end
+   elseif (msg=="chat off" or msg=="CHAT OFF" or msg=="chat 0") then
+      if (WoWeuCN_Quests_PS["transchat"]=="0") then
+         print ("WoWeuCN - 翻译NPC对话 : 禁用.");
+      else
+         print ("|cffffff00WoWeuCN - 翻译标题 : 禁用.");
+         WoWeuCN_Quests_PS["transchat"] = "0";
+      end
+   elseif (msg=="chat" or msg=="CHAT") then
+      if (WoWeuCN_Quests_PS["transchat"]=="1") then
+         print ("WoWeuCN - 翻译NPC对话状态 : 启用.");
+      else
+         print ("WoWeuCN - 翻译NPC对话状态 : 禁用.");
+      end
+
    elseif (msg=="reset" or msg=="RESET") then
       WoWeuCN_Quests_QuestIndex = 1;
       print("Reset");
@@ -300,6 +339,8 @@ end
 function WoWeuCN_Quests_SetCheckButtonState()
   WoWeuCN_QuestsCheckButton0:SetChecked(WoWeuCN_Quests_PS["active"]=="1");
   WoWeuCN_QuestsCheckButton3:SetChecked(WoWeuCN_Quests_PS["transtitle"]=="1");
+  WoWeuCN_QuestsCheckButton4:SetChecked(WoWeuCN_Quests_PS["transchat"]=="1");
+  WoWeuCN_QuestsCheckButton5:SetChecked(WoWeuCN_Quests_PS["overwritefonts"]=="1");
   WoWeuCN_QuestsCheckOther1:SetChecked(WoWeuCN_Quests_PS["other1"]=="1");
   WoWeuCN_QuestsCheckOther2:SetChecked(WoWeuCN_Quests_PS["other2"]=="1");
   WoWeuCN_QuestsCheckOther3:SetChecked(WoWeuCN_Quests_PS["other3"]=="1");
@@ -345,7 +386,7 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_QuestsOptionsHeader:ClearAllPoints();
   WoWeuCN_QuestsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." by qqytqqyt © 2019");
+  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." by qqytqqyt © 2021");
   WoWeuCN_QuestsOptionsHeader:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsPlayer = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
@@ -378,6 +419,17 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsCheckButton3Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton3Text:SetText(WoWeuCN_Quests_Interface.transtitle);
 
+  local WoWeuCN_QuestsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton4", WoWeuCN_QuestsOptions, "OptionsCheckButtonTemplate");
+  WoWeuCN_QuestsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -25);
+  WoWeuCN_QuestsCheckButton4:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["transchat"]=="0") then WoWeuCN_Quests_PS["transchat"]="1" else WoWeuCN_Quests_PS["transchat"]="0" end; end);
+  WoWeuCN_QuestsCheckButton4Text:SetFont(WoWeuCN_Quests_Font2, 13);
+  WoWeuCN_QuestsCheckButton4Text:SetText(WoWeuCN_Quests_Interface.transchat);
+
+  local WoWeuCN_QuestsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton5", WoWeuCN_QuestsOptions, "OptionsCheckButtonTemplate");
+  WoWeuCN_QuestsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -45);
+  WoWeuCN_QuestsCheckButton5:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["overwritefonts"]=="0") then WoWeuCN_Quests_PS["overwritefonts"]="1" else WoWeuCN_Quests_PS["overwritefonts"]="0" end; end);
+  WoWeuCN_QuestsCheckButton5Text:SetFont(WoWeuCN_Quests_Font2, 13);
+  WoWeuCN_QuestsCheckButton5Text:SetText(WoWeuCN_Quests_Interface.overwritefonts);
 end
 
 
@@ -497,11 +549,176 @@ function WoWeuCN_Quests_GetQuestID()
          print('Found ID='..tostring(quest_ID));
       end   
    end   
-   
-   
+
    return (quest_ID);
 end
 
+local function StringHash(text)              
+   text = string.gsub(text, " ", "");
+   local counter = 1;
+   local pomoc = 0;
+   local dlug = string.len(text);
+   for i = 1, dlug, 3 do 
+     counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
+     pomoc = (string.byte(text,i)*16776193);
+     counter = counter + pomoc;
+     pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
+     counter = counter + pomoc;
+     pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
+     counter = counter + pomoc;
+   end
+   return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
+end
+ 
+local function UpdateBubblizeText()
+   local chatBubbles = C_ChatBubbles.GetAllChatBubbles(false)
+   -- BC
+   --for _, chatBubble in pairs(chatBubbles) do
+   --   for j = 1, chatBubble:GetNumChildren() do               
+   --      child = select(j, chatBubble:GetChildren()); 
+   --      if true or not child:IsForbidden() then                    
+   --         for j = 1, child:GetNumRegions() do                  
+   --            region = select(j, child:GetRegions());           
+   --           for idx, iArray in ipairs(WoWeuCN_Quests_BubblesArray) do     
+   --               if region and not region:GetName() and region:IsVisible() and region.GetText and region:GetText() == iArray[1] then         
+   --                  region:SetText(iArray[2]);       
+   --                  if (WoWeuCN_Quests_PS["overwritefonts"] == "1") then
+   --                     local font, size, _ = child.String:GetFont()
+   --                     child.String:SetFont(WoWeuCN_Quests_Font1, size)
+   --                  end
+   --                  tremove(WoWeuCN_Quests_BubblesArray, idx);             
+   --               end
+   --            end
+   --         end
+   --      end
+   --   end
+   --end
+
+   -- Classic
+   for _, child in pairs(chatBubbles) do
+      if not child:IsForbidden() then                    
+         for j = 1, child:GetNumRegions() do                  
+            region = select(j, child:GetRegions());           
+            for idx, iArray in ipairs(WoWeuCN_Quests_BubblesArray) do     
+               if region and not region:GetName() and region:IsVisible() and region.GetText and region:GetText() == iArray[1] then     
+                  local oldTextWidth = region:GetStringWidth()
+                  region:SetText(iArray[2]);       
+                  if (WoWeuCN_Quests_PS["overwritefonts"] == "1") then
+                     local font, size, _ = region:GetFont()
+                     region:SetFont(WoWeuCN_Quests_Font1, size)
+                  end
+                  region:SetWidth(region:GetWidth()+(region:GetStringWidth() - oldTextWidth)); 
+                  tremove(WoWeuCN_Quests_BubblesArray, idx);             
+               end
+            end
+         end
+      end
+   end
+   
+   for idx, iArray in ipairs(WoWeuCN_Quests_BubblesArray) do           
+      if (iArray[3] >= 100) then                           
+         tremove(WoWeuCN_Quests_BubblesArray, idx);                    
+      else
+         iArray[3] = iArray[3]+1;                         
+      end;
+   end;
+   if (#(WoWeuCN_Quests_BubblesArray) == 0) then
+      WoWeuCN_Quests_CtrFrame:SetScript("OnUpdate", nil);           
+   end;
+ end;
+ 
+local function FindProS(text)               
+   local dl_txt = string.len(text)-1;
+   for i_j=1,dl_txt,1 do
+      if (strsub(text,i_j,i_j+1)=="%s") then       
+         return i_j;
+      end
+   end
+   return 0;
+end
+
+local function OnNpcChat(self, event, arg1, arg2, arg3, arg4, arg5, ...)     
+   local changeBubble = false;
+   local colorText = "";
+   local original_txt = strtrim(arg1);
+   local name_NPC = arg2;
+   local target = arg5;
+   local translated = false;     
+   
+   local verb = " says: "
+   if (event == "CHAT_MSG_MONSTER_SAY") then     
+      colorText = "|cFFFFFF9F";
+      changeBubble = true;
+   elseif (event == "CHAT_MSG_MONSTER_PARTY") then
+      colorText = "|cFFAAAAFF";
+   elseif (event == "CHAT_MSG_MONSTER_YELL") then
+      colorText = "|cFFFF4040";
+      verb = " yells: "
+      changeBubble = true;
+   elseif (event == "CHAT_MSG_MONSTER_WHISPER") then
+      colorText = "|cFFFFB5EB";
+      verb = " whispers: "
+   elseif (event == "CHAT_MSG_MONSTER_EMOTE") then
+      colorText = "|cFFFF8040";
+   end
+
+   if (WoWeuCN_Quests_PS["active"] == "1" and WoWeuCN_Quests_PS["transchat"] == "1") then                    
+      if (arg5 ~= "") then
+         original_txt = string.gsub(original_txt, arg5, "");      
+         original_txt = string.gsub(original_txt, string.upper(arg5), "");   
+      end
+      original_txt = string.gsub(original_txt, Y_Race1, "");        
+      original_txt = string.gsub(original_txt, Y_Race2, "");
+      original_txt = string.gsub(original_txt, Y_Race3, "");
+      original_txt = string.gsub(original_txt, Y_Class1, "");      
+      original_txt = string.gsub(original_txt, Y_Class2, "");
+      original_txt = string.gsub(original_txt, Y_Class3, "");
+
+      local HashCode = StringHash(original_txt);
+      if (WoWeuCN_Quests_ScriptData[HashCode]) then        
+         newMessage = WoWeuCN_Quests_ScriptData[HashCode];
+         if (arg5 ~= "") then                            
+            newMessage = string.gsub(newMessage, "{name}", arg5);    
+         end
+
+         newMessage = string.gsub(newMessage, "<class>", player_class.W1);    
+         newMessage = string.gsub(newMessage, "<CLASS>", player_class.W2);    
+         newMessage = string.gsub(newMessage, "<race>", player_race.W1);    
+         newMessage = string.gsub(newMessage, "<RACE>", player_race.W2);    
+
+         newMessage = WoWeuCN_Quests_ExpandUnitInfo(newMessage)
+
+         translated = true;
+         nr_poz=FindProS(newMessage,1);        
+         
+         local font, size, _3 = self:GetFont()
+         if (WoWeuCN_Quests_PS["overwritefonts"] == "1") then
+            self:SetFont(WoWeuCN_Quests_Font1, size, _3)
+         end
+
+         if (nr_poz>0) then          
+            if (nr_poz==1) then
+               newMessage = name_NPC..strsub(newMessage, 3);
+            else
+               newMessage = strsub(newMessage,1,nr_poz-1)..name_NPC..strsub(newMessage, nr_poz+2);
+            end
+            self:AddMessage(colorText..newMessage);
+         elseif (strsub(newMessage,1,2)=="%o") then         
+            newMessage = strsub(newMessage, 3);
+            self:AddMessage(colorText..newMessage:gsub("^%s*", ""));
+         else
+            self:AddMessage(colorText..name_NPC..verb..newMessage);
+         end
+         
+         if (changeBubble) then                         
+            tinsert(WoWeuCN_Quests_BubblesArray, { [1] = arg1, [2] = newMessage, [3] = 1 });
+            WoWeuCN_Quests_CtrFrame:SetScript("OnUpdate", UpdateBubblizeText);
+         end
+      end
+   end
+
+   return translated
+end
 
 
 -- Even handlers
@@ -510,6 +727,16 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       print('OnEvent-event: '..event);   
    end   
    if (event=="ADDON_LOADED" and name=="WoWeuCN_Quests") then
+
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_SAY", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_PARTY", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_YELL", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_WHISPER", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_EMOTE", OnNpcChat)
+      WoWeuCN_Quests_BubblesArray = {};
+      
+      WoWeuCN_Quests_CtrFrame:SetScript("OnUpdate", UpdateBubblizeText);             -- wyłącz metodę Update, bo tablica pusta
+
       SlashCmdList["WOWEUCN_QUESTS"] = function(msg) WoWeuCN_Quests_SlashCommand(msg); end
       SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
       SLASH_WOWEUCN_QUESTS2 = "/woweucn";
@@ -529,7 +756,6 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       end	-- QuestFrame is Visible
    end
 end
-
 
 -- An empty QuestLog was opened
 function WoWeuCN_Quests_EmptyQuestLog()
@@ -863,6 +1089,9 @@ end
 
 function Broadcast()
    print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
+   print (_G["ORANGE_FONT_COLOR_CODE"] .. "已加载NPC喊话翻译模块(beta)。仅支持部分NPC喊话。如需关闭请在插件设置中调整。");
+   print (_G["ORANGE_FONT_COLOR_CODE"] .. "如遇字体缺失/不连贯问题请手动在客户端中采用多语系字体，或在插件设置中使用内置字体选项。");
+    
    local regionCode = GetCurrentRegion()
    if (regionCode ~= 3) then
      print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
@@ -883,9 +1112,9 @@ function Broadcast()
       return
    end
    
-   local bNetTagInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Kissshot#2549>|r" 
+   local bNetTagInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<>|r" 
    WoWeuCN_Quests_LastAnnounceDate = time()
-   print(_G["ORANGE_FONT_COLOR_CODE"] .. "休闲玩家寻找华人休闲工会回归TBC，有意接收请联系" .. bNetTagInfo .. "。|r")
+   --print(_G["ORANGE_FONT_COLOR_CODE"] .. "休闲玩家寻找华人休闲工会回归TBC，有意接收请联系" .. bNetTagInfo .. "。|r")
  end
  
 
