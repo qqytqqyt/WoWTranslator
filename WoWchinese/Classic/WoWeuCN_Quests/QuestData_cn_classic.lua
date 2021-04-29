@@ -1,4 +1,4 @@
-﻿WoWeuCN_Quests_date = "2021-04-16"; -- date of creation base
+﻿WoWeuCN_Quests_date = "2021-04-29"; -- date of creation base
 
 WoWeuCN_Quests_lang = "CN";      -- language
 
@@ -36,7 +36,7 @@ WoWeuCN_Quests_Messages = {
     options1   = "额外选项:", 
     transtitle = "翻译任务标题", 
     transchat  = "翻译NPC对话", 
-    overwritefonts  = "使用内置对话字体"
+    overwritefonts  = "使用内置对话字体 (/RELOAD后生效)"
  }; 
 
 WoWeuCN_Quests_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf";
