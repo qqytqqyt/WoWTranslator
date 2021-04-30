@@ -44,6 +44,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,14 +53,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Crawlers\ScriptCrawler.cs" />
     <Compile Include="Crawlers\JournalCrawler.cs" />
     <Compile Include="Crawlers\Crawler.cs" />
     <Compile Include="Extensions\DBReaderExtensions.cs" />
     <Compile Include="Extensions\FieldStructureEntry.cs" />
+    <Compile Include="Extensions\XmlUtils.cs" />
     <Compile Include="Models\JournalEncounter.cs" />
+    <Compile Include="Models\Script.cs" />
     <Compile Include="Readers\JournalReader.cs" />
     <Compile Include="Readers\QuestCacheReader.cs" />
     <Compile Include="Readers\QuestieUnitReader.cs" />
+    <Compile Include="Readers\ScriptReader.cs" />
     <Compile Include="Readers\UnitReader.cs" />
     <Compile Include="Readers\QuestReader.cs" />
     <Compile Include="Program.cs" />

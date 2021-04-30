@@ -15,22 +15,29 @@ namespace QuestTextRetriever
     {
         static void Main(string[] args)
         {
+            //var hash = ScriptReader.GetHash("We're under attack! Avast, ye swabs! Repel the invaders!");
             //var journalCrawler = new JournalCrawler();
             //journalCrawler.Execute();
+            //var scriptCrawler = new ScriptCrawler();
+            //scriptCrawler.Execute();
+            //var scriptCrawler = new ScriptCrawler();
+            //scriptCrawler.ExecuteSql();
+            var scriptReader = new ScriptReader();
+            scriptReader.Excecute(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\scripts\output2.lua");
             //var crawler = new Crawler();
             //crawler.Execute();
             //var itemReader = new ItemReader();
-            //itemReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items_output_38225.txt");
-
+            //itemReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\classic_items_output_1137.lua");
+            //var unitReader = new UnitReader();
+            //unitReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_output_251.lua");
             //var spellReader = new SpellReader();
-            //spellReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\tbc_38225_spells_output.txt");
+            //spellReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\bc_spells_output_251.lua");
+
             //var questReader = new QuestReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWHead37844\", );
             //questReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.0.5_37844.txt");
             //var journalReader = new JournalReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\TBCTW\");
             //journalReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\outputngatw.txt");
 
-            var unitReader = new UnitReader();
-            unitReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retails_units_905_zhcn.txt");
 
             //var questCacheReader =
             //    new QuestCacheReader(
@@ -94,7 +101,7 @@ namespace QuestTextRetriever
 
 
 
-            
+
             //var retriever = new Retriever(@"D:\qqytqqyt\Documents\OwnProjects\Translator\686500-Wow-ChineseDB-master\Wow-ChineseDB\quest_template.sql", @"D:\qqytqqyt\Documents\OwnProjects\Translator\template.txt");
             //retriever.Execute(@"D:\qqytqqyt\Documents\OwnProjects\Translator\output.txt");
 
