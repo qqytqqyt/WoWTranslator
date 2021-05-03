@@ -76,13 +76,6 @@ local p_class = {
 
 local removed_text = { "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior", "Blood Elf", "Draenei", "Gnome", "Dwarf", "Night Elf", "Orc", "Undead", "Tauren", "Troll" }
 
-local Y_Race1=UnitRace("player");
-local Y_Race2=string.lower(UnitRace("player"));
-local Y_Race3=string.upper(UnitRace("player"));
-local Y_Class1=UnitClass("player");
-local Y_Class2=string.lower(UnitClass("player"));
-local Y_Class3=string.upper(UnitClass("player"));
-
 if (p_race[WoWeuCN_Quests_race_Id]) then      
    player_race = { W1=p_race[WoWeuCN_Quests_race_Id].W1, W2=p_race[WoWeuCN_Quests_race_Id].W2 };
 else   
@@ -648,12 +641,12 @@ local function OnNpcChat(self, event, arg1, arg2, arg3, arg4, arg5, ...)
          original_txt = string.gsub(original_txt, arg5, "");      
          original_txt = string.gsub(original_txt, string.upper(arg5), "");   
       end
-      original_txt = string.gsub(original_txt, Y_Race1, "");        
-      original_txt = string.gsub(original_txt, Y_Race2, "");
-      original_txt = string.gsub(original_txt, Y_Race3, "");
-      original_txt = string.gsub(original_txt, Y_Class1, "");      
-      original_txt = string.gsub(original_txt, Y_Class2, "");
-      original_txt = string.gsub(original_txt, Y_Class3, "");
+
+      for i, text_replaced in pairs(removed_text) do
+         original_txt = string.gsub(original_txt, text_replaced, "");      
+         original_txt = string.gsub(original_txt, string.upper(text_replaced), "");     
+         original_txt = string.gsub(original_txt, string.lower(text_replaced), "");       
+      end
 
       local HashCode = StringHash(original_txt);
       if (WoWeuCN_Quests_ScriptData[HashCode]) then        

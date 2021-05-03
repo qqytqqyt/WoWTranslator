@@ -530,7 +530,6 @@ function OnTooltipItem(self, tooltip)
 	-- Case for linked spell
   local _, itemLink = self:GetItem()
   if (itemLink == nil) then 
-    print(2)
     return
   end
 
