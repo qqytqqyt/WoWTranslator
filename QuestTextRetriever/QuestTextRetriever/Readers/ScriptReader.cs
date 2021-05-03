@@ -17,6 +17,8 @@ namespace QuestTextRetriever.Readers
 {
     public class ScriptReader
     {
+        public static List<string> Removed_Text = new List<string> { "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior", "Blood Elf", "Draenei", "Gnome", "Dwarf", "Night Elf", "Orc", "Undead", "Tauren", "Troll" };
+
         public static long GetHash(string text)
         {
             text = text.Replace(" ", "");
@@ -59,7 +61,14 @@ namespace QuestTextRetriever.Readers
                         .Replace("[Gutterspeak] ", string.Empty).Replace("[Kalimag] ", string.Empty).Replace("[Demonic] ", string.Empty)
                         .Replace("[Troll] ", string.Empty).Replace("[Taurahe] ", string.Empty).Replace("[Darnassian] ", string.Empty).Replace("[Thalassian] ", string.Empty)
                         .Replace("[Furbolg] ", string.Empty).Replace("[Draconic] ", string.Empty);
-                    
+
+                    foreach (var replaceText in Removed_Text)
+                    {
+                        originalText = originalText.Replace(replaceText, string.Empty);
+                        originalText = originalText.Replace(replaceText.ToLower(), string.Empty);
+                        originalText = originalText.Replace(replaceText.ToUpper(), string.Empty);
+                    }
+
                     var originalIndex = originalText.IndexOf(":", StringComparison.Ordinal);
                     if (originalIndex == -1)
                     {
