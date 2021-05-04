@@ -18,6 +18,33 @@ namespace QuestTextRetriever
             m_template = File.ReadAllText(templateFilePath);
         }
 
+        public static void MergeOutputs()
+        {
+            var dic = new SortedDictionary<int, string>();
+            var lines1 = File.ReadAllLines(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\classic_quests_data.lua");
+            var lines2 = File.ReadAllLines(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\wlk_quests_data.lua");
+
+            foreach (var line in lines1)
+            {
+                var id = int.Parse(line.FirstBetween("[\"", "\"]"));
+                dic[id] = line;
+            }
+            
+            foreach (var line in lines2)
+            {
+                var id = int.Parse(line.FirstBetween("[\"", "\"]"));
+                if (dic.ContainsKey(id))
+                    continue;
+
+                dic[id] = line;
+            }
+
+            var list = dic.OrderBy(l => l.Key).Select(d => d.Value);
+            File.WriteAllLines(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\merged_classic_wlk_quests_data.lua", list);
+        }
+
 
         public void ReadObjectives(string objectivesPath, List<QuestObjectives> objectives)
         {

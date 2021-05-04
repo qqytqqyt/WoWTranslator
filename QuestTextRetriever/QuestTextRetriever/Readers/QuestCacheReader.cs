@@ -21,7 +21,8 @@ namespace QuestTextRetriever.Readers
         public void Execute(string outputPath)
         {
             var questObjects = new List<Quest>();
-            ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache_38339_zhcn.wdb", questObjects);
+            //ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache_38339_zhcn.wdb", questObjects);
+            ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\zhcn_tbcextra_questcache38548zhcn.wdb", questObjects);
 
             var sb = new StringBuilder();
             foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
