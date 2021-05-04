@@ -87,8 +87,7 @@ local function scanAuto(startIndex, attempt, counter)
   for i = startIndex, startIndex + 250 do
     qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
     qcSpellInformationTooltip:ClearLines()
-    local guid = "Creature-0-0-0-0-"..i.."-0000000000";
-    qcSpellInformationTooltip:SetHyperlink('unit:' .. guid)
+    qcSpellInformationTooltip:SetHyperlink('spell:' .. i)
     qcSpellInformationTooltip:Show()
     local text =  EnumerateTooltipStyledLines(qcSpellInformationTooltip)
     if (text ~= '' and text ~= nil) then
@@ -697,8 +696,8 @@ function Broadcast()
      return
   end
   
-  local bNetTagInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Kissshot#2549>|r" 
+  local bNetTagInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<>|r" 
   WoWeuCN_Tooltips_LastAnnounceDate = time()
-  print(_G["ORANGE_FONT_COLOR_CODE"] .. "休闲玩家寻找华人休闲工会回归TBC，有意接收请联系" .. bNetTagInfo .. "。|r")
+  --print(_G["ORANGE_FONT_COLOR_CODE"] .. "休闲玩家寻找华人休闲工会回归TBC，有意接收请联系" .. bNetTagInfo .. "。|r")
 end
 
