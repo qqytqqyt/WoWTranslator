@@ -306,7 +306,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
       WoWeuCN_Quests_QuestToolTips = {} 
       print("Clear");
    elseif (msg=="jump" or msg=="JUMP") then
-      WoWeuCN_Quests_QuestIndex = 63970;
+      WoWeuCN_Quests_QuestIndex = 63000;
       WoWeuCN_Quests_QuestToolTips = {} 
       print("Jump");
    elseif (msg=="scanauto" or msg=="SCANAUTO") then
