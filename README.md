@@ -1,2 +1,2 @@
 # WoWTranslator
-Translate Quest text to Chinese on EU server
+Translate Game Text to Chinese on EU server
