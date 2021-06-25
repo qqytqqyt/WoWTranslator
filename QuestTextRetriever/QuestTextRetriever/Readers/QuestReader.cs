@@ -116,23 +116,47 @@ namespace QuestTextRetriever
             //ReadObjectives(
             //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36639.lua",
             //    objectives);
+
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39069.wdb", cachedQuests);
+
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39136.wdb", cachedQuests);
+
+
             ReadObjectives(
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.36753.lua",
                 objectives);
             ReadObjectives(
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.37844.lua",
                 objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.39136.lua",
+                objectives);
 
             var dirPath = new DirectoryInfo(m_dirPath);
             ReadQuestApis(dirPath, apis);
-
-            QuestCacheReader.ReadQuestCache(@"", cachedQuests);
 
             var usedId = new HashSet<string>();
             var questObjects = new List<Quest>();
             foreach (var cachedQuest in cachedQuests)
             {
                 usedId.Add(cachedQuest.Id);
+
+                var questObject = new Quest();
+                questObject.Id = cachedQuest.Id;
+                questObject.Title = cachedQuest.Title;
+                
+                var objective = objectives.FirstOrDefault(o => o.Id == questObject.Id);
+                if (cachedQuest.Objectives.Contains(@"oa"))
+                    Console.Write(true);
+
+                questObject.Objectives = objective != null && cachedQuest.Objectives.Contains(@"$1oa") ? objective.Objectives : cachedQuest.Objectives;
+
+                questObject.Description = cachedQuest.Description;
+                questObject.Progress = string.Empty;
+                questObject.Completion = string.Empty;
+                questObjects.Add(questObject);
             }
 
             foreach (var questApi in apis.Where(a => !usedId.Contains(a.Id)))
@@ -173,6 +197,12 @@ namespace QuestTextRetriever
                 var line = PrintLine(questObject);
                 //line = SpecialTreatment(line);
                 line = line.Replace(Environment.NewLine, @"NEW_LINE").Replace("\n", @"NEW_LINE");
+
+                line = line.Replace(@"$r", @"{race}").Replace(@"$R", @"{race}");
+                line = line.Replace(@"$c", @"{class}").Replace(@"$C", @"{class}");
+                line = line.Replace(@"$n", @"{name}").Replace(@"$N", @"{name}");
+                line = line.Replace(@"$b", @"NEW_LINE").Replace(@"$B", @"NEW_LINE");
+
                 line = ReplaceGender(line);
                 //line = ReplacePlayer(line, questObject, sbQuestToCheck);
                 sb.AppendLine(line);

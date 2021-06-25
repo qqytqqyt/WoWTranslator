@@ -6,7 +6,7 @@
 
         public string Title { get; set; }
 
-        public string Objectives { get; set; }
+        public string Objectives { get; set; } = string.Empty;
 
         public string Description { get; set; }
 
