@@ -266,8 +266,8 @@ namespace QuestTextRetriever.Readers
                                 attempCount = 1;
                                 var quest = new Quest();
                                 quest.Id = id.ToString();
-                                quest.Title = title;
-                                quest.Objectives = objective;
+                                quest.Title = title.Replace("\"", "\\\"");
+                                quest.Objectives = objective.Replace("\"", "\\\"");
                                 quest.Description = ReplaceGender(description.Replace("\"", "\\\""));
 
 

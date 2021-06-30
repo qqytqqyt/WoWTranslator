@@ -207,13 +207,35 @@ local function scanAuto(startIndex, attempt, counter)
   print(attempt)
   print(counter)
   WoWeuCN_Quests_QuestIndex = startIndex
-  if (counter >= 10) then
+  if (counter >= 5) then
     QTR_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
   else
     QTR_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
+local function scanCacheAuto(startIndex, attempt, counter)
+   if (startIndex > 80000) then
+     return;
+   end
+   if (counter == 0) then
+      print(startIndex)
+     end
+     
+     for i = startIndex, startIndex + 150 do
+      local title = C_QuestLog.GetTitleForQuestID(tostring(i))
+      if (title ~= '' and title ~= nil) then
+       print(title)
+      end
+     end
+     
+     WoWeuCN_Quests_QuestIndex = startIndex
+     if (counter >= 5) then
+       WoWeuCN_Quests_wait(0.2, scanCacheAuto, startIndex + 150, attempt + 1, 0)
+     else
+       WoWeuCN_Quests_wait(0.2, scanCacheAuto, startIndex, attempt + 1, counter + 1)
+     end
+ end
 
 -- Checks the availability of Wow's special function: GetQuestID()
 function DetectEmuServer()
@@ -377,6 +399,15 @@ function WoWeuCN_Quests_SlashCommand(msg)
         WoWeuCN_Quests_QuestIndex = 1
       end
       QTR_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
+
+   elseif (msg=="scancacheauto" or msg=="SCANCACHEAUTO") then
+      if (WoWeuCN_Quests_QuestToolTips == nil) then
+        WoWeuCN_Quests_QuestToolTips = {} 
+      end
+      if (WoWeuCN_Quests_QuestIndex == nil) then
+        WoWeuCN_Quests_QuestIndex = 1
+      end
+      QTR_wait(0.1, scanCacheAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
