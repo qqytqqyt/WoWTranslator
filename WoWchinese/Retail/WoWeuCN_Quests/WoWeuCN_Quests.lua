@@ -4,6 +4,7 @@
 
 -- Local variables
 local WoWeuCN_Quests_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
+local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_onDebug = false;      
 local WoWeuCN_Quests_name = UnitName("player");
 local WoWeuCN_Quests_class, WoWeuCN_Quests_class_file, WoWeuCN_Quests_class_Id = UnitClass("player");
@@ -398,6 +399,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
       if (WoWeuCN_Quests_QuestIndex == nil) then
         WoWeuCN_Quests_QuestIndex = 1
       end
+      WoWeuCN_Quests_QuestIndex = 60000
       QTR_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="scancacheauto" or msg=="SCANCACHEAUTO") then
@@ -407,6 +409,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
       if (WoWeuCN_Quests_QuestIndex == nil) then
         WoWeuCN_Quests_QuestIndex = 1
       end
+      WoWeuCN_Quests_QuestIndex = 60000
       QTR_wait(0.1, scanCacheAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="") then
@@ -631,9 +634,13 @@ function WoWeuCN_Quests_GetQuestID()
       print('WANTED ID');   
    end
    
-   quest_ID = QuestMapFrame.DetailsFrame.questID;
+   local quest_ID;
    
-   if (quest_ID==nil) then
+   if (QuestMapDetailsScrollFrame:IsVisible() and ((quest_ID==nil) or (quest_ID==0))) then
+      quest_ID = QuestMapFrame.DetailsFrame.questID;
+   end         
+
+   if (QuestLogPopupDetailFrame:IsVisible() and ((quest_ID==nil) or (quest_ID==0))) then
       quest_ID = QuestLogPopupDetailFrame.questID;
    end
          
@@ -688,6 +695,16 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
    end
 end
 
+local function OnEvent(self, event, prefix, text, channel, sender, ...)
+  if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
+    if text == "VERSION" then
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel)
+    else
+      --print(text .. " " .. sender)
+    end
+	end
+end
+
 function Broadcast()
   print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
   local regionCode = GetCurrentRegion()
@@ -695,6 +712,11 @@ function Broadcast()
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
     return
   end
+  
+  C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
+  local f = CreateFrame("Frame")
+  f:RegisterEvent("CHAT_MSG_ADDON")
+  f:SetScript("OnEvent", OnEvent)
 
   local name,title,_,enabled = GetAddOnInfo('WoWeuCN_Tooltips')
   if (title == nil) then
@@ -708,13 +730,6 @@ function Broadcast()
 
    WoWeuCN_Quests_LastAnnounceDate = time()
    local realmName = GetRealmName()
-
-   local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
-   if (realmName == "Silvermoon") then
-      --guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"
-   end
-
-   --print(_G["ORANGE_FONT_COLOR_CODE"] .. "Silvermoon 联盟公会" .. guildInfo .. _G["ORANGE_FONT_COLOR_CODE"] .. "招收治疗DPS加入我们开荒M团本的团队与大米冲层队伍。同时欢迎休闲玩家来欢乐打大米PVP评级。入会咨询/申请请|r" .. "\124cffffd100\124HclubTicket:wyPXGRUyyb\124h[点击加入社群]\124h\124r" .. _G["ORANGE_FONT_COLOR_CODE"] .. "。|r");
 end
 
 -- QuestLogPopupDetailFrame or QuestMapDetailsScrollFrame window opened

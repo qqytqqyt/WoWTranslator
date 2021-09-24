@@ -4,6 +4,7 @@
 
 -- Local variables
 local WoWeuCN_Quests_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
+local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_CtrFrame = CreateFrame("FRAME", "WoWEenCN-BubblesFrame");
 local WoWeuCN_Quests_onDebug = false;      
 local WoWeuCN_Quests_name = UnitName("player");
@@ -1061,11 +1062,26 @@ function WoWeuCN_Quests_ExpandUnitInfo(msg)
    return msg;
 end
 
+local function OnEvent(self, event, prefix, text, channel, sender, ...)
+   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
+     if text == "VERSION" then
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel)
+     else
+       --print(text .. " " .. sender)
+     end
+    end
+ end
+ 
 function Broadcast()
    print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
    print (_G["ORANGE_FONT_COLOR_CODE"] .. "已加载NPC喊话翻译模块(beta)。仅支持部分NPC喊话。如需关闭请在插件设置中调整。");
    print (_G["ORANGE_FONT_COLOR_CODE"] .. "如遇字体缺失/不连贯问题请手动在客户端中采用多语系字体，或在插件设置中使用内置字体选项。");
     
+   C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
+   local f = CreateFrame("Frame")
+   f:RegisterEvent("CHAT_MSG_ADDON")
+   f:SetScript("OnEvent", OnEvent)
+
    local regionCode = GetCurrentRegion()
    if (regionCode ~= 3) then
      print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
