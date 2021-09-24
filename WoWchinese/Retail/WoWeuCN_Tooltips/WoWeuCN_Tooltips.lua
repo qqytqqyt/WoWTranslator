@@ -3,7 +3,8 @@
 
 -- Local variables
 local WoWeuCN_Tooltips_version = GetAddOnMetadata("WoWeuCN_Tooltips", "Version");
-local WoWeuCN_Tooltips_onDebug = false;      
+local WoWeuCN_Tooltips_onDebug = false;   
+local WoWeuCN_AddonPrefix = "WoWeuCN";   
 
 local last_time = GetTime();
 local last_text = 0;
@@ -685,14 +686,28 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       WoWeuCN_Tooltips_CheckVars();
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Tooltips_BlizzardOptions();
-      WoWeuCN_Tooltips_wait(2, Broadcast)
-      WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");
+      WoWeuCN_Tooltips_wait(2, Broadcast);
+      WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");      
       WoWeuCN_Tooltips.ADDON_LOADED = nil;
    end
 end
 
+local function OnEvent(self, event, prefix, text, channel, sender, ...)
+  if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
+    if text == "VERSION" then
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
+    else
+      --print(text .. " " .. sender)
+    end
+	end
+end
+
 function Broadcast()
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
+  
+  local f = CreateFrame("Frame")
+  f:RegisterEvent("CHAT_MSG_ADDON")
+  f:SetScript("OnEvent", OnEvent)
   local name,title,_,enabled = GetAddOnInfo('WoWeuCN_Quests')
   if (enabled == true) then
     return
@@ -701,6 +716,7 @@ function Broadcast()
     print ("|cffffff00欢迎使用悬停提示汉化插件。如需中文任务汉化请安装 " .. addonName .. " 翻译插件。|r");
   end
   
+  C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
   local regionCode = GetCurrentRegion()
   if (regionCode ~= 3) then
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
