@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
@@ -30,7 +31,7 @@ namespace QuestTextRetriever
             {
                 var itemTips = new Tooltip();
                 var text = line.Trim();
-                if (string.IsNullOrEmpty(text))
+                if (string.IsNullOrEmpty(text) || !text.StartsWith("["))
                     continue;
 
                 var id = text.Split(new string[] {"[\""}, StringSplitOptions.None)[1]
@@ -170,6 +171,7 @@ namespace QuestTextRetriever
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.36753.lua", itemTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items_39170_100000.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.40843.lua", itemTipList, usedIds);
             // Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items_38537.lua", itemTipList, usedIds);
             var sb = new StringBuilder();

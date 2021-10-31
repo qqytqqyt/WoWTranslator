@@ -31,6 +31,10 @@ namespace QuestTextRetriever
             {
                 var unitTips = new Tooltip();
                 var text = line.Trim();
+
+                if (string.IsNullOrEmpty(text) || !text.StartsWith("["))
+                    continue;
+
                 var id = text.Split(new string[] { "[\"" }, StringSplitOptions.None)[1]
                     .Split(new[] { "\"]" }, StringSplitOptions.None)[0]
                     .Trim();
@@ -114,6 +118,7 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_905.lua", spellTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_39170_100000.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_40843.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.lua", spellTipList, usedIds);
             var sb = new StringBuilder();
             var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();

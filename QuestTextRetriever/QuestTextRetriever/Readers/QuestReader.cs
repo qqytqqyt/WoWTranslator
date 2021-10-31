@@ -53,6 +53,10 @@ namespace QuestTextRetriever
             {
                 var objective = new QuestObjectives();
                 var text = line.Trim();
+
+                if (string.IsNullOrEmpty(text) || !text.StartsWith("["))
+                    continue;
+
                 var id = text.Split(new[] {"[\""}, StringSplitOptions.None)[1]
                     .Split(new[] {"\"]"}, StringSplitOptions.None)[0]
                     .Trim();
@@ -122,6 +126,20 @@ namespace QuestTextRetriever
 
             QuestCacheReader.ReadQuestCacheRetail(
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39226.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39318.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.1.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39497.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39617.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39653.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache40843.wdb", cachedQuests);
 
 
             //ReadObjectives(
@@ -135,6 +153,27 @@ namespace QuestTextRetriever
             //    objectives);
             ReadObjectives(
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39226.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39318.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.1.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39497.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39617.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39653.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.40843.lua",
                 objectives);
 
             var dirPath = new DirectoryInfo(m_dirPath);
