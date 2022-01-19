@@ -115,7 +115,7 @@ local function scanAuto(startIndex, attempt, counter)
   print(attempt)
   print(counter)
   WoWeuCN_Tooltips_SpellToolIndex = startIndex
-  if (counter >= 8) then
+  if (counter >= 5) then
     WoWeuCN_Tooltips_wait(0.5, scanAuto, startIndex + 150, attempt + 1, 0)
   else
     WoWeuCN_Tooltips_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
@@ -192,7 +192,7 @@ local function scanItemAuto(startIndex, attempt, counter)
   print(attempt)
   print(counter)
   WoWeuCN_Tooltips_ItemIndex = startIndex
-  if (counter >= 8) then
+  if (counter >= 5) then
     WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex + 150, attempt + 1, 0)
   else
     WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex, attempt + 1, counter + 1)
