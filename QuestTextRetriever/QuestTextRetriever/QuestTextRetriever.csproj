@@ -61,6 +61,7 @@
     <Compile Include="Extensions\XmlUtils.cs" />
     <Compile Include="Models\JournalEncounter.cs" />
     <Compile Include="Models\Script.cs" />
+    <Compile Include="Readers\GlobalStringReader.cs" />
     <Compile Include="Readers\JournalReader.cs" />
     <Compile Include="Readers\QuestCacheReader.cs" />
     <Compile Include="Readers\QuestieMerger.cs" />

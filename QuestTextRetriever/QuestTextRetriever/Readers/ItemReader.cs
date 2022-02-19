@@ -169,9 +169,10 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36532.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36710.lua", itemTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.36753.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items_39170_100000.lua", itemTipList, usedIds);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items_39170_100000.lua", itemTipList, usedIds);
             Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.40843.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.42423.lua", itemTipList, usedIds);
             // Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items_38537.lua", itemTipList, usedIds);
             var sb = new StringBuilder();
