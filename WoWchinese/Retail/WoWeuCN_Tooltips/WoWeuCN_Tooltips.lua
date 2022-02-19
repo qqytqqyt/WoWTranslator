@@ -272,20 +272,28 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton2:Disable();
       end
 
-    --spell scan
-    elseif (msg=="back" or msg=="BACK") then
-      WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex - 500;
-      print(WoWeuCN_Tooltips_SpellToolIndex);
+    --set scan index
+    elseif (string.sub(msg,1,string.len("index"))=="index") then
+      local index = string.sub(msg,string.len("index")+2)
+      WoWeuCN_Tooltips_SpellToolIndex = tonumber(index);
+      WoWeuCN_Tooltips_ItemIndex = tonumber(index);
+      WoWeuCN_Tooltips_UnitIndex = tonumber(index);
+      print(index)
+
+    --clear
     elseif (msg=="clear" or msg=="CLEAR") then
       WoWeuCN_Tooltips_SpellToolIndex = 1;
       WoWeuCN_Tooltips_SpellToolTips0 = {} 
       WoWeuCN_Tooltips_SpellToolTips100000 = {} 
       WoWeuCN_Tooltips_SpellToolTips200000 = {} 
-      WoWeuCN_Tooltips_SpellToolTips300000 = {} 
+      WoWeuCN_Tooltips_SpellToolTips300000 = {}       
+      WoWeuCN_Tooltips_ItemToolTips0 = {} 
+      WoWeuCN_Tooltips_ItemToolTips100000 = {} 
+      WoWeuCN_Tooltips_ItemIndex = 1
+      WoWeuCN_Tooltips_UnitToolTips0 = {} 
+      WoWeuCN_Tooltips_UnitToolTips100000 = {} 
+      WoWeuCN_Tooltips_UnitIndex = 1
       print("Clear");
-    elseif (msg=="reset" or msg=="RESET") then
-      WoWeuCN_Tooltips_SpellToolIndex = 1;
-      print("Reset");
 
     -- spell auto scan
     elseif (msg=="scanauto" or msg=="SCANAUTO") then
@@ -304,25 +312,9 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       if (WoWeuCN_Tooltips_SpellToolIndex == nil) then
         WoWeuCN_Tooltips_SpellToolIndex = 1
       end
-
       WoWeuCN_Tooltips_wait(0.1, scanAuto, WoWeuCN_Tooltips_SpellToolIndex, 1, 0)
-
-    -- item scan
-    elseif (msg=="itemreset" or msg=="ITEMRESET") then
-      WoWeuCN_Tooltips_ItemIndex = 1;
-      print("Reset");
-    elseif (msg=="itemclear" or msg=="ITEMCLEAR") then
-      WoWeuCN_Tooltips_ItemToolTips0 = {} 
-      WoWeuCN_Tooltips_ItemToolTips100000 = {} 
-      WoWeuCN_Tooltips_ItemIndex = 1
-      print("Clear");
     
-    -- unit
-    elseif (msg=="unitclear" or msg=="UNITCLEAR") then
-      WoWeuCN_Tooltips_UnitToolTips0 = {} 
-      WoWeuCN_Tooltips_UnitToolTips100000 = {} 
-      WoWeuCN_Tooltips_UnitIndex = 1
-      print("Clear");
+    -- unit auto scan
     elseif (msg=="unitscanauto" or msg=="UNITSCANAUTO") then
       if (WoWeuCN_Tooltips_UnitToolTips0 == nil) then
         WoWeuCN_Tooltips_UnitToolTips0 = {} 
@@ -333,7 +325,6 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       if (WoWeuCN_Tooltips_UnitIndex == nil) then
         WoWeuCN_Tooltips_UnitIndex = 1
       end
-
       WoWeuCN_Tooltips_wait(0.1, scanUnitAuto, WoWeuCN_Tooltips_UnitIndex, 1, 0)
 
     -- item auto scan
@@ -348,6 +339,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
         WoWeuCN_Tooltips_ItemToolTips100000 = {} 
       end
       WoWeuCN_Tooltips_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
+
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
         InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
@@ -731,9 +723,6 @@ function Broadcast()
 
   local guildInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<Blood Requiem>|r" 
   if (realmName == "Silvermoon") then
-    --guildInfo = "\124cff00ff00\124HclubFinder:ClubFinder-1-137354-3391-68978962|h[Blood Requiem]\124h\124r"
-  end
-
-  --print(_G["ORANGE_FONT_COLOR_CODE"] .. "Silvermoon 联盟公会" .. guildInfo .. _G["ORANGE_FONT_COLOR_CODE"] .. "招收治疗DPS加入我们开荒M团本的团队与大米冲层队伍。同时欢迎休闲玩家来欢乐打大米PVP评级。入会咨询/申请请|r" .. "\124cffffd100\124HclubTicket:wyPXGRUyyb\124h[点击加入社群]\124h\124r" .. _G["ORANGE_FONT_COLOR_CODE"] .. "（链接已修复）。|r");
+  end 
 end
 
