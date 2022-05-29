@@ -373,25 +373,13 @@ function WoWeuCN_Quests_SlashCommand(msg)
       WoWeuCN_Quests_QuestIndex = 1;
       WoWeuCN_Quests_QuestToolTips = {} 
       print("Clear");
-   elseif (msg=="scan" or msg=="SCAN") then
-      if (WoWeuCN_Quests_QuestToolTips == nil) then
-        WoWeuCN_Quests_QuestToolTips = {} 
-      end
-      if (WoWeuCN_Quests_QuestIndex == nil) then
-        WoWeuCN_Quests_QuestIndex = 1
-      end
-      for i = WoWeuCN_Quests_QuestIndex, WoWeuCN_Quests_QuestIndex + 500 do
-        qcQuestInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-        qcQuestInformationTooltip:ClearLines()
-        qcQuestInformationTooltip:SetHyperlink('quest:' .. i)
-        qcQuestInformationTooltip:Show()
-        local text =  EnumerateTooltipLines(qcQuestInformationTooltip)
-        if (text ~= '' and text ~= nil) then
-          WoWeuCN_Quests_QuestToolTips[i .. ''] = text
-          print(i)
-        end
-      end
-      WoWeuCN_Quests_QuestIndex = WoWeuCN_Quests_QuestIndex + 500
+      
+    --set scan index
+    elseif (string.sub(msg,1,string.len("index"))=="index") then
+      local index = string.sub(msg,string.len("index")+2)
+      WoWeuCN_Quests_QuestIndex = tonumber(index);
+      print(index)
+
     elseif (msg=="scanauto" or msg=="SCANAUTO") then
       if (WoWeuCN_Quests_QuestToolTips == nil) then
         WoWeuCN_Quests_QuestToolTips = {} 
@@ -399,7 +387,6 @@ function WoWeuCN_Quests_SlashCommand(msg)
       if (WoWeuCN_Quests_QuestIndex == nil) then
         WoWeuCN_Quests_QuestIndex = 1
       end
-      WoWeuCN_Quests_QuestIndex = 60000
       QTR_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="scancacheauto" or msg=="SCANCACHEAUTO") then
@@ -409,7 +396,6 @@ function WoWeuCN_Quests_SlashCommand(msg)
       if (WoWeuCN_Quests_QuestIndex == nil) then
         WoWeuCN_Quests_QuestIndex = 1
       end
-      WoWeuCN_Quests_QuestIndex = 60000
       QTR_wait(0.1, scanCacheAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="") then
