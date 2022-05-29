@@ -482,12 +482,12 @@ function WoWeuCN_Quests_OnLoad()
    
    -- Quest ID button in Quest Log Popup Detail Frame
    WoWeuCN_Quests_ToggleButton1 = CreateFrame("Button",nil, QuestLogFrame, "UIPanelButtonTemplate");
-   WoWeuCN_Quests_ToggleButton1:SetWidth(120);
+   WoWeuCN_Quests_ToggleButton1:SetWidth(72);
    WoWeuCN_Quests_ToggleButton1:SetHeight(15);
-   WoWeuCN_Quests_ToggleButton1:SetText("Quest ID=?");
+   WoWeuCN_Quests_ToggleButton1:SetText("Unavailable");
    WoWeuCN_Quests_ToggleButton1:Show();
    WoWeuCN_Quests_ToggleButton1:ClearAllPoints();
-   WoWeuCN_Quests_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 218, -58);
+   WoWeuCN_Quests_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 208, -58);
    WoWeuCN_Quests_ToggleButton1:SetScript("OnClick", WoWeuCN_Quests_ON_OFF);
 
    -- Quest ID button in QuestMapDetailsScrollFrame
@@ -810,7 +810,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          end
 
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
+         WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_LG.id.." "..WoWeuCN_Quests_lang);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
          WoWeuCN_Quests_Translate_On(1);
       else	      -- Quest cannot be translated
@@ -819,7 +819,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          WoWeuCN_Quests_ToggleButton2:Disable();
        
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..str_ID);
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..str_ID);
+         WoWeuCN_Quests_ToggleButton1:SetText(str_ID);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..str_ID);
        
          WoWeuCN_Quests_Translate_On(0);
@@ -835,10 +835,10 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
 --            WoWeuCN_Quests_ToggleButton4:Disable();
 --         end
       if ( WoWeuCN_Quests_QuestData[str_ID] ) then	-- ...but there is a translation in the database
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..str_ID);
+         WoWeuCN_Quests_ToggleButton1:SetText(str_ID);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..str_ID);
       else
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..str_ID);
+         WoWeuCN_Quests_ToggleButton1:SetText(str_ID);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..str_ID);
       end
    end	-- Translation actviated
@@ -893,7 +893,7 @@ function WoWeuCN_Quests_Translate_On(typ)
             QuestProgressTitleText:SetText(WoWeuCN_Quests_quest_LG.title);
          end
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
+         WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_LG.id.." "..WoWeuCN_Quests_lang);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
         
          QuestLogQuestDescription:SetFont(WoWeuCN_Quests_Font2, 13);
@@ -967,7 +967,7 @@ function WoWeuCN_Quests_Translate_Off(typ)
       numer_ID = WoWeuCN_Quests_quest_EN.id;
       if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore original subtitle version
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
+         WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_EN.id);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
         
          QuestLogQuestDescription:SetFont(Original_Font2, Original_Font2_Size);
