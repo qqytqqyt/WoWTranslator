@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace QuestTextRetriever.Models
 {
@@ -20,6 +21,14 @@ namespace QuestTextRetriever.Models
         public double G { get; set; } = 1;
 
         public double B { get; set; } = 1;
+    }
+
+    public static class TooltipExtension
+    {
+        public static bool HasChinese(this string text)
+        {
+            return text.Any(c => c >= 512);
+        }
     }
 
 }

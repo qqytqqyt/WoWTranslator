@@ -461,6 +461,46 @@ function split(s, delimiter)
   return result;
 end
 
+local replacement = { 
+  ["瞬发"] = "À",
+  ["施法时间"] = "Á",
+  ["码射程"] = "Â",
+  ["秒"] = "Ã",
+  ["冷却时间"] = "Ä",
+  ["|cffffd100"] = "Å",
+  ["|r|cff7f7f7f"] = "Æ",
+  ["|r"] = "Ç",
+  ["近战范围"] = "È",
+  ["持续"] = "É",
+  ["造成"] = "Ê",
+
+  ["点伤害"] = "Ë",
+  ["点治疗"] = "Ì",
+  ["点生命值"] = "Í",
+  ["点法力值"] = "Î",
+  ["点物理伤害"] = "Ï",
+  ["点魔法伤害"] = "Ð",
+  ["点火焰伤害"] = "Ñ",
+  ["点冰霜伤害"] = "Ò",
+  ["点暗影伤害"] = "Ó",
+  ["点神圣伤害"] = "Ô",
+  ["点奥术伤害"] = "Õ",
+  ["点混乱伤害"] = "Ö",
+  ["点流血伤害"] = "Ø"
+}
+
+function ReplaceText(s)
+  if (s == nil) then
+    return nil
+  end
+
+  for origin,new in pairs(replacement) do
+    s = string.gsub(s, new, origin)
+  end
+
+  return s
+end
+
 function GetFirstLineColorCode(...)
   local colorCode = _G["ORANGE_FONT_COLOR_CODE"]
   for regionIndex = 1, select("#", ...) do
@@ -596,6 +636,14 @@ function OnTooltipSpellElvUi(self)
   local name,id = self:GetSpell()
   local spellData = GetSpellData(id)
   if ( spellData ) then
+
+    if (string.find(spellData[1], "¿")) then
+      spellData = GetSpellData(string.sub(spellData[1], 3))
+      if (not spellData) then
+        return
+      end
+    end
+    
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
@@ -607,6 +655,7 @@ function OnTooltipSpellElvUi(self)
     self:AddLine(" ")
     for i = 1, #spellData do
       local region = spellData[i]
+      region = ReplaceText(region)
       self:AddLine(region, 1, 1, 1, 1)
     end
   end
@@ -620,6 +669,14 @@ function OnTooltipSpell(self, tooltip)
   local name,id = self:GetSpell()
   local spellData = GetSpellData(id)
   if ( spellData ) then
+    
+    if (string.find(spellData[1], "¿")) then
+      spellData = GetSpellData(string.sub(spellData[1], 3))
+      if (not spellData) then
+        return
+      end
+    end
+
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
@@ -631,6 +688,7 @@ function OnTooltipSpell(self, tooltip)
     self:AddLine(" ")
     for i = 1, #spellData do
       local region = spellData[i]
+      region = ReplaceText(region)
       self:AddLine(region, 1, 1, 1, 1)
     end
   end
@@ -642,14 +700,15 @@ function GetSpellData(id)
   end
   local str_id = tostring(id)
   local num_id = tonumber(id)
+  
   local dataIndex = nil
-  if (id >= 0 and id < 100000) then
+  if (num_id >= 0 and num_id < 100000) then
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_0[num_id]
-  elseif (id >= 100000 and id < 200000) then
+  elseif (num_id >= 100000 and num_id < 200000) then
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_100000[num_id - 100000]
-  elseif (id >= 200000 and id < 300000) then
+  elseif (num_id >= 200000 and num_id < 300000) then
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_200000[num_id - 200000]
-  elseif (id >= 300000 and id < 400000) then
+  elseif (num_id >= 300000 and num_id < 400000) then
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
   end
 
@@ -657,13 +716,13 @@ function GetSpellData(id)
     return nil
   end
 
-  if (id >= 0 and id < 100000) then
+  if (num_id >= 0 and num_id < 100000) then
     return   split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
-  elseif (id >= 100000 and id < 200000) then
+  elseif (num_id >= 100000 and num_id < 200000) then
     return  split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
-  elseif (id >= 200000 and id < 300000) then
+  elseif (num_id >= 200000 and num_id < 300000) then
     return  split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
-  elseif (id >= 300000 and id < 400000) then
+  elseif (num_id >= 300000 and num_id < 400000) then
     return  split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
   end
 

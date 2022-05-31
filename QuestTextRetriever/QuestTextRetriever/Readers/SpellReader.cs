@@ -25,7 +25,36 @@ namespace QuestTextRetriever
             "被动"
         };
 
-        public void Read(string spellTipPath, List<Tooltip> spellTipsList, HashSet<string> usedIds)
+        private readonly Dictionary<string, string> TextToSim = new Dictionary<string, string>
+        {
+            { "瞬发", "À" },
+            { "施法时间", "Á" },
+            { "码射程", "Â" },
+            { "秒", "Ã" },
+            { "冷却时间", "Ä" },
+            { "|cffffd100", "Å" },
+            { "|r|cff7f7f7f", "Æ" },
+            { "|r", "Ç" },
+            { "近战范围", "È" },
+            { "持续", "É" },
+            { "造成", "Ê" },
+
+            { "点伤害", "Ë" },
+            { "点治疗", "Ì" },
+            { "点生命值", "Í" },
+            { "点法力值", "Î" },
+            { "点物理伤害", "Ï" },
+            { "点魔法伤害", "Ð" },
+            { "点火焰伤害", "Ñ" },
+            { "点冰霜伤害", "Ò" },
+            { "点暗影伤害", "Ó" },
+            { "点神圣伤害", "Ô" },
+            { "点奥术伤害", "Õ" },
+            { "点混乱伤害", "Ö" },
+            { "点流血伤害", "Ø" }
+        };
+
+        public void Read(string spellTipPath, Dictionary<string, Tooltip> spellTipsList)
         {
             var lines = File.ReadAllLines(spellTipPath);
             var usedId = new HashSet<string>();
@@ -34,7 +63,7 @@ namespace QuestTextRetriever
                 var spellTips = new Tooltip();
                 var text = line.Trim();
 
-                if (string.IsNullOrEmpty(text) || !text.StartsWith("["))
+                if (string.IsNullOrEmpty(text) || !text.StartsWith("[") || text.Contains("DND"))
                     continue;
 
                 var id = text.Split(new string[] {"[\""}, StringSplitOptions.None)[1]
@@ -78,6 +107,9 @@ namespace QuestTextRetriever
                     var spellTipLine = new TooltipLine();
                     spellTipLine.Line = tipLine;
 
+                    if (!spellTips.TooltipLines.Any() && !tipLine.HasChinese())
+                        break;
+
                     // red
                     if (r == "0.99999779462814" && g == "0.12548992037773" && b == "0.12548992037773")
                         continue;
@@ -101,30 +133,16 @@ namespace QuestTextRetriever
                     spellTips.TooltipLines.Add(spellTipLine);
                 }
 
-                if (usedIds.Contains(id))
-                {
-                    var otherObjective = spellTipsList.FirstOrDefault(o => o.Id == id);
+                if (!spellTips.TooltipLines.Any())
+                    continue;
 
-                    if (otherObjective == null)
-                        spellTipsList.Add(spellTips);
-                    else
-                    {
-                        spellTipsList.Remove(otherObjective);
-                        spellTipsList.Add(spellTips);
-                    }
-                }
-                else
-                {
-                    usedIds.Add(id);
-                    spellTipsList.Add(spellTips);
-                }
+                spellTipsList[id] = spellTips;
             }
         }
 
         public void Write(string outputPath)
         {
-            var spellTipList = new List<Tooltip>();
-            var usedIds = new HashSet<string>();
+            var spellTipList = new Dictionary<string, Tooltip>();
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells.lua", spellTipList, usedIds
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\classic_spells.lua", spellTipList, usedIds);
@@ -132,23 +150,30 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36512.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36532.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36710.lua", spellTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_36753.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_36753.lua", spellTipList);
+
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_39185_1-168601.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_39170_250000.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_1.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_2.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_3.lua", spellTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_42423.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_42423.lua", spellTipList);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_43903.lua", spellTipList);
+
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\tbc_spells_38225.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\tbc_spells_38537.lua", spellTipList, usedIds);
             var sb = new StringBuilder();
-            var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
+            var spellTipOrderedList = spellTipList.Select(s => s.Value).OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
             var maxSpellId = 1;
             var idIndexMapping = new int[100001];
+
+            string lastLine = string.Empty;
+            string lastId = string.Empty;
+            var counter = 0;
             foreach (var spellTips in spellTipOrderedList)
             {
                 if (int.Parse(spellTips.Id) >= currentBlock + 100000)
@@ -173,6 +198,9 @@ namespace QuestTextRetriever
 
                 if (currentIndex == 0)
                 {
+                    lastLine = string.Empty;
+                    lastId = string.Empty;
+
                     sb.AppendLine("function loadSpellData" + currentBlock + "()");
                     sb.AppendLine("  WoWeuCN_Tooltips_SpellData_" + currentBlock + " = {");
                     currentIndex = 1;
@@ -182,12 +210,18 @@ namespace QuestTextRetriever
                 tempSb.Append("\"");
                 foreach (var spellTipLine in spellTips.TooltipLines)
                 {
-                    int r = (int)(spellTipLine.R * 255);
-                    int g = (int)(spellTipLine.G * 255);
-                    int b = (int)(spellTipLine.B * 255);
+                    int r = (int)Math.Round(spellTipLine.R * 255);
+                    int g = (int)Math.Round(spellTipLine.G * 255);
+                    int b = (int)Math.Round(spellTipLine.B * 255);
                     if (r == 255 && g == 255 && b == 255)
                     {
-                        tempSb.Append(spellTipLine.Line).Append("£");
+                        var text = spellTipLine.Line;
+                        foreach (var textToSim in TextToSim)
+                        {
+                            text = text.Replace(textToSim.Key, textToSim.Value);
+                        }
+
+                        tempSb.Append(text).Append("£");
                     }
                     else
                     {
@@ -213,6 +247,12 @@ namespace QuestTextRetriever
 
                         text = colourText + text + "|r";
                         text = text.Replace(colourText + "|r", string.Empty);
+
+                        foreach (var textToSim in TextToSim)
+                        {
+                            text = text.Replace(textToSim.Key, textToSim.Value);
+                        }
+
                         tempSb.Append(text).Append("£");
                     }
                 }
@@ -226,7 +266,19 @@ namespace QuestTextRetriever
                 if (!spellTips.TooltipLines.Any())
                     continue;
 
-                sb.Append(tempSb);
+                if (tempSb.ToString() == lastLine)
+                {
+                    sb.Append("\"¿" + lastId + "x");
+                    counter++;
+                }
+                else
+                {
+                    lastLine = tempSb.ToString();
+                    lastId = spellTips.Id;
+                    sb.Append(tempSb);
+                }
+
+
                 sb.Remove(sb.Length - 1, 1);
                 sb.Append("\",").Append(" --" + spellTips.Id).AppendLine();
 

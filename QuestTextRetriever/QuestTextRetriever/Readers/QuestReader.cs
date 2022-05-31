@@ -143,6 +143,8 @@ namespace QuestTextRetriever
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache40843.wdb", cachedQuests);
             QuestCacheReader.ReadQuestCacheRetail(
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache42423.wdb", cachedQuests);
+            QuestCacheReader.ReadQuestCacheRetail(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43903.wdb", cachedQuests);
 
 
             //ReadObjectives(
@@ -180,6 +182,9 @@ namespace QuestTextRetriever
                 objectives);
             ReadObjectives(
                 @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.42423.lua",
+                objectives);
+            ReadObjectives(
+                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.43903.lua",
                 objectives);
 
             var dirPath = new DirectoryInfo(m_dirPath);

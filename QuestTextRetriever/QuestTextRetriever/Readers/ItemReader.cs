@@ -23,7 +23,7 @@ namespace QuestTextRetriever
             "你尚未收藏过此外观",
         };
 
-        public void Read(string tooltipPath, List<Tooltip> itemTipsList, HashSet<string> usedIds)
+        public void Read(string tooltipPath, Dictionary<string, Tooltip> itemTipsList)
         {
             var lines = File.ReadAllLines(tooltipPath);
             var usedId = new HashSet<string>();
@@ -131,35 +131,13 @@ namespace QuestTextRetriever
                 if (itemTips.TooltipLines.Count == 1)
                     itemTips.TooltipLines.Add(new TooltipLine() { Line = " " });
 
-
-                if (usedIds.Contains(id))
-                {
-                    var otherObjective = itemTipsList.FirstOrDefault(o => o.Id == id);
-
-                    if (otherObjective == null)
-                        itemTipsList.Add(itemTips);
-                    //else if (otherObjective.TooltipLines.Count > itemTips.TooltipLines.Count && itemTips.TooltipLines.Count == 2 && itemTips.TooltipLines[1].Line == @" ")
-                    //{
-                    //    Console.Write(true);
-                    //}
-                    else
-                    {
-                        itemTipsList.Remove(otherObjective);
-                        itemTipsList.Add(itemTips);
-                    }
-                }
-                else
-                {
-                    usedIds.Add(id);
-                    itemTipsList.Add(itemTips);
-                }
+                itemTipsList[id] = itemTips;
             }
         }
 
         public void Write(string outputPath)
         {
-            var itemTipList = new List<Tooltip>();
-            var usedIds = new HashSet<string>();
+            var itemTipList = new Dictionary<string, Tooltip>();
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\ptr-item0-200000.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\beta-item0-200000.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.lua", itemTipList, usedIds);
@@ -168,16 +146,17 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36512.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36532.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36710.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.36753.lua", itemTipList, usedIds);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.36753.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items_39170_100000.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.40843.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.42423.lua", itemTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.42423.lua", itemTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.40843.lua", itemTipList);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.42423.lua", itemTipList);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.42423.lua", itemTipList);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.43903.lua", itemTipList);
             // Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items.lua", itemTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items_38537.lua", itemTipList, usedIds);
             var sb = new StringBuilder();
-            var itemTipOrderedList = itemTipList.OrderBy(q => int.Parse(q.Id)).ToList();
+            var itemTipOrderedList = itemTipList.Select(i => i.Value).OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
             var idIndexMapping = new int[100001];

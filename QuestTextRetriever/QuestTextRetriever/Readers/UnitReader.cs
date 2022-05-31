@@ -23,9 +23,9 @@ namespace QuestTextRetriever
             "被动"
         };
 
-        public void Read(string spellTipPath, List<Tooltip> spellTipsList, HashSet<string> usedIds)
+        public void Read(string unitTipPath, Dictionary<string, Tooltip> unitTipsList)
         {
-            var lines = File.ReadAllLines(spellTipPath);
+            var lines = File.ReadAllLines(unitTipPath);
             var usedId = new HashSet<string>();
             foreach (var line in lines)
             {
@@ -83,30 +83,13 @@ namespace QuestTextRetriever
                     
                 }
 
-                if (usedIds.Contains(id))
-                {
-                    var otherObjective = spellTipsList.FirstOrDefault(o => o.Id == id);
-
-                    if (otherObjective == null)
-                        spellTipsList.Add(unitTips);
-                    else
-                    {
-                        spellTipsList.Remove(otherObjective);
-                        spellTipsList.Add(unitTips);
-                    }
-                }
-                else
-                {
-                    usedIds.Add(id);
-                    spellTipsList.Add(unitTips);
-                }
+                unitTipsList[id] = unitTips;
             }
         }
 
         public void Write(string outputPath)
         {
-            var spellTipList = new List<Tooltip>();
-            var usedIds = new HashSet<string>();
+            var unitTipList = new Dictionary<string, Tooltip>();
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells.lua", spellTipList, usedIds
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\classic_spells.lua", spellTipList, usedIds);
@@ -118,11 +101,12 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_905.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_39170_100000.lua", spellTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_40843.lua", spellTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_42423.lua", spellTipList, usedIds);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_40843.lua", unitTipList);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_42423.lua", unitTipList);
+            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_43903.lua", unitTipList);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.lua", spellTipList, usedIds);
             var sb = new StringBuilder();
-            var spellTipOrderedList = spellTipList.OrderBy(q => int.Parse(q.Id)).ToList();
+            var unitTipOrderedList = unitTipList.Select(u => u.Value).OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
             var currentBlock = 0;
             var maxUnitId = 1;
@@ -130,7 +114,7 @@ namespace QuestTextRetriever
             int countB = 0;
             var text = "";
             var idIndexMapping = new int[100001];
-            foreach (var unitTips in spellTipOrderedList)
+            foreach (var unitTips in unitTipOrderedList)
             {
                 if (int.Parse(unitTips.Id) >= currentBlock + 100000)
                 {
