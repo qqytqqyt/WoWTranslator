@@ -75,6 +75,7 @@
     <Compile Include="Retriever.cs" />
     <Compile Include="Readers\ItemReader.cs" />
     <Compile Include="Readers\SpellReader.cs" />
+    <Compile Include="Utils\Options.cs" />
     <Compile Include="Utils\StringUtils.cs" />
     <Compile Include="Models\Tooltip.cs" />
   </ItemGroup>

@@ -14,15 +14,6 @@ namespace QuestTextRetriever
         {
         }
 
-        private readonly static List<string> BlackListedPostfix = new List<string>()
-        {
-            "瞬发",
-            "冷却时间",
-            "施法时间",
-            "需引导",
-            "被动"
-        };
-
         public void Read(string unitTipPath, Dictionary<string, Tooltip> unitTipsList)
         {
             var lines = File.ReadAllLines(unitTipPath);
@@ -87,7 +78,7 @@ namespace QuestTextRetriever
             }
         }
 
-        public void Write(string outputPath)
+        public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
         {
             var unitTipList = new Dictionary<string, Tooltip>();
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList, usedIds);
@@ -101,10 +92,58 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_905.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_39170_100000.lua", spellTipList, usedIds);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_40843.lua", unitTipList);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_42423.lua", unitTipList);
-            Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_43903.lua", unitTipList);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_40843.lua", unitTipList);
+            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_42423.lua", unitTipList);
+            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_44832.lua", unitTipList);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.lua", spellTipList, usedIds);
+
+            if (outputMode == OutputMode.WoWeuCN)
+                WriteToWoWEuCN(outputPath, unitTipList);
+            else
+            {
+                var lines = File.ReadAllLines(@"G:\Games\World of Warcraft\_classic_beta_\Interface\AddOns\Questie\Database\Wotlk\wotlkNpcDB.lua");
+                var validIds = new HashSet<string>();
+                foreach (var line in lines)
+                {
+                    if (!line.Trim().StartsWith("["))
+                        continue;
+
+                    var id = line.FirstBetween("[", "]");
+                    validIds.Add(id);
+                }
+
+                var unitTipOrderedList = unitTipList.Select(u => u.Value).OrderBy(q => int.Parse(q.Id)).ToList();
+                var sb = new StringBuilder();
+                foreach (var unitTips in unitTipOrderedList)
+                {
+                    if (!validIds.Contains(unitTips.Id))
+                        continue;
+
+                    if (!unitTips.TooltipLines.Any())
+                        continue;
+
+                    sb.Append("[").Append(unitTips.Id).Append("] = {\"");
+                    sb.Append(unitTips.TooltipLines.First().Line);
+                    sb.Append("\",");
+                    if (unitTips.TooltipLines.Count >= 2)
+                    {
+                        sb.Append("\"").Append(unitTips.TooltipLines[1].Line).Append("\"},");
+                    }
+                    else
+                    {
+                        sb.Append("nil},");
+                    }
+
+                    validIds.Remove(unitTips.Id);
+                    sb.AppendLine();
+                }
+
+                File.WriteAllText(outputPath, sb.ToString());
+            }
+        }
+
+        private static void WriteToWoWEuCN(string outputPath, Dictionary<string, Tooltip> unitTipList)
+        {
             var sb = new StringBuilder();
             var unitTipOrderedList = unitTipList.Select(u => u.Value).OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;
@@ -128,6 +167,7 @@ namespace QuestTextRetriever
                         else
                             sb.Append("nil,");
                     }
+
                     sb.AppendLine().Append("};").AppendLine();
                     maxUnitId = 1;
                     idIndexMapping = new int[100001];
@@ -172,7 +212,6 @@ namespace QuestTextRetriever
                 idIndexMapping[int.Parse(unitTips.Id) - currentBlock] = currentIndex;
                 maxUnitId = int.Parse(unitTips.Id) - currentBlock;
                 currentIndex++;
-
             }
 
             sb.Append("};").AppendLine();
@@ -184,6 +223,7 @@ namespace QuestTextRetriever
                 else
                     sb.Append("nil,");
             }
+
             sb.AppendLine().Append("};").AppendLine();
 
             sb.Append("end");

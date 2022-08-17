@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using QuestTextRetriever.Crawlers;
 using QuestTextRetriever.Readers;
+using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
@@ -15,7 +16,7 @@ namespace QuestTextRetriever
     {
         static void Main(string[] args)
         {
-            new QuestieMerger().Execute();
+            //new QuestieMerger().Execute();
             //var globalStringReader = new GlobalStringReader();
             //globalStringReader.Execute2();
 
@@ -30,24 +31,30 @@ namespace QuestTextRetriever
             //scriptReader.Excecute(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\scripts\output3.lua");
             //var crawler = new Crawler();
             //crawler.Execute();
-            var itemReader = new ItemReader();
-            itemReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items_output_42423_2.lua");
+
+            // retail
             //var questReader = new QuestReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWHeadData\WoWHead37844\", @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
-            //questReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.2.0.42423.txt");
+            //questReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.2.5.43971.txt");
+            //var itemReader = new ItemReader();
+            //itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_output_questie_zhtw_44832.2.lua", OutputMode.Questie);
             //var unitReader = new UnitReader();
-            //unitReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_output_42423.lua");
-            //var spellReader = new SpellReader();
-            //spellReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_output_42423.lua");
+            //unitReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_output_questie_zhcn_44832.lua", OutputMode.Questie);
+            var spellReader = new SpellReader();
+            //spellReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_output_43903.lua");
 
             //var journalReader = new JournalReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\TBCTW\");
             //journalReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\outputngatw.txt");
 
 
-            // tbc 
+            // tbc
             //var questCacheReader =
-            //    new QuestCacheReader(
-            //        @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
-            //questCacheReader.Execute(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\tbcextra42328.lua");
+            //   new QuestCacheReader(
+            //       @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
+            //questCacheReader.Execute(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\wlktest1.lua");
+
+            var questReader = new QuestReader();
+            questReader.Execute(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questie_44832_zhtw.lua", VersionMode.Classic, OutputMode.Questie);
+
             //QuestReader.MergeOutputs();
 
             //DirectoryInfo dir = new DirectoryInfo(@"G:\Games\World of Warcraft\_retail_\WTF\Account\411375915#1\SavedVariables");

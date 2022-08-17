@@ -25,7 +25,8 @@ namespace QuestTextRetriever.Readers
             var questObjects = new List<Quest>();
             //ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache_38339_zhcn.wdb", questObjects);
             //ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\zhcn_tbcextra_questcache38548zhcn.wdb", questObjects);
-            ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\zhcn_tbcextra_questcache42328zhcn.wdb", questObjects);
+            //ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\zhcn_tbcextra_questcache42328zhcn.wdb", questObjects);
+            ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache44644_tw.wdb", questObjects);
 
             var sb = new StringBuilder();
             foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
@@ -52,8 +53,7 @@ namespace QuestTextRetriever.Readers
             long totalLength = 0;
             try
             {
-                using (var ms = new MemoryStream(File.ReadAllBytes(fileName
-                    ))
+                using (var ms = new MemoryStream(File.ReadAllBytes(fileName))
                 )
                 {
                     using (var dbReader = new BinaryReader(ms, Encoding.UTF8))
@@ -64,9 +64,12 @@ namespace QuestTextRetriever.Readers
                         {
                             index++;
                             Console.WriteLine(index);
-                            var id = dbReader.ReadInt32();
-                            if (id == 62)
+                            if (index == 193)
                                 Console.Write(true);
+                            var id = dbReader.ReadInt32();
+                            if (id == 8274)
+                                Console.Write(true);
+
                             var length = dbReader.ReadInt32();
                             var currentPosition = ms.Position;
                             dbReader.ReadByte(17 * 4);
@@ -80,9 +83,13 @@ namespace QuestTextRetriever.Readers
                             dbReader.ReadByte(4);
                             dbReader.ReadByte(0x20);
                             dbReader.ReadByte(16);
+
+                            dbReader.ReadByte(4);
+
                             var numObjectives = dbReader.ReadInt32();
                             dbReader.ReadByte(8);
                             dbReader.ReadByte(8);
+
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
                             var title = string.Empty;
@@ -93,12 +100,15 @@ namespace QuestTextRetriever.Readers
                                 var abort = false;
                                 //if (check3.All(c => c == 255))
                                 //    dbReader.ReadByte(8);
+
+                                Byte[] lengthBytes;
+                                BitArray bits;
+                                var titleLength = 0;
                                 try
                                 {
-
-                                    var lengthBytes = dbReader.ReadByte(12);
-                                    var bits = new BitArray(lengthBytes);
-                                    var titleLength = 0;
+                                    lengthBytes = dbReader.ReadByte(12);
+                                    bits = new BitArray(lengthBytes);
+                                    titleLength = 0;
                                     titleLength |= lengthBytes[0] & 0xFF;
                                     titleLength <<= 1;
                                     titleLength |= (lengthBytes[1] & 0x80) >> 7;
@@ -168,6 +178,7 @@ namespace QuestTextRetriever.Readers
                                     continue;
                                 }
 
+                                Console.WriteLine("(" + attempCount + ")");
                                 attempCount = 1;
                                 var quest = new Quest();
                                 quest.Id = id.ToString();
