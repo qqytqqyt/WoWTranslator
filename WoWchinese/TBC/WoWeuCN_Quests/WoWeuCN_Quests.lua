@@ -73,9 +73,10 @@ local p_class = {
       [4] = { W1="盗贼", W2="盗贼"},
       [7] = { W1="萨满", W2="萨满" },
       [9] = { W1="术士", W2="术士" },
-      [1] = { W1="战士", W2="战士" }, }
+      [1] = { W1="战士", W2="战士" },
+      [6] = { W1="死亡骑士", W2="死亡骑士" }, }
 
-local removed_text = { "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior", "Blood Elf", "Draenei", "Gnome", "Dwarf", "Night Elf", "Orc", "Undead", "Tauren", "Troll" }
+local removed_text = { "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Death Knight", "Warrior", "Blood Elf", "Draenei", "Gnome", "Dwarf", "Night Elf", "Orc", "Undead", "Tauren", "Troll" }
 
 if (p_race[WoWeuCN_Quests_race_Id]) then      
    player_race = { W1=p_race[WoWeuCN_Quests_race_Id].W1, W2=p_race[WoWeuCN_Quests_race_Id].W2 };
@@ -184,27 +185,53 @@ end
 
 
 local function scanAuto(startIndex, attempt, counter)
-  if (startIndex > 70000) then
-    return;
-  end
-  if (counter == 0) then
-   print(startIndex)
-  end
-  
-  for i = startIndex, startIndex + 150 do
-   local title = C_QuestLog.GetQuestInfo(i)
-   if (title ~= '' and title ~= nil) then
-    print(title)
+   if (startIndex > 80000) then
+     return;
    end
+   for i = startIndex, startIndex + 100 do
+     qcQuestInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+     qcQuestInformationTooltip:ClearLines()
+     qcQuestInformationTooltip:SetHyperlink('quest:' .. i)
+     qcQuestInformationTooltip:Show()
+     local text =  EnumerateTooltipLines(qcQuestInformationTooltip)
+     if (text ~= '' and text ~= nil) then
+       WoWeuCN_Quests_QuestToolTips[i .. ''] = text
+       print(i)
+     end
+   end
+   print(attempt)
+   print(counter)
+   WoWeuCN_Quests_QuestIndex = startIndex
+   if (counter >= 5) then
+      WoWeuCN_Quests_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
+   else
+      WoWeuCN_Quests_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
+   end
+ end
+ 
+ local function scanCacheAuto(startIndex, attempt, counter)
+    if (startIndex > 80000) then
+      return;
+    end
+    if (counter == 0) then
+       print(startIndex)
+      end
+      
+      for i = startIndex, startIndex + 150 do
+       local title = C_QuestLog.GetQuestInfo(i)
+       if (title ~= '' and title ~= nil) then
+        print(title)
+       end
+      end
+      
+      WoWeuCN_Quests_QuestIndex = startIndex
+      if (counter >= 5) then
+        WoWeuCN_Quests_wait(0.2, scanCacheAuto, startIndex + 150, attempt + 1, 0)
+      else
+        WoWeuCN_Quests_wait(0.2, scanCacheAuto, startIndex, attempt + 1, counter + 1)
+      end
   end
-  
-  WoWeuCN_Quests_QuestIndex = startIndex
-  if (counter >= 5) then
-    WoWeuCN_Quests_wait(0.2, scanAuto, startIndex + 150, attempt + 1, 0)
-  else
-    WoWeuCN_Quests_wait(0.2, scanAuto, startIndex, attempt + 1, counter + 1)
-  end
-end
+ 
 
 -- Checks the availability of Wow's special function: GetQuestID()
 function DetectEmuServer()
@@ -310,6 +337,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
       WoWeuCN_Quests_QuestIndex = 63000;
       WoWeuCN_Quests_QuestToolTips = {} 
       print("Jump");
+  
    elseif (msg=="scanauto" or msg=="SCANAUTO") then
       if (WoWeuCN_Quests_QuestToolTips == nil) then
         WoWeuCN_Quests_QuestToolTips = {} 
@@ -318,6 +346,16 @@ function WoWeuCN_Quests_SlashCommand(msg)
         WoWeuCN_Quests_QuestIndex = 1
       end
       WoWeuCN_Quests_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
+
+   elseif (msg=="scancacheauto" or msg=="SCANCACHEAUTO") then
+      if (WoWeuCN_Quests_QuestToolTips == nil) then
+        WoWeuCN_Quests_QuestToolTips = {} 
+      end
+      if (WoWeuCN_Quests_QuestIndex == nil) then
+        WoWeuCN_Quests_QuestIndex = 1
+      end
+      WoWeuCN_Quests_wait(0.1, scanCacheAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
+
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
@@ -382,7 +420,7 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_QuestsOptionsHeader:ClearAllPoints();
   WoWeuCN_QuestsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." by qqytqqyt © 2021");
+  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." by qqytqqyt © 2022");
   WoWeuCN_QuestsOptionsHeader:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsPlayer = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
@@ -482,22 +520,22 @@ function WoWeuCN_Quests_OnLoad()
    
    -- Quest ID button in Quest Log Popup Detail Frame
    WoWeuCN_Quests_ToggleButton1 = CreateFrame("Button",nil, QuestLogFrame, "UIPanelButtonTemplate");
-   WoWeuCN_Quests_ToggleButton1:SetWidth(72);
-   WoWeuCN_Quests_ToggleButton1:SetHeight(15);
+   WoWeuCN_Quests_ToggleButton1:SetWidth(150);
+   WoWeuCN_Quests_ToggleButton1:SetHeight(20);
    WoWeuCN_Quests_ToggleButton1:SetText("Unavailable");
    WoWeuCN_Quests_ToggleButton1:Show();
    WoWeuCN_Quests_ToggleButton1:ClearAllPoints();
-   WoWeuCN_Quests_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 208, -58);
+   WoWeuCN_Quests_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 208, -45);
    WoWeuCN_Quests_ToggleButton1:SetScript("OnClick", WoWeuCN_Quests_ON_OFF);
 
-   -- Quest ID button in QuestMapDetailsScrollFrame
-   WoWeuCN_Quests_ToggleButton2 = CreateFrame("Button",nil, QuestMapDetailsScrollFrame, "UIPanelButtonTemplate");
+   -- Quest ID button in QuestLogDetailFrame
+   WoWeuCN_Quests_ToggleButton2 = CreateFrame("Button",nil, QuestLogDetailFrame, "UIPanelButtonTemplate");
    WoWeuCN_Quests_ToggleButton2:SetWidth(150);
    WoWeuCN_Quests_ToggleButton2:SetHeight(20);
    WoWeuCN_Quests_ToggleButton2:SetText("Quest ID=?");
    WoWeuCN_Quests_ToggleButton2:Show();
    WoWeuCN_Quests_ToggleButton2:ClearAllPoints();
-   WoWeuCN_Quests_ToggleButton2:SetPoint("TOPLEFT", QuestMapDetailsScrollFrame, "TOPLEFT", 116, 29);
+   WoWeuCN_Quests_ToggleButton2:SetPoint("TOPLEFT", QuestLogDetailFrame, "TOPLEFT", 120, -40);
    WoWeuCN_Quests_ToggleButton2:SetScript("OnClick", WoWeuCN_Quests_ON_OFF);
 
 
@@ -524,12 +562,18 @@ function WoWeuCN_Quests_GetQuestID()
    if ( isGetQuestID=="1" ) then
       quest_ID = GetQuestID();
    end
-   
-   if ((QuestLogFrame:IsVisible()) and ((quest_ID==nil) or (quest_ID==0))) then
+
+
+   if ((QuestLogDetailFrame:IsVisible()) and ((quest_ID==nil) or (quest_ID==0))) then
       local questTitle, level, questTag, isHeader, isCollapsed, isComplete, isDaily, questID = GetQuestLogTitle(GetQuestLogSelection());
+   
       quest_ID = questID;
    end
+   if ((QuestLogFrame:IsVisible()) and ((quest_ID==nil) or (quest_ID==0))) then
+      local questTitle, level, questTag, isHeader, isCollapsed, isComplete, isDaily, questID = GetQuestLogTitle(GetQuestLogSelection());
    
+      quest_ID = questID;
+   end
 --   quest_ID = QuestFrame.questID;
 --   if (quest_ID==nil) then
 --      quest_ID = QuestLogPopupDetailFrame.questID;
@@ -770,11 +814,11 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
             WoWeuCN_Quests_quest_EN.itemreceive = WoWeuCN_Quests_MessOrig.itemreceiv1;
             WoWeuCN_Quests_quest_LG.itemreceive = WoWeuCN_Quests_Messages.itemreceiv1;
          else   
-            if (WoWeuCN_Quests_quest_LG.details ~= QuestLogQuestDescription:GetText()) then
-               WoWeuCN_Quests_quest_EN.details = QuestLogQuestDescription:GetText();
+            if (WoWeuCN_Quests_quest_LG.details ~= QuestInfoDescriptionText:GetText()) then
+               WoWeuCN_Quests_quest_EN.details = QuestInfoDescriptionText:GetText();
             end
-            if (WoWeuCN_Quests_quest_LG.objectives ~= QuestLogObjectivesText:GetText()) then
-               WoWeuCN_Quests_quest_EN.objectives = QuestLogObjectivesText:GetText();
+            if (WoWeuCN_Quests_quest_LG.objectives ~= QuestInfoObjectivesText:GetText()) then
+               WoWeuCN_Quests_quest_EN.objectives = QuestInfoObjectivesText:GetText();
             end
          end   
          if (questEvent=="QUEST_PROGRESS") then
@@ -848,84 +892,82 @@ end
 -- Displays the translation
 function WoWeuCN_Quests_Translate_On(typ)
    WoweuCN_LoadOriginalHeaders()
+   
    if (WoWeuCN_Quests_PS["transtitle"]=="1") then    -- view translated title
       QuestInfoTitleHeader:SetFont(WoWeuCN_Quests_Font1, 18);
       QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
    end
-
-   QuestInfoObjectivesHeader:SetFont(WoWeuCN_Quests_Font1, 18);
-   QuestInfoObjectivesHeader:SetText(WoWeuCN_Quests_Messages.objectives);
-   QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
-
-   QuestLogRewardTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
-   QuestLogRewardTitleText:SetText(WoWeuCN_Quests_Messages.rewards);    
+   if (WoWeuCN_Quests_PS["transobjectives"]=="1") then
+      QuestInfoObjectivesHeader:SetFont(WoWeuCN_Quests_Font1, 18);
+      QuestInfoObjectivesHeader:SetText(WoWeuCN_Quests_Messages.objectives);
+      QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
+   end
    QuestInfoRewardsFrame.Header:SetFont(WoWeuCN_Quests_Font1, 18);
-   QuestInfoRewardsFrame.Header:SetText(WoWeuCN_Quests_Messages.rewards);  
-   
-   QuestLogDescriptionTitle:SetFont(WoWeuCN_Quests_Font1, 18);
-   QuestLogDescriptionTitle:SetText(WoWeuCN_Quests_Messages.details);    
-   
+   QuestInfoRewardsFrame.Header:SetText(WoWeuCN_Quests_Messages.rewards);
+   QuestInfoDescriptionHeader:SetFont(WoWeuCN_Quests_Font1, 18);
+   QuestInfoDescriptionHeader:SetText(WoWeuCN_Quests_Messages.details);
    QuestProgressRequiredItemsText:SetFont(WoWeuCN_Quests_Font1, 18);
    QuestProgressRequiredItemsText:SetText(WoWeuCN_Quests_Messages.reqitems);
-   
---   QuestInfoSpellObjectiveLearnLabel:SetFont(WoWeuCN_Quests_Font2, 13);
---   QuestInfoSpellObjectiveLearnLabel:SetText(WoWeuCN_Quests_Messages.learnspell);
---   QuestInfoXPFrame.ReceiveText:SetFont(WoWeuCN_Quests_Font2, 13);
---   QuestInfoXPFrame.ReceiveText:SetText(WoWeuCN_Quests_Messages.experience);
+   QuestInfoRewardsFrame.ItemChooseText:SetFont(WoWeuCN_Quests_Font2, 13);
+   QuestInfoRewardsFrame.ItemReceiveText:SetFont(WoWeuCN_Quests_Font2, 13);
+   QuestInfoSpellObjectiveLearnLabel:SetFont(WoWeuCN_Quests_Font2, 13);
+   QuestInfoSpellObjectiveLearnLabel:SetText(WoWeuCN_Quests_Messages.learnspell);
+   QuestInfoXPFrame.ReceiveText:SetFont(WoWeuCN_Quests_Font2, 13);
+   QuestInfoXPFrame.ReceiveText:SetText(WoWeuCN_Quests_Messages.experience);
 --   MapQuestInfoRewardsFrame.ItemChooseText:SetFont(WoWeuCN_Quests_Font2, 11);
 --   MapQuestInfoRewardsFrame.ItemReceiveText:SetFont(WoWeuCN_Quests_Font2, 11);
 --   MapQuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_Messages.itemchoose1);
 --   MapQuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_Messages.itemreceiv1);
-   if (typ==1) then			-- full switchover (there is a translation)
-      QuestLogItemChooseText:SetFont(WoWeuCN_Quests_Font2, 13);
-      QuestLogItemChooseText:SetText(WoWeuCN_Quests_Messages.itemchoose1);
-      QuestLogItemReceiveText:SetFont(WoWeuCN_Quests_Font2, 13);
-      QuestLogItemReceiveText:SetText(WoWeuCN_Quests_Messages.itemreceiv1);
+   if (typ==1) then			-- pełne przełączenie (jest tłumaczenie)
+      QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_Messages.itemchoose1);
+      QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_Messages.itemreceiv1);
       numer_ID = WoWeuCN_Quests_quest_LG.id;
       str_ID = tostring(numer_ID);
       if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore translated subtitle version
-         if (WoWeuCN_Quests_PS["transtitle"]=="1") then    -- view translated title
-            QuestLogQuestTitle:SetFont(WoWeuCN_Quests_Font1, 18);
-            QuestLogQuestTitle:SetText(WoWeuCN_Quests_quest_LG.title);
-            QuestInfoTitleHeader:SetFont(WoWeuCN_Quests_Font1, 18);
+         if (WoWeuCN_Quests_PS["transtitle"]=="1") then
             QuestInfoTitleHeader:SetText(WoWeuCN_Quests_quest_LG.title);
-            QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
             QuestProgressTitleText:SetText(WoWeuCN_Quests_quest_LG.title);
          end
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
-         WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_LG.id.." "..WoWeuCN_Quests_lang);
+         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
-        
-         QuestLogQuestDescription:SetFont(WoWeuCN_Quests_Font2, 13);
-         QuestLogQuestDescription:SetText(WoWeuCN_Quests_quest_LG.details);
-         QuestInfoDescriptionText:SetFont(WoWeuCN_Quests_Font2, 13);
-         QuestInfoDescriptionText:SetText(WoWeuCN_Quests_quest_LG.details);
-         QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
-         QuestInfoObjectivesText:SetText(WoWeuCN_Quests_quest_LG.objectives);
-         
-         QuestLogObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
-         QuestLogObjectivesText:SetText(WoWeuCN_Quests_quest_LG.objectives);
-         
-         QuestProgressText:SetFont(WoWeuCN_Quests_Font2, 13);
-         QuestProgressText:SetText(WoWeuCN_Quests_quest_LG.progress);
-         QuestInfoRewardText:SetFont(WoWeuCN_Quests_Font2, 13);
+       
+         if (WoWeuCN_Quests_quest_LG.details ~= WoWeuCN_Quests_quest_EN.details) then
+          QuestInfoDescriptionText:SetFont(WoWeuCN_Quests_Font2, 13);
+          QuestInfoDescriptionText:SetText(WoWeuCN_Quests_quest_LG.details);
+        end
+        if (WoWeuCN_Quests_PS["transobjectives"]=="1" and WoWeuCN_Quests_quest_LG.objectives ~= WoWeuCN_Quests_quest_EN.objectives) then
+          QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
+          QuestInfoObjectivesText:SetText(WoWeuCN_Quests_quest_LG.objectives);
+        end
+        if (WoWeuCN_Quests_quest_LG.progress ~= WoWeuCN_Quests_quest_EN.progress) then
+          QuestProgressText:SetText(WoWeuCN_Quests_quest_LG.progress);
+          QuestProgressText:SetFont(WoWeuCN_Quests_Font2, 13);
+       end
+       if (WoWeuCN_Quests_quest_LG.completion ~= WoWeuCN_Quests_quest_EN.completion) then
          QuestInfoRewardText:SetText(WoWeuCN_Quests_quest_LG.completion);
-         
-         QuestInfoRewardsFrame.ItemChooseText:SetFont(WoWeuCN_Quests_Font2, 13);
-         QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_quest_LG.itemchoose);
-         QuestInfoRewardsFrame.ItemReceiveText:SetFont(WoWeuCN_Quests_Font2, 13);
-         QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_quest_LG.itemreceive);
+         QuestInfoRewardText:SetFont(WoWeuCN_Quests_Font2, 13);
+       end
+--         QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_quest_LG.itemchoose);
+--         QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_quest_LG.itemreceive);
       end
    else
-      if (curr_trans == "1") then
-         QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_Messages.itemchoose1);
-         QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_Messages.itemreceiv1);
-         if ((ImmersionFrame ~= nil ) and (ImmersionFrame.TalkBox:IsVisible() )) then
-            if (not WoWeuCN_Quests_wait(0.2,WoWeuCN_Quests_Immersion_Static)) then
-               -- text replacement with a delay of 0.2 sec
-            end
-         end
-      end
+      QuestInfoTitleHeader:SetFont(Original_Font1, 18);
+      QuestProgressTitleText:SetFont(Original_Font1, 18);
+      QuestInfoObjectivesHeader:SetFont(Original_Font1, 18);
+      QuestInfoObjectivesHeader:SetText(WoWeuCN_Quests_MessOrig.objectives);
+      QuestInfoRewardsFrame.Header:SetFont(Original_Font1, 18);
+      QuestInfoRewardsFrame.Header:SetText(WoWeuCN_Quests_MessOrig.rewards);
+      QuestInfoDescriptionHeader:SetFont(Original_Font1, 18);
+      QuestInfoDescriptionHeader:SetText(WoWeuCN_Quests_MessOrig.details);
+      QuestProgressRequiredItemsText:SetFont(Original_Font1, 18);
+      QuestProgressRequiredItemsText:SetText(WoWeuCN_Quests_MessOrig.reqitems);
+      QuestInfoDescriptionText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestProgressText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoRewardText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
+      QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
    end
 end
 
@@ -933,62 +975,43 @@ end
 -- displays the original text
 function WoWeuCN_Quests_Translate_Off(typ)
    QuestInfoTitleHeader:SetFont(Original_Font1, 18);
-   QuestInfoTitleHeader:SetText(WoWeuCN_Quests_quest_EN.title);
-
-   QuestLogQuestTitle:SetFont(Original_Font1, 18);
-   QuestLogQuestTitle:SetText(WoWeuCN_Quests_quest_EN.title);
-
-   QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
-   QuestProgressTitleText:SetText(WoWeuCN_Quests_quest_EN.title);
-   
-   QuestInfoObjectivesHeader:SetFont(Original_Font1, 18);      -- Quest Objectives
+   QuestProgressTitleText:SetFont(Original_Font1, 18);
+   QuestInfoObjectivesHeader:SetFont(Original_Font1, 18);
    QuestInfoObjectivesHeader:SetText(WoWeuCN_Quests_MessOrig.objectives);
-
-   QuestLogRewardTitleText:SetFont(Original_Font1, 18);        -- Reward
-   QuestLogRewardTitleText:SetText(WoWeuCN_Quests_MessOrig.rewards);
-   QuestInfoRewardsFrame.Header:SetFont(Original_Font1, 18);   -- Reward
+   QuestInfoRewardsFrame.Header:SetFont(Original_Font1, 18);
    QuestInfoRewardsFrame.Header:SetText(WoWeuCN_Quests_MessOrig.rewards);
-   
-   QuestLogDescriptionTitle:SetFont(Original_Font1, 18);       -- Description
-   QuestLogDescriptionTitle:SetText(WoWeuCN_Quests_MessOrig.details);
-   
+   QuestInfoDescriptionHeader:SetFont(Original_Font1, 18);
+   QuestInfoDescriptionHeader:SetText(WoWeuCN_Quests_MessOrig.details);
    QuestProgressRequiredItemsText:SetFont(Original_Font1, 18);
    QuestProgressRequiredItemsText:SetText(WoWeuCN_Quests_MessOrig.reqitems);
+   QuestInfoDescriptionText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestProgressText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoRewardText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
+   QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
    
+--   MapQuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, 11);
+--   MapQuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, 11);
    QuestInfoSpellObjectiveLearnLabel:SetFont(Original_Font2, Original_Font2_Size);
    QuestInfoSpellObjectiveLearnLabel:SetText(WoWeuCN_Quests_MessOrig.learnspell);
    QuestInfoXPFrame.ReceiveText:SetFont(Original_Font2, Original_Font2_Size);
    QuestInfoXPFrame.ReceiveText:SetText(WoWeuCN_Quests_MessOrig.experience);
-   if (typ==1) then			-- full switchover (there is a translation)
-      QuestLogItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
-      QuestLogItemChooseText:SetText(WoWeuCN_Quests_MessOrig.itemchoose1);
-      QuestLogItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
-      QuestLogItemReceiveText:SetText(WoWeuCN_Quests_MessOrig.itemreceiv1);
+   if (typ==1) then			-- pełne przełączenie (jest tłumaczenie)
+      QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_MessOrig.itemchoose1);
+      QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_MessOrig.itemreceiv1);
       numer_ID = WoWeuCN_Quests_quest_EN.id;
       if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore original subtitle version
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
-         WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_EN.id);
+         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
         
-         QuestLogQuestDescription:SetFont(Original_Font2, Original_Font2_Size);
-         QuestLogQuestDescription:SetText(WoWeuCN_Quests_quest_EN.details);
-         QuestInfoDescriptionText:SetFont(Original_Font2, Original_Font2_Size);
+         QuestInfoTitleHeader:SetText(WoWeuCN_Quests_quest_EN.title);
+         QuestProgressTitleText:SetText(WoWeuCN_Quests_quest_EN.title);
          QuestInfoDescriptionText:SetText(WoWeuCN_Quests_quest_EN.details);
-         QuestInfoObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
          QuestInfoObjectivesText:SetText(WoWeuCN_Quests_quest_EN.objectives);
-         
-         QuestLogObjectivesText:SetFont(Original_Font2, Original_Font2_Size);
-         QuestLogObjectivesText:SetText(WoWeuCN_Quests_quest_EN.objectives);
-         
-         QuestProgressText:SetFont(Original_Font2, Original_Font2_Size);
          QuestProgressText:SetText(WoWeuCN_Quests_quest_EN.progress);
-         QuestInfoRewardText:SetFont(Original_Font2, Original_Font2_Size);
          QuestInfoRewardText:SetText(WoWeuCN_Quests_quest_EN.completion);
-         
-         QuestInfoRewardsFrame.ItemChooseText:SetFont(Original_Font2, Original_Font2_Size);
-         QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_quest_EN.itemchoose);
-         QuestInfoRewardsFrame.ItemReceiveText:SetFont(Original_Font2, Original_Font2_Size);
-         QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_quest_EN.itemreceive);
       end
    end
 end
@@ -1104,7 +1127,6 @@ function Broadcast()
    
    local bNetTagInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<>|r" 
    WoWeuCN_Quests_LastAnnounceDate = time()
-   --print(_G["ORANGE_FONT_COLOR_CODE"] .. "休闲玩家寻找华人休闲工会回归TBC，有意接收请联系" .. bNetTagInfo .. "。|r")
  end
  
 
