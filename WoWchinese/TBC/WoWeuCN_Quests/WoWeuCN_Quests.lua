@@ -185,6 +185,9 @@ end
 
 
 local function scanAuto(startIndex, attempt, counter)
+   if (startIndex > 30000 and startIndex < 60000) then
+      startIndex = 60000
+   end
    if (startIndex > 80000) then
      return;
    end
@@ -200,7 +203,7 @@ local function scanAuto(startIndex, attempt, counter)
      end
    end
    print(attempt)
-   print(counter)
+   print('index ' .. startIndex)
    WoWeuCN_Quests_QuestIndex = startIndex
    if (counter >= 5) then
       WoWeuCN_Quests_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
@@ -209,7 +212,46 @@ local function scanAuto(startIndex, attempt, counter)
    end
  end
  
+local function EnumerateTooltipLines_helper(...)
+   local texts = '';
+   local hasTitleSet = false
+   local hasObjectivesSet = false
+     for i = 1, select("#", ...) do
+       
+         local region = select(i, ...)
+         --print(region:GetObjectType())
+         if region and region:GetObjectType() == "FontString" then
+       local text = region:GetText() -- string or nil
+       --print(text)
+          if (text ~= nil) then
+         if (hasTitleSet ~= true and text ~= " ")
+           then
+             text = "{{" .. text .. "}}"
+             hasTitleSet = true
+           end
+ 
+         if (i > 3 and hasObjectivesSet ~= true and text ~= " ")
+           then
+             text = "{{" .. text .. "}}"
+             hasObjectivesSet = true
+           end
+         print(i)
+         print(text)
+         texts = texts .. text	
+          end
+         end
+    end
+    return texts
+ end
+
+ function EnumerateTooltipLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
+   return EnumerateTooltipLines_helper(tooltip:GetRegions())
+ end
+
  local function scanCacheAuto(startIndex, attempt, counter)
+    if (startIndex > 30000 and startIndex < 60000) then
+      startIndex = 60000
+    end
     if (startIndex > 80000) then
       return;
     end
@@ -554,7 +596,13 @@ function WoWeuCN_Quests_OnLoad()
 
 --   hooksecurefunc("QuestMapFrame_ShowQuestDetails", WoWeuCN_Quests_PrepareReload);
    
+   qcQuestInformationTooltipSetup();
    WoweuCN_LoadOriginalHeaders();
+end
+
+function qcQuestInformationTooltipSetup() -- *
+	qcQuestInformationTooltip = CreateFrame("GameTooltip", "qcQuestInformationTooltip", UIParent, "GameTooltipTemplate")
+	qcQuestInformationTooltip:SetFrameStrata("TOOLTIP")
 end
 
 -- Specifies the current quest ID number from various methods

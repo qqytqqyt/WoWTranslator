@@ -154,8 +154,9 @@ local function scanItemAuto(startIndex, attempt, counter)
   if (startIndex > 200000) then
     return;
   end
-  for i = startIndex, startIndex + 300 do
+  for i = startIndex, startIndex + 250 do
     local itemType, itemSubType, _, _, _, _, classID, subclassID = select(6, GetItemInfo(i))
+    print('index ' .. i)
     if (classID~=nil) then
       qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
       qcSpellInformationTooltip:ClearLines()
@@ -177,9 +178,9 @@ local function scanItemAuto(startIndex, attempt, counter)
       end
     else
       if (classId==nil) then
-        print(i .. " skip")
+        --print(i .. " skip")
       else
-        print(i .. " gear")
+        --print(i .. " gear")
       end
     end
   end
@@ -187,9 +188,9 @@ local function scanItemAuto(startIndex, attempt, counter)
   print(counter)
   WoWeuCN_Tooltips_ItemIndex = startIndex
   if (counter >= 5) then
-    WoWeuCN_Tooltips_wait(0.8, scanItemAuto, startIndex + 300, attempt + 1, 0)
+    WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex + 250, attempt + 1, 0)
   else
-    WoWeuCN_Tooltips_wait(0.8, scanItemAuto, startIndex, attempt + 1, counter + 1)
+    WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
@@ -261,20 +262,28 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton2:Disable();
       end
 
-    --spell scan
-    elseif (msg=="back" or msg=="BACK") then
-      WoWeuCN_Tooltips_SpellToolIndex = WoWeuCN_Tooltips_SpellToolIndex - 500;
-      print(WoWeuCN_Tooltips_SpellToolIndex);
+    -- clear previous scans
     elseif (msg=="clear" or msg=="CLEAR") then
       WoWeuCN_Tooltips_SpellToolIndex = 1;
       WoWeuCN_Tooltips_SpellToolTips0 = {} 
       WoWeuCN_Tooltips_SpellToolTips100000 = {} 
       WoWeuCN_Tooltips_SpellToolTips200000 = {} 
       WoWeuCN_Tooltips_SpellToolTips300000 = {} 
+      WoWeuCN_Tooltips_ItemToolTips0 = {} 
+      WoWeuCN_Tooltips_ItemToolTips100000 = {} 
+      WoWeuCN_Tooltips_ItemIndex = 1
+      WoWeuCN_Tooltips_UnitToolTips0 = {} 
+      WoWeuCN_Tooltips_UnitIndex = 1
       print("Clear");
-    elseif (msg=="reset" or msg=="RESET") then
-      WoWeuCN_Tooltips_SpellToolIndex = 1;
-      print("Reset");
+
+    --set scan index
+    elseif (string.sub(msg,1,string.len("index"))=="index") then
+      local index = string.sub(msg,string.len("index")+2)
+      WoWeuCN_Tooltips_SpellToolIndex = tonumber(index);
+      WoWeuCN_Tooltips_ItemIndex = tonumber(index);
+      WoWeuCN_Tooltips_UnitIndex = tonumber(index);
+      print(index)
+
     -- spell auto scan
     elseif (msg=="scanauto" or msg=="SCANAUTO") then
       if (WoWeuCN_Tooltips_SpellToolTips0 == nil) then
@@ -295,21 +304,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
 
       WoWeuCN_Tooltips_wait(0.1, scanAuto, WoWeuCN_Tooltips_SpellToolIndex, 1, 0)
 
-    -- item scan
-    elseif (msg=="itemreset" or msg=="ITEMRESET") then
-      WoWeuCN_Tooltips_ItemIndex = 1;
-      print("Reset");
-    elseif (msg=="itemclear" or msg=="ITEMCLEAR") then
-      WoWeuCN_Tooltips_ItemToolTips0 = {} 
-      WoWeuCN_Tooltips_ItemToolTips100000 = {} 
-      WoWeuCN_Tooltips_ItemIndex = 1
-      print("Clear");
-
-    -- unit
-    elseif (msg=="unitclear" or msg=="UNITCLEAR") then
-      WoWeuCN_Tooltips_UnitToolTips0 = {} 
-      WoWeuCN_Tooltips_UnitIndex = 1
-      print("Clear");
+    -- unit auto scan
     elseif (msg=="unitscanauto" or msg=="UNITSCANAUTO") then
       if (WoWeuCN_Tooltips_UnitToolTips0 == nil) then
         WoWeuCN_Tooltips_UnitToolTips0 = {} 
@@ -332,6 +327,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
         WoWeuCN_Tooltips_ItemToolTips100000 = {} 
       end
       WoWeuCN_Tooltips_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
+      
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
         InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
@@ -366,7 +362,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2020");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2022");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -438,6 +434,46 @@ function WoWeuCN_Tooltips_OnLoad()
    loadAllSpellData()
    loadAllItemData()
    loadAllUnitData()
+end
+
+local replacement = { 
+  ["瞬发"] = "À",
+  ["施法时间"] = "Á",
+  ["码射程"] = "Â",
+  ["秒"] = "Ã",
+  ["冷却时间"] = "Ä",
+  ["|cffffd100"] = "Å",
+  ["|r|cff7f7f7f"] = "Æ",
+  ["|r"] = "Ç",
+  ["近战范围"] = "È",
+  ["持续"] = "É",
+  ["造成"] = "Ê",
+
+  ["点伤害"] = "Ë",
+  ["点治疗"] = "Ì",
+  ["点生命值"] = "Í",
+  ["点法力值"] = "Î",
+  ["点物理伤害"] = "Ï",
+  ["点魔法伤害"] = "Ð",
+  ["点火焰伤害"] = "Ñ",
+  ["点冰霜伤害"] = "Ò",
+  ["点暗影伤害"] = "Ó",
+  ["点神圣伤害"] = "Ô",
+  ["点奥术伤害"] = "Õ",
+  ["点混乱伤害"] = "Ö",
+  ["点流血伤害"] = "Ø"
+}
+
+function ReplaceText(s)
+  if (s == nil) then
+    return nil
+  end
+
+  for origin,new in pairs(replacement) do
+    s = string.gsub(s, new, origin)
+  end
+
+  return s
 end
 
 function GetFirstLineColorCode(...)
@@ -600,6 +636,7 @@ function OnTooltipSpellElvUi(self)
     self:AddLine(" ")
     for i = 1, #spellData do
       local region = spellData[i]
+      region = ReplaceText(region)
       self:AddLine(region, 1, 1, 1, 1)
     end
   end
@@ -624,6 +661,7 @@ function OnTooltipSpell(self, tooltip)
     self:AddLine(" ")
     for i = 1, #spellData do
       local region = spellData[i]
+      region = ReplaceText(region)
       self:AddLine(region, 1, 1, 1, 1)
     end
   end
@@ -682,7 +720,7 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     if text == "VERSION" then
       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
     else
-      --print(text .. " " .. sender)
+      print(text .. " " .. sender)
     end
 	end
 end

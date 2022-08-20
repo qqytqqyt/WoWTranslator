@@ -1,6 +1,6 @@
-﻿## Interface: 20503
+﻿## Interface: 30400
 ## Title: WoWeuCN-Tooltips
-## Version: BC 2.5.3.0
+## Version: WotLK 3.4.0.0
 ## Notes_en: AddOn displays the translated tooltips information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
