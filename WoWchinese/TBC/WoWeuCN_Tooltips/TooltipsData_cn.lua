@@ -1,5 +1,5 @@
-﻿WoWeuCN_Tooltips_base = "2.5.1.1";   -- version
-WoWeuCN_Tooltips_date = "2021-05-03"; -- date of creation base
+﻿WoWeuCN_Tooltips_base = "3.4.0.0";   -- version
+WoWeuCN_Tooltips_date = "2022-08-18"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
@@ -9,7 +9,7 @@ WoWeuCN_Tooltips_Messages = {
     loaded     = "加载完成", 
     isactive   = "已启用", 
     isinactive = "未启用", 
-    author     = "Silvermoon (EU) - Nekonia",
+    author     = "Earthshaker (EU classic) - Nekomio",
  }; 
  
 WoWeuCN_Tooltips_Interface = { 
