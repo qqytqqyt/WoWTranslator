@@ -1145,7 +1145,6 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
  
 function Broadcast()
    print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
-   print (_G["ORANGE_FONT_COLOR_CODE"] .. "已加载NPC喊话翻译模块(beta)。仅支持部分NPC喊话。如需关闭请在插件设置中调整。");
    print (_G["ORANGE_FONT_COLOR_CODE"] .. "如遇字体缺失/不连贯问题请手动在客户端中采用多语系字体，或在插件设置中使用内置字体选项。");
     
    C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
