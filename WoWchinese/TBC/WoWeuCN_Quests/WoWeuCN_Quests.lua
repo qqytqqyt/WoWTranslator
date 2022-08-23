@@ -216,33 +216,35 @@ local function EnumerateTooltipLines_helper(...)
    local texts = '';
    local hasTitleSet = false
    local hasObjectivesSet = false
-     for i = 1, select("#", ...) do
-       
-         local region = select(i, ...)
-         --print(region:GetObjectType())
-         if region and region:GetObjectType() == "FontString" then
-       local text = region:GetText() -- string or nil
-       --print(text)
-          if (text ~= nil) then
-         if (hasTitleSet ~= true and text ~= " ")
-           then
-             text = "{{" .. text .. "}}"
-             hasTitleSet = true
-           end
- 
-         if (i > 3 and hasObjectivesSet ~= true and text ~= " ")
-           then
-             text = "{{" .. text .. "}}"
-             hasObjectivesSet = true
-           end
-         print(i)
-         print(text)
-         texts = texts .. text	
-          end
-         end
-    end
-    return texts
- end
+   for i = 1, select("#", ...) do
+      local region = select(i, ...)
+      --print(region:GetObjectType())
+      if region and region:GetObjectType() == "FontString" then
+         local text = region:GetText() -- string or nil
+         --print(text)
+         if (text ~= nil) then
+            if (hasTitleSet and hasObjectivesSet ~= true and text == QUEST_TOOLTIP_REQUIREMENTS) then
+               -- we have reached requirements before settings Objectives text, create a dummy
+               -- this indicates the quest can be turned in without accepting it into the quest log first
+               text = "{{}} "..text
+               hasObjectivesSet = true
+            end
+            if (hasTitleSet and hasObjectivesSet ~= true and text ~= " ") then
+               text = "{{" .. text .. "}}"
+               hasObjectivesSet = true
+            end
+            if (hasTitleSet ~= true and text ~= " ") then
+               text = "{{" .. text .. "}}"
+               hasTitleSet = true
+            end
+            print(i)
+            print(text)
+            texts = texts .. text      
+            end
+      end
+   end
+   return texts
+end
 
  function EnumerateTooltipLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
    return EnumerateTooltipLines_helper(tooltip:GetRegions())
