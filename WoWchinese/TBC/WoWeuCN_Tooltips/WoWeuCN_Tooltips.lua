@@ -720,7 +720,7 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     if text == "VERSION" then
       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
     else
-      print(text .. " " .. sender)
+      --print(text .. " " .. sender)
     end
 	end
 end
@@ -756,6 +756,5 @@ function Broadcast()
   
   local bNetTagInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<>|r" 
   WoWeuCN_Tooltips_LastAnnounceDate = time()
-  --print(_G["ORANGE_FONT_COLOR_CODE"] .. "休闲玩家寻找华人休闲工会回归TBC，有意接收请联系" .. bNetTagInfo .. "。|r")
 end
 
