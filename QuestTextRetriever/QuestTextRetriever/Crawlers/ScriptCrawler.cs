@@ -21,7 +21,7 @@ namespace QuestTextRetriever.Crawlers
             var scripts = new List<SimpleScriptObject>();
             {
                 var lines = File.ReadAllLines(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\scripts\scriptdev2_script_full.sql");
+                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\scripts\scriptdev2_script_full.sql");
                 foreach (var line in lines.Where(l => l.StartsWith(@"(-")))
                 {
                     var text = line.Replace("\\'", "$$");
@@ -43,7 +43,7 @@ namespace QuestTextRetriever.Crawlers
 
             {
                 var lines = File.ReadAllLines(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\scripts\Chinese_Script_Texts.sql");
+                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\scripts\Chinese_Script_Texts.sql");
                 foreach (var line in lines.Where(l => l.StartsWith(@"UPDATE `script_texts`")))
                 {
                     var text = line.Replace("\\'", "$$");
@@ -75,15 +75,16 @@ namespace QuestTextRetriever.Crawlers
         {
             var scripts = new List<Script>();
             bool retry = true;
-            for (int id = 0; id < 30000; id++)
+            using (var webClient = new WebClient() { Encoding = System.Text.Encoding.UTF8 })
             {
-                var script = new Script();
-                using (var webClient = new WebClient() { Encoding = System.Text.Encoding.UTF8 })
+                for (int id = 13300; id < 42000; id++)
                 {
+                    Console.WriteLine("Attempt: " + id);
+                    var script = new Script();
                     try
                     {
                         {
-                            var text = webClient.DownloadString(@"https://70.wowfan.net/en/?npc=" + id);
+                            var text = webClient.DownloadString(@"https://80.wowfan.net/en/?npc=" + id);
                             HtmlDocument document = new HtmlDocument();
                             document.LoadHtml(text);
                             var documentNode = document.DocumentNode;
@@ -109,7 +110,7 @@ namespace QuestTextRetriever.Crawlers
 
 
                         {
-                            var text = webClient.DownloadString(@"https://70.wowfan.net/?npc=" + id);
+                            var text = webClient.DownloadString(@"https://80.wowfan.net/?npc=" + id);
                             HtmlDocument document = new HtmlDocument();
                             document.LoadHtml(text);
                             var documentNode = document.DocumentNode;
@@ -154,7 +155,7 @@ namespace QuestTextRetriever.Crawlers
                         {
                             retry = true;
                         }
-                        
+
                         continue;
                     }
 
@@ -163,7 +164,7 @@ namespace QuestTextRetriever.Crawlers
             }
 
             var xmlText = scripts.ToXml();
-            File.WriteAllText(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\scripts\dbscripts3.xml", xmlText);
+            File.WriteAllText(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\scripts\dbscripts_wlk.xml", xmlText);
         }
     }
 }

@@ -135,28 +135,38 @@ namespace QuestTextRetriever
             }
         }
 
+        public void ExecuteOnQuestieFolder(string dirPath)
+        {
+            var dirInfo = new DirectoryInfo(dirPath);
+
+            foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
+            {
+                var outputPath = Path.Combine(dirPath, "output", fileInfo.Name);
+
+                var inputPaths = new List<string>();
+                inputPaths.Add(fileInfo.FullName);
+                var locale = fileInfo.Name.Split('.')[0];
+                Write(outputPath, inputPaths, OutputMode.Questie, locale);
+            }
+        }
+
         public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
         {
-            var itemTipList = new Dictionary<string, Tooltip>();
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\ptr-item0-200000.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\beta-item0-200000.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\classic_items.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.36216.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36512.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36532.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\beta_items.36710.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.36753.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.37844.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items_39170_100000.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.40843.lua", itemTipList);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.42423.lua", itemTipList);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.42423.lua", itemTipList);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.43903.lua", itemTipList);
+            var inputPaths = new List<string>();
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45166.lua");
 
-            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_44832.lua", itemTipList);
-            // Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items.lua", itemTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\items\bc_items_38537.lua", itemTipList, usedIds);
+            Write(outputPath, inputPaths, outputMode);
+        }
+
+        public void Write(string outputPath, List<string> inputPaths, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
+        {
+            var itemTipList = new Dictionary<string, Tooltip>();
+
+            foreach (var inputPath in inputPaths)
+            {
+                Read(inputPath, itemTipList);
+            }
+
             if (outputMode == OutputMode.WoWeuCN)
                 WriteToWoWEuCN(outputPath, itemTipList);
             else
@@ -176,6 +186,16 @@ namespace QuestTextRetriever
                 }
 
                 var sb = new StringBuilder();
+                var preText = @"if GetLocale() ~= ""localeCode"" then
+    return
+end
+
+-- - @type l10n
+local l10n = QuestieLoader:ImportModule(""l10n"")
+
+l10n.itemLookup[""localeCode""] = { ";
+                preText = preText.Replace("localeCode", locale);
+                sb.AppendLine(preText);
                 var itemTipOrderedList = itemTipList.Select(i => i.Value).OrderBy(q => int.Parse(q.Id)).ToList();
                 foreach (var itemTips in itemTipOrderedList)
                 {
@@ -191,6 +211,8 @@ namespace QuestTextRetriever
                     validIds.Remove(itemTips.Id);
                     sb.AppendLine();
                 }
+
+                sb.AppendLine("}");
 
                 File.WriteAllText(outputPath, sb.ToString());
             }

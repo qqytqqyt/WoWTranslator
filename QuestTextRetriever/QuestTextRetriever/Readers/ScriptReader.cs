@@ -17,7 +17,7 @@ namespace QuestTextRetriever.Readers
 {
     public class ScriptReader
     {
-        public static List<string> Removed_Text = new List<string> { "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior", "Blood Elf", "Draenei", "Gnome", "Dwarf", "Night Elf", "Orc", "Undead", "Tauren", "Troll" };
+        public static List<string> Removed_Text = new List<string> { "Druid", "Hunter", "Mage", "Paladin", "Priest", "Rogue", "Shaman", "Warlock", "Warrior", "Blood Elf", "Draenei", "Gnome", "Dwarf", "Night Elf", "Orc", "Undead", "Tauren", "Troll", "Death Knight" };
 
         public static long GetHash(string text)
         {
@@ -39,10 +39,10 @@ namespace QuestTextRetriever.Readers
             return counter % 4294967291; // 2 ^ 32 - 5: Prime(and different from the prime in the loop)
         }
         
-        public void Excecute(string outputPath)
+        public void Execute(string outputPath)
         {
             var content = File.ReadAllText(
-                @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\scripts\dbscripts2.xml");
+                @"G:\OneDrive\OwnProjects\WoWTranslator\Data\scripts\dbscripts_wlk.xml");
             var scriptList = content.FromXml<List<Script>>();
             var scriptObjects = new List<ScriptObject>();
             var usedHash = new HashSet<long>();

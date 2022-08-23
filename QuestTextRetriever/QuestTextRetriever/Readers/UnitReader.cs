@@ -66,7 +66,7 @@ namespace QuestTextRetriever
 
                     var spellTipLine = new TooltipLine();
                     spellTipLine.Line = tipLine;
-                    if (tipLine.StartsWith("等級") || tipLine.StartsWith("等级"))
+                    if (tipLine.StartsWith("等級") || tipLine.StartsWith("等级") || tipLine.Contains("??"))
                         break;
 
                     // red
@@ -78,24 +78,37 @@ namespace QuestTextRetriever
             }
         }
 
+        public void ExecuteOnQuestieFolder(string dirPath)
+        {
+            var dirInfo = new DirectoryInfo(dirPath);
+
+            foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
+            {
+                var outputPath = Path.Combine(dirPath, "output", fileInfo.Name);
+
+                var inputPaths = new List<string>();
+                inputPaths.Add(fileInfo.FullName);
+                var locale = fileInfo.Name.Split('.')[0];
+                Write(outputPath, inputPaths, OutputMode.Questie, locale);
+            }
+        }
+
         public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
         {
+            var inputPaths = new List<string>();
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_45166_cn.lua");
+
+            Write(outputPath, inputPaths, outputMode);
+        }
+
+        public void Write(string outputPath, List<string> inputPaths, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
+        {
             var unitTipList = new Dictionary<string, Tooltip>();
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells.lua", spellTipList, usedIds
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\classic_spells.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.36216.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36512.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36532.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36710.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_36753.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\retail_units_905.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_39170_100000.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_40843.lua", unitTipList);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\ptr_units_42423.lua", unitTipList);
-            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_44832.lua", unitTipList);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units_38339_zhcn.lua", spellTipList, usedIds);
+
+            foreach (var inputPath in inputPaths)
+            {
+                Read(inputPath, unitTipList);
+            }
 
             if (outputMode == OutputMode.WoWeuCN)
                 WriteToWoWEuCN(outputPath, unitTipList);
@@ -114,6 +127,19 @@ namespace QuestTextRetriever
 
                 var unitTipOrderedList = unitTipList.Select(u => u.Value).OrderBy(q => int.Parse(q.Id)).ToList();
                 var sb = new StringBuilder();
+
+                var preText = @"if GetLocale() ~= ""localeCode"" then
+    return
+end
+
+-- - @type l10n
+local l10n = QuestieLoader:ImportModule(""l10n"")
+
+l10n.npcNameLookup[""localeCode""] = { ";
+                preText = preText.Replace("localeCode", locale);
+
+                sb.AppendLine(preText);
+
                 foreach (var unitTips in unitTipOrderedList)
                 {
                     if (!validIds.Contains(unitTips.Id))
@@ -137,6 +163,8 @@ namespace QuestTextRetriever
                     validIds.Remove(unitTips.Id);
                     sb.AppendLine();
                 }
+
+                sb.AppendLine("}");
 
                 File.WriteAllText(outputPath, sb.ToString());
             }

@@ -27,20 +27,24 @@ namespace QuestTextRetriever
             //scriptCrawler.Execute();
             //var scriptCrawler = new ScriptCrawler();
             //scriptCrawler.ExecuteSql();
-            //var scriptReader = new ScriptReader();
-            //scriptReader.Excecute(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\scripts\output3.lua");
+
             //var crawler = new Crawler();
             //crawler.Execute();
 
             // retail
             //var questReader = new QuestReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWHeadData\WoWHead37844\", @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
             //questReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.2.5.43971.txt");
-            //var itemReader = new ItemReader();
-            //itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_output_questie_zhtw_44832.2.lua", OutputMode.Questie);
+            var itemReader = new ItemReader();
+            itemReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\items");
+            var unitReader = new UnitReader();
+            unitReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\units");
+            var questReader = new QuestReader();
+            questReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests");
+            //itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_output_zhcn_45166.lua", OutputMode.WoWeuCN);
             //var unitReader = new UnitReader();
-            //unitReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_output_questie_zhcn_44832.lua", OutputMode.Questie);
-            var spellReader = new SpellReader();
-            //spellReader.Write(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_output_43903.lua");
+            //unitReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_output_zhcn_45166.lua", OutputMode.WoWeuCN);
+            //var spellReader = new SpellReader();
+            //spellReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\wlk_spells_output_45166.lua");
 
             //var journalReader = new JournalReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\TBCTW\");
             //journalReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Journals\outputngatw.txt");
@@ -52,9 +56,10 @@ namespace QuestTextRetriever
             //       @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
             //questCacheReader.Execute(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\wlktest1.lua");
 
-            var questReader = new QuestReader();
-            questReader.Execute(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questie_44832_zhtw.lua", VersionMode.Classic, OutputMode.Questie);
-
+            //var questReader = new QuestReader();
+            //questReader.Execute(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\wlk_quests_output_questie_zhcn_45166.lua", VersionMode.Classic, OutputMode.Questie);
+            //var scriptReader = new ScriptReader();
+            //scriptReader.Execute(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\scripts\output_wlk.lua");
             //QuestReader.MergeOutputs();
 
             //DirectoryInfo dir = new DirectoryInfo(@"G:\Games\World of Warcraft\_retail_\WTF\Account\411375915#1\SavedVariables");
@@ -112,8 +117,52 @@ namespace QuestTextRetriever
             //    }
 
 
+            //var lines = File.ReadAllLines(@"G:\OneDrive\OwnProjects\Leveling\Turn-in-guide.lua");
+            //var questLines = File.ReadAllLines(@"G:\OneDrive\OwnProjects\Leveling\questie-db.txt");
+            //var expLines = File.ReadAllLines(@"G:\OneDrive\OwnProjects\Leveling\questie-exp.txt");
+            //var dictionary= new Dictionary<string, string>();
+            //var dictionaryExp = new Dictionary<string, string>();
+            //foreach (var questLine in questLines)
+            //{
+            //    var id = questLine.FirstBetween("[", "]");
+            //    var name = questLine.Substring(questLine.IndexOf("= {") + 4);
+            //    dictionary[id] = name;
+            //}
+
+            //foreach (var expLine in expLines)
+            //{
+            //    var id = expLine.FirstBetween("[", "]");
+            //    var exp = expLine.FirstBetween("{", "}");
+            //    dictionaryExp[id] = exp;
+            //}
+
+            //var outputLines = new List<string>();
+            //foreach (var line in lines.Select(l => l.Trim()).Where(l => l.StartsWith("Accept", StringComparison.OrdinalIgnoreCase)))
+            //{
+            //    var name = line.Substring(7).Trim().Trim(new[] {'.'});
+            //    var item = dictionary.FirstOrDefault(d => d.Value.StartsWith(name, StringComparison.OrdinalIgnoreCase));
+            //    if (item.Key != null)
+            //    {
+            //        if (dictionaryExp.ContainsKey(item.Key))
+            //        {
+            //            var level = dictionaryExp[item.Key].Split(',')[0];
+            //            var exp = dictionaryExp[item.Key].Split(',')[1].Trim();
+            //            outputLines.Add(line + "|" + item.Key + "|" + exp + "|" + level);
+            //        }
+            //        else
+            //        {
+            //            outputLines.Add(line + "|" + item.Key + "||" );
+            //        }
 
 
+            //    }
+            //    else
+            //    {
+            //        outputLines.Add(line + "|||");
+            //    }
+            //}
+
+            //File.WriteAllLines(@"G:\OneDrive\OwnProjects\Leveling\turn-in-output.csv", outputLines);
 
             //var retriever = new Retriever(@"D:\qqytqqyt\Documents\OwnProjects\Translator\686500-Wow-ChineseDB-master\Wow-ChineseDB\quest_template.sql", @"D:\qqytqqyt\Documents\OwnProjects\Translator\template.txt");
             //retriever.Execute(@"D:\qqytqqyt\Documents\OwnProjects\Translator\output.txt");
