@@ -578,7 +578,7 @@ function OnTooltipItem(self, tooltip)
       if not (line and line:GetText()) then
         line = _G[("ItemRefTooltipTextLeft%d"):format(i)]
       end
-      if line and line:GetText() and itemData[1] and itemData[1]:find(line:GetText()) then
+      if line and line:GetText() and string.len(line:GetText()) ~= 1 and itemData[1] and itemData[1]:find(line:GetText()) then
         return
       end
     end
@@ -628,7 +628,7 @@ function OnTooltipSpellElvUi(self)
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and line:GetText():find(spellData[1]) then
+      if line and line:GetText() and string.len(line:GetText()) ~= 1 and line:GetText():find(spellData[1]) then
         return
       end
     end
@@ -653,7 +653,7 @@ function OnTooltipSpell(self, tooltip)
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and line:GetText():find(spellData[1]) then
+      if line and line:GetText() and string.len(line:GetText()) ~= 1 and line:GetText():find(spellData[1]) then
         return
       end
     end
