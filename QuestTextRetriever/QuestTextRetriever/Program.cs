@@ -35,11 +35,13 @@ namespace QuestTextRetriever
             //var questReader = new QuestReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWHeadData\WoWHead37844\", @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
             //questReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.2.5.43971.txt");
             var itemReader = new ItemReader();
-            itemReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\items");
-            var unitReader = new UnitReader();
-            unitReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\units");
-            var questReader = new QuestReader();
-            questReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests");
+            itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_output_zhcn_45327.lua");
+            //itemReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\items");
+            //var unitReader = new UnitReader();
+            //unitReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\units");
+            //var questReader = new QuestReader();
+            //questReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests");
+            //questReader.Execute(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\output\koKR2.lua", VersionMode.Classic, OutputMode.Questie);
             //itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_output_zhcn_45166.lua", OutputMode.WoWeuCN);
             //var unitReader = new UnitReader();
             //unitReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_output_zhcn_45166.lua", OutputMode.WoWeuCN);

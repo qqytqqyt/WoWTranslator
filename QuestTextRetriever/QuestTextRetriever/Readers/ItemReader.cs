@@ -154,6 +154,7 @@ namespace QuestTextRetriever
         {
             var inputPaths = new List<string>();
             inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45166.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45327.lua");
 
             Write(outputPath, inputPaths, outputMode);
         }
@@ -201,6 +202,8 @@ l10n.itemLookup[""localeCode""] = { ";
                 {
                     if (!validIds.Contains(itemTips.Id))
                         continue;
+
+                    validIds.Remove(itemTips.Id);
 
                     if (!itemTips.TooltipLines.Any())
                         continue;

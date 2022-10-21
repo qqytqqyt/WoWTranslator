@@ -106,7 +106,10 @@ namespace QuestTextRetriever
         public void Execute(string outputPath, VersionMode versionMode = VersionMode.Retail, OutputMode outputMode = OutputMode.WoWeuCN)
         {
             var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_45166_cn.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR2.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR3.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR4.lua");
 
             Execute(outputPath, inputPaths, versionMode, outputMode);
         }
@@ -271,6 +274,19 @@ namespace QuestTextRetriever
             if (outputMode == OutputMode.Questie)
             {
                 var sb = new StringBuilder();
+                var filterPath =
+                    @"G:\Games\World of Warcraft\_classic_beta_\Interface\AddOns\Questie\Database\Wotlk\wotlkQuestDB.lua";
+
+                var lines = File.ReadAllLines(filterPath);
+                var validIds = new HashSet<string>();
+                foreach (var line in lines)
+                {
+                    if (!line.Trim().StartsWith("["))
+                        continue;
+
+                    var id = line.FirstBetween("[", "]");
+                    validIds.Add(id);
+                }
 
                 var preText = @"---@type l10n
 local l10n = QuestieLoader:ImportModule(""l10n"")
@@ -280,6 +296,8 @@ l10n.questLookup[""localeCode""] = { ";
                 sb.AppendLine(preText);
                 foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
                 {
+                    validIds.Remove(questObject.Id);
+
                     sb.Append("[" + questObject.Id + "] = {");
                     sb.Append("\"" + questObject.Title.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\", ");
                     if (string.IsNullOrEmpty(questObject.Description.Trim()))
