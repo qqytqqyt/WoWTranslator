@@ -947,11 +947,11 @@ function WoWeuCN_Quests_Translate_On(typ)
       QuestInfoTitleHeader:SetFont(WoWeuCN_Quests_Font1, 18);
       QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
    end
-   if (WoWeuCN_Quests_PS["transobjectives"]=="1") then
-      QuestInfoObjectivesHeader:SetFont(WoWeuCN_Quests_Font1, 18);
-      QuestInfoObjectivesHeader:SetText(WoWeuCN_Quests_Messages.objectives);
-      QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
-   end
+   
+   QuestInfoObjectivesHeader:SetFont(WoWeuCN_Quests_Font1, 18);
+   QuestInfoObjectivesHeader:SetText(WoWeuCN_Quests_Messages.objectives);
+   QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
+
    QuestInfoRewardsFrame.Header:SetFont(WoWeuCN_Quests_Font1, 18);
    QuestInfoRewardsFrame.Header:SetText(WoWeuCN_Quests_Messages.rewards);
    QuestInfoDescriptionHeader:SetFont(WoWeuCN_Quests_Font1, 18);
@@ -986,7 +986,7 @@ function WoWeuCN_Quests_Translate_On(typ)
           QuestInfoDescriptionText:SetFont(WoWeuCN_Quests_Font2, 13);
           QuestInfoDescriptionText:SetText(WoWeuCN_Quests_quest_LG.details);
         end
-        if (WoWeuCN_Quests_PS["transobjectives"]=="1" and WoWeuCN_Quests_quest_LG.objectives ~= WoWeuCN_Quests_quest_EN.objectives) then
+        if (WoWeuCN_Quests_quest_LG.objectives ~= WoWeuCN_Quests_quest_EN.objectives) then
           QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
           QuestInfoObjectivesText:SetText(WoWeuCN_Quests_quest_LG.objectives);
         end
