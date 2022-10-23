@@ -302,6 +302,8 @@ namespace QuestTextRetriever.Readers
                             var check4 = dbReader.ReadByte(8);
                             var check1 = dbReader.ReadByte(4);
                             var check2 = dbReader.ReadByte(4);
+                            dbReader.ReadByte(12
+                            );
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
                             var title = string.Empty;
@@ -334,8 +336,8 @@ namespace QuestTextRetriever.Readers
                                     descriptionLength <<= 1;
                                     descriptionLength |= (lengthBytes[4] & 0x80) >> 7;
 
-                                    if (numObjectives > 2)
-                                        Console.Write(true);
+                                    //if (numObjectives > 2)
+                                    //    Console.Write(true);
 
                                     for (int i = 0; i < numObjectives; ++i)
                                     {
@@ -387,6 +389,7 @@ namespace QuestTextRetriever.Readers
                                     continue;
                                 }
 
+                                Console.WriteLine("(" + attempCount + ")");
                                 attempCount = 1;
                                 var quest = new Quest();
                                 quest.Id = id.ToString();

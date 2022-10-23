@@ -15,15 +15,15 @@ namespace QuestTextRetriever
         public QuestReader()
         {
             m_dirPath = @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWHeadData\WoWHead37844\";
-            m_template = @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt";
+            m_template = File.ReadAllText(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
         }
 
         public static void MergeOutputs(string output)
         {
             var dic = new SortedDictionary<int, string>();
             var filelist = new List<string>();
-            filelist.Add(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\wlk_quests_data.lua");
-            filelist.Add(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\classic_quests_data.lua");
+            filelist.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\output_46144.lua");
+            filelist.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.2.5.43971.txt");
 
             foreach (var file in filelist)
             {
@@ -106,10 +106,12 @@ namespace QuestTextRetriever
         public void Execute(string outputPath, VersionMode versionMode = VersionMode.Retail, OutputMode outputMode = OutputMode.WoWeuCN)
         {
             var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR.lua");
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR2.lua");
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR3.lua");
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR4.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questobjectives46144.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questobjectives46144_1.lua");
+            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR.lua");
+            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR2.lua");
+            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR3.lua");
+            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR4.lua");
 
             Execute(outputPath, inputPaths, versionMode, outputMode);
         }
@@ -135,65 +137,76 @@ namespace QuestTextRetriever
 
             if (versionMode == VersionMode.Retail)
             {
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39226.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39318.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.1.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39497.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39617.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39653.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache40843.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache42423.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43903.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43971.wdb", cachedQuests);
+                #region legacy
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39226.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39318.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.1.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39497.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39617.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39653.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache40843.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache42423.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43903.wdb", cachedQuests);
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43971.wdb", cachedQuests);
 
-                ReadObjectives(
-               @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39226.lua",
-               objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39318.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.1.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39497.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39617.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39653.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.40843.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.42423.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.43903.lua",
-                    objectives);
-                ReadObjectives(
-                    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.43971.lua",
-                    objectives);
-                
-                var dirPath = new DirectoryInfo(m_dirPath);
-                ReadQuestApis(dirPath, apis);
+                // ReadObjectives(
+                //@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39226.lua",
+                //objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39318.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.1.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39497.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39617.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39653.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.40843.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.42423.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.43903.lua",
+                //     objectives);
+                // ReadObjectives(
+                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.43971.lua",
+                //     objectives);
+
+                // var dirPath = new DirectoryInfo(m_dirPath);
+                // ReadQuestApis(dirPath, apis);
+                #endregion
+
+                //QuestCacheReader.ReadQuestCacheRetail(
+                //    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43971.wdb", cachedQuests);
+                QuestCacheReader.ReadQuestCacheRetail(
+                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache46144.wdb", cachedQuests);
+                QuestCacheReader.ReadQuestCacheRetail(
+                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache46144_2.wdb", cachedQuests);
+                QuestCacheReader.ReadQuestCacheRetail(
+                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache46144_3.wdb", cachedQuests);
             }
 
             if (versionMode == VersionMode.Classic)

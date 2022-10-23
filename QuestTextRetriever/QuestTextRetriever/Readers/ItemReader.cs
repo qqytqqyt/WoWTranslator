@@ -107,6 +107,9 @@ namespace QuestTextRetriever
                     if (r == "0.99999779462814" && g == "0.12548992037773" && b == "0.12548992037773")
                         continue;
 
+                    if (r == "1" && g == "0.12549020349979" && b == "0.12549020349979")
+                        continue;
+
                     if (isGear)
                     {
                         foreach (var grayedOutIndicator in StringUtils.GrayedOutIndicatorText)
@@ -153,8 +156,10 @@ namespace QuestTextRetriever
         public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
         {
             var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45166.lua");
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45327.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.43903.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.46144.lua");
+            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45166.lua");
+            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45327.lua");
 
             Write(outputPath, inputPaths, outputMode);
         }
@@ -261,6 +266,8 @@ l10n.itemLookup[""localeCode""] = { ";
                 sb.Append("\"");
                 foreach (var itemTipLine in itemTips.TooltipLines)
                 {
+                    if (itemTipLine.Line.Contains(@"需要等级"))
+                        Console.Write(true);
                     int r = (int) (itemTipLine.R * 255);
                     int g = (int) (itemTipLine.G * 255);
                     int b = (int) (itemTipLine.B * 255);

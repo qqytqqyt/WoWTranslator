@@ -114,6 +114,9 @@ namespace QuestTextRetriever
                     if (r == "0.99999779462814" && g == "0.12548992037773" && b == "0.12548992037773")
                         continue;
 
+                    if (r == "1" && g == "0.12549020349979" && b == "0.12549020349979")
+                        continue;
+
                     spellTipLine.R = Math.Round(double.Parse(r), 2);
                     spellTipLine.G = Math.Round(double.Parse(g), 2);
                     spellTipLine.B = Math.Round(double.Parse(b), 2);
@@ -158,9 +161,11 @@ namespace QuestTextRetriever
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_1.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_2.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_3.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_42423.lua", spellTipList);
-            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\wlk_spells_45166.lua", spellTipList);
-
+            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_42423.lua", spellTipList);
+            //Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\wlk_spells_45166.lua", spellTipList);
+            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_46144.lua", spellTipList);
+            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_46144.1.lua", spellTipList);
+            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_46144.2.lua", spellTipList);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\tbc_spells_38225.lua", spellTipList, usedIds);
             //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\tbc_spells_38537.lua", spellTipList, usedIds);

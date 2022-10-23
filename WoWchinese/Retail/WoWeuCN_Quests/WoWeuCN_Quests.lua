@@ -191,7 +191,7 @@ end
 
 
 local function scanAuto(startIndex, attempt, counter)
-  if (startIndex > 80000) then
+  if (startIndex > 100000) then
     return;
   end
   for i = startIndex, startIndex + 100 do
@@ -216,7 +216,7 @@ local function scanAuto(startIndex, attempt, counter)
 end
 
 local function scanCacheAuto(startIndex, attempt, counter)
-   if (startIndex > 80000) then
+   if (startIndex > 100000) then
      return;
    end
    if (counter == 0) then
@@ -415,12 +415,9 @@ end
 
 
 function WoWeuCN_Quests_SetCheckButtonState()
-  WoWeuCN_QuestsCheckButton0:SetChecked(WoWeuCN_Quests_PS["active"]=="1");
-  WoWeuCN_QuestsCheckButton3:SetChecked(WoWeuCN_Quests_PS["transtitle"]=="1");
-  WoWeuCN_QuestsCheckButton4:SetChecked(WoWeuCN_Quests_PS["transobjectives"]=="1");
-  WoWeuCN_QuestsCheckOther1:SetChecked(WoWeuCN_Quests_PS["other1"]=="1");
-  WoWeuCN_QuestsCheckOther2:SetChecked(WoWeuCN_Quests_PS["other2"]=="1");
-  WoWeuCN_QuestsCheckOther3:SetChecked(WoWeuCN_Quests_PS["other3"]=="1");
+  WoWeuCN_QuestsCheckButton0:SetValue(WoWeuCN_Quests_PS["active"]=="1");
+  WoWeuCN_QuestsCheckButton3:SetValue(WoWeuCN_Quests_PS["transtitle"]=="1");
+  WoWeuCN_QuestsCheckButton4:SetValue(WoWeuCN_Quests_PS["transobjectives"]=="1");
 end
 
 function WoweuCN_LoadOriginalHeaders()
@@ -475,11 +472,11 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsPlayer:SetText("作者 : "..WoWeuCN_Quests_Messages.author);
   WoWeuCN_QuestsPlayer:SetFont(WoWeuCN_Quests_Font2, 16);
 
-  local WoWeuCN_QuestsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton0", WoWeuCN_QuestsOptions, "OptionsCheckButtonTemplate");
+  local WoWeuCN_QuestsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton0", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsHeader, "BOTTOMLEFT", 0, -44);
   WoWeuCN_QuestsCheckButton0:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["active"]=="1") then WoWeuCN_Quests_PS["active"]="0" else WoWeuCN_Quests_PS["active"]="1" end; end);
-  WoWeuCN_QuestsCheckButton0Text:SetFont(WoWeuCN_Quests_Font2, 13);
-  WoWeuCN_QuestsCheckButton0Text:SetText(WoWeuCN_Quests_Interface.active);
+  WoWeuCN_QuestsCheckButton0.Text:SetFont(WoWeuCN_Quests_Font2, 13);
+  WoWeuCN_QuestsCheckButton0.Text:SetText(WoWeuCN_Quests_Interface.active);
 
   local WoWeuCN_QuestsOptionsMode1 = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
   WoWeuCN_QuestsOptionsMode1:SetFontObject(GameFontWhite);
@@ -490,17 +487,19 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsMode1:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsOptionsMode1:SetText(WoWeuCN_Quests_Interface.options1);
   
-  local WoWeuCN_QuestsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton3", WoWeuCN_QuestsOptions, "OptionsCheckButtonTemplate");
+  local WoWeuCN_QuestsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton3", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -5);
   WoWeuCN_QuestsCheckButton3:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["transtitle"]=="0") then WoWeuCN_Quests_PS["transtitle"]="1" else WoWeuCN_Quests_PS["transtitle"]="0" end; end);
-  WoWeuCN_QuestsCheckButton3Text:SetFont(WoWeuCN_Quests_Font2, 13);
-  WoWeuCN_QuestsCheckButton3Text:SetText(WoWeuCN_Quests_Interface.transtitle);
+  WoWeuCN_QuestsCheckButton3.Text:SetFont(WoWeuCN_Quests_Font2, 13);
+  WoWeuCN_QuestsCheckButton3:SetSize(500, 21)
+  WoWeuCN_QuestsCheckButton3.Text:SetText(WoWeuCN_Quests_Interface.transtitle);
   
-  local WoWeuCN_QuestsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton4", WoWeuCN_QuestsOptions, "OptionsCheckButtonTemplate");
+  local WoWeuCN_QuestsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton4", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -25);
   WoWeuCN_QuestsCheckButton4:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["transobjectives"]=="0") then WoWeuCN_Quests_PS["transobjectives"]="1" else WoWeuCN_Quests_PS["transobjectives"]="0" end; end);
-  WoWeuCN_QuestsCheckButton4Text:SetFont(WoWeuCN_Quests_Font2, 13);
-  WoWeuCN_QuestsCheckButton4Text:SetText(WoWeuCN_Quests_Interface.transobjectives);
+  WoWeuCN_QuestsCheckButton4.Text:SetFont(WoWeuCN_Quests_Font2, 13);
+  WoWeuCN_QuestsCheckButton4:SetSize(500, 21)
+  WoWeuCN_QuestsCheckButton4.Text:SetText(WoWeuCN_Quests_Interface.transobjectives);
 end
 
 

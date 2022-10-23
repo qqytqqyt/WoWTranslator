@@ -96,7 +96,7 @@ namespace QuestTextRetriever
         public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
         {
             var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\wlk_units_45166_cn.lua");
+            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\dragon_units_46144.lua");
 
             Write(outputPath, inputPaths, outputMode);
         }
