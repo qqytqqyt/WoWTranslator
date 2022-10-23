@@ -82,7 +82,7 @@ function WoWeuCN_Tooltips_wait(delay, func, ...)
 end
 
 local function scanAuto(startIndex, attempt, counter)
-  if (startIndex > 400000) then
+  if (startIndex > 500000) then
     return;
   end
   for i = startIndex, startIndex + 150 do
@@ -108,6 +108,10 @@ local function scanAuto(startIndex, attempt, counter)
         if (WoWeuCN_Tooltips_SpellToolTips300000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_SpellToolTips300000[i .. '']) < string.len(text)) then
           WoWeuCN_Tooltips_SpellToolTips300000[i .. ''] = text
         end
+      elseif (i >=400000 and i < 500000) then
+        if (WoWeuCN_Tooltips_SpellToolTips400000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_SpellToolTips400000[i .. '']) < string.len(text)) then
+          WoWeuCN_Tooltips_SpellToolTips400000[i .. ''] = text
+        end
       end
       print(i)
     end
@@ -123,7 +127,7 @@ local function scanAuto(startIndex, attempt, counter)
 end
 
 local function scanUnitAuto(startIndex, attempt, counter)
-  if (startIndex > 200000) then
+  if (startIndex > 300000) then
     return;
   end
   for i = startIndex, startIndex + 250 do
@@ -142,6 +146,10 @@ local function scanUnitAuto(startIndex, attempt, counter)
       if (WoWeuCN_Tooltips_UnitToolTips100000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_UnitToolTips100000[i .. '']) < string.len(text)) then
         WoWeuCN_Tooltips_UnitToolTips100000[i .. ''] = text
       end
+    elseif (i >=200000 and i < 300000) then
+      if (WoWeuCN_Tooltips_UnitToolTips200000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_UnitToolTips200000[i .. '']) < string.len(text)) then
+        WoWeuCN_Tooltips_UnitToolTips200000[i .. ''] = text
+      end
     end
     end
     print(i)
@@ -157,7 +165,7 @@ local function scanUnitAuto(startIndex, attempt, counter)
 end
 
 local function scanItemAuto(startIndex, attempt, counter)
-  if (startIndex > 200000) then
+  if (startIndex > 300000) then
     return;
   end
   for i = startIndex, startIndex + 150 do
@@ -177,6 +185,10 @@ local function scanItemAuto(startIndex, attempt, counter)
         elseif (i >=100000 and i < 200000) then
           if (WoWeuCN_Tooltips_ItemToolTips100000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_ItemToolTips100000[i .. '']) < string.len(text)) then
             WoWeuCN_Tooltips_ItemToolTips100000[i .. ''] = text
+          end
+        elseif (i >=200000 and i < 300000) then
+          if (WoWeuCN_Tooltips_ItemToolTips200000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_ItemToolTips200000[i .. '']) < string.len(text)) then
+            WoWeuCN_Tooltips_ItemToolTips200000[i .. ''] = text
           end
           print(i)
         end
@@ -286,12 +298,15 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       WoWeuCN_Tooltips_SpellToolTips0 = {} 
       WoWeuCN_Tooltips_SpellToolTips100000 = {} 
       WoWeuCN_Tooltips_SpellToolTips200000 = {} 
-      WoWeuCN_Tooltips_SpellToolTips300000 = {}       
+      WoWeuCN_Tooltips_SpellToolTips300000 = {}   
+      WoWeuCN_Tooltips_SpellToolTips400000 = {}         
       WoWeuCN_Tooltips_ItemToolTips0 = {} 
       WoWeuCN_Tooltips_ItemToolTips100000 = {} 
+      WoWeuCN_Tooltips_ItemToolTips200000 = {} 
       WoWeuCN_Tooltips_ItemIndex = 1
       WoWeuCN_Tooltips_UnitToolTips0 = {} 
       WoWeuCN_Tooltips_UnitToolTips100000 = {} 
+      WoWeuCN_Tooltips_UnitToolTips200000 = {} 
       WoWeuCN_Tooltips_UnitIndex = 1
       print("Clear");
 
@@ -309,6 +324,9 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       if (WoWeuCN_Tooltips_SpellToolTips300000 == nil) then
         WoWeuCN_Tooltips_SpellToolTips300000 = {} 
       end
+      if (WoWeuCN_Tooltips_SpellToolTips400000 == nil) then
+        WoWeuCN_Tooltips_SpellToolTips400000 = {} 
+      end
       if (WoWeuCN_Tooltips_SpellToolIndex == nil) then
         WoWeuCN_Tooltips_SpellToolIndex = 1
       end
@@ -321,6 +339,9 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       end
       if (WoWeuCN_Tooltips_UnitToolTips100000 == nil) then
         WoWeuCN_Tooltips_UnitToolTips100000 = {} 
+      end
+      if (WoWeuCN_Tooltips_UnitToolTips200000 == nil) then
+        WoWeuCN_Tooltips_UnitToolTips200000 = {} 
       end
       if (WoWeuCN_Tooltips_UnitIndex == nil) then
         WoWeuCN_Tooltips_UnitIndex = 1
@@ -337,6 +358,9 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       end
       if (WoWeuCN_Tooltips_ItemToolTips100000 == nil) then
         WoWeuCN_Tooltips_ItemToolTips100000 = {} 
+      end
+      if (WoWeuCN_Tooltips_ItemToolTips200000 == nil) then
+        WoWeuCN_Tooltips_ItemToolTips200000 = {} 
       end
       WoWeuCN_Tooltips_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
 
