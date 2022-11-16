@@ -474,19 +474,12 @@ function WoWeuCN_Tooltips_OnLoad()
    WoWeuCN_Tooltips:SetScript("OnEvent", WoWeuCN_Tooltips_OnEvent);
    WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
    
-   GameTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpell(..., GameTooltip) end)
-   GameTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ItemRefTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   GameTooltipTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+   if (GetLocale() ~= "zhCN") then
+    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Spell, function(...) OnTooltipSpell(..., GameTooltip) end)
+    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(...) OnTooltipItem(..., GameTooltip) end)
+    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(...) OnTooltipUnit(..., GameTooltip) end)
+   end
 
-   EmbeddedItemTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ItemRefShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ItemRefShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-
-   GameTooltip:HookScript("OnTooltipSetUnit", function(...) OnTooltipUnit(..., GameTooltip) end)
-   
    if (_G.ElvUISpellBookTooltip ~= nil) then
     _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
    end
