@@ -480,10 +480,6 @@ function WoWeuCN_Tooltips_OnLoad()
     TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(...) OnTooltipUnit(..., GameTooltip) end)
    end
 
-   if (_G.ElvUISpellBookTooltip ~= nil) then
-    _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
-   end
-
    qcSpellInformationTooltipSetup();
    loadAllSpellData()
    loadAllItemData()
