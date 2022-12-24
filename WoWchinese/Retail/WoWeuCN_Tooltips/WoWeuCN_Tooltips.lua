@@ -559,6 +559,11 @@ function OnTooltipUnit(self, tooltip)
   if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transunit"]=="0") then
     return
   end
+
+  if (self ~= tooltip) then
+    return
+  end
+
 	-- Case for linked unit
   local unitName, unit = self:GetUnit()
   if (unit == nil) then 
