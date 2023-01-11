@@ -214,6 +214,7 @@ end
 local function loadAllItemData()
   loadItemData0();
   loadItemData100000();
+  loadItemData200000();
 end
 
 local function loadAllSpellData()
@@ -221,6 +222,7 @@ local function loadAllSpellData()
   loadSpellData100000();
   loadSpellData200000();
   loadSpellData300000();
+  loadSpellData400000();
 end
 
 local function loadAllUnitData()
@@ -478,6 +480,9 @@ function WoWeuCN_Tooltips_OnLoad()
     TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Spell, function(...) OnTooltipSpell(..., GameTooltip) end)
     TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(...) OnTooltipItem(..., GameTooltip) end)
     TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(...) OnTooltipUnit(..., GameTooltip) end)
+    --TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Toy, function(...) OnTooltipItem(..., GameTooltip) end)
+    --TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.UnitAura, function(...) OnTooltipSpell(..., GameTooltip) end)
+    --TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.RecipeRankInfo, function(...) OnTooltipSpell(..., GameTooltip) end)
    end
 
    qcSpellInformationTooltipSetup();
@@ -658,6 +663,8 @@ function GetItemData(id)
     dataIndex = WoWeuCN_Tooltips_ItemIndexData_0[num_id]
   elseif (num_id >= 100000 and num_id < 200000) then
     dataIndex = WoWeuCN_Tooltips_ItemIndexData_100000[num_id - 100000]
+  elseif (num_id >= 200000 and num_id < 300000) then
+    dataIndex = WoWeuCN_Tooltips_ItemIndexData_200000[num_id - 200000]
   end
 
   if (dataIndex == nil) then
@@ -668,6 +675,8 @@ function GetItemData(id)
     return split(WoWeuCN_Tooltips_ItemData_0[dataIndex], '£')
   elseif (num_id >= 100000 and num_id < 200000) then
     return split(WoWeuCN_Tooltips_ItemData_100000[dataIndex], '£')
+  elseif (num_id >= 200000 and num_id < 300000) then
+    return split(WoWeuCN_Tooltips_ItemData_200000[dataIndex], '£')
   end
 
   return nil
