@@ -9,6 +9,30 @@ local WoWeuCN_AddonPrefix = "WoWeuCN";
 local last_time = GetTime();
 local last_text = 0;
 
+local kinds = {
+  spell = "Spell",
+  item = "Item",
+  unit = "NPC",
+  quest = "Quest",
+  talent = "Talent",
+  achievement = "Achievement",
+  criteria = "Criteria",
+  ability = "Ability",
+  currency = "Currency",
+  artifactpower = "ArtifactPower",
+  enchant = "Enchant",
+  bonus = "Bonus",
+  gem = "Gem",
+  mount = "Mount",
+  companion = "Companion",
+  macro = "Macro",
+  equipmentset = "EquipmentSet",
+  visual = "Visual",
+  source = "Source",
+  species = "Species",
+  icon = "Icon",
+}
+
 -- Global variables initialtion
 function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_LastAnnounceDate) then
@@ -470,6 +494,27 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   
 end
 
+local function translateTooltip(tooltip, data, kind)
+  for _, val in ipairs(data.args) do
+    if kind == kinds.unit and val.guidVal then
+      local id = tonumber(val.guidVal:match("-(%d+)-%x+$"), 10)
+      if id and val.guidVal:match("%a+") ~= "Player" then 
+          SetUnitTooltip(tooltip, id)
+      end
+    else
+      if val.field == "id" and val.intVal then
+        if kind == kinds.spell then
+          SetSpellTooltip(tooltip, val.intVal)
+        elseif kind == kinds.item then
+          SetItemTooltip(tooltip, val.intVal)
+        elseif kind == kinds.unit then
+          SetUnitTooltip(tooltip, val.intVal)
+        end
+      end
+    end
+  end
+end
+
 -- First function called after the add-in has been loaded
 function WoWeuCN_Tooltips_OnLoad()
    WoWeuCN_Tooltips = CreateFrame("Frame");
@@ -477,9 +522,40 @@ function WoWeuCN_Tooltips_OnLoad()
    WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
    
    if (GetLocale() ~= "zhCN") then
-    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Spell, function(...) OnTooltipSpell(..., GameTooltip) end)
-    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Item, function(...) OnTooltipItem(..., GameTooltip) end)
-    TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Unit, function(...) OnTooltipUnit(..., GameTooltip) end)
+    if TooltipDataProcessor then
+      TooltipDataProcessor.AddTooltipPostCall(TooltipDataProcessor.AllTypes, function(tooltip, data)
+        if not data or not data.type then return end
+        if data.type == Enum.TooltipDataType.Spell then
+          translateTooltip(tooltip, data, kinds.spell)
+        elseif data.type == Enum.TooltipDataType.Item then
+          translateTooltip(tooltip, data, kinds.item)
+        elseif data.type == Enum.TooltipDataType.Unit then
+          translateTooltip(tooltip, data, kinds.unit)
+        elseif data.type == Enum.TooltipDataType.Currency then
+          translateTooltip(tooltip, data, kinds.currency)
+        elseif data.type == Enum.TooltipDataType.UnitAura then
+          translateTooltip(tooltip, data, kinds.spell)
+        elseif data.type == Enum.TooltipDataType.Mount then
+          translateTooltip(tooltip, data, kinds.mount)
+        elseif data.type == Enum.TooltipDataType.Achievement then
+          translateTooltip(tooltip, data, kinds.achievement)
+        elseif data.type == Enum.TooltipDataType.EquipmentSet then
+          translateTooltip(tooltip, data, kinds.equipmentset)
+        elseif data.type == Enum.TooltipDataType.RecipeRankInfo then
+          translateTooltip(tooltip, data, kinds.spell)
+        elseif data.type == Enum.TooltipDataType.Totem then
+          translateTooltip(tooltip, data, kinds.spell)
+        elseif data.type == Enum.TooltipDataType.Toy then
+          translateTooltip(tooltip, data, kinds.item)
+        elseif data.type == Enum.TooltipDataType.Quest then
+          translateTooltip(tooltip, data, kinds.quest)
+        elseif data.type == Enum.TooltipDataType.Macro then
+          translateTooltip(tooltip, data, kinds.macro)
+        end
+      end)
+    end
+
+    hooksecurefunc(GameTooltip, "SetAction", function(...) OnTooltipSetAction(...) end)
     --TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.Toy, function(...) OnTooltipItem(..., GameTooltip) end)
     --TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.UnitAura, function(...) OnTooltipSpell(..., GameTooltip) end)
     --TooltipDataProcessor.AddTooltipPostCall(Enum.TooltipDataType.RecipeRankInfo, function(...) OnTooltipSpell(..., GameTooltip) end)
@@ -577,9 +653,21 @@ function OnTooltipUnit(self, tooltip)
 
   local unitGUID = UnitGUID(unit);
   local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-", unitGUID);
-  local unitData = GetUnitData(npc_id)
+  SetUnitTooltip(self, npc_id)
+end
 
-  if ( unitData ) then  
+function SetUnitTooltip(self, id)
+  local unitData = GetUnitData(id)
+
+  if ( unitData ) then      
+    local lines = self:NumLines()
+    for i= 1, lines do
+      local line = _G[("GameTooltipTextLeft%d"):format(i)]
+      if line and line:GetText() and line:GetText():find(unitData[1]) then
+        return
+      end
+    end
+
     self:AddLine(" ")
     for i = 1, #unitData do
       local text = unitData[i]
@@ -619,6 +707,12 @@ function GetUnitData(id)
   return nil
 end
 
+function OnTooltipSetAction(self, slot)
+  local kind, id = GetActionInfo(slot)
+  if (kind == "item") then
+    SetItemTooltip(self, id)
+  end
+end
 
 function OnTooltipItem(self, tooltip)
   if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transitem"]=="0") then
@@ -635,6 +729,10 @@ function OnTooltipItem(self, tooltip)
   end
 
   local itemID = string.match(itemLink, 'Hitem:(%d+):')
+  SetItemTooltip(self, itemID)
+end
+
+function SetItemTooltip(self, itemID)
   local itemData = GetItemData(itemID)
   if ( itemData ) then  
     local lines = self:NumLines()
@@ -649,6 +747,7 @@ function OnTooltipItem(self, tooltip)
       local region = itemData[i]
       self:AddLine(region, 1, 1, 1, 1)
     end
+    self:Show()
   end
 end
 
@@ -688,31 +787,8 @@ function OnTooltipSpellElvUi(self)
   end
 	-- Case for linked spell
   local name,id = self:GetSpell()
-  local spellData = GetSpellData(id)
-  if ( spellData ) then
-
-    if (string.find(spellData[1], "¿")) then
-      spellData = GetSpellData(string.sub(spellData[1], 3))
-      if (not spellData) then
-        return
-      end
-    end
-    
-    local lines = self:NumLines()
-    for i= 1, lines do
-      local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and line:GetText():find(spellData[1]) then
-        return
-      end
-    end
   
-    self:AddLine(" ")
-    for i = 1, #spellData do
-      local region = spellData[i]
-      region = ReplaceText(region)
-      self:AddLine(region, 1, 1, 1, 1)
-    end
-  end
+  SetSpellTooltip(self, id)
 end
 
 function OnTooltipSpell(self, tooltip)
@@ -721,6 +797,10 @@ function OnTooltipSpell(self, tooltip)
   end
 	-- Case for linked spell
   local name,id = self:GetSpell()
+  SetSpellTooltip(self, id)
+end
+
+function SetSpellTooltip(self, id)
   local spellData = GetSpellData(id)
   if ( spellData ) then
     
@@ -745,6 +825,7 @@ function OnTooltipSpell(self, tooltip)
       region = ReplaceText(region)
       self:AddLine(region, 1, 1, 1, 1)
     end
+    self:Show()
   end
 end
 

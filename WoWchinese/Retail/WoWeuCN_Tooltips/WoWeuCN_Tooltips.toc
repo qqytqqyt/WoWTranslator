@@ -14,4 +14,5 @@ ItemData_cn.lua
 SpellData_cn.lua
 UnitData_cn.lua
 WoWeuCN_Tooltips.lua
+TooltipsScanner.lua
 WoWeuCN_Tooltips.xml
