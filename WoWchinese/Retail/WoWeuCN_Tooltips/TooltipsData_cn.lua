@@ -1,5 +1,5 @@
-﻿WoWeuCN_Tooltips_base = "10.0.2.46802";   -- version
-WoWeuCN_Tooltips_date = "2022-11-30"; -- date of creation base
+﻿WoWeuCN_Tooltips_base = "10.0.2.47213";   -- version
+WoWeuCN_Tooltips_date = "2022-12-23"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
@@ -25,6 +25,7 @@ WoWeuCN_Tooltips_Interface = {
 
  WoWeuCN_Tooltips_ItemData_0 = {};
  WoWeuCN_Tooltips_ItemData_100000 = {};
+ WoWeuCN_Tooltips_ItemData_200000 = {};
  
  WoWeuCN_Tooltips_UnitData_0 = {};
  WoWeuCN_Tooltips_UnitData_100000 = {};
@@ -36,6 +37,7 @@ WoWeuCN_Tooltips_Interface = {
 
  WoWeuCN_Tooltips_ItemIndexData_0 = {};
  WoWeuCN_Tooltips_ItemIndexData_100000 = {};
+ WoWeuCN_Tooltips_ItemIndexData_200000 = {};
  
  WoWeuCN_Tooltips_UnitIndexData_0 = {};
  WoWeuCN_Tooltips_UnitIndexData_100000 = {};
@@ -44,3 +46,4 @@ WoWeuCN_Tooltips_Interface = {
  WoWeuCN_Tooltips_SpellIndexData_100000 = {};
  WoWeuCN_Tooltips_SpellIndexData_200000 = {};
  WoWeuCN_Tooltips_SpellIndexData_300000 = {};
+ WoWeuCN_Tooltips_SpellIndexData_400000 = {};
