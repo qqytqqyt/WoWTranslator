@@ -67,6 +67,7 @@
     <Compile Include="Readers\QuestieMerger.cs" />
     <Compile Include="Readers\QuestieUnitReader.cs" />
     <Compile Include="Readers\ScriptReader.cs" />
+    <Compile Include="Readers\AchievementReader.cs" />
     <Compile Include="Readers\UnitReader.cs" />
     <Compile Include="Readers\QuestReader.cs" />
     <Compile Include="Program.cs" />

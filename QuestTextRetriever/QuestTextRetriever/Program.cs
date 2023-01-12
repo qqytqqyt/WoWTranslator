@@ -34,20 +34,22 @@ namespace QuestTextRetriever
             // retail
             //var questReader = new QuestReader(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWHeadData\WoWHead37844\", @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
             //questReader.ExecuteJson(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.2.5.43971.txt");
-            var itemReader = new ItemReader();
-            itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\dragon_items_output_46144.lua");
+            //var itemReader = new ItemReader();
+            //itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\dragon_items_output_47213.lua");
+            var achievementReader = new AchievementReader();
+            achievementReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\achievements\wlk_achievements_output_47585.lua");
             ////itemReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\items");
             ////var unitReader = new UnitReader();
             ////unitReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\units");
             //var questReader = new QuestReader();
-            //questReader.Execute(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\output_46144.lua", VersionMode.Retail);
-            //QuestReader.MergeOutputs(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\46144merged.lua");
+            //questReader.Execute(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\output_47213.lua", VersionMode.Retail);
+            //QuestReader.MergeOutputs(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\47213merged.lua");
             //////questReader.ExecuteOnQuestieFolder(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests");
             ////itemReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_output_zhcn_45166.lua", OutputMode.WoWeuCN);
             //var unitReader = new UnitReader();
             //unitReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\dragon_units_output_46144.lua", OutputMode.WoWeuCN);
-            var spellReader = new SpellReader();
-            spellReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\dragon_spells_output_46144.lua");
+            //var spellReader = new SpellReader();
+            //spellReader.Write(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\dragon_spells_output_47213.lua");
 
 
 
