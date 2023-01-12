@@ -49,151 +49,6 @@ function WoWeuCN_Tooltips_CheckVars()
   end
 end
 
--- wait functions from QTR
-local WoWeuCN_Tooltips_waitFrame = nil;
-local WoWeuCN_Tooltips_waitTable = {};
-
-function WoWeuCN_Tooltips_wait(delay, func, ...)
-  if(type(delay)~="number" or type(func)~="function") then
-    return false;
-  end
-  if (WoWeuCN_Tooltips_waitFrame == nil) then
-    WoWeuCN_Tooltips_waitFrame = CreateFrame("Frame","WoWeuCN_Tooltips_waitFrame", UIParent);
-    WoWeuCN_Tooltips_waitFrame:SetScript("onUpdate",function (self,elapse)
-      local count = #WoWeuCN_Tooltips_waitTable;
-      local i = 1;
-      while(i<=count) do
-        local waitRecord = tremove(WoWeuCN_Tooltips_waitTable,i);
-        local d = tremove(waitRecord,1);
-        local f = tremove(waitRecord,1);
-        local p = tremove(waitRecord,1);
-        if(d>elapse) then
-          tinsert(WoWeuCN_Tooltips_waitTable,i,{d-elapse,f,p});
-          i = i + 1;
-        else
-          count = count - 1;
-          f(unpack(p));
-        end
-      end
-    end);
-  end
-  tinsert(WoWeuCN_Tooltips_waitTable,{delay,func,{...}});
-  return true;
-end
-
-local function scanAuto(startIndex, attempt, counter)
-  if (startIndex > 200000) then
-    return;
-  end
-  for i = startIndex, startIndex + 250 do
-    qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-    qcSpellInformationTooltip:ClearLines()
-    qcSpellInformationTooltip:SetHyperlink('spell:' .. i)
-    qcSpellInformationTooltip:Show()
-    local text =  EnumerateTooltipStyledLines(qcSpellInformationTooltip)
-    if (text ~= '' and text ~= nil) then
-      if (i >=0 and i < 100000) then
-        if (WoWeuCN_Tooltips_SpellToolTips0[i .. ''] == nil or string.len(WoWeuCN_Tooltips_SpellToolTips0[i .. '']) < string.len(text)) then
-          WoWeuCN_Tooltips_SpellToolTips0[i .. ''] = text
-        end
-      elseif (i >=100000 and i < 200000) then
-        if (WoWeuCN_Tooltips_SpellToolTips100000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_SpellToolTips100000[i .. '']) < string.len(text)) then
-          WoWeuCN_Tooltips_SpellToolTips100000[i .. ''] = text
-        end
-      elseif (i >=200000 and i < 300000) then
-        if (WoWeuCN_Tooltips_SpellToolTips200000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_SpellToolTips200000[i .. '']) < string.len(text)) then
-          WoWeuCN_Tooltips_SpellToolTips200000[i .. ''] = text
-        end
-      elseif (i >=300000 and i < 400000) then
-        if (WoWeuCN_Tooltips_SpellToolTips300000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_SpellToolTips300000[i .. '']) < string.len(text)) then
-          WoWeuCN_Tooltips_SpellToolTips300000[i .. ''] = text
-        end
-      end
-      print(i)
-    end
-  end
-  print(attempt)
-  print(counter)
-  WoWeuCN_Tooltips_SpellToolIndex = startIndex
-  if (counter >= 3) then
-    WoWeuCN_Tooltips_wait(0.5, scanAuto, startIndex + 250, attempt + 1, 0)
-  else
-    WoWeuCN_Tooltips_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
-  end
-end
-
-local function scanUnitAuto(startIndex, attempt, counter)
-  if (startIndex > 100000) then
-    return;
-  end
-  for i = startIndex, startIndex + 250 do
-    qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-    qcSpellInformationTooltip:ClearLines()
-    local guid = "Creature-0-0-0-0-"..i.."-0000000000";
-    qcSpellInformationTooltip:SetHyperlink('unit:' .. guid)
-    qcSpellInformationTooltip:Show()
-    local text =  EnumerateTooltipStyledLines(qcSpellInformationTooltip)
-    if (text ~= '' and text ~= nil) then
-      if (WoWeuCN_Tooltips_UnitToolTips0[i .. ''] == nil or string.len(WoWeuCN_Tooltips_UnitToolTips0[i .. '']) < string.len(text)) then
-        WoWeuCN_Tooltips_UnitToolTips0[i .. ''] = text
-      end
-      print(i)
-    end
-  end
-  print(attempt)
-  print(counter)
-  WoWeuCN_Tooltips_UnitIndex = startIndex
-  if (counter >= 3) then
-    WoWeuCN_Tooltips_wait(0.5, scanUnitAuto, startIndex + 250, attempt + 1, 0)
-  else
-    WoWeuCN_Tooltips_wait(0.5, scanUnitAuto, startIndex, attempt + 1, counter + 1)
-  end
-end
-
-local function scanItemAuto(startIndex, attempt, counter)
-  if (startIndex > 200000) then
-    return;
-  end
-  for i = startIndex, startIndex + 250 do
-    local itemType, itemSubType, _, _, _, _, classID, subclassID = select(6, GetItemInfo(i))
-    print('index ' .. i)
-    if (classID~=nil) then
-      qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-      qcSpellInformationTooltip:ClearLines()
-      qcSpellInformationTooltip:SetHyperlink('item:' .. i .. ':0:0:0:0:0:0:0')
-      qcSpellInformationTooltip:Show()
-      local text = EnumerateTooltipStyledLines(qcSpellInformationTooltip)
-      text = text .. '{{{' .. classID .. '}}}'
-      if (text ~= '' and text ~= nil) then
-        if (i >=0 and i < 100000) then
-          if (WoWeuCN_Tooltips_ItemToolTips0[i .. ''] == nil or string.len(WoWeuCN_Tooltips_ItemToolTips0[i .. '']) < string.len(text)) then
-            WoWeuCN_Tooltips_ItemToolTips0[i .. ''] = text
-          end
-        elseif (i >=100000 and i < 200000) then
-          if (WoWeuCN_Tooltips_ItemToolTips100000[i .. ''] == nil or string.len(WoWeuCN_Tooltips_ItemToolTips100000[i .. '']) < string.len(text)) then
-            WoWeuCN_Tooltips_ItemToolTips100000[i .. ''] = text
-          end
-          print(i)
-        end
-      end
-    else
-      if (classId==nil) then
-        --print(i .. " skip")
-      else
-        --print(i .. " gear")
-      end
-    end
-  end
-  print(attempt)
-  print(counter)
-  WoWeuCN_Tooltips_ItemIndex = startIndex
-  if (counter >= 5) then
-    WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex + 250, attempt + 1, 0)
-  else
-    WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex, attempt + 1, counter + 1)
-  end
-end
-
 local function loadAllItemData()
   loadItemData0();
 end
@@ -205,39 +60,6 @@ end
 local function loadAllUnitData()
   loadUnitData0();
 end
-
-local function EnumerateTooltipStyledLines_helper(...)
-  local texts = '';
-  local hasObjectivesSet = false
-    for i = 1, select("#", ...) do
-        local region = select(i, ...)
-        if region and region:GetObjectType() == "FontString" then
-      local text = region:GetText() -- string or nil
-			if (text ~= nil) then
-        if (text ~= " ")
-          then
-            text = "{{" .. text .. "}}"
-            local r, g, b, a = region:GetTextColor()
-            text = text .. "[[" .. r .. "]]" .. "[[" .. g .. "]]" .. "[[" .. b .. "]]"
-          end
-        print(i)
-        print(text)
-        texts = texts .. text	
-			end
-        end
-	end
-	return texts
-end
-
-function EnumerateTooltipStyledLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
-  return EnumerateTooltipStyledLines_helper(tooltip:GetRegions())
-end
-
-function qcSpellInformationTooltipSetup() -- *
-	qcSpellInformationTooltip = CreateFrame("GameTooltip", "qcSpellInformationTooltip", UIParent, "GameTooltipTemplate")
-	qcSpellInformationTooltip:SetFrameStrata("TOOLTIP")
-end
-
 
 -- commands
 function WoWeuCN_Tooltips_SlashCommand(msg)
@@ -262,72 +84,30 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton2:Disable();
       end
 
-    -- clear previous scans
-    elseif (msg=="clear" or msg=="CLEAR") then
-      WoWeuCN_Tooltips_SpellToolIndex = 1;
-      WoWeuCN_Tooltips_SpellToolTips0 = {} 
-      WoWeuCN_Tooltips_SpellToolTips100000 = {} 
-      WoWeuCN_Tooltips_SpellToolTips200000 = {} 
-      WoWeuCN_Tooltips_SpellToolTips300000 = {} 
-      WoWeuCN_Tooltips_ItemToolTips0 = {} 
-      WoWeuCN_Tooltips_ItemToolTips100000 = {} 
-      WoWeuCN_Tooltips_ItemIndex = 1
-      WoWeuCN_Tooltips_UnitToolTips0 = {} 
-      WoWeuCN_Tooltips_UnitIndex = 1
-      print("Clear");
-
     --set scan index
     elseif (string.sub(msg,1,string.len("index"))=="index") then
       local index = string.sub(msg,string.len("index")+2)
-      WoWeuCN_Tooltips_SpellToolIndex = tonumber(index);
-      WoWeuCN_Tooltips_ItemIndex = tonumber(index);
-      WoWeuCN_Tooltips_UnitIndex = tonumber(index);
-      print(index)
+      scanIndex(index)
+
+    --clear
+    elseif (msg=="clear" or msg=="CLEAR") then
+      scanClear()
 
     -- spell auto scan
     elseif (msg=="scanauto" or msg=="SCANAUTO") then
-      if (WoWeuCN_Tooltips_SpellToolTips0 == nil) then
-        WoWeuCN_Tooltips_SpellToolTips0 = {} 
-      end
-      if (WoWeuCN_Tooltips_SpellToolTips100000 == nil) then
-        WoWeuCN_Tooltips_SpellToolTips100000 = {} 
-      end
-      if (WoWeuCN_Tooltips_SpellToolTips200000 == nil) then
-        WoWeuCN_Tooltips_SpellToolTips200000 = {} 
-      end
-      if (WoWeuCN_Tooltips_SpellToolTips300000 == nil) then
-        WoWeuCN_Tooltips_SpellToolTips300000 = {} 
-      end
-      if (WoWeuCN_Tooltips_SpellToolIndex == nil) then
-        WoWeuCN_Tooltips_SpellToolIndex = 1
-      end
-
-      WoWeuCN_Tooltips_wait(0.1, scanAuto, WoWeuCN_Tooltips_SpellToolIndex, 1, 0)
-
+      scanInit()    
+      WoWeuCN_Tooltips_wait(0.1, scanSpellAuto, WoWeuCN_Tooltips_SpellToolIndex, 1, 0)
+    
     -- unit auto scan
     elseif (msg=="unitscanauto" or msg=="UNITSCANAUTO") then
-      if (WoWeuCN_Tooltips_UnitToolTips0 == nil) then
-        WoWeuCN_Tooltips_UnitToolTips0 = {} 
-      end
-      if (WoWeuCN_Tooltips_UnitIndex == nil) then
-        WoWeuCN_Tooltips_UnitIndex = 1
-      end
-
+      scanInit()
       WoWeuCN_Tooltips_wait(0.1, scanUnitAuto, WoWeuCN_Tooltips_UnitIndex, 1, 0)
 
     -- item auto scan
     elseif (msg=="itemscanauto" or msg=="ITEMSCANAUTO") then      
-      if (WoWeuCN_Tooltips_ItemIndex == nil) then
-        WoWeuCN_Tooltips_ItemIndex = 1
-      end
-      if (WoWeuCN_Tooltips_ItemToolTips0 == nil) then
-        WoWeuCN_Tooltips_ItemToolTips0 = {} 
-      end
-      if (WoWeuCN_Tooltips_ItemToolTips100000 == nil) then
-        WoWeuCN_Tooltips_ItemToolTips100000 = {} 
-      end
+      scanInit()
       WoWeuCN_Tooltips_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
-      
+
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
         InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
@@ -338,16 +118,12 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
    end
 end
 
-
-
 function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton0:SetChecked(WoWeuCN_Tooltips_PS["active"]=="1");
   WoWeuCN_TooltipsCheckButton3:SetChecked(WoWeuCN_Tooltips_PS["transspell"]=="1");
   WoWeuCN_TooltipsCheckButton4:SetChecked(WoWeuCN_Tooltips_PS["transitem"]=="1");
   WoWeuCN_TooltipsCheckButton5:SetChecked(WoWeuCN_Tooltips_PS["transunit"]=="1");
 end
-
-
 
 function WoWeuCN_Tooltips_BlizzardOptions()
   -- Create main frame for information text
@@ -362,7 +138,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2022");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2023");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -425,7 +201,7 @@ function WoWeuCN_Tooltips_OnLoad()
    ItemRefShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
 
    GameTooltip:HookScript("OnTooltipSetUnit", function(...) OnTooltipUnit(..., GameTooltip) end)
-   
+
    if (_G.ElvUISpellBookTooltip ~= nil) then
     _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
    end
@@ -623,23 +399,7 @@ function OnTooltipSpellElvUi(self)
   end
 	-- Case for linked spell
   local name,id = self:GetSpell()
-  local spellData = GetSpellData(id)
-  if ( spellData ) then
-    local lines = self:NumLines()
-    for i= 1, lines do
-      local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and string.len(line:GetText()) ~= 1 and line:GetText():find(spellData[1]) then
-        return
-      end
-    end
-  
-    self:AddLine(" ")
-    for i = 1, #spellData do
-      local region = spellData[i]
-      region = ReplaceText(region)
-      self:AddLine(region, 1, 1, 1, 1)
-    end
-  end
+  SetSpellTooltip(self, id)
 end
 
 function OnTooltipSpell(self, tooltip)
@@ -648,12 +408,45 @@ function OnTooltipSpell(self, tooltip)
   end
 	-- Case for linked spell
   local name,id = self:GetSpell()
+  SetSpellTooltip(self, id)
+end
+
+local SetUnitAura = GameTooltip.SetUnitAura
+GameTooltip.SetUnitAura = function(self, unit, index, filter) 
+    local spellId = select(10, UnitAura(unit, index, filter))
+    SetUnitAura(self, unit, index, filter)
+    SetSpellTooltip(self, spellId)
+end
+
+local SetUnitBuff = GameTooltip.SetUnitBuff
+GameTooltip.SetUnitBuff = function(self, unit, index, filter) 
+    local spellId = select(10, UnitBuff(unit, index, filter))
+    SetUnitBuff(self, unit, index, filter)
+    SetSpellTooltip(self, spellId)
+end
+
+local SetUnitDebuff = GameTooltip.SetUnitDebuff
+GameTooltip.SetUnitDebuff = function(self, unit, index, filter) 
+    local spellId = select(10, UnitDebuff(unit, index, filter))
+    SetUnitDebuff(self, unit, index, filter)
+    SetSpellTooltip(self, spellId)
+end
+
+function SetSpellTooltip(self, id)
   local spellData = GetSpellData(id)
   if ( spellData ) then
+    
+    if (string.find(spellData[1], "¿")) then
+      spellData = GetSpellData(string.sub(spellData[1], 3))
+      if (not spellData) then
+        return
+      end
+    end
+
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and string.len(line:GetText()) ~= 1 and line:GetText():find(spellData[1]) then
+      if line and line:GetText() and line:GetText():find(spellData[1]) then
         return
       end
     end
@@ -664,24 +457,25 @@ function OnTooltipSpell(self, tooltip)
       region = ReplaceText(region)
       self:AddLine(region, 1, 1, 1, 1)
     end
+    self:Show()
   end
 end
 
-function GetSpellData(id)
-  if (id == nil) then
+function GetSpellData(spellId)
+  if (spellId == nil) then
     return nil
   end
-  local str_id = tostring(id)
-  local num_id = tonumber(id)
+  local str_id = tostring(spellId)
+  local id = tonumber(spellId)
   local dataIndex = nil
   if (id >= 0 and id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_0[num_id]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_0[id]
   elseif (id >= 100000 and id < 200000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_100000[num_id - 100000]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_100000[id - 100000]
   elseif (id >= 200000 and id < 300000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_200000[num_id - 200000]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_200000[id - 200000]
   elseif (id >= 300000 and id < 400000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[id - 300000]
   end
 
   if (dataIndex == nil) then
