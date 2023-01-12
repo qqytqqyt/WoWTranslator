@@ -13,6 +13,8 @@ function scanClear()
     WoWeuCN_Tooltips_ItemIndex = 1
     WoWeuCN_Tooltips_UnitToolTips0 = {} 
     WoWeuCN_Tooltips_UnitIndex = 1
+    WoWeuCN_Tooltips_Achivements0 = {} 
+    WoWeuCN_Tooltips_AchivementsIndex = 1
     print("Clear");
 end
 
@@ -49,12 +51,20 @@ function scanInit()
     if (WoWeuCN_Tooltips_ItemIndex == nil) then
     WoWeuCN_Tooltips_ItemIndex = 1
     end
+
+    if (WoWeuCN_Tooltips_Achivements0 == nil) then
+      WoWeuCN_Tooltips_Achivements0 = {} 
+    end
+    if (WoWeuCN_Tooltips_AchivementsIndex == nil) then
+      WoWeuCN_Tooltips_AchivementsIndex = 1
+    end
 end
 
 function scanIndex(index)
     WoWeuCN_Tooltips_SpellToolIndex = tonumber(index);
     WoWeuCN_Tooltips_ItemIndex = tonumber(index);
     WoWeuCN_Tooltips_UnitIndex = tonumber(index);
+    WoWeuCN_Tooltips_AchivementsIndex = tonumber(index);
     print(index)
 end
 
@@ -201,6 +211,32 @@ function scanItemAuto(startIndex, attempt, counter)
     WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex + 150, attempt + 1, 0)
   else
     WoWeuCN_Tooltips_wait(0.5, scanItemAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
+function scanAchivementAuto(startIndex, attempt, counter)
+  if (startIndex > 20000) then
+    return;
+  end
+  for i = startIndex, startIndex + 150 do
+    qcSpellInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+    qcSpellInformationTooltip:ClearLines()
+    qcSpellInformationTooltip:SetHyperlink('achievement:' .. i .. ':0:0:0:0:0:0:0:0')
+    qcSpellInformationTooltip:Show()
+    local text = EnumerateTooltipStyledLines(qcSpellInformationTooltip)
+    if (text ~= '' and text ~= nil) then
+      if (WoWeuCN_Tooltips_Achivements0[i .. ''] == nil or string.len(WoWeuCN_Tooltips_Achivements0[i .. '']) < string.len(text)) then
+        WoWeuCN_Tooltips_Achivements0[i .. ''] = text
+      end
+    end
+  end
+  print(attempt)
+  print(counter)
+  WoWeuCN_Tooltips_AchivementsIndex = startIndex
+  if (counter >= 5) then
+    WoWeuCN_Tooltips_wait(0.5, scanAchivementAuto, startIndex + 150, attempt + 1, 0)
+  else
+    WoWeuCN_Tooltips_wait(0.5, scanAchivementAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
