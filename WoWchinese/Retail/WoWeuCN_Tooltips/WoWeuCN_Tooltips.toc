@@ -1,18 +1,19 @@
 ﻿## Interface: 100002
 ## Title: WoWeuCN-Tooltips
-## Version: 10.0.2.4
+## Version: 10.0.2.5
 ## Notes_en: AddOn displays the translated tooltips information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: WoWeuCN_Tooltips_PS, WoWeuCN_Tooltips_SpellToolTips0, WoWeuCN_Tooltips_SpellToolTips100000, WoWeuCN_Tooltips_SpellToolTips200000, WoWeuCN_Tooltips_SpellToolTips300000, WoWeuCN_Tooltips_SpellToolTips400000, WoWeuCN_Tooltips_SpellToolIndex, WoWeuCN_Tooltips_ItemToolTips0, WoWeuCN_Tooltips_ItemToolTips100000, WoWeuCN_Tooltips_ItemToolTips200000, WoWeuCN_Tooltips_ItemIndex, WoWeuCN_Tooltips_UnitToolTips0, WoWeuCN_Tooltips_UnitToolTips100000, WoWeuCN_Tooltips_UnitToolTips200000, WoWeuCN_Tooltips_UnitIndex
+## SavedVariables: WoWeuCN_Tooltips_PS, WoWeuCN_Tooltips_SpellToolTips0, WoWeuCN_Tooltips_SpellToolTips100000, WoWeuCN_Tooltips_SpellToolTips200000, WoWeuCN_Tooltips_SpellToolTips300000, WoWeuCN_Tooltips_SpellToolTips400000, WoWeuCN_Tooltips_SpellToolIndex, WoWeuCN_Tooltips_ItemToolTips0, WoWeuCN_Tooltips_ItemToolTips100000, WoWeuCN_Tooltips_ItemToolTips200000, WoWeuCN_Tooltips_ItemIndex, WoWeuCN_Tooltips_UnitToolTips0, WoWeuCN_Tooltips_UnitToolTips100000, WoWeuCN_Tooltips_UnitToolTips200000, WoWeuCN_Tooltips_UnitIndex, WoWeuCN_Tooltips_Achivements0, WoWeuCN_Tooltips_AchivementsIndex
 ## SavedVariablesPerCharacter: WoWeuCN_Tooltips_LastAnnounceDate
 
 TooltipsData_cn.lua
 ItemData_cn.lua
 SpellData_cn.lua
 UnitData_cn.lua
+AchievementData_cn.lua
 WoWeuCN_Tooltips.lua
 TooltipsScanner.lua
 WoWeuCN_Tooltips.xml
