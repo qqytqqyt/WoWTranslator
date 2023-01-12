@@ -39,6 +39,10 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_PS["transunit"] ) then
      WoWeuCN_Tooltips_PS["transunit"] = "1";   
   end
+  -- Initiation - achievement translation
+  if (not WoWeuCN_Tooltips_PS["transachievement"] ) then
+     WoWeuCN_Tooltips_PS["transachievement"] = "1";   
+  end
    -- Path version info
   if (not WoWeuCN_Tooltips_PS["patch"]) then
      WoWeuCN_Tooltips_PS["patch"] = GetBuildInfo();
@@ -61,6 +65,10 @@ local function loadAllUnitData()
   loadUnitData0();
 end
 
+local function loadAllAchievementData()
+  loadAchievementData0();
+end
+
 -- commands
 function WoWeuCN_Tooltips_SlashCommand(msg)
    if (msg=="on" or msg=="ON") then
@@ -72,6 +80,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton0:Enable();
          WoWeuCN_Tooltips_ToggleButton1:Enable();
          WoWeuCN_Tooltips_ToggleButton2:Enable();
+         WoWeuCN_Tooltips_ToggleButton3:Enable();
       end
    elseif (msg=="off" or msg=="OFF") then
       if (WoWeuCN_Tooltips_PS["active"]=="0") then
@@ -82,6 +91,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton0:Disable();
          WoWeuCN_Tooltips_ToggleButton1:Disable();
          WoWeuCN_Tooltips_ToggleButton2:Disable();
+         WoWeuCN_Tooltips_ToggleButton3:Disable();
       end
 
     --set scan index
@@ -108,6 +118,12 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
       scanInit()
       WoWeuCN_Tooltips_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
 
+    -- achivement auto scan
+    elseif (msg=="achievescanauto" or msg=="ACHIVESCANAUTO") then      
+      scanInit()
+      WoWeuCN_Tooltips_wait(0.1, scanAchivementAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
+
+
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
         InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
@@ -123,6 +139,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton3:SetChecked(WoWeuCN_Tooltips_PS["transspell"]=="1");
   WoWeuCN_TooltipsCheckButton4:SetChecked(WoWeuCN_Tooltips_PS["transitem"]=="1");
   WoWeuCN_TooltipsCheckButton5:SetChecked(WoWeuCN_Tooltips_PS["transunit"]=="1");
+  WoWeuCN_TooltipsCheckButton6:SetChecked(WoWeuCN_Tooltips_PS["transachievement"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -182,6 +199,12 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton5:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transunit"]=="0") then WoWeuCN_Tooltips_PS["transunit"]="1" else WoWeuCN_Tooltips_PS["transunit"]="0" end; end);
   WoWeuCN_TooltipsCheckButton5Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton5Text:SetText(WoWeuCN_Tooltips_Interface.transunit);
+  
+  local WoWeuCN_TooltipsCheckButton6 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton6", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
+  WoWeuCN_TooltipsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -65);
+  WoWeuCN_TooltipsCheckButton6:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transachievement"]=="0") then WoWeuCN_Tooltips_PS["transachievement"]="1" else WoWeuCN_Tooltips_PS["transachievement"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton6Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton6Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
 end
 
 -- First function called after the add-in has been loaded
@@ -210,6 +233,7 @@ function WoWeuCN_Tooltips_OnLoad()
    loadAllSpellData()
    loadAllItemData()
    loadAllUnitData()
+   loadAllAchievementData()
 end
 
 local replacement = { 
@@ -279,6 +303,75 @@ function split(s, delimiter)
       table.insert(result, match);
   end
   return result;
+end
+
+function OnAchievement(button, category, achievement, selectionID, renderOffScreen)  
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transachievement"]=="0") then
+    return
+  end
+
+  local id, _, _, _, _, _, _, _, _, icon= GetAchievementInfo(category, achievement);
+  if id then
+      local achievementData = GetAchievementData(id)
+      if ( achievementData ) then
+        local title = achievementData[1]
+        button.label:SetText(title);
+        local description = achievementData[2]
+        if ( description ) then
+          if (button.description) then
+            button.description:SetText(description);
+          end
+          if (button.hiddenDescription) then
+            button.hiddenDescription:SetText(description);
+          end
+        end
+      end
+      
+  end
+end
+
+function OnAchievementSummary(...)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transachievement"]=="0") then
+    return
+  end
+
+  for i=1, 4 do
+    id = select(i, ...);
+    local button = _G["AchievementFrameSummaryAchievement"..i];	
+    if button and id then
+      local achievementData = GetAchievementData(id)
+      if ( achievementData ) then
+        local title = achievementData[1]
+        button.label:SetText(title);
+        local description = achievementData[2]
+        if ( description and button.description ) then
+          button.description:SetText(description);
+        end
+      end
+    end
+  end
+end
+
+function GetAchievementData(id)
+  if (id == nil) then
+    return nil
+  end
+  local str_id = tostring(id)
+  local num_id = tonumber(id)
+  local dataIndex = nil
+  if (num_id >= 0 and num_id < 100000) then
+    dataIndex = WoWeuCN_Tooltips_AchievementIndexData_0[num_id]
+  end
+
+  if (dataIndex == nil) then
+    return nil
+  end
+
+  if (num_id >= 0 and num_id < 100000) then    
+    return split(WoWeuCN_Tooltips_AchievementData_0[dataIndex], '£')
+  end
+
+  return nil
 end
 
 function OnTooltipUnit(self, tooltip)
@@ -506,8 +599,11 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       WoWeuCN_Tooltips_wait(2, Broadcast)
       WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Tooltips.ADDON_LOADED = nil;
+      return
    end
 end
+
+local achievementHooked = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
@@ -516,7 +612,13 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     else
       --print(text .. " " .. sender)
     end
-	end
+  end
+  
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not achievementHooked and AchievementFrame) then
+    hooksecurefunc("AchievementButton_DisplayAchievement", function(...) OnAchievement(...) end);
+    hooksecurefunc("AchievementFrameSummary_UpdateAchievements", function(...) OnAchievementSummary(...) end);    
+    achievementHooked = true
+  end
 end
 
 function Broadcast()
@@ -524,6 +626,7 @@ function Broadcast()
   
   local f = CreateFrame("Frame")
   f:RegisterEvent("CHAT_MSG_ADDON")
+  f:RegisterEvent("ADDON_LOADED")
   f:SetScript("OnEvent", OnEvent)
   local name,title,_,enabled = GetAddOnInfo('WoWeuCN_Quests')
   if (enabled == true) then
