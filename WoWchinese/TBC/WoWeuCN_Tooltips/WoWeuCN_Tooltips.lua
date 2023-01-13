@@ -229,6 +229,9 @@ function WoWeuCN_Tooltips_OnLoad()
     _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
    end
 
+   if LootFrame then
+    hooksecurefunc("LootFrame_UpdateButton", function(...) OnLootUpdate(...) end);
+   end
    RegisterChatFilterEvents()
 
    qcSpellInformationTooltipSetup();
@@ -305,6 +308,43 @@ function split(s, delimiter)
       table.insert(result, match);
   end
   return result;
+end
+
+function OnLootUpdate(index)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transitem"]=="0") then
+    return
+  end
+  
+	local numLootItems = LootFrame.numLootItems;
+	--Logic to determine how many items to show per page
+	local numLootToShow = LOOTFRAME_NUMBUTTONS;
+  local self = LootFrame;
+	if( self.AutoLootTable ) then
+		numLootItems = #self.AutoLootTable;
+	end
+	if ( numLootItems > LOOTFRAME_NUMBUTTONS ) then
+		numLootToShow = numLootToShow - 1; -- make space for the page buttons
+	end
+  local slot = (numLootToShow * (LootFrame.page - 1)) + index;
+
+  if ( slot <= numLootItems ) then
+		if ( (LootSlotHasItem(slot)  or (self.AutoLootTable and self.AutoLootTable[slot]) )and index <= numLootToShow) then
+			local itemLink	= GetLootSlotLink(slot);
+      if not itemLink then
+        return
+      end
+
+      local itemID = string.match(itemLink, 'Hitem:(%d+):')
+      local itemData = GetItemData(itemID)
+      
+      if itemData then
+        local text = _G["LootButton"..index.."Text"];
+        if text then
+          text:SetText(itemData[1])
+        end
+      end
+    end
+  end
 end
 
 function OnAchievement(button, category, achievement, selectionID, renderOffScreen)  
