@@ -296,6 +296,8 @@ function WoWeuCN_Tooltips_OnLoad()
 
     hooksecurefunc(GameTooltip, "SetAction", function(...) OnTooltipSetAction(...) end)
    end
+   
+   RegisterChatFilterEvents()
 
    qcSpellInformationTooltipSetup();
    loadAllSpellData()
