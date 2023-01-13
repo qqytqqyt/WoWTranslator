@@ -229,6 +229,8 @@ function WoWeuCN_Tooltips_OnLoad()
     _G.ElvUISpellBookTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpellElvUi(..., GameTooltip) end)
    end
 
+   RegisterChatFilterEvents()
+
    qcSpellInformationTooltipSetup();
    loadAllSpellData()
    loadAllItemData()
