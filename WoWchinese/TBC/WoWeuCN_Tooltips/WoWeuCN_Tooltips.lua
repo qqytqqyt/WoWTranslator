@@ -43,6 +43,10 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_PS["transachievement"] ) then
      WoWeuCN_Tooltips_PS["transachievement"] = "1";   
   end
+  -- Initiation - advanced translation
+  if (not WoWeuCN_Tooltips_PS["transadvanced"] ) then
+     WoWeuCN_Tooltips_PS["transadvanced"] = "1";   
+  end
    -- Path version info
   if (not WoWeuCN_Tooltips_PS["patch"]) then
      WoWeuCN_Tooltips_PS["patch"] = GetBuildInfo();
@@ -140,6 +144,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton4:SetChecked(WoWeuCN_Tooltips_PS["transitem"]=="1");
   WoWeuCN_TooltipsCheckButton5:SetChecked(WoWeuCN_Tooltips_PS["transunit"]=="1");
   WoWeuCN_TooltipsCheckButton6:SetChecked(WoWeuCN_Tooltips_PS["transachievement"]=="1");
+  WoWeuCN_TooltipsCheckButton7:SetChecked(WoWeuCN_Tooltips_PS["transadvanced"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -205,6 +210,12 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton6:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transachievement"]=="0") then WoWeuCN_Tooltips_PS["transachievement"]="1" else WoWeuCN_Tooltips_PS["transachievement"]="0" end; end);
   WoWeuCN_TooltipsCheckButton6Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton6Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
+
+  local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
+  WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -85);
+  WoWeuCN_TooltipsCheckButton7:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_PS["transadvanced"]="1" else WoWeuCN_Tooltips_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton7Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton7Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
 end
 
 -- First function called after the add-in has been loaded
@@ -232,6 +243,11 @@ function WoWeuCN_Tooltips_OnLoad()
    if LootFrame then
     hooksecurefunc("LootFrame_UpdateButton", function(...) OnLootUpdate(...) end);
    end
+   if MerchantFrame then
+    hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function(...) OnMerchantInfoUpdate(...) end);
+   end
+   
+   hooksecurefunc("SpellButton_UpdateButton", function(...) OnSpellBookUpdate(...) end);
    RegisterChatFilterEvents()
 
    qcSpellInformationTooltipSetup();
@@ -310,8 +326,55 @@ function split(s, delimiter)
   return result;
 end
 
+function OnSpellBookUpdate(self)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+    return
+  end
+
+  local slot, slotType, slotID = SpellBook_GetSpellBookSlot(self);
+  
+	if ( slot ) then
+    texture = GetSpellTexture(slot, SpellBookFrame.bookType);
+  end
+  
+	if ( not slot or not texture or (strlen(texture) == 0) or (slotType == "FUTURESPELL" and Kiosk.IsEnabled())) then
+    return
+  end
+
+	local name = self:GetName();
+  local spellString = _G[name.."SpellName"];
+  if spellString then
+    local spellName, _, spellID = GetSpellBookItemName(slot, SpellBookFrame.bookType);
+    local spellData = GetSpellData(spellID)
+    if ( spellData ) then
+      spellString:SetText(spellData[1])
+    end
+  end
+end
+
+function OnMerchantInfoUpdate(...)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+    return
+  end
+
+  for i=1, MERCHANT_ITEMS_PER_PAGE do
+    local itemButton = _G["MerchantItem"..i.."ItemButton"];
+    local numMerchantItems = GetMerchantNumItems();
+    if itemButton then
+      local itemLink = itemButton.link
+      if itemLink then
+        local itemID = string.match(itemLink, 'Hitem:(%d+):')
+        local itemData = GetItemData(itemID)
+        if itemData and _G["MerchantItem"..i.."Name"] and _G["MerchantItem"..i.."Name"]:GetText() ~= nil then
+          _G["MerchantItem"..i.."Name"]:SetText(itemData[1])
+        end
+      end
+    end
+  end
+end
+
 function OnLootUpdate(index)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transitem"]=="0") then
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
     return
   end
   
@@ -570,14 +633,6 @@ end
 function SetSpellTooltip(self, id)
   local spellData = GetSpellData(id)
   if ( spellData ) then
-    
-    if (string.find(spellData[1], "¿")) then
-      spellData = GetSpellData(string.sub(spellData[1], 3))
-      if (not spellData) then
-        return
-      end
-    end
-
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
@@ -616,18 +671,28 @@ function GetSpellData(spellId)
   if (dataIndex == nil) then
     return nil
   end
+  local spellData = nil
 
   if (id >= 0 and id < 100000) then
-    return   split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
+    spellData = split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
   elseif (id >= 100000 and id < 200000) then
-    return  split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
+    spellData = split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
   elseif (id >= 200000 and id < 300000) then
-    return  split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
+    spellData = split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
   elseif (id >= 300000 and id < 400000) then
-    return  split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
+    spellData =  split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
   end
 
-  return nil
+  if ( spellData ) then
+    while (string.find(spellData[1], "¿")) do
+      spellData = GetSpellData(string.sub(spellData[1], 3))
+      if (not spellData) then
+        return
+      end
+    end
+  end
+
+  return spellData
 end
 
 -- Even handlers
@@ -665,7 +730,8 @@ end
 
 function Broadcast()
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
-  
+  print ("|cffffff00高级界面翻译已启用，如需关闭请在插件设置里更改。如遇字体问题可尝试在战网游戏设置中安装中文语言包。|r");
+
   local f = CreateFrame("Frame")
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:RegisterEvent("ADDON_LOADED")

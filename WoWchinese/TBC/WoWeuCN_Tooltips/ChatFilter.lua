@@ -21,7 +21,6 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 end
                 
                 msg = string.gsub(msg, "£TMP£", "Hitem:")
-                return false, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...
             end
         end
     end
@@ -39,7 +38,6 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 end
                 
                 msg = string.gsub(msg, "£TMP£", "Hspell:")
-                return false, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...
             end
         end
     end
@@ -58,10 +56,11 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 end
                 
                 msg = string.gsub(msg, "£TMP£", "Hachievement:")
-                return false, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...
             end
         end
     end
+
+    return false, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...
 end
 
 function RegisterChatFilterEvents() -- todo: register immediately and cache calls until db is available
