@@ -799,6 +799,14 @@ function Broadcast()
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
   print ("|cffffff00高级界面翻译已启用，如需关闭请在插件设置里更改。|r");
 
+  local name, _, rank = GetGuildInfo("player");
+  if name ~= nil then
+    C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "GUILD")
+  end
+
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "RAID")
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "YELL")
+
   reminded = false
   local f = CreateFrame("Frame")
   f:RegisterEvent("CHAT_MSG_ADDON")
@@ -814,14 +822,6 @@ function Broadcast()
   
   C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
   
-  local name, _, rank = GetGuildInfo("player");
-  if name ~= nil then
-    C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "GUILD")
-  end
-
-  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "RAID")
-  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "YELL")
-
   local regionCode = GetCurrentRegion()
   if (regionCode ~= 3) then
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");

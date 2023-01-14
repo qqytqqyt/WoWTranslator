@@ -460,7 +460,7 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_QuestsOptionsHeader:ClearAllPoints();
   WoWeuCN_QuestsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2022");
+  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2023");
   WoWeuCN_QuestsOptionsHeader:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsPlayer = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
@@ -680,25 +680,64 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
    end
 end
 
+function split(s, delimiter)
+   if (s == nil) then
+     return nil
+   end
+   result = {};
+   for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+       table.insert(result, match);
+   end
+   return result;
+ end
+
+local reminded = false
+
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
     if text == "VERSION" then
       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel)
-    else
-      --print(text .. " " .. sender)
+    elseif (string.sub(text,1,string.len("WoWeuCN-Quests"))=="WoWeuCN-Quests" and not reminded) then
+      local _, major, minor, revision = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+      local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+      local newVersionNumber = tonumber(newMajor)*10000 + tonumber(newMinor)*100 + tonumber(newRevision)
+      local myVersionNumber = tonumber(major)*10000 + tonumber(minor)*100 + tonumber(revision)
+      if newVersionNumber > myVersionNumber then
+        print("|cffffff00WoWeuCN-Quests有新版本，请及时在CurseForge或其他平台更新。|r")
+        reminded = true
+      end
     end
 	end
 end
 
 function Broadcast()
+   local expInfo, _, _, _ = GetBuildInfo()
+   local exp = split(expInfo, "%.")[1]
+   local myExp = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.")
+   if exp ~= myExp then
+     print("|cffffff00WoWeuCN-Quests加载错误，请下载对应资料片版本的客户端。r")
+     return
+   end
+
   print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
   local regionCode = GetCurrentRegion()
   if (regionCode ~= 3) then
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
     return
   end
+
+  reminded = false 
   
   C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
+  
+  local name, _, rank = GetGuildInfo("player");
+  if name ~= nil then
+     C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version .. " Loaded", "GUILD")
+  end
+
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version .. " Loaded", "RAID")
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version .. " Loaded", "YELL")
+
   local f = CreateFrame("Frame")
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:SetScript("OnEvent", OnEvent)
