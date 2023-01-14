@@ -60,6 +60,10 @@ function WoWeuCN_Tooltips_CheckVars()
   -- Initiation - achievement translation
   if (not WoWeuCN_Tooltips_PS["transachievement"] ) then
      WoWeuCN_Tooltips_PS["transachievement"] = "1";   
+  end  
+  -- Initiation - advanced translation
+  if (not WoWeuCN_Tooltips_PS["transadvanced"] ) then
+     WoWeuCN_Tooltips_PS["transadvanced"] = "1";   
   end
    -- Path version info
   if (not WoWeuCN_Tooltips_PS["patch"]) then
@@ -162,6 +166,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton4:SetValue(WoWeuCN_Tooltips_PS["transitem"]=="1");
   WoWeuCN_TooltipsCheckButton5:SetValue(WoWeuCN_Tooltips_PS["transunit"]=="1");
   WoWeuCN_TooltipsCheckButton6:SetValue(WoWeuCN_Tooltips_PS["transachievement"]=="1");
+  WoWeuCN_TooltipsCheckButton7:SetValue(WoWeuCN_Tooltips_PS["transadvanced"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -231,6 +236,13 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton6.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton6:SetSize(500, 21)
   WoWeuCN_TooltipsCheckButton6.Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
+
+  local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -85);
+  WoWeuCN_TooltipsCheckButton7.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_PS["transadvanced"]="1" else WoWeuCN_Tooltips_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton7.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton7:SetSize(500, 21)
+  WoWeuCN_TooltipsCheckButton7.Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
 end
 
 local function translateTooltip(tooltip, data, kind)
@@ -293,6 +305,25 @@ function WoWeuCN_Tooltips_OnLoad()
         end
       end)
     end
+
+    if LootFrame then
+      hooksecurefunc(LootFrameElementMixin, "Init", function(self, ...) OnLootUpdate(self, ...) end);
+    end
+    if MerchantFrame then
+      hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function(...) OnMerchantInfoUpdate(...) end);
+    end
+    --if SpellBookFrame then
+      --hooksecurefunc("SpellBookFrame_UpdateSpells", function(...) OnSpellBookUpdate(...) end);
+    --end
+    if (_G.ElvUI ~= nil) then
+      local E, L, V, P, G = unpack(ElvUI)
+      if E then
+        local M = E:GetModule('Misc')
+        if M then
+          hooksecurefunc(M, "LOOT_OPENED", function(self, ...) OnLootUpdateElvUI(self, ...) end);
+        end
+      end
+     end
 
     hooksecurefunc(GameTooltip, "SetAction", function(...) OnTooltipSetAction(...) end)
    end
@@ -373,6 +404,86 @@ function GetFirstLineColorCode(...)
     end
   end
   return colorCode
+end
+
+function OnMerchantInfoUpdate(...)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+    return
+  end
+
+  for i=1, MERCHANT_ITEMS_PER_PAGE do
+    local itemButton = _G["MerchantItem"..i.."ItemButton"];
+    local numMerchantItems = GetMerchantNumItems();
+    if itemButton then
+      local itemLink = itemButton.link
+      if itemLink then
+        local itemID = string.match(itemLink, 'Hitem:(%d+):')
+        local itemData = GetItemData(itemID)
+        if itemData and _G["MerchantItem"..i.."Name"] and _G["MerchantItem"..i.."Name"]:GetText() ~= nil then
+          _G["MerchantItem"..i.."Name"]:SetText(itemData[1])
+          local _, fontHeight = _G["MerchantItem"..i.."Name"]:GetFont();
+          if fontHeight then
+            _G["MerchantItem"..i.."Name"]:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+          end
+        end
+      end
+    end
+  end
+end
+
+function OnLootUpdate(self, ...)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+    return
+  end
+  
+	local slotIndex = self:GetSlotIndex();
+  local itemLink	= GetLootSlotLink(slotIndex);
+  if not itemLink then
+    return
+  end
+  local itemID = string.match(itemLink, 'Hitem:(%d+):')
+  local itemData = GetItemData(itemID)
+  
+  if itemData then
+    if self.Text then
+      local _, fontHeight = self.Text:GetFont();
+      if fontHeight then
+        self.Text:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+      end
+      
+      self.Text:SetText(itemData[1])
+    end
+  end
+end
+
+function OnLootUpdateElvUI(self, ...)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") or not _G.ElvLootFrame then
+    return
+  end
+  
+  local numItems = GetNumLootItems()
+  if numItems > 0 then
+    for i = 1, numItems do
+      local slot = _G.ElvLootFrame.slots[i]
+      if slot then
+        local itemLink	= GetLootSlotLink(i);
+        if (itemLink) then
+          local itemID = string.match(itemLink, 'Hitem:(%d+):')
+          local itemData = GetItemData(itemID)
+          
+          if itemData then
+            if slot.name then
+              slot.name:SetText(itemData[1])
+              local _, fontHeight = slot.name:GetFont();
+              if fontHeight then
+                slot.name:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+              end
+            end
+          end
+        end
+      end
+    end
+  end
 end
 
 function OnAchievement(self, elementData)  
@@ -618,15 +729,7 @@ end
 
 function SetSpellTooltip(self, id)
   local spellData = GetSpellData(id)
-  if ( spellData ) then
-    
-    if (string.find(spellData[1], "¿")) then
-      spellData = GetSpellData(string.sub(spellData[1], 3))
-      if (not spellData) then
-        return
-      end
-    end
-
+  if ( spellData ) then    
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
@@ -661,23 +764,37 @@ function GetSpellData(id)
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_200000[num_id - 200000]
   elseif (num_id >= 300000 and num_id < 400000) then
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
+  elseif (num_id >= 400000 and num_id < 500000) then
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_400000[num_id - 400000]
   end
 
   if (dataIndex == nil) then
     return nil
   end
+  local spellData = nil
 
   if (num_id >= 0 and num_id < 100000) then
-    return   split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
+    spellData = split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
   elseif (num_id >= 100000 and num_id < 200000) then
-    return  split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
+    spellData = split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
   elseif (num_id >= 200000 and num_id < 300000) then
-    return  split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
+    spellData = split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
   elseif (num_id >= 300000 and num_id < 400000) then
-    return  split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
+    spellData = split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
+  elseif (num_id >= 400000 and num_id < 500000) then
+    spellData = split(WoWeuCN_Tooltips_SpellData_400000[dataIndex], '£')
   end
 
-  return nil
+  if ( spellData ) then
+    while (string.find(spellData[1], "¿")) do
+      spellData = GetSpellData(string.sub(spellData[1], 3))
+      if (not spellData) then
+        return
+      end
+    end
+  end
+
+  return spellData
 end
 
 -- Even handlers
@@ -715,8 +832,9 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
 end
 
 function Broadcast()
-  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
-  
+  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);  
+  print ("|cffffff00高级界面翻译已启用，如需关闭请在插件设置里更改。|r");
+
   local f = CreateFrame("Frame")
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:RegisterEvent("ADDON_LOADED")
