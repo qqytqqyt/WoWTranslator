@@ -1,6 +1,6 @@
 ﻿## Interface: 30400
 ## Title: WoWeuCN-Quests
-## Version: WotLK 3.4.0.1
+## Version: WotLK 3.4.0.2
 ## Notes_en: AddOn displays the translated quest and NPC chat information in Chinese. Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
 ## Notes: AddOn displays the translated quest information in Chinese. 
 ## Author: qqytqqyt
