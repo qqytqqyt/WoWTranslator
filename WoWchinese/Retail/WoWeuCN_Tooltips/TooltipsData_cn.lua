@@ -18,7 +18,8 @@ WoWeuCN_Tooltips_Interface = {
     transspell = "翻译法术提示", 
     transitem  = "翻译道具提示",
     transunit  = "翻译NPC提示",
-    transachievement = "翻译成就面板"
+    transachievement = "翻译成就面板",
+    transadvanced = "高级翻译模式"
  }; 
 
  WoWeuCN_Tooltips_Font1 = "Interface\\AddOns\\WoWeuCN_Tooltips\\Fonts\\woweucn.ttf"; 
@@ -35,6 +36,7 @@ WoWeuCN_Tooltips_Interface = {
  WoWeuCN_Tooltips_SpellData_100000 = {};
  WoWeuCN_Tooltips_SpellData_200000 = {};
  WoWeuCN_Tooltips_SpellData_300000 = {};
+ WoWeuCN_Tooltips_SpellData_400000 = {};
 
  WoWeuCN_Tooltips_ItemIndexData_0 = {};
  WoWeuCN_Tooltips_ItemIndexData_100000 = {};
