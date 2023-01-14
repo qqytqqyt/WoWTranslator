@@ -423,6 +423,9 @@ function OnMerchantInfoUpdate(...)
           _G["MerchantItem"..i.."Name"]:SetText(itemData[1])
           local _, fontHeight = _G["MerchantItem"..i.."Name"]:GetFont();
           if fontHeight then
+            if fontHeight > 12 then
+              fontHeight = 12
+            end
             _G["MerchantItem"..i.."Name"]:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
           end
         end
