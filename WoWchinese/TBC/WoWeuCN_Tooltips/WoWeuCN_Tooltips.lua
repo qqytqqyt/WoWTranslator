@@ -246,7 +246,17 @@ function WoWeuCN_Tooltips_OnLoad()
    if MerchantFrame then
     hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function(...) OnMerchantInfoUpdate(...) end);
    end
-   
+
+   if (_G.ElvUI ~= nil) then
+    local E, L, V, P, G = unpack(ElvUI)
+    if E then
+      local M = E:GetModule('Misc')
+      if M then
+        hooksecurefunc(M, "LOOT_OPENED", function(self, ...) OnLootUpdateElvUI(self, ...) end);
+      end
+    end
+   end
+
    hooksecurefunc("SpellButton_UpdateButton", function(...) OnSpellBookUpdate(...) end);
    RegisterChatFilterEvents()
 
@@ -367,6 +377,13 @@ function OnMerchantInfoUpdate(...)
         local itemData = GetItemData(itemID)
         if itemData and _G["MerchantItem"..i.."Name"] and _G["MerchantItem"..i.."Name"]:GetText() ~= nil then
           _G["MerchantItem"..i.."Name"]:SetText(itemData[1])
+          local _, fontHeight = _G["MerchantItem"..i.."Name"]:GetFont();
+          if fontHeight then
+            if fontHeight > 12 then
+              fontHeight = 12
+            end
+            _G["MerchantItem"..i.."Name"]:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+          end
         end
       end
     end
@@ -402,8 +419,42 @@ function OnLootUpdate(index)
       
       if itemData then
         local text = _G["LootButton"..index.."Text"];
+        local _, fontHeight = text:GetFont();
+        if fontHeight then
+          text:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+        end
         if text then
           text:SetText(itemData[1])
+        end
+      end
+    end
+  end
+end
+
+function OnLootUpdateElvUI(self, ...)
+  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") or not _G.ElvLootFrame then
+    return
+  end
+
+  local numItems = GetNumLootItems()
+  if numItems > 0 then
+    for i = 1, numItems do
+      local slot = _G.ElvLootFrame.slots[i]
+      if slot then
+        local itemLink	= GetLootSlotLink(i);
+        if (itemLink) then
+          local itemID = string.match(itemLink, 'Hitem:(%d+):')
+          local itemData = GetItemData(itemID)
+
+          if itemData then
+            if slot.name then
+              slot.name:SetText(itemData[1])
+              local _, fontHeight = slot.name:GetFont();
+              if fontHeight then
+                slot.name:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+              end
+            end
+          end
         end
       end
     end
@@ -687,7 +738,7 @@ function GetSpellData(spellId)
     while (string.find(spellData[1], "¿")) do
       spellData = GetSpellData(string.sub(spellData[1], 3))
       if (not spellData) then
-        return
+        return nil
       end
     end
   end
@@ -730,7 +781,7 @@ end
 
 function Broadcast()
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
-  print ("|cffffff00高级界面翻译已启用，如需关闭请在插件设置里更改。如遇字体问题可尝试在战网游戏设置中安装中文语言包。|r");
+  print ("|cffffff00高级界面翻译已启用，如需关闭请在插件设置里更改。|r");
 
   local f = CreateFrame("Frame")
   f:RegisterEvent("CHAT_MSG_ADDON")
