@@ -182,7 +182,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2022");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2023");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -815,13 +815,21 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
 end
 
 local achievementHooked = false
+local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
     if text == "VERSION" then
       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
-    else
-      --print(text .. " " .. sender)
+    elseif (string.sub(text,1,string.len("WoWeuCN-Tooltips"))=="WoWeuCN-Tooltips" and not reminded) then
+      local _, major, minor, revision = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+      local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+      local newVersionNumber = tonumber(newMajor)*10000 + tonumber(newMinor)*100 + tonumber(newRevision)
+      local myVersionNumber = tonumber(major)*10000 + tonumber(minor)*100 + tonumber(revision)
+      if newVersionNumber > myVersionNumber then
+        print("|cffffff00WoWeuCN-Tooltips有新版本，请及时在CurseForge或其他平台更新。|r")
+        reminded = true
+      end
     end
   end
   
@@ -835,9 +843,26 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
 end
 
 function Broadcast()
+  local expInfo, _, _, _ = GetBuildInfo()
+  local exp = split(expInfo, "%.")[1]
+  local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
+  if exp ~= myExp then
+    print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。r")
+    return
+  end
+
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);  
   print ("|cffffff00高级界面翻译已启用，如需关闭请在插件设置里更改。|r");
+  
+  local name, _, rank = GetGuildInfo("player");
+  if name ~= nil then
+    C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "GUILD")
+  end
 
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "RAID")
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "YELL")
+
+  reminded = false
   local f = CreateFrame("Frame")
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:RegisterEvent("ADDON_LOADED")
@@ -851,6 +876,7 @@ function Broadcast()
   end
   
   C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
+
   local regionCode = GetCurrentRegion()
   if (regionCode ~= 3) then
     print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
