@@ -59,6 +59,7 @@ end
 
 local function loadAllItemData()
   loadItemData0();
+  loadItemData100000();
 end
 
 local function loadAllSpellData()
@@ -307,6 +308,16 @@ function ReplaceText(s)
   return s
 end
 
+function RemoveColourCode(s)
+  if (s == nil) then
+    return nil
+  end
+
+  s = string.gsub(s, '|c[%a%d][%a%d][%a%d][%a%d][%a%d][%a%d][%a%d][%a%d]', '')
+  s = string.gsub(s, '|n', '')
+  return s
+end
+
 function GetFirstLineColorCode(...)
   local colorCode = _G["ORANGE_FONT_COLOR_CODE"]
   for regionIndex = 1, select("#", ...) do
@@ -334,131 +345,6 @@ function split(s, delimiter)
       table.insert(result, match);
   end
   return result;
-end
-
-function OnSpellBookUpdate(self)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
-    return
-  end
-
-  local slot, slotType, slotID = SpellBook_GetSpellBookSlot(self);
-  
-	if ( slot ) then
-    texture = GetSpellTexture(slot, SpellBookFrame.bookType);
-  end
-  
-	if ( not slot or not texture or (strlen(texture) == 0) or (slotType == "FUTURESPELL" and Kiosk.IsEnabled())) then
-    return
-  end
-
-	local name = self:GetName();
-  local spellString = _G[name.."SpellName"];
-  if spellString then
-    local spellName, _, spellID = GetSpellBookItemName(slot, SpellBookFrame.bookType);
-    local spellData = GetSpellData(spellID)
-    if ( spellData ) then
-      spellString:SetText(spellData[1])
-    end
-  end
-end
-
-function OnMerchantInfoUpdate(...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
-    return
-  end
-
-  for i=1, MERCHANT_ITEMS_PER_PAGE do
-    local itemButton = _G["MerchantItem"..i.."ItemButton"];
-    local numMerchantItems = GetMerchantNumItems();
-    if itemButton then
-      local itemLink = itemButton.link
-      if itemLink then
-        local itemID = string.match(itemLink, 'Hitem:(%d+):')
-        local itemData = GetItemData(itemID)
-        if itemData and _G["MerchantItem"..i.."Name"] and _G["MerchantItem"..i.."Name"]:GetText() ~= nil then
-          _G["MerchantItem"..i.."Name"]:SetText(itemData[1])
-          local _, fontHeight = _G["MerchantItem"..i.."Name"]:GetFont();
-          if fontHeight then
-            if fontHeight > 12 then
-              fontHeight = 12
-            end
-            _G["MerchantItem"..i.."Name"]:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
-          end
-        end
-      end
-    end
-  end
-end
-
-function OnLootUpdate(index)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
-    return
-  end
-  
-	local numLootItems = LootFrame.numLootItems;
-	--Logic to determine how many items to show per page
-	local numLootToShow = LOOTFRAME_NUMBUTTONS;
-  local self = LootFrame;
-	if( self.AutoLootTable ) then
-		numLootItems = #self.AutoLootTable;
-	end
-	if ( numLootItems > LOOTFRAME_NUMBUTTONS ) then
-		numLootToShow = numLootToShow - 1; -- make space for the page buttons
-	end
-  local slot = (numLootToShow * (LootFrame.page - 1)) + index;
-
-  if ( slot <= numLootItems ) then
-		if ( (LootSlotHasItem(slot)  or (self.AutoLootTable and self.AutoLootTable[slot]) )and index <= numLootToShow) then
-			local itemLink	= GetLootSlotLink(slot);
-      if not itemLink then
-        return
-      end
-
-      local itemID = string.match(itemLink, 'Hitem:(%d+):')
-      local itemData = GetItemData(itemID)
-      
-      if itemData then
-        local text = _G["LootButton"..index.."Text"];
-        local _, fontHeight = text:GetFont();
-        if fontHeight then
-          text:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
-        end
-        if text then
-          text:SetText(itemData[1])
-        end
-      end
-    end
-  end
-end
-
-function OnLootUpdateElvUI(self, ...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") or not _G.ElvLootFrame then
-    return
-  end
-
-  local numItems = GetNumLootItems()
-  if numItems > 0 then
-    for i = 1, numItems do
-      local slot = _G.ElvLootFrame.slots[i]
-      if slot then
-        local itemLink	= GetLootSlotLink(i);
-        if (itemLink) then
-          local itemID = string.match(itemLink, 'Hitem:(%d+):')
-          local itemData = GetItemData(itemID)
-
-          if itemData then
-            if slot.name then
-              slot.name:SetText(itemData[1])
-              local _, fontHeight = slot.name:GetFont();
-              if fontHeight then
-                slot.name:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
-              end
-            end
-          end
-        end
-      end
-    end
-  end
 end
 
 function OnAchievement(button, category, achievement, selectionID, renderOffScreen)  
@@ -762,6 +648,7 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
 end
 
 local achievementHooked = false
+local tradeSkillHooked = false
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -784,6 +671,12 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     hooksecurefunc("AchievementButton_DisplayAchievement", function(...) OnAchievement(...) end);
     hooksecurefunc("AchievementFrameSummary_UpdateAchievements", function(...) OnAchievementSummary(...) end);    
     achievementHooked = true
+  end
+  
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not tradeSkillHooked and TradeSkillFrame) then
+    hooksecurefunc("TradeSkillFrame_Update", function(...) OnTradeSkillUpdate(...) end);
+    hooksecurefunc("TradeSkillFrame_SetSelection", function(...) OnTradeSkillSelectionUpdate(...) end);
+    tradeSkillHooked = true
   end
 end
 
