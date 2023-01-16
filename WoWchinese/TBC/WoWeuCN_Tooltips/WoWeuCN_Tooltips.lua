@@ -46,6 +46,10 @@ function WoWeuCN_Tooltips_CheckVars()
   -- Initiation - advanced translation
   if (not WoWeuCN_Tooltips_PS["transadvanced"] ) then
      WoWeuCN_Tooltips_PS["transadvanced"] = "1";   
+  end  
+  -- Initiation - font
+  if (not WoWeuCN_Quests_PS["overwritefonts"]) then
+    WoWeuCN_Quests_PS["overwritefonts"] = "0";
   end
    -- Path version info
   if (not WoWeuCN_Tooltips_PS["patch"]) then
@@ -146,6 +150,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton5:SetChecked(WoWeuCN_Tooltips_PS["transunit"]=="1");
   WoWeuCN_TooltipsCheckButton6:SetChecked(WoWeuCN_Tooltips_PS["transachievement"]=="1");
   WoWeuCN_TooltipsCheckButton7:SetChecked(WoWeuCN_Tooltips_PS["transadvanced"]=="1");
+  WoWeuCN_TooltipsCheckButton8:SetChecked(WoWeuCN_Tooltips_PS["overwritefonts"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -217,6 +222,12 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton7:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_PS["transadvanced"]="1" else WoWeuCN_Tooltips_PS["transadvanced"]="0" end; end);
   WoWeuCN_TooltipsCheckButton7Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton7Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
+  
+  local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
+  WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -105);
+  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_PS["overwritefonts"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton8Text:SetText(WoWeuCN_Tooltips_Interface.overwritefonts);
 end
 
 -- First function called after the add-in has been loaded
@@ -357,15 +368,11 @@ function OnAchievement(button, category, achievement, selectionID, renderOffScre
       local achievementData = GetAchievementData(id)
       if ( achievementData ) then
         local title = achievementData[1]
-        button.label:SetText(title);
+        ReplaceUIText(button.label, title, 25)
         local description = achievementData[2]
         if ( description ) then
-          if (button.description) then
-            button.description:SetText(description);
-          end
-          if (button.hiddenDescription) then
-            button.hiddenDescription:SetText(description);
-          end
+          ReplaceUIText(button.description, description, 20)
+          ReplaceUIText(button.hiddenDescription, description, 20)
         end
       end
       
@@ -384,10 +391,10 @@ function OnAchievementSummary(...)
       local achievementData = GetAchievementData(id)
       if ( achievementData ) then
         local title = achievementData[1]
-        button.label:SetText(title);
+        ReplaceUIText(button.label, title, 25)
         local description = achievementData[2]
         if ( description and button.description ) then
-          button.description:SetText(description);
+          ReplaceUIText(button.description, description, 20)
         end
       end
     end

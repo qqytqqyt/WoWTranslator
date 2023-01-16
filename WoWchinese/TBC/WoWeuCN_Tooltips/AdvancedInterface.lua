@@ -3,6 +3,11 @@ function ReplaceUIText(textItem, text, maxFontSize)
     return
   end
 
+  if (WoWeuCN_Tooltips_PS["overwritefonts"]=="0") then    
+    textItem:SetText(RemoveColourCode(ReplaceText(text)))
+    return
+  end
+  
   local _, fontHeight = textItem:GetFont();
   if fontHeight then
     if fontHeight > maxFontSize then
@@ -132,7 +137,6 @@ function OnSpellBookUpdate(self)
     local spellData = GetSpellData(spellID)
     if ( spellData ) then
       ReplaceUIText(spellString, spellData[1], 15)
-      spellString:SetText(spellData[1])
     end
   end
 end
