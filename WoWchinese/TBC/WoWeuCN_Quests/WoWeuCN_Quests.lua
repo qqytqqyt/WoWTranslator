@@ -1122,7 +1122,7 @@ local function ReplaceUIText(textItem, text, maxFontSize)
       if fontHeight > maxFontSize then
          fontHeight = maxFontSize
       end
-      textItem:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+      textItem:SetFont(WoWeuCN_Quests_Font1, fontHeight)
       textItem:SetText(text)
    end
   else
