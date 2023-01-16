@@ -15,7 +15,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                     local id, name = string.match(msg, "^.-Hitem:(%d+):.-%[(.-)%]")
                     local itemData = GetItemData(id)
                     if (itemData) then
-                        msg = string.gsub(msg, regexEscape(name .. "]"), itemData[1] .. " (" .. name .. ")]", 1)
+                        msg = string.gsub(msg, regexEscape(name .. "]"), RemoveColourCode(ReplaceText(itemData[1])) .. " (" .. name .. ")]", 1)
                     end
                     msg = string.gsub(msg, "Hitem:", "£TMP£", 1)
                 end
@@ -32,7 +32,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                     local id, name = string.match(msg, "^.-Hspell:(%d+):.-%[(.-)%]")
                     local spellData = GetSpellData(id)
                     if (spellData) then
-                        msg = string.gsub(msg, regexEscape(name .. "]"), spellData[1] .. " (" .. name .. ")]", 1)
+                        msg = string.gsub(msg, regexEscape(name .. "]"), ReplaceText(spellData[1]) .. " (" .. name .. ")]", 1)
                     end
                     msg = string.gsub(msg, "Hspell:", "£TMP£", 1)
                 end
