@@ -536,6 +536,7 @@ function WoWeuCN_Quests_ON_OFF()
    else   
       curr_trans="1";
       WoWeuCN_Quests_Translate_On(1);
+      OnQuestLogUpdate()
    end
 end
 
@@ -789,43 +790,6 @@ local function OnNpcChat(self, event, arg1, arg2, arg3, arg4, arg5, ...)
    return translated
 end
 
-
--- Even handlers
-function WoWeuCN_Quests_OnEvent(self, event, name, ...)
-   if (WoWeuCN_Quests_onDebug) then
-      print('OnEvent-event: '..event);   
-   end   
-   if (event=="ADDON_LOADED" and name=="WoWeuCN_Quests") then
-
-      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_SAY", OnNpcChat)
-      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_PARTY", OnNpcChat)
-      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_YELL", OnNpcChat)
-      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_WHISPER", OnNpcChat)
-      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_EMOTE", OnNpcChat)
-      WoWeuCN_Quests_BubblesArray = {};
-      
-      WoWeuCN_Quests_CtrFrame:SetScript("OnUpdate", UpdateBubblizeText);             -- wyłącz metodę Update, bo tablica pusta
-
-      SlashCmdList["WOWEUCN_QUESTS"] = function(msg) WoWeuCN_Quests_SlashCommand(msg); end
-      SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
-      SLASH_WOWEUCN_QUESTS2 = "/woweucn";
-      WoWeuCN_Quests_CheckVars();
-      -- Create interface Options in Blizzard-Interface-Addons
-      WoWeuCN_Quests_BlizzardOptions();
-      
-      WoWeuCN_Quests_wait(2, Broadcast)
-      WoWeuCN_Quests:UnregisterEvent("ADDON_LOADED");
-      WoWeuCN_Quests.ADDON_LOADED = nil;
-      if (not isGetQuestID) then
-         DetectEmuServer();
-      end
-   elseif (event=="QUEST_DETAIL" or event=="QUEST_PROGRESS" or event=="QUEST_COMPLETE") then
-      if ( QuestFrame:IsVisible()) then
-         WoWeuCN_Quests_QuestPrepare(event);
-      end	-- QuestFrame is Visible
-   end
-end
-
 -- An empty QuestLog was opened
 function WoWeuCN_Quests_EmptyQuestLog()
    WoWeuCN_Quests_ToggleButton1:Hide();
@@ -846,6 +810,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
       WoWeuCN_Quests_ToggleButton1:Enable();
       WoWeuCN_Quests_ToggleButton2:Enable();
       curr_trans = "1";
+      OnQuestLogUpdate()
       if ( WoWeuCN_Quests_QuestData[str_ID] ) then   -- Display only when there is a translation
          WoWeuCN_Quests_quest_LG.title = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Title"]);
          WoWeuCN_Quests_quest_EN.title = GetTitleText();
@@ -942,7 +907,6 @@ end
 -- Displays the translation
 function WoWeuCN_Quests_Translate_On(typ)
    WoweuCN_LoadOriginalHeaders()
-   
    if (WoWeuCN_Quests_PS["transtitle"]=="1") then    -- view translated title
       QuestInfoTitleHeader:SetFont(WoWeuCN_Quests_Font1, 18);
       QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
@@ -1024,6 +988,7 @@ end
 
 -- displays the original text
 function WoWeuCN_Quests_Translate_Off(typ)
+   RevertQuestLogList()
    QuestInfoTitleHeader:SetFont(Original_Font1, 18);
    QuestProgressTitleText:SetFont(Original_Font1, 18);
    QuestInfoObjectivesHeader:SetFont(Original_Font1, 18);
@@ -1146,6 +1111,151 @@ function split(s, delimiter)
    return result;
  end
 
+local function ReplaceUIText(textItem, text, maxFontSize)
+  if not textItem or textItem:GetText() == nil then
+    return
+  end
+
+  if WoWeuCN_Quests_PS["overwritefonts"]  == "1" then
+   local _, fontHeight = textItem:GetFont();
+   if fontHeight then
+      if fontHeight > maxFontSize then
+         fontHeight = maxFontSize
+      end
+      textItem:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+      textItem:SetText(text)
+   end
+  else
+   textItem:SetText(text)
+  end
+end
+
+function SetQuestLogTitle(questLogTitle, title)
+   if not title then
+      return
+   end
+
+   local questNormalText = questLogTitle.normalText;
+   questNormalText:SetWidth(0);
+   ReplaceUIText(questNormalText, title, 25)
+   --questLogTitle:SetText(title)
+   local questTitleTag = questLogTitle.tag;
+   local questCheck = questLogTitle.check;
+
+   -- find the right edge of the text
+   -- HACK: Unfortunately we can't just call questTitleTag:GetLeft() or questLogTitle:GetRight() to find right edges.
+   -- The reason why is because SetWidth may be called on the questLogTitle button before we enter this function. The
+   -- results of a SetWidth are not calculated until the next update tick; so in order to get the most up-to-date
+   -- right edge, we call GetLeft() + GetWidth() instead of just GetRight()
+   local rightEdge;
+   if ( questTitleTag:IsShown() ) then
+      -- adjust the normal text to not overrun the title tag
+      if ( questCheck:IsShown() ) then
+         rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4 - questCheck:GetWidth() - 2;
+      else
+         rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questTitleTag:GetWidth() - 4;
+      end
+   else
+      -- adjust the normal text to not overrun the button
+      if ( questCheck:IsShown() ) then
+         rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth() - questCheck:GetWidth() - 2;
+      else
+         rightEdge = questLogTitle:GetLeft() + questLogTitle:GetWidth();
+      end
+   end
+   -- subtract from the text width the number of pixels that overrun the right edge
+   local questNormalTextWidth = questNormalText:GetWidth() - max(questNormalText:GetRight() - rightEdge, 0);
+   questNormalText:SetWidth(questNormalTextWidth);
+end
+
+function RevertQuestLogList()
+   if ( not QuestLogFrame:IsShown() or curr_trans == "1" ) then
+		return;
+	end
+   local numEntries, numQuests = GetNumQuestLogEntries();
+   if ( numEntries == 0 ) then
+      return
+   end
+   
+	local buttons = QuestLogListScrollFrame.buttons;
+   local scrollOffset = HybridScrollFrame_GetOffset(QuestLogListScrollFrame);
+   
+   for i=1, QUESTS_DISPLAYED, 1 do
+      questIndex = i + scrollOffset;
+      if ( questIndex <= numEntries ) then
+      end
+      questLogTitle = buttons[i];
+      local title = GetQuestLogTitle(questIndex);
+      SetQuestLogTitle(questLogTitle, title)
+   end
+end
+
+function OnQuestLogUpdate(...)   
+   if ( not QuestLogFrame:IsShown() or curr_trans == "0" ) then
+		return;
+	end
+   local numEntries, numQuests = GetNumQuestLogEntries();
+   if ( numEntries == 0 ) then
+      return
+   end
+   
+	local buttons = QuestLogListScrollFrame.buttons;
+   local scrollOffset = HybridScrollFrame_GetOffset(QuestLogListScrollFrame);
+   
+   for i=1, QUESTS_DISPLAYED, 1 do
+      questIndex = i + scrollOffset;
+      if ( questIndex <= numEntries ) then
+      end
+      questLogTitle = buttons[i];
+      local num_id = GetQuestIDFromLogIndex(questIndex)
+      if num_id then
+         local id = tostring(num_id)
+         if (WoWeuCN_Quests_QuestData[id]) then
+            local title = WoWeuCN_Quests_QuestData[id]["Title"]
+            SetQuestLogTitle(questLogTitle, title)
+         end
+      end
+   end
+end
+
+-- Even handlers
+function WoWeuCN_Quests_OnEvent(self, event, name, ...)
+   if (WoWeuCN_Quests_onDebug) then
+      print('OnEvent-event: '..event);   
+   end   
+   if (event=="ADDON_LOADED" and name=="WoWeuCN_Quests") then
+
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_SAY", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_PARTY", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_YELL", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_WHISPER", OnNpcChat)
+      ChatFrame_AddMessageEventFilter("CHAT_MSG_MONSTER_EMOTE", OnNpcChat)
+      WoWeuCN_Quests_BubblesArray = {};
+      
+      WoWeuCN_Quests_CtrFrame:SetScript("OnUpdate", UpdateBubblizeText);             -- wyłącz metodę Update, bo tablica pusta
+
+      SlashCmdList["WOWEUCN_QUESTS"] = function(msg) WoWeuCN_Quests_SlashCommand(msg); end
+      SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
+      SLASH_WOWEUCN_QUESTS2 = "/woweucn";
+      WoWeuCN_Quests_CheckVars();
+      -- Create interface Options in Blizzard-Interface-Addons
+      WoWeuCN_Quests_BlizzardOptions();
+      
+      WoWeuCN_Quests_wait(2, Broadcast)      
+      hooksecurefunc("QuestLog_Update", function(...) OnQuestLogUpdate(...) end);
+      hooksecurefunc("QuestLogTitleButton_Resize", function(...) OnQuestLogUpdate(...) end);
+      WoWeuCN_Quests:UnregisterEvent("ADDON_LOADED");
+      WoWeuCN_Quests.ADDON_LOADED = nil;
+      if (not isGetQuestID) then
+         DetectEmuServer();
+      end
+   elseif (event=="QUEST_DETAIL" or event=="QUEST_PROGRESS" or event=="QUEST_COMPLETE") then
+      if ( QuestFrame:IsVisible()) then
+         WoWeuCN_Quests_QuestPrepare(event);
+      end	-- QuestFrame is Visible
+   end
+end
+
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -1162,7 +1272,7 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
         reminded = true
       end
      end
- end
+   end
 end
  
 function Broadcast()
