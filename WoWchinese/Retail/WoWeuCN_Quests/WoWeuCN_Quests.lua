@@ -161,25 +161,25 @@ function WoWeuCN_Quests_CheckVars()
   end
 end
 
-local QTR_waitFrame = nil;
-local QTR_waitTable = {};
+local WoWeuCN_Quests_waitFrame = nil;
+local WoWeuCN_Quests_waitTable = {};
 
-function QTR_wait(delay, func, ...)
+function WoWeuCN_Quests_wait(delay, func, ...)
   if(type(delay)~="number" or type(func)~="function") then
     return false;
   end
-  if (QTR_waitFrame == nil) then
-    QTR_waitFrame = CreateFrame("Frame","QTR_WaitFrame", UIParent);
-    QTR_waitFrame:SetScript("onUpdate",function (self,elapse)
-      local count = #QTR_waitTable;
+  if (WoWeuCN_Quests_waitFrame == nil) then
+    WoWeuCN_Quests_waitFrame = CreateFrame("Frame","WoWeuCN_Quests_WaitFrame", UIParent);
+    WoWeuCN_Quests_waitFrame:SetScript("onUpdate",function (self,elapse)
+      local count = #WoWeuCN_Quests_waitTable;
       local i = 1;
       while(i<=count) do
-        local waitRecord = tremove(QTR_waitTable,i);
+        local waitRecord = tremove(WoWeuCN_Quests_waitTable,i);
         local d = tremove(waitRecord,1);
         local f = tremove(waitRecord,1);
         local p = tremove(waitRecord,1);
         if(d>elapse) then
-          tinsert(QTR_waitTable,i,{d-elapse,f,p});
+          tinsert(WoWeuCN_Quests_waitTable,i,{d-elapse,f,p});
           i = i + 1;
         else
           count = count - 1;
@@ -188,7 +188,7 @@ function QTR_wait(delay, func, ...)
       end
     end);
   end
-  tinsert(QTR_waitTable,{delay,func,{...}});
+  tinsert(WoWeuCN_Quests_waitTable,{delay,func,{...}});
   return true;
 end
 
@@ -212,9 +212,9 @@ local function scanAuto(startIndex, attempt, counter)
   print(counter)
   WoWeuCN_Quests_QuestIndex = startIndex
   if (counter >= 5) then
-    QTR_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
+    WoWeuCN_Quests_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
   else
-    QTR_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
+    WoWeuCN_Quests_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
@@ -390,7 +390,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
       if (WoWeuCN_Quests_QuestIndex == nil) then
         WoWeuCN_Quests_QuestIndex = 1
       end
-      QTR_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
+      WoWeuCN_Quests_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="scancacheauto" or msg=="SCANCACHEAUTO") then
       if (WoWeuCN_Quests_QuestToolTips == nil) then
@@ -399,7 +399,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
       if (WoWeuCN_Quests_QuestIndex == nil) then
         WoWeuCN_Quests_QuestIndex = 1
       end
-      QTR_wait(0.1, scanCacheAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
+      WoWeuCN_Quests_wait(0.1, scanCacheAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
@@ -657,6 +657,45 @@ function WoWeuCN_Quests_PrepareReload()
   WoWeuCN_Quests_QuestPrepare('');
 end;      
 
+local function ReplaceUIText(textItem, text, maxFontSize)
+   if not textItem or textItem:GetText() == nil then
+     return
+   end
+ 
+   local _, fontHeight = textItem:GetFont();
+   if fontHeight then
+      if fontHeight > maxFontSize then
+         fontHeight = maxFontSize
+      end
+      --textItem:SetFont(WoWeuCN_Quests_Font1, fontHeight)
+      textItem:SetText(text)
+   end
+ end
+
+function OnQuestLogUpdate(poiTable)
+   if (WoWeuCN_Quests_PS["transtitle"]~="1" or WoWeuCN_Quests_PS["active"]~="1" ) then
+      return
+   end
+
+   for button in QuestScrollFrame.titleFramePool:EnumerateActive() do
+      local oldHeight = button.Text:GetHeight();
+      local buttonHeight = button:GetHeight() 
+      if button.Text then
+         local num_id = button.questID
+         if (num_id) then
+            local id = tostring(num_id)
+            if (WoWeuCN_Quests_QuestData[id]) then
+               local title = WoWeuCN_Quests_QuestData[id]["Title"]
+               ReplaceUIText(button.Text,title,20)
+               local newHeight = button.Text:GetHeight();
+               button:SetHeight(buttonHeight + newHeight - oldHeight)
+            end
+         end
+      end
+   end
+   
+	QuestScrollFrame.Contents:Layout();
+end
 
 -- Even handlers
 function WoWeuCN_Quests_OnEvent(self, event, name, ...)
@@ -670,7 +709,8 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       WoWeuCN_Quests_CheckVars();
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Quests_BlizzardOptions();
-      QTR_wait(2, Broadcast)
+      WoWeuCN_Quests_wait(2, Broadcast)
+      hooksecurefunc("QuestLogQuests_Update", function(...) OnQuestLogUpdate(...) end);
       WoWeuCN_Quests:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Quests.ADDON_LOADED = nil;
       if (not isGetQuestID) then
