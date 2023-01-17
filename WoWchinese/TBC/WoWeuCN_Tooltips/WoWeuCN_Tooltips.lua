@@ -319,16 +319,6 @@ function ReplaceText(s)
   return s
 end
 
-function RemoveColourCode(s)
-  if (s == nil) then
-    return nil
-  end
-
-  s = string.gsub(s, '|c[%a%d][%a%d][%a%d][%a%d][%a%d][%a%d][%a%d][%a%d]', '')
-  s = string.gsub(s, '|n', '')
-  return s
-end
-
 function GetFirstLineColorCode(...)
   local colorCode = _G["ORANGE_FONT_COLOR_CODE"]
   for regionIndex = 1, select("#", ...) do

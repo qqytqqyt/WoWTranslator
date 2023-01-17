@@ -1,3 +1,13 @@
+function RemoveColourCode(s)
+  if (s == nil) then
+    return nil
+  end
+
+  s = string.gsub(s, '|c[%a%d][%a%d][%a%d][%a%d][%a%d][%a%d][%a%d][%a%d]', '')
+  s = string.gsub(s, '|r', '')
+  return s
+end
+
 function ReplaceUIText(textItem, text, maxFontSize)
   if not textItem or textItem:GetText() == nil then
     return
@@ -13,7 +23,7 @@ function ReplaceUIText(textItem, text, maxFontSize)
     if fontHeight > maxFontSize then
       fontHeight = maxFontSize
     end
-    textItem:SetFont(WoWeuCN_Tooltips_Font1, fontHeight)
+    textItem:SetFont(WoWeuCN_Tooltips_Font1, fontHeight, '')
     textItem:SetText(RemoveColourCode(ReplaceText(text)))
   end
 end
@@ -59,16 +69,7 @@ function OnTradeSkillSelectionUpdate(index)
   if(numReagents == 0) then
     return
   end
-  ReplaceUIText(TradeSkillReagentLabel, "材料：", 12)
-  for i=1, numReagents, 1 do
-    local link = GetTradeSkillReagentItemLink(index, i)
-    local itemID = string.match(link, '^.-Hitem:(%d+)')
-    local itemData = GetItemData(itemID)
-    if itemData then
-      ReplaceUIText(_G["TradeSkillReagent"..i.."Name"], itemData[1], 12)
-    end
-  end
-
+  
   if ( GetTradeSkillDescription(index) ) then
     local link = GetTradeSkillRecipeLink(index)
     if link then
@@ -86,7 +87,16 @@ function OnTradeSkillSelectionUpdate(index)
         ReplaceUIText(TradeSkillDescription, text, 12)
       end
     end
-    
+  end
+
+  ReplaceUIText(TradeSkillReagentLabel, "材料：", 12)
+  for i=1, numReagents, 1 do
+    local link = GetTradeSkillReagentItemLink(index, i)
+    local itemID = string.match(link, '^.-Hitem:(%d+)')
+    local itemData = GetItemData(itemID)
+    if itemData then
+      ReplaceUIText(_G["TradeSkillReagent"..i.."Name"], itemData[1], 12)
+    end
   end
 end
 
