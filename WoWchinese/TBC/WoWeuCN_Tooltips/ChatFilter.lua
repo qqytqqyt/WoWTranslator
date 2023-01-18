@@ -32,12 +32,26 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                     local id, name = string.match(msg, "^.-Hspell:(%d+):.-%[(.-)%]")
                     local spellData = GetSpellData(id)
                     if (spellData) then
-                        msg = string.gsub(msg, regexEscape(name .. "]"), spellData[1] .. " (" .. name .. ")]", 1)
+                        msg = string.gsub(msg, regexEscape(name .. "]"), RemoveColourCode(ReplaceText(spellData[1])) .. " (" .. name .. ")]", 1)
                     end
                     msg = string.gsub(msg, "Hspell:", "£TMP£", 1)
                 end
                 
                 msg = string.gsub(msg, "£TMP£", "Hspell:")
+            end
+        end
+        if string.find(msg, "Henchant:") then
+            if chatFrame and chatFrame.historyBuffer and #(chatFrame.historyBuffer.elements) > 0 and chatFrame ~= _G.ChatFrame2 then
+                while (string.find(msg, "Henchant:")) do
+                    local id, name = string.match(msg, "^.-Henchant:(%d+).-%[(.-)%]")
+                    local spellData = GetSpellData(id)
+                    if (spellData) then
+                        msg = string.gsub(msg, regexEscape(name .. "]"), RemoveColourCode(ReplaceText(spellData[1])) .. " (" .. name .. ")]", 1)
+                    end
+                    msg = string.gsub(msg, "Henchant:", "£TMP£", 1)
+                end
+                
+                msg = string.gsub(msg, "£TMP£", "Henchant:")
             end
         end
     end
