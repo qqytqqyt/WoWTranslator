@@ -1,0 +1,15 @@
+﻿## Interface: 30401
+## Title: WoWeuCN-Scanner
+## Version: 1.0.0.0
+## Notes_en: Data scanner
+## Author: qqytqqyt
+## eMail: ytong007@hotmail.com
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: WoWeuCN_Scanner_PS, WoWeuCN_Scanner_SpellToolTips0, WoWeuCN_Scanner_SpellToolTips100000, WoWeuCN_Scanner_SpellToolTips200000, WoWeuCN_Scanner_SpellToolTips300000, WoWeuCN_Scanner_SpellToolTips400000, WoWeuCN_Scanner_SpellToolIndex, WoWeuCN_Scanner_ItemToolTips0, WoWeuCN_Scanner_ItemToolTips100000, WoWeuCN_Scanner_ItemToolTips200000, WoWeuCN_Scanner_ItemIndex, WoWeuCN_Scanner_UnitToolTips0, WoWeuCN_Scanner_UnitToolTips100000, WoWeuCN_Scanner_UnitToolTips200000, WoWeuCN_Scanner_UnitIndex, WoWeuCN_Scanner_Achivements0, WoWeuCN_Scanner_AchivementsIndex, WoWeuCN_Scanner_QuestToolTips, WoWeuCN_Scanner_QuestIndex
+## SavedVariablesPerCharacter: WoWeuCN_Scanner_PC
+
+TooltipsData_cn.lua
+TooltipsScanner.lua
+WoWeuCN_Scanner.lua
+WoWeuCN_Scanner.xml
