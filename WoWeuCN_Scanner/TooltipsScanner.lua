@@ -313,7 +313,12 @@ function WoWeuCN_Scanner_ScanCacheAuto(startIndex, attempt, counter)
     end
     
     for i = startIndex, startIndex + 150 do
-     local title = C_QuestLog.GetQuestInfo(i)
+     local title = ''
+     if C_QuestLog.GetQuestInfo then
+      title = C_QuestLog.GetQuestInfo(i)
+     else
+      title = C_QuestLog.GetTitleForQuestID(tostring(i))
+     end
      if (title ~= '' and title ~= nil) then
       print(title)
      end
