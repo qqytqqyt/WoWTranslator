@@ -1,13 +1,13 @@
 ﻿## Interface: 30401
 ## Title: WoWeuCN-Quests
-## Version: WotLK 3.4.1.0
+## Version: WotLK 3.4.1.1
 ## Notes_en: AddOn displays the translated quest and NPC chat information in Chinese. Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
 ## Notes: AddOn displays the translated quest information in Chinese. 
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: WoWeuCN_Quests_PS, WoWeuCN_Quests_SAVED, WoWeuCN_Quests_MISSING, WoWeuCN_Quests_CONTROL, WoWeuCN_Quests_QuestToolTips, WoWeuCN_Quests_QuestIndex
+## SavedVariables: WoWeuCN_Quests_PS, WoWeuCN_Quests_SAVED, WoWeuCN_Quests_MISSING, WoWeuCN_Quests_CONTROL
 ## SavedVariablesPerCharacter: WoWeuCN_Quests_PC, WoWeuCN_Quests_LastAnnounceDate
 
 QuestData_cn_classic.lua

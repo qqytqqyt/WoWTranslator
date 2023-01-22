@@ -9,6 +9,38 @@ local WoWeuCN_AddonPrefix = "WoWeuCN";
 local last_time = GetTime();
 local last_text = 0;
 
+-- wait functions from QTR
+local WoWeuCN_Tooltips_waitFrame = nil;
+local WoWeuCN_Tooltips_waitTable = {};
+
+function WoWeuCN_Tooltips_wait(delay, func, ...)
+  if(type(delay)~="number" or type(func)~="function") then
+    return false;
+  end
+  if (WoWeuCN_Tooltips_waitFrame == nil) then
+    WoWeuCN_Tooltips_waitFrame = CreateFrame("Frame","WoWeuCN_Tooltips_waitFrame", UIParent);
+    WoWeuCN_Tooltips_waitFrame:SetScript("onUpdate",function (self,elapse)
+      local count = #WoWeuCN_Tooltips_waitTable;
+      local i = 1;
+      while(i<=count) do
+        local waitRecord = tremove(WoWeuCN_Tooltips_waitTable,i);
+        local d = tremove(waitRecord,1);
+        local f = tremove(waitRecord,1);
+        local p = tremove(waitRecord,1);
+        if(d>elapse) then
+          tinsert(WoWeuCN_Tooltips_waitTable,i,{d-elapse,f,p});
+          i = i + 1;
+        else
+          count = count - 1;
+          f(unpack(p));
+        end
+      end
+    end);
+  end
+  tinsert(WoWeuCN_Tooltips_waitTable,{delay,func,{...}});
+  return true;
+end
+
 -- Global variables initialtion
 function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_LastAnnounceDate) then
@@ -102,37 +134,6 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          WoWeuCN_Tooltips_ToggleButton2:Disable();
          WoWeuCN_Tooltips_ToggleButton3:Disable();
       end
-
-    --set scan index
-    elseif (string.sub(msg,1,string.len("index"))=="index") then
-      local index = string.sub(msg,string.len("index")+2)
-      scanIndex(index)
-
-    --clear
-    elseif (msg=="clear" or msg=="CLEAR") then
-      scanClear()
-
-    -- spell auto scan
-    elseif (msg=="scanauto" or msg=="SCANAUTO") then
-      scanInit()    
-      WoWeuCN_Tooltips_wait(0.1, scanSpellAuto, WoWeuCN_Tooltips_SpellToolIndex, 1, 0)
-    
-    -- unit auto scan
-    elseif (msg=="unitscanauto" or msg=="UNITSCANAUTO") then
-      scanInit()
-      WoWeuCN_Tooltips_wait(0.1, scanUnitAuto, WoWeuCN_Tooltips_UnitIndex, 1, 0)
-
-    -- item auto scan
-    elseif (msg=="itemscanauto" or msg=="ITEMSCANAUTO") then      
-      scanInit()
-      WoWeuCN_Tooltips_wait(0.1, scanItemAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
-
-    -- achivement auto scan
-    elseif (msg=="achievescanauto" or msg=="ACHIVESCANAUTO") then      
-      scanInit()
-      WoWeuCN_Tooltips_wait(0.1, scanAchivementAuto, WoWeuCN_Tooltips_ItemIndex, 1, 0)
-
-
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
         InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
@@ -272,7 +273,6 @@ function WoWeuCN_Tooltips_OnLoad()
    hooksecurefunc("SpellButton_UpdateButton", function(...) OnSpellBookUpdate(...) end);
    RegisterChatFilterEvents()
 
-   qcSpellInformationTooltipSetup();
    loadAllSpellData()
    loadAllItemData()
    loadAllUnitData()
