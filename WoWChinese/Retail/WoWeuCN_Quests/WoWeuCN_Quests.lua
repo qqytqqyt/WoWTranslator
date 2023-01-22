@@ -192,55 +192,6 @@ function WoWeuCN_Quests_wait(delay, func, ...)
   return true;
 end
 
-
-local function scanAuto(startIndex, attempt, counter)
-  if (startIndex > 100000) then
-    return;
-  end
-  for i = startIndex, startIndex + 100 do
-    qcQuestInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
-    qcQuestInformationTooltip:ClearLines()
-    qcQuestInformationTooltip:SetHyperlink('quest:' .. i)
-    qcQuestInformationTooltip:Show()
-    local text =  EnumerateTooltipLines(qcQuestInformationTooltip)
-    if (text ~= '' and text ~= nil) then
-      WoWeuCN_Quests_QuestToolTips[i .. ''] = text
-      print(i)
-    end
-  end
-  print(attempt)
-  print(counter)
-  WoWeuCN_Quests_QuestIndex = startIndex
-  if (counter >= 5) then
-    WoWeuCN_Quests_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
-  else
-    WoWeuCN_Quests_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
-  end
-end
-
-local function scanCacheAuto(startIndex, attempt, counter)
-   if (startIndex > 100000) then
-     return;
-   end
-   if (counter == 0) then
-      print(startIndex)
-     end
-     
-     for i = startIndex, startIndex + 150 do
-      local title = C_QuestLog.GetTitleForQuestID(tostring(i))
-      if (title ~= '' and title ~= nil) then
-       print(title)
-      end
-     end
-     
-     WoWeuCN_Quests_QuestIndex = startIndex
-     if (counter >= 5) then
-       WoWeuCN_Quests_wait(0.2, scanCacheAuto, startIndex + 150, attempt + 1, 0)
-     else
-       WoWeuCN_Quests_wait(0.2, scanCacheAuto, startIndex, attempt + 1, counter + 1)
-     end
- end
-
 -- Checks the availability of Wow's special function: GetQuestID()
 function DetectEmuServer()
   WoWeuCN_Quests_PS["isGetQuestID"]="0";
@@ -251,50 +202,6 @@ function DetectEmuServer()
      isGetQuestID="1";
   end
 end
-
--- scann
-local function EnumerateTooltipLines_helper(...)
-  local texts = '';
-  local hasTitleSet = false
-  local hasObjectivesSet = false
-    for i = 1, select("#", ...) do
-      
-        local region = select(i, ...)
-        --print(region:GetObjectType())
-        if region and region:GetObjectType() == "FontString" then
-      local text = region:GetText() -- string or nil
-      --print(text)
-			if (text ~= nil) then
-        if (hasTitleSet ~= true and text ~= " ")
-          then
-            text = "{{" .. text .. "}}"
-            hasTitleSet = true
-          end
-
-        if (i > 3 and hasObjectivesSet ~= true and text ~= " ")
-          then
-            text = "{{" .. text .. "}}"
-            hasObjectivesSet = true
-          end
-        print(i)
-        print(text)
-        texts = texts .. text	
-			end
-        end
-	end
-	return texts
-end
-
-function EnumerateTooltipLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
-    return EnumerateTooltipLines_helper(tooltip:GetRegions())
-end
-
-function qcQuestInformationTooltipSetup() -- *
-	qcQuestInformationTooltip = CreateFrame("GameTooltip", "qcQuestInformationTooltip", UIParent, "GameTooltipTemplate")
-	qcQuestInformationTooltip:SetFrameStrata("TOOLTIP")
-end
-
-
 -- commands
 function WoWeuCN_Quests_SlashCommand(msg)
    if (msg=="on" or msg=="ON") then
@@ -364,42 +271,6 @@ function WoWeuCN_Quests_SlashCommand(msg)
       else
          print ("WOWeuCN - 翻译任务目标状态 : 禁用.");
       end
-
-    -- dev scan
-    elseif (msg=="back" or msg=="BACK") then
-      WoWeuCN_Quests_QuestIndex = WoWeuCN_Quests_QuestIndex - 500;
-      print(WoWeuCN_Quests_QuestIndex);
-    elseif (msg=="reset" or msg=="RESET") then
-      WoWeuCN_Quests_QuestIndex = 1;
-      print("Reset");
-    elseif (msg=="clear" or msg=="CLEAR") then
-      WoWeuCN_Quests_QuestIndex = 1;
-      WoWeuCN_Quests_QuestToolTips = {} 
-      print("Clear");
-      
-    --set scan index
-    elseif (string.sub(msg,1,string.len("index"))=="index") then
-      local index = string.sub(msg,string.len("index")+2)
-      WoWeuCN_Quests_QuestIndex = tonumber(index);
-      print(index)
-
-    elseif (msg=="scanauto" or msg=="SCANAUTO") then
-      if (WoWeuCN_Quests_QuestToolTips == nil) then
-        WoWeuCN_Quests_QuestToolTips = {} 
-      end
-      if (WoWeuCN_Quests_QuestIndex == nil) then
-        WoWeuCN_Quests_QuestIndex = 1
-      end
-      WoWeuCN_Quests_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
-
-   elseif (msg=="scancacheauto" or msg=="SCANCACHEAUTO") then
-      if (WoWeuCN_Quests_QuestToolTips == nil) then
-        WoWeuCN_Quests_QuestToolTips = {} 
-      end
-      if (WoWeuCN_Quests_QuestIndex == nil) then
-        WoWeuCN_Quests_QuestIndex = 1
-      end
-      WoWeuCN_Quests_wait(0.1, scanCacheAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
 
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
@@ -611,7 +482,6 @@ function WoWeuCN_Quests_OnLoad()
    -- Function called after clicking on the quest name in QuestMapFrame
    hooksecurefunc("QuestMapFrame_ShowQuestDetails", WoWeuCN_Quests_PrepareReload);
    
-   qcQuestInformationTooltipSetup();
    WoweuCN_LoadOriginalHeaders();
 end
 

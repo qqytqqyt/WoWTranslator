@@ -7,94 +7,94 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "新兵衬衣£ ", --38
 "|cff9e9e9e新兵短裤|r£ ", --39
 "新兵之靴£ ", --40
-"OLDRecruit's Belt£ ", --41
-"OLDSquire's Belt£ ", --42
+"腰部£ ", --41
+"腰部£ ", --42
 "侍从之靴£ ", --43
 "|cff9e9e9e侍从短裤|r£ ", --44
 "侍从衬衣£ ", --45
-"OLDFootpad's Belt£ ", --46
+"腰部£ ", --46
 "潜行者之鞋£ ", --47
 "|cff9e9e9e潜行者短裤|r£ ", --48
 "潜行者衬衣£ ", --49
-"OLDInitiate's Belt£ ", --50
+"腰部£ ", --50
 "见习牧师之靴£ ", --51
 "|cff9e9e9e见习牧师短裤|r£ ", --52
 "见习牧师衬衣£ ", --53
-"OLDNovice's Belt£ ", --54
+"腰部£ ", --54
 "学徒之靴£ ", --55
 "|cff9e9e9e学徒长袍|r£ ", --56
 "|cff9e9e9e侍僧长袍|r£ ", --57
-"OLDAcolyte's Belt£ ", --58
+"腰部£ ", --58
 "侍僧鞋£ ", --59
 "夹层外衣£ ", --60
 "矮人皮质短裤£ ", --61
-"Deprecated Outfitter Cloth Armor£ ", --77
+"胸部£ ", --77
 "矮人布质短裤£ ", --79
 "柔软的毛边鞋£ ", --80
 "肮脏的皮外衣£ ", --85
-"Deprecated Old Belt£ ", --86
-"Deprecated Old Boots£ ", --87
-"|cff9e9e9eDeprecated Old Pants|r£ ", --88
-"OLDThick Trapper's Shirt£ ", --89
-"OLDDwarven Initiate's Belt£ ", --90
-"|cff9e9e9eOLDDwarven Initiate's Pants|r£ ", --91
-"OLDDwarven Initiate's Boots£ ", --92
-"OLDDwarven Initiate's Shirt£ ", --93
-"Deprecated Dwarven Novice's Belt£ ", --94
-"Deprecated Dwarven Novice's Boots£ ", --95
-"|cff9e9e9eDeprecated Dwarven Novice's Robe|r£ ", --97
-"Deprecated Dwarven Squire's Belt£ ", --98
-"Deprecated Dwarven Squire's Boots£ ", --99
-"|cff9e9e9eDeprecated Dwarven Squire's Pants|r£ ", --100
-"Deprecated Dwarven Squire's Shirt£ ", --101
-"Deprecated Dwarven Recruit's Belt£ ", --102
-"Deprecated Dwarven Recruit's Boots£ ", --103
-"|cff9e9e9eDeprecated Sturdy Brown Pants|r£ ", --104
-"Deprecated Dwarven Recruit's Shirt£ ", --105
-"|cff9e9e9eDeprecated Dwarven Apprentice Pants|r£ ", --113
-"Deprecated Dwarven Apprentice Boots£ ", --114
-"Deprecated Dwarven Apprentice Belt£ ", --115
+"腰部£ ", --86
+"脚£ ", --87
+"腿部£ ", --88
+"衬衣£ ", --89
+"腰部£ ", --90
+"腿部£ ", --91
+"脚£ ", --92
+"衬衣£ ", --93
+"腰部£ ", --94
+"脚£ ", --95
+"胸部£ ", --97
+"腰部£ ", --98
+"脚£ ", --99
+"腿部£ ", --100
+"衬衣£ ", --101
+"腰部£ ", --102
+"脚£ ", --103
+"腿部£ ", --104
+"衬衣£ ", --105
+"腿部£ ", --113
+"脚£ ", --114
+"腰部£ ", --115
 "硬肉干£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --117
 "初级治疗药水£|cff00ff00使用： 恢复70到90点生命值。|r", --118
-"Deprecated Rogue's Vest£ ", --119
+"衬衣£ ", --119
 "|cff9e9e9e刺客短裤|r£ ", --120
 "刺客之靴£ ", --121
-"OLDThug Belt£ ", --122
-"Deprecated Orc Apprentice Shirt£ ", --123
-"|cff9e9e9eDeprecated Orc Apprentice Pants|r£ ", --124
-"Deprecated Orc Apprentice Boots£ ", --125
-"Deprecated Orc Apprentice Belt£ ", --126
+"腰部£ ", --122
+"衬衣£ ", --123
+"腿部£ ", --124
+"脚£ ", --125
+"腰部£ ", --126
 "捕兽者衬衣£ ", --127
-"|cff9e9e9eDeprecated Tauren Trapper's Pants|r£ ", --128
+"腿部£ ", --128
 "皱褶捕兽者之靴£ ", --129
-"Deprecated Tauren Trapper's Belt£ ", --130
-"Deprecated Orc Acolyte's Belt£ ", --131
-"Deprecated Orc Acolyte's Boots£ ", --132
-"Deprecated Orc Acolyte's Shirt£ ", --133
-"Deprecated Stiff Leather Shirt£ ", --134
-"|cff9e9e9eDeprecated Stiff Leather Pants|r£ ", --135
-"Deprecated Old Leather Boots£ ", --136
-"OLDNeophyte's Belt£ ", --137
-"Deprecated War Harness£ ", --138
+"腰部£ ", --130
+"腰部£ ", --131
+"脚£ ", --132
+"衬衣£ ", --133
+"衬衣£ ", --134
+"腿部£ ", --135
+"脚£ ", --136
+"腰部£ ", --137
+"衬衣£ ", --138
 "|cff9e9e9e打斗者短裤|r£ ", --139
 "打斗者之靴£ ", --140
-"OLDBrawler's Belt£ ", --141
-"|cff9e9e9eMonster - Shield, Stormwind Guard|r£ ", --143
-"OLDRugged Trapper's Belt£ ", --146
+"腰部£ ", --141
+"副手£ ", --143
+"腰部£ ", --146
 "|cff9e9e9e皱褶捕兽者短裤|r£ ", --147
 "皱褶捕兽者衬衣£ ", --148
-"Deprecated Tauren Apprentice Belt£ ", --149
-"|cff9e9e9eDeprecated Tauren Apprentice Pants|r£ ", --150
-"Deprecated Tauren Apprentice Shirt£ ", --151
-"OLDPrimitive Leather Belt£ ", --152
+"腰部£ ", --149
+"腿部£ ", --150
+"衬衣£ ", --151
+"腰部£ ", --152
 "|cff9e9e9e粗糙的褶裙|r£ ", --153
 "粗糙的衬肩£ ", --154
-"Deprecated Tauren Recruit's Belt£ ", --155
-"|cff9e9e9eDeprecated Tauren Recruit's Pants|r£ ", --156
-"Deprecated Tauren Recruit's Shirt£ ", --157
+"腰部£ ", --155
+"腿部£ ", --156
+"衬衣£ ", --157
 "清凉的泉水£|cff00ff00使用： 在18秒内恢复总计151点法力值，喝水时必须保持坐姿。|r", --159
 "加瑞克的徽记£任务物品£唯一", --182
-"Deprecated Small Brown Pouch£6格容器", --184
+"6格容器£ ", --184
 "破布外衣£ ", --193
 "破布短裤£ ", --194
 "破布战靴£ ", --195
@@ -113,7 +113,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "鳞甲战靴£ ", --287
 "达拉然奶酪£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --414
 "矮人奶酪£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --422
-"Deprecated Gnoll War Beads£任务物品", --527
+"任务物品£ ", --527
 "|cff9e9e9e灰暗的狂鱼鳞片|r£ ", --537
 "|cff9e9e9e劣质秃鹫羽毛|r£ ", --555
 "|cff9e9e9e秃鹫的喙|r£ ", --556
@@ -134,27 +134,27 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "血牙野猪的头£ ", --731
 "秋葵£ ", --732
 "杂味炖肉£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --733
-"Deprecated Malakai's Medallion£任务物品£唯一£|cffffd100\"Upon this iron disk are stamped the words: \"Footman Malakai Stone\"\"|r", --734
+"任务物品£唯一£|cffffd100\"Upon this iron disk are stamped the words: \"Footman Malakai Stone\"\"|r", --734
 "罗尔夫和马拉凯的铭牌£任务物品£唯一", --735
 "圣泉之水£拾取后绑定£唯一£|cff00ff00使用： 荆棘谷圣泉的祝福。 （5分钟冷却）|r", --737
 "一袋大麦£任务物品", --738
 "一袋玉米£任务物品", --739
 "一袋黑麦£任务物品", --740
-"Deprecated Copper Ingot£ ", --741
+"", --741
 "枫树枝£任务物品£唯一", --742
 "一捆烧焦的橡木£任务物品£唯一", --743
 "|cff1eff00雷酒靴中瓶|r£|cff00ff00使用： 每1秒对你面前的所有敌人造成|r|cff7f7f7f50|r|cff00ff00点火焰伤害，持续5秒。另外还会让你醉得一塌糊涂！ （30分钟冷却）|r", --744
 "治安官玛克布莱德的文件£任务物品£唯一", --745
-"Lord Brandon's Tabard (Test)£ ", --746
+"战袍£ ", --746
 "暴风城护甲标记£任务物品£唯一", --748
 "硬狼肉£任务物品", --750
-"|cff9e9e9eDeprecated Wolf Femur|r£ ", --751
+"装备后绑定£ ", --751
 "红色粗麻面罩£任务物品", --752
 "|cff1eff00龙喉短剑|r£ ", --753
 "|cff0070dd复仇短剑|r£ ", --754
 "|cff9e9e9e熔化的蜡烛|r£ ", --755
 "|cff1eff00黑铁锄|r£|cffffd100\"可作为矿工锄使用。\"|r", --756
-"Deprecated Elwynn Trout£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --761
+"|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r£ ", --761
 "冰覆护腕£ ", --763
 "银叶草£ ", --765
 "凸缘钉锤£ ", --766
@@ -174,11 +174,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "豺狼人石锤£ ", --781
 "彩色豺狼人臂章£任务物品", --782
 "轻毛皮£ ", --783
-"Deprecated Tiny Flame Sac£ ", --784
+"", --784
 "魔皇草£ ", --785
-"Deprecated Pure Copper Ingot£ ", --786
+"", --786
 "滑皮鲭鱼£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --787
-"Test Fire Sword£ ", --788
+"主手£ ", --788
 "|cff1eff00牢固的战锤|r£ ", --789
 "|cff1eff00森林战斧|r£ ", --790
 "|cff0070dd灰烬法杖|r£ ", --791
@@ -192,9 +192,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "劣质皮外衣£ ", --799
 "蓝色布袋£10格容器", --804
 "红色小包£6格容器", --805
-"Deprecated Brown Leather Satchel£8格容器", --806
-"Deprecated Iron Ingot£ ", --807
-"Deprecated Malachite£ ", --808
+"8格容器£ ", --806
+"", --807
+"", --808
 "|cffa335ed血刃|r£ ", --809
 "|cffa335ed北风|r£ ", --810
 "|cffa335ed密林战斧|r£ ", --811
@@ -205,7 +205,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00虎眼石|r£ ", --818
 "|cff1eff00切片刀|r£ ", --820
 "|cff1eff00河爪皮外套|r£ ", --821
-"Deprecated Horse Summoning (Mount)£|cff00ff00使用： 召唤或解散一匹可供骑乘的棕马。|r", --823
+"|cff00ff00使用： 召唤或解散一匹可供骑乘的棕马。|r£ ", --823
 "|cff1eff00河爪之斧|r£ ", --826
 "|cff1eff00邪恶棍棒|r£ ", --827
 "蓝色小包£6格容器", --828
@@ -213,13 +213,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00银色迪菲亚腰带|r£ ", --832
 "|cffa335ed生命徽章|r£|cff00ff00装备： 每5.2秒恢复|r|cff7f7f7f10|r|cff00ff00点生命值。|r£|cff00ff00使用： 恢复300到|r|cff7f7f7f700|r|cff00ff00点生命值。 （30分钟冷却）|r", --833
 "大绳网£拾取后绑定£|cff00ff00使用： 使目标无法移动，持续10秒。|r", --835
-"Deprecated Heavy Net£ ", --836
+"", --836
 "重纹护甲£ ", --837
 "重纹短裤£ ", --838
 "重纹手套£ ", --839
 "重纹布鞋£ ", --840
 "法布隆的怀表£任务物品£唯一", --841
-"Deprecated Wolf Summoning (Mount)£|cff00ff00使用： 召唤或解散一头可供骑乘的灰狼。|r", --842
+"|cff00ff00使用： 召唤或解散一头可供骑乘的灰狼。|r£ ", --842
 "棕色皮靴£ ", --843
 "棕色皮手套£ ", --844
 "棕色皮短裤£ ", --845
@@ -232,7 +232,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "锤£ ", --852
 "短柄斧£ ", --853
 "短杖£ ", --854
-"Deprecated White Leather Satchel£8格容器", --855
+"8格容器£ ", --855
 "蓝色皮包£8格容器", --856
 "红色布袋£10格容器", --857
 "次级治疗药水£|cff00ff00使用： 恢复140到180点生命值。|r", --858
@@ -252,10 +252,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed乔丹法杖|r£|cff00ff00装备： 法术强度提高26点。|r", --873
 "Brown Horse Summoning£|cff00ff00使用： 召唤或解散一匹可供骑乘的棕马。|r", --875
 "|cff9e9e9e用旧的木制圆盾|r£ ", --876
-"Deprecated Old Skull£任务物品", --877
+"任务物品£ ", --877
 "|cff9e9e9e拳头大小的丝囊|r£ ", --878
 "|cff1eff00恐惧法杖|r£ ", --880
-"Deprecated Fire Eyed Skull£任务物品", --883
+"任务物品£ ", --883
 "食尸鬼的肋骨£任务物品", --884
 "|cff1eff00黑色金属大斧|r£ ", --885
 "|cff1eff00黑色金属短剑|r£ ", --886
@@ -265,27 +265,27 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd圣歌法杖|r£ ", --890
 "|cff1eff00豺狼人法师手套|r£|cff00ff00装备： 法术强度提高6点。|r", --892
 "|cff9e9e9e恐狼的牙齿|r£ ", --893
-"Deprecated Ravager Claw£ ", --894
+"", --894
 "狼人的颅骨£任务物品", --895
 "狼人的牙齿£任务物品", --896
 "|cff1eff00疯狼护腕|r£ ", --897
-"Deprecated Broken Venomweb Fang£任务物品", --898
+"任务物品£ ", --898
 "|cff1eff00毒蜘蛛的牙齿|r£ ", --899
-"Deprecated Nightmare Summoning (Mount)£ ", --900
-"Deptecated White Stallion Summoning (Mount)£|cff00ff00使用： 召唤或解散一匹可供骑乘的白马。|r", --901
-"Deprecated Palomino Summoning (Mount)£|cff00ff00使用： 召唤或解散一匹可供骑乘的褐色马。|r", --902
-"Deprecated Pinto Summoning (Mount)£|cff00ff00使用： 召唤或解散一匹可供骑乘的杂色马。|r", --903
-"Tan Leather Shoulderpads (Test)£ ", --906
-"Black Mail Shoulderpads of might (Test)£ ", --907
-"Plate Shoulderpad (Test)£ ", --908
-"Silver Mail Shoulderpads (Test)£ ", --909
+"", --900
+"|cff00ff00使用： 召唤或解散一匹可供骑乘的白马。|r£ ", --901
+"|cff00ff00使用： 召唤或解散一匹可供骑乘的褐色马。|r£ ", --902
+"|cff00ff00使用： 召唤或解散一匹可供骑乘的杂色马。|r£ ", --903
+"肩部£ ", --906
+"肩部£ ", --907
+"肩部£ ", --908
+"肩部£ ", --909
 "一封未寄出的信£任务物品£唯一£|cffffd100\"这封破旧的信从未被寄出过。\"|r", --910
 "|cff1eff00铁树木棍|r£ ", --911
 "|cff1eff00食人魔巨剑|r£ ", --913
 "|cff1eff00食人魔链甲|r£ ", --914
 "红色丝质面罩£任务物品", --915
 "一张被撕破的日记书页£任务物品£唯一£|cffffd100\"只有下半页。\"|r", --916
-"|cff9e9e9eDeprecated Shadow Leather Armor|r£ ", --917
+"装备后绑定£ ", --917
 "变异皮包£拾取后绑定£唯一£10格容器", --918
 "|cff1eff00邪恶钉锤|r£ ", --920
 "一张褪色的日记书页£任务物品£唯一£|cffffd100\"虽然大部分文字已经模糊不清了，但仍有一部分可以辨认。\"|r", --921
@@ -297,8 +297,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "双面斧£ ", --927
 "占卜法杖£ ", --928
 "治疗药水£|cff00ff00使用： 恢复280到360点生命值。|r", --929
-"Deprecated Deep Pocket Pouch£10格容器", --930
-"Deprecated Heavy Brown Sack£10格容器", --931
+"10格容器£ ", --930
+"10格容器£ ", --931
 "地狱战马的鞍囊£唯一£10格容器", --932
 "帆布背包£10格容器", --933
 "|cff0070dd斯塔文的镰刀|r£ ", --934
@@ -308,23 +308,23 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "沾满泥污的日记书页£任务物品£唯一£|cffffd100\"虽然大部分书页都被污泥弄脏了，但仍有一部分可以辨认。\"|r", --938
 "一张染血的日记书页£任务物品£唯一£|cffffd100\"虽然大部分字符已经被血迹覆盖，但还有一些可以辨认。\"|r", --939
 "|cffa335ed洞察法袍|r£|cff00ff00使用： 减少你在10秒内所施放的下一个法术所消耗的法力值，最多500点。 （15分钟冷却）|r", --940
-"Deprecated Speedstone£ ", --941
+"使用后绑定£ ", --941
 "|cffa335ed寒冰指环|r£|cff00ff00装备： 法术强度提高18点。|r£|cff00ff00装备： 被击中之后有1%的几率对攻击者造成|r|cff7f7f7f50|r|cff00ff00点冰霜伤害，并使其被冻结，持续5秒。|r", --942
 "|cffa335ed典狱官法杖|r£|cff00ff00装备： 防御等级提高15。|r", --943
 "|cffa335ed元素法杖|r£|cff00ff00装备： 法术强度提高29点。|r", --944
 "Shadow Sword£ ", --945
 "Nature Sword£ ", --948
-"Tome of Whirlwind (TEST)£ ", --951
+"", --951
 "力量卷轴£|cff00ff00使用： 使目标的力量提高3点，持续30分钟。同一时间内只能保持一种卷轴效果。 （1秒冷却）|r", --954
 "智力卷轴£|cff00ff00使用： 使目标的智力提高3点，持续30分钟。同一时间内只能保持一种卷轴效果。 （1秒冷却）|r", --955
-"Deprecated Area Trigger Flag - Jasperlode mine£任务物品£|cffffd100\"Your official \"I went to the Jasperlode Mine and all I got was this lousy shirt\" T-shirt\"|r", --956
+"任务物品£|cffffd100\"Your official \"I went to the Jasperlode Mine and all I got was this lousy shirt\" T-shirt\"|r", --956
 "威廉的货物£任务物品£唯一£|cffffd100\"箱子上贴着一张便笺。\"|r", --957
-"Deprecated Area Trigger Flag - Darkhollow Mine£任务物品£|cffffd100\"Your official \"I went to the Darkhollow Mine and all I got was this lousy shirt\" T-shirt\"|r", --958
-"Deprecated Area Trigger Flag - Fargodeep£任务物品£|cffffd100\"Your official \"I went to the Fargodeep Mine and all I got was this lousy shirt\" T-shirt\"|r", --960
+"任务物品£|cffffd100\"Your official \"I went to the Darkhollow Mine and all I got was this lousy shirt\" T-shirt\"|r", --958
+"任务物品£|cffffd100\"Your official \"I went to the Fargodeep Mine and all I got was this lousy shirt\" T-shirt\"|r", --960
 "止血草£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --961
 "猪肉馅饼£任务物品£唯一", --962
-"Deprecated Red Linen Shirt£ ", --964
-"Deprecated Red Linen Sack£拾取后绑定£唯一£8格容器", --965
+"衬衣£ ", --964
+"拾取后绑定£唯一£8格容器", --965
 "Tome of Frost Shield£|cffffd100\"Teaches Frost Shield (Rank 1).\"|r", --966
 "秘典：防护冰霜结界£|cff00ff00使用： Teaches Frost Ward (Rank 5).|r", --967
 "秘典：炎爆术£|cff00ff00使用： Teaches Fire Blast (Rank 1).|r", --968
@@ -340,7 +340,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "秘典：冰霜新星£|cff00ff00使用： Teaches Frost Nova (Rank 1).|r", --989
 "秘典：火球术 III£|cff00ff00使用： Teaches Fireball (Rank 3).|r", --992
 "秘典：冰甲术£|cff00ff00使用： Teaches Ice Armor (Rank 1).|r", --994
-"Ring of Righteous Flame (TEST)£|cff00ff00使用： 发射一枚火球攻击目标，对其造成14到|r|cff7f7f7f23|r|cff00ff00点火焰伤害，并在4秒内造成额外的|r|cff7f7f7f2|r|cff00ff00点火焰伤害。|r", --996
+"手指£|cff00ff00使用： 发射一枚火球攻击目标，对其造成14到|r|cff7f7f7f23|r|cff00ff00点火焰伤害，并在4秒内造成额外的|r|cff7f7f7f2|r|cff00ff00点火焰伤害。|r", --996
 "Fire Sword of Crippling£ ", --997
 "秘典：冰链术 II£|cff00ff00使用： Teaches Chains of Ice (Rank 2).|r", --1004
 "黄铜项圈£任务物品£唯一£|cffffd100\"公主 - 一等奖\"|r", --1006
@@ -349,21 +349,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "瘤木短杖£ ", --1010
 "锋利的战斧£ ", --1011
 "铁铆钉£任务物品", --1013
-"Large Moneybag (old)£唯一", --1014
+"唯一£ ", --1014
 "狼肋排£ ", --1015
-"Deprecated Lurker Leg£ ", --1016
+"", --1016
 "干烤狼肉串£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高6点，持续15分钟。|r", --1017
-"Chows Blade of DOOM! (Test)£ ", --1018
+"", --1018
 "红色亚麻面罩£任务物品", --1019
-"Leather Helmet D (Test)£ ", --1020
-"Leather Helmet A (test)£ ", --1021
-"Mail Helmet D (test)£ ", --1022
-"Mail Helmet C (test)£ ", --1023
-"Plate Helmet D2 (test)£ ", --1024
-"Plate Helmet D1 (Test)£ ", --1025
-"Plate Helmet D3 (test)£ ", --1026
-"Mail Helmet A (Test)£ ", --1027
-"|cff9e9e9eDeprecated Dented Skullcap|r£ ", --1028
+"头部£ ", --1020
+"头部£ ", --1021
+"头部£ ", --1022
+"头部£ ", --1023
+"头部£ ", --1024
+"头部£ ", --1025
+"头部£ ", --1026
+"头部£ ", --1027
+"装备后绑定£ ", --1028
 "Tablet of Serpent Totem£|cff00ff00使用： Teaches Serpent Totem (Rank 1).|r", --1029
 "石板：不屈意志£|cffffd100\"Teaches Unyielding Will (Rank 1).\"|r", --1030
 "石板：熔岩爆裂£|cffffd100\"Teaches Molten Blast (Rank 1).\"|r", --1031
@@ -375,11 +375,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "石板：闪电箭 II£|cff00ff00使用： Teaches Lightning Bolt (Rank 2).|r", --1037
 "石板：复原术 II£|cff00ff00使用： Teaches Healing Wave (Rank 2).|r", --1038
 "黑狼号角£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --1041
-"Deprecated Summon Winter Wolf (Mount)£|cff00ff00使用： 召唤或解散一头可供骑乘的冬狼。|r", --1042
-"Deprecated Summon Redwolf (Mount)£1 - 2伤害£|cff00ff00使用： 召唤或解散一头可供骑乘的森林狼。|r", --1043
-"Deprecated Summon Brown Wolf (Mount)£|cff00ff00使用： 召唤或解散一头可供骑乘的赤狼。|r", --1044
-"Deprecated Light Blunderbuss£ ", --1046
-"Deprecated Heavy Blunderbuss£ ", --1047
+"|cff00ff00使用： 召唤或解散一头可供骑乘的冬狼。|r£ ", --1042
+"1 - 2伤害£|cff00ff00使用： 召唤或解散一头可供骑乘的森林狼。|r", --1043
+"|cff00ff00使用： 召唤或解散一头可供骑乘的赤狼。|r£ ", --1044
+"", --1046
+"", --1047
 "石板：闪电之盾 II£|cff00ff00使用： Teaches Lightning Shield (Rank 2).|r", --1048
 "石板：净化术£|cff00ff00使用： Teaches Purge.|r", --1049
 "石板：幽魂甲 II£|cffffd100\"Teaches Spirit Armor (Rank 2).\"|r", --1052
@@ -393,45 +393,45 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "暗皮坠饰£任务物品", --1075
 "|cff1eff00迪菲亚叛徒之戒|r£ ", --1076
 "|cff1eff00迪菲亚法师之戒|r£ ", --1077
-"Deprecated Writ of Lakeshire£任务物品£|cffffd100\"有尊贵的所罗门镇长的签字。\"|r", --1078
+"任务物品£|cffffd100\"有尊贵的所罗门镇长的签字。\"|r", --1078
 "硬秃鹫肉£ ", --1080
 "香脆蜘蛛肉£ ", --1081
 "赤脊山炖肉£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高6点，持续15分钟。|r", --1082
 "阿祖拉的铭文饰品£任务物品£唯一", --1083
-"圣典：恢复£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 1).|r", --1084
-"圣典：心灵视界£职业：牧师£|cff00ff00使用： Teaches Mind Vision (Rank 1).|r", --1085
-"圣典：心灵之火£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 1).|r", --1086
-"圣典：暗言术：痛£职业：牧师£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 1).|r", --1087
-"圣典：恢复 II£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 2).|r", --1088
-"圣典：消病术£职业：牧师£|cff00ff00使用： Teaches Nullify Disease (Rank 1).|r", --1089
-"圣典：复活术£职业：牧师£|cff00ff00使用： Teaches Resurrection (Rank 1).|r", --1090
-"圣典：圣光击 II£职业：牧师£|cff00ff00使用： Teaches Holy Smite (Rank 2).|r", --1091
-"圣典：次级治疗术 II£职业：牧师£|cff00ff00使用： Teaches Lesser Heal (Rank 2).|r", --1092
-"圣典：解除诅咒£职业：牧师£|cff00ff00使用： Teaches Remove Curse (Rank 1).|r", --1093
-"圣典：驱散魔法£职业：牧师£|cff00ff00使用： Teaches Dispel Magic (Rank 1).|r", --1095
-"圣典：暗言术：痛 II£职业：牧师£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 2).|r", --1096
-"Deprecated Codex of Sustenance II£职业：牧师£使用： Teaches Conjure Food (Rank 2).£\n魔法面包£魔法制造的物品£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --1099
+"圣典：恢复£|cff00ff00使用： Teaches Renew (Rank 1).|r", --1084
+"圣典：心灵视界£|cff00ff00使用： Teaches Mind Vision (Rank 1).|r", --1085
+"圣典：心灵之火£|cff00ff00使用： Teaches Inner Fire (Rank 1).|r", --1086
+"圣典：暗言术：痛£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 1).|r", --1087
+"圣典：恢复 II£|cff00ff00使用： Teaches Renew (Rank 2).|r", --1088
+"圣典：消病术£|cff00ff00使用： Teaches Nullify Disease (Rank 1).|r", --1089
+"圣典：复活术£|cff00ff00使用： Teaches Resurrection (Rank 1).|r", --1090
+"圣典：圣光击 II£|cff00ff00使用： Teaches Holy Smite (Rank 2).|r", --1091
+"圣典：次级治疗术 II£|cff00ff00使用： Teaches Lesser Heal (Rank 2).|r", --1092
+"圣典：解除诅咒£|cff00ff00使用： Teaches Remove Curse (Rank 1).|r", --1093
+"圣典：驱散魔法£|cff00ff00使用： Teaches Dispel Magic (Rank 1).|r", --1095
+"圣典：暗言术：痛 II£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 2).|r", --1096
+"使用： Teaches Conjure Food (Rank 2).£\n魔法面包£魔法制造的物品£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --1099
 "怪物包£36格容器£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼", --1100
-"圣典：恢复 V£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 5).|r", --1101
-"圣典：次级治疗术 III£职业：牧师£|cff00ff00使用： Teaches Lesser Heal (Rank 3).|r", --1102
-"圣典：恢复 VI£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 6).|r", --1105
-"圣典：恢复 III£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 3).|r", --1108
-"圣典：支配术£职业：牧师£|cff00ff00使用： Teaches Mind Control.|r", --1109
-"Codex of Sleep£职业：牧师£|cff00ff00使用： Teaches Sleep (Rank 1).|r", --1111
-"圣典：圣言术：韧 II£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 2).|r", --1112
+"圣典：恢复 V£|cff00ff00使用： Teaches Renew (Rank 5).|r", --1101
+"圣典：次级治疗术 III£|cff00ff00使用： Teaches Lesser Heal (Rank 3).|r", --1102
+"圣典：恢复 VI£|cff00ff00使用： Teaches Renew (Rank 6).|r", --1105
+"圣典：恢复 III£|cff00ff00使用： Teaches Renew (Rank 3).|r", --1108
+"圣典：支配术£|cff00ff00使用： Teaches Mind Control.|r", --1109
+"Codex of Sleep£|cff00ff00使用： Teaches Sleep (Rank 1).|r", --1111
+"圣典：圣言术：韧 II£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 2).|r", --1112
 "魔法面包£魔法制造的物品£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --1113
 "魔法黑面包£魔法制造的物品£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --1114
-"Deprecated Ragged Scalp£任务物品", --1115
+"任务物品£ ", --1115
 "|cff1eff00真银之戒|r£ ", --1116
-"|cff9e9e9eMonster - Item, Fishing Pole|r£ ", --1117
+"单手£ ", --1117
 "瓶装精魂£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --1119
 "|cff0070dd山猫之靴|r£ ", --1121
-"Deprecated Amulet of the White Stallion£|cff00ff00使用： 召唤或解散一匹可供骑乘的白马。|r£|cffffd100\"Summons a White Stallion to be your steed.\"|r", --1122
-"Deprecated Amulet of the Pinto£|cff00ff00使用： 召唤或解散一匹可供骑乘的杂色马。|r£|cffffd100\"Summons a Pinto to be your steed.\"|r", --1123
-"Deprecated Amulet of the Palomino£|cff00ff00使用： 召唤或解散一匹可供骑乘的褐色马。|r£|cffffd100\"Summons a Palamino to be your steed.\"|r", --1124
-"Deprecated Amulet of the Nightmare£|cffffd100\"Summons a Nightmare to be your steed.\"|r", --1125
+"拾取后绑定£|cff00ff00使用： 召唤或解散一匹可供骑乘的白马。|r£|cffffd100\"Summons a White Stallion to be your steed.\"|r", --1122
+"拾取后绑定£|cff00ff00使用： 召唤或解散一匹可供骑乘的杂色马。|r£|cffffd100\"Summons a Pinto to be your steed.\"|r", --1123
+"拾取后绑定£|cff00ff00使用： 召唤或解散一匹可供骑乘的褐色马。|r£|cffffd100\"Summons a Palamino to be your steed.\"|r", --1124
+"|cffffd100\"Summons a Nightmare to be your steed.\"|r£ ", --1125
 "火弹£拾取后绑定£|cff00ff00使用： 召唤一根火柱，对攻击范围内的所有敌人造成54到71点火焰伤害，并在8秒内造成额外的48点火焰伤害。|r", --1127
-"Deprecated [PH] Redridge Rye£ ", --1128
+"", --1128
 "食尸鬼的牙齿£任务物品", --1129
 "瓶装蜘蛛毒液£任务物品", --1130
 "|cff1eff00惩罚图腾|r£|cff00ff00装备： 在战斗中被敌人击中之后，有1%的机会对攻击者造成75到|r|cff7f7f7f125|r|cff00ff00点暗影伤害。|r", --1131
@@ -450,23 +450,23 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "人民军腰带£ ", --1154
 "|cff0070dd梦游者魔棒|r£ ", --1155
 "|cff0070dd豪华珠宝戒指|r£|cff00ff00装备： 命中等级提高2点。|r", --1156
-"|cff9e9e9eDeprecated Militia Handaxe|r£ ", --1157
+"装备后绑定£ ", --1157
 "结实的铁棍£ ", --1158
 "民兵短杖£ ", --1159
 "民兵短剑£ ", --1161
-"Pirates Patch (Test)£ ", --1162
-"Dwarven Explorer's Monocle (Test)£ ", --1163
+"头部£ ", --1162
+"头部£ ", --1163
 "Sam's Tome£持续时间：5分钟", --1164
-"Test Food£|cff00ff00使用： Restores 60 health over 30秒.  Combat cancels.|r", --1165
+"|cff00ff00使用： Restores 60 health over 30秒.  Combat cancels.|r£ ", --1165
 "凹陷的圆盾£ ", --1166
 "小轻盾£ ", --1167
 "|cffa335ed骨火|r£|cff00ff00装备： 在战斗中被击中之后有3%的几率从目标身上吸取|r|cff7f7f7f35|r|cff00ff00点生命值。|r£|cff00ff00装备： 在战斗中被击中之后有1%的几率对你身边的所有目标造成75到|r|cff7f7f7f125|r|cff00ff00点火焰伤害。|r", --1168
 "|cffa335ed黑颅|r£ ", --1169
-"Deprecated Brown Leather Vest£ ", --1170
+"胸部£ ", --1170
 "精心缝制的长袍£ ", --1171
 "|cff1eff00葛瑞森的火炬|r£ ", --1172
 "旧靴子£ ", --1173
-"Deprecated Light Soldier Boots£ ", --1174
+"脚£ ", --1174
 "|cff9e9e9e金牙|r£ ", --1175
 "嗅盐£拾取后绑定£唯一£|cff00ff00使用： 复活一个死去的玩家，复活后该玩家拥有70点生命值和135点法力值。无法在战斗中施放。 （1秒冷却）|r", --1176
 "奥拉夫的油£|cff00ff00使用： 护甲值提高50点，持续1小时。守护药剂。 （1秒冷却）|r", --1177
@@ -476,13 +476,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "精神卷轴£|cff00ff00使用： 使目标的精神提高3点，持续30分钟。同一时间内只能保持一种卷轴效果。 （1秒冷却）|r", --1181
 "黄铜护腕£ ", --1182
 "橡皮腕甲£ ", --1183
-"|cff9e9e9eDeprecated Scarlet Badge|r£|cff00ff00使用： 治疗友方目标，恢复136到|r|cff7f7f7f163|r|cff00ff00点生命值。 （2分钟冷却）|r", --1184
-"|cff9e9e9eDeprecated Gnoll Taskmaster Whip|r£ ", --1186
+"拾取后绑定£|cff00ff00使用： 治疗友方目标，恢复136到|r|cff7f7f7f163|r|cff00ff00点生命值。 （2分钟冷却）|r", --1184
+"拾取后绑定£ ", --1186
 "|cff1eff00尖刺项圈|r£拾取后绑定£唯一£|cff00ff00使用： 召唤地狱猎犬为你作战，持续1小时。|r", --1187
 "|cff1eff00监工指环|r£ ", --1189
 "|cff1eff00监工披风|r£ ", --1190
 "弹子球£拾取后绑定£|cff00ff00使用： 使目标用武器击中别人的概率降低25%，持续10秒。|r", --1191
-"|cff9e9e9eDeprecated Overseer's Helm|r£ ", --1192
+"装备后绑定£ ", --1192
 "镶带圆盾£ ", --1193
 "损坏的双刃刀£ ", --1194
 "狗头人的铲子£ ", --1195
@@ -512,46 +512,46 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00豺狼人战斧|r£ ", --1220
 "雏龙的腹鳞£任务物品", --1221
 "|cff9e9e9e断裂的牙|r£ ", --1222
-"魔典：感知恶魔£|cff00ff00使用： Teaches Sense Demons.|r", --1224
-"Grimoire of Blood Boil£|cffffd100\"Teaches Blood Boil (Rank 1).\"|r", --1228
-"魔典：制作灵魂石£使用： Teaches Create Soulstone.£\n初级灵魂石£魔法制造的物品£拾取后绑定£唯一£|cff00ff00使用： 保存友方目标的灵魂。如果目标在灵魂被保存期间死去，则他可以立刻复活，并恢复400点生命值和700点法力值。 （15分钟冷却）|r£\n需要灵魂碎片", --1229
-"魔典：暗影箭 II£|cff00ff00使用： Teaches Shadow Bolt (Rank 2).|r", --1231
-"魔典：恶魔皮肤 II£|cff00ff00使用： Teaches Demon Skin (Rank 2).|r", --1232
-"魔典：恐惧术£|cff00ff00使用： Teaches Fear (Rank 1).|r", --1238
-"魔典：汲取魔法£|cff00ff00使用： Teaches Drain Mana (Rank 1).|r", --1239
-"魔典：暗影箭 III£|cff00ff00使用： Teaches Shadow Bolt (Rank 3).|r", --1243
-"魔典：魔甲术£|cff00ff00使用： Teaches Demon Armor (Rank 1).|r", --1244
-"魔典：献祭 II£|cff00ff00使用： Teaches Immolate (Rank 2).|r", --1245
-"魔典：魔息术£|cff00ff00使用： Teaches Demon Breath.|r", --1246
-"魔典：侦测次级隐形术£|cff00ff00使用： Teaches Detect Lesser Invisibility.|r", --1250
+"魔典：感知恶魔£职业：术士£|cff00ff00使用： Teaches Sense Demons.|r", --1224
+"Grimoire of Blood Boil£职业：术士£|cffffd100\"Teaches Blood Boil (Rank 1).\"|r", --1228
+"魔典：制作灵魂石£职业：术士£使用： Teaches Create Soulstone.£\n初级灵魂石£魔法制造的物品£拾取后绑定£唯一£|cff00ff00使用： 保存友方目标的灵魂。如果目标在灵魂被保存期间死去，则他可以立刻复活，并恢复400点生命值和700点法力值。 （15分钟冷却）|r£\n需要灵魂碎片", --1229
+"魔典：暗影箭 II£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 2).|r", --1231
+"魔典：恶魔皮肤 II£职业：术士£|cff00ff00使用： Teaches Demon Skin (Rank 2).|r", --1232
+"魔典：恐惧术£职业：术士£|cff00ff00使用： Teaches Fear (Rank 1).|r", --1238
+"魔典：汲取魔法£职业：术士£|cff00ff00使用： Teaches Drain Mana (Rank 1).|r", --1239
+"魔典：暗影箭 III£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 3).|r", --1243
+"魔典：魔甲术£职业：术士£|cff00ff00使用： Teaches Demon Armor (Rank 1).|r", --1244
+"魔典：献祭 II£职业：术士£|cff00ff00使用： Teaches Immolate (Rank 2).|r", --1245
+"魔典：魔息术£职业：术士£|cff00ff00使用： Teaches Demon Breath.|r", --1246
+"魔典：侦测次级隐形术£职业：术士£|cff00ff00使用： Teaches Detect Lesser Invisibility.|r", --1250
 "亚麻绷带£|cff00ff00使用： 在6秒内恢复66点生命值。|r", --1251
 "斯通菲尔德老奶奶的便笺£任务物品£唯一", --1252
-"Deprecated Summoned Lockpick£唯一", --1253
+"唯一£ ", --1253
 "Lesser Firestone (DEPRECATED)£ ", --1254
-"Deprecated Conjured Mana Gem£魔法制造的物品£唯一", --1255
+"魔法制造的物品£唯一", --1255
 "水晶藻叶£任务物品", --1256
 "隐形水£任务物品£唯一", --1257
-"|cff9e9e9eBind On Use Test Item|r£|cff00ff00使用： 发射一枚火球攻击目标，对其造成16到|r|cff7f7f7f25|r|cff00ff00点火焰伤害，并在4秒内造成额外的|r|cff7f7f7f2|r|cff00ff00点火焰伤害。 （30秒冷却）|r", --1258
-"|cff9e9e9eJYoo test item|r£ ", --1259
+"使用后绑定£|cff00ff00使用： 发射一枚火球攻击目标，对其造成16到|r|cff7f7f7f25|r|cff00ff00点火焰伤害，并在4秒内造成额外的|r|cff7f7f7f2|r|cff00ff00点火焰伤害。 （30秒冷却）|r", --1258
+"主手£ ", --1259
 "萨瑞尔祖恩的徽记£任务物品£唯一", --1260
 "午夜宝珠£任务物品", --1261
 "一桶雷霆啤酒£拾取后绑定£|cff00ff00使用： 使你的耐力提高3点。|r", --1262
 "|cffa335ed碎灵|r£ ", --1263
 "|cff1eff00碎头者|r£ ", --1264
 "|cff0070dd蝎刺剑|r£ ", --1265
-"|cff9e9e9eDeprecated Orcslayer|r£ ", --1266
-"Deprecated Cask of Merlot£|cff00ff00使用： 在21秒内恢复总计437点法力值，喝水时必须保持坐姿。 （1分钟冷却）|r", --1267
-"Deprecated Bottle of Moonshine£|cff00ff00使用： 在24秒内恢复总计835点法力值，喝水时必须保持坐姿。 （1分钟冷却）|r", --1268
-"Deprecated Skin of Sweet Rum£ ", --1269
+"装备后绑定£ ", --1266
+"|cff00ff00使用： 在21秒内恢复总计437点法力值，喝水时必须保持坐姿。 （1分钟冷却）|r£ ", --1267
+"|cff00ff00使用： 在24秒内恢复总计835点法力值，喝水时必须保持坐姿。 （1分钟冷却）|r£ ", --1268
+"", --1269
 "|cff1eff00精织披风|r£ ", --1270
-"|cff9e9e9eDeprecated Fine Spun Mantle|r£ ", --1272
+"装备后绑定£ ", --1272
 "|cff1eff00森林链甲|r£ ", --1273
 "蛇麻草£ ", --1274
 "|cff1eff00军官链甲外衣|r£ ", --1275
 "|cff1eff00淬火圆盾|r£ ", --1276
-"|cff9e9e9eDeprecated Soft Leather Hood|r£ ", --1279
+"装备后绑定£ ", --1279
 "|cff1eff00宽大的兜帽|r£ ", --1280
-"Deprecated Quiver (TEST)£4格箭袋£|cffffd100\"For Testing Ranged\"|r", --1281
+"4格箭袋£ ", --1281
 "|cff1eff00火花铁帽|r£ ", --1282
 "弗纳的便笺£任务物品£唯一", --1283
 "一箱马掌£任务物品£唯一£|cffffd100\"箱子上贴着一张便笺。\"|r", --1284
@@ -562,7 +562,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "将军的回信£任务物品£唯一£|cffffd100\"马库斯·乔纳森将军写给所罗门镇长的回信。\"|r", --1294
 "|cff1eff00黑石钉锤|r£ ", --1296
 "|cff1eff00暗影法师法袍|r£ ", --1297
-"|cff9e9e9eDeprecated Night Mage Wristguards|r£ ", --1298
+"装备后绑定£ ", --1298
 "|cff1eff00尖塔腰带|r£ ", --1299
 "|cff1eff00次级尖塔法杖|r£ ", --1300
 "|cff1eff00黑色雏龙手套|r£ ", --1302
@@ -572,18 +572,18 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "采金日程表£拾取后绑定£唯一£该物品将触发一个任务", --1307
 "奥斯洛的工具箱£任务物品£唯一", --1309
 "|cff1eff00铁匠长裤|r£ ", --1310
-"|cff9e9e9eDeprecated Oslow's Wood Cutter|r£ ", --1311
-"|cff9e9e9eDeprecated Oslow's Hammer|r£ ", --1312
-"|cff9e9e9eDeprecated Oslow's Ice Pick|r£ ", --1313
+"装备后绑定£ ", --1311
+"装备后绑定£ ", --1312
+"装备后绑定£ ", --1313
 "|cff1eff00食尸鬼的手指|r£ ", --1314
 "|cffa335ed百合|r£|cff00ff00使用： 制造一份百合根，食用后可以回复生命值和法力值。 （1小时冷却）|r", --1315
 "|cff1eff00硬根法杖|r£ ", --1317
 "|cff0070dd黑夜之斧|r£ ", --1318
 "|cff1eff00钢铁意志之戒|r£ ", --1319
-"Deprecated Broiled Sunfish£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --1321
+"|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r£ ", --1321
 "鱼肝油£拾取后绑定£|cff00ff00使用： 使你的近战攻击急速等级提高100，持续30秒。|r", --1322
-"Deprecated [PH] Recipe: Broiled Sunfish£|cffffd100\"This will be a Cooking Tradeskill recipe\"|r", --1323
-"Deprecated Parker's Lunch£任务物品£唯一£主手", --1324
+"|cffffd100\"This will be a Cooking Tradeskill recipe\"|r£ ", --1323
+"任务物品£唯一£主手", --1324
 "水仙花£任务物品£唯一", --1325
 "爆炒太阳鱼£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --1326
 "威利的便笺£任务物品£唯一£|cffffd100\"黑衣威利匆匆写给格里安·斯托曼的信。\"|r", --1327
@@ -593,11 +593,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "书卷：纠缠根须£|cff00ff00使用： Teaches Entangling Roots (Rank 1).|r", --1339
 "书卷：月火术£|cff00ff00使用： Teaches Moonfire (Rank 1).|r", --1341
 "亚伯克隆比的箱子£任务物品£唯一£|cffffd100\"这只大箱子被紧紧地封了起来，但是弥漫着死亡的气息。\"|r", --1349
-"|cff9e9e9eDeprecated Hex Doll|r£|cffffd100\"Numerous hexes are stitched onto this ragged doll.\"|r", --1350
+"拾取后绑定£|cffffd100\"Numerous hexes are stitched onto this ragged doll.\"|r", --1350
 "|cff1eff00指骨护腕|r£ ", --1351
 "Cracked Skull Mortar£唯一£|cff00ff00使用： 制造一瓶热情药水。 （30秒冷却）|r", --1352
 "肖尔的报告£任务物品£唯一£|cffffd100\"肖尔提交给格里安·斯托曼的有关石工协会的报告。\"|r", --1353
-"Deprecated Homespun Shawl£ ", --1354
+"背部£ ", --1354
 "|cff1eff00鹿皮斗篷|r£ ", --1355
 "奖状 - 艾尔文森林£任务物品", --1356
 "杉德尔船长的藏宝图£唯一£该物品将触发一个任务£|cffffd100\"泡过水的羊皮纸几乎完全腐烂了。\"|r", --1357
@@ -606,42 +606,42 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "暴风城链甲手套£ ", --1360
 "杉德尔宝藏的另一个线索£任务物品£唯一£|cffffd100\"这一小片羊皮纸上有潦草的字迹。\"|r", --1361
 "杉德尔宝藏的最终线索£任务物品£唯一£|cffffd100\"这一小片羊皮纸上有潦草的字迹。\"|r", --1362
-"|cff9e9e9eDeprecated Captain Sanders' Eyepatch|r£ ", --1363
+"拾取后绑定£ ", --1363
 "|cff9e9e9e粗糙的皮外衣|r£ ", --1364
 "|cff9e9e9e粗糙的皮短裤|r£ ", --1366
 "|cff9e9e9e粗糙的皮靴|r£ ", --1367
 "|cff9e9e9e粗糙的皮手套|r£ ", --1368
 "|cff9e9e9e粗糙的皮带|r£ ", --1369
 "|cff9e9e9e粗糙的皮护腕|r£ ", --1370
-"|cff9e9e9eDeprecated Ragged Leather Shoulderpads|r£ ", --1371
+"肩部£ ", --1371
 "|cff9e9e9e粗糙的皮质披风|r£ ", --1372
 "|cff9e9e9e磨损的鞋|r£ ", --1374
 "|cff9e9e9e磨损的披风|r£ ", --1376
 "|cff9e9e9e磨损的手套|r£ ", --1377
 "|cff9e9e9e磨损的短裤|r£ ", --1378
-"|cff9e9e9eDeprecated Frayed Shoulderpads|r£ ", --1379
+"肩部£ ", --1379
 "|cff9e9e9e磨损的长袍|r£ ", --1380
 "神秘的信件£任务物品£唯一£|cffffd100\"这封被灰尘覆盖的便笺上写着一些密码文字。\"|r", --1381
 "石质钉锤£ ", --1382
 "石质轻斧£ ", --1383
 "钝剑£ ", --1384
-"|cff9e9e9eDeprecated Farmer's Maul|r£ ", --1385
+"双手£ ", --1385
 "棘木战斧£ ", --1386
 "|cff1eff00食尸鬼之牙|r£ ", --1387
 "折弯的法杖£ ", --1388
 "狗头人的大锤£ ", --1389
 "|cff1eff00河爪秘法杖|r£ ", --1391
-"|cff9e9e9eDeprecated Wristguards of the Fen Warden|r£ ", --1392
+"装备后绑定£ ", --1392
 "|cff1eff00流木棒|r£ ", --1394
 "|cff9e9e9e学徒短裤|r£ ", --1395
 "|cff9e9e9e侍僧短裤|r£ ", --1396
-"|cff9e9e9eDeprecated Orc Acolyte's Pants|r£ ", --1397
-"|cff9e9e9eDeprecated Dwarven Novice's Pants|r£ ", --1398
+"腿部£ ", --1397
+"腿部£ ", --1398
 "魔法蜡烛£|cff00ff00使用： 发射一枚火球攻击目标，对其造成16到25点火焰伤害，并在4秒内造成额外的2点火焰伤害。|r", --1399
 "Swiftfeather Token£|cff00ff00使用： 使你的近战攻击急速等级提高20，持续30秒。|r", --1400
 "绿茶叶£|cff00ff00使用： 立刻恢复30点生命值，并在10秒内恢复60点法力值。饮用时必须保持坐姿。|r", --1401
 "Brimstone£|cff00ff00使用： 发射一枚火球攻击目标，对其造成34到49点火焰伤害，并在6秒内造成额外的3点火焰伤害。|r", --1402
-"Deprecated Capstone£|cff00ff00使用： 护甲提高100点，持续1小时。守护药剂。 （30秒冷却）|r", --1403
+"唯一£|cff00ff00使用： 护甲提高100点，持续1小时。守护药剂。 （30秒冷却）|r", --1403
 "|cff1eff00潮汐咒符|r£|cff00ff00使用： 使目标昏迷3秒。60级以上的目标对这个效果的抵抗几率更高。 （15分钟冷却）|r", --1404
 "|cff1eff00泡沫法杖|r£ ", --1405
 "|cff1eff00珍珠长矛|r£ ", --1406
@@ -662,21 +662,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e旧皮披风|r£ ", --1421
 "|cff9e9e9e旧皮手套|r£ ", --1422
 "|cff9e9e9e旧皮短裤|r£ ", --1423
-"|cff9e9e9eDeprecated Worn Leather Shoulderpads|r£ ", --1424
+"肩部£ ", --1424
 "|cff9e9e9e旧皮外衣|r£ ", --1425
 "|cff9e9e9e碎料鞋|r£ ", --1427
 "|cff9e9e9e碎料披风|r£ ", --1429
 "|cff9e9e9e碎料手套|r£ ", --1430
 "|cff9e9e9e碎料短裤|r£ ", --1431
-"|cff9e9e9eDeprecated Patchwork Cloth Shoulderpads|r£ ", --1432
+"肩部£ ", --1432
 "|cff9e9e9e碎料护甲|r£ ", --1433
 "热蜡棒£拾取后绑定£|cff00ff00使用： 使目标的护甲值降低50点，持续30秒。在效果持续期间，目标无法潜行或隐形。|r", --1434
-"|cff9e9e9eDeprecated Bridge Worker's Yoke|r£ ", --1435
+"装备后绑定£ ", --1435
 "|cff1eff00戍边长裤|r£ ", --1436
 "战士之盾£ ", --1438
 "|cff1eff00豺狼人碎骨锤|r£ ", --1440
 "|cffa335ed凯维恩的珠宝护符|r£ ", --1443
-"|cff0070ddDeprecated Inferno Stone|r£|cff00ff00使用： 灼烧敌人，对其造成|r|cff7f7f7f23|r|cff00ff00点火焰伤害，并在15秒内造成额外的|r|cff7f7f7f40|r|cff00ff00点火焰伤害。 （1分钟冷却）|r", --1444
+"拾取后绑定£|cff00ff00使用： 灼烧敌人，对其造成|r|cff7f7f7f23|r|cff00ff00点火焰伤害，并在15秒内造成额外的|r|cff7f7f7f40|r|cff00ff00点火焰伤害。 （1分钟冷却）|r", --1444
 "黑石肩铠£ ", --1445
 "|cff1eff00黑石战靴|r£ ", --1446
 "|cffa335ed救世之戒|r£|cff00ff00使用： 护甲提高300点，持续10秒。 （30分钟冷却）|r", --1447
@@ -699,7 +699,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "鱼人的鳍£ ", --1468
 "|cff1eff00亚顿的弯刀|r£ ", --1469
 "鱼人皮包£唯一£10格容器", --1470
-"|cff9e9e9eDeprecated Polished Lakestone Charm|r£|cff00ff00使用： 使目标昏迷3秒。60级以上的目标对这个效果的抵抗几率更高。 （30秒冷却）|r", --1472
+"装备后绑定£|cff00ff00使用： 使目标昏迷3秒。60级以上的目标对这个效果的抵抗几率更高。 （30秒冷却）|r", --1472
 "|cff1eff00河岸法杖|r£ ", --1473
 "小毒囊£ ", --1475
 "|cff9e9e9e折断的蜘蛛腿|r£ ", --1476
@@ -718,7 +718,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd阴暗护甲|r£ ", --1489
 "|cff1eff00守护之符|r£|cff00ff00装备： 有2%的机会在被击中之后使你的护甲提高350点，持续15秒。|r", --1490
 "|cff0070dd精准之戒|r£ ", --1491
-"Deprecated Recipe: Murloc Fin Soup£|cffffd100\"This will be a Cooking Tradeskill recipe\"|r", --1492
+"|cffffd100\"This will be a Cooking Tradeskill recipe\"|r£ ", --1492
 "|cff0070dd重型掠夺者弯刀|r£ ", --1493
 "|cff9e9e9e棉布鞋|r£ ", --1495
 "|cff9e9e9e棉布披风|r£ ", --1497
@@ -732,7 +732,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e皱皮披风|r£ ", --1505
 "|cff9e9e9e皱皮手套|r£ ", --1506
 "|cff9e9e9e皱皮短裤|r£ ", --1507
-"|cff9e9e9eDeprecated Patched Leather Shoulderpads|r£ ", --1508
+"肩部£ ", --1508
 "|cff9e9e9e皱皮外衣|r£ ", --1509
 "|cff9e9e9e重锤|r£ ", --1510
 "|cff9e9e9e平民剑|r£ ", --1511
@@ -748,18 +748,18 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00猎头长矛|r£ ", --1522
 "|cff1eff00巨型石棒|r£ ", --1523
 "劈颅巨魔的獠牙£任务物品", --1524
-"Deprecated Fistful of Hay£任务物品", --1527
+"任务物品£ ", --1527
 "一捧燕麦£任务物品", --1528
 "|cff1eff00翡翠|r£ ", --1529
 "皱缩的徽记£任务物品", --1532
-"Deprecated Bloodscalp Idol£ ", --1533
+"", --1533
 "圣契：圣光术 IV£|cff00ff00使用： Teaches Holy Light (Rank 4).|r", --1534
-"|cff9e9e9eDeprecated Bloodscalp Vest|r£ ", --1535
+"装备后绑定£ ", --1535
 "圣契：神罚圣印£|cffffd100\"Teaches Seal of Reckoning (Rank 1).\"|r", --1536
 "老马布兰契的粮草袋£拾取后绑定£唯一£8格容器", --1537
 "|cff1eff00古科罗克法杖|r£ ", --1539
-"|cff9e9e9eDeprecated Candle of Black Smoke|r£ ", --1544
-"|cff9e9e9eDeprecated Mantle of the Seas|r£ ", --1545
+"装备后绑定£ ", --1544
+"装备后绑定£ ", --1545
 "|cff1eff00信仰之盾|r£ ", --1547
 "秘典：寒冰箭 III£|cff00ff00使用： Teaches Frostbolt (Rank 3).|r", --1554
 "|cff1eff00深海圆盾|r£ ", --1557
@@ -777,66 +777,66 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "幽灵的发丝£任务物品£唯一", --1596
 "石板：闪电风暴£|cffffd100\"Teaches Lightning Storm (Rank 1).\"|r", --1597
 "腐败之花£任务物品", --1598
-"Deprecated [PH] Recipe: Zombie Juice£|cffffd100\"This will be a Cooking Tradeskill recipe\"|r", --1599
+"|cffffd100\"This will be a Cooking Tradeskill recipe\"|r£ ", --1599
 "|cff0070dd镰形斧|r£ ", --1602
 "石板：召唤灵魂 II£|cffffd100\"Teaches Call Spirit (Rank 2).\"|r", --1603
 "|cff1eff00炫彩之剑|r£ ", --1604
 "|cff0070dd缚魂者|r£ ", --1607
 "|cff1eff00碎颅者|r£ ", --1608
-"Deprecated Skullsplitter Idol£|cff00ff00使用： 使施法者的护甲值提高465点，通过法术和效果恢复的生命值提高20%。术士在同一时间内只能激活一种护甲法术。持续30分钟。 （2分钟冷却）|r", --1612
+"|cff00ff00使用： 使施法者的护甲值提高465点，通过法术和效果恢复的生命值提高20%。术士在同一时间内只能激活一种护甲法术。持续30分钟。 （2分钟冷却）|r£ ", --1612
 "|cff1eff00逐灵法杖|r£ ", --1613
 "石板：闪电风暴 II£|cffffd100\"Teaches Lightning Storm (Rank 2).\"|r", --1619
-"Deprecated Foreman's Whip£ ", --1622
+"使用后绑定£ ", --1622
 "迅猛龙皮包£唯一£12格容器", --1623
 "|cff1eff00劈颅巨魔头盔|r£ ", --1624
 "|cff1eff00胫骨之刃|r£ ", --1625
 "|cff9e9e9e损坏的电灯笼|r£ ", --1630
 "写给艾尔罗的信£任务物品£唯一", --1637
-"Deprecated Thornstone Chunk£ ", --1638
+"", --1638
 "|cff1eff00裂口战斧|r£ ", --1639
 "|cff1eff00巨刃战斧|r£ ", --1640
-"圣典：暗言术：痛 III£职业：牧师£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 3).|r", --1641
+"圣典：暗言术：痛 III£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 3).|r", --1641
 "草莓汁£|cff00ff00使用： 在30秒内恢复总计1992点法力值，喝水时必须保持坐姿。|r", --1645
-"圣典：治疗术 IV£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 4).|r", --1648
-"Deprecated Ham Sandwich£ ", --1649
-"圣典：圣言术：盾 VI£职业：牧师£|cff00ff00使用： Teaches Holy Word: Shield (Rank 6).|r", --1651
+"圣典：治疗术 IV£|cff00ff00使用： Teaches Heal (Rank 4).|r", --1648
+"", --1649
+"圣典：圣言术：盾 VI£|cff00ff00使用： Teaches Holy Word: Shield (Rank 6).|r", --1651
 "结实的饭盒£12格容器", --1652
-"Deprecated Strangleslash Metal£ ", --1654
-"Deprecated Codex of Sustenance III£职业：牧师£使用： Teaches Conjure Food (Rank 3).£\n魔法黑面包£魔法制造的物品£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --1655
+"", --1654
+"使用： Teaches Conjure Food (Rank 3).£\n魔法黑面包£魔法制造的物品£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --1655
 "翻译好的信件£任务物品£唯一", --1656
-"圣典：复活术 II£职业：牧师£|cff00ff00使用： Teaches Resurrection (Rank 2).|r", --1657
-"圣典：暗言术：痛 IV£职业：牧师£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 4).|r", --1658
+"圣典：复活术 II£|cff00ff00使用： Teaches Resurrection (Rank 2).|r", --1657
+"圣典：暗言术：痛 IV£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 4).|r", --1658
 "|cff1eff00工程学手套|r£|cff00ff00装备： 法术强度提高9点。|r", --1659
-"Deprecated Stranglethorn Mine Map£任务物品£唯一", --1663
+"任务物品£唯一", --1663
 "|cff1eff00缚法之杖|r£|cff00ff00装备： 法术强度提高20点。|r", --1664
-"Deprecated Ogre Head£任务物品", --1672
-"圣典：催眠术 II£职业：牧师£|cff00ff00使用： Teaches Sleep (Rank 2).|r", --1676
+"任务物品£ ", --1672
+"圣典：催眠术 II£|cff00ff00使用： Teaches Sleep (Rank 2).|r", --1676
 "|cff1eff00龙鳞外衣|r£ ", --1677
 "|cff0070dd黑色食人魔之靴|r£ ", --1678
 "|cff1eff00考尔格钉锤|r£ ", --1679
 "|cff1eff00剁头斧|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --1680
-"魔典：残废术£|cff00ff00使用： Teaches Cripple.|r", --1681
-"|cff9e9e9eDeprecated Totemic Headpiece|r£ ", --1684
+"魔典：残废术£职业：术士£|cff00ff00使用： Teaches Cripple.|r", --1681
+"装备后绑定£ ", --1684
 "巨魔皮包£14格容器", --1685
 "|cff9e9e9e刚硬的胡须|r£ ", --1686
 "|cff9e9e9e可收缩的爪子|r£ ", --1687
 "|cff9e9e9e柔软的尾巴|r£ ", --1688
-"Deprecated Medium Tiger Pelt£ ", --1689
-"Deprecated Fine Panther Whisker£ ", --1690
-"Deprecated Ebony Panther Claw£ ", --1691
-"Deprecated Shadowmaw Fang£任务物品", --1692
-"Deprecated Shadowmaw Pelt£ ", --1693
-"Deprecated Lashtail Hide£ ", --1694
-"Deprecated Jungle Stalker Pelt£ ", --1695
+"", --1689
+"", --1690
+"", --1691
+"任务物品£ ", --1692
+"", --1693
+"", --1694
+"", --1695
 "|cff9e9e9e尖锐的迅猛龙爪|r£ ", --1696
 "|cff9e9e9e锋利的迅猛龙牙齿|r£ ", --1697
-"Deprecated Lashtail Claw£任务物品", --1698
-"Deprecated Jungle Stalker Tail£任务物品", --1699
-"Deprecated Blood Totem£使用后绑定£颈部", --1700
+"任务物品£ ", --1698
+"任务物品£ ", --1699
+"使用后绑定£颈部", --1700
 "|cff9e9e9e尖锐的蜥蜴爪|r£ ", --1701
 "|cff9e9e9e完整的蜥蜴脊骨|r£ ", --1702
 "水晶蜥蜴的脊骨£|cff00ff00使用： 冰霜和暗影抗性提高10点，持续1分钟。|r", --1703
-"Deprecated Cold Basilisk Eye£|cff00ff00使用： 使目标的攻击间隔延长5%，持续15秒。 （1分钟冷却）|r", --1704
+"|cff00ff00使用： 使目标的攻击间隔延长5%，持续15秒。 （1分钟冷却）|r£ ", --1704
 "|cff1eff00次级月亮石|r£ ", --1705
 "|cff9e9e9e水蓝碎片|r£ ", --1706
 "暴风城奶酪£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --1707
@@ -850,11 +850,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd祭祀法袍|r£|cff00ff00装备： 法术强度提高22点。|r", --1716
 "|cff0070dd双链链甲外套|r£|cff00ff00装备： 防御等级提高14。|r", --1717
 "|cff0070dd石化蜥蜴皮裤|r£|cff00ff00装备： 命中等级提高3点。|r", --1718
-"Deprecated Flint Troll Axe£ ", --1719
+"主手£ ", --1719
 "|cff0070dd纠结木杖|r£|cff00ff00装备： 法术强度提高12点。|r", --1720
 "|cff0070dd密银战锤|r£ ", --1721
 "|cff0070dd刺石战锤|r£ ", --1722
-"Deprecated Jungle Trail Pack£10格容器", --1724
+"10格容器£ ", --1724
 "大背包£12格容器", --1725
 "|cff0070dd浸毒骨矛|r£ ", --1726
 "|cff0070dd凋零之剑|r£ ", --1727
@@ -866,7 +866,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e旧锁甲披风|r£ ", --1733
 "|cff9e9e9e用旧的锁甲手套|r£ ", --1734
 "|cff9e9e9e用旧的锁甲短裤|r£ ", --1735
-"|cff9e9e9eDeprecated Worn Mail Shoulderpads|r£ ", --1736
+"肩部£ ", --1736
 "|cff9e9e9e用旧的锁甲外衣|r£ ", --1737
 "|cff9e9e9e束皮锁甲腰带|r£ ", --1738
 "|cff9e9e9e束皮锁甲战靴|r£ ", --1739
@@ -969,38 +969,38 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Cleansing Water£|cff00ff00使用： 净化友方目标，移除1个疾病效果和1个中毒效果。|r", --1851
 "鳞甲护腕£ ", --1852
 "鳞甲腰带£ ", --1853
-"|cff9e9e9eDeprecated Brooch of the Night Watch|r£|cff00ff00使用： 使目标的攻击间隔延长5%，持续15秒。 （1分钟冷却）|r", --1854
+"装备后绑定£|cff00ff00使用： 使目标的攻击间隔延长5%，持续15秒。 （1分钟冷却）|r", --1854
 "希斯耐特的徽章£任务物品£唯一£|cffffd100\"工头希斯耐特 - 探险者协会成员\"|r", --1875
 "书卷：回春术 III£|cff00ff00使用： Teaches Rejuvenation (Rank 3).|r", --1877
 "书卷：月火术 III£|cff00ff00使用： Teaches Moonfire (Rank 3).|r", --1882
 "书卷：月火术 II£|cff00ff00使用： Teaches Moonfire (Rank 2).|r", --1886
 "|cff1eff00矿工的报复|r£|cffffd100\"可作为矿工锄使用。\"|r", --1893
 "矿业工会会员卡£任务物品", --1894
-"|cff9e9e9eMonster - Sword, Short Rusty|r£ ", --1895
-"|cff9e9e9eMonster - Sword, Short Basic|r£ ", --1896
-"|cff9e9e9eMonster - Sword, Scimitar Basic|r£ ", --1897
-"|cff9e9e9eMonster - Sword, Long Basic|r£ ", --1899
-"|cff9e9e9eMonster - Thieves Blade|r£ ", --1900
-"|cff9e9e9eMonster - Mace, Basic Stone Hammer|r£ ", --1901
-"|cff9e9e9eMonster - Mace, Basic Wooden Hammer|r£ ", --1902
-"|cff9e9e9eMonster - Mace, Basic Metal Hammer|r£ ", --1903
-"|cff9e9e9eMonster - Axe, Stone Basic|r£ ", --1904
-"|cff9e9e9eMonster - Axe, Metal Basic|r£ ", --1905
-"|cff9e9e9eMonster - Torch|r£ ", --1906
-"|cff9e9e9eMonster - Staff, Basic|r£ ", --1907
-"|cff9e9e9eMonster - Staff, Crooked|r£ ", --1908
-"|cff9e9e9eMonster - Axe, Large Basic|r£ ", --1909
-"|cff9e9e9eMonster - Item, Pick|r£ ", --1910
-"|cff9e9e9eMonster - Tool, Wrench Small|r£ ", --1911
-"|cff9e9e9eDeprecated Reed Pipe|r£|cff00ff00使用： 使目标的智力提高2点，持续30分钟。 （30分钟冷却）|r", --1912
+"单手£ ", --1895
+"单手£ ", --1896
+"单手£ ", --1897
+"单手£ ", --1899
+"单手£ ", --1900
+"单手£ ", --1901
+"单手£ ", --1902
+"单手£ ", --1903
+"单手£ ", --1904
+"单手£ ", --1905
+"单手£ ", --1906
+"双手£ ", --1907
+"双手£ ", --1908
+"单手£ ", --1909
+"单手£ ", --1910
+"单手£ ", --1911
+"装备后绑定£|cff00ff00使用： 使目标的智力提高2点，持续30分钟。 （30分钟冷却）|r", --1912
 "钉皮棍£ ", --1913
-"|cff9e9e9eDeprecated Miniature Silver Hammer|r£|cff00ff00使用： 向目标射出闪电箭，对其造成15到|r|cff7f7f7f17|r|cff00ff00点自然伤害。 （1分钟冷却）|r", --1914
-"Deprecated Bag of Teeth£ ", --1915
+"装备后绑定£|cff00ff00使用： 向目标射出闪电箭，对其造成15到|r|cff7f7f7f17|r|cff00ff00点自然伤害。 （1分钟冷却）|r", --1914
+"", --1915
 "|cff1eff00宝石匕首|r£ ", --1917
-"Deprecated Lockpick£ ", --1918
+"", --1918
 "斯温的货物£任务物品£唯一£|cffffd100\"一些送给斯温的补给品。\"|r", --1922
 "大使的背包£任务物品£唯一", --1923
-"Deprecated Hollowed Wooden Tube£任务物品", --1924
+"任务物品£ ", --1924
 "|cff1eff00迪菲亚细剑|r£ ", --1925
 "|cff1eff00重棒|r£ ", --1926
 "|cff1eff00死亡矿井砍刀|r£ ", --1927
@@ -1015,28 +1015,28 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd电锯|r£ ", --1937
 "|cff1eff00格挡槌棒|r£ ", --1938
 "一袋蜂蜜酒£任务物品£唯一", --1939
-"Deprecated Skin of Sweet Rum£拾取后绑定", --1940
+"拾取后绑定£ ", --1940
 "一桶葡萄酒£任务物品£唯一", --1941
 "一瓶月光酒£任务物品£唯一", --1942
 "|cff1eff00地精链甲护腿|r£ ", --1943
 "|cff1eff00铁匠手套|r£ ", --1944
 "|cff1eff00木工手套|r£ ", --1945
 "玛丽的眼镜£任务物品", --1946
-"|cff9e9e9eDeprecated Large Broom|r£ ", --1948
-"Deprecated Gold Ingot£ ", --1950
+"装备后绑定£ ", --1948
+"", --1950
 "|cff1eff00黑水弯刀|r£ ", --1951
 "|cff1eff00龙喉链甲战靴|r£ ", --1955
 "不再发光的暗皮坠饰£任务物品£唯一£|cffffd100\"附在坠饰上的法术已经消失了。\"|r", --1956
-"|cff9e9e9eMonster - Shield, Small Wooden|r£ ", --1957
+"副手£ ", --1957
 "|cff1eff00石化胫骨|r£ ", --1958
 "|cff1eff00冷铁镐|r£|cffffd100\"可作为矿工锄使用。\"|r", --1959
-"|cff9e9e9eDeprecated Ironforge Chain Pauldrons|r£ ", --1960
-"|cff9e9e9eMonster - Shield, Buckler Wooden|r£ ", --1961
+"装备后绑定£ ", --1960
+"副手£ ", --1961
 "发光的暗皮坠饰£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"这只坠饰闪耀着魔法的光芒。\"|r", --1962
-"Deprecated Bone Chips£ ", --1963
+"", --1963
 "白狼手套£ ", --1965
 "食人魔的单片眼镜£任务物品£唯一", --1968
-"|cff9e9e9eDeprecated Stormwind Guard Belt|r£ ", --1969
+"装备后绑定£ ", --1969
 "恢复香膏£拾取后绑定£|cff00ff00使用： 治疗目标，在12秒内恢复总计180点生命值。|r", --1970
 "法布隆的地契£任务物品£唯一", --1971
 "西部荒野地契£拾取后绑定£唯一£该物品将触发一个任务", --1972
@@ -1050,9 +1050,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed地狱指环|r£|cff00ff00装备： 法术强度提高12点。|r", --1980
 "|cffa335ed冰鳞甲|r£ ", --1981
 "|cffa335ed夜刃|r£ ", --1982
-"|cff9e9e9eMonster - Sword2H, Basic|r£ ", --1983
-"|cff9e9e9eMonster - Shield, Kite Metal|r£ ", --1984
-"|cff9e9e9eMonster - Shield, Large Wooden|r£ ", --1985
+"双手£ ", --1983
+"副手£ ", --1984
+"副手£ ", --1985
 "|cff1eff00裂胆剑|r£ ", --1986
 "修理过的烹调锅£任务物品£唯一£|cffffd100\"改进型的烹饪锅，附加了哨子和自动切肉刀。\"|r", --1987
 "|cff1eff00主将护手|r£ ", --1988
@@ -1061,21 +1061,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd寒沼雕像|r£|cff00ff00装备： 法术强度提高9点。|r", --1992
 "|cff1eff00食人魔戒指|r£ ", --1993
 "|cff1eff00黑爪|r£ ", --1994
-"Deprecated Cat's Paw£使用后绑定£|cff00ff00使用： 净化敌方目标，移除1个有益魔法效果。 （1分钟冷却）|r", --1995
+"使用后绑定£|cff00ff00使用： 净化敌方目标，移除1个有益魔法效果。 （1分钟冷却）|r", --1995
 "|cff1eff00巫毒指环|r£ ", --1996
 "|cff1eff00毛毡长袍|r£ ", --1997
 "|cff1eff00血顶巨魔法杖|r£|cff00ff00装备： 法术强度提高15点。|r", --1998
-"|cff9e9e9eDeprecated Torn Leather Harness|r£ ", --1999
+"胸部£ ", --1999
 "|cff1eff00阿契厄斯|r£|cffffd100\"摩根·拉迪莫尔之剑\"|r", --2000
-"Deprecated Jordan's Quiver£4格箭袋", --2002
-"Deprecated Big Quiver£8格箭袋£|cffffd100\"一只大箭袋\"|r", --2003
+"4格箭袋£ ", --2002
+"8格箭袋£|cffffd100\"一只大箭袋\"|r", --2003
 "格瑞林·白须的日记£任务物品£唯一", --2004
 "巨魔传说第一章£任务物品£唯一£|cffffd100\"月亮照耀着山谷\"|r", --2005
 "巨魔传说第二章£任务物品£唯一£|cffffd100\"游荡者格里雷克\"|r", --2006
 "巨魔传说第三章£任务物品£唯一£|cffffd100\"古拉巴什的毁灭\"|r", --2007
 "巨魔传说第四章£任务物品£唯一£|cffffd100\"帝王之墓\"|r", --2008
 "|cff0070dd波纹军刀|r£ ", --2011
-"|cff9e9e9eDeprecated Phylactery of Rot|r£|cff00ff00使用： 每1秒吸取目标的|r|cff7f7f7f10|r|cff00ff00点生命值，并将其转移给施法者，持续5秒。 （1分钟冷却）|r", --2012
+"拾取后绑定£|cff00ff00使用： 每1秒吸取目标的|r|cff7f7f7f10|r|cff00ff00点生命值，并将其转移给施法者，持续5秒。 （1分钟冷却）|r", --2012
 "|cff1eff00墓穴法杖|r£ ", --2013
 "|cff1eff00黑色金属巨剑|r£ ", --2014
 "|cff1eff00黑色金属战斧|r£ ", --2015
@@ -1084,7 +1084,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00骷髅长剑|r£ ", --2018
 "|cff1eff00空牙之刃|r£ ", --2020
 "|cff1eff00绿壳盾|r£ ", --2021
-"|cff9e9e9eMonster - Spear, Rusty|r£ ", --2023
+"双手£ ", --2023
 "普通长剑£ ", --2024
 "芒刺斧£ ", --2025
 "巨型石锤£ ", --2026
@@ -1098,35 +1098,35 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00夜空之剑|r£ ", --2035
 "|cff1eff00陈旧的矿工手套|r£ ", --2036
 "|cff1eff00掘地工之靴|r£ ", --2037
-"|cff9e9e9eDeprecated Cougar Head Cap|r£ ", --2038
+"装备后绑定£ ", --2038
 "|cff0070dd朴素之戒|r£ ", --2039
 "|cff0070dd巨魔保卫者|r£|cff00ff00装备： 使你的格挡等级提高10。|r", --2040
 "|cff0070dd西部荒野外套|r£ ", --2041
 "|cff0070dd西部荒野法杖|r£ ", --2042
 "|cff0070dd弃灵之戒|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --2043
 "|cff0070dd弃灵新月斧|r£|cff00ff00装备： 爆击等级提高8点。|r", --2044
-"|cff9e9e9eDeprecated Cowl of Forlorn Spirits|r£ ", --2045
+"装备后绑定£ ", --2045
 "|cff1eff00蓝腮弯刀|r£ ", --2046
 "安威玛尔手斧£ ", --2047
 "安威玛尔钉锤£ ", --2048
-"|cff9e9e9eDeprecated Silver Ingot|r£ ", --2050
-"|cff9e9e9eMonster - Shield, Small Wooden Damaged|r£ ", --2051
-"|cff9e9e9eMonster - Shield, Small Metal Damaged|r£ ", --2052
-"|cff9e9e9eMonster - Shield, Buckler Metal Damaged|r£ ", --2053
+"", --2050
+"副手£ ", --2051
+"副手£ ", --2052
+"副手£ ", --2053
 "穴居人的手斧£ ", --2054
 "小木槌£ ", --2055
 "|cff9e9e9eThe Velvet Hammer|r£ ", --2056
 "豁口的迪菲亚短剑£ ", --2057
 "|cff1eff00卡松的大槌|r£ ", --2058
 "|cff0070dd哨兵披风|r£ ", --2059
-"|cff9e9e9eDeprecated Chunk of Boar Meat|r£ ", --2060
+"", --2060
 "穴居人的木棒£ ", --2064
 "石腭之剑£ ", --2065
 "颅骨短斧£ ", --2066
 "寒霜法杖£ ", --2067
 "黑色熊皮外衣£ ", --2069
 "达纳苏斯奶酪£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --2070
-"Deprecated Mountain Spring Water£|cff00ff00使用： 在18秒内恢复总计151点法力值，喝水时必须保持坐姿。|r", --2071
+"|cff00ff00使用： 在18秒内恢复总计151点法力值，喝水时必须保持坐姿。|r£ ", --2071
 "|cff1eff00矮人法杖|r£ ", --2072
 "|cff1eff00矮人短斧|r£ ", --2073
 "|cff1eff00结实的短剑|r£ ", --2074
@@ -1135,7 +1135,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00北地短剑|r£ ", --2078
 "|cff1eff00军官战锤|r£ ", --2079
 "|cff1eff00丘陵斧|r£ ", --2080
-"|cff9e9e9eMonster - Torch, Offhand|r£ ", --2081
+"副手物品£ ", --2081
 "维兹班恩的麻袋£拾取后绑定£唯一£6格容器", --2082
 "|cff1eff00黑铁重剑|r£ ", --2084
 "|cff9e9e9e大块烂肉|r£ ", --2085
@@ -1149,18 +1149,18 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed精确校准过的火枪|r£ ", --2100
 "轻型箭袋£6格箭袋", --2101
 "小型弹药包£6格弹药袋", --2102
-"Test Arrow£弹药£箭£每秒伤害提高1", --2103
-"Deprecated Standard Shot£弹药£子弹£每秒伤害提高1", --2104
+"弹药£箭£每秒伤害提高1", --2103
+"弹药£子弹£每秒伤害提高1", --2104
 "刺客衬衣£ ", --2105
-"|cff9e9e9eDeprecated Worn Pants|r£ ", --2106
-"|cff9e9e9eDeprecated Travel-worn Boots|r£ ", --2107
+"腿部£ ", --2106
+"脚£ ", --2107
 "霜鬃皮外衣£ ", --2108
 "霜鬃链甲外衣£ ", --2109
 "轻便法师袍£ ", --2110
 "伐木工的夹克衫£ ", --2112
 "卡洛尔的便笺£任务物品£唯一", --2113
 "雪白的长袍£ ", --2114
-"Deprecated Small White Pouch£6格容器", --2115
+"6格容器£ ", --2115
 "薄布靴£ ", --2117
 "薄布手套£ ", --2119
 "薄布短裤£ ", --2120
@@ -1189,7 +1189,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "硝化护腕£ ", --2144
 "硝化手套£ ", --2145
 "硝化短裤£ ", --2146
-"|cff9e9e9eMonster - Sword, Falchion|r£ ", --2147
+"单手£ ", --2147
 "精制鳞甲腰带£ ", --2148
 "精制鳞甲战靴£ ", --2149
 "精制鳞甲护腕£ ", --2150
@@ -1210,37 +1210,37 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00工头手套|r£|cff00ff00装备： 攻击强度提高10点。|r", --2167
 "|cff1eff00工头之靴|r£ ", --2168
 "|cff0070dd蜂鸣之刃|r£|cff00ff00装备： 爆击等级提高5点。|r", --2169
-"|cff9e9e9eDeprecated Shield of the Spider Princess|r£ ", --2170
+"装备后绑定£ ", --2170
 "乡村腰带£ ", --2172
 "旧皮腰带£ ", --2173
 "|cff1eff00暗皮战斧|r£ ", --2175
-"|cff9e9e9eMonster - Staff, Ornate Priest Staff|r£ ", --2176
-"|cff9e9e9eMonster - Staff, Ornate Mage Staff|r£ ", --2177
-"|cff9e9e9eMonster - Sword, Long Ornate|r£ ", --2178
-"|cff9e9e9eMonster - Sword, Scimitar Badass|r£ ", --2179
-"|cff9e9e9eMonster - Sword, Short Ornate|r£ ", --2180
-"|cff9e9e9eMonster - Sword2H, Baron Rivendare|r£ ", --2181
-"|cff9e9e9eMonster - Mace, Ornate Metal Hammer|r£ ", --2182
-"|cff9e9e9eMonster - Axe, Metal Badass|r£ ", --2183
-"|cff9e9e9eMonster - Dagger Basic|r£ ", --2184
+"双手£ ", --2176
+"双手£ ", --2177
+"单手£ ", --2178
+"单手£ ", --2179
+"单手£ ", --2180
+"双手£ ", --2181
+"单手£ ", --2182
+"单手£ ", --2183
+"单手£ ", --2184
 "旅行腰带£ ", --2186
 "一摞信件£任务物品£唯一", --2187
 "给格瑞林·白须的信£任务物品£唯一", --2188
-"|cffe5cc7fTigole's Boomstick (TEST)|r£ ", --2189
-"Deprecated End Spawn Ticket£ ", --2191
+"主手£ ", --2189
+"", --2191
 "|cff0070dd钻石战锤|r£ ", --2194
 "安威玛尔匕首£ ", --2195
-"|cff9e9e9eMonster - Item, Mutton|r£ ", --2196
-"|cff9e9e9eMonster - Item, Bread|r£ ", --2197
-"|cff9e9e9eMonster - Item, Potion Blue|r£ ", --2198
-"|cff9e9e9eMonster - Item, Vial Purple|r£ ", --2199
-"|cff9e9e9eMonster - Item, Potion Green|r£ ", --2200
-"|cff9e9e9eMonster - Item, Vial Black|r£ ", --2201
-"|cff9e9e9eMonster - Item, Mutton with Bite|r£ ", --2202
+"单手£ ", --2196
+"单手£ ", --2197
+"单手£ ", --2198
+"单手£ ", --2199
+"单手£ ", --2200
+"单手£ ", --2201
+"单手£ ", --2202
 "|cff1eff00利爪队长的伐木斧|r£ ", --2203
 "|cff1eff00利爪队长的烤肉钉|r£ ", --2204
 "|cff0070dd暮色之剑|r£ ", --2205
-"|cff9e9e9eDeprecated Fine Pointed Dagger|r£ ", --2206
+"装备后绑定£ ", --2206
 "双刃弯刀£ ", --2207
 "三角短剑£ ", --2208
 "波刃短剑£ ", --2209
@@ -1283,7 +1283,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "粘糊的蜘蛛腿£ ", --2251
 "杂七杂八的地精补给物资£任务物品£唯一£|cffffd100\"要递送给索尔森下士的箱子。\"|r", --2252
 "|cff1eff00碎冰战锤|r£ ", --2254
-"|cff9e9e9eDeprecated Thick Leather Gloves|r£ ", --2255
+"装备后绑定£ ", --2255
 "|cff0070dd骷髅棒|r£ ", --2256
 "霜鬃法杖£ ", --2257
 "霜鬃短剑£ ", --2258
@@ -1299,7 +1299,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd神佑先知法杖|r£|cff00ff00装备： 法术强度提高13点。|r", --2271
 "|cff1eff00游击队护甲|r£ ", --2273
 "|cff1eff00工兵手套|r£ ", --2274
-"|cff0070ddDeprecated Sentinel Coif|r£ ", --2275
+"装备后绑定£ ", --2275
 "|cff0070dd泥沼长靴|r£ ", --2276
 "|cff0070dd亡灵法师护腿|r£|cff00ff00装备： 法术强度提高8点。|r", --2277
 "|cff0070dd森林追踪者护肩|r£ ", --2278
@@ -1321,8 +1321,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "手工皮靴£ ", --2302
 "手工皮短裤£ ", --2303
 "轻型护甲片£|cff00ff00使用： 永久性地为一件穿戴在胸部、腿部、手部或脚上的装备提供额外的8点护甲值。 （1秒冷却）|r", --2304
-"|cff9e9e9eDeprecated Light Winter Cloak|r£ ", --2305
-"|cff9e9e9eDeprecated Light Winter Boots|r£ ", --2306
+"装备后绑定£ ", --2305
+"装备后绑定£ ", --2306
 "|cff1eff00优质皮靴|r£|cff00ff00装备： 攻击强度提高8点。|r", --2307
 "|cff1eff00优质皮披风|r£ ", --2308
 "|cff1eff00雕花皮靴|r£ ", --2309
@@ -1338,15 +1338,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "中皮£ ", --2319
 "粗线£ ", --2320
 "细线£ ", --2321
-"Deprecated Crag Boar Hide£ ", --2322
-"Deprecated Longsnout Hide£ ", --2323
+"", --2322
+"", --2323
 "漂白液£ ", --2324
 "黑色染料£ ", --2325
 "青藤纹路护腕£ ", --2326
 "结实的皮护腕£ ", --2327
 "用旧的木槌£ ", --2361
 "|cff9e9e9e用旧的木盾|r£ ", --2362
-"Deprecated Skeleton Key£ ", --2363
+"", --2363
 "机织布外衣£ ", --2364
 "机织布短裤£ ", --2366
 "机织布靴£ ", --2367
@@ -1385,15 +1385,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "轻型链甲战靴£ ", --2401
 "轻型链甲护腕£ ", --2402
 "轻型链甲手套£ ", --2403
-"Deprecated Pattern: Light Winter Cloak£使用： 教你学会制作轻便冬季披风。£|cff9e9e9e\nDeprecated Light Winter Cloak|r£装备后绑定£背部£5点护甲£\n需要轻皮 (8), 粗线 (2)", --2404
-"Deprecated Pattern: Light Winter Boots£使用： 教你学会制作轻便冬季长靴。£|cff9e9e9e\nDeprecated Light Winter Boots|r£装备后绑定£脚£24点护甲£\n需要轻皮 (6), 粗线 (2)", --2405
+"使用： 教你学会制作轻便冬季披风。£|cff9e9e9e\n|r£装备后绑定£背部£5点护甲£\n需要轻皮 (8), 粗线 (2)", --2404
+"使用： 教你学会制作轻便冬季长靴。£|cff9e9e9e\n|r£装备后绑定£脚£24点护甲£\n需要轻皮 (6), 粗线 (2)", --2405
 "|cff1eff00图样：优质皮靴|r£使用： 教你学会制作优质皮靴。£|cff1eff00\n优质皮靴|r£装备后绑定£脚£51点护甲£|cff00ff00装备： 攻击强度提高8点。|r£\n需要轻皮 (7), 粗线 (2)", --2406
 "|cff1eff00图样：白色皮夹克|r£使用： 教你学会制作白色皮夹克。£|cff1eff00\n白色皮夹克|r£装备后绑定£胸部£65点护甲£+3 敏捷£\n需要轻皮 (8), 粗线 (2), 漂白液", --2407
 "|cff1eff00图样：优质皮手套|r£使用： 教你学会制作优质皮护腕。£|cff1eff00\n优质皮手套|r£装备后绑定£手£43点护甲£+2 智力£|cff00ff00装备： 法术强度提高2点。|r£\n需要熟化轻毛皮, 轻皮 (4), 粗线 (2)", --2408
 "|cff1eff00图样：黑皮外套|r£使用： 教你学会制作黑皮外套。£|cff1eff00\n黑皮外套|r£装备后绑定£胸部£78点护甲£+6 敏捷£\n需要中皮 (6), 细线, 灰色染料", --2409
 "冒烟的火炬£ ", --2410
 "|cff0070dd黑马缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --2411
-"Deprecated Nightmare Bridle£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 巨魔", --2412
+"种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 巨魔£ ", --2412
 "褐色马£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 侏儒, 巨魔£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --2413
 "|cff0070dd杂色马缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --2414
 "白马£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 侏儒, 巨魔£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --2415
@@ -1436,9 +1436,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "初级敏捷药剂£|cff00ff00使用： 使敏捷提高4点，持续1小时。战斗药剂。|r", --2457
 "初级坚韧药剂£|cff00ff00使用： 使玩家的生命值上限提高27点，持续1小时。守护药剂。|r", --2458
 "迅捷药水£|cff00ff00使用： 使你的奔跑速度提高50%，持续15秒。|r", --2459
-"Elixir of Tongues (NYI)£|cffffd100\"This potion has no effect until we put languages in.\"|r", --2460
-"Deprecated Elemental Resistance Potion£ ", --2461
-"Deprecated Potion of Lesser Invulnerability (Fix)£|cff00ff00使用： 恢复140到180点生命值。|r", --2462
+"|cffffd100\"This potion has no effect until we put languages in.\"|r£ ", --2460
+"", --2461
+"|cff00ff00使用： 恢复140到180点生命值。|r£ ", --2462
 "钉甲外衣£ ", --2463
 "钉甲腰带£ ", --2464
 "钉甲短裤£ ", --2465
@@ -1454,7 +1454,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "强化皮手套£ ", --2475
 "冷蜥蜴肉£任务物品", --2476
 "干枯的眼球£任务物品", --2477
-"Deprecated Replenishing Font£|cff00ff00使用： 恢复140到|r|cff7f7f7f180|r|cff00ff00点法力值。 （1分钟冷却）|r", --2478
+"装备后绑定£|cff00ff00使用： 恢复140到|r|cff7f7f7f180|r|cff00ff00点法力值。 （1分钟冷却）|r", --2478
 "钝板斧£ ", --2479
 "弯曲的大木棒£ ", --2480
 "苦工之剑£ ", --2481
@@ -1489,12 +1489,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "结实的短枪£ ", --2510
 "猎人火枪£ ", --2511
 "劣质箭£弹药£箭£每秒伤害提高1.5", --2512
-"Deprecated Iron Shot£弹药£子弹£每秒伤害提高1.5", --2513
+"弹药£子弹£每秒伤害提高1.5", --2513
 "Deprecated Sharp Arrow£弹药£箭£每秒伤害提高2", --2514
 "锋利的箭£弹药£箭£每秒伤害提高3.5", --2515
 "轻弹丸£弹药£子弹£每秒伤害提高1.5", --2516
-"Deprecated Standard Arrow£弹药£箭£每秒伤害提高1.5", --2517
-"Deprecated Solid Shot£弹药£子弹£每秒伤害提高2", --2518
+"弹药£箭£每秒伤害提高1.5", --2517
+"弹药£子弹£每秒伤害提高2", --2518
 "重弹丸£弹药£子弹£每秒伤害提高3.5", --2519
 "骑士长剑£ ", --2520
 "微光巨剑£ ", --2521
@@ -1518,16 +1518,16 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "驯猪手套£ ", --2547
 "一大桶热麦酒£任务物品£唯一", --2548
 "|cff0070dd暗影法杖|r£|cff00ff00装备： 法术强度提高18点。|r", --2549
-"|cff9e9e9eMonster - Bow, Short|r£ ", --2550
-"|cff9e9e9eMonster - Crossbow|r£ ", --2551
-"|cff9e9e9eMonster - Gun|r£ ", --2552
+"远程£ ", --2550
+"", --2551
+"", --2552
 "|cff1eff00配方：初级敏捷药剂|r£使用： 教你学会配制初级敏捷药剂。£\n初级敏捷药剂£|cff00ff00使用： 使敏捷提高4点，持续1小时。战斗药剂。|r£\n需要雨燕草, 银叶草, 空瓶", --2553
-"Deprecated Recipe: Elixir of Fortitude£使用： 教你学会配制坚韧药剂。£\n初级坚韧药剂£|cff00ff00使用： 使玩家的生命值上限提高27点，持续1小时。守护药剂。|r£\n需要地根草 (2), 宁神花, 空瓶", --2554
+"使用： 教你学会配制坚韧药剂。£\n初级坚韧药剂£|cff00ff00使用： 使玩家的生命值上限提高27点，持续1小时。守护药剂。|r£\n需要地根草 (2), 宁神花, 空瓶", --2554
 "|cff1eff00配方：迅捷药水|r£使用： 教你学会配制迅捷药水。£\n迅捷药水£|cff00ff00使用： 使你的奔跑速度提高50%，持续15秒。|r£\n需要雨燕草, 石南草, 空瓶", --2555
-"配方：语言药剂£使用： 教你学会配制语言药剂。£\nElixir of Tongues (NYI)£|cffffd100\"This potion has no effect until we put languages in.\"|r£\n需要地根草 (2), 魔皇草 (2), 空瓶", --2556
-"|cff9e9e9eMonster - Mace2H, Ornate Metal Hammer|r£ ", --2557
-"|cff9e9e9eMonster - Mace, Good Wooden Hammer|r£ ", --2558
-"|cff9e9e9eMonster - Staff, Ornate Warlock Staff|r£ ", --2559
+"配方：语言药剂£使用： 教你学会配制语言药剂。£\n£|cffffd100\"This potion has no effect until we put languages in.\"|r£\n需要地根草 (2), 魔皇草 (2), 空瓶", --2556
+"双手£ ", --2557
+"单手£ ", --2558
+"双手£ ", --2559
 "基特斯的日记£任务物品£唯一", --2560
 "卓克苏尔的徽记£任务物品£唯一", --2561
 "海棠花£ ", --2562
@@ -1541,8 +1541,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "亚麻披风£ ", --2570
 "藤蔓包裹£ ", --2571
 "|cff1eff00红色亚麻长袍|r£ ", --2572
-"|cff9e9e9eDeprecated Forest Silk Gloves|r£ ", --2573
-"|cff9e9e9eDeprecated Trogg Vest|r£ ", --2574
+"装备后绑定£ ", --2573
+"装备后绑定£ ", --2574
 "红色亚麻衬衣£ ", --2575
 "白色亚麻衬衣£ ", --2576
 "蓝色亚麻衬衣£ ", --2577
@@ -1556,7 +1556,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00灰色毛纺长袍|r£ ", --2585
 "GM的长袍£ ", --2586
 "灰色毛纺衬衣£ ", --2587
-"Deprecated Red Leather Mask£ ", --2588
+"头部£ ", --2588
 "亚麻布£ ", --2589
 "|cff9e9e9e森林蜘蛛网|r£ ", --2590
 "|cff9e9e9e肮脏的穴居人布片|r£ ", --2591
@@ -1566,10 +1566,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "罐装荒芜之地波本酒£|cff00ff00使用： 酒精含量较高的饮料。|r", --2595
 "矮人烈酒£|cff00ff00使用： 普通的酒类饮料。|r", --2596
 "|cff1eff00图样：红色亚麻长袍|r£使用： 教你学会制作红色亚麻长袍。£|cff1eff00\n红色亚麻长袍|r£装备后绑定£胸部£布甲£19点护甲£+1 智力£\n需要亚麻布卷 (3), 粗线 (2), 红色染料 (2)", --2598
-"Deprecated Pattern: Forest Silk Gloves£ ", --2599
-"Deprecated Pattern: Trogg Vest£ ", --2600
+"", --2599
+"", --2600
 "|cff1eff00图样：灰色毛纺长袍|r£使用： 教你学会制作灰色毛纺长袍。£|cff1eff00\n灰色毛纺长袍|r£装备后绑定£胸部£布甲£35点护甲£+4 耐力£+5 智力£\n需要毛布卷 (4), 细线 (3), 灰色染料", --2601
-"Deprecated Pattern: Feathered Robe£ ", --2602
+"", --2602
 "红色染料£ ", --2604
 "绿色染料£ ", --2605
 "潜伏者的毒液£任务物品£唯一", --2606
@@ -1600,7 +1600,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e宽松链甲腰带|r£ ", --2635
 "小石像£任务物品", --2636
 "铁环挖掘场的进度报告£任务物品£唯一", --2637
-"Deprecated Ironband's Powder Approval£任务物品£唯一", --2638
+"任务物品£唯一", --2638
 "麦琳的信件£任务物品£唯一", --2639
 "矿工装备£任务物品", --2640
 "|cff9e9e9e宽松链甲战靴|r£ ", --2642
@@ -1608,7 +1608,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e宽松链甲披风|r£ ", --2644
 "|cff9e9e9e宽松链甲手套|r£ ", --2645
 "|cff9e9e9e宽松链甲短裤|r£ ", --2646
-"|cff9e9e9eDeprecated Loose Chain Shoulderpads|r£ ", --2647
+"肩部£ ", --2647
 "|cff9e9e9e宽松链甲外衣|r£ ", --2648
 "|cff9e9e9e劣质链甲腰带|r£ ", --2649
 "|cff9e9e9e劣质链甲战靴|r£ ", --2650
@@ -1616,7 +1616,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e劣质链甲披风|r£ ", --2652
 "|cff9e9e9e劣质链甲手套|r£ ", --2653
 "|cff9e9e9e劣质链甲短裤|r£ ", --2654
-"|cff9e9e9eDeprecated Flimsy Chain Shoulderpads|r£ ", --2655
+"肩部£ ", --2655
 "|cff9e9e9e劣质链甲外衣|r£ ", --2656
 "红色皮包£8格容器", --2657
 "阿度斯碎片£任务物品£唯一", --2658
@@ -1652,9 +1652,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "铁锁腰带£ ", --2690
 "旅行之靴£ ", --2691
 "|cff9e9e9e辣椒|r£ ", --2692
-"OLD Stormwind Seasoning Salts £ ", --2693
+"", --2693
 "|cff1eff00移民者护腿|r£ ", --2694
-"|cff9e9e9eMonster - Mace, Board with Nail Club|r£ ", --2695
+"单手£ ", --2695
 "一桶艾沃沙酒£任务物品£唯一", --2696
 "食谱：猪肝馅饼£使用： 教你学会烹制猪肝馅饼。£\n猪肝馅饼£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高4点，持续15分钟。|r£\n需要血牙野猪的肝", --2697
 "食谱：煮蟹爪£使用： 教你学会烹制煮蟹爪。£\n煮蟹爪£|cff00ff00使用： 在21秒内恢复总计294点生命值和294点法力值。在进食的时候必须保持坐姿。|r£\n需要蟹爪", --2698
@@ -1662,22 +1662,22 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "食谱：多汁猪排£使用： 教你学会烹制多汁猪排。£\n多汁猪排£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r£\n需要猪排 (2)", --2700
 "食谱：干烤狼肉串£使用： 教你学会烹制干烤狼肉串。£\n干烤狼肉串£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高6点，持续15分钟。|r£\n需要狼肋排 (2)", --2701
 "光铸铁锭£任务物品", --2702
-"|cff9e9e9eMonster - Item, Tankard Wooden|r£ ", --2703
-"|cff9e9e9eMonster - Item, Tankard Dirty|r£ ", --2704
-"|cff9e9e9eMonster - Item, Tankard Metal|r£ ", --2705
-"|cff9e9e9eMonster - Item, Flower - Red|r£ ", --2706
-"|cff9e9e9eMonster - Item, Flower - Yellow|r£ ", --2707
-"|cff9e9e9eMonster - Item, Bouquet - White & Purple|r£ ", --2708
-"|cff9e9e9eMonster - Item, Flower - Rose|r£ ", --2709
-"|cff9e9e9eMonster - Item, Bouquet - Roses|r£ ", --2710
-"|cff9e9e9eMonster - Dagger Badass|r£ ", --2711
+"单手£ ", --2703
+"单手£ ", --2704
+"单手£ ", --2705
+"单手£ ", --2706
+"单手£ ", --2707
+"单手£ ", --2708
+"单手£ ", --2709
+"单手£ ", --2710
+"单手£ ", --2711
 "一箱光铸铁锭£任务物品£唯一", --2712
 "奥尔苏迪的徽记£任务物品£唯一", --2713
-"|cff9e9e9eMonster - Item, Lantern - Square|r£ ", --2714
-"|cff9e9e9eMonster - Item, Lantern - Round|r£ ", --2715
-"|cff9e9e9eMonster - Item, Bottle - Green|r£ ", --2716
-"|cff9e9e9eMonster - Item, Bottle - Black|r£ ", --2717
-"|cff9e9e9eMonster - Item, Glass - Clear|r£ ", --2718
+"单手£ ", --2714
+"单手£ ", --2715
+"单手£ ", --2716
+"单手£ ", --2717
+"单手£ ", --2718
 "黄铜钥匙£任务物品£唯一", --2719
 "沾泥的便笺£任务物品£唯一", --2720
 "|cff0070dd神圣头巾|r£|cff00ff00装备： 法术强度提高18点。|r", --2721
@@ -1729,11 +1729,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e油腻的火枪|r£ ", --2786
 "穴居人的匕首£ ", --2787
 "黑爪烈酒£任务物品£唯一", --2788
-"Deprecated Bent Copper Lockpick£|cffffd100\"Opens difficulty 25 locks.\"|r", --2789
-"Deprecated Straight Copper Lockpick£|cffffd100\"Opens difficulty 50 locks.\"|r", --2790
-"Deprecated Fine Copper Lockpick£|cffffd100\"Opens difficulty 75 locks.\"|r", --2791
-"Deprecated Worn Bronze Lockpick£|cffffd100\"Opens difficulty 100 locks.\"|r", --2792
-"Deprecated Book: The History of Stormwind£任务物品£唯一", --2793
+"|cffffd100\"Opens difficulty 25 locks.\"|r£ ", --2789
+"|cffffd100\"Opens difficulty 50 locks.\"|r£ ", --2790
+"|cffffd100\"Opens difficulty 75 locks.\"|r£ ", --2791
+"|cffffd100\"Opens difficulty 100 locks.\"|r£ ", --2792
+"任务物品£唯一", --2793
 "一本破旧的历史书£拾取后绑定£唯一£该物品将触发一个任务", --2794
 "《金属的延展性》£任务物品£唯一", --2795
 "莫克的精华£任务物品£唯一", --2797
@@ -1742,18 +1742,18 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd黑天鹅绒长袍|r£ ", --2800
 "|cffa335ed汉娜之刃|r£ ", --2801
 "|cff0070dd闪耀徽章|r£|cff00ff00使用： 使火焰抗性提高50点，受到火焰系攻击时所承受的伤害降低最多25点，持续15秒。 （10分钟冷却）|r", --2802
-"|cff9e9e9eDeprecated Static Charm|r£|cff00ff00使用： 施法者被3个闪电球环绕。如果施法者受到了近战、远程或法术伤害，则攻击者会受到|r|cff7f7f7f51|r|cff00ff00点自然伤害，并会消耗掉一个闪电球。一个攻击者在短期内只会受到一次反噬伤害。持续10分钟。萨满祭司在同一时间内只能激活一种元素护盾。 （1分钟冷却）|r", --2803
-"Deprecated Freezing Talisman£ ", --2804
+"拾取后绑定£|cff00ff00使用： 施法者被3个闪电球环绕。如果施法者受到了近战、远程或法术伤害，则攻击者会受到|r|cff7f7f7f51|r|cff00ff00点自然伤害，并会消耗掉一个闪电球。一个攻击者在短期内只会受到一次反噬伤害。持续10分钟。萨满祭司在同一时间内只能激活一种元素护盾。 （1分钟冷却）|r", --2803
+"装备后绑定£ ", --2804
 "|cff1eff00雪人毛皮披风|r£ ", --2805
 "给卡尔·雷矛的包裹£任务物品£唯一", --2806
 "|cff0070dd断头斧|r£ ", --2807
 "Torch of Flame£|cff00ff00使用： 破除摩本特·费尔的防御结界。|r", --2808
-"|cff9e9e9eMonster - Mace, Spiked Basic|r£ ", --2809
-"|cff9e9e9eMonster - Mace, Standard Serpent|r£ ", --2810
-"Deprecated Lightforge Staff£ ", --2811
-"Deprecated Lightforge Dagger£ ", --2812
-"|cff9e9e9eMonster - Mace, Standard Basic|r£ ", --2813
-"Deprecated Lightforge Hammer£ ", --2814
+"单手£ ", --2809
+"单手£ ", --2810
+"拾取后绑定£ ", --2811
+"拾取后绑定£ ", --2812
+"单手£ ", --2813
+"拾取后绑定£ ", --2814
 "|cff0070dd曲刃撕裂者|r£ ", --2815
 "|cff0070dd亡语者节杖|r£|cff00ff00装备： 法术强度提高9点。|r", --2816
 "|cff1eff00柔软的皮外套|r£ ", --2817
@@ -1765,8 +1765,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00莫格罗什开罐器|r£ ", --2823
 "|cffa335ed飓风|r£|cff00ff00装备： 有一定几率对你的目标释放冰霜箭，造成31到|r|cff7f7f7f45|r|cff00ff00点冰霜伤害。|r", --2824
 "|cffa335ed灼热弓|r£|cff00ff00装备： 有一定几率对你的远程攻击目标造成18到|r|cff7f7f7f26|r|cff00ff00点火焰伤害。|r", --2825
-"|cff9e9e9eDeprecated Medal of Fortitude|r£ ", --2826
-"|cff9e9e9eMonster - Cleaver|r£ ", --2827
+"拾取后绑定£ ", --2826
+"单手£ ", --2827
 "妮萨的标记£任务物品£唯一", --2828
 "格里高的标记£任务物品£唯一", --2829
 "萨尔曼的标记£任务物品£唯一", --2830
@@ -1819,8 +1819,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "弱效助熔剂£|cffffd100\"铁匠以此去除矿石中的杂质。\"|r", --2880
 "|cff1eff00设计图：铜质符文胸甲|r£使用： 教你学会制作符文青铜胸甲。£|cff1eff00\n铜质符文胸甲|r£装备后绑定£胸部£162点护甲£+4 力量£+3 耐力£\n需要铜锭 (12), 暗影石, 劣质砂轮 (2)", --2881
 "|cff1eff00设计图：镀银青铜护肩|r£使用： 教你学会制作镀银青铜护肩。£|cff1eff00\n镀银青铜护肩|r£装备后绑定£肩部£137点护甲£+3 力量£+3 耐力£|cff00ff00装备： 爆击等级提高3点。|r£\n需要青铜锭 (8), 银锭 (2), 粗制砂轮 (2)", --2882
-"|cff1eff00设计图：致命的青铜短剑|r£使用： 教你学会制作致命青铜短剑。£|cff1eff00\n致命的青铜短剑|r£装备后绑定£单手£16 - 30伤害£速度 1.80£（每秒伤害12.8）£+4 敏捷£\n需要青铜锭 (4), 强效助熔剂, 迅捷药水, 暗影石 (2), 粗制砂轮 (2), 中皮 (2)", --2883
-"|cff9e9e9eMonster - Dynamite, Lit|r£ ", --2884
+"|cff1eff00设计图：致命的青铜短剑|r£使用： 教你学会制作致命青铜短剑。£|cff1eff00\n致命的青铜短剑|r£装备后绑定£单手£匕首£16 - 30伤害£速度 1.80£（每秒伤害12.8）£+4 敏捷£\n需要青铜锭 (4), 强效助熔剂, 迅捷药水, 暗影石 (2), 粗制砂轮 (2), 中皮 (2)", --2883
+"单手£ ", --2884
 "血色十字军文件£任务物品£唯一", --2885
 "峭壁野猪肋排£ ", --2886
 "Ruined Wolf Pelt£ ", --2887
@@ -1828,8 +1828,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "食谱：啤酒烤猪排£使用： 教你学会烹制啤酒烤猪排。£\n啤酒烤猪排£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高2点，持续15分钟。|r£\n需要峭壁野猪肋排", --2889
 "Ruined Boar Pelt£ ", --2890
 "写给巴隆斯的信£任务物品£唯一", --2891
-"致命药膏£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成26点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --2892
-"致命药膏 II£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成38点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --2893
+"致命药膏£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成25点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --2892
+"致命药膏 II£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成37点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --2893
 "狂想麦酒£|cff00ff00使用： 酒精含量较少的饮料。|r", --2894
 "慢性痛苦毒药£ ", --2895
 "慢性剧痛毒药£ ", --2896
@@ -1852,7 +1852,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed碎冰者|r£ ", --2915
 "|cff1eff00金狮之盾|r£ ", --2916
 "|cff1eff00宁静之戒|r£ ", --2917
-"|cff9e9e9eDeprecated Coif of Inner Strength|r£ ", --2918
+"装备后绑定£ ", --2918
 "Relic of the Ancients£ ", --2919
 "Sacred Relic£ ", --2920
 "Blessed Relic£ ", --2921
@@ -1875,10 +1875,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd铁指虎|r£ ", --2942
 "|cff1eff00帕雷斯之眼|r£|cff00ff00装备： 法术强度提高7点。|r", --2943
 "|cff1eff00被诅咒的帕雷斯之眼|r£|cff00ff00装备： 法术强度提高8点。|r", --2944
-"(OLD)Medium Throwing Knife£1 - 2伤害", --2945
+"1 - 2伤害£ ", --2945
 "破损的平衡飞刀£ ", --2946
 "破损的小飞刀£ ", --2947
-"|cff9e9e9eDeprecated Talisman of Cleansing|r£|cff00ff00使用： 净化友方目标，移除1个疾病效果和1个中毒效果。 （1分钟冷却）|r", --2948
+"装备后绑定£|cff00ff00使用： 净化友方目标，移除1个疾病效果和1个中毒效果。 （1分钟冷却）|r", --2948
 "|cff1eff00水手之靴|r£ ", --2949
 "|cff1eff00冰柱魔棒|r£|cff00ff00装备： 法术强度提高8点。|r", --2950
 "|cff0070dd丛林之戒|r£ ", --2951
@@ -1922,28 +1922,28 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00抛光链甲护腿|r£ ", --2990
 "|cff1eff00抛光链甲战靴|r£ ", --2991
 "|cff1eff00抛光链甲手套|r£ ", --2992
-"|cff9e9e9eDeprecated Inscribed Leather Helm|r£ ", --2993
-"|cff9e9e9eDeprecated Seer's Monocle|r£ ", --2994
-"|cff9e9e9eDeprecated Burnished Chain Coif|r£ ", --2995
+"装备后绑定£ ", --2993
+"装备后绑定£ ", --2994
+"装备后绑定£ ", --2995
 "亚麻布卷£ ", --2996
 "毛布卷£ ", --2997
 "简易罗盘£任务物品£|cffffd100\"巴隆斯·阿历克斯顿的第一只罗盘。\"|r", --2998
 "贝尔丁的工具£任务物品£唯一", --2999
 "|cff1eff00雌蜘蛛的外壳|r£ ", --3000
-"Deprecated Medivh's Folly£ ", --3001
+"唯一£ ", --3001
 "Relic Horn of Justice£ ", --3002
 "Relic of the Eye£ ", --3003
 "Relic of the Dead£ ", --3004
 "Relic of Truth£ ", --3005
 "Holy Relic Shard£ ", --3006
-"|cff9e9e9eDeprecated Dark Iron Pauldrons|r£ ", --3007
+"装备后绑定£ ", --3007
 "雪怪披风£ ", --3008
 "|cff9e9e9e细砂|r£ ", --3010
 "|cff1eff00羽饰头巾|r£ ", --3011
 "敏捷卷轴£|cff00ff00使用： 使目标的敏捷提高3点，持续30分钟。同一时间内只能保持一种卷轴效果。 （1秒冷却）|r", --3012
 "保护卷轴£|cff00ff00使用： 使目标的护甲提高65点，持续30分钟。同一时间内只能保持一种卷轴效果。 （1秒冷却）|r", --3013
 "破斧£任务物品", --3014
-"Deprecated Chatter's Rock£ ", --3015
+"拾取后绑定£ ", --3015
 "冈瑟尔的法术书£任务物品£唯一", --3016
 "塞弗伦的命令£任务物品£唯一", --3017
 "|cff1eff00鲁伯斯的皮|r£ ", --3018
@@ -1960,9 +1960,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Deprecated Whipwood Arrow£弹药£箭£每秒伤害提高4.5", --3029
 "锐锋箭£弹药£箭£每秒伤害提高7.5", --3030
 "Deprecated Razor Arrow£弹药£箭£每秒伤害提高8.5", --3031
-"Deprecated Impact Shot£弹药£子弹£每秒伤害提高4.5", --3032
+"弹药£子弹£每秒伤害提高4.5", --3032
 "实心子弹£弹药£子弹£每秒伤害提高7.5", --3033
-"Deprecated BKP \"Impact\" Shot£弹药£子弹£每秒伤害提高8.5", --3034
+"弹药£子弹£每秒伤害提高8.5", --3034
 "斑纹南瓜£任务物品£唯一", --3035
 "|cff1eff00硬短弓|r£ ", --3036
 "|cff1eff00柳木弯弓|r£ ", --3037
@@ -1970,31 +1970,31 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00猎人长枪|r£ ", --3040
 "|cff1eff00\"法师之眼\"大口径火枪|r£ ", --3041
 "|cff1eff00BKP\"麻雀\"短枪|r£ ", --3042
-"|cff9e9e9eOLDMonster - Mace, Standard Basic Offhand|r£ ", --3044
+"", --3044
 "|cff1eff00亮鳞战靴|r£ ", --3045
-"|cff9e9e9eDeprecated Glinting Scale Crown|r£ ", --3046
+"装备后绑定£ ", --3046
 "|cff1eff00亮鳞手套|r£ ", --3047
 "|cff1eff00亮鳞腿甲|r£ ", --3048
 "|cff1eff00亮鳞胸甲|r£ ", --3049
-"|cff9e9e9eDeprecated Winter Mail Leggings|r£ ", --3050
-"|cff9e9e9eDeprecated Winter Mail Gloves|r£ ", --3051
-"|cff9e9e9eDeprecated Winter Mail Coif|r£ ", --3052
+"装备后绑定£ ", --3050
+"装备后绑定£ ", --3051
+"装备后绑定£ ", --3052
 "|cff1eff00亨伯特的护胸|r£ ", --3053
-"|cff9e9e9eDeprecated Winter Mail Boots|r£ ", --3054
+"装备后绑定£ ", --3054
 "|cff1eff00森林皮护胸|r£ ", --3055
 "|cff1eff00森林皮短裤|r£ ", --3056
 "|cff1eff00森林皮靴|r£ ", --3057
 "|cff1eff00森林皮手套|r£ ", --3058
-"|cff9e9e9eDeprecated Forest Leather Helm|r£ ", --3059
-"|cff9e9e9eDeprecated Deepwood Boots|r£ ", --3060
-"|cff9e9e9eDeprecated Deepwood Breastplate|r£ ", --3061
-"|cff9e9e9eDeprecated Deepwood Gloves|r£ ", --3062
-"|cff9e9e9eDeprecated Deepwood Helm|r£ ", --3063
-"|cff9e9e9eDeprecated Deepwood Pants|r£ ", --3064
+"装备后绑定£ ", --3059
+"装备后绑定£ ", --3060
+"装备后绑定£ ", --3061
+"装备后绑定£ ", --3062
+"装备后绑定£ ", --3063
+"装备后绑定£ ", --3064
 "|cff1eff00明亮长靴|r£ ", --3065
 "|cff1eff00明亮手套|r£ ", --3066
 "|cff1eff00明亮短裤|r£ ", --3067
-"|cff1eff00Deprecated Silver-thread Cowl|r£ ", --3068
+"装备后绑定£ ", --3068
 "|cff1eff00明亮长袍|r£ ", --3069
 "军旗披风£ ", --3070
 "迅捷短柄斧£ ", --3071
@@ -2003,7 +2003,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00烟尘手套|r£ ", --3074
 "|cffa335ed烈焰之眼|r£|cff00ff00装备： 法术强度提高35点。|r", --3075
 "|cff1eff00烟尘之靴|r£ ", --3076
-"|cff9e9e9eDeprecated Stonecloth Cowl|r£ ", --3077
+"装备后绑定£ ", --3077
 "|cff0070dd纳迦穿心者|r£ ", --3078
 "|cff1eff00斯考恩的火枪|r£ ", --3079
 "诱灵蜡烛£任务物品£唯一", --3080
@@ -2032,47 +2032,47 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00寒脊之锤|r£ ", --3103
 "破损的锋利飞刀£ ", --3107
 "破损的重型飞刀£ ", --3108
-"(OLD)Wicked Throwing Dagger£1 - 2伤害", --3109
+"1 - 2伤害£ ", --3109
 "坑道鼠的耳朵£任务物品", --3110
 "破损的劣质飞斧£ ", --3111
-"圣典：圣言术：盾£职业：牧师£|cff00ff00使用： Teaches Holy Word: Shield (Rank 1).|r", --3113
-"圣典：暗言术：惑£职业：牧师£|cffffd100\"Teaches Shadow Word: Befuddle (Rank 1).\"|r", --3114
-"圣典：恢复 IV£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 4).|r", --3115
-"圣典：圣言术：盾 II£职业：牧师£|cff00ff00使用： Teaches Holy Word: Shield (Rank 2).|r", --3116
+"圣典：圣言术：盾£|cff00ff00使用： Teaches Holy Word: Shield (Rank 1).|r", --3113
+"圣典：暗言术：惑£|cffffd100\"Teaches Shadow Word: Befuddle (Rank 1).\"|r", --3114
+"圣典：恢复 IV£|cff00ff00使用： Teaches Renew (Rank 4).|r", --3115
+"圣典：圣言术：盾 II£|cff00ff00使用： Teaches Holy Word: Shield (Rank 2).|r", --3116
 "莫里·铁钻的日记£任务物品£唯一", --3117
-"圣典：强效治疗术£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --3118
-"圣典：圣言术：盾 V£职业：牧师£|cff00ff00使用： Teaches Holy Word: Shield (Rank 5).|r", --3119
-"圣典：圣光击 IV£职业：牧师£|cff00ff00使用： Teaches Holy Smite (Rank 4).|r", --3120
-"圣典：漂浮术£职业：牧师£|cff00ff00使用： Teaches Levitate.|r", --3121
-"圣典：圣言术：盾 III£职业：牧师£|cff00ff00使用： Teaches Holy Word: Shield (Rank 3).|r", --3122
-"圣典：圣言术：韧 III£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 3).|r", --3123
-"圣典：心灵之火 III£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --3124
+"圣典：强效治疗术£|cff00ff00使用： Teaches Greater Heal.|r", --3118
+"圣典：圣言术：盾 V£|cff00ff00使用： Teaches Holy Word: Shield (Rank 5).|r", --3119
+"圣典：圣光击 IV£|cff00ff00使用： Teaches Holy Smite (Rank 4).|r", --3120
+"圣典：漂浮术£|cff00ff00使用： Teaches Levitate.|r", --3121
+"圣典：圣言术：盾 III£|cff00ff00使用： Teaches Holy Word: Shield (Rank 3).|r", --3122
+"圣典：圣言术：韧 III£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 3).|r", --3123
+"圣典：心灵之火 III£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --3124
 "石板：毒蛇图腾 II£|cff00ff00使用： Teaches Serpent Totem (Rank 2).|r", --3125
 "石板：震击术 II£|cff00ff00使用： Teaches Shock (Rank 2).|r", --3126
 "石板：震击术 III£|cff00ff00使用： Teaches Shock (Rank 3).|r", --3127
-"(OLD)Medium Throwing Axe£1 - 2伤害", --3128
+"1 - 2伤害£ ", --3128
 "石板：闪电箭 IV£|cff00ff00使用： Teaches Lightning Bolt (Rank 4).|r", --3129
 "石板：复原术 IV£|cff00ff00使用： Teaches Healing Wave (Rank 4).|r", --3130
 "破损的增重飞斧£ ", --3131
 "石板：熔岩爆裂 IV£|cffffd100\"Teaches Molten Blast (Rank 4).\"|r", --3132
 "石板：法力图腾£|cff00ff00使用： Teaches Mana Totem.|r", --3133
-"Grimoire of Curse of Mannoroth£|cff00ff00使用： Teaches Curse of Weakness (Rank 1).|r", --3134
+"Grimoire of Curse of Mannoroth£职业：术士£|cff00ff00使用： Teaches Curse of Weakness (Rank 1).|r", --3134
 "破损的锋利飞斧£ ", --3135
-"(OLD)Heavy Throwing Axe£1点伤害", --3136
+"1点伤害£ ", --3136
 "破损的致命飞斧£ ", --3137
-"魔典：暗影箭 IV£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --3138
-"魔典：魔甲术 II£|cff00ff00使用： Teaches Demon Armor (Rank 2).|r", --3139
-"魔典：沸血术 II£|cffffd100\"Teaches Blood Boil (Rank 2).\"|r", --3140
-"魔典：生命吸取£|cff00ff00使用： Teaches Drain Life (Rank 1).|r", --3141
-"魔典：萨格拉斯的诅咒£|cff00ff00使用： Teaches Curse of Agony (Rank 1).|r", --3142
-"Grimoire of Burning Spirit£|cff00ff00使用： Teaches Life Tap (Rank 1).|r", --3143
-"魔典：燃灵术 II£|cff00ff00使用： Teaches Life Tap (Rank 2).|r", --3144
-"Off Hand Test Dagger£ ", --3145
-"魔典：燃灵术 III£|cff00ff00使用： Teaches Life Tap (Rank 3).|r", --3146
-"Deprecated Tattered Shirt£ ", --3147
-"Deprecated Work Shirt£ ", --3148
-"Deprecated Ripped Vest£ ", --3149
-"|cff9e9e9eDeprecated Tattered Pants|r£ ", --3150
+"魔典：暗影箭 IV£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --3138
+"魔典：魔甲术 II£职业：术士£|cff00ff00使用： Teaches Demon Armor (Rank 2).|r", --3139
+"魔典：沸血术 II£职业：术士£|cffffd100\"Teaches Blood Boil (Rank 2).\"|r", --3140
+"魔典：生命吸取£职业：术士£|cff00ff00使用： Teaches Drain Life (Rank 1).|r", --3141
+"魔典：萨格拉斯的诅咒£职业：术士£|cff00ff00使用： Teaches Curse of Agony (Rank 1).|r", --3142
+"Grimoire of Burning Spirit£职业：术士£|cff00ff00使用： Teaches Life Tap (Rank 1).|r", --3143
+"魔典：燃灵术 II£职业：术士£|cff00ff00使用： Teaches Life Tap (Rank 2).|r", --3144
+"单手£ ", --3145
+"魔典：燃灵术 III£职业：术士£|cff00ff00使用： Teaches Life Tap (Rank 3).|r", --3146
+"衬衣£ ", --3147
+"衬衣£ ", --3148
+"衬衣£ ", --3149
+"腿部£ ", --3150
 "坦克驾驶员军用外衣£ ", --3151
 "驾驶手套£ ", --3152
 "浸油的披风£ ", --3153
@@ -2081,7 +2081,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "暴食者镣铐£任务物品", --3156
 "魔魂镣铐£任务物品", --3157
 "褐色毛护腕£ ", --3158
-"|cff9e9e9eDeprecated Crusader's Mantle|r£ ", --3159
+"装备后绑定£ ", --3159
 "|cff1eff00铁板圆盾|r£ ", --3160
 "|cff1eff00监护者法袍|r£ ", --3161
 "锯齿肋骨£任务物品", --3162
@@ -2136,24 +2136,24 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00亮鳞护腕|r£ ", --3212
 "精兵护腕£ ", --3213
 "战士护腕£ ", --3214
-"|cff9e9e9eDeprecated Winter Mail Bracers|r£ ", --3215
+"装备后绑定£ ", --3215
 "保暖冬衣£ ", --3216
 "|cff1eff00工头腰带|r£ ", --3217
 "焚木镣铐£任务物品", --3218
-"|cff9e9e9eDeprecated Mantle of Nobility|r£ ", --3219
+"装备后绑定£ ", --3219
 "血肠£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高4点，持续15分钟。|r", --3220
-"|cff9e9e9eDeprecated Sage Mantle|r£ ", --3221
+"装备后绑定£ ", --3221
 "|cff1eff00邪恶匕首|r£ ", --3222
 "|cff1eff00霜鬃节杖|r£ ", --3223
 "银线护腕£ ", --3224
 "染血的小刀£ ", --3225
-"|cff9e9e9eDeprecated Watchman Pauldrons|r£ ", --3226
+"装备后绑定£ ", --3226
 "|cff1eff00夜行法杖|r£ ", --3227
 "|cff0070dd弯曲护腕|r£ ", --3228
 "|cff1eff00蛛丝腰带|r£|cff00ff00装备： 法术强度提高2点。|r", --3229
 "|cff0070dd黑狼护腕|r£ ", --3230
 "|cff1eff00杀手肩铠|r£ ", --3231
-"|cff9e9e9eDeprecated Drake-scale Leggings|r£ ", --3232
+"装备后绑定£ ", --3232
 "豺狼人皮包£唯一£8格容器", --3233
 "黛丽娅的戒指£任务物品£唯一", --3234
 "|cff1eff00轻蔑之戒|r£|cffffd100\"赠予黛丽娅\"|r", --3235
@@ -2163,14 +2163,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "劣质平衡石£|cff00ff00使用： 使钝器的武器伤害提高2点，持续1小时。不能对等级高于165的物品使用。 （1秒冷却）|r", --3239
 "粗制平衡石£|cff00ff00使用： 使钝器的武器伤害提高3点，持续1小时。不能对等级高于165的物品使用。 （1秒冷却）|r", --3240
 "重平衡石£|cff00ff00使用： 使钝器的武器伤害提高4点，持续1小时。不能对等级高于165的物品使用。 （1秒冷却）|r", --3241
-"|cff9e9e9eOLDMonster - Chest, Plate Silver|r£ ", --3242
-"|cff9e9e9eOLDMonster - Legs, Plate Silver|r£ ", --3243
-"|cff9e9e9eOLDMonster - Feet, Plate Silver|r£ ", --3244
-"|cff9e9e9eOLDMonster - Hands, Plate Silver|r£ ", --3245
-"|cff9e9e9eOLDMonster - Shoulder, Plate Silver|r£ ", --3246
-"|cff9e9e9eOLDMonster - Waist, Plate Silver|r£ ", --3247
+"胸部£ ", --3242
+"腿部£ ", --3243
+"脚£ ", --3244
+"手£ ", --3245
+"肩部£ ", --3246
+"腰部£ ", --3247
 "翻译好的藏尸者信件£任务物品£唯一", --3248
-"Conjured test Item£魔法制造的物品£|cffffd100\"An item for testing conjured items\"|r", --3249
+"魔法制造的物品£|cffffd100\"An item for testing conjured items\"|r", --3249
 "比索的卷轴£任务物品£唯一", --3250
 "比索的药水£拾取后绑定£|cff00ff00使用： 移除鸦爪妖术的效果。 （30秒冷却）|r", --3251
 "亡灵哨兵的报告£任务物品£唯一", --3252
@@ -2192,7 +2192,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "亡灵匕首£ ", --3268
 "亡灵木槌£ ", --3269
 "麻布外衣£ ", --3270
-"Deprecated Flax Mantle£ ", --3271
+"肩部£ ", --3271
 "僵尸皮护腿£ ", --3272
 "皱褶锁甲外衣£ ", --3273
 "麻布靴£ ", --3274
@@ -2219,7 +2219,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "死者之刃£ ", --3295
 "死者匕首£ ", --3296
 "魔苔£任务物品", --3297
-"Deprecated Grizzled Bearskin Pouch£拾取后绑定£唯一£8格容器", --3298
+"拾取后绑定£唯一£8格容器", --3298
 "|cff9e9e9e断裂的狼牙|r£ ", --3299
 "|cff9e9e9e幸运兔脚|r£ ", --3300
 "|cff9e9e9e锋利的犬齿|r£ ", --3301
@@ -2247,19 +2247,19 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "幽灵护腕£ ", --3323
 "|cff1eff00鬼魂衬肩|r£ ", --3324
 "邪鳍战斧£ ", --3325
-"|cff9e9e9eMonster - Mace2H, Basic Stone Hammer|r£ ", --3326
+"双手£ ", --3326
 "邪鳍法杖£ ", --3327
 "蛛网长袍£ ", --3328
 "钉刺木板£ ", --3329
 "|cff1eff00达高尔的锁甲|r£ ", --3330
 "麦拉其的斗篷£ ", --3331
 "派瑞恩的战靴£ ", --3332
-"Deprecated Scarlet Captain's Pauldrons£ ", --3333
+"肩部£ ", --3333
 "农夫的铁锨£ ", --3334
 "农夫的扫帚£ ", --3335
 "|cff1eff00切肉匕首|r£ ", --3336
 "龙喉战旗£任务物品", --3337
-"Deprecated Obsidian Stone£任务物品£唯一", --3338
+"任务物品£唯一", --3338
 "矮人火绒£任务物品£唯一", --3339
 "火岩矿石£ ", --3340
 "|cff1eff00食人魔力量护手|r£|cff00ff00装备： 攻击强度提高16点。|r", --3341
@@ -2267,12 +2267,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "杉德尔船长的宝物袋£拾取后绑定£唯一£8格容器", --3343
 "|cff1eff00杉德尔船长的腰带|r£ ", --3344
 "|cff1eff00丝质巫师帽|r£ ", --3345
-"|cff9e9e9eMonster - Item, Shovel|r£ ", --3346
+"双手£ ", --3346
 "一捆鳄鱼皮£任务物品£唯一", --3347
 "巨型鳄鱼的皮£任务物品", --3348
 "塞达的背包£任务物品£唯一£|cffffd100\"它正在滴水。\"|r", --3349
-"|cff9e9e9eMonster - Item, Bone|r£ ", --3350
-"|cff9e9e9eMonster - Item, Rolling Pin|r£ ", --3351
+"唯一£ ", --3350
+"唯一£ ", --3351
 "污泥覆盖的背包£拾取后绑定£唯一£10格容器", --3352
 "刻有符文的坠饰£任务物品£唯一", --3353
 "达拉然坠饰£任务物品", --3354
@@ -2281,14 +2281,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "活根草£ ", --3357
 "卡德加的胡须£ ", --3358
 "缝合怪的大腿骨£ ", --3360
-"|cff9e9e9eMonster - Mace, Spiked Heavy|r£ ", --3361
-"|cff9e9e9eMonster - Item, Broom|r£ ", --3362
+"单手£ ", --3361
+"唯一£ ", --3362
 "|cff9e9e9e磨损的腰带|r£ ", --3363
-"|cff9e9e9eMonster - Sword, Rapier|r£ ", --3364
+"单手£ ", --3364
 "|cff9e9e9e磨损的护腕|r£ ", --3365
-"|cff9e9e9eMonster - Sword2H, Katana|r£ ", --3366
-"|cff9e9e9eMonster - Item, Pitchfork|r£ ", --3367
-"|cff9e9e9eMonster - Item, Harpoon|r£ ", --3368
+"单手£ ", --3366
+"双手£ ", --3367
+"唯一£ ", --3368
 "墓地苔£ ", --3369
 "|cff9e9e9e碎料腰带|r£ ", --3370
 "空瓶£ ", --3371
@@ -2329,7 +2329,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "天蓝之石£任务物品£唯一", --3407
 "筑巢符文£任务物品£唯一", --3408
 "夜刃豹的牙齿£任务物品", --3409
-"Deprecated Glade Bear Fang£任务物品", --3410
+"任务物品£ ", --3410
 "巨翼枭的羽毛£任务物品", --3411
 "树林蜘蛛丝£任务物品", --3412
 "|cff0070dd末日之刺|r£ ", --3413
@@ -2351,16 +2351,16 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00卫兵腰带|r£ ", --3429
 "|cff1eff00狙击步枪|r£ ", --3430
 "|cff1eff00骨钉皮甲|r£ ", --3431
-"|cff9e9e9eMonster - Glaive - 1 Blade Basic|r£ ", --3432
-"|cff9e9e9eMonster - Spear, Badass|r£ ", --3433
+"双手£ ", --3432
+"双手£ ", --3433
 "沉睡之砂£拾取后绑定£|cff00ff00使用： 使敌人进入睡眠状态，最多持续20秒。任何对目标造成伤害的行为都会唤醒它。同一时间内只能有一个目标被催眠。30级以上的敌人抵抗该效果的几率提高。|r", --3434
 "僵尸皮护腕£ ", --3435
-"Deprecated Quilted Mantle£ ", --3436
+"肩部£ ", --3436
 "扣环腰带£ ", --3437
 "复活圣章£拾取后绑定£唯一£|cff00ff00使用： 复活一个死去的玩家，复活后该玩家拥有70点生命值和135点法力值。无法在战斗中施放。|r", --3438
 "僵尸皮靴£ ", --3439
 "|cff1eff00碎骨者|r£ ", --3440
-"Deprecated Crippling Agent£|cff00ff00使用： 使目标残废，移动速度降低40%，近战和远程攻击间隔延长20%。持续20秒。 （30秒冷却）|r", --3441
+"|cff00ff00使用： 使目标残废，移动速度降低40%，近战和远程攻击间隔延长20%。持续20秒。 （30秒冷却）|r£ ", --3441
 "学徒腰带£ ", --3442
 "典礼轻斧£ ", --3443
 "提勒的外衣£ ", --3444
@@ -2378,7 +2378,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd狗哨|r£拾取后绑定£唯一£|cff00ff00使用： 召唤一头追踪犬为你作战，持续10分钟。 （10分钟冷却）|r", --3456
 "|cff1eff00践踏长裤|r£ ", --3457
 "|cff1eff00皱褶锁甲手套|r£ ", --3458
-"|cff9e9e9eDeprecated Weathered Shoulderpads|r£ ", --3459
+"装备后绑定£ ", --3459
 "乔汉的神奇饮料£任务物品£唯一", --3460
 "|cff1eff00法官长袍|r£ ", --3461
 "|cff1eff00鹰爪之击|r£ ", --3462
@@ -2412,61 +2412,61 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00青铜重锤|r£ ", --3491
 "|cff1eff00巨型铁锤|r£ ", --3492
 "|cff1eff00迅猛龙终结者|r£ ", --3493
-"|cff9e9e9eMonster - Claw|r£ ", --3494
+"单手£ ", --3494
 "受难药剂£任务物品£唯一", --3495
 "山地狮的血液£任务物品", --3496
 "痛苦药剂£任务物品£唯一", --3497
 "塔蕾莎的项链£任务物品£唯一£|cffffd100\"一牙新月缀在银色的链子上。\"|r", --3498
 "抛光的金钥匙£任务物品£唯一", --3499
-"Deprecated Battered Lock£ ", --3500
-"Deprecated Rusted Lock£ ", --3501
+"", --3500
+"", --3501
 "泥头花£任务物品", --3502
-"Deprecated Forboding Document£唯一", --3503
-"Deprecated Encrypted Letterr£任务物品£唯一", --3504
+"唯一£ ", --3503
+"任务物品£唯一", --3504
 "奥特兰克徽记之戒£任务物品", --3505
 "泥头花药£任务物品£唯一", --3506
-"Deprecated Test Fishliver Oil£|cff00ff00使用： 使你的近战攻击急速等级提高20，持续30秒。 （5秒冷却）|r", --3507
+"|cff00ff00使用： 使你的近战攻击急速等级提高20，持续30秒。 （5秒冷却）|r£ ", --3507
 "泥头花水£任务物品£唯一", --3508
 "刺脊纳迦的鳞片£任务物品", --3509
 "碎鳍鱼人的眼球£任务物品", --3510
 "|cff1eff00人民军披风|r£ ", --3511
-"Deprecated Contract for the Magistrate£任务物品£唯一", --3513
+"任务物品£唯一", --3513
 "摩拉迪姆的徽记£任务物品£唯一", --3514
 "阿塔瑞克之杖£任务物品£唯一", --3515
 "莱斯科瓦的徽记£任务物品£唯一", --3516
 "矿工烈酒£任务物品£唯一", --3517
 "被破译的信件£任务物品£唯一", --3518
-"Deprecated DEFAULT QUEST ITEM - Scroll£任务物品£唯一", --3519
+"任务物品£唯一", --3519
 "装满烈酒的酒桶£任务物品£唯一", --3520
 "复杂的密码信£任务物品£唯一£|cffffd100\"这封密码信几乎完全无法破解。\"|r", --3521
 "Black Night Elf Breastplate£ ", --3522
-"Unused Black Night Elf Pants£ ", --3523
-"Unused Black Night Elf Boots£ ", --3524
-"Unused Black Night Elf Bracers£ ", --3525
+"腿部£ ", --3523
+"脚£ ", --3524
+"手腕£ ", --3525
 "Black Night Elf Gloves£ ", --3526
 "White Night Elf Breastplate£ ", --3527
 "Red Leather C03 Breastplate£ ", --3528
 "Black Night Elf Helm£ ", --3529
 "绒线绷带£|cff00ff00使用： 在7秒内恢复161点生命值。|r", --3530
 "厚绒线绷带£|cff00ff00使用： 在7秒内恢复301点生命值。|r", --3531
-"Unused Red Leather C03 Pants£ ", --3532
+"腿部£ ", --3532
 "Red Leather C03 Boots£ ", --3533
-"Unused Red Leather C03 Gloves£ ", --3534
+"手£ ", --3534
 "Red Leather C03 Bracers£ ", --3535
 "Demon Hunter Blindfold£ ", --3536
 "Black Leather D02 Breastplate£ ", --3537
 "Gray Leather D02 Breastplate£ ", --3538
-"Unused Black Leather D02 Pants£ ", --3539
-"Unused Gray Leather D02 Pants£ ", --3540
+"腿部£ ", --3539
+"腿部£ ", --3540
 "Black Leather D02 Boots£ ", --3541
 "Gray Leather D02 Boots£ ", --3542
-"Unused Black Leather D02 Gloves£ ", --3543
-"Unused Gray Leather D02 Gloves£ ", --3544
+"手£ ", --3543
+"手£ ", --3544
 "Black Leather D02 Bracers£ ", --3545
 "Gray Leather D02 Bracers£ ", --3546
 "White Leather D03 Breastplate£ ", --3547
-"Unused White Leather D03 Pants£ ", --3548
-"Unused White Leather D03 Gloves£ ", --3549
+"腿部£ ", --3548
+"手£ ", --3549
 "塔尔格的徽记£任务物品£唯一", --3550
 "玛克拉克的徽记£任务物品£唯一", --3551
 "戈洛姆斯的徽记£任务物品£唯一", --3552
@@ -2485,7 +2485,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00沾酒的手套|r£|cff00ff00装备： 法术强度提高4点。|r", --3565
 "|cff1eff00迅猛龙杀手护甲|r£|cff00ff00装备： 对野兽的攻击强度提高30点。|r", --3566
 "|cff1eff00矮人钓鱼竿|r£|cffffd100\"矮人可没什么耐心。\"|r", --3567
-"Deprecated Oslow's Toolbox£拾取后绑定£唯一£8格容器", --3568
+"拾取后绑定£唯一£8格容器", --3568
 "|cff1eff00牧师之袍|r£ ", --3569
 "|cff1eff00碾骨槌|r£ ", --3570
 "|cff1eff00穴居人巨锤|r£ ", --3571
@@ -2496,11 +2496,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "锡锭£ ", --3576
 "|cff1eff00金锭|r£ ", --3577
 "|cff1eff00收割者的短裤|r£ ", --3578
-"Deprecated Iron Key£任务物品£唯一", --3580
+"任务物品£唯一", --3580
 "|cff1eff00锯齿小刀|r£ ", --3581
 "|cff1eff00耐酸披风|r£ ", --3582
 "风化腰带£ ", --3583
-"Deprecated Perenolde's Head£任务物品£唯一", --3584
+"任务物品£唯一", --3584
 "|cff1eff00迷彩外套|r£ ", --3585
 "|cff1eff00削木斧|r£ ", --3586
 "镶边腰带£ ", --3587
@@ -2524,7 +2524,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00守夜人箭袋|r£拾取后绑定£唯一£12格箭袋", --3605
 "机织布腰带£ ", --3606
 "机织布护腕£ ", --3607
-"|cff1eff00设计图：巨型铁锤|r£使用： 教你学会制作巨型铁锤。£|cff1eff00\n巨型铁锤|r£装备后绑定£单手£锤£30 - 57伤害£速度 2.80£（每秒伤害15.5）£+5 力量£\n需要铁锭 (6), 强效助熔剂 (2), 食人魔力量药剂, 次级月亮石 (2), 粗制砂轮 (2), 中皮 (2)", --3608
+"|cff1eff00设计图：巨型铁锤|r£使用： 教你学会制作巨型铁锤。£|cff1eff00\n巨型铁锤|r£装备后绑定£单手£30 - 57伤害£速度 2.80£（每秒伤害15.5）£+5 力量£\n需要铁锭 (6), 强效助熔剂 (2), 食人魔力量药剂, 次级月亮石 (2), 粗制砂轮 (2), 中皮 (2)", --3608
 "|cff1eff00设计图：铜质链甲外衣|r£使用： 教你学会制作铜质链甲背心。£|cff1eff00\n铜质链甲外衣|r£装备后绑定£胸部£108点护甲£+1 力量£\n需要铜锭 (8), 劣质砂轮 (2)", --3609
 "|cff1eff00设计图：铜质宝石手套|r£使用： 教你学会制作铜质宝石手套。£|cff1eff00\n铜质宝石手套|r£装备后绑定£手£90点护甲£|cff00ff00装备： 爆击等级提高3点。|r£\n需要铜锭 (8), 虎眼石, 孔雀石", --3610
 "|cff1eff00设计图：绿铁战靴|r£使用： 教你学会制作绿铁靴。£|cff1eff00\n绿铁战靴|r£装备后绑定£脚£134点护甲£+3 力量£+7 耐力£\n需要铁锭 (6), 粗制砂轮 (2), 绿色染料", --3611
@@ -2540,7 +2540,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "伊瓦的徽记£任务物品£唯一", --3621
 "奈塔拉什的灵魂£任务物品£唯一", --3622
 "图勒的徽记£任务物品£唯一", --3623
-"Deprecated QDROP - Ma'ruk Wyrmscale£任务物品£唯一", --3624
+"任务物品£唯一", --3624
 "纳克罗什的徽记£任务物品£唯一", --3625
 "瓦杜斯男爵的徽记£任务物品£唯一", --3626
 "瓦加什的牙齿£任务物品£唯一", --3627
@@ -2562,7 +2562,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "法师护腕£ ", --3643
 "布质符文护腕£ ", --3644
 "|cff1eff00先知护腕|r£ ", --3645
-"|cff9e9e9eDeprecated Stonecloth Bracers|r£ ", --3646
+"装备后绑定£ ", --3646
 "|cff1eff00明亮护腕|r£ ", --3647
 "战士圆盾£ ", --3648
 "部落圆盾£ ", --3649
@@ -2593,7 +2593,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e腐烂的靴子|r£ ", --3674
 "|cff9e9e9eBurnt Out Torch|r£副手物品", --3675
 "|cff9e9e9e粘糊糊的液体|r£ ", --3676
-"Deprecated Remington's List£任务物品£唯一", --3677
+"任务物品£唯一", --3677
 "食谱：鳄鱼煎排£使用： 教你学会烹制鳄鱼煎排。£\n鳄鱼肉排£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高4点，持续15分钟。|r£\n需要鳄鱼肉", --3678
 "食谱：血肠£使用： 教你学会烹制血肠。£\n血肠£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高4点，持续15分钟。|r£\n需要熊肉, 猪大肠, 蜘蛛的毒液", --3679
 "食谱：鱼人鳍汤£使用： 教你学会烹制鱼人鳍汤。£\n鱼人鳍汤£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高6点，持续15分钟。|r£\n需要鱼人的鳍 (2)", --3680
@@ -2602,25 +2602,25 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "食谱：蜘蛛蛋糕£使用： 教你学会烹制蜘蛛蛋糕。£\n蜘蛛蛋糕£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高6点，持续15分钟。|r£\n需要粘糊的蜘蛛腿 (2)", --3683
 "匹瑞诺德王冠£任务物品", --3684
 "迅猛龙蛋£ ", --3685
-"Deprecated Jkaplan TEST£ ", --3686
-"|cffe5cc7fDeprecated Unholy Avenger|r£ ", --3687
+"", --3686
+"装备后绑定£ ", --3687
 "血色卵石£任务物品£唯一", --3688
 "血石弹球£任务物品£唯一", --3689
 "血石碎片£任务物品£唯一", --3690
 "血石之楔£任务物品£唯一", --3691
 "希尔斯布莱德人类徽记£任务物品", --3692
 "亨伯特的长剑£任务物品£唯一", --3693
-"|cff9e9e9eMonster - Item, Vial Black Offhand|r£ ", --3694
-"|cff9e9e9eMonster - Item, Vial Purple Offhand|r£ ", --3695
-"|cff9e9e9eMonster - Item, Vial Yellow|r£ ", --3696
-"|cff9e9e9eMonster - Item, Potion Blue Offhand|r£ ", --3697
-"|cff9e9e9eMonster - Item, Potion Green Offhand|r£ ", --3698
-"|cff9e9e9eMonster - Item, Potion Red|r£ ", --3699
+"副手物品£ ", --3694
+"副手物品£ ", --3695
+"单手£ ", --3696
+"副手物品£ ", --3697
+"副手物品£ ", --3698
+"单手£ ", --3699
 "达萨利亚的奖状£任务物品£唯一£|cffffd100\"布拉贡·血拳大人亲启。\"|r", --3701
 "|cff9e9e9e熊胆|r£ ", --3702
 "南海镇烈酒£|cff00ff00使用： 普通的酒类饮料。|r", --3703
 "锈铁钥匙£任务物品£唯一", --3704
-"Deprecated Rabid Fang£ ", --3705
+"", --3705
 "附有魔法的羊皮纸£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"每一个字符都被魔法笼罩着。\"|r", --3706
 "纳伽兹的羊皮纸£唯一", --3707
 "赫尔库拉的魔棒£任务物品£唯一", --3708
@@ -2658,9 +2658,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00践踏战靴|r£ ", --3741
 "|cff1eff00劫掠之弓|r£ ", --3742
 "|cff1eff00哨兵圆盾|r£ ", --3743
-"血石坠饰£任务物品£唯一£|cffffd100\"NYI - THIS ITEM WILL SPAWN A QUEST\"|r", --3744
+"血石坠饰£任务物品£唯一", --3744
 "开启符文£|cff00ff00使用： 打开某个被封印的达拉然容器。|r", --3745
-"Deprecated Test Strongbox£ ", --3746
+"", --3746
 "|cff1eff00冥想腰带|r£ ", --3747
 "|cff0070dd猎豹衬肩|r£|cff00ff00装备： 法术强度提高2点。|r", --3748
 "|cff1eff00高阶药剂师披风|r£ ", --3749
@@ -2670,8 +2670,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00牧羊人束带|r£ ", --3753
 "|cff1eff00牧羊人手套|r£ ", --3754
 "|cff1eff00剖鱼刀|r£ ", --3755
-"|cff9e9e9eMonster - Item, Bottle - Black Offhand|r£ ", --3756
-"|cff9e9e9eMonster - Item, Bottle - Green Offhand|r£ ", --3757
+"副手物品£ ", --3756
+"副手物品£ ", --3757
 "|cff1eff00十字军腰带|r£ ", --3758
 "|cff1eff00隐居先知手套|r£ ", --3759
 "|cff1eff00幽暗城指环|r£ ", --3760
@@ -2682,13 +2682,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00掠夺者肩铠|r£ ", --3765
 "|cff9e9e9e狮鹫羽毛|r£ ", --3766
 "|cff9e9e9e优质羊皮纸|r£ ", --3767
-"Deprecated Anti-magic Potion£ ", --3768
+"", --3768
 "|cff9e9e9e破损的魔杖|r£ ", --3769
 "羊排£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --3770
 "野猪火腿£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --3771
 "魔法泉水£魔法制造的物品£|cff00ff00使用： 在27秒内恢复总计1344点法力值，喝水时必须保持坐姿。|r", --3772
-"Deprecated Murkwood Sap£|cff00ff00使用： 在30秒内恢复总计1992点法力值，喝水时必须保持坐姿。|r", --3773
-"|cff9e9e9eMonster - Dynamite, Unlit|r£ ", --3774
+"|cff00ff00使用： 在30秒内恢复总计1992点法力值，喝水时必须保持坐姿。|r£ ", --3773
+"单手£ ", --3774
 "减速药膏£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有50%的几率令敌人中毒，移动速度降低70%，持续12秒。|r", --3775
 "|cff9e9e9eCrippling Poison II|r£ ", --3776
 "|cff9e9e9e死亡根须|r£|cffffd100\"潜行者制毒所需的原料。\"|r", --3777
@@ -2779,9 +2779,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "成年大猩猩的肌腱£任务物品£唯一", --3862
 "丛林捕猎者的羽毛£任务物品", --3863
 "|cff1eff00黄水晶|r£ ", --3864
-"Test Offhand Weapon£ ", --3865
+"", --3865
 "|cff1eff00设计图：玉蛇刀|r£使用： 教你学会制作玉蛇刀。£|cff1eff00\n玉蛇刀|r£装备后绑定£单手£33 - 62伤害£速度 2.60£（每秒伤害18.3）£+4 力量£+4 敏捷£\n需要铁锭 (8), 强效助熔剂 (2), 重砂轮 (2), 翡翠 (2), 重皮 (3)", --3866
-"|cff1eff00设计图：碎铁金锤|r£使用： 教你学会制造碎铁金锤。£|cff1eff00\n碎铁金锤|r£装备后绑定£锤£51 - 78伤害£速度 2.80£（每秒伤害23.0）£+11 力量£+4 耐力£\n需要铁锭 (10), 金锭 (4), 次级月亮石 (2), 强效助熔剂 (2), 重皮 (2), 重砂轮 (2)", --3867
+"|cff1eff00设计图：碎铁金锤|r£使用： 教你学会制造碎铁金锤。£|cff1eff00\n碎铁金锤|r£装备后绑定£双手£51 - 78伤害£速度 2.80£（每秒伤害23.0）£+11 力量£+4 耐力£\n需要铁锭 (10), 金锭 (4), 次级月亮石 (2), 强效助熔剂 (2), 重皮 (2), 重砂轮 (2)", --3867
 "|cff1eff00设计图：霜虎之刃|r£使用： 教你学会制作霜虎之刃。£|cff1eff00\n霜虎之刃|r£装备后绑定£双手£78 - 118伤害£速度 3.40£（每秒伤害28.8）£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00击中时可能： 向目标射出一支寒冰箭，对其造成20到30点冰霜伤害并使其移动速度降低50%，持续5秒。|r£\n需要钢锭 (12), 翡翠 (2), 冰霜之油 (2)", --3868
 "|cff1eff00设计图：月牙斧|r£使用： 教你学会制作月牙斧。£|cff1eff00\n月牙斧|r£装备后绑定£双手£58 - 87伤害£速度 2.50£（每秒伤害29.0）£+11 力量£+10 耐力£\n需要钢锭 (10), 黄水晶 (2), 暗影之油 (2)", --3869
 "|cff1eff00设计图：绿铁护肩|r£使用： 教你学会制作绿铁护肩。£|cff1eff00\n绿铁护肩|r£装备后绑定£肩部£153点护甲£+4 力量£+7 耐力£\n需要铁锭 (7), 重砂轮, 绿色染料", --3870
@@ -2792,24 +2792,24 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd设计图：金鳞战靴|r£使用： 教你学会制作金鳞靴。£|cff1eff00\n金鳞战靴|r£装备后绑定£脚£159点护甲£+6 力量£+6 耐力£|cff00ff00装备： 使你的护甲穿透提高6点。|r£\n需要钢锭 (10), 金锭 (4), 重砂轮 (4)", --3875
 "巴尔瑟拉的牙齿£任务物品£唯一", --3876
 "泰希斯的爪子£任务物品£唯一", --3877
-"Deprecated Conjured Mana Jewel£魔法制造的物品£唯一", --3878
+"魔法制造的物品£唯一", --3878
 "辛达尔的爪子£任务物品£唯一", --3879
 "邦加拉什的徽记£任务物品£唯一", --3880
-"Deprecated Kurzen's Head£任务物品£唯一", --3881
+"任务物品£唯一", --3881
 "|cff9e9e9e秃鹫的羽毛|r£ ", --3882
-"Deprecated Thick Cloth Hat£ ", --3883
-"Deprecated Cured Leather Cap£ ", --3884
-"Deprecated Scalemail Cap£ ", --3885
-"Deprecated Padded Cloth Hat£ ", --3886
-"Deprecated Cuirboulli Cap£ ", --3887
-"Deprecated Polished Scale Cap£ ", --3888
+"头部£ ", --3883
+"头部£ ", --3884
+"头部£ ", --3885
+"头部£ ", --3886
+"头部£ ", --3887
+"头部£ ", --3888
 "赤色软帽£ ", --3889
 "钉甲帽£ ", --3890
 "加强链甲头盔£ ", --3891
 "镶边帽£ ", --3892
 "强化皮帽£ ", --3893
 "缀鳞锁甲头盔£ ", --3894
-"|cffff7f00TEST Legendary|r£ ", --3895
+"主手£ ", --3895
 "迪兹的眼睛£任务物品£唯一", --3897
 "图书馆手稿£拾取后绑定£唯一", --3898
 "|cff9e9e9e古拉巴什传奇，第三卷|r£|cffffd100\"海潮之石\"|r", --3899
@@ -2845,8 +2845,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "玛雷的钥匙£任务物品£唯一", --3930
 "|cff9e9e9e剧毒蜘蛛牙|r£ ", --3931
 "斯莫特的箱子£任务物品£唯一", --3932
-"|cff0070ddDeprecated Moon Glaive|r£ ", --3933
-"|cff0070ddDeprecated Warden Blade|r£ ", --3934
+"装备后绑定£ ", --3933
+"装备后绑定£ ", --3934
 "斯莫特的弯刀£ ", --3935
 "|cff9e9e9e钩边腰带|r£ ", --3936
 "|cff9e9e9e钩边长靴|r£ ", --3937
@@ -3065,13 +3065,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "秘典：奥术飞弹 III£|cff00ff00使用： Teaches Arcane Missiles (Rank 3).|r", --4153
 "秘典：减速术 II£|cff00ff00使用： Teaches Slow (Rank 2).|r", --4154
 "秘典：水元素 II£|cffffd100\"Teaches Water Elemental (Rank 2).\"|r", --4155
-"Deprecated Tome of Conjure Mana Jewel£|cff00ff00使用： Teaches Purify.|r", --4156
+"|cff00ff00使用： Teaches Purify.|r£ ", --4156
 "秘典：魔法抑制£|cff00ff00使用： Teaches Dampen Magic (Rank 1).|r", --4157
 "秘典：卡德加开锁术 III£|cff00ff00使用： Teaches Agitating Totem (Rank 4).|r", --4158
 "秘典：奥术飞弹£|cff00ff00使用： Teaches Arcane Missiles (Rank 1).|r", --4159
 "秘典：火球术 IV£|cff00ff00使用： Teaches Fireball (Rank 4).|r", --4161
 "秘典：闪现术 II£|cff00ff00使用： Teaches Blink (Rank 2).|r", --4162
-"Deprecated Libram: Seal of Fury£|cffffd100\"Teaches Seal of Fury (Rank 1).\"|r", --4163
+"|cffffd100\"Teaches Seal of Fury (Rank 1).\"|r£ ", --4163
 "圣契：圣光术 V£|cff00ff00使用： Teaches Holy Light (Rank 5).|r", --4164
 "圣契：圣光术 VI£|cff00ff00使用： Teaches Holy Light (Rank 6).|r", --4165
 "圣契：保护圣印£|cff00ff00使用： Teaches Seal of Protection (Rank 1).|r", --4166
@@ -3101,35 +3101,35 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Feathered Armor£ ", --4190
 "Unused Feathered Leggings£ ", --4191
 "Unused Feathered Gauntlets£ ", --4192
-"Deprecated Feathered Helm£ ", --4193
+"头部£ ", --4193
 "Feathered Bracers£ ", --4194
 "Feathered Boots£ ", --4195
 "|cff0070ddFeathered Mantle|r£ ", --4196
 "|cff0070dd绿宝石护肩|r£ ", --4197
-"魔典：灵魂通道£|cff00ff00使用： Teaches Health Funnel (Rank 1).|r", --4198
-"魔典：灵魂通道 II£|cff00ff00使用： Teaches Health Funnel (Rank 2).|r", --4199
-"魔典：献祭 III£|cff00ff00使用： Teaches Immolate (Rank 3).|r", --4200
-"魔典：基尔罗格之眼£|cff00ff00使用： Teaches Eye of Kilrogg.|r", --4201
-"魔典：恐惧术 II£|cff00ff00使用： Teaches Fear (Rank 2).|r", --4202
-"魔典：疫病术 II£|cff00ff00使用： Teaches Corruption (Rank 2).|r", --4203
-"魔典：灵魂通道 III£|cff00ff00使用： Teaches Health Funnel (Rank 3).|r", --4204
-"魔典：献祭 IV£|cff00ff00使用： Teaches Immolate (Rank 4).|r", --4205
-"魔典：萨格拉斯的诅咒 II£|cff00ff00使用： Teaches Curse of Agony (Rank 2).|r", --4206
-"魔典：阿克蒙德的诅咒£|cff00ff00使用： Teaches Curse of Archimonde.|r", --4207
-"魔典：心灵炸弹£|cffffd100\"Teaches Mind Bomb.\"|r", --4208
-"魔典：防护暗影结界£|cff00ff00使用： Teaches Shadow Ward.|r", --4209
-"魔典：制作次级血石£|cff00ff00使用： Teaches Create Lesser Healthstone.|r", --4210
-"魔典：疫病术£|cff00ff00使用： Teaches Corruption (Rank 1).|r", --4211
-"魔典：玛诺洛斯的诅咒 III£|cff00ff00使用： Teaches Curse of Weakness (Rank 3).|r", --4212
-"|cff1eff00魔典：厄运仪式|r£拾取后绑定£|cff00ff00使用： 教你学会释放厄运仪式。|r", --4213
-"魔典：生命吸取 III£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --4214
-"魔典：火焰之雨£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --4215
-"魔典：防护神圣结界£|cffffd100\"Teaches Holy Ward.\"|r", --4216
-"魔典：灵魂通道 IV£|cff00ff00使用： Teaches Health Funnel (Rank 4).|r", --4217
-"魔典：制作血石£|cff00ff00使用： Teaches Create Healthstone.|r", --4218
-"魔典：燃灵术 IV£|cffffd100\"Teaches Burning Spirit (Rank 4).\"|r", --4219
-"魔典：沸血术 III£|cffffd100\"Teaches Blood Boil (Rank 3).\"|r", --4220
-"魔典：侦测隐形£|cffffd100\"Teaches Detect Invisibility.\"|r", --4221
+"魔典：灵魂通道£职业：术士£|cff00ff00使用： Teaches Health Funnel (Rank 1).|r", --4198
+"魔典：灵魂通道 II£职业：术士£|cff00ff00使用： Teaches Health Funnel (Rank 2).|r", --4199
+"魔典：献祭 III£职业：术士£|cff00ff00使用： Teaches Immolate (Rank 3).|r", --4200
+"魔典：基尔罗格之眼£职业：术士£|cff00ff00使用： Teaches Eye of Kilrogg.|r", --4201
+"魔典：恐惧术 II£职业：术士£|cff00ff00使用： Teaches Fear (Rank 2).|r", --4202
+"魔典：疫病术 II£职业：术士£|cff00ff00使用： Teaches Corruption (Rank 2).|r", --4203
+"魔典：灵魂通道 III£职业：术士£|cff00ff00使用： Teaches Health Funnel (Rank 3).|r", --4204
+"魔典：献祭 IV£职业：术士£|cff00ff00使用： Teaches Immolate (Rank 4).|r", --4205
+"魔典：萨格拉斯的诅咒 II£职业：术士£|cff00ff00使用： Teaches Curse of Agony (Rank 2).|r", --4206
+"魔典：阿克蒙德的诅咒£职业：术士£|cff00ff00使用： Teaches Curse of Archimonde.|r", --4207
+"魔典：心灵炸弹£职业：术士£|cffffd100\"Teaches Mind Bomb.\"|r", --4208
+"魔典：防护暗影结界£职业：术士£|cff00ff00使用： Teaches Shadow Ward.|r", --4209
+"魔典：制作次级血石£职业：术士£|cff00ff00使用： Teaches Create Lesser Healthstone.|r", --4210
+"魔典：疫病术£职业：术士£|cff00ff00使用： Teaches Corruption (Rank 1).|r", --4211
+"魔典：玛诺洛斯的诅咒 III£职业：术士£|cff00ff00使用： Teaches Curse of Weakness (Rank 3).|r", --4212
+"|cff1eff00魔典：厄运仪式|r£拾取后绑定£职业：术士£|cff00ff00使用： 教你学会释放厄运仪式。|r", --4213
+"魔典：生命吸取 III£职业：术士£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --4214
+"魔典：火焰之雨£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --4215
+"魔典：防护神圣结界£职业：术士£|cffffd100\"Teaches Holy Ward.\"|r", --4216
+"魔典：灵魂通道 IV£职业：术士£|cff00ff00使用： Teaches Health Funnel (Rank 4).|r", --4217
+"魔典：制作血石£职业：术士£|cff00ff00使用： Teaches Create Healthstone.|r", --4218
+"魔典：燃灵术 IV£职业：术士£|cffffd100\"Teaches Burning Spirit (Rank 4).\"|r", --4219
+"魔典：沸血术 III£职业：术士£|cffffd100\"Teaches Blood Boil (Rank 3).\"|r", --4220
+"魔典：侦测隐形£职业：术士£|cffffd100\"Teaches Detect Invisibility.\"|r", --4221
 "书卷：废除魔法£|cffffd100\"教你学会施放驱除魔法（等级 1）。\"|r", --4223
 "书卷：纠缠根须 III£|cff00ff00使用： Teaches Entangling Roots (Rank 3).|r", --4225
 "书卷：自然之怒 VI£|cff00ff00使用： 教你学会施放愤怒（等级 6）。|r", --4226
@@ -3170,29 +3170,29 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "普通盾牌£ ", --4263
 "|cff1eff00野人腰带|r£|cff00ff00装备： 攻击强度提高25点。|r£|cff00ff00使用： 恢复30点怒气值和能量值。 （20分钟冷却）|r", --4264
 "重型护甲片£|cff00ff00使用： 永久性地为一件穿戴在胸部、腿部、手部或脚上的装备提供额外的24点护甲值。只能对15级以上的物品使用。 （1秒冷却）|r", --4265
-"圣典：心灵之火 II£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --4266
-"圣典：暗言术：拙£职业：牧师£|cffffd100\"Teaches Shadow Word: Fumble (Rank 1).\"|r", --4267
-"圣典：治疗术 II£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 2).|r", --4268
-"圣典：治疗祷言£职业：牧师£|cff00ff00使用： 教你学会施放治疗祷言（等级 1）。|r", --4269
-"圣典：治疗术 III£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --4270
-"圣典：圣光击 V£职业：牧师£|cff00ff00使用： Teaches Holy Smite (Rank 5).|r", --4271
-"圣典：防护神圣£职业：牧师£|cffffd100\"Teaches Holy Protection.\"|r", --4272
-"圣典：治疗术£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 1).|r", --4273
-"圣典：圣遁术£职业：牧师£|cffffd100\"Teaches Divine Escape (Rank 1).\"|r", --4274
-"圣典：心灵腐蚀£职业：牧师£|cff00ff00使用： Teaches Mind Rot.|r", --4275
-"圣典：暗言术：拙 II£职业：牧师£|cffffd100\"Teaches Shadow Word: Fumble (Rank 2).\"|r", --4276
-"圣典：暗言术：惑 II£职业：牧师£|cffffd100\"Teaches Shadow Word: Befuddle (Rank 2).\"|r", --4277
+"圣典：心灵之火 II£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --4266
+"圣典：暗言术：拙£|cffffd100\"Teaches Shadow Word: Fumble (Rank 1).\"|r", --4267
+"圣典：治疗术 II£|cff00ff00使用： Teaches Heal (Rank 2).|r", --4268
+"圣典：治疗祷言£|cff00ff00使用： 教你学会施放治疗祷言（等级 1）。|r", --4269
+"圣典：治疗术 III£|cff00ff00使用： Teaches Heal (Rank 3).|r", --4270
+"圣典：圣光击 V£|cff00ff00使用： Teaches Holy Smite (Rank 5).|r", --4271
+"圣典：防护神圣£|cffffd100\"Teaches Holy Protection.\"|r", --4272
+"圣典：治疗术£|cff00ff00使用： Teaches Heal (Rank 1).|r", --4273
+"圣典：圣遁术£|cffffd100\"Teaches Divine Escape (Rank 1).\"|r", --4274
+"圣典：心灵腐蚀£|cff00ff00使用： Teaches Mind Rot.|r", --4275
+"圣典：暗言术：拙 II£|cffffd100\"Teaches Shadow Word: Fumble (Rank 2).\"|r", --4276
+"圣典：暗言术：惑 II£|cffffd100\"Teaches Shadow Word: Befuddle (Rank 2).\"|r", --4277
 "次级血石矿£ ", --4278
-"圣典：暗言术：痛 V£职业：牧师£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 5).|r", --4279
-"圣典：圣言术：盾 IV£职业：牧师£|cff00ff00使用： Teaches Holy Word: Shield (Rank 4).|r", --4280
-"圣典：防护暗影£职业：牧师£|cff00ff00使用： Teaches Shadow Protection.|r", --4281
-"圣典：驱散魔法 II£职业：牧师£|cff00ff00使用： Teaches Dispel Magic (Rank 2).|r", --4282
-"圣典：催眠术 III£职业：牧师£|cffffd100\"Teaches Sleep (Rank 3).\"|r", --4283
-"圣典：圣光击 VI£职业：牧师£|cff00ff00使用： Teaches Holy Smite (Rank 6).|r", --4284
-"圣典：圣言术：韧 IV£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --4285
-"圣典：治疗祷言 II£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --4286
-"圣典：消病术 II£职业：牧师£|cff00ff00使用： Teaches Nullify Disease (Rank 2).|r", --4287
-"圣典：解除诅咒 II£职业：牧师£|cffffd100\"Teaches Remove Curse (Rank 2).\"|r", --4288
+"圣典：暗言术：痛 V£|cff00ff00使用： Teaches Shadow Word: Pain (Rank 5).|r", --4279
+"圣典：圣言术：盾 IV£|cff00ff00使用： Teaches Holy Word: Shield (Rank 4).|r", --4280
+"圣典：防护暗影£|cff00ff00使用： Teaches Shadow Protection.|r", --4281
+"圣典：驱散魔法 II£|cff00ff00使用： Teaches Dispel Magic (Rank 2).|r", --4282
+"圣典：催眠术 III£|cffffd100\"Teaches Sleep (Rank 3).\"|r", --4283
+"圣典：圣光击 VI£|cff00ff00使用： Teaches Holy Smite (Rank 6).|r", --4284
+"圣典：圣言术：韧 IV£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --4285
+"圣典：治疗祷言 II£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --4286
+"圣典：消病术 II£|cff00ff00使用： Teaches Nullify Disease (Rank 2).|r", --4287
+"圣典：解除诅咒 II£|cffffd100\"Teaches Remove Curse (Rank 2).\"|r", --4288
 "盐£ ", --4289
 "|cff1eff00脏碗|r£ ", --4290
 "丝线£ ", --4291
@@ -3322,18 +3322,18 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd结构图：工匠眼镜|r£使用： 教你学会制作工匠眼镜。£|cff1eff00\n工匠眼镜|r£装备后绑定£头部£布甲£40点护甲£+15 智力£\n需要重皮 (6), 黄水晶 (2)", --4415
 "|cff1eff00结构图：地精暗雷|r£使用： 教你学会制作地精暗雷。£\n地精暗雷£|cff00ff00使用： 在地面上埋设一枚地雷，如果任何有敌意的生物走近地雷，它就会自动爆炸，对其造成394到506点火焰伤害。地雷的持续时间是1分钟。|r£\n需要烈性火药 (3), 铁锭 (2), 发条式同步协调陀螺仪", --4416
 "|cff1eff00结构图：大型爆盐炸弹|r£使用： 教你学会制作大型爆盐炸弹。£\n大型爆盐炸弹£|cff00ff00使用： 可以炸开复杂的门和锁。 （1秒冷却）|r£\n需要实心炸药 (2), 重皮 (2), 清凉的泉水", --4417
-"Deprecated Creeper Cakes£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r", --4418
+"|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r£ ", --4418
 "智力卷轴 III£|cff00ff00使用： 使目标的智力提高12点，持续30分钟。 （1秒冷却）|r", --4419
 "保护卷轴 III£|cff00ff00使用： 使目标的护甲提高150点，持续30分钟。 （1秒冷却）|r", --4421
 "耐力卷轴 III£|cff00ff00使用： 使目标的耐力提高16点，持续30分钟。 （1秒冷却）|r", --4422
 "精神卷轴 III£|cff00ff00使用： 使目标的精神提高13点，持续30分钟。 （1秒冷却）|r", --4424
 "敏捷卷轴 III£|cff00ff00使用： 使目标的敏捷提高8点，持续30分钟。 （1秒冷却）|r", --4425
 "力量卷轴 III£|cff00ff00使用： 使目标的力量提高8点，持续30分钟。 （1秒冷却）|r", --4426
-"Deprecated Scroll of Spirit Armor V£ ", --4427
+"", --4427
 "|cff9e9e9e蜘蛛的触须|r£ ", --4428
 "深怒的命令£任务物品£唯一", --4429
 "|cff1eff00虚空护符|r£ ", --4430
-"Deprecated Shard of Myzrael£任务物品", --4431
+"任务物品£ ", --4431
 "苏利·巴鲁的信£任务物品£唯一£|cffffd100\"我亲爱的萨拉...\"|r", --4432
 "浸水的信封£拾取后绑定£唯一£该物品将触发一个任务", --4433
 "|cff1eff00稻草人的长裤|r£ ", --4434
@@ -3344,7 +3344,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00粗木棒|r£ ", --4439
 "激流堡符印£任务物品£唯一", --4440
 "马克里尔的月光酒£任务物品£唯一", --4441
-"|cff9e9e9eDeprecated Dark Mantle|r£ ", --4442
+"装备后绑定£ ", --4442
 "|cff1eff00恐怖肩铠|r£ ", --4443
 "|cff1eff00黑色甲壳盾|r£|cff00ff00使用： 尝试驱散目标身上的1个中毒效果，并每2秒驱散1个中毒效果，持续8秒。 （5分钟冷却）|r", --4444
 "|cff1eff00切肉者|r£ ", --4445
@@ -3353,8 +3353,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00纳拉克西斯的外壳|r£ ", --4448
 "|cff1eff00纳拉克西斯的牙齿|r£ ", --4449
 "符印碎片£任务物品", --4450
-"Deprecated Stasis Totem£ ", --4451
-"Deprecated Resonant Gem£任务物品£唯一", --4452
+"", --4451
+"任务物品£唯一", --4452
 "索拉丁符印£任务物品£唯一", --4453
 "|cff0070dd乌尔图斯的爪子|r£ ", --4454
 "|cff1eff00迅猛龙皮背心|r£|cff00ff00装备： 使你的精准等级提高7点。|r", --4455
@@ -3377,7 +3377,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "密斯莱尔卷轴£任务物品£唯一£|cff00ff00使用： 从密斯莱尔碎片中召唤密斯莱尔。|r", --4472
 "怪异镣铐£任务物品£唯一", --4473
 "|cff1eff00黑木之弓|r£ ", --4474
-"Deprecated The Southern Kingdoms£ ", --4475
+"", --4475
 "|cff1eff00驭兽长袍|r£|cff00ff00装备： 法术强度提高4点。|r", --4476
 "|cff1eff00灰烬圆盾|r£ ", --4477
 "|cff1eff00彩鳞护腿|r£ ", --4478
@@ -3388,7 +3388,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "烈焰钥匙£任务物品£唯一", --4483
 "海浪钥匙£任务物品£唯一", --4484
 "雷霆钥匙£任务物品£唯一", --4485
-"Deprecated Jorell's Head£唯一", --4486
+"唯一£ ", --4486
 "处女号的航海图£任务物品£唯一", --4487
 "银松之魂号的航海图£任务物品£唯一", --4488
 "处女号的航海日志£任务物品£唯一", --4489
@@ -3403,7 +3403,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "棕色小皮包£8格容器", --4498
 "棕色大袋£12格容器", --4499
 "|cff1eff00旅行者的背包|r£16格容器", --4500
-"Deprecated Brown Wayfarer's Knapsack£16格容器", --4501
+"16格容器£ ", --4501
 "精灵宝石样本£任务物品£唯一", --4502
 "枯木巨魔的獠牙£任务物品", --4503
 "|cff1eff00矮人卫兵披风|r£ ", --4504
@@ -3425,7 +3425,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "烧焦的卷轴碎片£任务物品£唯一", --4520
 "奥特兰克花岗岩£任务物品", --4521
 "枯木巨魔的医药包£任务物品", --4522
-"Deprecated Shadow Hunter Knife£任务物品", --4523
+"任务物品£ ", --4523
 "巴鲁的纪念碑£任务物品£唯一", --4524
 "特雷莱恩的符咒魔杖£任务物品", --4525
 "迅猛龙利爪护符£任务物品£唯一", --4526
@@ -3473,12 +3473,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00硬铁锤|r£ ", --4569
 "|cff1eff00桦木槌|r£ ", --4570
 "|cff1eff00战斗小刀|r£ ", --4571
-"Deprecated Pat's Test Strongbox£ ", --4573
+"", --4573
 "|cff1eff00医疗法杖|r£ ", --4575
 "|cff1eff00轻型弓|r£ ", --4576
 "|cff1eff00紧凑火枪|r£ ", --4577
-"Deprecated Long Panther Tail£ ", --4578
-"Deprecated Spotted Panther Skin£ ", --4579
+"", --4578
+"", --4579
 "|cff9e9e9e虎牙|r£ ", --4580
 "|cff9e9e9e小块的优质毛皮|r£ ", --4581
 "柔软的狼尾£ ", --4582
@@ -3551,41 +3551,41 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "神秘的化石£任务物品£唯一", --4654
 "大块蚌肉£ ", --4655
 "小南瓜£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --4656
-"Deprecated Warrior's Pauldrons£ ", --4657
+"肩部£ ", --4657
 "战士披风£ ", --4658
 "战士束带£ ", --4659
 "|cff1eff00漫步靴|r£|cff00ff00装备： 爆击等级提高2点。|r", --4660
 "|cff1eff00明亮衬肩|r£ ", --4661
 "旅者披风£ ", --4662
 "旅者腰带£ ", --4663
-"Deprecated Burnt Leather Shoulderpads£ ", --4664
+"肩部£ ", --4664
 "褐色皮披风£ ", --4665
 "褐色皮带£ ", --4666
-"Deprecated Battle Chain Pauldrons£ ", --4667
+"肩部£ ", --4667
 "军用链甲披风£ ", --4668
 "军用链甲束带£ ", --4669
-"Deprecated Ancestral Mantle£ ", --4670
+"肩部£ ", --4670
 "先祖披风£ ", --4671
 "先祖腰带£ ", --4672
-"Deprecated Tribal Mantle£ ", --4673
+"肩部£ ", --4673
 "部落披风£ ", --4674
 "部落腰带£ ", --4675
 "|cff1eff00骷髅护手|r£ ", --4676
 "精兵披风£ ", --4677
 "精兵束带£ ", --4678
-"|cff9e9e9eDeprecated Brackwater Pauldrons|r£ ", --4679
+"装备后绑定£ ", --4679
 "水草披风£ ", --4680
 "水草腰带£ ", --4681
-"|cff9e9e9eDeprecated Magister's Mantle|r£ ", --4682
+"装备后绑定£ ", --4682
 "法师披风£ ", --4683
 "法师腰带£ ", --4684
-"|cff9e9e9eDeprecated Runic Cloth Shoulderpads|r£ ", --4685
+"装备后绑定£ ", --4685
 "蛮族布质披风£ ", --4686
 "蛮族布质腰带£ ", --4687
-"|cff9e9e9eDeprecated Hunting Spaulders|r£ ", --4688
+"装备后绑定£ ", --4688
 "狩猎披风£ ", --4689
 "狩猎腰带£ ", --4690
-"|cff9e9e9eDeprecated Ceremonial Leather Mantle|r£ ", --4691
+"装备后绑定£ ", --4691
 "典礼皮披风£ ", --4692
 "典礼皮带£ ", --4693
 "抛光链甲肩甲£ ", --4694
@@ -3598,7 +3598,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00铭文皮披风|r£ ", --4701
 "勘察员的锄头£任务物品£|cff00ff00使用： 在某座锻炉附近右键点击此物品以破坏它。|r", --4702
 "损坏的工具£任务物品", --4703
-"OLDCeremonial Club£|cff00ff00使用： 在某座锻炉附近右键点击此物品以破坏它。 （2秒冷却）|r", --4704
+"拾取后绑定£|cff00ff00使用： 在某座锻炉附近右键点击此物品以破坏它。 （2秒冷却）|r", --4704
 "|cff1eff00亮鳞肩铠|r£ ", --4705
 "|cff1eff00亮鳞披风|r£ ", --4706
 "|cff1eff00亮鳞束带|r£ ", --4707
@@ -3624,7 +3624,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00主将束带|r£ ", --4727
 "Twain's Shoulder£ ", --4728
 "|cff1eff00极光衬肩|r£ ", --4729
-"|cff9e9e9eDeprecated Prospector's Pick|r£ ", --4730
+"主手£ ", --4730
 "|cff1eff00秘文肩甲|r£ ", --4731
 "|cff1eff00秘文披风|r£ ", --4732
 "|cff1eff00黑炉肩铠|r£ ", --4733
@@ -3644,21 +3644,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "雷牛水井之水£任务物品£唯一", --4747
 "红角水井之水£任务物品£唯一", --4748
 "蛮鬃水井之水£任务物品£唯一", --4749
-"OLDWinterhoof Cleansing Totem£|cff00ff00使用： 祈求冰蹄净化之灵的帮助。|r", --4750
+"任务物品£|cff00ff00使用： 祈求冰蹄净化之灵的帮助。|r", --4750
 "风怒鹰身人的爪子£任务物品", --4751
 "碧蓝色的羽毛£任务物品", --4752
 "古铜色的羽毛£任务物品", --4753
-"Deprecated Empty Skin£任务物品£唯一£|cff00ff00使用： 在幽影谷的月亮井中使用右键点击这只水晶瓶以装满井水。|r", --4754
+"任务物品£唯一£|cff00ff00使用： 在幽影谷的月亮井中使用右键点击这只水晶瓶以装满井水。|r", --4754
 "水罐£任务物品£唯一", --4755
 "Ruined Cat Pelt£ ", --4756
 "|cff9e9e9e破损的蛋壳|r£ ", --4757
 "草原狼的爪子£任务物品", --4758
 "平原陆行鸟的爪子£任务物品", --4759
-"OLDThunderhorn Cleansing Totem£|cff00ff00使用： 祈求雷角净化之灵的帮助。|r£|cff00ff00装备： 祈求雷角净化之灵的帮助。|r", --4760
-"|cff9e9e9eDeprecated Pearled Chain Pants|r£ ", --4761
-"OLDWildmane Cleansing Totem£|cff00ff00使用： 祈求蛮鬃净化之灵的帮助。|r", --4762
+"任务物品£|cff00ff00使用： 祈求雷角净化之灵的帮助。|r£|cff00ff00装备： 祈求雷角净化之灵的帮助。|r", --4760
+"装备后绑定£ ", --4761
+"任务物品£|cff00ff00使用： 祈求蛮鬃净化之灵的帮助。|r", --4762
 "|cff1eff00黑木弯弓|r£ ", --4763
-"|cff9e9e9eDeprecated Avenger Shoulders|r£ ", --4764
+"装备后绑定£ ", --4764
 "|cff1eff00彩饰阔剑|r£ ", --4765
 "|cff1eff00野兽之刃|r£ ", --4766
 "|cff1eff00铜布手套|r£|cff00ff00装备： 法术强度提高4点。|r", --4767
@@ -3667,8 +3667,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "刺背腰带£任务物品", --4770
 "|cff1eff00收割披风|r£ ", --4771
 "保暖披风£ ", --4772
-"|cff9e9e9eDeprecated Blessed Bracers|r£ ", --4773
-"|cff9e9e9eDeprecated Heavy Bracers|r£ ", --4774
+"装备后绑定£ ", --4773
+"装备后绑定£ ", --4774
 "|cff9e9e9e破损的鸟喙|r£ ", --4775
 "|cff9e9e9e皱褶的羽毛|r£ ", --4776
 "|cff1eff00铁木槌|r£ ", --4777
@@ -3705,11 +3705,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "水井石£任务物品", --4808
 "琥珀颗粒£任务物品", --4809
 "|cff1eff00石板护肩|r£ ", --4810
-"|cff9e9e9eDeprecated Studded Shoulders|r£ ", --4811
-"|cff9e9e9eDeprecated Crimson Shoulders|r£ ", --4812
+"装备后绑定£ ", --4811
+"装备后绑定£ ", --4812
 "|cff9e9e9e小皮圈|r£ ", --4813
 "|cff9e9e9e雪白的牙齿|r£ ", --4814
-"|cff9e9e9eDeprecated Heavy Brass Shoulder|r£ ", --4815
+"装备后绑定£ ", --4815
 "|cff1eff00军团士兵的护腿|r£ ", --4816
 "|cff1eff00被赐福的双刃刀|r£ ", --4817
 "|cff1eff00刽子手之剑|r£ ", --4818
@@ -3733,7 +3733,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00火印宝珠|r£ ", --4836
 "|cff1eff00意志的力量|r£ ", --4837
 "|cff1eff00能量宝珠|r£ ", --4838
-"Deprecated Demon Scarred Pelt£唯一", --4839
+"唯一£ ", --4839
 "长刺刀£ ", --4840
 "阿兰其亚的角£任务物品£唯一", --4841
 "紫水晶符石£拾取后绑定£唯一", --4843
@@ -3746,12 +3746,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "刺背野猪人的进攻计划£任务物品£唯一", --4850
 "沾满泥土的地图£拾取后绑定£唯一", --4851
 "闪光雷£|cff00ff00使用： 使半径5码范围内的所有野兽逃跑，持续10秒。对60级以上的目标可能失效。|r", --4852
-"TEST QUEST HELM£ ", --4853
+"头部£ ", --4853
 "恶魔之伤£ ", --4854
-"|cff9e9e9eUnused Cloth Shoulder A01 Gray|r£ ", --4855
-"|cff9e9e9eUnused Cloth Shoulder A02 Yellow|r£ ", --4856
-"|cff9e9e9eUnused Cloth Shoulder B01 Silver|r£ ", --4857
-"|cff9e9e9eUnused Cloth Shoulder B02 Black|r£ ", --4858
+"拾取后绑定£ ", --4855
+"拾取后绑定£ ", --4856
+"拾取后绑定£ ", --4857
+"拾取后绑定£ ", --4858
 "火刃奖章£任务物品£唯一", --4859
 "|cff9e9e9e鲜亮的狂鱼鳞片|r£ ", --4860
 "|cff1eff00羽毛外套|r£ ", --4861
@@ -3761,7 +3761,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e破烂的皮毛|r£ ", --4865
 "扎拉赞恩的徽记£任务物品£唯一", --4866
 "|cff9e9e9e折断的蝎腿|r£ ", --4867
-"Deprecated Scorched Heart£任务物品", --4868
+"任务物品£ ", --4868
 "费索的爪子£任务物品£唯一", --4869
 "帆布脚料£任务物品", --4870
 "灼热项圈£任务物品", --4871
@@ -3777,12 +3777,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "旧信封£拾取后绑定£唯一£该物品将触发一个任务", --4881
 "本尼迪克的钥匙£唯一", --4882
 "普罗德摩尔将军的命令£任务物品£唯一", --4883
-"Deprecated Small Scorpid Carapace£任务物品", --4884
-"Deprecated Large Scorpid Carapace£任务物品", --4885
+"任务物品£ ", --4884
+"任务物品£ ", --4885
 "毒尾蝎的毒囊£任务物品", --4886
 "龙虾人的眼球£任务物品", --4887
 "蟹胶£任务物品", --4888
-"Deprecated Mottled Boar Steaks£任务物品", --4889
+"任务物品£ ", --4889
 "鞭尾龙的蛋£任务物品", --4890
 "克鲁恩的护身符£任务物品", --4891
 "杜隆塔尔虎皮£任务物品", --4892
@@ -3792,10 +3792,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "科多兽的肝脏£任务物品", --4896
 "雷鹰的唾液腺£任务物品", --4897
 "闪电腺£任务物品", --4898
-"|cff9e9e9eTest Crossbow|r£ ", --4899
-"|cff9e9e9eTest Spear|r£ ", --4900
-"|cff9e9e9eTest Polearm|r£ ", --4901
-"Deprecated Apprentice Wand£ ", --4902
+"装备后绑定£ ", --4899
+"装备后绑定£ ", --4900
+"装备后绑定£ ", --4901
+"魔杖£ ", --4902
 "燃影之眼£拾取后绑定£唯一£该物品将触发一个任务", --4903
 "毒尾蝎解毒剂£任务物品", --4904
 "萨科斯的爪子£任务物品£唯一", --4905
@@ -3805,7 +3805,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00科多兽皮护腿|r£ ", --4909
 "彩色链甲手套£ ", --4910
 "厚树皮圆盾£ ", --4911
-"|cff9e9e9eTest Wand JChow|r£ ", --4912
+"装备后绑定£ ", --4912
 "彩色链甲腰带£ ", --4913
 "磨损的皮手套£ ", --4914
 "软毛靴£ ", --4915
@@ -3820,14 +3820,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "粗糙的木棒£ ", --4924
 "粗糙的手刀£ ", --4925
 "老陈的空酒桶£拾取后绑定£唯一£该物品将触发一个任务", --4926
-"Deprecated Keg of Chen's Stormstout£任务物品", --4927
+"任务物品£ ", --4927
 "沙漠腕甲£ ", --4928
 "轻便蝎壳护甲£ ", --4929
 "手工皮包£拾取后绑定£唯一£6格容器", --4930
 "桃木短弓£ ", --4931
 "切翼之刃£ ", --4932
 "老战士披风£ ", --4933
-"Deprecated Heavy Cord Shoulderpads£ ", --4934
+"肩部£ ", --4934
 "金属束带£ ", --4935
 "踏泥靴£ ", --4936
 "带电圆盾£ ", --4937
@@ -3836,20 +3836,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "迷雾手套£ ", --4940
 "强力胶水£拾取后绑定£|cff00ff00使用： 使目标无法移动，持续10秒。|r", --4941
 "虎皮靴£ ", --4942
-"Torka's Egg Cracker [UNUSED]£ ", --4943
+"拾取后绑定£ ", --4943
 "手工披风£ ", --4944
 "微光徽记£拾取后绑定£唯一£|cff00ff00使用： 吸取敌人75到125点生命值，并将其转移给施法者。|r", --4945
 "轻便长靴£ ", --4946
 "|cff1eff00锯齿匕首|r£ ", --4947
 "|cff1eff00刺钉之锤|r£ ", --4948
 "|cff1eff00兽人之斧|r£ ", --4949
-"Deprecated Orc Protector£ ", --4950
+"拾取后绑定£ ", --4950
 "尖叫者的腰带£ ", --4951
 "风暴烈酒£拾取后绑定£|cff00ff00使用： 一种烈性酒，可以使你的力量提高4点，但智力降低5点，持续5分钟。|r", --4952
 "穴居怪啤酒£拾取后绑定£|cff00ff00使用： 使你的生命值提高23到37点，精神降低4点，持续5分钟。|r", --4953
 "游牧民腰带£ ", --4954
-"Deprecated Nomadic Shoulderpads£ ", --4955
-"Test Totem£|cff00ff00使用： 祈求冰蹄净化之灵的帮助。|r", --4956
+"肩部£ ", --4955
+"任务物品£|cff00ff00使用： 祈求冰蹄净化之灵的帮助。|r", --4956
 "旧钱包£拾取后绑定£唯一£6格容器", --4957
 "日炎披风£ ", --4958
 "破损的投掷轻斧£ ", --4959
@@ -3878,19 +3878,19 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e被撕裂的勘察员腰带|r£ ", --4982
 "|cff1eff00碎石之锤|r£|cff00ff00装备： 攻击强度提高34点。|r", --4983
 "|cff1eff00末日徽记|r£|cff00ff00使用： 使你的奔跑速度提高60%，持续10秒，但是在10秒内造成相当于你生命值上限60%的伤害，并吸取你法力值上限60%的法力值。 （5分钟冷却）|r", --4984
-"|cff9e9e9eTest Proc Wand|r£ ", --4985
+"装备后绑定£ ", --4985
 "有瑕疵的能量石£任务物品£唯一£持续时间：30分钟£|cff00ff00使用： 放置在火焰祭坛上|r", --4986
 "|cff1eff00矮人队长之剑|r£ ", --4987
 "|cff1eff00炙热黑耀石指环|r£ ", --4988
 "|cff1eff00龙法师长袍|r£ ", --4989
 "|cff1eff00焦痕护腕|r£ ", --4990
-"|cff9e9e9eMonster - Sword2H, Broadsword|r£ ", --4991
+"双手£ ", --4991
 "募兵信£任务物品£唯一£|cffffd100\"一封未签署的募兵信。\"|r", --4992
-"|cff9e9e9eMonster - Item, Skull|r£ ", --4993
-"|cff9e9e9eMonster - Item, Gizmo|r£ ", --4994
+"单手£ ", --4993
+"主手£ ", --4994
 "签过字的募兵信£任务物品£唯一", --4995
-"|cff9e9e9eTest Item 1|r£ ", --4996
-"Deprecated Recipe: Kodo Skin Bag£ ", --4997
+"装备后绑定£ ", --4996
+"", --4997
 "|cff1eff00鲜血戒指|r£ ", --4998
 "|cff1eff00阿祖拉的意志|r£ ", --4999
 "|cff1eff00珊瑚指环|r£ ", --5000
@@ -3907,8 +3907,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00苍穹之戒|r£ ", --5011
 "菌类孢子£任务物品", --5012
 "仙人掌球£|cff00ff00使用： 对半径10码范围内的所有敌人造成47到53点自然伤害。|r", --5013
-"Wrapping Paper (PT)£|cff00ff00使用： 在节日包装纸包上一件东西。|r", --5014
-"Wrapped Item (PT)£ ", --5015
+"|cff00ff00使用： 在节日包装纸包上一件东西。|r£ ", --5014
+"", --5015
 "|cff1eff00工匠长裤|r£|cff00ff00装备： 法术强度提高11点。|r", --5016
 "硝化甘油£任务物品", --5017
 "木浆£任务物品", --5018
@@ -3926,7 +3926,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "半人马护腕£任务物品", --5030
 "众月之泪£任务物品£唯一", --5038
 "暗影猎手的小刀£ ", --5040
-"TEST Translation: Taurahe£ ", --5041
+"", --5041
 "红色条纹包装纸£|cff00ff00使用： 在节日包装纸包上一件东西。|r", --5042
 "红色条纹礼品盒£ ", --5043
 "蓝色条纹礼品盒£ ", --5044
@@ -3936,7 +3936,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "打火钥匙£任务物品£唯一", --5050
 "掘地鼠£ ", --5051
 "昏迷的掘地鼠£唯一£|cff00ff00使用： 掘地鼠还在挣扎，你为什么不放了它呢？ （1秒冷却）|r", --5052
-"|cff9e9e9eDeprecated Plain Brown Robe|r£ ", --5053
+"胸部£ ", --5053
 "主动式负载平衡器£任务物品£唯一", --5054
 "完整的迅猛龙角£任务物品", --5055
 "根须样本£任务物品", --5056
@@ -3972,8 +3972,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "陆行鸟的喙£任务物品", --5087
 "控制台操作手册£拾取后绑定£唯一£|cffffd100\"风险投资公司文档534x9\"|r", --5088
 "控制台钥匙£任务物品£唯一", --5089
-"Deprecated Torn Shirt£ ", --5090
-"test Eric Shirt£|cffffd100\"Test\"|r", --5091
+"衬衣£ ", --5090
+"衬衣£|cffffd100\"Test\"|r", --5091
 "烧焦的钢鬃魔杖£ ", --5092
 "钢鬃背刺匕首£ ", --5093
 "钢鬃大盾£ ", --5094
@@ -3988,7 +3988,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "瓦希塔帕恩的羽毛£拾取后绑定£唯一£该物品将触发一个任务", --5103
 "依沙瓦克的心脏£任务物品£唯一", --5104
 "Explosive Shell£ ", --5105
-"|cff9e9e9eDeprecated Red Mask|r£ ", --5106
+"头部£ ", --5106
 "水手衬衣£ ", --5107
 "黑铁皮衣£ ", --5108
 "碎石怪破布£ ", --5109
@@ -4047,7 +4047,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "林精的种子£任务物品", --5168
 "林精的新芽£任务物品", --5169
 "青苔之瘤£任务物品", --5170
-"Deprecated Neeru's Power Stone£任务物品£唯一", --5171
+"任务物品£唯一", --5171
 "死亡胶囊£ ", --5172
 "|cff9e9e9e死亡草|r£|cffffd100\"携带它的时候必须非常非常小心。\"|r", --5173
 "尼尔鲁的便笺£拾取后绑定£唯一", --5174
@@ -4098,14 +4098,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "刻字的树皮£任务物品£唯一", --5219
 "瘤背熊怪的牙齿£任务物品", --5220
 "迈雷纳斯的徽记£任务物品£唯一", --5221
-"Deprecated Mana Gem£ ", --5222
+"魔法制造的物品£ ", --5222
 "空法力宝石£魔法制造的物品£唯一", --5223
-"Deprecated Conjured Mana Jewel£ ", --5226
+"魔法制造的物品£ ", --5226
 "空法力珠宝£魔法制造的物品£唯一", --5227
-"Deprecated Empty Bloodstone£魔法制造的物品£唯一", --5228
+"魔法制造的物品£唯一", --5228
 "空的强效血石£魔法制造的物品£唯一", --5229
-"Deprecated Bloodstone£|cff00ff00使用： 立即恢复|r|cff7f7f7f500|r|cff00ff00点生命值。|r", --5230
-"Deprecated Greater Bloodstone£|cff00ff00使用： 立即恢复|r|cff7f7f7f800|r|cff00ff00点生命值。|r", --5231
+"魔法制造的物品£|cff00ff00使用： 立即恢复|r|cff7f7f7f500|r|cff00ff00点生命值。|r", --5230
+"魔法制造的物品£|cff00ff00使用： 立即恢复|r|cff7f7f7f800|r|cff00ff00点生命值。|r", --5231
 "初级灵魂石£魔法制造的物品£拾取后绑定£唯一£|cff00ff00使用： 保存友方目标的灵魂。如果目标在灵魂被保存期间死去，则他可以立刻复活，并恢复400点生命值和700点法力值。 （15分钟冷却）|r", --5232
 "雷鲁之石£任务物品", --5233
 "弗拉冈特的化石£任务物品", --5234
@@ -4132,11 +4132,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00野猪人轻斧|r£ ", --5255
 "|cff1eff00考沃克之锤|r£ ", --5256
 "|cff0070dd黑边斗篷|r£ ", --5257
-"|cff9e9e9eMonster - Bow, Black|r£ ", --5258
-"|cff9e9e9eMonster - Bow, Red|r£ ", --5259
-"|cff9e9e9eMonster - Bow, Brown|r£ ", --5260
-"|cff9e9e9eMonster - Bow, Gray|r£ ", --5261
-"|cff9e9e9eMonster - Bow, Dark Brown|r£ ", --5262
+"远程£ ", --5258
+"远程£ ", --5259
+"远程£ ", --5260
+"远程£ ", --5261
+"远程£ ", --5262
 "|cff9e9e9e棉绒|r£ ", --5263
 "免费啤酒券£唯一", --5264
 "掺水的啤酒£|cff00ff00使用： 这种啤酒可以让你的精神提高1点，但耐力降低1点，持续10分钟。|r", --5265
@@ -4150,38 +4150,38 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "黑暗深渊遗物£任务物品", --5273
 "|cff1eff00玫瑰衬肩|r£ ", --5274
 "|cff1eff00束带|r£ ", --5275
-"|cff9e9e9eMonster - Staff, 3 Piece Taped Staff|r£ ", --5276
-"|cff9e9e9eMonster - Staff, Metal /w Spike Crystal|r£ ", --5277
-"|cff9e9e9eMonster - Dagger, Bowie Knife|r£ ", --5278
+"双手£ ", --5276
+"双手£ ", --5277
+"单手£ ", --5278
 "|cff1eff00鹰身人剥皮刀|r£ ", --5279
-"|cff9e9e9eMonster - Dagger, Gold Blade|r£ ", --5280
-"|cff9e9e9eMonster - Dagger, Broad/Flat Blade|r£ ", --5281
-"|cff9e9e9eMonster - Dagger, Fang Hook Curve|r£ ", --5282
-"|cff9e9e9eMonster - Dagger, Ornate Spikey Base|r£ ", --5283
-"|cff9e9e9eMonster - Dagger, Jeweled Hilt|r£ ", --5284
-"|cff9e9e9eMonster - Dagger, Curvey Blue Hilt|r£ ", --5285
-"|cff9e9e9eMonster - Axe, One-Handed Double Axe|r£ ", --5286
-"|cff9e9e9eMonster - Axe, 2H Large Double Bladed|r£ ", --5287
-"|cff9e9e9eMonster - Axe, 2H Rev. Bearded Single Bladed|r£ ", --5288
-"|cff9e9e9eMonster - Axe, 2H Single Bladed /w Pick|r£ ", --5289
-"|cff9e9e9eMonster - Mace, Jeweled Club|r£ ", --5291
-"|cff9e9e9eMonster - Mace2H, Basic Wooden Hammer|r£ ", --5292
-"|cff9e9e9eMonster - Mace2H, Wood Handle Spiked Head|r£ ", --5293
-"Deprecated Hands of the New Moon£ ", --5294
-"Deprecated Hands of the Crescent Moon£ ", --5295
-"Deprecated Hands of the Quarter Moon£ ", --5296
-"Deprecated Hands of the Gibbous Moon£ ", --5297
-"Deprecated Hands of the Full Moon£ ", --5298
+"单手£ ", --5280
+"单手£ ", --5281
+"单手£ ", --5282
+"单手£ ", --5283
+"单手£ ", --5284
+"单手£ ", --5285
+"单手£ ", --5286
+"双手£ ", --5287
+"双手£ ", --5288
+"双手£ ", --5289
+"主手£ ", --5291
+"双手£ ", --5292
+"双手£ ", --5293
+"任务物品£ ", --5294
+"任务物品£ ", --5295
+"任务物品£ ", --5296
+"任务物品£ ", --5297
+"任务物品£ ", --5298
 "|cff1eff00月夜手套|r£ ", --5299
-"|cff9e9e9eMonster - Mace2H, Wood Handle Large Spiked Head|r£ ", --5300
-"|cff9e9e9eMonster - Mace2H, Huge Wooden Maul|r£ ", --5301
+"双手£ ", --5300
+"双手£ ", --5301
 "|cff1eff00生命之环|r£ ", --5302
-"|cff9e9e9eMonster - Staff, Wooden Handle Rounded Head|r£ ", --5303
-"|cff9e9e9eMonster - Staff, Large Metal Shaft|r£ ", --5304
-"|cff9e9e9eMonster - Sword, Broadsword Silver Hilt|r£ ", --5305
+"双手£ ", --5303
+"双手£ ", --5304
+"单手£ ", --5305
 "|cff1eff00御风法杖|r£ ", --5306
-"|cff9e9e9eDeprecated Skipper's Hat|r£ ", --5307
-"|cff9e9e9eDeprecated Deckhand Gloves|r£ ", --5308
+"装备后绑定£ ", --5307
+"装备后绑定£ ", --5308
 "|cff1eff00海盗步枪|r£ ", --5309
 "|cff1eff00水手裤|r£|cff00ff00装备： 法术强度提高5点。|r", --5310
 "|cff1eff00扣带长靴|r£ ", --5311
@@ -4204,9 +4204,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00紧束腰带|r£ ", --5328
 "|cff9e9e9e猎豹雕像|r£ ", --5329
 "精灵圣杯遗物£任务物品", --5330
-"OLDBlackfathom MAGIC Relic£拾取后绑定£唯一", --5331
+"拾取后绑定£唯一", --5331
 "闪光的猎豹雕像£拾取后绑定£唯一£|cff00ff00使用： 召唤一头幽灵豹为施法者作战，持续10分钟。 （10分钟冷却）|r", --5332
-"Deprecated Mathystra Relic£任务物品", --5333
+"任务物品£ ", --5333
 "99年波尔多陈酿£任务物品£唯一", --5334
 "一袋钱币£拾取后绑定", --5335
 "劣魔耳环£任务物品", --5336
@@ -4231,21 +4231,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00兽王束带|r£ ", --5355
 "|cff1eff00烙印魔棒|r£ ", --5356
 "|cff1eff00山谷守护者|r£ ", --5357
-"|cff9e9e9eDeprecated Whisperwind Headdress|r£ ", --5358
+"装备后绑定£ ", --5358
 "洛迦里斯手稿£任务物品£唯一", --5359
 "上层精灵的遗物£任务物品", --5360
 "|cff9e9e9e鱼骨牙签|r£ ", --5361
 "|cff9e9e9e玩具骨头|r£ ", --5362
 "|cff9e9e9e折起来的手帕|r£ ", --5363
 "|cff9e9e9e干燥的盐块|r£ ", --5364
-"Deprecated Pickpocket£ ", --5365
+"", --5365
 "发光的灵魂宝石£任务物品£唯一", --5366
 "|cff9e9e9e粗糙的石器|r£ ", --5367
 "|cff9e9e9e空皮包|r£ ", --5368
 "|cff9e9e9e啃过的骨头|r£ ", --5369
 "|cff9e9e9e弯曲的勺子|r£ ", --5370
 "|cff9e9e9e珊瑚碎块|r£ ", --5371
-"Deprecated Glowing Shrunken Skull£任务物品£唯一£|cffffd100\"The eyes grow brightly on this skull.\"|r", --5372
+"任务物品£唯一£|cffffd100\"The eyes grow brightly on this skull.\"|r", --5372
 "好运符£ ", --5373
 "|cff9e9e9e小怀表|r£ ", --5374
 "|cff9e9e9e痒痒挠|r£ ", --5375
@@ -4278,18 +4278,18 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd坚硬的肩垫|r£ ", --5404
 "布织披风£ ", --5405
 "空的初级血石£魔法制造的物品£唯一", --5406
-"Deprecated Empty Lesser Bloodstone£魔法制造的物品£唯一", --5407
-"Deprecated Minor Bloodstone£|cff00ff00使用： 立即恢复|r|cff7f7f7f100|r|cff00ff00点生命值。|r", --5408
-"Deprecated Lesser Bloodstone£|cff00ff00使用： 立即恢复|r|cff7f7f7f250|r|cff00ff00点生命值。|r", --5409
-"OLDCeremonial Club£|cff00ff00使用： 在某座锻炉附近右键点击此物品以破坏它。 （2秒冷却）|r", --5410
+"魔法制造的物品£唯一", --5407
+"魔法制造的物品£|cff00ff00使用： 立即恢复|r|cff7f7f7f100|r|cff00ff00点生命值。|r", --5408
+"魔法制造的物品£|cff00ff00使用： 立即恢复|r|cff7f7f7f250|r|cff00ff00点生命值。|r", --5409
+"拾取后绑定£|cff00ff00使用： 在某座锻炉附近右键点击此物品以破坏它。 （2秒冷却）|r", --5410
 "冰蹄之井净化图腾£|cff00ff00使用： 祈求冰蹄净化之灵的帮助。|r", --5411
 "蛇颈龙的眼球£任务物品", --5412
 "月夜猛虎的牙齿£任务物品", --5413
 "灰色头皮£任务物品", --5414
 "雷角之井净化图腾£任务物品£唯一£|cff00ff00使用： 祈求雷角净化之灵的帮助。|r", --5415
 "蛮鬃之井净化图腾£任务物品£唯一£|cff00ff00使用： 祈求蛮鬃净化之灵的帮助。|r", --5416
-"Weapon of Massive Destruction (test)£|cff00ff00使用： 轰杀半径30码范围内的所有敌人，爽吧......|r", --5417
-"Weapon of Mass Destruction (test)£|cff00ff00使用： 立即轰杀目标，很强罢......|r", --5418
+"|cff00ff00使用： 轰杀半径30码范围内的所有敌人，爽吧......|r£ ", --5417
+"|cff00ff00使用： 立即轰杀目标，很强罢......|r£ ", --5418
 "野兽护腕£ ", --5419
 "|cff1eff00女妖之甲|r£ ", --5420
 "炽热魔符£拾取后绑定£|cff00ff00使用： 为一把武器附魔，使其有15%的几率对半径3码范围内的所有敌人造成9到13点火焰伤害。 （1秒冷却）|r", --5421
@@ -4305,11 +4305,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e空瓶子|r£ ", --5431
 "|cff9e9e9e桃木管|r£ ", --5432
 "|cff9e9e9e布娃娃|r£ ", --5433
-"Deprecated Pickpocket Water 31-40£ ", --5434
+"", --5434
 "|cff9e9e9e闪亮的小铲子|r£ ", --5435
-"Deprecated Pickpocket Undead 41-50£ ", --5436
+"", --5436
 "巴斯兰的头发£任务物品", --5437
-"OLDPlague Vials£任务物品", --5438
+"任务物品£ ", --5438
 "小箭袋£8格箭袋", --5439
 "一瓶病菌£任务物品", --5440
 "小型弹药袋£8格弹药袋", --5441
@@ -4320,11 +4320,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e破损的元素护腕|r£ ", --5446
 "|cff9e9e9e被毁坏的元素护腕|r£ ", --5447
 "|cff9e9e9e断裂的元素护腕|r£ ", --5448
-"Deprecated Cracked Elemental Bracer£ ", --5449
-"Deprecated Busted Elemental Bracer£ ", --5450
+"", --5449
+"", --5450
 "|cff9e9e9e被摧毁的元素护腕|r£ ", --5451
-"Deprecated Shattered Elemental Bracer£ ", --5453
-"Deprecated Split Elemental Bracer£ ", --5454
+"", --5453
+"", --5454
 "使用过的占卜卷轴£任务物品£唯一£|cffffd100\"这张纸上写满了闪闪发光的符文。\"|r", --5455
 "占卜卷轴£任务物品£唯一£|cffffd100\"这张纸是空白的。\"|r", --5456
 "巫毒之爪£拾取后绑定£|cff00ff00使用： 目标所能造成的伤害降低5点，持续2分钟。|r", --5457
@@ -4361,13 +4361,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "食谱：脆炸蜥蜴尾£使用： 教你学会烹制脆炸蜥蜴尾。£\n脆炸蜥蜴尾£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高6点，持续15分钟。|r£\n需要雷霆蜥蜴的尾巴", --5488
 "食谱：瘦鹿肉£使用： 教你学会烹制瘦鹿肉。£\n瘦鹿肉£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高6点，持续15分钟。|r£\n需要鹿肉", --5489
 "怒尾纳迦的徽记£任务物品", --5490
-"|cff9e9e9eMonster - Mace2H, Large Metal|r£ ", --5491
+"双手£ ", --5491
 "月神之泪£任务物品", --5493
 "一份星尘£任务物品", --5494
-"|cff9e9e9eMonster - Mace2H, Large Metal (1H, Special)|r£ ", --5495
+"单手£ ", --5495
 "|cff1eff00有光泽的小珍珠|r£ ", --5498
 "|cff1eff00彩色珍珠|r£ ", --5500
-"|cff9e9e9eMonster - Sword2H, Broadsword (1H, Special)|r£ ", --5502
+"单手£ ", --5502
 "蚌肉£ ", --5503
 "有腥味的蚌肉£ ", --5504
 "泰洛尼斯的日记£任务物品£唯一£|cffffd100\"这本日记被水浸过，但看起来还不是太糟糕。\"|r", --5505
@@ -4380,7 +4380,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "初级治疗石£魔法制造的物品£唯一：治疗石（1）£|cff00ff00使用： 立即恢复100点生命值。|r", --5512
 "法力翡翠£拾取后绑定£唯一：法力宝石（1）£|cff00ff00使用： 恢复585到615点法力值。|r", --5513
 "法力玛瑙£|cff00ff00使用： 恢复390到|r|cff7f7f7f410|r|cff00ff00点法力值。|r", --5514
-"Deprecated Iron Pummel£任务物品", --5515
+"任务物品£ ", --5515
 "|cff9e9e9e蛇颈龙的尖牙|r£ ", --5516
 "青铜钥匙£|cffffd100\"法师法术所需的材料。\"|r", --5517
 "铁钥匙£|cffffd100\"法师法术所需的材料。\"|r", --5518
@@ -4396,8 +4396,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "食谱：杂烩蚌肉£使用： 教你学会烹制杂烩蚌肉。£\n杂烩蚌肉£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r£\n需要蚌肉, 冰镇牛奶", --5528
 "|cff9e9e9e墓穴灰尘|r£ ", --5529
 "|cff9e9e9e无用的致盲粉|r£|cffffd100\"虽然它曾经是致盲的绝佳材料，但是盗贼们已经找到了更物美价廉的替代品，比如......沙子。\"|r", --5530
-"Deprecated Brakgul Deathbringer's Head£任务物品£唯一", --5531
-"|cff9e9e9eMonster - Hot Iron Poker|r£ ", --5532
+"任务物品£唯一", --5531
+"单手£ ", --5532
 "伊克鲁德·玛格苏尔之书£任务物品£唯一", --5533
 "帕克的午餐£任务物品£唯一", --5534
 "堕落者纲要£任务物品£唯一", --5535
@@ -4408,28 +4408,28 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00珍珠匕首|r£ ", --5540
 "|cff1eff00彩虹之锤|r£|cff00ff00装备： 爆击等级提高3点。|r£|cff00ff00装备： 攻击强度提高6点。|r", --5541
 "|cff1eff00珍珠披风|r£ ", --5542
-"|cff1eff00设计图：彩虹之锤|r£使用： 教你学会制作彩虹之锤。£|cff1eff00\n彩虹之锤|r£装备后绑定£单手£锤£28 - 53伤害£速度 2.80£（每秒伤害14.5）£|cff00ff00装备： 爆击等级提高3点。|r£|cff00ff00装备： 攻击强度提高6点。|r£\n需要青铜锭 (10), 强效助熔剂, 彩色珍珠, 粗制砂轮 (2), 中皮 (2)", --5543
+"|cff1eff00设计图：彩虹之锤|r£使用： 教你学会制作彩虹之锤。£|cff1eff00\n彩虹之锤|r£装备后绑定£单手£28 - 53伤害£速度 2.80£（每秒伤害14.5）£|cff00ff00装备： 爆击等级提高3点。|r£|cff00ff00装备： 攻击强度提高6点。|r£\n需要青铜锭 (10), 强效助熔剂, 彩色珍珠, 粗制砂轮 (2), 中皮 (2)", --5543
 "达尔·血爪的徽记£任务物品£唯一", --5544
-"|cff9e9e9eFast Test Polearm|r£ ", --5545
-"|cff9e9e9eFast Test Crossbow|r£ ", --5546
+"双手£ ", --5545
+"", --5546
 "重铸的魔棒£拾取后绑定£唯一", --5547
-"|cff9e9e9eFast Test Bow|r£ ", --5548
-"|cff9e9e9eFast Test Dagger|r£ ", --5549
-"|cff9e9e9eFast Test Gun|r£ ", --5550
-"|cff9e9e9eFast Test 1H Axe|r£ ", --5551
-"|cff9e9e9eFast Test 2H Axe|r£ ", --5552
-"|cff9e9e9eFast Test 1H Mace|r£ ", --5553
-"|cff9e9e9eFast Test 2H Mace|r£ ", --5554
-"|cff9e9e9eFast Test 1H Sword|r£ ", --5555
-"|cff9e9e9eFast Test 2H Sword|r£ ", --5556
-"|cff9e9e9eFast Test Spear|r£ ", --5557
-"|cff9e9e9eFast Test Staff|r£ ", --5558
+"远程£ ", --5548
+"单手£ ", --5549
+"", --5550
+"主手£ ", --5551
+"双手£ ", --5552
+"主手£ ", --5553
+"双手£ ", --5554
+"主手£ ", --5555
+"双手£ ", --5556
+"双手£ ", --5557
+"双手£ ", --5558
 "Broken Fast Test Thrown£ ", --5559
-"|cff9e9e9eFast Test Wand|r£ ", --5560
-"|cff9e9e9eFast Test Generic|r£ ", --5561
-"Voidstone (Deprecated)£ ", --5562
-"Succubi Stone (Deprecated)£ ", --5563
-"Felstone (Deprecated)£ ", --5564
+"魔杖£ ", --5560
+"主手£ ", --5561
+"", --5562
+"", --5563
+"", --5564
 "地狱火石£ ", --5565
 "|cff9e9e9e折断的鹿角|r£ ", --5566
 "|cff9e9e9e银色鱼钩|r£ ", --5567
@@ -4462,17 +4462,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "写给金吉尔的信£任务物品£唯一", --5594
 "灌木之锤£ ", --5595
 "灰木弓£ ", --5596
-"|cff9e9e9eMonster - Glaive - 2 Blade Red|r£ ", --5597
-"|cff9e9e9eMonster - Glaive - 3 Blade|r£ ", --5598
-"|cff9e9e9eMonster - Glaive - 4 Blade|r£ ", --5599
-"|cff9e9e9eMonster - Claw - Bear|r£ ", --5600
+"单手£ ", --5597
+"单手£ ", --5598
+"单手£ ", --5599
+"单手£ ", --5600
 "|cff9e9e9e正在孵化的蛋|r£ ", --5601
 "|cff9e9e9e粘稠的蜘蛛网|r£ ", --5602
 "维兹班恩的麻袋£拾取后绑定£8格容器", --5603
 "|cff1eff00精灵魔杖|r£ ", --5604
 "园艺小刀£ ", --5605
 "园艺手套£ ", --5606
-"Deprecated Graystone Shoulders£ ", --5607
+"肩部£ ", --5607
 "|cff1eff00生命兜帽|r£ ", --5608
 "|cff1eff00坚定腰带|r£ ", --5609
 "|cff1eff00荒原披风|r£ ", --5610
@@ -4490,7 +4490,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00祭司之戒|r£ ", --5622
 "紫水晶瓶£任务物品£唯一£|cff00ff00使用： 在神谕林地月亮井中使用紫水晶瓶装水。|r", --5623
 "|cff1eff00骑士团头饰|r£ ", --5624
-"|cff9e9e9eDeprecated Band of the Order|r£ ", --5625
+"装备后绑定£ ", --5625
 "|cff1eff00削骨巨斧|r£ ", --5626
 "|cff1eff00古代之刃|r£ ", --5627
 "扎玛的便笺£任务物品£唯一", --5628
@@ -4516,9 +4516,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "秘典：霜甲术 III£|cff00ff00使用： Teaches Frost Armor (Rank 3).|r", --5648
 "秘典：暴风雪£|cff00ff00使用： Teaches Blizzard (Rank 1).|r", --5649
 "秘典：造水术 III£使用： 教你学会施放造水术（等级 3）。£\n魔法纯净水£魔法制造的物品£|cff00ff00使用： 在24秒内恢复总计835点法力值，喝水时必须保持坐姿。|r", --5650
-"Deprecated Dull Razormane Backstabber£任务物品£唯一", --5651
-"Deprecated Cracked Razormane Wand£任务物品£唯一", --5652
-"Deprecated Broken Razormane War Shield£任务物品£唯一", --5653
+"任务物品£唯一", --5651
+"任务物品£唯一", --5652
+"任务物品£唯一", --5653
 "速效毒素£|cff00ff00使用： 为一把剑或者匕首涂上毒药，效果持续30分钟。\r\n每次使用该武器击中敌人都有一定几率令敌人中毒，立即对其造成10-30点伤害。 （1秒冷却）|r", --5654
 "|cff0070dd栗色马缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --5655
 "|cff0070dd棕马缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --5656
@@ -4552,7 +4552,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "圣契：救赎£|cffffd100\"Teaches Redemption.\"|r", --5685
 "奥达努斯的徽记£任务物品£唯一", --5686
 "守门人的钥匙£任务物品£唯一", --5687
-"Test Language Item£ ", --5688
+"", --5688
 "沉睡者的钥匙£任务物品£唯一", --5689
 "利爪钥匙£任务物品£唯一", --5690
 "古墓钥匙£任务物品£唯一", --5691
@@ -4583,17 +4583,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "石板：复原术 VI£|cff00ff00使用： Teaches Greater Healing Wave (Rank 2).|r", --5716
 "风险投资公司函件£任务物品£唯一", --5717
 "风险投资公司工程计划书£任务物品£唯一", --5718
-"魔典：生命吸取 II£|cff00ff00使用： Teaches Drain Life (Rank 2).|r", --5719
-"魔典：玛诺洛斯的诅咒 II£|cff00ff00使用： Teaches Curse of Weakness (Rank 2).|r", --5720
-"魔典：制作法术石£使用： Teaches Create Spellstone.£\n法术石£拾取后绑定£唯一£|cff00ff00使用： 附加在武器上，使其获得持续伤害法术造成的伤害提高1%、法术急速等级提高10的效果，持续1小时。 （1秒冷却）|r£\n需要灵魂碎片", --5721
-"魔典：汲取魔法 II£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --5722
-"魔典：萨格拉斯的诅咒 III£|cff00ff00使用： Teaches Curse of Agony (Rank 3).|r", --5723
-"魔典：语言诅咒£|cff00ff00使用： Teaches Curse of Tongues (Rank 1).|r", --5724
-"魔典：疫病术 III£|cff00ff00使用： Teaches Corruption (Rank 3).|r", --5725
-"魔典：制作强效血石£|cffffd100\"Teaches Create Greater Healthstone.\"|r", --5726
-"魔典：法力通道£|cffffd100\"Teaches Mana Funnel.\"|r", --5727
-"魔典：火焰之雨 II£|cff00ff00使用： Teaches Rain of Fire (Rank 2).|r", --5728
-"魔典：恐惧术 III£|cff00ff00使用： Teaches Fear (Rank 3).|r", --5729
+"魔典：生命吸取 II£职业：术士£|cff00ff00使用： Teaches Drain Life (Rank 2).|r", --5719
+"魔典：玛诺洛斯的诅咒 II£职业：术士£|cff00ff00使用： Teaches Curse of Weakness (Rank 2).|r", --5720
+"魔典：制作法术石£职业：术士£使用： Teaches Create Spellstone.£\n法术石£拾取后绑定£唯一£|cff00ff00使用： 附加在武器上，使其获得持续伤害法术造成的伤害提高1%、法术急速等级提高10的效果，持续1小时。 （1秒冷却）|r£\n需要灵魂碎片", --5721
+"魔典：汲取魔法 II£职业：术士£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --5722
+"魔典：萨格拉斯的诅咒 III£职业：术士£|cff00ff00使用： Teaches Curse of Agony (Rank 3).|r", --5723
+"魔典：语言诅咒£职业：术士£|cff00ff00使用： Teaches Curse of Tongues (Rank 1).|r", --5724
+"魔典：疫病术 III£职业：术士£|cff00ff00使用： Teaches Corruption (Rank 3).|r", --5725
+"魔典：制作强效血石£职业：术士£|cffffd100\"Teaches Create Greater Healthstone.\"|r", --5726
+"魔典：法力通道£职业：术士£|cffffd100\"Teaches Mana Funnel.\"|r", --5727
+"魔典：火焰之雨 II£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 2).|r", --5728
+"魔典：恐惧术 III£职业：术士£|cff00ff00使用： Teaches Fear (Rank 3).|r", --5729
 "书卷：回春术£|cff00ff00使用： Teaches Rejuvenation (Rank 1).|r", --5730
 "通讯卷轴£任务物品£唯一", --5731
 "NG-5£任务物品£唯一", --5732
@@ -4609,9 +4609,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00宝钻匕首|r£ ", --5742
 "|cff1eff00棱柱石戒|r£ ", --5743
 "|cff1eff00苍白剥皮者|r£ ", --5744
-"|cff9e9e9eMonster - Trident, Wood Handle|r£ ", --5745
-"|cff9e9e9eMonster - Trident, Copper|r£ ", --5746
-"|cff9e9e9eMonster - Trident, Ornate|r£ ", --5747
+"双手£ ", --5745
+"双手£ ", --5746
+"双手£ ", --5747
 "|cff1eff00半人马长弓|r£ ", --5748
 "|cff1eff00镰斧|r£ ", --5749
 "|cff1eff00酋长的束带|r£ ", --5750
@@ -4692,7 +4692,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "塔莎拉的坠饰£任务物品£唯一", --5825
 "克拉维尔的设计图£任务物品£唯一", --5826
 "菲兹尔·铜栓的信£任务物品£唯一", --5827
-"|cffe5cc7fRing of Uber Resists (TEST)|r£ ", --5828
+"装备后绑定£ ", --5828
 "|cff9e9e9e锋利的鸟喙|r£ ", --5829
 "科娜塔的徽记£任务物品£唯一", --5830
 "法迪尔的徽记£任务物品£唯一", --5831
@@ -4720,7 +4720,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "完整的异种蝎壳£任务物品", --5853
 "异种蝎的爪子£任务物品", --5854
 "异种蝎的心脏£任务物品", --5855
-"|cff9e9e9eMonster - Throwing Axe|r£ ", --5856
+"投掷£ ", --5856
 "侏儒抽奖盒£拾取后绑定£|cffffd100\"打开就有惊喜！\"|r", --5857
 "地精抽奖盒£拾取后绑定£|cffffd100\"打开就有惊喜！\"|r", --5858
 "小队手榴弹£|cff00ff00使用： 终极群体热疫！|r", --5859
@@ -4734,7 +4734,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "蚀刻瓶£任务物品£唯一£|cff00ff00使用： 在灰谷月亮井中使用蚀刻瓶装水。|r", --5867
 "装满水的蚀刻瓶£任务物品£唯一", --5868
 "裂开的蹄子£任务物品£唯一", --5869
-"|cff9e9e9eMonster - Throwing Spear|r£ ", --5870
+"投掷£ ", --5870
 "|cff9e9e9e大蹄子|r£ ", --5871
 "|cff0070dd棕山羊|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --5872
 "|cff0070dd白山羊|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --5873
@@ -4749,14 +4749,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "指挥官的文件£任务物品£唯一", --5882
 "分叉的泥石龟舌£任务物品", --5883
 "黑雾蜘蛛的眼球£任务物品", --5884
-"Theramore Guard Medallion UNUSED£任务物品£唯一£|cffffd100\"Stamped with the name: Muren Macfeere\"|r", --5896
+"任务物品£唯一£|cffffd100\"Stamped with the name: Muren Macfeere\"|r", --5896
 "地鼠训练手册£任务物品£唯一", --5897
-"侏儒摄像机钥匙£|cff00ff00使用： 在侏儒摄像头上使用。|r£|cffffd100\"NYI\"|r", --5916
+"侏儒摄像机钥匙£|cff00ff00使用： 在侏儒摄像头上使用。|r", --5916
 "间谍的报告£任务物品£唯一", --5917
 "兽人的徽记£任务物品£唯一", --5918
 "被熏黑的铁盾牌£任务物品£唯一", --5919
 "兽皮腰带£ ", --5936
-"地精摄像机钥匙£|cffffd100\"NYI\"|r", --5937
+"地精摄像机钥匙£ ", --5937
 "新鲜的螃蟹腿£任务物品", --5938
 "缝纫手套£ ", --5939
 "白骨圆盾£ ", --5940
@@ -4772,8 +4772,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "雷瑟的徽章£任务物品£唯一", --5950
 "潮湿的毛巾£拾取后绑定£|cff00ff00使用： 用柠檬的力量去除玩家身上的一个不利法术效果。 （1秒冷却）|r", --5951
 "堕落者的脑干£任务物品", --5952
-"TEST SWORD£ ", --5953
-"TEST SWORD 2£ ", --5954
+"单手£ ", --5953
+"单手£ ", --5954
 "铁匠之锤£ ", --5956
 "手工皮外衣£ ", --5957
 "|cff1eff00优质皮裤|r£|cff00ff00装备： 法术强度提高5点。|r", --5958
@@ -4799,7 +4799,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "初级防御药剂£|cff00ff00使用： 护甲提高50点，持续1小时。守护药剂。|r", --5997
 "卡尔·雷矛的订单£任务物品£唯一", --5998
 "狼心样本£任务物品£唯一", --6016
-"|cff9e9e9eRogue Test Dagger|r£ ", --6036
+"装备后绑定£ ", --6036
 "|cff1eff00真银锭|r£ ", --6037
 "烧烤巨蚌£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高8点，持续15分钟。|r", --6038
 "食谱：烤巨蚌£使用： 教你学会烹制烤巨蚌。£\n烧烤巨蚌£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高8点，持续15分钟。|r£\n需要大块蚌肉", --6039
@@ -4851,9 +4851,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00步兵外衣|r£ ", --6085
 "法奥斯丁的真言药水£任务物品£唯一", --6086
 "|cff0070dd西部荒野马裤|r£ ", --6087
-"|cff9e9e9eMonster - Torch, Ranged|r£ ", --6088
+"投掷£ ", --6088
 "莱度斯的酒£任务物品£唯一", --6089
-"OLDNoboru's Cudgel£任务物品", --6090
+"任务物品£ ", --6090
 "一箱能量石£任务物品£唯一£持续时间：1小时", --6091
 "|cff1eff00黑色雏龙战靴|r£ ", --6092
 "|cff1eff00兽人粉碎者|r£ ", --6093
@@ -4940,7 +4940,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "PVP - 联盟矿洞契约£唯一", --6210
 "配方：食人魔力量药剂£使用： 教你学会配制食人魔力量药剂。£\n食人魔力量药剂£|cff00ff00使用： 使力量提高8点，持续1小时。战斗药剂。|r£\n需要地根草, 皇血草, 铅瓶", --6211
 "迦玛兰的徽记£任务物品£唯一", --6212
-"Test Sharpening Stone£|cff00ff00使用： 使锋利武器所造成的伤害提高2点，持续30分钟。 （1秒冷却）|r", --6213
+"|cff00ff00使用： 使锋利武器所造成的伤害提高2点，持续30分钟。 （1秒冷却）|r£ ", --6213
 "|cff1eff00铜质大锤|r£ ", --6214
 "|cff1eff00平衡长棍|r£ ", --6215
 "秘法粉末£|cffffd100\"附魔师所用的材料。\"|r", --6216
@@ -4950,20 +4950,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd流星碎片|r£ ", --6220
 "|cff1eff00公式：浸魔胸甲 - 次级精神|r£|cff00ff00使用： Teaches you how to temporarily imbue a piece of chest armor to give +3 Spirit for 60 min.|r", --6222
 "|cff1eff00夜色镇徽记之盾|r£ ", --6223
-"|cff9e9e9eMonster - Sword2H, Black Metal Hilt|r£ ", --6224
-"|cff9e9e9eMonster - Item, Fish - Blue|r£ ", --6225
+"双手£ ", --6224
+"单手£ ", --6225
 "|cff0070dd鲜血围裙|r£ ", --6226
-"|cff9e9e9eMonster - Item, Fish - Green|r£ ", --6227
-"|cff9e9e9eMonster - Item, Fish - Orange|r£ ", --6228
-"|cff9e9e9eMonster - Item, Fish - Purple|r£ ", --6229
-"|cff9e9e9eMonster - Wand, Basic|r£ ", --6230
-"|cff9e9e9eMonster - Wand, Jeweled - Green|r£ ", --6231
-"|cff9e9e9eMonster - Item, Flowers  - Boquet Roses|r£ ", --6232
-"|cff9e9e9eMonster - Item, Flowers  - Boquet Wildflowers|r£ ", --6233
-"|cff9e9e9eMonster - Item, Flower - Long Blue|r£ ", --6234
-"|cff9e9e9eMonster - Item, Flower - Rose (Black)|r£ ", --6235
-"|cff9e9e9eMonster - Item, Flower - Rose (White)|r£ ", --6236
-"|cff9e9e9eMonster - Item, Flowers  - Boquet Roses (Black)|r£ ", --6237
+"单手£ ", --6227
+"单手£ ", --6228
+"单手£ ", --6229
+"魔杖£ ", --6230
+"魔杖£ ", --6231
+"单手£ ", --6232
+"单手£ ", --6233
+"单手£ ", --6234
+"单手£ ", --6235
+"单手£ ", --6236
+"单手£ ", --6237
 "|cff1eff00棕色亚麻长袍|r£ ", --6238
 "|cff1eff00红色亚麻外衣|r£ ", --6239
 "|cff1eff00蓝色亚麻外衣|r£ ", --6240
@@ -4979,7 +4979,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "魔女之翼£任务物品", --6251
 "末日看守之血£任务物品", --6252
 "莱弗维奇的包裹£任务物品£唯一", --6253
-"|cff9e9e9eMonster - Shield, Ironforge|r£ ", --6254
+"副手£ ", --6254
 "鱼竿£ ", --6256
 "大鹏的砂囊£任务物品", --6257
 "铁鬃熊的肝脏£任务物品", --6258
@@ -5046,7 +5046,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd盲者束带|r£ ", --6319
 "|cff0070dd指挥官纹章盾|r£|cff00ff00装备： 使你的躲闪等级提高3点。|r", --6320
 "|cff0070dd席瓦莱恩家族徽记|r£ ", --6321
-"|cff9e9e9eMonster - Staff, Arugal|r£ ", --6322
+"双手£ ", --6322
 "|cff0070dd巴隆的节杖|r£ ", --6323
 "|cff0070dd阿鲁高法袍|r£|cff00ff00装备： 法术强度提高12点。|r", --6324
 "食谱：美味小鱼£使用： 教你学会烹制美味小鱼。£\n美味小鱼£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r£\n需要新鲜的美味小鱼", --6325
@@ -5058,7 +5058,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd哀嚎之刃|r£ ", --6331
 "|cff0070dd黑珍珠之戒|r£ ", --6332
 "|cff1eff00刺尾匕首|r£ ", --6333
-"|cff9e9e9eMonster - Mace, Green|r£ ", --6334
+"单手£ ", --6334
 "|cff1eff00灰色长靴|r£ ", --6335
 "|cff1eff00步兵外套|r£ ", --6336
 "|cff1eff00步兵护腿|r£ ", --6337
@@ -5158,10 +5158,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00帝王皮靴|r£ ", --6431
 "|cff1eff00帝王皮披风|r£ ", --6432
 "|cff1eff00帝王皮盔|r£ ", --6433
-"|cff9e9e9eMonster - Shield, Stromgarde|r£ ", --6434
+"副手£ ", --6434
 "灌入灵魂的燃烧宝石£任务物品", --6435
 "燃烧宝石£拾取后绑定£唯一£|cff00ff00使用： 捕捉最近的火刃氏族成员的灵魂。如果目标在被吸取灵魂的过程中死亡，施法者可以获得一颗灌入灵魂的燃烧宝石。|r", --6436
-"Flayed Demon Skin (old)£唯一£41 - 42伤害", --6437
+"唯一£41 - 42伤害", --6437
 "|cff9e9e9e粗钝的元素护腕|r£ ", --6438
 "|cff9e9e9e破损的禁锢护腕|r£ ", --6439
 "|cff0070dd刺魂者|r£ ", --6440
@@ -5237,7 +5237,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "信徒腰带£ ", --6513
 "信徒披风£ ", --6514
 "信徒手套£ ", --6515
-"小鬼召唤£任务物品£唯一£|cff00ff00使用： 学习如何召唤小鬼。|r", --6516
+"小鬼召唤£任务物品£唯一£职业：术士£|cff00ff00使用： 学习如何召唤小鬼。|r", --6516
 "先锋腰带£ ", --6517
 "先锋战靴£ ", --6518
 "先锋护腕£ ", --6519
@@ -5338,7 +5338,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00贤者手套|r£ ", --6615
 "|cff1eff00贤者短裤|r£ ", --6616
 "|cff1eff00贤者衬肩|r£ ", --6617
-"|cff9e9e9eMonster - Orb|r£ ", --6618
+"单手£ ", --6618
 "手册：防御之道£拾取后绑定£|cff00ff00使用： 教你使用防御姿态（等级 1)和破甲攻击（等级 1）。|r", --6619
 "精美的羊皮纸£唯一", --6620
 "手册：嘲讽£拾取后绑定£|cff00ff00使用： Teaches Taunt (Rank 1).|r", --6621
@@ -5359,7 +5359,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "火焰灵契£拾取后绑定£唯一£|cff00ff00使用： 使萨满祭司可以看到元素之灵。|r", --6636
 "水之灵契£拾取后绑定£唯一£|cff00ff00使用： 使萨满祭司可以看到元素之灵。|r", --6637
 "空气灵契£拾取后绑定£唯一£|cff00ff00使用： 使萨满祭司可以看到元素之灵。|r", --6638
-"Deprecated Rough Pebble£任务物品£唯一£41 - 42伤害", --6639
+"任务物品£唯一£41 - 42伤害", --6639
 "地狱捕猎者的蹄子£任务物品", --6640
 "|cff0070dd鬼魂之刃|r£|cff00ff00装备： 攻击强度提高28点。|r", --6641
 "|cff0070dd幻影之甲|r£|cff00ff00装备： 爆击等级提高5点。|r", --6642
@@ -5393,17 +5393,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00黑豹护甲|r£ ", --6670
 "|cff1eff00邪神护腿|r£ ", --6671
 "|cff1eff00结构图：闪光雷|r£使用： 教你学会制作闪光雷。£\n闪光雷£|cff00ff00使用： 使半径5码范围内的所有野兽逃跑，持续10秒。对60级以上的目标可能失效。|r£\n需要蓝珍珠, 烈性火药, 丝绸", --6672
-"|cff9e9e9eTest HP Ring|r£ ", --6673
-"|cff9e9e9eTest MP Ring|r£ ", --6674
+"装备后绑定£ ", --6673
+"装备后绑定£ ", --6674
 "|cff1eff00弹性护腕|r£ ", --6675
 "|cff1eff00治安官圆盾|r£ ", --6676
 "|cff1eff00塑法魔杖|r£ ", --6677
 "|cff1eff00精灵仪容指环|r£|cff00ff00装备： 命中等级提高4点。|r", --6678
 "|cff0070dd刺甲之矛|r£ ", --6679
-"|cff9e9e9eMonster - Spear, Sharp Thin|r£ ", --6680
+"双手£ ", --6680
 "|cff0070dd棘刺|r£ ", --6681
 "|cff0070dd亡语者长袍|r£|cff00ff00装备： 爆击等级提高12点。|r", --6682
-"Tyranis' Pendant (old)£唯一£41 - 42伤害", --6683
+"唯一£41 - 42伤害", --6683
 "地鼠指挥棒£任务物品£唯一£|cff00ff00使用： 对地鼠使用。 （1秒冷却）|r", --6684
 "|cff0070dd亡语者衬肩|r£|cff00ff00装备： 法术强度提高9点。|r", --6685
 "|cff0070dd长牙头盔|r£ ", --6686
@@ -5470,7 +5470,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "一小袋宝石£拾取后绑定", --6755
 "珠宝盒£拾取后绑定£唯一£6格容器", --6756
 "|cff1eff00吉安娜的徽记之戒|r£ ", --6757
-"Flayed Demon Skin (old2)£拾取后绑定£唯一£该物品将触发一个任务", --6766
+"拾取后绑定£唯一£该物品将触发一个任务", --6766
 "泰拉尼斯的坠饰£任务物品£唯一", --6767
 "|cff1eff00吉尔吉斯链甲|r£ ", --6773
 "|cff1eff00乌泰克的手指|r£ ", --6774
@@ -5540,7 +5540,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "流放精华£任务物品", --6851
 "永恒之眼£任务物品", --6852
 "生命符记£拾取后绑定£唯一£|cff00ff00使用： 生命符记可以让死者复活。|r", --6866
-"|cff9e9e9eMonster - Throwing Knife|r£ ", --6886
+"投掷£ ", --6886
 "斑点黄尾鱼£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r", --6887
 "草药烘蛋£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高2点，持续15分钟。|r", --6888
 "小蛋£ ", --6889
@@ -5550,7 +5550,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "车间钥匙£拾取后绑定£唯一", --6893
 "旋风之心£任务物品", --6894
 "乔丹的铁锤£任务物品£唯一", --6895
-"|cff9e9e9eTwain Component Test|r£ ", --6896
+"装备后绑定£ ", --6896
 "手册：狂战士之道£拾取后绑定£|cff00ff00使用： 教你如何使用狂暴姿态（等级 1）。  教你如何使用顺劈斩（等级 1）。|r", --6897
 "|cff1eff00索兰鲁克宝珠|r£|cff00ff00装备： 法术强度提高4点。|r£|cff00ff00使用： 每3秒恢复|r|cff7f7f7f25|r|cff00ff00点生命值，持续30秒。 （30分钟冷却）|r", --6898
 "|cff9e9e9e术士宝珠35|r£ ", --6899
@@ -5577,10 +5577,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "巴斯拉的羊皮纸£任务物品£唯一", --6929
 "导能魔棒£任务物品", --6930
 "发霉的书籍£任务物品£唯一£|cff00ff00使用： 使用召唤法阵召唤一只地狱猎犬。 （3分钟冷却）|r£|cffffd100\"书的封面上写着\"阴谋之书\"。\"|r", --6931
-"|cff9e9e9eMonster - Gun, Club|r£ ", --6946
-"速效药膏£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成15点自然伤害。|r", --6947
-"速效药膏 II£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成23点自然伤害。|r", --6949
-"速效药膏 III£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成32点自然伤害。|r", --6950
+"单手£ ", --6946
+"速效药膏£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成14点自然伤害。|r", --6947
+"速效药膏 II£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成22点自然伤害。|r", --6949
+"速效药膏 III£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成31点自然伤害。|r", --6950
 "|cff9e9e9eMind-numbing Poison II|r£ ", --6951
 "厚熊皮£任务物品", --6952
 "|cff0070dd维里甘之拳|r£ ", --6953
@@ -5712,7 +5712,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "地精起搏器£|cff00ff00使用： 起搏器有时可以让一个已死的玩家复活。无法在战斗中使用。 （30分钟冷却）|r", --7148
 "铜质匕首£ ", --7166
 "|cff9e9e9eTwain Random Sword FOO|r£ ", --7170
-"TWAIN TEST ITEM VISUAL SWORD£ ", --7171
+"单手£ ", --7171
 "|cff1eff00范克里夫的靴子|r£ ", --7187
 "|cff1eff00暴风城卫兵之盾|r£ ", --7188
 "|cff1eff00地精火箭靴|r£|cff00ff00使用： 这双看起来就很危险的靴子可以使你的速度提高，持续20秒。但是它们很可能突然爆炸，所以请小心使用。 （5分钟冷却）|r", --7189
@@ -5730,7 +5730,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd重拳先生的大锤|r£ ", --7230
 "阿斯托的介绍信£任务物品£唯一", --7231
 "一盒封灵箱£任务物品£|cff00ff00使用： 将被击昏的裂隙怒灵收入封灵箱。 （8秒冷却）|r", --7247
-"Twain TEST Cloak£ ", --7248
+"背部£ ", --7248
 "充能裂隙宝石£任务物品", --7249
 "乌尔的暗影魔法研究论文£任务物品", --7266
 "新鲜的蜘蛛丝£任务物品", --7267
@@ -5765,7 +5765,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e熄灭的火炬|r£ ", --7296
 "摩本特的克星£|cff00ff00使用： 破除摩本特·费尔的防御结界。 （3分钟冷却）|r", --7297
 "|cff1eff00狡诈之刃|r£ ", --7298
-"|cff9e9e9eTest - Magic Stone Helmet|r£ ", --7299
+"装备后绑定£ ", --7299
 "芬维克的徽记£任务物品£唯一", --7306
 "食腐虫£|cff00ff00使用： 装备在鱼竿上之后，可以使你的钓鱼技能提高75点，持续10分钟。|r", --7307
 "显形卷轴£任务物品£唯一£|cffffd100\"在法力裂隙附近使用\"|r", --7308
@@ -5993,7 +5993,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00琥珀手杖|r£ ", --7609
 "|cff1eff00极光之球|r£ ", --7610
 "|cff1eff00虔诚手杖|r£ ", --7611
-"|cff9e9e9eMonster - Axe, 2H Special NPC (Herod)|r£ ", --7612
+"双手£ ", --7612
 "图样：绿色皮甲£使用： 教你学会制作绿色皮甲。£|cff1eff00\n绿色皮甲|r£装备后绑定£胸部£95点护甲£+8 敏捷£|cff00ff00装备： 使你的躲闪等级提高8点。|r£\n需要重皮 (9), 绿色染料 (2), 细线 (4)", --7613
 "一捆毛皮£任务物品£唯一", --7626
 "多兰纳尔的货物£任务物品£唯一", --7627
@@ -6024,8 +6024,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd恐怖黎明|r£ ", --7689
 "|cff0070dd乌木钳|r£ ", --7690
 "|cff0070dd裹尸布|r£|cff00ff00装备： 法术强度提高14点。|r", --7691
-"|cff9e9e9eMonster - Mace2H, Special NPC (Mograine)|r£ ", --7706
-"|cff9e9e9eTwain Test|r£ ", --7707
+"单手£ ", --7706
+"拾取后绑定£ ", --7707
 "|cff0070dd腐坏魔杖|r£ ", --7708
 "|cff0070dd荒芜护腿|r£|cff00ff00装备： 法术强度提高20点。|r", --7709
 "|cff0070dd洛克希的教鞭|r£|cff00ff00装备： 攻击强度提高40点。|r", --7710
@@ -6042,7 +6042,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd圣使护符|r£ ", --7722
 "|cff0070dd莫格莱尼的力量|r£|cff00ff00装备： 命中等级提高16点。|r", --7723
 "|cff0070dd神圣护手|r£|cff00ff00装备： 攻击强度提高32点。|r", --7724
-"Tabard of the Scarlet Crusade DEPRECATED£ ", --7725
+"拾取后绑定£ ", --7725
 "|cff0070dd血色指挥官之盾|r£|cff00ff00装备： 防御等级提高7。|r", --7726
 "|cff0070dd守卫肩铠|r£ ", --7727
 "|cff0070dd欺诈者长袍|r£ ", --7728
@@ -6091,13 +6091,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "剩余的最纯净的水£任务物品£唯一", --7811
 "堕落水之魂的护腕£任务物品£唯一", --7812
 "水灵碎片£任务物品£唯一", --7813
-"|cff9e9e9eMonster - Staff, Special NPC (Whitemane)|r£ ", --7826
+"双手£ ", --7826
 "峭壁山狗的牙齿£任务物品", --7846
 "秃鹫的胃囊£任务物品", --7847
 "石元素的碎片£任务物品", --7848
 "空的魔瓶£拾取后绑定£|cff00ff00使用： 对烈焰守护者使用空的魔瓶。 （1分钟冷却）|r", --7866
 "龙血£任务物品", --7867
-"盗贼的工具包£拾取后绑定£唯一£|cffff7f3f已锁|r£|cffffd100\"Invalid loot table, crashes when you modify Miscellaneous\"|r", --7868
+"盗贼的工具包£拾取后绑定£唯一£|cffff7f3f已锁|r", --7868
 "卢修斯的箱子£任务物品£唯一£|cffff7f3f已锁|r", --7869
 "一箱魔瓶£任务物品£唯一£|cffffd100\"箱子里装着一些空的魔瓶。\"|r", --7870
 "收集技能证明物£任务物品£唯一", --7871
@@ -6201,9 +6201,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "德提亚姆能量石£任务物品", --8009
 "加勒特的家族宝藏£任务物品", --8026
 "克罗姆·粗臂的宝藏£任务物品", --8027
-"|cff0070dd设计图：秘银符文战锤|r£使用： 教你学会制作秘银符文战锤。£|cff1eff00\n秘银符文战锤|r£装备后绑定£单手£锤£41 - 76伤害£速度 2.00£（每秒伤害29.2）£+7 力量£+4 耐力£\n需要秘银锭 (18), 大地之核 (2), 坚固的砂轮, 厚皮 (4)", --8028
+"|cff0070dd设计图：秘银符文战锤|r£使用： 教你学会制作秘银符文战锤。£|cff1eff00\n秘银符文战锤|r£装备后绑定£单手£41 - 76伤害£速度 2.00£（每秒伤害29.2）£+7 力量£+4 耐力£\n需要秘银锭 (18), 大地之核 (2), 坚固的砂轮, 厚皮 (4)", --8028
 "|cff1eff00设计图：秘银魔剑|r£拾取后绑定£使用： 教你学会制作秘银魔剑。£|cff1eff00\n秘银魔剑|r£装备后绑定£单手£48 - 90伤害£速度 2.60£（每秒伤害26.5）£|cff00ff00装备： 爆击等级提高4点。|r£|cff00ff00装备： 攻击强度提高12点。|r£\n需要秘银锭 (14), 真银锭 (4), 坚固的砂轮, 厚皮 (2)", --8029
-"设计图：乌木刀£拾取后绑定£使用： 教你学会制作乌木刀。£|cff1eff00\n乌木刀|r£装备后绑定£单手£32 - 59伤害£速度 1.50£（每秒伤害30.3）£+9 敏捷£\n需要秘银锭 (12), 真银锭 (6), 红宝石 (2), 坚固的砂轮, 厚皮 (2)", --8030
+"设计图：乌木刀£拾取后绑定£使用： 教你学会制作乌木刀。£|cff1eff00\n乌木刀|r£装备后绑定£单手£匕首£32 - 59伤害£速度 1.50£（每秒伤害30.3）£+9 敏捷£\n需要秘银锭 (12), 真银锭 (6), 红宝石 (2), 坚固的砂轮, 厚皮 (2)", --8030
 "吉尔妮的日记£拾取后绑定£唯一", --8046
 "紫色蘑菇£任务物品", --8047
 "翡翠摄梦符£任务物品", --8048
@@ -6569,7 +6569,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "德兰的蜜糖£唯一£|cffffd100\"桶里有德兰的蜜糖和一些瓶子。\"|r", --8685
 "秘银坠饰£任务物品£唯一£|cffffd100\"上面刻有加尔文的徽记\"|r", --8686
 "神秘访客的资料£任务物品£唯一", --8687
-"|cff9e9e9eBind On Acquire Test Item|r£|cff00ff00使用： 发射一枚火球攻击目标，对其造成16到|r|cff7f7f7f25|r|cff00ff00点火焰伤害，并在4秒内造成额外的|r|cff7f7f7f2|r|cff00ff00点火焰伤害。 （30秒冷却）|r", --8688
+"拾取后绑定£|cff00ff00使用： 发射一枚火球攻击目标，对其造成16到|r|cff7f7f7f25|r|cff00ff00点火焰伤害，并在4秒内造成额外的|r|cff7f7f7f2|r|cff00ff00点火焰伤害。 （30秒冷却）|r", --8688
 "|cff1eff00技艺徽记|r£拾取后绑定£唯一£饰品£|cff00ff00使用： 召唤锻造锤。 （3小时冷却）|r£|cffffd100\"光荣的秘银会成员\"|r", --8703
 "|cff1eff00OOX-09/HL定位器|r£拾取后绑定£唯一£该物品将触发一个任务", --8704
 "|cff1eff00OOX-22/FE定位器|r£拾取后绑定£唯一£该物品将触发一个任务", --8705
@@ -6754,9 +6754,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e苦楚精华|r£|cffffd100\"潜行者制毒所需的原料。\"|r", --8923
 "|cff9e9e9e堕落之尘|r£|cffffd100\"潜行者制毒所需的原料。\"|r", --8924
 "水晶瓶£ ", --8925
-"速效药膏 IV£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成47点自然伤害。|r", --8926
-"速效药膏 V£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成64点自然伤害。|r", --8927
-"速效药膏 VI£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成78点自然伤害。|r", --8928
+"速效药膏 IV£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成46点自然伤害。|r", --8926
+"速效药膏 V£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成63点自然伤害。|r", --8927
+"速效药膏 VI£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成77点自然伤害。|r", --8928
 "圣契：驱魔术 IV£|cff00ff00使用： Teaches Exorcism (Rank 3).|r", --8929
 "圣契：正义圣印 IV£|cffffd100\"Teaches Seal of Righteousness (Rank 3).\"|r", --8930
 "圣契：十字军打击 IV£|cff00ff00使用： Teaches Holy Light (Rank 2).|r", --8931
@@ -6781,85 +6781,85 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "强效防御药剂£|cff00ff00使用： 护甲提高250点，持续1小时。守护药剂。|r", --8951
 "烤鹌鹑£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --8952
 "油炸大蕉£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --8953
-"圣典：圣言术：韧£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 2).|r", --8954
-"圣典：渐隐术£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 1).|r", --8955
+"圣典：圣言术：韧£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 2).|r", --8954
+"圣典：渐隐术£|cff00ff00使用： Teaches Renew (Rank 1).|r", --8955
 "献祭之油£|cff00ff00使用： 每3秒钟对施法者周围5范围内的所有敌人造成50点火焰伤害，持续15秒。|r", --8956
 "刺脊比目鱼£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --8957
-"圣典：心灵震爆£职业：牧师£|cff00ff00使用： Teaches Mind Rot.|r", --8958
+"圣典：心灵震爆£|cff00ff00使用： Teaches Mind Rot.|r", --8958
 "新鲜的刺脊比目鱼£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r", --8959
-"圣典：祛病术£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 2).|r", --8960
-"圣典：心灵尖啸£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 2).|r", --8961
-"圣典：心灵震爆 II£职业：牧师£|cff00ff00使用： Teaches Mind Rot.|r", --8962
-"圣典：安抚心灵£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8963
-"圣典：快速治疗£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8964
-"圣典：渐隐术 II£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8965
-"圣典：束缚亡灵£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8966
-"圣典：心灵震爆 III£职业：牧师£|cff00ff00使用： Teaches Mind Vision (Rank 1).|r", --8967
-"圣典：法力燃烧£职业：牧师£|cff00ff00使用： Teaches Holy Word: Shield (Rank 4).|r", --8968
-"圣典：快速治疗 II£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 4).|r", --8969
-"圣典：心灵尖啸 II£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8971
-"圣典：心灵震爆 IV£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8972
+"圣典：祛病术£|cff00ff00使用： Teaches Renew (Rank 2).|r", --8960
+"圣典：心灵尖啸£|cff00ff00使用： Teaches Renew (Rank 2).|r", --8961
+"圣典：心灵震爆 II£|cff00ff00使用： Teaches Mind Rot.|r", --8962
+"圣典：安抚心灵£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8963
+"圣典：快速治疗£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8964
+"圣典：渐隐术 II£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8965
+"圣典：束缚亡灵£|cff00ff00使用： Teaches Inner Fire (Rank 2).|r", --8966
+"圣典：心灵震爆 III£|cff00ff00使用： Teaches Mind Vision (Rank 1).|r", --8967
+"圣典：法力燃烧£|cff00ff00使用： Teaches Holy Word: Shield (Rank 4).|r", --8968
+"圣典：快速治疗 II£|cff00ff00使用： Teaches Renew (Rank 4).|r", --8969
+"圣典：心灵尖啸 II£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8971
+"圣典：心灵震爆 IV£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8972
 "厚重的雪人皮£任务物品", --8973
-"圣典：精神控制£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8974
-"圣典：渐隐术 III£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8975
-"圣典：废除疾病£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 2).|r", --8976
-"圣典：法力燃烧 II£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 5).|r", --8977
-"圣典：快速治疗 III£职业：牧师£|cff00ff00使用： Teaches Renew (Rank 5).|r", --8978
-"圣典：心灵震爆 V£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 4).|r", --8980
-"圣典：安抚心灵 II£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --8981
-"圣典：快速治疗 IV£职业：牧师£|cff00ff00使用： Teaches Holy Smite (Rank 6).|r", --8983
-"致命药膏 III£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成58点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --8984
-"致命药膏 IV£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成78点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --8985
-"圣典：束缚亡灵 II£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8986
-"圣典：防护神圣 II£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8987
-"圣典：法力燃烧 III£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8988
-"圣典：渐隐术 IV£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8989
-"圣典：心灵震爆 VI£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8990
-"圣典：心灵之火 IV£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8991
-"圣典：心灵尖啸 III£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8992
-"圣典：防护暗影 II£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8993
-"圣典：暗言术：痛 VI£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8994
-"圣典：圣言术：盾 VII£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8995
-"圣典：复活术 III£职业：牧师£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8996
-"圣典：精神控制 II£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8997
-"圣典：心灵视界 II£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8998
-"圣典：快速治疗 V£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8999
-"圣典：恢复 VII£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9000
-"圣典：强效治疗术 II£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9001
-"圣典：心灵震爆 VII£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9002
-"圣典：圣光击 VII£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9003
-"圣典：圣言术：韧 V£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --9004
-"圣典：法力燃烧 IV£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --9005
-"圣典：圣言术：盾 VIII£职业：牧师£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --9006
-"圣典：渐隐术 V£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9007
-"圣典：治疗祷言 III£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9008
-"圣典：心灵之火 V£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9009
-"圣典：快速治疗 VI£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9010
-"圣典：暗言术：痛 VII£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9011
-"圣典：恢复 VIII£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9012
-"圣典：强效治疗术 III£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9013
-"圣典：安抚心灵 III£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9014
-"圣典：心灵震爆 VIII£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9015
-"圣典：圣光击 VIII£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9016
-"圣典：防护神圣 III£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9017
-"圣典：圣言术：盾 IX£职业：牧师£|cff00ff00使用： Teaches Greater Heal.|r", --9018
-"圣典：恢复 IX£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9019
-"圣典：心灵尖啸 IV£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9020
-"圣典：法力燃烧 V£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9021
-"圣典：快速治疗 VII£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9022
-"圣典：防护暗影 III£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9023
-"圣典：精神控制 III£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9024
-"圣典：强效治疗术 IV£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9025
-"圣典：复活术 IV£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9026
-"圣典：心灵震爆 IX£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9027
-"圣典：暗言术：痛 VIII£职业：牧师£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9028
-"圣典：渐隐术 VI£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9029
+"圣典：精神控制£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8974
+"圣典：渐隐术 III£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8975
+"圣典：废除疾病£|cff00ff00使用： Teaches Renew (Rank 2).|r", --8976
+"圣典：法力燃烧 II£|cff00ff00使用： Teaches Renew (Rank 5).|r", --8977
+"圣典：快速治疗 III£|cff00ff00使用： Teaches Renew (Rank 5).|r", --8978
+"圣典：心灵震爆 V£|cff00ff00使用： Teaches Heal (Rank 4).|r", --8980
+"圣典：安抚心灵 II£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --8981
+"圣典：快速治疗 IV£|cff00ff00使用： Teaches Holy Smite (Rank 6).|r", --8983
+"致命药膏 III£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成57点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --8984
+"致命药膏 IV£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成77点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --8985
+"圣典：束缚亡灵 II£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8986
+"圣典：防护神圣 II£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8987
+"圣典：法力燃烧 III£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8988
+"圣典：渐隐术 IV£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8989
+"圣典：心灵震爆 VI£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8990
+"圣典：心灵之火 IV£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --8991
+"圣典：心灵尖啸 III£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8992
+"圣典：防护暗影 II£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8993
+"圣典：暗言术：痛 VI£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8994
+"圣典：圣言术：盾 VII£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8995
+"圣典：复活术 III£|cff00ff00使用： Teaches Heal (Rank 3).|r", --8996
+"圣典：精神控制 II£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8997
+"圣典：心灵视界 II£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8998
+"圣典：快速治疗 V£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --8999
+"圣典：恢复 VII£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9000
+"圣典：强效治疗术 II£|cff00ff00使用： Teaches Greater Heal.|r", --9001
+"圣典：心灵震爆 VII£|cff00ff00使用： Teaches Greater Heal.|r", --9002
+"圣典：圣光击 VII£|cff00ff00使用： Teaches Greater Heal.|r", --9003
+"圣典：圣言术：韧 V£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --9004
+"圣典：法力燃烧 IV£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --9005
+"圣典：圣言术：盾 VIII£|cff00ff00使用： Teaches Holy Word: Fortitude (Rank 4).|r", --9006
+"圣典：渐隐术 V£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9007
+"圣典：治疗祷言 III£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9008
+"圣典：心灵之火 V£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9009
+"圣典：快速治疗 VI£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9010
+"圣典：暗言术：痛 VII£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9011
+"圣典：恢复 VIII£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9012
+"圣典：强效治疗术 III£|cff00ff00使用： Teaches Greater Heal.|r", --9013
+"圣典：安抚心灵 III£|cff00ff00使用： Teaches Greater Heal.|r", --9014
+"圣典：心灵震爆 VIII£|cff00ff00使用： Teaches Greater Heal.|r", --9015
+"圣典：圣光击 VIII£|cff00ff00使用： Teaches Greater Heal.|r", --9016
+"圣典：防护神圣 III£|cff00ff00使用： Teaches Greater Heal.|r", --9017
+"圣典：圣言术：盾 IX£|cff00ff00使用： Teaches Greater Heal.|r", --9018
+"圣典：恢复 IX£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9019
+"圣典：心灵尖啸 IV£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9020
+"圣典：法力燃烧 V£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9021
+"圣典：快速治疗 VII£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9022
+"圣典：防护暗影 III£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9023
+"圣典：精神控制 III£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9024
+"圣典：强效治疗术 IV£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9025
+"圣典：复活术 IV£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9026
+"圣典：心灵震爆 IX£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9027
+"圣典：暗言术：痛 VIII£|cff00ff00使用： Teaches Inner Fire (Rank 3).|r", --9028
+"圣典：渐隐术 VI£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9029
 "滋补药剂£|cff00ff00使用： 每5秒从你身上驱散1个魔法、诅咒、中毒或疾病效果。持续30秒。|r", --9030
-"圣典：束缚亡灵 III£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9031
-"圣典：治疗祷言 IV£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9032
-"圣典：心灵之火 VI£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9033
-"圣典：圣言术：韧 VI£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9034
-"圣典：圣言术：盾 X£职业：牧师£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9035
+"圣典：束缚亡灵 III£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9031
+"圣典：治疗祷言 IV£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9032
+"圣典：心灵之火 VI£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9033
+"圣典：圣言术：韧 VI£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9034
+"圣典：圣言术：盾 X£|cff00ff00使用： Teaches Prayer of Healing (Rank 2).|r", --9035
 "抗魔药水£|cff00ff00使用： 使你对所有魔法的抗性提高50点，持续3分钟。|r", --9036
 "石板：石化武器£|cff00ff00使用： Teaches Lightning Bolt (Rank 2).|r", --9037
 "石板：地震术£|cff00ff00使用： Teaches Serpent Totem (Rank 1).|r", --9039
@@ -6992,45 +6992,45 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "强效敏捷药剂£|cff00ff00使用： 使敏捷提高25点，持续1小时。战斗药剂。|r", --9187
 "石板：灼热图腾 II£|cffffd100\"Teaches Molten Blast (Rank 4).\"|r", --9188
 "沙恩的铃铛£任务物品£唯一£持续时间：15分钟£|cff00ff00使用： 摇响铃铛，将沙恩召回你的身边。 （1分钟冷却）|r", --9189
-"魔典：献祭£|cff00ff00使用： Teaches Immolate (Rank 2).|r", --9190
-"魔典：虚弱诅咒£|cff00ff00使用： Teaches Curse of Tongues (Rank 1).|r", --9191
-"魔典：腐蚀术£|cff00ff00使用： Teaches Corruption (Rank 1).|r", --9192
-"魔典：生命分流£|cff00ff00使用： Teaches Shadow Bolt (Rank 2).|r", --9193
-"魔典：痛苦诅咒£|cff00ff00使用： Teaches Curse of Agony (Rank 1).|r", --9194
-"魔典：吸取灵魂£|cff00ff00使用： Teaches Fear (Rank 1).|r", --9195
+"魔典：献祭£职业：术士£|cff00ff00使用： Teaches Immolate (Rank 2).|r", --9190
+"魔典：虚弱诅咒£职业：术士£|cff00ff00使用： Teaches Curse of Tongues (Rank 1).|r", --9191
+"魔典：腐蚀术£职业：术士£|cff00ff00使用： Teaches Corruption (Rank 1).|r", --9192
+"魔典：生命分流£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 2).|r", --9193
+"魔典：痛苦诅咒£职业：术士£|cff00ff00使用： Teaches Curse of Agony (Rank 1).|r", --9194
+"魔典：吸取灵魂£职业：术士£|cff00ff00使用： Teaches Fear (Rank 1).|r", --9195
 "梦境药剂£|cff00ff00使用： 使你获得梦境视界，可以观察那些过于危险的区域。|r", --9197
-"魔典：生命通道£|cff00ff00使用： Teaches Health Funnel (Rank 1).|r", --9198
-"魔典：鲁莽诅咒£|cff00ff00使用： Teaches Health Funnel (Rank 1).|r", --9199
-"魔典：虚弱诅咒 II£|cff00ff00使用： Teaches Drain Life (Rank 1).|r", --9200
-"魔典：腐蚀术 II£|cff00ff00使用： Teaches Corruption (Rank 2).|r", --9201
-"魔典：生命分流 II£使用： Teaches Create Soulstone.£\n初级灵魂石£魔法制造的物品£拾取后绑定£唯一£|cff00ff00使用： 保存友方目标的灵魂。如果目标在灵魂被保存期间死去，则他可以立刻复活，并恢复400点生命值和700点法力值。 （15分钟冷却）|r£\n需要灵魂碎片", --9202
-"魔典：召唤仪式£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9203
-"魔典：生命通道 II£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9204
-"魔典：痛苦诅咒 II£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9205
+"魔典：生命通道£职业：术士£|cff00ff00使用： Teaches Health Funnel (Rank 1).|r", --9198
+"魔典：鲁莽诅咒£职业：术士£|cff00ff00使用： Teaches Health Funnel (Rank 1).|r", --9199
+"魔典：虚弱诅咒 II£职业：术士£|cff00ff00使用： Teaches Drain Life (Rank 1).|r", --9200
+"魔典：腐蚀术 II£职业：术士£|cff00ff00使用： Teaches Corruption (Rank 2).|r", --9201
+"魔典：生命分流 II£职业：术士£使用： Teaches Create Soulstone.£\n初级灵魂石£魔法制造的物品£拾取后绑定£唯一£|cff00ff00使用： 保存友方目标的灵魂。如果目标在灵魂被保存期间死去，则他可以立刻复活，并恢复400点生命值和700点法力值。 （15分钟冷却）|r£\n需要灵魂碎片", --9202
+"魔典：召唤仪式£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9203
+"魔典：生命通道 II£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9204
+"魔典：痛苦诅咒 II£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9205
 "巨人药剂£|cff00ff00使用： 使你的力量提高25点，持续1小时。战斗药剂。|r", --9206
-"魔典：制作血石 II£|cff00ff00使用： Teaches Fear (Rank 2).|r", --9207
-"魔典：吸取灵魂 II£|cff00ff00使用： Teaches Fear (Rank 2).|r", --9208
-"魔典：虚弱诅咒 III£|cff00ff00使用： Teaches Fear (Rank 2).|r", --9209
+"魔典：制作血石 II£职业：术士£|cff00ff00使用： Teaches Fear (Rank 2).|r", --9207
+"魔典：吸取灵魂 II£职业：术士£|cff00ff00使用： Teaches Fear (Rank 2).|r", --9208
+"魔典：虚弱诅咒 III£职业：术士£|cff00ff00使用： Teaches Fear (Rank 2).|r", --9209
 "幻象染料£ ", --9210
-"魔典：鲁莽诅咒 II£|cff00ff00使用： Teaches Drain Mana (Rank 1).|r", --9211
-"魔典：暗影箭 V£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9212
-"|cff1eff00魔典：放逐术|r£拾取后绑定£|cff00ff00使用： Teaches Inferno.|r", --9214
-"魔典：生命通道 III£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9215
-"魔典：腐蚀术 III£|cff00ff00使用： Teaches Corruption (Rank 3).|r", --9216
-"魔典：生命分流 III£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --9217
-"魔典：奴役恶魔£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --9218
-"魔典：地狱烈焰£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --9219
-"魔典：痛苦诅咒 III£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9221
-"魔典：元素诅咒£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9222
-"魔典：虚弱诅咒 IV£|cff00ff00使用： Teaches Demon Armor (Rank 2).|r", --9223
+"魔典：鲁莽诅咒 II£职业：术士£|cff00ff00使用： Teaches Drain Mana (Rank 1).|r", --9211
+"魔典：暗影箭 V£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9212
+"|cff1eff00魔典：放逐术|r£拾取后绑定£职业：术士£|cff00ff00使用： Teaches Inferno.|r", --9214
+"魔典：生命通道 III£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9215
+"魔典：腐蚀术 III£职业：术士£|cff00ff00使用： Teaches Corruption (Rank 3).|r", --9216
+"魔典：生命分流 III£职业：术士£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --9217
+"魔典：奴役恶魔£职业：术士£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --9218
+"魔典：地狱烈焰£职业：术士£|cff00ff00使用： Teaches Drain Life (Rank 3).|r", --9219
+"魔典：痛苦诅咒 III£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9221
+"魔典：元素诅咒£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 1).|r", --9222
+"魔典：虚弱诅咒 IV£职业：术士£|cff00ff00使用： Teaches Demon Armor (Rank 2).|r", --9223
 "屠魔药剂£|cff00ff00使用： 使你对恶魔的攻击强度提高105点，持续1小时。战斗药剂。|r", --9224
-"魔典：暗影箭 VI£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9225
-"魔典：生命通道 IV£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9226
-"魔典：吸取灵魂 III£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --9227
-"魔典：制作血石 III£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --9228
-"魔典：生命吸取 IV£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --9229
-"魔典：鲁莽诅咒 II£|cffffd100\"Teaches Detect Invisibility.\"|r", --9230
-"魔典：腐蚀术 IV£|cff00ff00使用： Teaches Rain of Fire (Rank 2).|r", --9231
+"魔典：暗影箭 VI£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9225
+"魔典：生命通道 IV£职业：术士£|cff00ff00使用： Teaches Shadow Bolt (Rank 4).|r", --9226
+"魔典：吸取灵魂 III£职业：术士£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --9227
+"魔典：制作血石 III£职业：术士£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --9228
+"魔典：生命吸取 IV£职业：术士£|cffffd100\"Teaches Drain Mana (Rank 2).\"|r", --9229
+"魔典：鲁莽诅咒 II£职业：术士£|cffffd100\"Teaches Detect Invisibility.\"|r", --9230
+"魔典：腐蚀术 IV£职业：术士£|cff00ff00使用： Teaches Rain of Fire (Rank 2).|r", --9231
 "侦测恶魔药剂£|cff00ff00使用： 在微缩地图上显示附近所有恶魔的位置，持续1小时。|r", --9233
 "深渊皇冠£任务物品£唯一", --9234
 "普拉特的信£任务物品£唯一", --9235
@@ -7230,7 +7230,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd充能齿轮|r£ ", --9461
 "一箱恐怖图腾之角£任务物品£唯一", --9462
 "戈杜尼钴矿石£任务物品", --9463
-"Deprecated Orwin's Shovel£任务物品£48 - 73伤害", --9464
+"任务物品£48 - 73伤害", --9464
 "|cff0070dd挖掘大师5000型|r£|cffffd100\"也可以当作矿工锄使用。\"|r", --9465
 "奥尔文的铲子£任务物品£唯一£|cff00ff00使用： 右键点击以挖掘戈杜尼钴矿。|r", --9466
 "|cff0070dd加兹瑞拉之牙|r£ ", --9467
@@ -7320,7 +7320,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "神圣卷轴£任务物品£唯一", --9569
 "圣洁信件£任务物品£唯一", --9570
 "雕文信件£任务物品£唯一", --9571
-"<UNUSED> Glyphic Rune£任务物品£唯一£该物品将触发一个任务", --9572
+"任务物品£唯一£该物品将触发一个任务", --9572
 "雕文备忘录£任务物品£唯一", --9573
 "雕文卷轴£任务物品£唯一", --9574
 "雕文石板£任务物品£唯一", --9575
@@ -7394,7 +7394,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00花岗岩护手|r£ ", --9656
 "|cff1eff00葡萄藤腰带|r£ ", --9657
 "|cff1eff00玛哈林之靴|r£|cff00ff00装备： 法术强度提高5点。|r", --9658
-"|cff9e9e9eMonster - Mace, Tauren Spiked|r£ ", --9659
+"单手£ ", --9659
 "|cff1eff00星眼披风|r£ ", --9660
 "|cff1eff00大地屏障|r£ ", --9661
 "|cff1eff00跨山长靴|r£ ", --9662
@@ -7414,9 +7414,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00斗士腰带|r£ ", --9687
 "|cff1eff00洞察手套|r£ ", --9698
 "|cff1eff00军营披风|r£ ", --9699
-"|cff9e9e9eMonster - Item, Sparkler Blue|r£ ", --9700
-"|cff9e9e9eMonster - Item, Sparkler Red|r£ ", --9701
-"|cff9e9e9eMonster - Item, Sparkler White|r£ ", --9702
+"唯一£ ", --9700
+"唯一£ ", --9701
+"唯一£ ", --9702
 "|cff1eff00烧焦的斗篷|r£ ", --9703
 "|cff1eff00盗马贼手套|r£ ", --9704
 "|cff1eff00萨尔格的鞋带|r£ ", --9705
@@ -7573,7 +7573,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00猎户长靴|r£ ", --9885
 "|cff1eff00猎户护腕|r£ ", --9886
 "|cff1eff00猎户胸甲|r£ ", --9887
-"|cff1eff00Deprecated Elven Protector|r£ ", --9888
+"装备后绑定£ ", --9888
 "|cff1eff00猎户小帽|r£ ", --9889
 "|cff1eff00猎户斗篷|r£ ", --9890
 "|cff1eff00精灵腰带|r£ ", --9891
@@ -8100,7 +8100,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "拉格纳罗斯符记£任务物品£唯一£|cffffd100\"散发着古老魔法能量的符记\"|r", --10552
 "|cff1eff00工头外衣|r£|cff00ff00装备： 法术强度提高2点。|r", --10553
 "|cff1eff00工头短裤|r£|cff00ff00装备： 法术强度提高1点。|r", --10554
-"Resist Test Item£ ", --10555
+"手指£ ", --10555
 "石环£任务物品£唯一", --10556
 "黄金能量核心£ ", --10558
 "秘银管£ ", --10559
@@ -8112,7 +8112,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "拓文：玛科里符文£任务物品", --10565
 "拓文：塞尔哈符文£任务物品", --10566
 "|cff0070dd硬刺之弓|r£|cff00ff00装备： 有一定几率对你的远程攻击目标造成66到|r|cff7f7f7f98|r|cff00ff00点自然伤害。|r", --10567
-"|cff9e9e9eMonster - Mace2H, Pacifier|r£ ", --10568
+"双手£ ", --10568
 "黑龙军团宝箱£拾取后绑定£唯一£|cffffd100\"盖有欺诈者威拉罗克的徽记。\"|r", --10569
 "|cff0070dd杀人者|r£|cff00ff00装备： 攻击强度提高38点。|r", --10570
 "|cff0070dd乌黑骨棒|r£ ", --10571
@@ -8135,12 +8135,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00地精火箭头盔|r£|cff00ff00使用： 向目标冲锋，将其打傻30秒。这个技能也会使你被击倒并在短时间内昏迷。任何伤害都会唤醒目标。对60级以上的目标有可能失效。 （20分钟冷却）|r", --10588
 "伊瑟拉巨龙军团的誓言石£任务物品£唯一£该物品将触发一个任务£|cffffd100\"使用这块石头以发誓帮助伊瑟拉的巨龙军团。\"|r", --10589
 "布满孔洞的黑匣子£拾取后绑定£唯一£该物品将触发一个任务", --10590
-"|cff9e9e9eMonster - Mace, Stormhammer|r£ ", --10591
+"单手£ ", --10591
 "猫眼药剂£|cff00ff00使用： 使你的侦测潜行能力略微提高，持续10分钟。|r", --10592
 "|cff1eff00不完美的德莱尼水晶碎片|r£ ", --10593
-"[PH] Hakkar'i Urn£拾取后绑定£唯一£|cffffd100\"Invalid loot table, crashes when you modify Miscellaneous\"|r", --10594
-"|cff1eff00库米沙的垃圾袋|r£拾取后绑定£|cffffd100\"Invalid loot table, crashes when you modify Miscellaneous\"|r", --10595
-"|cff9e9e9eDeprecated Rose Colored Goggles|r£ ", --10596
+"拾取后绑定£唯一", --10594
+"|cff1eff00库米沙的垃圾袋|r£拾取后绑定", --10595
+"装备后绑定£ ", --10596
 "大法师雷姆托里的徽记£任务物品£唯一", --10597
 "染血的赫塔拉徽记£任务物品", --10598
 "破碎的赫塔拉徽记£任务物品", --10599
@@ -8155,15 +8155,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd结构图：狙击瞄准镜|r£使用： 教你学会制作狙击瞄准镜。£\n狙击瞄准镜£|cff00ff00使用： 在弓或枪械上加装永久性的瞄准镜，使其攻击伤害提高7点。\r\n\r\n加装瞄准镜后的远程武器会变成灵魂绑定物品。|r£\n需要秘银管, 红宝石, 真银锭 (2)", --10608
 "结构图：秘银机械幼龙£使用： 教你学会制作秘银机械幼龙。£|cff1eff00\n秘银机械幼龙|r£装备后绑定£装备唯一£饰品£|cff00ff00使用： 召唤你的秘银机械幼龙为你作战，持续1分钟。 （5分钟冷却）|r£\n需要秘银锭 (4), 火焰之心 (2), 真银锭 (4), 红宝石", --10609
 "赫塔拉之血£任务物品£唯一£|cffffd100\"海之女皇的血\"|r", --10610
-"|cff9e9e9eMonster - Axe, Horde Badass 01|r£ ", --10611
-"|cff9e9e9eMonster - Axe, Horde Badass 02 |r£ ", --10612
-"|cff9e9e9eMonster - Sword, Katana|r£ ", --10613
-"|cff9e9e9eMonster - Sword, Horde Sword Black|r£ ", --10614
-"|cff9e9e9eMonster - Sword, Horde Sword Red|r£ ", --10615
-"|cff9e9e9eMonster - Dagger, Curvey Silver|r£ ", --10616
-"|cff9e9e9eMonster - Dagger, Curved Bone Bloody|r£ ", --10617
-"|cff9e9e9eMonster - Dagger, Tanto Blade|r£ ", --10618
-"|cff9e9e9eMonster - Dagger, Badass Red|r£ ", --10619
+"单手£ ", --10611
+"单手£ ", --10612
+"单手£ ", --10613
+"单手£ ", --10614
+"单手£ ", --10615
+"单手£ ", --10616
+"单手£ ", --10617
+"单手£ ", --10618
+"单手£ ", --10619
 "瑟银矿石£ ", --10620
 "符文卷轴£拾取后绑定£唯一£该物品将触发一个任务", --10621
 "卡德拉克的旗子£任务物品£唯一£|cff00ff00使用： 放置在猛禽洞穴中。|r", --10622
@@ -8216,7 +8216,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "奔尼斯特拉兹的誓言石£任务物品£唯一", --10682
 "探险者的背包£拾取后绑定£16格容器", --10683
 "双塔山降落伞£拾取后绑定£唯一£持续时间：20分钟£|cff00ff00使用： 使你的坠落速度减缓10秒。|r", --10684
-"|cff9e9e9eMonster - Mace2H, Kazon's Maul|r£ ", --10685
+"双手£ ", --10685
 "|cff0070dd战争之盾|r£|cff00ff00装备： 使你的躲闪等级提高11点。|r", --10686
 "空瓶子#1£拾取后绑定£唯一£|cff00ff00使用： 你应在艾萨拉的第一座海潮之池中灌满这个容器。|r", --10687
 "空瓶子#2£拾取后绑定£唯一£|cff00ff00使用： 你应在艾萨拉的第二座海潮之池中灌满这个容器。|r", --10688
@@ -8278,7 +8278,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "戈洛尔的护符£任务物品£|cffffd100\"毁灭者戈洛尔曾戴着的护符。\"|r", --10753
 "瑟温妮的护符£任务物品£|cffffd100\"瑟温妮的邪恶气息仍然从这个护符中不断散发出来。\"|r", --10754
 "奥利斯塔的护符£任务物品£|cffffd100\"一个强大法师的遗物。\"|r", --10755
-"|cff9e9e9eMonster - Mace2H, Smite's Mighty Hammer|r£ ", --10756
+"双手£ ", --10756
 "污染者防护结界£任务物品£唯一£|cff00ff00使用： 在污染者祭坛上使用以召唤拉瑟莱克。|r£|cffffd100\"完整的拉瑟莱克护符。\"|r", --10757
 "|cff0070dd石猪剑|r£ ", --10758
 "污染者之角£任务物品£|cffffd100\"一支从污染者拉瑟莱克头上砍下来的血淋淋的角。\"|r", --10759
@@ -8338,7 +8338,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "黑龙宝宝£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --10822
 "|cff0070dd征服者之剑|r£|cff00ff00装备： 攻击强度提高28点。|r", --10823
 "|cff0070dd琥珀之光|r£ ", --10824
-"|cff9e9e9eMonster - Sword, Red Long|r£ ", --10825
+"单手£ ", --10825
 "|cff1eff00学识法杖|r£ ", --10826
 "|cff1eff00勘探员外套|r£ ", --10827
 "|cff0070dd恐惧龙指|r£ ", --10828
@@ -8361,14 +8361,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd战士的拥抱|r£|cff00ff00装备： 防御等级提高24。|r", --10845
 "|cff0070dd溅血胫甲|r£|cff00ff00装备： 攻击强度提高10点。|r", --10846
 "|cffa335ed龙之召唤|r£ ", --10847
-"设计图：结实的铁锤£使用： 教你学会制造结实的铁锤。£|cff1eff00\n结实的铁锤|r£装备后绑定£锤£59 - 89伤害£速度 3.50£（每秒伤害21.1）£+12 耐力£\n需要铁锭 (8), 强效助熔剂 (2), 重砂轮, 银锭 (4), 重皮 (2)", --10858
-"|cff9e9e9eMonster - Sword, Horde Jagged Green|r£ ", --10878
-"|cff9e9e9eMonster - Sword, Horde Sword Centurion|r£ ", --10898
-"致伤药膏£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到18点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10918
+"设计图：结实的铁锤£使用： 教你学会制造结实的铁锤。£|cff1eff00\n结实的铁锤|r£装备后绑定£双手£59 - 89伤害£速度 3.50£（每秒伤害21.1）£+12 耐力£\n需要铁锭 (8), 强效助熔剂 (2), 重砂轮, 银锭 (4), 重皮 (2)", --10858
+"单手£ ", --10878
+"单手£ ", --10898
+"致伤药膏£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到17点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10918
 "|cff1eff00药剂师手套|r£ ", --10919
-"致伤药膏 II£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到26点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10920
-"致伤药膏 III£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到39点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10921
-"致伤药膏 IV£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到54点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10922
+"致伤药膏 II£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到25点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10920
+"致伤药膏 III£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到38点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10921
+"致伤药膏 IV£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到53点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --10922
 "|cff1eff00次级魔法精华|r£|cff00ff00使用： 将三块次级魔法精华转化为一块强效魔法精华。|r", --10938
 "|cff1eff00强效魔法精华|r£|cff00ff00使用： 将一块强效魔法精华转化为三块次级魔法精华。|r", --10939
 "奇异之尘£ ", --10940
@@ -8379,20 +8379,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "铁胆之锤£任务物品£唯一£|cffffd100\"战锤的表面上刻着几个字母：F.F.F\"|r", --10999
 "暗炉钥匙£拾取后绑定£唯一£|cffffd100\"通往黑石深渊的钥匙...\"|r", --11000
 "安戈洛的泥土£ ", --11018
-"|cff9e9e9eMonster - Sword, Horde Jagged Bloody|r£ ", --11019
+"单手£ ", --11019
 "常青袋£拾取后绑定£唯一£|cff00ff00使用： 使用两份安戈洛的泥土和一份萨伦迪斯种子制造出一个常青草药包。 （5秒冷却）|r", --11020
-"|cff9e9e9eMonster - Big Sniper Gun|r£ ", --11021
+"", --11021
 "萨伦迪斯种子£ ", --11022
 "灰色小鸡£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --11023
 "常青草药包£拾取后绑定£|cffffd100\"袋子里装着用安戈洛的泥土种植的萨伦迪斯种子。\"|r", --11024
-"|cff9e9e9eMonster - Sword, Katana 2H|r£ ", --11025
+"单手£ ", --11025
 "树蛙盒£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --11026
 "林蛙盒£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --11027
 "|cff1eff00公式：附魔双手武器 - 次级精神|r£|cff00ff00使用： 教你学会永久性地为一把双手近战武器附魔，使其获得精神+3的效果。|r", --11038
 "|cff1eff00公式：附魔披风 - 初级敏捷|r£|cff00ff00使用： 教你学会永久性地为一件披风附魔，使其获得敏捷+1的效果。|r", --11039
 "晨光麦£ ", --11040
-"|cff9e9e9eMonster - Shield, Kite Metal Gold|r£ ", --11041
-"|cff9e9e9eMonster - Sword, Horde Jagged w/ Bolts|r£ ", --11042
+"副手£ ", --11041
+"单手£ ", --11042
 "沙妮的鼻环£任务物品£唯一", --11058
 "遗物宝箱钥匙£|cff00ff00使用： 打开黑暗宝库的大门。|r", --11078
 "戈泰什的徽记£任务物品£唯一£|cff00ff00使用： 放在软土堆上。|r£|cffffd100\"戈泰什的徽记，放在一根长矛上。\"|r", --11079
@@ -8403,7 +8403,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd大块微光碎片|r£ ", --11084
 "本月最佳顾客宝箱钥匙£任务物品£|cff00ff00使用： 打开黑暗守护者宝箱|r", --11085
 "|cff0070dd保护者迦萨斯|r£|cff00ff00使用： 将迦萨斯和桑萨斯组合成为神剑苏萨斯。|r", --11086
-"|cff9e9e9eMonster - Sword2H, Ragglesnout X'Caliboar|r£ ", --11087
+"单手£ ", --11087
 "|cff1eff00公式：附魔披风 - 抵抗次级暗影|r£|cff00ff00使用： 教你学会永久性地为一件披风附魔，使其获得暗影抗性+10的效果。|r", --11098
 "黑铁矿石£ ", --11099
 "|cff1eff00公式：附魔护腕 - 次级力量|r£|cff00ff00使用： 教你学会永久性地为一副护腕附魔，使其获得力量+3的效果。|r", --11101
@@ -8465,7 +8465,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00公式：附魔靴子 - 次级精神|r£|cff00ff00使用： 教你学会永久性地为一双靴子附魔，使其获得精神+3的效果。|r", --11167
 "|cff1eff00公式：附魔盾牌 - 次级格挡|r£|cff00ff00使用： 教你学会永久性地为一面盾牌附魔，使其获得格挡等级+10的效果。|r", --11168
 "阿奎尔之书£任务物品£唯一£|cff00ff00使用： 召唤亚奎门塔斯。 （5分钟冷却）|r", --11169
-"Deprecated Silver Totem of Aquementas£|cff00ff00使用： 驱散火焰使者的光环。 （45秒冷却）|r", --11170
+"任务物品£|cff00ff00使用： 驱散火焰使者的光环。 （45秒冷却）|r", --11170
 "魔铁£任务物品", --11171
 "银爪£任务物品", --11172
 "铁树之心£任务物品£唯一", --11173
@@ -8514,7 +8514,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "视灵药剂£任务物品£|cff00ff00使用： 在塔纳利斯的墓地中饮用。|r", --11243
 "|cff0070dd洛瑞卡宝珠|r£ ", --11262
 "|cff0070dd虚空灵力魔杖|r£|cff00ff00装备： 法术强度提高7点。|r", --11263
-"|cff9e9e9eMonster - Mace, Baron Silverlaine|r£ ", --11264
+"单手£ ", --11264
 "|cff1eff00峭壁木槌|r£ ", --11265
 "断裂的元素碎片£任务物品", --11266
 "元素碎片样本£任务物品£唯一", --11267
@@ -8543,32 +8543,32 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd灰烬之鳞|r£ ", --11311
 "遗失的雷酒秘方£任务物品", --11312
 "雷布里的徽记£任务物品", --11313
-"|cff9e9e9eMonster - Claw Insect|r£ ", --11314
+"单手£ ", --11314
 "血瓣花苗£拾取后绑定", --11315
 "血瓣花£任务物品", --11316
-"|cff9e9e9eMonster - Axe, 2H War C01 Blue Limited|r£ ", --11317
+"双手£ ", --11317
 "阿塔莱之雾£任务物品", --11318
 "空除草器£任务物品£唯一", --11319
 "血瓣花除草器£任务物品£唯一£|cff00ff00使用： 干掉血瓣花。|r", --11320
 "|cff9e9e9eMonster - Sword2H, Horde Massive Red|r£ ", --11321
-"|cff9e9e9eMonster - Sword2H, Horde Broad|r£ ", --11322
-"|cff9e9e9eMonster - Sword2H, Horde Jagged|r£ ", --11323
+"双手£ ", --11322
+"双手£ ", --11323
 "探险者的背包£拾取后绑定£唯一£14格容器", --11324
 "黑铁酒杯£|cff00ff00使用： 朝某个烂醉的黑铁奴隶主投掷。 （1秒冷却）|r", --11325
-"|cff9e9e9eMonster - Axe, 2H Pendulum of Doom|r£ ", --11342
-"|cff9e9e9eMonster - Staff, Jeweled Red Staff|r£ ", --11343
+"双手£ ", --11342
+"双手£ ", --11343
 "中型箭袋£10格箭袋", --11362
 "中型弹药袋£10格弹药袋", --11363
 "暴风城战袍£ ", --11364
-"|cff9e9e9eMonster - Staff, Badass Red Staff|r£ ", --11365
+"双手£ ", --11365
 "赫林迪斯·河角的信£任务物品£唯一£|cffffd100\"已密封\"|r", --11366
 "所罗门写给乌瑞恩的求援信£任务物品£唯一", --11367
 "乌瑞恩的命令£任务物品£唯一£|cffffd100\"加盖着暴风城的印章\"|r", --11368
-"|cff9e9e9eMonster - Mace, Thaurissan Hammer|r£ ", --11369
+"单手£ ", --11369
 "黑铁矿石£ ", --11370
 "黑铁锭£ ", --11371
 "|cff1eff00山脉之血|r£ ", --11382
-"|cff9e9e9eMonster - Mace, Green Scepter|r£ ", --11383
+"单手£ ", --11383
 "|cff9e9e9e破损的蜥蜴牙齿|r£ ", --11384
 "|cff9e9e9e蜥蜴的鳞片|r£ ", --11385
 "|cff9e9e9e滑腻的蜥蜴眼|r£ ", --11386
@@ -8602,8 +8602,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e高雅的羽毛笔|r£ ", --11420
 "地精技师协会续费赠礼£拾取后绑定", --11422
 "侏儒技师会员卡续费赠礼£拾取后绑定", --11423
-"|cff9e9e9eMonster - Staff, Wooden Handle Spiral Head|r£ ", --11424
-"Deprecated Grim Guzzler Boar£ ", --11443
+"双手£ ", --11424
+"", --11443
 "野猪肉£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --11444
 "上古长笛£任务物品£唯一£|cff00ff00使用： 在铁木森林中召唤古树之魂。|r", --11445
 "弄皱的便笺£拾取后绑定£唯一", --11446
@@ -8630,8 +8630,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00学识护肩|r£ ", --11502
 "血琥珀£任务物品", --11503
 "蛇颈龙肉块£任务物品£唯一", --11504
-"|cff9e9e9eMonster - Claw - Bear Offhand|r£ ", --11505
-"|cff9e9e9eMonster - Claw Offhand|r£ ", --11506
+"", --11505
+"", --11506
 "斑点土狼皮£任务物品", --11507
 "Gamemaster's Slippers£ ", --11508
 "暴掠龙信息素£任务物品", --11509
@@ -8643,7 +8643,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "被污染的灵魂碎片£拾取后绑定", --11515
 "塞纳里奥植物药膏£拾取后绑定£|cffffd100\"这种德鲁伊制造的药膏可以净化被腐蚀的植物。\"|r", --11516
 "亚奎门塔斯的银图腾£|cff00ff00使用： 驱散火焰使者的光环。|r", --11522
-"|cff9e9e9eMonster - Staff, Red Feathered|r£ ", --11542
+"拾取后绑定£ ", --11542
 "恢复水晶£拾取后绑定£|cff00ff00使用： 治疗目标，在15秒内恢复总计670点生命值。|r", --11562
 "精神水晶£拾取后绑定£|cff00ff00使用： 使你的精神提高30点，持续30分钟。守护药剂。|r", --11563
 "防御水晶£拾取后绑定£|cff00ff00使用： 使你的护甲值提高200点，持续30分钟。守护药剂。|r", --11564
@@ -8656,13 +8656,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "恶魔药膏£拾取后绑定£唯一£|cff00ff00使用： 削弱污染者拉瑟莱克的仆从。必须离目标足够近才能使用。|r£|cffffd100\"对戈洛尔、瑟温妮和奥利斯塔使用，以破除拉瑟莱克的防护结界。\"|r", --11582
 "仙人掌果£任务物品", --11583
 "清凉果£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高2点，持续15分钟。|r", --11584
-"|cff9e9e9eMonster - Shield, Engineer A01|r£ ", --11585
-"|cff9e9e9eMonster - Shield, Engineer B01|r£ ", --11586
-"|cff9e9e9eMonster - Shield, Engineer C01|r£ ", --11587
-"|cff9e9e9eMonster - Staff, Jeweled D01 Green|r£ ", --11588
-"|cff9e9e9eMonster - Shield, Orange Skull|r£ ", --11589
+"副手£ ", --11585
+"副手£ ", --11586
+"副手£ ", --11587
+"双手£ ", --11588
+"副手£ ", --11589
 "机械修理包£|cff00ff00使用： 为一个友方机械单位恢复700点生命值。 （2分钟冷却）|r", --11590
-"|cff9e9e9eMonster - Sword2H, Battlefield Destroyer|r£ ", --11591
+"单手£ ", --11591
 "黑铁酒吧钥匙£唯一£|cff00ff00使用： 打开锁住的酒吧大门。|r", --11602
 "|cff0070dd污染之爪|r£ ", --11603
 "|cff0070dd黑铁板甲|r£ ", --11604
@@ -8671,7 +8671,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd黑铁斩碎者|r£ ", --11607
 "|cff0070dd黑铁粉碎者|r£ ", --11608
 "特殊的黑龙皮£任务物品£唯一£|cff00ff00使用： 在贝尔加的尸体上使用以收集他的烈焰精华。|r£|cffffd100\"用来收集贝尔加的火焰精华。\"|r", --11609
-"|cff0070dd设计图：黑铁粉碎者|r£使用： 教你学会制作黑铁粉碎者。£|cff0070dd\n黑铁粉碎者|r£装备后绑定£锤£140 - 211伤害£速度 3.70£（每秒伤害47.4）£|cff00ff00击中时可能： 使目标昏迷8秒。|r£\n需要黑铁锭 (18), 火焰之心 (4)", --11610
+"|cff0070dd设计图：黑铁粉碎者|r£使用： 教你学会制作黑铁粉碎者。£|cff0070dd\n黑铁粉碎者|r£装备后绑定£双手£140 - 211伤害£速度 3.70£（每秒伤害47.4）£|cff00ff00击中时可能： 使目标昏迷8秒。|r£\n需要黑铁锭 (18), 火焰之心 (4)", --11610
 "|cff0070dd设计图：黑铁斩碎者|r£使用： 教你学会制作黑铁斩碎者。£|cff0070dd\n黑铁斩碎者|r£装备后绑定£双手£101 - 153伤害£速度 2.60£（每秒伤害48.8）£|cff00ff00击中时可能： 使目标的护甲降低300点，持续20秒。|r£\n需要黑铁锭 (26), 火焰之心 (4)", --11611
 "|cff0070dd设计图：黑铁板甲|r£使用： 教你学会制作黑铁板甲。£|cff0070dd\n黑铁板甲|r£拾取后绑定£胸部£|cff00ff00817点护甲|r£+12 耐力£+19 火焰抗性£\n需要黑铁锭 (20), 火焰之心 (8)", --11612
 "DEBUG Samophlange Manual Cover£任务物品£|cff00ff00使用： 将封面和5页正文装订在一起便可得到《主动式负载平衡器说明书》。|r", --11613
@@ -8702,25 +8702,25 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00次级贪婪秘药|r£拾取后绑定£|cff00ff00使用： 给你的头部或腿部装备附加魔法效果，使智力提高8点。\r\n\r\n附魔之后，该装备会与你绑定。|r", --11648
 "|cff1eff00次级贪婪秘药|r£拾取后绑定£|cff00ff00使用： 给你的头部或腿部装备附加魔法效果，使精神提高8点。\r\n\r\n附魔之后，该装备会与你绑定。|r", --11649
 "|cff0070dd奥科索尔腰带|r£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 法术强度提高12点。|r", --11662
-"|cff0070dd[PH] Greater Arcane Amalgamation (MANA/FR)|r£拾取后绑定", --11663
-"|cff0070dd[PH] Greater Arcane Amalgamation (HP/FR)|r£拾取后绑定", --11664
+"拾取后绑定£ ", --11663
+"拾取后绑定£ ", --11664
 "|cff0070dd食人魔先知之拳|r£|cff00ff00装备： 法术强度提高13点。|r", --11665
-"|cff0070dd[PH] Greater Arcane Amalgamation (AC/FR)|r£拾取后绑定", --11666
-"|cff0070dd[PH] Greater Arcane Amalgamation (STR/FR)|r£拾取后绑定", --11667
+"拾取后绑定£ ", --11666
+"拾取后绑定£ ", --11667
 "萨瓦里克长笛£拾取后绑定£唯一£该物品将触发一个任务", --11668
 "|cff0070dd阿格曼奇之戒|r£|cff00ff00装备： 在被击中之后对攻击者造成|r|cff7f7f7f3|r|cff00ff00点奥术伤害。|r£|cff00ff00装备： 防御等级提高8。|r", --11669
-"|cff0070dd[PH] Greater Arcane Amalgamation (STA/FR)|r£拾取后绑定", --11670
-"|cff0070dd[PH] Greater Arcane Amalgamation (AGI/FR)|r£拾取后绑定", --11671
-"|cff0070dd[PH] Greater Arcane Amalgamation (SPI/FR)|r£拾取后绑定", --11672
-"|cff0070dd[PH] Greater Arcane Amalgamation (INT/FR)|r£拾取后绑定", --11673
+"拾取后绑定£ ", --11670
+"拾取后绑定£ ", --11671
+"拾取后绑定£ ", --11672
+"拾取后绑定£ ", --11673
 "碧火魔符£任务物品", --11674
 "|cff0070dd蛛魔长靴|r£ ", --11675
-"|cffa335ed[PH] Legendary Arcane Amalgamation (Melee)|r£拾取后绑定", --11676
+"拾取后绑定£ ", --11676
 "|cff0070dd腐烂斗篷|r£|cff00ff00装备： 攻击强度提高12点。|r", --11677
 "|cff0070dd阿努希尔之壳|r£ ", --11678
 "|cff0070dd透红护臂|r£ ", --11679
 "艾瑞丹的瓶子£任务物品£唯一£|cff00ff00使用： 在月神殿中装水。|r", --11682
-"|cffa335ed[PH] Legendary Arcane Amalgamation (Caster)|r£拾取后绑定", --11683
+"拾取后绑定£ ", --11683
 "|cffa335ed反对者|r£ ", --11684
 "|cff0070dd碎鳞护肩|r£|cff00ff00装备： 命中等级提高8点。|r", --11685
 "|cff0070dd野兽怒气腰带|r£|cff00ff00装备： 攻击强度提高30点。|r", --11686
@@ -8756,8 +8756,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "卡加尔之眼£拾取后绑定£唯一£|cffffd100\"它的瞳孔无时无刻不在盯着你。\"|r", --11753
 "|cff1eff00黑钻石|r£ ", --11754
 "|cff0070dd维雷克的镣铐|r£|cff00ff00装备： 使你的躲闪等级提高12。|r", --11755
-"|cff9e9e9eMonster - Axe, Hatchet Gold|r£ ", --11762
-"|cff9e9e9eMonster - Axe, Hatchet Red|r£ ", --11763
+"单手£ ", --11762
+"单手£ ", --11763
 "|cff0070dd灰鳞护臂|r£ ", --11764
 "|cff0070dd焚铁护腕|r£ ", --11765
 "|cff0070dd焰纹护腕|r£ ", --11766
@@ -8803,7 +8803,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "极度粘稠的沥青£任务物品", --11834
 "格里什皇后的大脑£任务物品£唯一", --11835
 "格里什信息素£任务物品£唯一", --11837
-"|cff9e9e9eMonster - Trident, Flame Wrath|r£ ", --11838
+"双手£ ", --11838
 "|cff0070dd大石匠的眼镜|r£|cff00ff00装备： 爆击等级提高21点。|r", --11839
 "主建筑师的衬衣£ ", --11840
 "|cff0070dd主设计师的长裤|r£|cff00ff00装备： 法术强度提高21点。|r", --11841
@@ -9005,7 +9005,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "辛德瑞尔的便笺£任务物品£唯一", --12060
 "|cff1eff00清算之刃|r£|cff00ff00装备： 攻击强度提高22点。|r", --12061
 "|cff1eff00作战之刃|r£|cff00ff00装备： 使你的精准等级提高9点。|r", --12062
-"|cff9e9e9eMonster - Trident, Wicked|r£ ", --12063
+"拾取后绑定£ ", --12063
 "Gamemaster Hood£ ", --12064
 "|cff1eff00元素屏障|r£ ", --12065
 "|cff1eff00页岩斗篷|r£ ", --12066
@@ -9026,20 +9026,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00夜暮手套|r£ ", --12114
 "|cff1eff00坚定束腰|r£|cff00ff00装备： 防御等级提高12。|r", --12115
 "|cff1eff00库米沙的垃圾袋|r£拾取后绑定£|cffffd100\"里面是一大堆垃圾\"|r", --12122
-"|cff9e9e9eMonster - Sword, Thick/Fat Blade|r£ ", --12142
+"单手£ ", --12142
 "龙脊钥匙£任务物品£唯一", --12143
 "龙蛋冷冻器£拾取后绑定£唯一£|cff00ff00使用： 冰冻一枚龙蛋。 （5秒冷却）|r", --12144
 "设计图：硬铁短剑£使用： 教你学会制作硬铁短剑。£|cff1eff00\n硬铁短剑|r£装备后绑定£单手£31 - 59伤害£速度 2.70£（每秒伤害16.7）£|cff00ff00装备： 攻击强度提高10点。|r£\n需要铁锭 (6), 强效助熔剂 (2), 重砂轮, 次级月亮石 (2), 重皮 (3)", --12162
 "设计图：月钢宽剑£使用： 教你学会制作月钢宽剑。£|cff1eff00\n月钢宽剑|r£装备后绑定£双手£55 - 83伤害£速度 2.80£（每秒伤害24.6）£+4 耐力£|cff00ff00装备： 命中等级提高10点。|r£|cff00ff00装备： 爆击等级提高6点。|r£\n需要钢锭 (8), 强效助熔剂 (2), 重砂轮 (2), 次级月亮石 (3), 重皮 (3)", --12163
 "设计图：巨型铁斧£使用： 教你学会制作巨型铁斧。£|cff1eff00\n巨型铁斧|r£装备后绑定£双手£71 - 108伤害£速度 3.50£（每秒伤害25.6）£+11 力量£+7 耐力£\n需要铁锭 (14), 强效助熔剂 (2), 重砂轮 (2), 金锭 (4), 重皮 (2)", --12164
-"|cff9e9e9eMonster - Staff of Jordan|r£ ", --12182
-"|cff9e9e9eMonster - Mace, Thrall's Hammer|r£ ", --12183
+"双手£ ", --12182
+"单手£ ", --12183
 "迅猛龙肉£ ", --12184
 "|cff1eff00血帆舰长之帽|r£|cff00ff00使用： 右键点击以召唤或解散你的鹦鹉。这只宠物将一直存在，直到你将它收起来，或者脱下帽子。 （1秒冷却）|r", --12185
-"Drakefire Amulet (OLD) (UNUSED)£唯一", --12186
-"Test Defense Chest£|cff00ff00装备： 防御等级提高100。|r", --12187
-"Test Armor Chest£|cff00ff00装备： +1000 护甲。|r", --12188
-"Test Strength Chest£ ", --12189
+"唯一£ ", --12186
+"胸部£|cff00ff00装备： 防御等级提高100。|r", --12187
+"胸部£|cff00ff00装备： +1000 护甲。|r", --12188
+"胸部£ ", --12189
 "昏睡药水£|cff00ff00使用： 使饮用者进入无梦的睡眠，持续12秒。在这段时间内，饮用者可以回复1200点生命值和1200点法力值。|r", --12190
 "银色清晨号的保险箱£任务物品", --12191
 "迷雾之纱号的保险箱£任务物品", --12192
@@ -9083,8 +9083,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "收集到的龙蛋£任务物品", --12241
 "海洋生物的骸骨£任务物品", --12242
 "|cff0070dd烟熏之爪|r£ ", --12243
-"Test Agility Chest£ ", --12244
-"Test Spirit Chest£ ", --12245
+"胸部£ ", --12244
+"胸部£ ", --12245
 "|cff1eff00宽刃小刀|r£ ", --12247
 "|cff1eff00崭新的飞刀|r£ ", --12248
 "|cff1eff00无情战斧|r£ ", --12249
@@ -9099,49 +9099,49 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00毒蛇腰带|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --12258
 "|cff1eff00亮闪闪的钢匕首|r£|cff00ff00装备： 攻击强度提高12点。|r", --12259
 "|cff1eff00灼热金剑|r£|cff00ff00装备： 法术强度提高8点。|r", --12260
-"|cff1eff00设计图：灼热金剑|r£使用： 教你学会制作灼热金剑。£|cff1eff00\n灼热金剑|r£装备后绑定£主手£21 - 39伤害£速度 1.40£（每秒伤害21.4）£|cff00ff00装备： 法术强度提高8点。|r£\n需要钢锭 (10), 金锭 (4), 元素火焰 (2), 重皮 (2)", --12261
+"|cff1eff00设计图：灼热金剑|r£使用： 教你学会制作灼热金剑。£|cff1eff00\n灼热金剑|r£装备后绑定£主手£匕首£21 - 39伤害£速度 1.40£（每秒伤害21.4）£|cff00ff00装备： 法术强度提高8点。|r£\n需要钢锭 (10), 金锭 (4), 元素火焰 (2), 重皮 (2)", --12261
 "空的座狼幼崽笼£任务物品£唯一£|cff00ff00使用： 在靠近座狼幼崽的使用。不要担心，这个装置经过了地精工程学质量监督体系的认证。|r", --12262
 "笼中的座狼幼崽£任务物品£唯一£|cffffd100\"笼子在不断震动。\"|r", --12263
 "座狼笼£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --12264
 "用旧的战斧£ ", --12282
 "雏龙精华£任务物品", --12283
 "龙灵采集器900型£唯一£|cff00ff00使用： 对准燃烧平原上的黑色小龙发射。|r", --12284
-"|cff9e9e9eMonster - Axe, 2H Rev. Bearded Single Bladed - Red|r£ ", --12285
+"双手£ ", --12285
 "龙蛋冷冻器初号机£唯一£|cff00ff00使用： 对龙蛋使用，然后把它交给丁奇。 （3秒冷却）|r", --12286
 "电动采集模块£任务物品£唯一£|cff00ff00使用： 收集附近的龙蛋。 （6秒冷却）|r", --12287
 "堕落软泥怪£拾取后绑定£唯一£|cff00ff00使用： 释放一个被捕获的腐化软泥怪，使它与安戈洛的原始软泥怪发生互动。 （3分钟冷却）|r", --12288
 "海龟的残骸£任务物品", --12289
-"|cff9e9e9eMonster - Axe, Horde Badass Copper 01|r£ ", --12290
+"单手£ ", --12290
 "融合的软泥怪样本£任务物品£唯一", --12291
 "有奇怪标记的箱子£任务物品", --12292
 "优质金线£任务物品£唯一", --12293
-"|cff9e9e9eMonster - Axe, 2H Horde Green War Axe|r£ ", --12294
+"双手£ ", --12294
 "|cff1eff00人民军护腿|r£|cff00ff00装备： 法术强度提高2点。|r", --12295
 "|cff1eff00人民军之星|r£ ", --12296
-"|cff9e9e9eMonster - Sword, Horde Jagged Brown|r£ ", --12297
-"|cff9e9e9eMonster - Dagger, Dark Pronged|r£ ", --12298
+"单手£ ", --12297
+"单手£ ", --12298
 "网格手套£ ", --12299
 "龙力宝珠£拾取后绑定£唯一£|cff00ff00使用： 在埃博斯塔夫的意志涣散时控制他的思想。|r", --12300
 "竹笼钥匙£任务物品£唯一", --12301
 "|cffa335ed上古霜刃豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --12302
 "|cffa335ed夜刃豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --12303
-"|cff9e9e9eMonster - Sword, Horde Broad Pointed|r£ ", --12304
-"|cff9e9e9eMonster - Staff, Green Feathered|r£ ", --12322
+"单手£ ", --12304
+"拾取后绑定£ ", --12322
 "未铸造的晋升印章£拾取后绑定£唯一£|cff00ff00使用： 在埃博斯塔夫面前使用未铸造的印章。|r", --12323
 "铸造好的晋升印章£任务物品£唯一", --12324
 "|cff0070dd原始猎豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --12325
 "|cff0070dd茶色猎豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --12326
 "|cff0070dd金色猎豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --12327
-"|cff9e9e9eMonster - Staff, 3 Piece Taped Staff Green|r£ ", --12328
-"|cff9e9e9eMonster - Staff, Crooked Green|r£ ", --12329
+"双手£ ", --12328
+"双手£ ", --12329
 "|cffa335ed赤狼号角|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --12330
-"|cff9e9e9eMonster - Sword2H, Horde Massive Green|r£ ", --12331
-"|cff9e9e9eMonster - Dagger, Green Pronged|r£ ", --12332
+"双手£ ", --12331
+"单手£ ", --12332
 "霜槌碎片£任务物品", --12334
 "|cff1eff00燃棘宝钻|r£拾取后绑定£唯一", --12335
 "|cff1eff00尖石宝钻|r£拾取后绑定£唯一", --12336
 "|cff1eff00血斧宝钻|r£拾取后绑定£唯一", --12337
-"|cff9e9e9eMonster - Polearm, Rend Blackhand|r£ ", --12338
+"双手£ ", --12338
 "维埃兰的礼物£拾取后绑定£唯一", --12339
 "黑木水果£任务物品£唯一", --12341
 "黑木谷物£任务物品£唯一", --12342
@@ -9150,7 +9150,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "比修的装置£任务物品£唯一", --12345
 "空的净化碗£任务物品£唯一£|cff00ff00使用： 给碗中装满水以净化放入其中的食物。|r", --12346
 "装满水的净化碗£任务物品£唯一£|cff00ff00使用： 制造一碗净化过的食物，熊怪一定会很喜欢这个。需要从黑木营地中找到的水果、谷物和坚果。|r", --12347
-"|cff9e9e9eMonster - Axe, Horde Badass Copper 01 (Special1H)|r£ ", --12348
+"单手£ ", --12348
 "壁泉河水样£任务物品", --12349
 "空的水样试管£任务物品£唯一£|cff00ff00使用： 采集一份壁泉河的水样。|r", --12350
 "|cffa335ed冰狼号角|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --12351
@@ -9173,9 +9173,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00城市大门钥匙|r£拾取后绑定£唯一£|cffffd100\"打开斯坦索姆城门的钥匙\"|r", --12382
 "月光羽毛£任务物品", --12383
 "玛艾里的容器£拾取后绑定£唯一", --12384
-"|cff9e9e9etest|r£腿部£|cffffd100\"test\"|r", --12385
+"腿部£ ", --12385
 "远古之卵£任务物品", --12402
-"|cff9e9e9eMonster - Polearm, Black|r£ ", --12403
+"双手£ ", --12403
 "致密磨刀石£|cff00ff00使用： 使锋利武器所造成的伤害提高8点，持续1小时。不能对等级高于165的物品使用。 （1秒冷却）|r", --12404
 "|cff1eff00瑟银护甲|r£|cff00ff00装备： 爆击等级提高11点。|r£|cff00ff00装备： 使你的护甲穿透提高11点。|r", --12405
 "|cff1eff00瑟银腰带|r£|cff00ff00装备： 爆击等级提高8点。|r£|cff00ff00装备： 使你的护甲穿透提高8点。|r", --12406
@@ -9191,7 +9191,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00辐光手套|r£|cff00ff00装备： 使你的韧性等级提高12点。|r£|cff00ff00装备： 攻击强度提高24点。|r", --12418
 "|cff1eff00辐光长靴|r£|cff00ff00装备： 使你的韧性等级提高13点。|r£|cff00ff00装备： 攻击强度提高26点。|r", --12419
 "|cff1eff00辐光护腿|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 攻击强度提高36点。|r", --12420
-"|cff9e9e9eMonster - Staff, White Jeweled|r£ ", --12421
+"双手£ ", --12421
 "|cff1eff00君王板甲护胸|r£ ", --12422
 "|cff1eff00君王板甲腰带|r£ ", --12424
 "|cff1eff00君王板甲护腕|r£ ", --12425
@@ -9208,9 +9208,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "霜槌魂精£ ", --12436
 "瑞治维尔的箱子£任务物品£唯一", --12437
 "丁奇的信£任务物品£唯一", --12438
-"Magic Knucklebone (DND)£|cff00ff00使用： Place 7 Magic Knucklebones in the Charm Pouch to create a Knucklebone Pouch.|r", --12440
-"Charm Pouch (DND)£ ", --12442
-"Knucklebone Pouch (DND)£|cff00ff00使用： 清空以制造一个符咒包。|r", --12443
+"|cff00ff00使用： Place 7 Magic Knucklebones in the Charm Pouch to create a Knucklebone Pouch.|r£ ", --12440
+"拾取后绑定£ ", --12442
+"副手物品£|cff00ff00使用： 清空以制造一个符咒包。|r", --12443
 "完整的冰风奇美拉角£任务物品", --12444
 "菲诺克的包裹£唯一", --12445
 "安威玛火枪£ ", --12446
@@ -9220,15 +9220,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "魂能之速£拾取后绑定£|cff00ff00使用： 使你的法术、远程攻击和近战攻击的急速等级提高30，持续20秒。战斗药剂。 （1分钟冷却）|r", --12450
 "魂能之力£拾取后绑定£|cff00ff00使用： 使你的力量提高30点，持续30分钟。战斗药剂。 （1分钟冷却）|r", --12451
 "|cff9e9e9eMonster - Shield, Horde A02 Steel|r£ ", --12452
-"|cff9e9e9eMonster - Shield, Horde A03 Triangle|r£ ", --12453
-"|cff9e9e9eMonster - Shield, Horde B01 Brown|r£ ", --12454
+"副手£ ", --12453
+"副手£ ", --12454
 "魂能之灰£拾取后绑定£|cff00ff00使用： 使你的火焰抗性提高15点，持续10分钟。守护药剂。 （1分钟冷却）|r", --12455
-"|cff9e9e9eMonster - Shield, Horde B02 Brown|r£ ", --12456
+"副手£ ", --12456
 "魂能之寒£拾取后绑定£|cff00ff00使用： 使你的冰霜抗性提高15点，持续10分钟。守护药剂。 （1分钟冷却）|r", --12457
 "魂能之诈£拾取后绑定£|cff00ff00使用： 使目标的智力提高30点，持续30分钟。守护药剂。 （1分钟冷却）|r", --12458
 "魂能之遁£拾取后绑定£|cff00ff00使用： 使你的躲闪等级提高60，持续10秒。守护药剂。 （1分钟冷却）|r", --12459
 "魂能之击£拾取后绑定£|cff00ff00使用： 攻击强度提高40点，持续10分钟。战斗药剂。 （1分钟冷却）|r", --12460
-"|cff9e9e9eMonster - Axe, 2H Horde Brown Tombstone|r£ ", --12461
+"双手£ ", --12461
 "|cffa335ed风蛇的拥抱|r£|cff00ff00装备： 法术强度提高35点。|r", --12462
 "|cff0070dd龙牙之剑|r£ ", --12463
 "|cff0070dd血火之爪|r£|cff00ff00装备： 法术强度提高18点。|r", --12464
@@ -9240,13 +9240,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd沙行者护足|r£|cff00ff00装备： 命中等级提高3点。|r£|cff00ff00装备： 攻击强度提高12点。|r", --12470
 "|cff0070dd沙漠行者藤条|r£ ", --12471
 "克拉兰克的温度计£任务物品£唯一£|cff00ff00使用： 测量并读取火山高热区的温度。 （10秒冷却）|r£|cffffd100\"克拉兰克工业公司质量担保\"|r", --12472
-"|cff9e9e9eMonster - Glaive - Demonhunter Black|r£ ", --12482
-"|cff9e9e9eMonster - Glaive - Demonhunter Black Offhand|r£ ", --12502
+"单手£ ", --12482
+"", --12502
 "|cff1eff00宾格斯的飞行手套|r£ ", --12522
-"|cff9e9e9eMonster - Gun, Silver Musket|r£ ", --12523
+"", --12523
 "蓝色羽毛护符£任务物品£唯一", --12524
 "加隆的补给物资£任务物品£唯一", --12525
-"TEST Challenge to Urok£唯一£|cff00ff00使用： 在乌洛克的供品堆那里将欧莫克的徽记放在长矛上。|r", --12526
+"唯一£|cff00ff00使用： 在乌洛克的供品堆那里将欧莫克的徽记放在长矛上。|r", --12526
 "|cff0070dd断肋者|r£|cff00ff00装备： 攻击强度提高10点。|r", --12527
 "|cff0070dd裁决之槌|r£ ", --12528
 "烟网蜘蛛笼£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --12529
@@ -9288,9 +9288,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd骨刺护肩|r£|cff00ff00装备： 当你受到爆击时，对攻击者造成60到|r|cff7f7f7f90|r|cff00ff00点伤害。|r", --12588
 "|cff0070dd尘羽腰带|r£|cff00ff00装备： 法术强度提高21点。|r", --12589
 "|cffa335ed恶魔之击|r£ ", --12590
-"|cff9e9e9eMonster - Staff, Holy Staff|r£ ", --12591
+"双手£ ", --12591
 "|cffa335ed沙赫拉姆黑剑|r£ ", --12592
-"|cff9e9e9eMonster - Sword, Horde Sword Bronze|r£ ", --12593
+"单手£ ", --12593
 "|cff0070dd龙人之盾|r£|cff00ff00装备： 防御等级提高15。|r", --12602
 "|cff0070dd深夜外套|r£|cff00ff00装备： 命中等级提高5点。|r£|cff00ff00装备： 攻击强度提高50点。|r", --12603
 "|cff0070dd星火头冠|r£|cff00ff00装备： 法术强度提高12点。|r", --12604
@@ -9318,7 +9318,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd葬礼护腕|r£|cff00ff00装备： 法术强度提高12点。|r", --12626
 "时光置换器£任务物品£唯一£|cff00ff00使用： 显现安多哈尔谷仓周围的时光寄生虫。|r", --12627
 "|cff0070dd魔铸胸甲|r£|cff00ff00装备： 被击中之后有3%的几率在4秒内从攻击者身上吸取|r|cff7f7f7f120|r|cff00ff00点生命值。|r", --12628
-"|cff9e9e9eMonster - Axe, Horde Hatchet 01|r£ ", --12629
+"单手£ ", --12629
 "雷德·黑手的徽记£任务物品£唯一£|cffffd100\"丑陋，血腥，邪恶。\"|r", --12630
 "|cff0070dd炽热板甲护手|r£|cff00ff00装备： 为你的武器攻击附加|r|cff7f7f7f4|r|cff00ff00点火焰伤害。|r", --12631
 "|cff0070dd风暴护手|r£|cff00ff00装备： 为你的武器攻击附加3点闪电伤害。|r£|cff00ff00装备： 法术强度提高18点。|r", --12632
@@ -9405,20 +9405,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "达尔松橱柜钥匙£拾取后绑定£唯一", --12739
 "第五块摩沙鲁石板£任务物品", --12740
 "第六块摩沙鲁石板£任务物品", --12741
-"|cff9e9e9eMonster - Item, Book - Brown|r£ ", --12742
-"|cff9e9e9eMonster - Item, Book - Brown Offhand|r£ ", --12743
-"|cff9e9e9eMonster - Item, Bag - Brown|r£ ", --12744
-"|cff9e9e9eMonster - Item, Bag - Brown Offhand|r£ ", --12745
-"|cff9e9e9eMonster - Item, Orb - Lava|r£ ", --12746
-"|cff9e9e9eMonster - Item, Orb - Lava Offhand|r£ ", --12747
-"|cff9e9e9eMonster - Item, Scepter - Gold|r£ ", --12748
-"|cff9e9e9eMonster - Item, Scepter - Gold Offhand|r£ ", --12749
-"|cff9e9e9eMonster - Item, Book - Black Skull Glowing|r£ ", --12750
-"|cff9e9e9eMonster - Item, Book - Blue|r£ ", --12751
+"单手£ ", --12742
+"副手物品£ ", --12743
+"单手£ ", --12744
+"副手物品£ ", --12745
+"单手£ ", --12746
+"", --12747
+"单手£ ", --12748
+"副手物品£ ", --12749
+"单手£ ", --12750
+"单手£ ", --12751
 "|cffa335ed血色学者之帽|r£|cff00ff00装备： 爆击等级提高28。|r", --12752
 "|cff1eff00暗影之皮|r£拾取后绑定", --12753
-"|cff9e9e9eMonster - Axe, 2H War Green - Mulgore Protector|r£ ", --12754
-"Monster - Sword2H, Blackblade of Shahram£ ", --12755
+"双手£ ", --12754
+"拾取后绑定£ ", --12755
 "|cffa335ed阿卡纳护腿|r£|cff00ff00装备： 法术强度提高18点。|r", --12756
 "|cffa335ed嗜血胸甲|r£|cff00ff00装备： 使你的爆击等级提高28。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r", --12757
 "秘密计划£ ", --12762
@@ -9444,9 +9444,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd觅心者|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --12783
 "|cff0070dd奥金斧|r£|cff00ff00装备： 攻击强度提高62点。|r", --12784
 "火岩粉£任务物品£|cff00ff00使用： 将火岩粉投入生命圣火中。|r", --12785
-"|cff9e9e9eMonster - Mace, Horde Skull Club|r£ ", --12786
-"|cff9e9e9eMonster - Mace, Horde Bone Claw Hammer|r£ ", --12787
-"|cff9e9e9eMonster - Mace, Horde Bone Spike Hammer|r£ ", --12788
+"单手£ ", --12786
+"单手£ ", --12787
+"单手£ ", --12788
 "QATest Raid Buffs lvl 60£ ", --12789
 "|cff0070dd奥金勇士剑|r£ ", --12790
 "|cff0070dd酒吧凶器|r£ ", --12791
@@ -9459,7 +9459,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd歼灭者|r£ ", --12798
 "|cff1eff00大猫眼石|r£ ", --12799
 "|cff1eff00艾泽拉斯钻石|r£ ", --12800
-"|cff9e9e9eMonster - Item, Bucket - Wood|r£ ", --12801
+"唯一£ ", --12801
 "|cff0070dd黑暗之矛|r£ ", --12802
 "|cff1eff00生命精华|r£ ", --12803
 "强力魔精£ ", --12804
@@ -9476,28 +9476,28 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "信号火炬£任务物品£唯一£|cff00ff00使用： 放置在安多哈尔的哨塔入口处，为即将展开的行动提供魔法指示。 （1秒冷却）|r", --12815
 "|cff1eff00设计图：瑟银巨剑|r£使用： 教你学会制作瑟银巨剑。£|cff1eff00\n瑟银巨剑|r£装备后绑定£双手£116 - 175伤害£速度 3.60£（每秒伤害40.4）£+22 力量£\n需要瑟银锭 (10), 致密砂轮 (2), 硬甲皮 (4)", --12816
 "|cff0070dd设计图：冷木斧|r£使用： 教你学会制作冷木斧。£|cff0070dd\n冷木斧|r£装备后绑定£双手£100 - 151伤害£速度 2.70£（每秒伤害46.5）£+11 力量£+5 耐力£|cff00ff00击中时可能： 使敌人受到冷木诅咒，魔法抗性降低25点。可叠加3次。|r£\n需要瑟银锭 (30), 生命精华 (6), 野葡萄藤 (6), 大猫眼石 (6), 致密砂轮 (2), 硬甲皮 (8)", --12817
-"|cff1eff00设计图：镶饰瑟银战锤|r£拾取后绑定£使用： 教你学会制作镶饰瑟银战锤。£|cff1eff00\n镶饰瑟银战锤|r£装备后绑定£锤£100 - 151伤害£速度 3.00£（每秒伤害41.8）£+23 力量£\n需要瑟银锭 (30), 金锭 (4), 真银锭 (2), 蓝宝石 (2), 硬甲皮 (4)", --12818
+"|cff1eff00设计图：镶饰瑟银战锤|r£拾取后绑定£使用： 教你学会制作镶饰瑟银战锤。£|cff1eff00\n镶饰瑟银战锤|r£装备后绑定£双手£100 - 151伤害£速度 3.00£（每秒伤害41.8）£+23 力量£\n需要瑟银锭 (30), 金锭 (4), 真银锭 (2), 蓝宝石 (2), 硬甲皮 (4)", --12818
 "|cff1eff00设计图：华丽瑟银手斧|r£拾取后绑定£使用： 教你学会制作华丽瑟银手斧。£|cff1eff00\n华丽瑟银手斧|r£拾取后绑定£单手£43 - 81伤害£速度 1.90£（每秒伤害32.6）£+10 力量£\n需要瑟银锭 (10), 大猫眼石 (2), 致密砂轮 (2), 硬甲皮 (4)", --12819
 "冬泉火酒£|cff00ff00使用： 使你的近战攻击强度提高35点，体型增大，持续20分钟。战斗药剂。 （1分钟冷却）|r", --12820
 "|cff0070dd设计图：黎明之刃|r£使用： 教你学会制作黎明之刃。£|cff0070dd\n黎明之刃|r£装备后绑定£单手£53 - 100伤害£速度 2.10£（每秒伤害36.4）£|cff00ff00装备： 使你的爆击等级提高14。|r£\n需要瑟银锭 (30), 附魔瑟银锭 (4), 红宝石 (4), 蓝宝石 (4), 致密砂轮 (2), 硬甲皮 (4)", --12821
 "剧毒水滴£任务物品", --12822
 "设计图：巨型瑟银战斧£拾取后绑定£使用： 教你学会制作巨型瑟银战斧。£|cff1eff00\n巨型瑟银战斧|r£装备后绑定£双手£114 - 172伤害£速度 3.30£（每秒伤害43.3）£|cff00ff00装备： 使你的精准等级提高24点。|r£\n需要瑟银锭 (12), 致密砂轮 (6), 硬甲皮 (6)", --12823
-"|cff1eff00设计图：魔法战锤|r£使用： 教你学会制作魔法战锤。£|cff0070dd\n魔化战锤|r£装备后绑定£锤£100 - 150伤害£速度 2.60£（每秒伤害48.1）£|cff00ff00装备： 使你的招架等级提高20。|r£|cff00ff00装备： 使你的命中等级提高20。|r£\n需要瑟银锭 (20), 附魔瑟银锭 (6), 巨型绿宝石 (2), 强力魔精 (4), 硬甲皮 (4)", --12824
+"|cff1eff00设计图：魔法战锤|r£使用： 教你学会制作魔法战锤。£|cff0070dd\n魔化战锤|r£装备后绑定£双手£100 - 150伤害£速度 2.60£（每秒伤害48.1）£|cff00ff00装备： 使你的招架等级提高20。|r£|cff00ff00装备： 使你的命中等级提高20。|r£\n需要瑟银锭 (20), 附魔瑟银锭 (6), 巨型绿宝石 (2), 强力魔精 (4), 硬甲皮 (4)", --12824
 "|cff1eff00设计图：闪耀轻剑|r£使用： 教你学会制作闪耀轻剑。£|cff0070dd\n闪耀轻剑|r£装备后绑定£单手£44 - 82伤害£速度 1.70£（每秒伤害37.1）£|cff00ff00击中时可能： 在30秒内对目标造成总计100点伤害。|r£\n需要附魔瑟银锭 (10), 火焰精华 (4), 火焰之心 (4), 艾泽拉斯钻石 (2), 致密砂轮 (2)", --12825
 "|cff1eff00设计图：符文之刃|r£使用： 教你学会制作符文之刃。£|cff1eff00\n符文之刃|r£拾取后绑定£单手£54 - 102伤害£速度 2.30£（每秒伤害33.9）£+5 力量£+5 敏捷£+5 耐力£\n需要瑟银锭 (30), 大猫眼石 (2), 致密砂轮 (2), 硬甲皮 (4)", --12826
-"|cff1eff00设计图：平静|r£使用： 教你学会制作平静。£|cff0070dd\n平静|r£装备后绑定£单手£锤£52 - 98伤害£速度 2.00£（每秒伤害37.5）£|cff00ff00击中时可能： 驱散敌方目标身上的一个魔法效果。|r£\n需要附魔瑟银锭 (6), 奥金锭 (2), 强力魔精 (4), 大猫眼石 (2), 蓝宝石 (2), 巨型绿宝石", --12827
-"|cff1eff00设计图：火山战锤|r£使用： 教你学会制作火山战锤。£|cff1eff00\n火山战锤|r£装备后绑定£单手£锤£60 - 113伤害£速度 2.50£（每秒伤害34.6）£|cff00ff00击中时可能： 发射一枚火球攻击目标，对其造成100到128点火焰伤害，并在6秒内造成额外的18点伤害。|r£\n需要瑟银锭 (30), 火焰之心 (4), 红宝石 (4), 硬甲皮 (4)", --12828
+"|cff1eff00设计图：平静|r£使用： 教你学会制作平静。£|cff0070dd\n平静|r£装备后绑定£单手£52 - 98伤害£速度 2.00£（每秒伤害37.5）£|cff00ff00击中时可能： 驱散敌方目标身上的一个魔法效果。|r£\n需要附魔瑟银锭 (6), 奥金锭 (2), 强力魔精 (4), 大猫眼石 (2), 蓝宝石 (2), 巨型绿宝石", --12827
+"|cff1eff00设计图：火山战锤|r£使用： 教你学会制作火山战锤。£|cff1eff00\n火山战锤|r£装备后绑定£单手£60 - 113伤害£速度 2.50£（每秒伤害34.6）£|cff00ff00击中时可能： 发射一枚火球攻击目标，对其造成100到128点火焰伤害，并在6秒内造成额外的18点伤害。|r£\n需要瑟银锭 (30), 火焰之心 (4), 红宝石 (4), 硬甲皮 (4)", --12828
 "冬泉箱子£任务物品£唯一", --12829
 "设计图：腐蚀£使用： 教你学会制作腐蚀。£|cff0070dd\n腐蚀|r£拾取后绑定£双手£119 - 179伤害£速度 3.00£（每秒伤害49.7）£+30 力量£+30 耐力£-40 精神£\n需要瑟银锭 (40), 奥金锭 (2), 恶魔符文 (16), 死灵精华 (8), 蓝宝石 (2), 致密砂轮 (2), 硬甲皮 (4)", --12830
 "|cff0070dd设计图：血爪|r£使用： 教你学会制作血爪。£|cff0070dd\n血爪|r£拾取后绑定£主手£35 - 67伤害£速度 1.30£（每秒伤害39.2）£|cff00ff00击中时可能： 使目标的伤口不断流血，在30秒内造成累计100点伤害。|r£\n需要附魔瑟银锭 (10), 奥金锭 (10), 恶魔符文 (8), 红宝石 (10), 致密砂轮 (2)", --12831
 "|cff0070dd设计图：黑暗之矛|r£使用： 教你学会制作黑暗之矛。£|cff0070dd\n黑暗之矛|r£装备后绑定£双手£131 - 197伤害£速度 3.20£（每秒伤害51.2）£|cff00ff00击中时可能： 队友有一定几率获得爆击等级提高56的效果，持续20秒。|r£\n需要附魔瑟银锭 (20), 强力魔精 (20), 巨型绿宝石 (2), 艾泽拉斯钻石 (2), 致密砂轮 (2)", --12832
-"|cff0070dd设计图：泰坦之锤|r£使用： 教你学会制作泰坦之锤。£|cff0070dd\n泰坦之锤|r£装备后绑定£锤£163 - 246伤害£速度 3.80£（每秒伤害53.8）£+15 力量£|cff00ff00击中时可能： 使目标昏迷3秒。|r£\n需要瑟银锭 (50), 奥金锭 (15), 守护之石 (4), 魔化皮 (6), 大地精华 (10)", --12833
+"|cff0070dd设计图：泰坦之锤|r£使用： 教你学会制作泰坦之锤。£|cff0070dd\n泰坦之锤|r£装备后绑定£双手£163 - 246伤害£速度 3.80£（每秒伤害53.8）£+15 力量£|cff00ff00击中时可能： 使目标昏迷3秒。|r£\n需要瑟银锭 (50), 奥金锭 (15), 守护之石 (4), 魔化皮 (6), 大地精华 (10)", --12833
 "|cff0070dd设计图：奥金勇士剑|r£使用： 教你学会制作奥金勇士剑。£|cff0070dd\n奥金勇士剑|r£装备后绑定£双手£129 - 194伤害£速度 3.00£（每秒伤害53.8）£|cff00ff00击中时可能： 为自己恢复270到450点生命值，并使力量提高120点，持续30秒。|r£\n需要奥金锭 (15), 艾泽拉斯钻石 (8), 正义宝珠, 大猫眼石 (4), 魔化皮 (8), 致密砂轮 (2)", --12834
 "|cff0070dd设计图：歼灭者|r£使用： 教你学会制作歼灭者。£|cff0070dd\n歼灭者|r£装备后绑定£单手£49 - 92伤害£速度 1.70£（每秒伤害41.5）£|cff00ff00击中时可能： 敌人的护甲值降低200点，可叠加3次。|r£\n需要瑟银锭 (40), 奥金锭 (12), 死灵精华 (10), 巨型绿宝石 (8), 致密砂轮 (2), 魔化皮 (4)", --12835
 "|cff0070dd设计图：寒冰护卫者|r£使用： 教你学会制作寒冰护卫者。£|cff0070dd\n寒冰护卫者|r£装备后绑定£单手£66 - 124伤害£速度 2.30£（每秒伤害41.3）£|cff00ff00击中时可能： 目标的移动速度降低30%，攻击间隔延长25%。持续5秒。|r£\n需要奥金锭 (18), 蓝宝石 (8), 艾泽拉斯钻石 (8), 水之精华 (4), 致密砂轮 (2), 魔化皮 (4)", --12836
-"|cff0070dd设计图：精工风暴战锤|r£使用： 教你学会制作精工风暴战锤。£|cff0070dd\n精工风暴战锤|r£装备后绑定£单手£锤£58 - 108伤害£速度 2.00£（每秒伤害41.5）£|cff00ff00击中时可能： 对最多3个目标造成105到145点自然伤害。|r£\n需要附魔瑟银锭 (20), 巨型绿宝石 (8), 大猫眼石 (8), 大地精华 (6), 魔化皮 (4)", --12837
+"|cff0070dd设计图：精工风暴战锤|r£使用： 教你学会制作精工风暴战锤。£|cff0070dd\n精工风暴战锤|r£装备后绑定£单手£58 - 108伤害£速度 2.00£（每秒伤害41.5）£|cff00ff00击中时可能： 对最多3个目标造成105到145点自然伤害。|r£\n需要附魔瑟银锭 (20), 巨型绿宝石 (8), 大猫眼石 (8), 大地精华 (6), 魔化皮 (4)", --12837
 "|cff0070dd设计图：奥金斧|r£使用： 教你学会制作奥金斧。£|cff0070dd\n奥金斧|r£装备后绑定£双手£153 - 256伤害£速度 3.80£（每秒伤害53.8）£+13 耐力£|cff00ff00装备： 攻击强度提高62点。|r£\n需要奥金锭 (20), 魔化皮 (6), 致密砂轮 (2)", --12838
-"|cff0070dd设计图：觅心者|r£使用： 教你学会制作觅心者。£|cff0070dd\n觅心者|r£装备后绑定£单手£49 - 92伤害£速度 1.70£（每秒伤害41.5）£+4 力量£|cff00ff00装备： 使你的爆击等级提高14。|r£\n需要奥金锭 (10), 附魔瑟银锭 (10), 魔化皮 (2), 红宝石 (6), 艾泽拉斯钻石 (6), 大猫眼石 (6), 致密砂轮 (4)", --12839
+"|cff0070dd设计图：觅心者|r£使用： 教你学会制作觅心者。£|cff0070dd\n觅心者|r£装备后绑定£单手£匕首£49 - 92伤害£速度 1.70£（每秒伤害41.5）£+4 力量£|cff00ff00装备： 使你的爆击等级提高14。|r£\n需要奥金锭 (10), 附魔瑟银锭 (10), 魔化皮 (2), 红宝石 (6), 艾泽拉斯钻石 (6), 大猫眼石 (6), 致密砂轮 (4)", --12839
 "爪牙的天灾石£拾取后绑定", --12840
 "侵略者的天灾石£拾取后绑定", --12841
 "潦草的日志£拾取后绑定£唯一£该物品将触发一个任务", --12842
@@ -9508,40 +9508,40 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "穿魂长矛£任务物品£唯一", --12847
 "血污长矛£拾取后绑定£唯一£|cff00ff00使用： 夺取灵魂。|r£|cffffd100\"恶魔的能量环绕着长矛。\"|r", --12848
 "|cff1eff00魔吻背包|r£拾取后绑定£唯一", --12849
-"|cff9e9e9eMonster - Item, Bag - Black|r£ ", --12850
-"|cff9e9e9eMonster - Item, Bag - Black Offhand|r£ ", --12851
-"|cff9e9e9eMonster - Item, Bag - Gray|r£ ", --12852
-"|cff9e9e9eMonster - Item, Bag - Gray Offhand|r£ ", --12853
-"|cff9e9e9eMonster - Item, Bag - Green|r£ ", --12854
-"|cff9e9e9eMonster - Item, Bag - Green Offhand|r£ ", --12855
-"|cff9e9e9eMonster - Item, Bag - Red|r£ ", --12856
-"|cff9e9e9eMonster - Item, Bag - Red Offhand|r£ ", --12857
-"|cff9e9e9eMonster - Item, Bag - White|r£ ", --12858
-"|cff9e9e9eMonster - Item, Bag - White Offhand|r£ ", --12859
-"|cff9e9e9eMonster - Item, Book - Blue Offhand|r£ ", --12860
-"|cff9e9e9eMonster - Item, Book - Black Skull Glowing Offhand|r£ ", --12861
-"|cff9e9e9eMonster - Item, Book - Black Simple|r£ ", --12862
-"|cff9e9e9eMonster - Item, Book - Black Simple Offhand|r£ ", --12863
-"|cff9e9e9eMonster - Item, Book - B01 Black Glowing|r£ ", --12864
-"|cff9e9e9eMonster - Item, Book - B01 Black Glowing Offhand|r£ ", --12865
-"|cff9e9e9eMonster - Item, Book - B02 Black Glowing|r£ ", --12866
-"|cff9e9e9eMonster - Item, Book - B02 Black Glowing Offhand|r£ ", --12867
-"|cff9e9e9eMonster - Item, Book - B02 Blue Glowing|r£ ", --12868
-"|cff9e9e9eMonster - Item, Book - B02 Blue Glowing Offhand|r£ ", --12869
-"|cff9e9e9eMonster - Item, Potion Red Offhand|r£ ", --12870
+"单手£ ", --12850
+"副手物品£ ", --12851
+"单手£ ", --12852
+"副手物品£ ", --12853
+"单手£ ", --12854
+"副手物品£ ", --12855
+"单手£ ", --12856
+"副手物品£ ", --12857
+"单手£ ", --12858
+"副手物品£ ", --12859
+"副手物品£ ", --12860
+"副手物品£ ", --12861
+"单手£ ", --12862
+"副手物品£ ", --12863
+"单手£ ", --12864
+"副手物品£ ", --12865
+"单手£ ", --12866
+"副手物品£ ", --12867
+"单手£ ", --12868
+"副手物品£ ", --12869
+"副手物品£ ", --12870
 "|cffa335ed多彩龙鳞|r£拾取后绑定", --12871
-"|cff9e9e9eMonster - Sword2H, Horde Curved Silver|r£ ", --12882
-"|cff9e9e9eMonster - Mace, Thaurissan Silver|r£ ", --12883
+"双手£ ", --12882
+"单手£ ", --12883
 "阿纳克的蹄子£任务物品", --12884
 "帕米拉的洋娃娃£任务物品", --12885
 "帕米拉的洋娃娃的脑袋£任务物品£|cff00ff00使用： 将各个部分组合在一起。|r", --12886
 "帕米拉的洋娃娃的左身£任务物品£|cff00ff00使用： 将各个部分组合在一起。|r", --12887
 "帕米拉的洋娃娃的右身£任务物品£|cff00ff00使用： 将各个部分组合在一起。|r", --12888
-"|cff9e9e9eMonster - Sword2H, Horde Curved Black|r£ ", --12889
-"|cff9e9e9eMonster - Sword, Militia Long Sword|r£ ", --12890
+"双手£ ", --12889
+"单手£ ", --12890
 "加隆的镐£任务物品£唯一£|cff00ff00使用： 寻找遗物碎片。|r", --12891
-"|cff9e9e9eMonster - Sword1H, Dark Short Sword|r£ ", --12892
-"|cff9e9e9eMonster - Shield, Black Skull|r£ ", --12893
+"单手£ ", --12892
+"副手£ ", --12893
 "约瑟夫的结婚戒指£任务物品", --12894
 "|cffa335ed多彩巨龙胸甲|r£ ", --12895
 "第一块遗物碎片£任务物品£唯一", --12896
@@ -9549,8 +9549,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "第三块遗物碎片£任务物品£唯一", --12898
 "第四块遗物碎片£任务物品£唯一", --12899
 "达隆郡的历史£任务物品", --12900
-"|cff9e9e9eMonster - Mace2H, Golden Stone Hammer|r£ ", --12901
-"|cff9e9e9eMonster - Sword2H, Luminous Evil Blade|r£ ", --12902
+"双手£ ", --12901
+"双手£ ", --12902
 "|cffa335ed多彩挑战者护腿|r£ ", --12903
 "|cff1eff00肖恩的超级魔法帽|r£ ", --12904
 "|cff0070dd野火斗篷|r£ ", --12905
@@ -9565,26 +9565,26 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "乌米的机械雪人£任务物品£唯一£|cff00ff00使用： 选定乌米的朋友，然后释放机械雪人。 （30秒冷却）|r", --12928
 "|cff0070dd灰烬之怒|r£|cff00ff00装备： 命中等级提高7点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --12929
 "|cff0070dd石楠之环|r£|cff00ff00装备： 法术强度提高29点。|r", --12930
-"|cff9e9e9eMonster - Shield, Scarlet Crusade A01/A02 Model|r£ ", --12931
-"|cff9e9e9eMonster - Shield, Scarlet Crusade A02|r£ ", --12932
-"|cff9e9e9eMonster - Shield, Scarlet Crusade B03|r£ ", --12933
-"|cff9e9e9eMonster - Mace, Maul B03 Red|r£ ", --12934
+"副手£ ", --12931
+"副手£ ", --12932
+"副手£ ", --12933
+"单手£ ", --12934
 "|cff0070dd战争统帅护腿|r£|cff00ff00装备： 爆击等级提高24点。|r", --12935
 "|cff0070dd雷德的护腕|r£|cff00ff00装备： 使你的命中等级提高10。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --12936
-"|cff9e9e9eMonster - Staff, Basic Red|r£ ", --12937
+"双手£ ", --12937
 "英雄之血£拾取后绑定", --12938
 "|cff0070dd雷德的部族护卫者|r£|cff00ff00装备： 防御等级提高10。|r", --12939
 "|cff0070dd雷德的神圣控诉者|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --12940
-"|cff9e9e9eMonster - Wand, Jeweled - B02 Red|r£ ", --12941
+"魔杖£ ", --12941
 "豹笼钥匙£任务物品£唯一£|cff00ff00使用： 打开豹笼 （1秒冷却）|r", --12942
-"|cff9e9e9eMonster - Staff, 3 Piece Taped Staff Red|r£ ", --12943
-"|cff9e9e9eMonster - Sword, Golden Long|r£ ", --12944
+"双手£ ", --12943
+"单手£ ", --12944
 "|cffa335ed多彩挑战者腿甲|r£ ", --12945
 "超适应齿轮£任务物品£唯一", --12946
 "|cffe5cc7fAlex's Ring of Audacity|r£|cffffd100\"Looks great. Less filling.\"|r", --12947
-"|cff9e9e9eMonster - Sword2H, Red White Broad|r£ ", --12949
-"|cff9e9e9eMonster - Mace2H, Warhammer Ebony|r£ ", --12950
-"|cff9e9e9eMonster - Axe, 2H War - Red|r£ ", --12951
+"单手£ ", --12949
+"双手£ ", --12950
+"双手£ ", --12951
 "|cff0070dd盖斯徽记|r£|cff00ff00装备： 防御等级提高14。|r", --12952
 "|cff0070dd龙眼头巾|r£|cff00ff00装备： 攻击强度提高38点。|r", --12953
 "达维的圣契£任务物品", --12954
@@ -9592,10 +9592,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "霍古斯的徽记£任务物品", --12956
 "马杜克的破碎之剑£任务物品", --12957
 "配方：合成奥金£使用： 教你学会将瑟银和奥术水晶转化为奥金。£|cff1eff00\n奥金锭|r£\n需要瑟银锭, 奥术水晶", --12958
-"|cff9e9e9eMonster - Staff, Demon Skull Staff|r£ ", --12959
+"双手£ ", --12959
 "|cff0070dd部族作战羽盔|r£|cff00ff00装备： 法术强度提高18点。|r", --12960
-"JEFF TEST SHIELD£ ", --12961
-"JEFF TEST GLOVES£ ", --12962
+"副手£ ", --12961
+"手£ ", --12962
 "|cff0070dd剑圣护腿|r£|cff00ff00装备： 使你的命中等级提高10。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --12963
 "|cff0070dd三态护腿|r£|cff00ff00装备： 攻击强度提高34点。|r", --12964
 "|cff0070dd裹灵护腿|r£|cff00ff00装备： 法术强度提高19点。|r", --12965
@@ -9604,8 +9604,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd霜纹斗蓬|r£|cff00ff00装备： 命中等级提高10点。|r", --12968
 "|cff0070dd横扫重锤|r£ ", --12969
 "|cff0070dd将军的葬礼板甲|r£ ", --12970
-"JEFF TEST SWORD£ ", --12971
-"JEFF TEST SWORD II£ ", --12972
+"主手£ ", --12971
+"主手£ ", --12972
 "血色十字军炮弹£唯一£持续时间：10分钟", --12973
 "|cff0070dd黑骑士|r£ ", --12974
 "|cff0070dd勘察员战斧|r£ ", --12975
@@ -9613,8 +9613,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd法师之拳|r£ ", --12977
 "|cff0070dd唤雷腰带|r£ ", --12978
 "|cff0070dd御火披风|r£ ", --12979
-"|cff9e9e9eMonster - Shield, Wall Metal Silver|r£ ", --12980
-"|cff9e9e9eMonster - Shield, Wall Metal Gold|r£ ", --12981
+"副手£ ", --12980
+"副手£ ", --12981
 "|cff0070dd银链护足|r£ ", --12982
 "|cff0070dd拉克祖尔木棒|r£ ", --12983
 "|cff0070dd天空召唤者|r£ ", --12984
@@ -9623,11 +9623,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd星光外套|r£ ", --12988
 "|cff0070dd石像鬼之牙|r£ ", --12989
 "|cff0070dd剃刀之锋|r£ ", --12990
-"|cff9e9e9eMonster - Dagger, Curvey Green Blade|r£ ", --12991
+"单手£ ", --12991
 "|cff0070dd灼热之刃|r£ ", --12992
-"|cff9e9e9eMonster - Sword, Green Gold Scimitar|r£ ", --12993
+"单手£ ", --12993
 "|cff0070dd索比亚的护手|r£ ", --12994
-"|cff9e9e9eMonster - Shield, Wall Metal Red|r£ ", --12995
+"副手£ ", --12995
 "|cff0070dd净化指环|r£ ", --12996
 "|cff0070dd红须徽记之盾|r£ ", --12997
 "|cff0070dd魔法师衬肩|r£|cff00ff00装备： 法术强度提高5点。|r", --12998
@@ -9682,7 +9682,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd世界之树的嫩枝|r£ ", --13047
 "|cff0070dd蜃景之槌|r£ ", --13048
 "|cff0070dd长者双刃刀|r£|cff00ff00装备： 防御等级提高15。|r", --13049
-"|cff9e9e9eMonster - Staff, Ornate Jeweled Staff - Red|r£ ", --13050
+"双手£ ", --13050
 "|cff0070dd女巫之怒|r£ ", --13051
 "|cff0070dd好战者|r£|cff00ff00装备： 命中等级提高30点。|r", --13052
 "|cff0070dd厄运制造者|r£ ", --13053
@@ -9693,7 +9693,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd豪尔之矛|r£ ", --13058
 "|cff0070dd石鸦|r£ ", --13059
 "|cff0070dd缝衣针|r£ ", --13060
-"|cff9e9e9eMonster - Staff, Green Crystal Sphere|r£ ", --13061
+"双手£ ", --13061
 "|cff0070dd雷木|r£ ", --13062
 "|cff0070dd落星|r£ ", --13063
 "|cff0070dd吉安娜的火杖|r£ ", --13064
@@ -9701,7 +9701,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd斩龙者护肩|r£ ", --13066
 "|cff0070dd海蛇护甲|r£ ", --13067
 "|cff0070dd黑曜石胫甲|r£ ", --13068
-"|cff9e9e9eMonster - Staff, D01 Flaming Red|r£ ", --13069
+"双手£ ", --13069
 "|cff0070dd萨菲隆的鳞片长靴|r£ ", --13070
 "|cff0070dd哈库的板甲手套|r£ ", --13071
 "|cff0070dd握石护手|r£|cff00ff00装备： 防御等级提高15。|r", --13072
@@ -9710,7 +9710,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd魔翼护腿|r£ ", --13075
 "|cff0070dd巨人杀手护腕|r£ ", --13076
 "|cff0070dd乌瑟尔的腰带|r£ ", --13077
-"|cff9e9e9eMonster - Staff, Pointed Red Crystal|r£ ", --13078
+"双手£ ", --13078
 "|cff0070dd索尔森之盾|r£ ", --13079
 "|cff0070dd寡妇蛛袍|r£ ", --13080
 "|cff0070dd斯古兰斯之盾|r£ ", --13081
@@ -9724,7 +9724,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd斯基比的坠饰|r£ ", --13089
 "|cff0070dd天选者胸甲|r£ ", --13090
 "|cff0070dd莫里斯元帅的勋章|r£|cff00ff00装备： 防御等级提高15。|r", --13091
-"|cff0070ddDeprecated Dragonstalker Tunic|r£|cff00ff00装备： 法术强度提高18点。|r", --13092
+"拾取后绑定£|cff00ff00装备： 法术强度提高18点。|r", --13092
 "|cff0070dd红琥珀戒指|r£ ", --13093
 "|cff0070dd女王的珠宝|r£ ", --13094
 "|cff0070dd突击指环|r£|cff00ff00装备： 攻击强度提高20点。|r", --13095
@@ -9736,7 +9736,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd驭狼者软鞋|r£|cff00ff00装备： 法术强度提高13点。|r", --13101
 "|cff0070dd卡珊德拉的恩赐|r£|cff00ff00装备： 法术强度提高23点。|r", --13102
 "|cff0070dd毒蜘蛛护肩|r£ ", --13103
-"|cff9e9e9eMonster - Axe, Hatchet C03 Red|r£ ", --13104
+"单手£ ", --13104
 "|cff0070dd苏塔恩之环|r£ ", --13105
 "|cff0070dd眩光魔法手镯|r£|cff00ff00装备： 法术强度提高4点。|r", --13106
 "|cff0070dd法师徽记|r£ ", --13107
@@ -9779,10 +9779,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd平静腰带|r£ ", --13144
 "|cff0070dd凶暴食人魔腰带|r£ ", --13145
 "|cff0070dd散弹发射器|r£|cff00ff00装备： 有一定几率对你的远程攻击目标造成18到|r|cff7f7f7f26|r|cff00ff00点火焰伤害。|r", --13146
-"|cff9e9e9eMonster - Bow, White|r£ ", --13147
+"远程£ ", --13147
 "|cff0070dd刺骨冰矛|r£ ", --13148
 "埃达拉斯召唤宝典第一册£拾取后绑定£唯一", --13149
-"|cff9e9e9eMonster - Sword2H, Claymore Blue|r£ ", --13150
+"双手£ ", --13150
 "霍兰克的秘法研究报告£拾取后绑定£唯一", --13151
 "未完的故事£拾取后绑定£唯一", --13152
 "玛辛·沃拉尔之书£拾取后绑定£唯一", --13153
@@ -9792,12 +9792,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "恶臭徽记£任务物品", --13157
 "熊怪酋长的话£拾取后绑定£唯一", --13158
 "骨尘£ ", --13159
-"|cff9e9e9eMonster - Sword2H, Claymore Silver|r£ ", --13160
+"双手£ ", --13160
 "|cff0070dd庇护法杖|r£|cff00ff00装备： 法术强度提高14点。|r", --13161
 "|cff0070dd掠夺者之爪|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --13162
 "|cff0070dd无情镰刀|r£|cff00ff00装备： 使你的招架等级提高20。|r", --13163
 "|cff0070dd龙鳞之心|r£|cff00ff00使用： 火焰抗性提高20点，并对任何使用近战武器击中你的敌人造成|r|cff7f7f7f20|r|cff00ff00点火焰伤害，持续5分钟。 （30分钟冷却）|r", --13164
-"|cff9e9e9eMonster - Sword, Long Silver - Green Pommel|r£ ", --13165
+"单手£ ", --13165
 "|cff0070dd猛击护肩|r£|cff00ff00装备： 攻击强度提高20点。|r", --13166
 "|cff0070dd欧莫克之拳|r£ ", --13167
 "|cff0070dd萨满之王的板甲|r£|cff00ff00装备： 法术强度提高18点。|r", --13168
@@ -9844,16 +9844,16 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd狼爪护腕|r£|cff00ff00装备： 使你的命中等级提高10。|r", --13211
 "|cff0070dd哈雷肯的项圈|r£|cff00ff00装备： 对野兽的攻击强度提高48点。|r", --13212
 "|cff0070dd烟网蜘蛛的眼球|r£|cff00ff00使用： 使目标每2秒毒发一次，对其造成|r|cff7f7f7f20|r|cff00ff00点自然伤害，持续20秒。 （2分钟冷却）|r", --13213
-"|cff9e9e9eTestBoots - Puffed Mail Green|r£ ", --13214
+"脚£ ", --13214
 "|cff1eff00忏悔之冠|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --13216
 "|cff1eff00忏悔者指环|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --13217
 "|cff0070dd水晶蜘蛛之牙|r£ ", --13218
-"|cff9e9e9eMonster - Item, Holy Symbol Offhand|r£ ", --13219
-"|cff9e9e9eMonster - Item, Holy Symbol|r£ ", --13220
-"|cff9e9e9eMonster - Item, Staff Glowing Jeweled B01 Red Offhand|r£ ", --13221
-"|cff9e9e9eMonster - Sword, Flaming Crimson Battlemage Longsword|r£ ", --13222
+"副手物品£ ", --13219
+"单手£ ", --13220
+"副手物品£ ", --13221
+"单手£ ", --13222
 "斯坦索姆信使背包£ ", --13223
-"|cff1eff00Deprecated Stormrage Boots|r£|cff00ff00装备： 法术强度提高23点。|r", --13242
+"拾取后绑定£|cff00ff00装备： 法术强度提高23点。|r", --13242
 "|cff0070dd黎明守护者|r£|cff00ff00装备： 有1%的几率在被击中后使你的格挡等级提高250，持续10秒。|r", --13243
 "|cff0070dd镀金护手|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --13244
 "|cff0070dd克雷什之背|r£|cff00ff00装备： 防御等级提高6。|r", --13245
@@ -9881,10 +9881,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00图样：迅猛龙皮背心|r£使用： 教你学会制作迅猛龙皮背心。£|cff1eff00\n迅猛龙皮背心|r£装备后绑定£胸部£98点护甲£+10 耐力£|cff00ff00装备： 使你的精准等级提高7点。|r£\n需要迅猛龙的外皮 (6), 重皮 (4), 细线 (2)", --13287
 "|cff1eff00图样：迅猛龙皮腰带|r£使用： 教你学会制作迅猛龙皮腰带。£|cff1eff00\n迅猛龙皮腰带|r£装备后绑定£腰部£55点护甲£+6 耐力£|cff00ff00装备： 攻击强度提高12点。|r£\n需要迅猛龙的外皮 (4), 重皮 (4), 细线 (2)", --13288
 "埃根的冲击器£任务物品£唯一£|cff00ff00使用： 可释放变成鬼魂的市民。|r", --13289
-"|cff9e9e9eMonster - Wand, Horde Purple Orb|r£ ", --13290
-"|cff9e9e9eMonster - Wand, Horde Red Feathered|r£ ", --13291
-"|cff9e9e9eMonster - Wand, Horde Demon Skull|r£ ", --13292
-"|cff9e9e9eMonster - Wand, Horde Dark Skull|r£ ", --13293
+"魔杖£ ", --13290
+"魔杖£ ", --13291
+"魔杖£ ", --13292
+"魔杖£ ", --13293
 "市场邮箱钥匙£|cff00ff00使用： 打开斯坦索姆城中的邮箱。|r", --13302
 "十字军广场邮箱钥匙£|cff00ff00使用： 打开斯坦索姆城中的邮箱。|r", --13303
 "节日小道的邮箱钥匙£|cff00ff00使用： 打开斯坦索姆城中的邮箱。|r", --13304
@@ -9895,14 +9895,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "结构图：精致手工火枪£使用： 教你学会制作精致手工火枪。£|cff1eff00\n精致手工火枪|r£装备后绑定£16 - 31伤害£速度 1.80£（每秒伤害13.1）£\n需要青铜管 (2), 一把螺栓 (2), 沉重的树干, 绿玛瑙 (3)", --13309
 "结构图：精确瞄准镜£使用： 教你学会制作精确瞄准镜。£|cff1eff00\n精确瞄准镜|r£|cff00ff00使用： 在弓或枪械上加装永久性的瞄准镜，使其攻击伤害提高3点。\r\n\r\n加装瞄准镜后的远程武器会变成灵魂绑定物品。|r£\n需要青铜管, 翡翠, 黄水晶", --13310
 "结构图：机械幼龙£使用： 教你学会制作机械幼龙。£|cff1eff00\n机械幼龙|r£装备后绑定£装备唯一£饰品£|cff00ff00使用： 召唤你的机械幼龙为你作战，持续1分钟。 （5分钟冷却）|r£\n需要青铜框架, 铁棒 (2), 发条式同步协调陀螺仪 (2), 黄水晶", --13311
-"|cff9e9e9eMonster - Mace, Hammer Gold Orange|r£ ", --13312
+"单手£ ", --13312
 "神圣的上层精灵笔迹£任务物品£唯一£|cffffd100\"书页都已经破旧不堪了......\"|r", --13313
 "|cffa335ed奥兰纳的拥抱|r£|cff00ff00装备： 法术强度提高20点。|r", --13314
 "|cff1eff00希望的证明|r£|cff00ff00使用： 回复|r|cff7f7f7f500|r|cff00ff00点生命值。只能在生命值不高于10%时使用。 （30分钟冷却）|r", --13315
-"|cff9e9e9eMonster - Sword2H, Claymore Silver Yellow Glow|r£ ", --13316
+"双手£ ", --13316
 "|cffa335ed白色迅猛龙之哨|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --13317
-"|cff9e9e9eMonster - Shield, Horde A01 Red|r£ ", --13318
-"|cff9e9e9eMonster - Shield, Horde B03|r£ ", --13319
+"副手£ ", --13318
+"副手£ ", --13319
 "奥术催化剂£任务物品£持续时间：30分钟£|cffffd100\"这是用来中和天灾之锅中的毒素所需的催化剂。\"|r", --13320
 "|cff0070dd绿色机械陆行鸟|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --13321
 "|cff0070dd未涂色的机械陆行鸟|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --13322
@@ -9919,12 +9919,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd棕色骸骨军马|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --13333
 "|cffa335ed绿色骸骨军马|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --13334
 "|cffa335ed死亡军马的缰绳|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤瑞文戴尔男爵的死亡战马。这是一种速度非常快的坐骑。|r", --13335
-"|cff9e9e9eMonster - Staff, Feathered Black|r£ ", --13336
-"|cff9e9e9eMonster - Staff, Feathered Gold|r£ ", --13337
-"|cff9e9e9eMonster - Staff, Feathered Invert|r£ ", --13338
-"|cff9e9e9eMonster - Staff, Feathered Silver|r£ ", --13339
+"拾取后绑定£ ", --13336
+"拾取后绑定£ ", --13337
+"拾取后绑定£ ", --13338
+"拾取后绑定£ ", --13339
 "|cff0070dd黑爵士的斗篷|r£|cff00ff00装备： 攻击强度提高20点。|r", --13340
-"|cff9e9e9eMonster - Item, Vial Yellow Offhand|r£ ", --13341
+"副手物品£ ", --13341
 "宠物鱼£使用后绑定£|cff00ff00使用： 召唤你的宠物鱼。它最近似乎不太舒服...... （3分钟冷却）|r", --13342
 "宠物石£使用后绑定£|cff00ff00使用： 召唤你的宠物石。不过它似乎经常失灵...... （3分钟冷却）|r", --13343
 "|cff0070dd龙玉护手|r£|cff00ff00装备： 法术强度提高16点。|r", --13344
@@ -9988,8 +9988,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd肮脏的套索|r£ ", --13403
 "|cff0070dd不可宽恕者的面具|r£|cff00ff00装备： 命中等级提高20点。|r£|cff00ff00装备： 爆击等级提高14点。|r", --13404
 "|cff0070dd哀嚎肩甲|r£|cff00ff00装备： 防御等级提高5。|r", --13405
-"|cff9e9e9eMonster - Item, Mutton Offhand|r£ ", --13406
-"|cff9e9e9eMonster - Item, Mutton with Bite Offhand|r£ ", --13407
+"副手物品£ ", --13406
+"副手物品£ ", --13407
 "|cff0070dd破灵者|r£ ", --13408
 "|cff0070dd泪泉护腕|r£ ", --13409
 "石鳞鳗£ ", --13422
@@ -10054,7 +10054,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00配方：特效法力药水|r£拾取后绑定£使用： 教你学会配制特效法力药水。£\n特效法力药水£|cff00ff00使用： 恢复1350到2250点法力值。|r£\n需要梦叶草 (3), 冰盖草 (2), 水晶瓶", --13501
 "|cff0070dd手工精制束带|r£ ", --13502
 "|cffa335ed炼金石|r£拾取后绑定£唯一£饰品£+15 力量£+15 敏捷£+15 耐力£+15 智力£+15 精神£|cff00ff00装备： 使你在饮用治疗药水和法力药水时获得的效果提高40%。这个效果无法叠加。|r", --13503
-"|cff9e9e9eMonster - Sword, Doomguard|r£ ", --13504
+"单手£ ", --13504
 "|cffa335ed瑞文戴尔之剑|r£|cff00ff00装备： 移动速度和生命值回复速度提高。|r", --13505
 "化石药水£|cff00ff00使用： 你进入石头形态，吸收6000点伤害。持续30秒。但是在这段时间里，你无法攻击、移动或施法。|r", --13506
 "峭壁卫兵图林·长角的报告£任务物品£唯一", --13507
@@ -10090,7 +10090,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00寒风肩铠|r£ ", --13538
 "|cff1eff00女妖之触|r£ ", --13539
 "恶魔之盒£任务物品£唯一", --13542
-"Krastinov's Bag of Horrors UNUSED£拾取后绑定£唯一", --13543
+"拾取后绑定£唯一", --13543
 "|cff1eff00鬼灵精华|r£|cffffd100\"可以与凯尔达隆的死者交谈。\"|r", --13544
 "贝壳£ ", --13545
 "血肚鱼£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r", --13546
@@ -10099,139 +10099,139 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd熊猫项圈|r£账号绑定£唯一：典藏版宠物（1）£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --13583
 "|cff0070dd破坏神之石|r£账号绑定£唯一：典藏版宠物（1）£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --13584
 "巫妖生前的遗物£任务物品£唯一£|cffffd100\"所有的书页都被撕破了。\"|r", --13585
-"Test Crit Chest£|cff00ff00装备： 使你的爆击等级提高100。|r", --13586
+"胸部£|cff00ff00装备： 使你的爆击等级提高100。|r", --13586
 "Greater Spellstone (DEPRECATED)£|cff00ff00装备： 使你的法术爆击等级提高11。|r", --13602
 "Major Spellstone (DEPRECATED)£|cff00ff00装备： 使你的法术爆击等级提高14。|r", --13603
-"|cff9e9e9eMonster - Item, Bucket - Wood Offhand|r£ ", --13604
-"|cff9e9e9eMonster - Item, Bucket - Metal Dirty Offhand|r£ ", --13605
-"|cff9e9e9eMonster - Item, Bucket - Metal Offhand|r£ ", --13606
-"|cff9e9e9eMonster - Item, Bucket - Metal|r£ ", --13607
-"|cff9e9e9eMonster - Item, Bucket - Metal Dirty|r£ ", --13608
-"|cff9e9e9eMonster - Item, Lantern - Round Offhand|r£ ", --13609
-"|cff9e9e9eMonster - Item, Lantern - Square Offhand|r£ ", --13610
-"|cff9e9e9eMonster - Hot Iron Poker Offhand|r£ ", --13611
-"|cff9e9e9eMonster - Item, Glass - Purple Wine|r£ ", --13612
-"|cff9e9e9eMonster - Staff, D01 Circling Black Skull|r£ ", --13622
-"|cff9e9e9eMonster - Sword2H, Horde Skull Blue Flame|r£ ", --13623
+"副手物品£ ", --13604
+"副手物品£ ", --13605
+"副手物品£ ", --13606
+"唯一£ ", --13607
+"唯一£ ", --13608
+"副手物品£ ", --13609
+"副手物品£ ", --13610
+"副手物品£ ", --13611
+"单手£ ", --13612
+"双手£ ", --13622
+"双手£ ", --13623
 "禁锢灵魂的遗物£任务物品£唯一", --13624
-"|cff9e9e9eMonster - Axe, Horde B03 Copper|r£ ", --13625
+"单手£ ", --13625
 "莱斯·霜语的徽记£任务物品£唯一", --13626
-"|cff9e9e9eMonster - Sword, Horde Jagged Blue|r£ ", --13627
-"|cff9e9e9eMonster - Shield, Horde B04|r£ ", --13628
-"|cff9e9e9eMonster - Shield, Horde C02|r£ ", --13629
-"|cff9e9e9eMonster - Shield, Horde C03|r£ ", --13630
-"|cff9e9e9eMonster - Spear, Badass Red|r£ ", --13631
-"|cff9e9e9eMonster - Spear, Badass Blue|r£ ", --13632
-"Level 15 Test Gear Cloth - Mage/Priest/Warlock£ ", --13642
-"Level 15 Test Gear Leather - Druid/Shaman£ ", --13643
-"Level 15 Test Gear Leather - Hunter/Rogue£ ", --13644
-"Level 15 Test Gear Mail - Paladin/Warrior£ ", --13645
-"Level 20 Test Gear Cloth - Mage/Priest/Warlock£ ", --13646
-"Level 25 Test Gear Cloth - Mage/Priest/Warlock£ ", --13647
-"Level 30 Test Gear Cloth - Mage/Priest/Warlock£ ", --13648
-"Level 35 Test Gear Cloth - Mage/Priest/Warlock£ ", --13649
-"Level 40 Test Gear Cloth - Mage/Priest/Warlock£ ", --13650
-"Level 45 Test Gear Cloth - Mage/Priest/Warlock£ ", --13651
-"Level 50 Test Gear Cloth - Mage/Priest/Warlock£ ", --13652
-"Level 55 Test Gear Cloth - Mage/Priest/Warlock£ ", --13653
-"Level 60 Test Gear Cloth - Mage/Priest/Warlock£ ", --13654
-"Level 65 Test Gear Cloth - Mage£ ", --13655
-"Level 20 Test Gear Mail - Paladin/Warrior£ ", --13656
-"Level 25 Test Gear Mail - Paladin/Warrior£ ", --13657
-"Level 30 Test Gear Mail - Paladin/Warrior£ ", --13658
-"Level 35 Test Gear Mail - Paladin/Warrior£ ", --13659
-"Level 20 Test Gear Leather - Druid/Shaman£ ", --13660
-"Level 25 Test Gear Leather - Druid/Shaman£ ", --13661
-"Level 30 Test Gear Leather - Druid/Shaman£ ", --13662
-"Level 35 Test Gear Leather - Druid/Shaman£ ", --13663
-"Level 20 Test Gear Leather - Hunter/Rogue£ ", --13664
-"Level 25 Test Gear Leather - Hunter/Rogue£ ", --13665
-"Level 30 Test Gear Leather - Hunter/Rogue£ ", --13666
-"Level 35 Test Gear Leather - Hunter/Rogue£ ", --13667
-"Level 40 Test Gear Leather - Druid£ ", --13668
-"Level 45 Test Gear Leather - Druid£ ", --13669
-"Level 50 Test Gear Leather - Druid£ ", --13670
-"Level 55 Test Gear Leather - Druid£ ", --13671
-"Level 60 Test Gear Leather - Druid£ ", --13672
-"Level 65 Test Gear Leather - Druid£ ", --13673
-"Level 40 Test Gear Leather - Rogue£ ", --13674
-"Level 45 Test Gear Leather - Rogue£ ", --13675
-"Level 50 Test Gear Leather - Rogue£ ", --13676
-"Level 55 Test Gear Leather - Rogue£ ", --13677
-"Level 60 Test Gear Leather - Rogue£ ", --13678
-"Level 65 Test Gear Leather - Rogue£ ", --13679
-"Level 40 Test Gear Plate - Paladin/Warrior£ ", --13680
-"Level 45 Test Gear Plate - Paladin/Warrior£ ", --13681
-"Level 50 Test Gear Plate - Paladin/Warrior£ ", --13682
-"Level 55 Test Gear Plate - Paladin/Warrior£ ", --13683
-"Level 60 Test Gear Plate - Paladin/Warrior£ ", --13684
-"Level 65 Test Gear Plate - Paladin£ ", --13685
-"Level 40 Test Gear Mail - Hunter£ ", --13686
-"Level 45 Test Gear Mail - Hunter£ ", --13687
-"Level 50 Test Gear Mail - Hunter£ ", --13688
-"Level 55 Test Gear Mail - Hunter£ ", --13689
-"Level 60 Test Gear Mail - Hunter£ ", --13690
-"Level 65 Test Gear Mail - Hunter£ ", --13691
-"Level 40 Test Gear Mail - Shaman£ ", --13692
-"Level 45 Test Gear Mail - Shaman£ ", --13693
-"Level 50 Test Gear Mail - Shaman£ ", --13694
-"Level 55 Test Gear Mail - Shaman£ ", --13695
-"Level 60 Test Gear Mail - Shaman£ ", --13696
-"Level 65 Test Gear Mail - Shaman£ ", --13697
-"|cff9e9e9eMonster - Staff, Ornate Warlock Staff Black Glow Low|r£ ", --13698
+"单手£ ", --13627
+"副手£ ", --13628
+"副手£ ", --13629
+"副手£ ", --13630
+"双手£ ", --13631
+"双手£ ", --13632
+"", --13642
+"", --13643
+"", --13644
+"", --13645
+"", --13646
+"", --13647
+"", --13648
+"", --13649
+"", --13650
+"", --13651
+"", --13652
+"", --13653
+"", --13654
+"", --13655
+"", --13656
+"", --13657
+"", --13658
+"", --13659
+"", --13660
+"", --13661
+"", --13662
+"", --13663
+"", --13664
+"", --13665
+"", --13666
+"", --13667
+"", --13668
+"", --13669
+"", --13670
+"", --13671
+"", --13672
+"", --13673
+"", --13674
+"", --13675
+"", --13676
+"", --13677
+"", --13678
+"", --13679
+"", --13680
+"", --13681
+"", --13682
+"", --13683
+"", --13684
+"", --13685
+"", --13686
+"", --13687
+"", --13688
+"", --13689
+"", --13690
+"", --13691
+"", --13692
+"", --13693
+"", --13694
+"", --13695
+"", --13696
+"", --13697
+"双手£ ", --13698
 "Firestone (DEPRECATED)£ ", --13699
 "Greater Firestone (DEPRECATED)£ ", --13700
 "Major Firestone (DEPRECATED)£ ", --13701
 "末日草£任务物品", --13702
 "科多兽骨£任务物品", --13703
 "骷髅钥匙£拾取后绑定£唯一", --13704
-"|cff9e9e9eMonster - Staff, Yellow Jeweled with Low Purple Glow|r£ ", --13705
-"|cff9e9e9eMonster - Axe, 2H Horde Black Tombstone|r£ ", --13706
-"|cff9e9e9eMonster - Sword, Horde Sword B04 Black|r£ ", --13707
-"|cff9e9e9eMonster - Sword2H, Horde Massive Blue|r£ ", --13708
-"|cff9e9e9eMonster - Staff Green Sphere Glowing|r£ ", --13709
-"Test Stamina Chest£ ", --13710
-"Test Attack Power Chest£|cff00ff00装备： 攻击强度提高200点。|r", --13711
-"Test Sword Chest£|cff00ff00装备： 剑类武器技能等级提高99。|r", --13712
-"Test Dodge Chest£|cff00ff00装备： 使你的躲闪等级提高96。|r", --13713
-"Test Parry Chest£|cff00ff00装备： 使你的招架等级提高100。|r", --13714
-"Test Block Chest£|cff00ff00装备： 使你的格挡等级提高100。|r", --13715
-"Test Haste Chest£ ", --13716
-"Test Hit Chance Chest£|cff00ff00装备： 使你的命中等级提高100。|r", --13717
-"|cff9e9e9eMonster - Sword, Horde Jagged Red|r£ ", --13718
-"|cff9e9e9eMonster - Sword, Horde Jagged Red w/ Low Yellow Glow|r£ ", --13719
-"|cff9e9e9eMonster - Staff, Feathered Invert - Glow Black High|r£ ", --13720
-"|cff9e9e9eMonster - Staff, Wooden Handle Spiral Head White|r£ ", --13721
-"|cff9e9e9eMonster - Staff, Demon Skull Staff Low Purple Flame|r£ ", --13722
-"|cff9e9e9eMonster - Staff, Wood w/ Spiral Head White Low Purple Glow|r£ ", --13723
+"双手£ ", --13705
+"双手£ ", --13706
+"单手£ ", --13707
+"双手£ ", --13708
+"双手£ ", --13709
+"胸部£ ", --13710
+"胸部£|cff00ff00装备： 攻击强度提高200点。|r", --13711
+"胸部£|cff00ff00装备： 剑类武器技能等级提高99。|r", --13712
+"胸部£|cff00ff00装备： 使你的躲闪等级提高96。|r", --13713
+"胸部£|cff00ff00装备： 使你的招架等级提高100。|r", --13714
+"胸部£|cff00ff00装备： 使你的格挡等级提高100。|r", --13715
+"胸部£ ", --13716
+"胸部£|cff00ff00装备： 使你的命中等级提高100。|r", --13717
+"单手£ ", --13718
+"单手£ ", --13719
+"拾取后绑定£ ", --13720
+"双手£ ", --13721
+"双手£ ", --13722
+"双手£ ", --13723
 "可口的魔法点心£|cff00ff00使用： 在30秒内恢复总计2148点生命值和4410点法力值，进食时必须保持坐姿。|r", --13724
 "卡斯迪诺夫的恐惧之袋£任务物品£唯一", --13725
-"[PH] Rising Dawn Gloves£ ", --13726
-"[PH] Brilliant Dawn Gloves£ ", --13727
-"[PH] Shining Dawn Gloves£ ", --13728
-"[PH] Brilliant Dawn Fists£ ", --13730
-"[PH] Brilliant Dawn Gauntlets£ ", --13731
-"[PH] Rising Dawn Mitts£ ", --13732
-"[PH] Rising Dawn Fists£ ", --13733
-"[PH] Rising Dawn Gauntlets£ ", --13734
-"[PH] Shining Dawn Fists£ ", --13736
-"[PH] Shining Dawn Gauntlets£ ", --13737
-"[PH] Cloth Bracers of the Brilliant Dawn£ ", --13738
-"[PH] Cloth Bracers of the Rising Dawn£ ", --13739
-"[PH] Cloth Bracers of the Shining Dawn£ ", --13740
-"[PH] Leather Bracers of the Brilliant Dawn£ ", --13741
-"[PH] Mail Bracers of the Brilliant Dawn£ ", --13742
-"[PH] Plate Bracers of the Brilliant Dawn£ ", --13743
-"[PH] Plate Bracers of the Rising Dawn£ ", --13744
-"[PH] Plate Bracers of the Shining Dawn£ ", --13745
-"[PH] Mail Bracers of the Rising Dawn£ ", --13746
-"[PH] Mail Bracers of the Shining Dawn£ ", --13747
-"[PH] Leather Bracers of the Shining Dawn£ ", --13748
-"[PH] Leather Bracers of the Rising Dawn£ ", --13749
-"|cff9e9e9eMonster - Staff, Jeweled Blue Staff|r£ ", --13750
-"|cff9e9e9eMonster - Staff, Jeweled Yellow Staff|r£ ", --13751
+"拾取后绑定£ ", --13726
+"拾取后绑定£ ", --13727
+"拾取后绑定£ ", --13728
+"拾取后绑定£ ", --13730
+"拾取后绑定£ ", --13731
+"拾取后绑定£ ", --13732
+"拾取后绑定£ ", --13733
+"拾取后绑定£ ", --13734
+"拾取后绑定£ ", --13736
+"拾取后绑定£ ", --13737
+"拾取后绑定£ ", --13738
+"拾取后绑定£ ", --13739
+"拾取后绑定£ ", --13740
+"拾取后绑定£ ", --13741
+"拾取后绑定£ ", --13742
+"拾取后绑定£ ", --13743
+"拾取后绑定£ ", --13744
+"拾取后绑定£ ", --13745
+"拾取后绑定£ ", --13746
+"拾取后绑定£ ", --13747
+"拾取后绑定£ ", --13748
+"拾取后绑定£ ", --13749
+"双手£ ", --13750
+"双手£ ", --13751
 "禁锢灵魂的遗物£任务物品£唯一£|cff00ff00使用： 对巫妖莱斯·霜语使用，破除他的不死之身。|r", --13752
-"|cff9e9e9eMonster - Staff, Jeweled Green Staff|r£ ", --13753
+"双手£ ", --13753
 "新鲜的光滑大鱼£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --13754
 "冬鱿鱼£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --13755
 "新鲜的夏日鲈鱼£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --13756
@@ -10240,52 +10240,52 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "新鲜的夜鳞鲷鱼£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --13759
 "新鲜的阳鳞鲑鱼£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --13760
 "冰冻的龙蛋£任务物品", --13761
-"[PH] Robe of the Brilliant Dawn£ ", --13762
-"[PH] Robe of the Rising Dawn£ ", --13763
-"[PH] Robe of the Shining Dawn£ ", --13764
-"[PH] Leather Chestguard of the Brilliant Dawn£ ", --13765
-"[PH] Leather Chestguard of the Shining Dawn£ ", --13766
-"[PH] Leather Chestguard of the Rising Dawn£ ", --13767
-"[PH] Mail Chestguard of the Brilliant Dawn£ ", --13768
-"[PH] Mail Chestguard of the Shining Dawn£ ", --13769
-"[PH] Mail Chestguard of the Rising Dawn£ ", --13770
-"[PH] Plate Chestguard of the Brilliant Dawn£ ", --13771
-"[PH] Plate Chestguard of the Rising Dawn£ ", --13772
-"[PH] Plate Chestguard of the Shining Dawn£ ", --13773
-"[PH] Cloth Leggings of the Rising Dawn£ ", --13775
-"[PH] Cloth Leggings of the Shining Dawn£ ", --13776
-"[PH] Leather Leggings of the Brilliant Dawn£ ", --13777
-"[PH] Leather Leggings of the Rising Dawn£ ", --13778
-"[PH] Leather Leggings of the Shining Dawn£ ", --13779
-"[PH] Mail Leggings of the Brilliant Dawn£ ", --13780
-"[PH] Mail Leggings of the Rising Dawn£ ", --13781
-"[PH] Mail Leggings of the Shining Dawn£ ", --13782
-"[PH] Plate Leggings of the Brilliant Dawn£ ", --13783
-"[PH] Plate Leggings of the Rising Dawn£ ", --13784
-"[PH] Plate Leggings of the Shining Dawn£ ", --13785
-"[PH] Rising Dawn Hat£ ", --13787
-"[PH] Shining Dawn Hat£ ", --13788
-"[PH] Rising Dawn Cap£ ", --13790
-"[PH] Shining Dawn Cap£ ", --13791
-"[PH] Rising Dawn Coif£ ", --13793
-"[PH] Shining Dawn Coif£ ", --13794
-"[PH] Rising Dawn Helm£ ", --13796
-"[PH] Shining Dawn Helm£ ", --13797
-"[PH] Cloth Boots of the Brilliant Dawn£ ", --13798
-"[PH] Leather Boots of the Brilliant Dawn£ ", --13801
-"[PH] Leather Boots of the Rising Dawn£ ", --13802
-"[PH] Leather Boots of the Shining Dawn£ ", --13803
-"[PH] Mail Boots of the Brilliant Dawn£ ", --13804
-"[PH] Mail Boots of the Rising Dawn£ ", --13805
-"[PH] Mail Boots of the Shining Dawn£ ", --13806
-"[PH] Plate Boots of the Brilliant Dawn£ ", --13807
-"[PH] Plate Boots of the Rising Dawn£ ", --13808
-"[PH] Plate Boots of the Shining Dawn£ ", --13809
+"拾取后绑定£ ", --13762
+"拾取后绑定£ ", --13763
+"拾取后绑定£ ", --13764
+"拾取后绑定£ ", --13765
+"拾取后绑定£ ", --13766
+"拾取后绑定£ ", --13767
+"拾取后绑定£ ", --13768
+"拾取后绑定£ ", --13769
+"拾取后绑定£ ", --13770
+"拾取后绑定£ ", --13771
+"拾取后绑定£ ", --13772
+"拾取后绑定£ ", --13773
+"拾取后绑定£ ", --13775
+"拾取后绑定£ ", --13776
+"拾取后绑定£ ", --13777
+"拾取后绑定£ ", --13778
+"拾取后绑定£ ", --13779
+"拾取后绑定£ ", --13780
+"拾取后绑定£ ", --13781
+"拾取后绑定£ ", --13782
+"拾取后绑定£ ", --13783
+"拾取后绑定£ ", --13784
+"拾取后绑定£ ", --13785
+"拾取后绑定£ ", --13787
+"拾取后绑定£ ", --13788
+"拾取后绑定£ ", --13790
+"拾取后绑定£ ", --13791
+"拾取后绑定£ ", --13793
+"拾取后绑定£ ", --13794
+"拾取后绑定£ ", --13796
+"拾取后绑定£ ", --13797
+"拾取后绑定£ ", --13798
+"拾取后绑定£ ", --13801
+"拾取后绑定£ ", --13802
+"拾取后绑定£ ", --13803
+"拾取后绑定£ ", --13804
+"拾取后绑定£ ", --13805
+"拾取后绑定£ ", --13806
+"拾取后绑定£ ", --13807
+"拾取后绑定£ ", --13808
+"拾取后绑定£ ", --13809
 "神圣太阳果£拾取后绑定£|cff00ff00使用： 在27秒内恢复总计1933点生命值，在进食的时候必须保持坐姿。另外你还将得到10点力量值的加成，持续10分钟。|r", --13810
 "|cff1eff00黎明项链|r£ ", --13811
 "|cff1eff00黎明之戒|r£ ", --13812
 "神圣太阳果汁£拾取后绑定£|cff00ff00使用： 在30秒内恢复4410点法力值。饮水时必须保持坐姿。另外还可使你的精神提高10点，持续10分钟。|r", --13813
-"|cff9e9e9eMonster - Shield, Stromgarde B03|r£ ", --13814
+"副手£ ", --13814
 "一些符文£任务物品£唯一", --13815
 "|cff9e9e9e优质长剑|r£ ", --13816
 "|cff9e9e9e锥形巨剑|r£ ", --13817
@@ -10309,15 +10309,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "辣味狼排£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高8点，持续15分钟。|r", --13851
 "大十字军的命令£任务物品£|cffffd100\"命令上面盖着大十字军的印章。\"|r", --13852
 "食腐虫肉块£任务物品", --13853
-"|cff9e9e9eMonster - Item, Tankard Dirty Offhand|r£ ", --13854
-"|cff9e9e9eMonster - Item, Tankard Metal Offhand|r£ ", --13855
+"副手物品£ ", --13854
+"副手物品£ ", --13855
 "|cff1eff00符文布腰带|r£ ", --13856
 "|cff1eff00符文布外套|r£ ", --13857
 "|cff1eff00符文布袍|r£ ", --13858
-"|cff9e9e9eMonster - Item, Tankard Wooden Offhand|r£ ", --13859
+"副手物品£ ", --13859
 "|cff1eff00符文布披风|r£ ", --13860
-"|cff9e9e9eMonster - Item, Tankard Gold|r£ ", --13861
-"|cff9e9e9eMonster - Item, Tankard Gold Offhand|r£ ", --13862
+"单手£ ", --13861
+"副手物品£ ", --13862
 "|cff1eff00符文布手套|r£|cff00ff00装备： 法术强度提高12点。|r", --13863
 "|cff1eff00符文布靴|r£ ", --13864
 "|cff1eff00符文布短裤|r£ ", --13865
@@ -10349,7 +10349,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "腌制鲑鱼£ ", --13891
 "科多兽诱引器£任务物品£唯一£|cff00ff00使用： 引诱一头远古科多兽、老迈的科多兽或濒死的科多兽跟随你（每次一个）。|r", --13892
 "新鲜的大鱼£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r", --13893
-"|cff9e9e9eMonster - Mace, Standard B01 White|r£ ", --13894
+"单手£ ", --13894
 "正统韩服£ ", --13895
 "暗绿色婚礼韩服£ ", --13896
 "白色传统韩服£ ", --13897
@@ -10375,10 +10375,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "103磅重的大鱼£副手物品", --13917
 "加固的宝箱£ ", --13918
 "健康的龙鳞£拾取后绑定£该物品将触发一个任务", --13920
-"|cff9e9e9eMonster - Shield, B01 WoodSteelCap|r£ ", --13922
-"|cff9e9e9eMonster - Gun, Tauren Blade Silver|r£ ", --13923
-"|cff9e9e9eMonster - Gun, Tauren Scope Blade Feathered Silver Deluxe|r£ ", --13924
-"|cff9e9e9eMonster - Mace2H, Maul B02 Silver|r£ ", --13925
+"副手£ ", --13922
+"", --13923
+"", --13924
+"双手£ ", --13925
 "|cff1eff00金珍珠|r£ ", --13926
 "煮熟的光滑大鱼£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。另外你的耐力也将提高10点，持续10分钟。|r", --13927
 "烤鱿鱼£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的敏捷将提高10点，持续10分钟。|r", --13928
@@ -10389,7 +10389,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "炖龙虾£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --13933
 "大鱼片£|cff00ff00使用： 在30秒内恢复总计4320点生命值，进食时必须保持坐姿。另外你的耐力也将提高10点，持续10分钟。|r", --13934
 "烤鲑鱼£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --13935
-"|cff0070ddDeprecated Dreadmaster's Shroud|r£|cff00ff00装备： 法术强度提高23点。|r", --13936
+"拾取后绑定£|cff00ff00装备： 法术强度提高23点。|r", --13936
 "|cffa335ed院长之杖|r£|cff00ff00使用： 使半径30码范围内的小队成员的智力提高20点。 （10分钟冷却）|r", --13937
 "|cff0070dd噬骨铁针|r£|cff00ff00装备： 法术强度提高11点。|r", --13938
 "食谱：斑点黄尾鱼£使用： 教你学会烹制斑点黄尾鱼。£\n斑点黄尾鱼£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r£\n需要新鲜的斑点黄尾鱼", --13939
@@ -10440,17 +10440,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "符文布£ ", --14047
 "符文布卷£ ", --14048
 "科多坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --14062
-"|cff9e9e9eMonster - Mace2H, Tirion Fordring|r£ ", --14082
+"双手£ ", --14082
 "Tyrande's Staff£ ", --14083
-"|cff9e9e9eMonster - Mace2H, Cairne Totem|r£ ", --14084
-"|cff9e9e9eMonster - Glaive Vol'jin|r£ ", --14085
+"双手£ ", --14084
+"单手£ ", --14085
 "珠串便鞋£ ", --14086
 "珠串护腕£ ", --14087
 "珠串披风£ ", --14088
 "珠串手套£ ", --14089
 "|cff1eff00珠串马裤|r£ ", --14090
 "|cff1eff00珠串长袍|r£ ", --14091
-"|cff9e9e9eMonster - Staff, Holy Staff Archbishop Benedictus|r£ ", --14092
+"双手£ ", --14092
 "珠串束腰£ ", --14093
 "|cff1eff00珠串外套|r£ ", --14094
 "天然护腕£ ", --14095
@@ -10463,7 +10463,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "天然裹手£ ", --14102
 "|cff1eff00亮布披风|r£|cff00ff00装备： 法术强度提高8点。|r", --14103
 "|cff1eff00亮布短裤|r£ ", --14104
-"|cff9e9e9eMonster - Bow, C01/B02 White|r£ ", --14105
+"远程£ ", --14105
 "|cff1eff00恶魔布袍|r£|cff00ff00装备： 法术强度提高29点。|r", --14106
 "|cff1eff00恶魔布短裤|r£|cff00ff00装备： 法术强度提高21点。|r", --14107
 "|cff1eff00恶魔布靴|r£|cff00ff00装备： 法术强度提高14点。|r", --14108
@@ -10476,7 +10476,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "土著护腕£ ", --14115
 "土著斗篷£ ", --14116
 "|cff1eff00土著手套|r£ ", --14117
-"|cff9e9e9eMonster - Bow, C02/B02 Black|r£ ", --14118
+"远程£ ", --14118
 "|cff1eff00土著缠腰|r£ ", --14119
 "|cff1eff00土著长袍|r£ ", --14120
 "|cff1eff00土著外衣|r£ ", --14121
@@ -10702,7 +10702,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "月布£ ", --14342
 "|cff0070dd小块魔光碎片|r£ ", --14343
 "|cff0070dd大块魔光碎片|r£ ", --14344
-"|cff1eff00Deprecated Runic Cloth Pants|r£ ", --14363
+"装备后绑定£ ", --14363
 "|cff1eff00秘术师便鞋|r£ ", --14364
 "|cff1eff00秘术师斗篷|r£ ", --14365
 "|cff1eff00秘术师护腕|r£ ", --14366
@@ -10814,7 +10814,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "图样：符文布披风£拾取后绑定£使用： 教你学会制作符文布披风。£|cff1eff00\n符文布披风|r£装备后绑定£背部£34点护甲£+8 智力£+9 精神£\n需要符文布卷 (4), 铁网蛛丝", --14472
 "|cff1eff00图样：鬼纹腰带|r£使用： 教你学会制作鬼纹腰带。£|cff1eff00\n鬼纹腰带|r£装备后绑定£腰部£布甲£39点护甲£+8 智力£|cff00ff00装备： 每5秒恢复8点法力值。|r£\n需要符文布卷 (2), 幻象染料 (2)", --14473
 "|cff1eff00图样：霜纹手套|r£使用： 教你学会制作霜纹手套。£|cff1eff00\n霜纹手套|r£装备后绑定£手£布甲£43点护甲£+6 智力£|cff00ff00装备： 法术强度提高18点。|r£\n需要符文布卷 (5), 蓝色染料 (2), 符文线", --14474
-"|cff9e9e9eMonster - Axe, 2H War A03 White|r£ ", --14475
+"双手£ ", --14475
 "|cff1eff00图样：灰布手套|r£使用： 教你学会制作灰布手套。£|cff1eff00\n灰布手套|r£装备后绑定£手£布甲£44点护甲£+11 精神£|cff00ff00装备： 法术强度提高14点。|r£\n需要符文布卷 (4), 火焰之心 (2), 符文线", --14476
 "|cff1eff00图样：鬼纹手套|r£使用： 教你学会制作鬼纹手套。£|cff1eff00\n鬼纹手套|r£装备后绑定£手£布甲£44点护甲£+8 智力£|cff00ff00装备： 每5秒恢复8点法力值。|r£\n需要符文布卷 (2), 幻象染料 (2)", --14477
 "|cff1eff00图样：亮布长袍|r£使用： 教你学会制作亮布长袍。£|cff1eff00\n亮布长袍|r£装备后绑定£胸部£布甲£70点护甲£+16 冰霜抗性£+15 暗影抗性£\n需要符文布卷 (4), 金锭 (2)", --14478
@@ -10851,23 +10851,23 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd图样：月布头饰|r£使用： 教你学会制作月布头饰。£|cff0070dd\n月布头饰|r£装备后绑定£头部£布甲£71点护甲£+13 耐力£+23 智力£+15 精神£\n需要符文布卷 (4), 月布 (6), 艾泽拉斯钻石, 魔化皮 (2), 符文线 (2)", --14509
 "|cff0070dd图样：无底包|r£使用： 教你学会制作无底包。£|cff0070dd\n无底包|r£装备后绑定£18格容器£\n需要符文布卷 (8), 月布 (12), 大块魔光碎片 (2), 熔火犬皮 (2), 符文线 (2)", --14510
 "|cffa335ed图样：法术掌握手套|r£使用： 教你学会制作法术掌握手套。£|cffa335ed\n法术掌握手套|r£装备后绑定£手£布甲£68点护甲£+10 智力£+8 精神£职业：牧师, 法师, 术士£|cff00ff00装备： 爆击等级提高28。|r£\n需要符文布卷 (10), 月布 (10), 幻象染料 (10), 金珍珠 (6), 巨型绿宝石 (6), 魔化皮 (8), 符文线 (2)", --14511
-"|cffa335ed图样：信念外衣|r£使用： 教你学会制作信念外衣。£|cffa335ed\n信念外衣|r£拾取后绑定£胸部£布甲£109点护甲£+14 耐力£职业：牧师£|cff00ff00装备： 法术强度提高39点。|r£|cff00ff00装备： 每5秒恢复8点法力值。|r£|cff00ff00装备： 使你的消隐技能的冷却时间缩短2秒。|r£\n需要符文布卷 (12), 月布 (10), 正义宝珠 (4), 金珍珠 (4), 幻象染料 (10), 符文线 (2)", --14512
+"|cffa335ed图样：信念外衣|r£使用： 教你学会制作信念外衣。£|cffa335ed\n信念外衣|r£拾取后绑定£胸部£布甲£109点护甲£+14 耐力£|cff00ff00装备： 法术强度提高39点。|r£|cff00ff00装备： 每5秒恢复8点法力值。|r£|cff00ff00装备： 使你的消隐技能的冷却时间缩短2秒。|r£\n需要符文布卷 (12), 月布 (10), 正义宝珠 (4), 金珍珠 (4), 幻象染料 (10), 符文线 (2)", --14512
 "|cffa335ed图样：大法师之袍|r£使用： 教你学会制作大法师之袍。£|cffa335ed\n大法师之袍|r£拾取后绑定£胸部£布甲£109点护甲£+12 智力£|cff00ff00装备： 法术强度提高40点。|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00使用： 恢复375到625点法力值。 （5分钟冷却）|r£\n需要符文布卷 (12), 火焰精华 (10), 空气精华 (10), 大地精华 (10), 水之精华 (10), 符文线 (2)", --14513
 "|cffa335ed图样：虚空法袍|r£使用： 教你学会制作虚空法袍。£|cffa335ed\n虚空法袍|r£拾取后绑定£胸部£布甲£109点护甲£+14 耐力£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff00ff00装备： 法术强度提高46点。|r£|cff00ff00使用： 为你的宠物回复450到750点生命值。 （10分钟冷却）|r£\n需要符文布卷 (12), 恶魔符文 (20), 恶魔布 (40), 火焰精华 (12), 死灵精华 (12), 符文线 (2)", --14514
 "|cff0070dd漩涡护腿|r£|cff00ff00装备： 法术强度提高7点。|r", --14522
 "恶魔之锄£任务物品£唯一£|cff00ff00使用： 可以摧毁恶魔水晶。|r", --14523
-"|cff9e9e9eMonster - Sword, Katana 2H Gold|r£ ", --14524
+"单手£ ", --14524
 "|cff0070dd骨节护手|r£|cff00ff00装备： 防御等级提高10。|r", --14525
 "图样：月布£使用： 教你学会净化恶魔布，并将其转化为月布。£\n月布£\n需要恶魔布 (2)", --14526
-"|cff9e9e9eMonster - Mace2H, Horde Hammer A03 Dark|r£ ", --14527
+"双手£ ", --14527
 "|cff0070dd断骨圆盾|r£ ", --14528
 "符文布绷带£|cff00ff00使用： 在8秒内恢复1360点生命值。|r", --14529
 "厚符文布绷带£|cff00ff00使用： 在8秒内恢复2000点生命值。|r", --14530
 "|cff0070dd恐怖骨锤|r£ ", --14531
-"|cff9e9e9eMonster - Mace2H, Warhammer Jade|r£ ", --14532
-"|cff9e9e9eMonster - Mace, Hammer Blue Mighty|r£ ", --14533
-"|cff9e9e9eMonster - Axe, Metal Blue Badass|r£ ", --14534
-"|cff9e9e9eMonster - Spear, Cool Blue|r£ ", --14535
+"双手£ ", --14532
+"单手£ ", --14533
+"单手£ ", --14534
+"双手£ ", --14535
 "|cff0070dd骨片锁甲|r£|cff00ff00装备： 攻击强度提高56点。|r", --14536
 "|cff0070dd尸光胫甲|r£ ", --14537
 "|cff0070dd行尸衬肩|r£|cff00ff00装备： 法术强度提高11点。|r", --14538
@@ -10906,7 +10906,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00刺皮手套|r£ ", --14572
 "|cff1eff00刺皮护肩|r£ ", --14573
 "|cff1eff00刺皮长裤|r£ ", --14574
-"|cff9e9e9eMonster - Mace, Bashguud's Hammer|r£ ", --14575
+"单手£ ", --14575
 "|cff0070dd玛杜克黑剑|r£ ", --14576
 "|cff0070dd骨烟短裤|r£ ", --14577
 "|cff1eff00妖鬼束腰|r£ ", --14578
@@ -10917,7 +10917,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00妖鬼手套|r£ ", --14583
 "|cff1eff00妖鬼软帽|r£ ", --14584
 "|cff1eff00妖鬼护腿|r£ ", --14585
-"|cff9e9e9eMonster - Mace2H, Fist of Omokk|r£ ", --14586
+"双手£ ", --14586
 "|cff1eff00妖鬼衬肩|r£ ", --14587
 "|cff1eff00鹰眼束腰|r£ ", --14588
 "|cff1eff00鹰眼轻鞋|r£ ", --14589
@@ -10928,7 +10928,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00鹰眼手套|r£ ", --14594
 "|cff1eff00鹰眼马裤|r£ ", --14595
 "|cff1eff00鹰眼肩饰|r£ ", --14596
-"|cff1eff00Deprecated Warden's Buckler|r£ ", --14597
+"装备后绑定£ ", --14597
 "|cff1eff00典狱官腰带|r£ ", --14598
 "|cff1eff00典狱官软靴|r£ ", --14599
 "|cff1eff00典狱官护腕|r£ ", --14600
@@ -10940,7 +10940,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00典狱官手套|r£ ", --14606
 "|cff1eff00鹰眼圆盾|r£ ", --14607
 "|cff1eff00妖鬼圆盾|r£ ", --14608
-"|cff1eff00Deprecated Ceremonial Buckler|r£ ", --14609
+"装备后绑定£ ", --14609
 "阿拉基的圣甲虫£任务物品£唯一", --14610
 "|cff0070dd血链锁甲|r£|cff00ff00装备： 使你的躲闪等级提高12。|r", --14611
 "|cff0070dd血链护腿|r£ ", --14612
@@ -10949,7 +10949,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd血链护手|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --14615
 "|cff0070dd血链战靴|r£|cff00ff00装备： 使你的命中等级提高10。|r", --14616
 "外科医生衬衣£ ", --14617
-"|cff9e9e9eMonster - Staff, Jeweled Red Staff Low Red Flame|r£ ", --14618
+"双手£ ", --14618
 "骸骨碎片£任务物品", --14619
 "|cff0070dd亡骨束带|r£|cff00ff00装备： 防御等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --14620
 "|cff0070dd亡骨马靴|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r£|cff00ff00装备： 防御等级提高15。|r", --14621
@@ -10973,8 +10973,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "结构图：自动净化装置£使用： 教你学会制作自动净化装置。£|cff1eff00\n自动净化装置|r£饰品£|cff00ff00使用： 为一个友方目标恢复150到250点生命值和法力值，并尝试消除该目标身上的变形效果。对等级不低于31级的施法者所施放的变形法术驱散生效的几率会降低。 （5分钟冷却）|r£\n需要青铜管, 高速青铜齿轮 (2), 中皮 (2), 绿玛瑙", --14639
 "|cff0070dd苍白手套|r£|cff00ff00装备： 攻击强度提高44点。|r", --14640
 "|cff0070dd苍白长靴|r£|cff00ff00装备： 攻击强度提高24点。|r", --14641
-"|cff9e9e9eMonster - Gun, Tauren Feathers Silver|r£ ", --14642
-"|cff9e9e9eMonster - Axe, 2H Battle A03 Red|r£ ", --14643
+"", --14642
+"双手£ ", --14643
 "骷髅钥匙模具£任务物品£唯一£|cff00ff00使用： 将安戈洛的火羽山顶部的熔岩倒入模具，并加入两块瑟银锭，以此制造一把未完工的骷髅钥匙。|r", --14644
 "未完工的骷髅钥匙£任务物品£唯一£|cffffd100\"这把钥匙没有头部。\"|r", --14645
 "闪金镇礼品券£拾取后绑定£该物品将触发一个任务", --14646
@@ -11020,10 +11020,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00不屈头饰|r£ ", --14686
 "|cff1eff00不屈护腿|r£ ", --14687
 "|cff1eff00不屈肩铠|r£ ", --14688
-"Deprecated Battle Chain Buckler£ ", --14691
-"Deprecated Battle Chain Shield£ ", --14696
-"|cff9e9e9eMonster - Staff, 3 Piece Taped Staff Purple|r£ ", --14706
-"|cff9e9e9eMonster - Staff, 3 Piece Taped Staff Blue|r£ ", --14707
+"副手£ ", --14691
+"副手£ ", --14696
+"双手£ ", --14706
+"双手£ ", --14707
 "|cff1eff00战痕裹足|r£ ", --14722
 "|cff1eff00战痕束腕|r£ ", --14723
 "|cff1eff00战痕披风|r£ ", --14724
@@ -11109,12 +11109,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00战击护手|r£ ", --14815
 "|cff1eff00战击护腿|r£ ", --14816
 "|cff1eff00战击护肩|r£ ", --14817
-"|cff9e9e9eMonster - Mace2H, Horde Spiked Maul|r£ ", --14818
-"|cff9e9e9eMonster - Mace2H, Horde Skull Maul|r£ ", --14820
+"双手£ ", --14818
+"双手£ ", --14820
 "|cff1eff00符记胸甲|r£ ", --14821
-"|cff9e9e9eMonster - Mace2H, Horde Metal Spiked Maul|r£ ", --14822
-"|cff9e9e9eMonster - Mace2H, Horde Red Spiked Badass|r£ ", --14823
-"|cff9e9e9eMonster - Mace2H, Horde Black Spiked Badass|r£ ", --14824
+"双手£ ", --14822
+"双手£ ", --14823
+"双手£ ", --14824
 "|cff1eff00符记盾牌|r£ ", --14825
 "|cff1eff00符记护手|r£ ", --14826
 "|cff1eff00符记腰带|r£ ", --14827
@@ -11126,8 +11126,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00暴君护手|r£ ", --14833
 "|cff1eff00暴君护臂|r£ ", --14834
 "|cff1eff00暴君胸甲|r£ ", --14835
-"|cff9e9e9eMonster - Staff, Ornate Jeweled Staff - Purple|r£ ", --14836
-"|cff9e9e9eMonster - Staff, Ornate Jeweled Staff - Purple Low Purple Glow|r£ ", --14837
+"双手£ ", --14836
+"双手£ ", --14837
 "|cff1eff00暴君腰带|r£ ", --14838
 "|cff1eff00暴君胫甲|r£ ", --14839
 "|cff1eff00暴君腿铠|r£ ", --14840
@@ -11135,7 +11135,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00暴君盾牌|r£ ", --14842
 "|cff1eff00暴君头盔|r£ ", --14843
 "|cff1eff00阳鳞胸甲|r£ ", --14844
-"|cff9e9e9eMonster - Staff, Wooden Handle Rounded Head Low Yellow Glow|r£ ", --14845
+"双手£ ", --14845
 "|cff1eff00阳鳞护手|r£ ", --14846
 "|cff1eff00阳鳞腰带|r£ ", --14847
 "|cff1eff00阳鳞马靴|r£ ", --14848
@@ -11160,30 +11160,30 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00领军护腿|r£ ", --14867
 "|cff1eff00领军护肩|r£ ", --14868
 "|cff1eff00领军护腕|r£ ", --14869
-"|cff9e9e9eMonster - Axe, 2H Horde Massive Spiked|r£ ", --14870
-"|cff9e9e9eMonster - Sword, Horde C02 Purple|r£ ", --14871
+"双手£ ", --14870
+"单手£ ", --14871
 "提里奥的礼物£任务物品£唯一", --14872
-"|cff9e9e9eMonster - Staff, Ornate Jeweled Staff - Blue|r£ ", --14873
-"|cff9e9e9eMonster - Axe, Horde C02 Black|r£ ", --14874
-"|cff9e9e9eMonster - Axe, Horde Double Blade A02|r£ ", --14875
-"|cff9e9e9eMonster - Axe, Horde Crystal Blade A03|r£ ", --14876
-"|cff9e9e9eMonster - Axe, Horde Spiked A04|r£ ", --14877
-"|cff9e9e9eMonster - Sword2H, Katana B01 Red|r£ ", --14878
-"|cff9e9e9eMonster - Polearm, Blademaster|r£ ", --14879
-"|cff9e9e9eMonster - Axe, Wide Blade Silver|r£ ", --14880
-"|cff9e9e9eMonster - Glaive - 3 Blade Black|r£ ", --14881
-"|cff9e9e9eMonster - Glaive - 2 Blade Silver|r£ ", --14882
-"Test Glaive A£ ", --14883
-"Test Glaive B£ ", --14884
-"Test Glaive C£ ", --14885
-"Test Glaive D£ ", --14886
-"Test Glaive E£ ", --14887
-"Test Glaive F£ ", --14888
-"Test Glaive G£ ", --14889
-"Test Glaive H£ ", --14890
-"Test Glaive I£ ", --14891
-"Test Glaive J£ ", --14892
-"|cff9e9e9eMonster - Axe, Horde C01 Gold|r£ ", --14893
+"双手£ ", --14873
+"单手£ ", --14874
+"单手£ ", --14875
+"单手£ ", --14876
+"单手£ ", --14877
+"单手£ ", --14878
+"双手£ ", --14879
+"单手£ ", --14880
+"单手£ ", --14881
+"单手£ ", --14882
+"单手£ ", --14883
+"单手£ ", --14884
+"单手£ ", --14885
+"单手£ ", --14886
+"单手£ ", --14887
+"单手£ ", --14888
+"单手£ ", --14889
+"单手£ ", --14890
+"单手£ ", --14891
+"单手£ ", --14892
+"单手£ ", --14893
 "百合根£魔法制造的物品£拾取后绑定£持续时间：1小时£|cff00ff00使用： 回复525到675点法力值和生命值。|r", --14894
 "|cff1eff00盐石外套|r£ ", --14895
 "|cff1eff00盐石马靴|r£ ", --14896
@@ -11696,7 +11696,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00沙漠护肩|r£ ", --15457
 "|cff1eff00苔原长靴|r£ ", --15458
 "|cff1eff00丧钟护腕|r£ ", --15459
-"|cff9e9e9eMonster - Gun, Shotgun|r£ ", --15460
+"", --15460
 "|cff1eff00轻蹄长靴|r£ ", --15461
 "|cff1eff00沃土护腕|r£ ", --15462
 "|cff1eff00暗淡护手|r£ ", --15463
@@ -12091,8 +12091,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "海狮坠饰£任务物品£唯一", --15885
 "提摩莱恩的护符£拾取后绑定£唯一", --15886
 "|cff1eff00英雄护盾|r£ ", --15887
-"|cff1eff00Deprecated Glorious Shield|r£ ", --15888
-"|cff1eff00Deprecated Jademir Scale Shield|r£ ", --15889
+"装备后绑定£ ", --15888
+"装备后绑定£ ", --15889
 "|cff1eff00前锋盾牌|r£ ", --15890
 "|cff1eff00笨重盾牌|r£ ", --15891
 "|cff1eff00屠杀者盾牌|r£ ", --15892
@@ -12107,7 +12107,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "左手爪£ ", --15907
 "驯兽棒£任务物品£唯一£|cff00ff00使用： 尝试驯服一只冰爪熊，使其成为你的宠物，持续15分钟。如果你因为任何原因失去了它的注意力，则驯服过程失败。|r", --15908
 "左手刃£ ", --15909
-"|cff9e9e9eMonster - Trident, Dark Ornate|r£ ", --15910
+"双手£ ", --15910
 "驯兽棒£任务物品£唯一£|cff00ff00使用： 尝试驯服一只大型峭壁野猪，使其成为你的宠物，持续15分钟。如果你因为任何原因失去了它的注意力，则驯服过程失败。|r", --15911
 "|cff1eff00海盗宝珠|r£ ", --15912
 "驯兽棒£任务物品£唯一£|cff00ff00使用： 尝试驯服一只雪豹，使其成为你的宠物，持续15分钟。如果你因为任何原因失去了它的注意力，则驯服过程失败。|r", --15913
@@ -12195,20 +12195,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00语音增强模组|r£|cff00ff00装备： 使任何沉默或打断效果对装备者的影响时间缩短10%。这个效果不与其它同类效果叠加。|r", --16009
 "|cff0070dd奥金机械幼龙|r£|cff00ff00使用： 召唤你的奥金机械幼龙为你作战，持续1分钟。 （5分钟冷却）|r", --16022
 "高级活动假人£|cff00ff00使用： 在地上放置一个假人，吸引附近的怪物攻击它。持续3分钟。|r", --16023
-"Ashbringer Test 001£任务物品£唯一", --16024
-"Ashbringer Test 002£任务物品£唯一", --16025
-"PVP Plate Helm Alliance£ ", --16026
-"PVP Plate Breastplate Alliance£ ", --16027
-"PVP Plate Legplates Alliance£ ", --16028
-"PVP Plate Gauntlets Alliance£ ", --16029
-"PVP Plate Boots Alliance£ ", --16030
-"PVP Plate Shoulder Alliance£ ", --16031
-"PVP Plate Wrist Alliance£ ", --16033
-"PVP Plate Cloak Alliance£ ", --16034
-"PVP Cloth Helm Horde£ ", --16035
-"PVP Cloth Robe Horde£ ", --16036
-"PVP Cloth Legs Horde£ ", --16037
-"PVP Cloth Shoulder Horde£ ", --16038
+"任务物品£唯一", --16024
+"任务物品£唯一", --16025
+"头部£ ", --16026
+"胸部£ ", --16027
+"腿部£ ", --16028
+"手£ ", --16029
+"脚£ ", --16030
+"肩部£ ", --16031
+"手腕£ ", --16033
+"背部£ ", --16034
+"头部£ ", --16035
+"胸部£ ", --16036
+"腿部£ ", --16037
+"肩部£ ", --16038
 "|cff0070dd塔基尔萨歌唱之剑|r£ ", --16039
 "奥术炸弹£|cff00ff00使用： 从爆炸范围内的所有目标身上吸取675到1125点法力值，对其造成相当于该数值50%的伤害，并使这些目标沉默5秒。|r", --16040
 "结构图：瑟银手榴弹£使用： 教你学会制作瑟银手榴弹。£\n瑟银手榴弹£|cff00ff00使用： 对半径3码范围内的所有敌人造成300到500点火焰伤害，并使它们瘫痪3秒。任何伤害都会打断这个效果。对67级以上目标使用的效果很差。|r£\n需要瑟银零件, 瑟银锭 (3), 致密炸药粉 (3), 符文布 (3)", --16041
@@ -12231,116 +12231,116 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd弗丁徽记之戒|r£|cff00ff00装备： 法术强度提高20点。|r", --16058
 "普通的棕衬衣£ ", --16059
 "普通的白衬衣£ ", --16060
-"|cff1eff00Test Fire Res Shoulders Cloth|r£|cff00ff00装备： +10 火焰抗性。|r", --16061
-"|cff1eff00Test Fire Res Waist Cloth|r£|cff00ff00装备： +10 火焰抗性。|r", --16062
-"|cff1eff00Test Fire Res Hands Cloth|r£|cff00ff00装备： +10 火焰抗性。|r", --16063
-"|cff1eff00Test Fire Res Waist Mail|r£|cff00ff00装备： +10 火焰抗性。|r", --16064
-"|cff1eff00Test Fire Res Feet Leather|r£|cff00ff00装备： +10 火焰抗性。|r", --16065
-"|cff1eff00Test Fire Res Feet Mail|r£|cff00ff00装备： +10 火焰抗性。|r", --16066
-"|cff0070ddTest Fire Res Ring|r£|cff00ff00装备： +8 火焰抗性。|r", --16067
-"Test Fire Resist Cloth LockBox£ ", --16068
-"Test Fire Resist Leather LockBox£ ", --16069
-"Test Fire Resist Mail LockBox£ ", --16070
-"Test Fire Resist Plate LockBox£ ", --16071
+"装备后绑定£|cff00ff00装备： +10 火焰抗性。|r", --16061
+"装备后绑定£|cff00ff00装备： +10 火焰抗性。|r", --16062
+"装备后绑定£|cff00ff00装备： +10 火焰抗性。|r", --16063
+"装备后绑定£|cff00ff00装备： +10 火焰抗性。|r", --16064
+"装备后绑定£|cff00ff00装备： +10 火焰抗性。|r", --16065
+"装备后绑定£|cff00ff00装备： +10 火焰抗性。|r", --16066
+"拾取后绑定£|cff00ff00装备： +8 火焰抗性。|r", --16067
+"", --16068
+"", --16069
+"", --16070
+"", --16071
 "中级烹饪教材£|cff00ff00使用： 教你成为一名高级厨师，并使烹饪技能上限提高到225点。|r", --16072
 "高级烹饪教材£|cff00ff00使用： 教你成为一名专家级厨师，并使烹饪技能上限提高到300点。|r", --16073
-"Test Potion LockBox (Warrior)£ ", --16074
-"Test Potion LockBox (Rogue)£ ", --16075
-"Test Potion LockBox (Paladin)£ ", --16076
-"Test Potion LockBox (Hunter)£ ", --16077
-"Test Potion LockBox (Druid)£ ", --16078
-"Test Potion LockBox (Shaman)£ ", --16079
-"Test Potion LockBox (Mage/Priest/Warlock)£ ", --16080
-"Test Potion LockBox (Raid)£ ", --16081
+"", --16074
+"", --16075
+"", --16076
+"", --16077
+"", --16078
+"", --16079
+"", --16080
+"", --16081
 "高级钓鱼教材 - 鱼饵之道£|cff00ff00使用： 教你成为一名专家级渔夫，并使钓鱼技能上限提高到300点。|r", --16082
 "中级钓鱼教材 - 鲈鱼与你£|cff00ff00使用： 教你成为一名高级渔夫，并使钓鱼技能上限提高到225点。|r", --16083
 "中级急救教材 - 绷带缚体£|cff00ff00使用： 教你成为一名高级医师，并使急救技能上限提高到225点。|r", --16084
 "高级急救教材 - 自救手册£|cff00ff00使用： 教你成为一名专家级医师，并使急救技能上限提高到300点。|r", --16085
-"Test Enchant Chest Health£ ", --16086
-"Test Enchant Chest Mana£ ", --16102
-"Test Enchant Boots Stamina£|cff00ff00使用： Permanently enchant boots to give +5 Stamina. （1秒冷却）|r", --16103
-"QAEnchhelp Cloak +7 Fire Resistance£|cff00ff00使用： Permanently enchant a cloak to give 7 Fire Resistance.|r", --16104
-"Test Enchant Bracer Greater Stamina£ ", --16105
-"Test Enchant Weapon Greater Striking£ ", --16106
-"Test Enchant Bracer Greater Spirit£ ", --16107
-"Test Enchant 2H Weapon Greater Impact£ ", --16108
-"Test Enchantments LockBox (Enchanting Items)£ ", --16109
+"", --16086
+"", --16102
+"", --16103
+"|cff00ff00使用： Permanently enchant a cloak to give 7 Fire Resistance.|r£ ", --16104
+"", --16105
+"", --16106
+"", --16107
+"", --16108
+"", --16109
 "食谱：超级煎蛋卷£使用： 教你学会烹制超级煎蛋卷。£\n超级煎蛋卷£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高12点，持续15分钟。|r£\n需要巨蛋", --16110
 "食谱：辣椒蟹肉£使用： 教你学会烹制辣椒蟹肉。£\n辣椒蟹肉£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高12点，持续15分钟。|r£\n需要嫩螃蟹肉", --16111
 "手册：厚丝质绷带£使用： 教你学会制作厚丝质绷带。£\n厚丝质绷带£|cff00ff00使用： 在8秒内恢复640点生命值。|r£\n需要丝绸 (2)", --16112
 "手册：魔纹绷带£使用： 教你学会制作魔纹绷带。£\n魔纹绷带£|cff00ff00使用： 在8秒内恢复800点生命值。|r£\n需要魔纹布", --16113
 "工头的木棒£任务物品£唯一£|cff00ff00使用： 唤醒指定的苦工。 （5秒冷却）|r", --16114
 "奥斯瑞克的箱子£任务物品£唯一", --16115
-"|cff1eff00Test Nature Res Cloak Cloth|r£|cff00ff00装备： +8 自然抗性。|r", --16116
-"|cff1eff00Test Nature Res Hands Cloth|r£|cff00ff00装备： +10 自然抗性。|r", --16117
-"|cff1eff00Test Nature Res Legs Cloth|r£|cff00ff00装备： +14 自然抗性。|r", --16118
-"|cff1eff00Test Nature Res Wrist Cloth|r£|cff00ff00装备： +8 自然抗性。|r", --16119
-"|cff1eff00Test Nature Res Waist Cloth|r£|cff00ff00装备： +10 自然抗性。|r", --16120
-"|cff1eff00Test Nature Res Head Cloth|r£|cff00ff00装备： +14 自然抗性。|r", --16121
-"|cff1eff00Test Nature Res Shoulders Cloth|r£|cff00ff00装备： +10 自然抗性。|r", --16122
-"|cff1eff00Test Nature Res Neck|r£|cff00ff00装备： +8 自然抗性。|r", --16123
-"|cff1eff00Test Frost Res Neck|r£|cff00ff00装备： +8 冰霜抗性。|r", --16124
-"|cff1eff00Test Arcane Res Neck|r£|cff00ff00装备： +8 奥术抗性。|r", --16125
-"|cff1eff00Test Nature Res Waist Leather|r£|cff00ff00装备： +10 自然抗性。|r", --16126
-"|cff1eff00Test Nature Res Wrist Leather|r£|cff00ff00装备： +8 自然抗性。|r", --16127
-"|cff1eff00Test Nature Res Feet Mail|r£|cff00ff00装备： +10 自然抗性。|r", --16129
-"|cff1eff00Test Nature Res Waist Mail|r£|cff00ff00装备： +10 自然抗性。|r", --16131
-"|cff1eff00Test Nature Res Wrist Mail|r£|cff00ff00装备： +8 自然抗性。|r", --16132
-"|cff1eff00Test Nature Res Shoulders Mail|r£|cff00ff00装备： +10 自然抗性。|r", --16134
-"|cff1eff00Test Frost Res Feet Cloth|r£|cff00ff00装备： +10 冰霜抗性。|r", --16135
-"|cff1eff00Test Frost Res Waist Cloth|r£|cff00ff00装备： +10 冰霜抗性。|r", --16136
-"|cff1eff00Test Frost Res Wrist Cloth|r£|cff00ff00装备： +8 冰霜抗性。|r", --16137
-"|cff1eff00Test Frost Res Head Cloth|r£|cff00ff00装备： +14 冰霜抗性。|r", --16138
-"|cff1eff00Test Frost Res Head Leather|r£|cff00ff00装备： +10 冰霜抗性。|r", --16139
-"|cff1eff00Test Nature Res Head Leather|r£|cff00ff00装备： +14 自然抗性。|r", --16140
-"|cff1eff00Test Nature Res Head Mail|r£|cff00ff00装备： +14 自然抗性。|r", --16141
-"|cff1eff00Test Frost Res Wrist Mail|r£|cff00ff00装备： +8 冰霜抗性。|r", --16142
-"|cff1eff00Test Frost Res Shoulder Mail|r£|cff00ff00装备： +10 冰霜抗性。|r", --16143
-"|cff1eff00Test Frost Res Shoulders Leather|r£|cff00ff00装备： +10 冰霜抗性。|r", --16144
-"|cff1eff00Test Shadow Res Waist Cloth|r£|cff00ff00装备： +10 暗影抗性。|r", --16145
-"|cff1eff00Test Shadow Res Head Cloth|r£|cff00ff00装备： +14 暗影抗性。|r", --16146
-"|cff1eff00Test Shadow Res Shoulders Cloth|r£|cff00ff00装备： +10 暗影抗性。|r", --16147
-"|cff1eff00Test Shadow Res Shoulders Leather|r£|cff00ff00装备： +10 暗影抗性。|r", --16148
-"|cff1eff00Test Shadow Res Shoulder Mail|r£|cff00ff00装备： +10 暗影抗性。|r", --16149
-"|cff1eff00Test Shadow Res Waist Leather|r£|cff00ff00装备： +10 暗影抗性。|r", --16150
-"|cff1eff00Test Arcane Res Feet Cloth|r£|cff00ff00装备： +10 奥术抗性。|r", --16151
-"|cff1eff00Test Arcane Res Waist Cloth|r£|cff00ff00装备： +10 奥术抗性。|r", --16152
-"|cff1eff00Test Arcane Res Wrist Cloth|r£|cff00ff00装备： +8 奥术抗性。|r", --16153
-"|cff1eff00Test Arcane Res Shoulders Cloth|r£|cff00ff00装备： +10 奥术抗性。|r", --16154
-"|cff1eff00Test Arcane Res Waist Leather|r£|cff00ff00装备： +10 奥术抗性。|r", --16155
-"|cff1eff00Test Arcane Res Head Leather|r£|cff00ff00装备： +10 奥术抗性。|r", --16156
-"|cff1eff00Test Arcane Res Feet Mail|r£|cff00ff00装备： +10 奥术抗性。|r", --16157
-"|cff1eff00Test Arcane Res Wrist Mail|r£|cff00ff00装备： +8 奥术抗性。|r", --16158
-"|cff1eff00Test Arcane Res Head Mail|r£|cff00ff00装备： +14 奥术抗性。|r", --16159
-"|cff1eff00Test Arcane Res Shoulders Plate|r£|cff00ff00装备： +12 奥术抗性。|r", --16160
-"|cff1eff00Test Shadow Res Hands Plate|r£|cff00ff00装备： +12 暗影抗性。|r", --16161
-"|cff1eff00Test Frost Res Shoulders Plate|r£|cff00ff00装备： +12 冰霜抗性。|r", --16162
-"|cff1eff00Test Arcane Res Waist Mail|r£|cff00ff00装备： +10 奥术抗性。|r", --16163
-"|cff1eff00Test Arcane Res Hands Mail|r£|cff00ff00装备： +10 奥术抗性。|r", --16164
-"|cff1eff00Test Arcane Res Legs Mail|r£|cff00ff00装备： +14 奥术抗性。|r", --16165
+"装备后绑定£|cff00ff00装备： +8 自然抗性。|r", --16116
+"装备后绑定£|cff00ff00装备： +10 自然抗性。|r", --16117
+"装备后绑定£|cff00ff00装备： +14 自然抗性。|r", --16118
+"装备后绑定£|cff00ff00装备： +8 自然抗性。|r", --16119
+"装备后绑定£|cff00ff00装备： +10 自然抗性。|r", --16120
+"装备后绑定£|cff00ff00装备： +14 自然抗性。|r", --16121
+"装备后绑定£|cff00ff00装备： +10 自然抗性。|r", --16122
+"装备后绑定£|cff00ff00装备： +8 自然抗性。|r", --16123
+"装备后绑定£|cff00ff00装备： +8 冰霜抗性。|r", --16124
+"装备后绑定£|cff00ff00装备： +8 奥术抗性。|r", --16125
+"装备后绑定£|cff00ff00装备： +10 自然抗性。|r", --16126
+"装备后绑定£|cff00ff00装备： +8 自然抗性。|r", --16127
+"装备后绑定£|cff00ff00装备： +10 自然抗性。|r", --16129
+"装备后绑定£|cff00ff00装备： +10 自然抗性。|r", --16131
+"装备后绑定£|cff00ff00装备： +8 自然抗性。|r", --16132
+"装备后绑定£|cff00ff00装备： +10 自然抗性。|r", --16134
+"装备后绑定£|cff00ff00装备： +10 冰霜抗性。|r", --16135
+"装备后绑定£|cff00ff00装备： +10 冰霜抗性。|r", --16136
+"装备后绑定£|cff00ff00装备： +8 冰霜抗性。|r", --16137
+"装备后绑定£|cff00ff00装备： +14 冰霜抗性。|r", --16138
+"装备后绑定£|cff00ff00装备： +10 冰霜抗性。|r", --16139
+"装备后绑定£|cff00ff00装备： +14 自然抗性。|r", --16140
+"装备后绑定£|cff00ff00装备： +14 自然抗性。|r", --16141
+"装备后绑定£|cff00ff00装备： +8 冰霜抗性。|r", --16142
+"装备后绑定£|cff00ff00装备： +10 冰霜抗性。|r", --16143
+"装备后绑定£|cff00ff00装备： +10 冰霜抗性。|r", --16144
+"装备后绑定£|cff00ff00装备： +10 暗影抗性。|r", --16145
+"装备后绑定£|cff00ff00装备： +14 暗影抗性。|r", --16146
+"装备后绑定£|cff00ff00装备： +10 暗影抗性。|r", --16147
+"装备后绑定£|cff00ff00装备： +10 暗影抗性。|r", --16148
+"装备后绑定£|cff00ff00装备： +10 暗影抗性。|r", --16149
+"装备后绑定£|cff00ff00装备： +10 暗影抗性。|r", --16150
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16151
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16152
+"装备后绑定£|cff00ff00装备： +8 奥术抗性。|r", --16153
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16154
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16155
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16156
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16157
+"装备后绑定£|cff00ff00装备： +8 奥术抗性。|r", --16158
+"装备后绑定£|cff00ff00装备： +14 奥术抗性。|r", --16159
+"装备后绑定£|cff00ff00装备： +12 奥术抗性。|r", --16160
+"装备后绑定£|cff00ff00装备： +12 暗影抗性。|r", --16161
+"装备后绑定£|cff00ff00装备： +12 冰霜抗性。|r", --16162
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16163
+"装备后绑定£|cff00ff00装备： +10 奥术抗性。|r", --16164
+"装备后绑定£|cff00ff00装备： +14 奥术抗性。|r", --16165
 "豆汤£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --16166
 "彩虹糖£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --16167
 "天堂桃£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r", --16168
 "粗米糕£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --16169
 "肉包子£|cff00ff00使用： 在24秒内恢复总计552点生命值，进食时必须保持坐姿。|r", --16170
 "杂烩饭£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --16171
-"|cff1eff00Test Nature Res Hands Plate|r£|cff00ff00装备： +12 自然抗性。|r", --16172
-"Test Frost Resist Cloth LockBox£ ", --16173
-"Test Frost Resist Leather LockBox£ ", --16174
-"Test Frost Resist Mail LockBox£ ", --16175
-"Test Frost Resist Plate LockBox£ ", --16176
-"Test Nature Resist Plate LockBox£ ", --16177
-"Test Nature Resist Leather LockBox£ ", --16178
-"Test Nature Resist Mail LockBox£ ", --16179
-"Test Nature Resist Cloth LockBox£ ", --16180
-"Test Shadow Resist Cloth LockBox£ ", --16181
-"Test Shadow Resist Leather LockBox£ ", --16182
-"Test Shadow Resist Mail LockBox£ ", --16183
-"Test Shadow Resist Plate LockBox£ ", --16184
-"Test Arcane Resist Plate LockBox£ ", --16185
-"Test Arcane Resist Cloth LockBox£ ", --16186
-"Test Arcane Resist Leather LockBox£ ", --16187
-"Test Arcane Resist Mail LockBox£ ", --16188
+"装备后绑定£|cff00ff00装备： +12 自然抗性。|r", --16172
+"", --16173
+"", --16174
+"", --16175
+"", --16176
+"", --16177
+"", --16178
+"", --16179
+"", --16180
+"", --16181
+"", --16182
+"", --16183
+"", --16184
+"", --16185
+"", --16186
+"", --16187
+"", --16188
 "马格兰的信件£任务物品", --16189
 "血怒撕裂者的遗体£任务物品", --16190
 "华丽的镜子£任务物品£唯一", --16191
@@ -12354,9 +12354,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "附有魔法的盖亚之种£任务物品£|cff00ff00使用： 将盖亚之种放在盖亚土堆中。|r", --16208
 "博迪瑞格的订单£任务物品£唯一", --16209
 "高顿的箱子£任务物品£唯一", --16210
-"Test Quality Modifier Chest£ ", --16211
-"TEST SWORD 3£ ", --16212
-"Test Quality Modifier Chest£ ", --16213
+"胸部£ ", --16211
+"单手£ ", --16212
+"胸部£ ", --16213
 "|cff1eff00公式：附魔护腕 - 强效智力|r£|cff00ff00使用： 教你学会永久性地为一副护腕附魔，使其获得智力+7的效果。|r", --16214
 "|cff1eff00公式：附魔靴子 - 强效耐力|r£|cff00ff00使用： 教你学会永久性地为一双靴子附魔，使其获得耐力+7的效果。|r", --16215
 "|cff1eff00公式：附魔披风 - 强效抗性|r£|cff00ff00使用： 教你学会永久性地为一件披风附魔，使其获得所有抗性+5的效果。|r", --16216
@@ -12386,7 +12386,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "莱尔德的回信£任务物品£唯一", --16263
 "一捆兽皮£任务物品£唯一", --16282
 "安哈努的皮货£任务物品£唯一", --16283
-"魔典：火焰箭（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 2）。|r", --16302
+"魔典：火焰箭（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 2）。|r", --16302
 "|cff1eff00乌萨苟斯的爪子|r£拾取后绑定£唯一£该物品将触发一个任务", --16303
 "|cff1eff00萨杜布拉的徽记|r£拾取后绑定£唯一£该物品将触发一个任务", --16304
 "|cff1eff00沙普塔隆的爪子|r£拾取后绑定£唯一£该物品将触发一个任务", --16305
@@ -12399,22 +12399,22 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "焚火余烬£任务物品", --16312
 "菲利克斯的箱子£任务物品", --16313
 "菲利克斯的螺钉桶£任务物品", --16314
-"魔典：火焰箭（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 3）。|r", --16316
-"魔典：火焰箭（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 4）。|r", --16317
-"魔典：火焰箭（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 5）。|r", --16318
-"魔典：火焰箭（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 6）。|r", --16319
-"魔典：火焰箭（等级 7）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 7）。|r", --16320
-"魔典：血契（等级 1）£拾取后绑定£唯一", --16321
-"魔典：血契（等级 2）£拾取后绑定£唯一", --16322
-"魔典：血契（等级 3）£拾取后绑定£唯一", --16323
-"魔典：血契（等级 4）£拾取后绑定£唯一", --16324
-"魔典：血契（等级 5）£拾取后绑定£唯一", --16325
-"魔典：火焰之盾（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 1）。|r", --16326
-"魔典：火焰之盾（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 2）。|r", --16327
-"魔典：火焰之盾（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 3）。|r", --16328
-"魔典：火焰之盾（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 4）。|r", --16329
-"魔典：火焰之盾（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 5）。|r", --16330
-"魔典：相位变换£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放相位变换。|r", --16331
+"魔典：火焰箭（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 3）。|r", --16316
+"魔典：火焰箭（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 4）。|r", --16317
+"魔典：火焰箭（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 5）。|r", --16318
+"魔典：火焰箭（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 6）。|r", --16319
+"魔典：火焰箭（等级 7）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 7）。|r", --16320
+"魔典：血契（等级 1）£拾取后绑定£唯一£职业：术士", --16321
+"魔典：血契（等级 2）£拾取后绑定£唯一£职业：术士", --16322
+"魔典：血契（等级 3）£拾取后绑定£唯一£职业：术士", --16323
+"魔典：血契（等级 4）£拾取后绑定£唯一£职业：术士", --16324
+"魔典：血契（等级 5）£拾取后绑定£唯一£职业：术士", --16325
+"魔典：火焰之盾（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 1）。|r", --16326
+"魔典：火焰之盾（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 2）。|r", --16327
+"魔典：火焰之盾（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 3）。|r", --16328
+"魔典：火焰之盾（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 4）。|r", --16329
+"魔典：火焰之盾（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 5）。|r", --16330
+"魔典：相位变换£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放相位变换。|r", --16331
 "塔兹利尔的镐£任务物品", --16332
 "塞缪尔的遗骸£任务物品£|cff00ff00使用： 埋葬在玛拉的坟墓中。|r", --16333
 "|cff0070dd高阶军士徽记|r£ ", --16335
@@ -12425,49 +12425,49 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "血卫士的坐骑£拾取后绑定£唯一£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 侏儒, 巨魔£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --16343
 "zzUNUSEDLieutenant General's Mount£拾取后绑定£唯一£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 侏儒, 巨魔£|cff00ff00使用： 召唤或解散一头可供骑乘的冬狼。这是一种速度非常快的坐骑。|r", --16344
 "|cffa335ed高阶督军之剑|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高28点。|r", --16345
-"魔典：折磨（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放折磨（等级 2）。|r", --16346
-"魔典：折磨（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放折磨（等级 3）。|r", --16347
-"魔典：折磨（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放折磨（等级 4）。|r", --16348
-"魔典：折磨（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放折磨（等级 5）。|r", --16349
-"魔典：折磨（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放折磨（等级 6）。|r", --16350
-"魔典：牺牲（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 1）。|r", --16351
-"魔典：牺牲（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 2）。|r", --16352
-"魔典：牺牲（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 3）。|r", --16353
-"魔典：牺牲（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 4）。|r", --16354
-"魔典：牺牲（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 5）。|r", --16355
-"魔典：牺牲（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 6）。|r", --16356
-"魔典：吞噬暗影（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 1）。|r", --16357
-"魔典：吞噬暗影（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 2）。|r", --16358
-"魔典：吞噬暗影（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 3）。|r", --16359
-"魔典：吞噬暗影（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 4）。|r", --16360
-"魔典：吞噬暗影（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 5）。|r", --16361
-"魔典：吞噬暗影（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 6）。|r", --16362
-"魔典：受难（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 1）。|r", --16363
-"魔典：受难（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 2）。|r", --16364
-"魔典：受难（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 3）。|r", --16365
-"魔典：受难（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 4）。|r", --16366
-"魔典：剧痛鞭笞（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 2）。|r", --16368
+"魔典：折磨（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放折磨（等级 2）。|r", --16346
+"魔典：折磨（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放折磨（等级 3）。|r", --16347
+"魔典：折磨（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放折磨（等级 4）。|r", --16348
+"魔典：折磨（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放折磨（等级 5）。|r", --16349
+"魔典：折磨（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放折磨（等级 6）。|r", --16350
+"魔典：牺牲（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 1）。|r", --16351
+"魔典：牺牲（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 2）。|r", --16352
+"魔典：牺牲（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 3）。|r", --16353
+"魔典：牺牲（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 4）。|r", --16354
+"魔典：牺牲（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 5）。|r", --16355
+"魔典：牺牲（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 6）。|r", --16356
+"魔典：吞噬暗影（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 1）。|r", --16357
+"魔典：吞噬暗影（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 2）。|r", --16358
+"魔典：吞噬暗影（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 3）。|r", --16359
+"魔典：吞噬暗影（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 4）。|r", --16360
+"魔典：吞噬暗影（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 5）。|r", --16361
+"魔典：吞噬暗影（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 6）。|r", --16362
+"魔典：受难（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 1）。|r", --16363
+"魔典：受难（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 2）。|r", --16364
+"魔典：受难（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 3）。|r", --16365
+"魔典：受难（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 4）。|r", --16366
+"魔典：剧痛鞭笞（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 2）。|r", --16368
 "|cff0070dd骑士中尉的丝质长靴|r£|cff00ff00装备： 法术强度提高12点。|r", --16369
-"魔典：剧痛鞭笞（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 3）。|r", --16371
-"魔典：剧痛鞭笞（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 4）。|r", --16372
-"魔典：剧痛鞭笞（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 5）。|r", --16373
-"魔典：剧痛鞭笞（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 6）。|r", --16374
-"魔典：安抚之吻（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 1）。|r", --16375
-"魔典：安抚之吻（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 2）。|r", --16376
-"魔典：安抚之吻（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 3）。|r", --16377
-"魔典：安抚之吻（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 4）。|r", --16378
-"魔典：诱惑£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放诱惑。|r", --16379
-"魔典：次级隐形术£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放次级隐形术。|r", --16380
-"魔典：吞噬魔法（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 2）。|r", --16381
-"魔典：吞噬魔法（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 3）。|r", --16382
-"魔典：吞噬魔法（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 4）。|r", --16383
-"魔典：腐坏之血（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 1）。|r", --16384
-"魔典：腐坏之血（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 2）。|r", --16385
-"魔典：腐坏之血（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 3）。|r", --16386
-"魔典：腐坏之血（等级 4）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 4）。|r", --16387
-"魔典：法术封锁（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 使地狱猎犬学会施放法术封锁（等级 1）。|r", --16388
-"魔典：法术封锁（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 使地狱猎犬学会施放法术封锁（等级 2）。|r", --16389
-"魔典：多疑£拾取后绑定£唯一£|cff00ff00使用： 使地狱猎犬学会施放多疑。|r", --16390
+"魔典：剧痛鞭笞（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 3）。|r", --16371
+"魔典：剧痛鞭笞（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 4）。|r", --16372
+"魔典：剧痛鞭笞（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 5）。|r", --16373
+"魔典：剧痛鞭笞（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 6）。|r", --16374
+"魔典：安抚之吻（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 1）。|r", --16375
+"魔典：安抚之吻（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 2）。|r", --16376
+"魔典：安抚之吻（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 3）。|r", --16377
+"魔典：安抚之吻（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 4）。|r", --16378
+"魔典：诱惑£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放诱惑。|r", --16379
+"魔典：次级隐形术£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放次级隐形术。|r", --16380
+"魔典：吞噬魔法（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 2）。|r", --16381
+"魔典：吞噬魔法（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 3）。|r", --16382
+"魔典：吞噬魔法（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 4）。|r", --16383
+"魔典：腐坏之血（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 1）。|r", --16384
+"魔典：腐坏之血（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 2）。|r", --16385
+"魔典：腐坏之血（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 3）。|r", --16386
+"魔典：腐坏之血（等级 4）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 4）。|r", --16387
+"魔典：法术封锁（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 使地狱猎犬学会施放法术封锁（等级 1）。|r", --16388
+"魔典：法术封锁（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 使地狱猎犬学会施放法术封锁（等级 2）。|r", --16389
+"魔典：多疑£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 使地狱猎犬学会施放多疑。|r", --16390
 "|cff0070dd骑士中尉的丝质手套|r£|cff00ff00装备： 使你的法力护盾吸收的伤害总量提高285点。|r£|cff00ff00装备： 法术强度提高21点。|r", --16391
 "|cff0070dd骑士中尉的皮甲战靴|r£|cff00ff00装备： 使你的疾跑技能的效果持续时间延长3秒。|r", --16392
 "|cff0070dd骑士中尉的龙皮裹足|r£|cff00ff00装备： 法术强度提高14点。|r", --16393
@@ -12616,7 +12616,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed将军的锁甲护腿|r£|cff00ff00装备： 法术强度提高27点。|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --16579
 "|cffa335ed督军的锁甲肩铠|r£|cff00ff00装备： 法术强度提高16点。|r", --16580
 "共鸣水晶£任务物品£|cffffd100\"魔法在它内部轰鸣着。\"|r", --16581
-"|cff9e9e9eMonster - Wand, Horde Green Feathered|r£ ", --16582
+"魔杖£ ", --16582
 "恶魔雕像£ ", --16583
 "巨魔符咒£任务物品", --16602
 "魔化共鸣水晶£任务物品£|cff00ff00使用： 将魔化共鸣水晶制成共鸣桶。|r", --16603
@@ -12991,8 +12991,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "角树种子£ ", --17037
 "铁木种子£ ", --17038
 "|cff1eff00破颅者|r£ ", --17039
-"|cff9e9e9eMonster - Mace, Frying Pan|r£ ", --17040
-"|cff9e9e9eMonster - Mace, Frying Pan w/ Eggs|r£ ", --17041
+"单手£ ", --17040
+"单手£ ", --17041
 "|cff1eff00钉枪|r£ ", --17042
 "|cff1eff00狂热长袍|r£ ", --17043
 "|cff0070dd殉难者的意志|r£|cff00ff00装备： 攻击强度提高30点。|r", --17044
@@ -13049,14 +13049,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "捕鼠者之笛£任务物品£唯一£|cff00ff00使用： 催眠矿道地铁中的老鼠，使它们进入狂欢状态。|r", --17117
 "装着神秘肉品的纸箱£任务物品£唯一£|cffffd100\"小心轻放。\"|r", --17118
 "矿道鼠肉串£|cff00ff00使用： 在21秒内恢复总计243点生命值，进食时必须保持坐姿。|r", --17119
-"|cffe5cc7fALEX BUG TEST ITEM|r£|cff00ff00使用： 使你对目标造成的伤害提高20点，急速等级提高50，持续15秒。|r", --17122
-"|cff9e9e9eMonster - Sword, Horde Troll|r£ ", --17123
+"|cff00ff00使用： 使你对目标造成的伤害提高20点，急速等级提高50，持续15秒。|r£ ", --17122
+"单手£ ", --17123
 "辛迪加徽章£拾取后绑定", --17124
 "拉文霍德徽记£任务物品£唯一", --17125
 "优美的信件£任务物品£唯一£该物品将触发一个任务", --17126
 "|cffff7f00污染者碎片|r£ ", --17142
-"Eric Test Item A£ ", --17162
-"Eric Test Item B£ ", --17163
+"", --17162
+"", --17163
 "|cffff7f00萨弗拉斯，炎魔拉格纳罗斯之手|r£|cff00ff00装备： 对使用近战武器攻击你的敌人造成|r|cff7f7f7f5|r|cff00ff00点火焰伤害。|r", --17182
 "凹陷的圆盾£ ", --17183
 "小盾牌£ ", --17184
@@ -13085,8 +13085,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00占卜瞄准镜|r£拾取后绑定£唯一£|cff00ff00使用： 使玩家可以通过雷松之眼从空中观察联盟的要塞，需与占卜之球配合使用。|r", --17224
 "萨雷姆箱子的钥匙£|cffffd100\"可以打开黑暗祭司萨雷姆的箱子\"|r", --17242
 "詹姆斯的钥匙£|cffffd100\"打开光明大教堂失窃的箱子\"|r", --17262
-"|cff9e9e9eMonster - Dagger, Exotic B01 Green|r£ ", --17282
-"|cff9e9e9eMonster - Dagger, Exotic B01 Red|r£ ", --17283
+"单手£ ", --17282
+"单手£ ", --17283
 "蓝色条纹节日礼品盒£ ", --17302
 "蓝色条纹包装纸£|cff00ff00使用： 在节日包装纸包上一件东西。|r", --17303
 "绿色条纹包装纸£|cff00ff00使用： 在节日包装纸包上一件东西。|r", --17304
@@ -13108,8 +13108,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "基赫纳斯之手£任务物品", --17331
 "沙斯拉尔之手£任务物品", --17332
 "水之精萃£拾取后绑定£唯一£|cff00ff00使用： 熄灭火焰之王的符文。|r", --17333
-"JYoo Random Item Test£ ", --17342
-"Test Random Chest£ ", --17343
+"", --17342
+"胸部£ ", --17343
 "糖棒£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --17344
 "异种蝎粘液£任务物品£|cffffd100\"好恶心......\"|r", --17345
 "异种蝎粘液包裹的物体£任务物品£唯一", --17346
@@ -13124,8 +13124,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "雷尔松的信号灯£奥特兰克山谷£任务物品£唯一£|cff00ff00使用： 在丹巴达尔要塞外的空地上放置信号灯，不要让它受到攻击！|r", --17362
 "雷尔松的信号灯£奥特兰克山谷£任务物品£唯一£|cff00ff00使用： 在霜狼要塞外的空地上放置信号灯，不要让它受到攻击！|r", --17363
 "|cff1eff00占卜瞄准镜|r£拾取后绑定£唯一£|cff00ff00使用： 使玩家可以通过雷松之眼从空中观察部落的要塞，需与占卜之球配合使用。|r", --17364
-"|cff9e9e9eMonster - Glaive - 2 Blade Purple|r£ ", --17382
-"|cff9e9e9eMonster - Axe, 2H Horde Black War Axe|r£ ", --17383
+"单手£ ", --17382
+"双手£ ", --17383
 "|cff0070dd斯菲莱克斯的便携式伐木机|r£拾取后绑定£唯一£持续时间：3天£|cff00ff00使用： 制造一台可供你操作的伐木机！|r", --17384
 "冬天爷爷的麦酒£|cff00ff00使用： 酒精含量较高的饮料。|r", --17402
 "热砂泡沫啤酒£|cff00ff00使用： 普通的酒类饮料。|r", --17403
@@ -13137,15 +13137,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00粘液包裹的水晶碎片|r£拾取后绑定£唯一£该物品将触发一个任务", --17409
 "|cff0070dd斯菲莱克斯的便携式伐木机|r£拾取后绑定£唯一£持续时间：3天£|cff00ff00使用： 制造一台可供你操作的伐木机！|r", --17410
 "蒸汽锯£任务物品£唯一", --17411
-"zzOLDCodex of Prayer of Fortitude£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cffffd100\"Teaches Prayer of Fortitude (Rank 1).\"|r", --17412
-"|cff0070dd圣典：坚韧祷言|r£职业：牧师£|cff00ff00使用： Teaches Prayer of Fortitude (Rank 1).|r", --17413
-"|cff0070dd圣典：坚韧祷言 II|r£职业：牧师£|cff00ff00使用： 教你学会施放坚韧祷言（等级 2）。|r", --17414
+"种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cffffd100\"Teaches Prayer of Fortitude (Rank 1).\"|r", --17412
+"|cff0070dd圣典：坚韧祷言|r£|cff00ff00使用： Teaches Prayer of Fortitude (Rank 1).|r", --17413
+"|cff0070dd圣典：坚韧祷言 II|r£|cff00ff00使用： 教你学会施放坚韧祷言（等级 2）。|r", --17414
 "护甲碎片£奥特兰克山谷£拾取后绑定£|cffffd100\"交给基地中的铁匠就可以帮助你们的部队改善装备\"|r", --17422
 "风暴水晶£奥特兰克山谷£拾取后绑定", --17423
 "霜狼突击令£奥特兰克山谷£拾取后绑定£唯一£持续时间：15分钟£|cffffd100\"交给征战平原的突击队长加瑞克\"|r", --17442
-"|cff9e9e9eMonster - Axe, Horde B02 Silver|r£ ", --17462
-"|cff9e9e9eMonster - Axe, 2H Horde Blue War Axe|r£ ", --17463
-"|cff9e9e9eMonster - Shield, B01 WoodCopperCap|r£ ", --17482
+"单手£ ", --17462
+"双手£ ", --17463
+"副手£ ", --17482
 "部落士兵的勋章£奥特兰克山谷£拾取后绑定", --17502
 "部落士官的勋章£奥特兰克山谷£拾取后绑定", --17503
 "部落指挥官的勋章£奥特兰克山谷£拾取后绑定", --17504
@@ -13304,66 +13304,66 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "贱民的指引£ ", --17781
 "|cffff7f00缚灵碎片护符|r£|cff00ff00装备： 在战斗中被击中时，对攻击者造成|r|cff7f7f7f4|r|cff00ff00点自然伤害。|r", --17782
 "|cffff7f00缚灵裂片护符|r£|cff00ff00装备： 在战斗中被击中时，对攻击者造成|r|cff7f7f7f4|r|cff00ff00点自然伤害。|r", --17783
-"|cffff7f00Thunderfury, Blessed Blade of the Windseeker DEPRECATED|r£ ", --17802
+"拾取后绑定£ ", --17802
 "霜狼地图£任务物品", --17822
 "雷矛作战计划£任务物品", --17823
-"Level 65 Test Gear Cloth - Priest£ ", --17824
-"Level 65 Test Gear Cloth - Warlock£ ", --17825
-"Level 65 Test Gear Plate - Warrior£ ", --17826
-"QAEnchant Bracer +9 Strength£|cff00ff00使用： Permanently enchants bracers to give 9 Strength.|r", --17827
-"QAEnchant Bracer +9 Stamina£|cff00ff00使用： Permanently enchants bracers to give 9 Stamina.|r", --17828
-"QAEnchant Bracer +9 Spirit£|cff00ff00使用： Permanently enchants bracers to give 9 Spirit.|r", --17829
-"QAEnchant Bracer +7 Intellect£|cff00ff00使用： Permanently enchants bracers to give 7 Intellect.|r", --17830
-"Level 60 Test Gear Cloth - Mage/Priest/Warlock 2£ ", --17831
-"Level 60 Test Gear Leather - Druid 2£ ", --17832
-"Level 60 Test Gear Leather - Rogue 2£ ", --17833
-"Level 60 Test Gear Mail - Hunter 2£ ", --17834
-"Level 60 Test Gear Mail - Shaman 2£ ", --17835
-"Level 60 Test Gear Plate - Paladin/Warrior 2£ ", --17836
-"Level 55 Test Gear Cloth - Mage/Priest/Warlock 2£ ", --17837
-"Level 55 Test Gear Leather - Druid 2£ ", --17838
-"Level 55 Test Gear Leather - Rogue 2£ ", --17839
-"Level 55 Test Gear Mail - Hunter 2£ ", --17840
-"Level 55 Test Gear Mail - Shaman 2£ ", --17841
-"Level 55 Test Gear Plate - Paladin/Warrior 2£ ", --17842
-"Level 50 Test Gear Cloth - Mage/Priest/Warlock 2£ ", --17843
-"Level 50 Test Gear Leather - Druid 2£ ", --17844
-"Level 50 Test Gear Leather - Rogue 2£ ", --17845
-"Level 50 Test Gear Mail - Hunter 2£ ", --17846
-"Level 50 Test Gear Mail - Shaman 2£ ", --17847
-"Level 50 Test Gear Plate - Paladin/Warrior 2£ ", --17848
+"", --17824
+"", --17825
+"", --17826
+"|cff00ff00使用： Permanently enchants bracers to give 9 Strength.|r£ ", --17827
+"|cff00ff00使用： Permanently enchants bracers to give 9 Stamina.|r£ ", --17828
+"|cff00ff00使用： Permanently enchants bracers to give 9 Spirit.|r£ ", --17829
+"|cff00ff00使用： Permanently enchants bracers to give 7 Intellect.|r£ ", --17830
+"", --17831
+"", --17832
+"", --17833
+"", --17834
+"", --17835
+"", --17836
+"", --17837
+"", --17838
+"", --17839
+"", --17840
+"", --17841
+"", --17842
+"", --17843
+"", --17844
+"", --17845
+"", --17846
+"", --17847
+"", --17848
 "雷矛军旗£任务物品£唯一", --17849
 "霜狼军旗£任务物品£唯一", --17850
-"Level 65 Test Gear Cloth - Mage 2£ ", --17851
-"Level 65 Test Gear Cloth - Priest 2£ ", --17852
-"Level 65 Test Gear Cloth - Warlock 2£ ", --17853
-"Level 65 Test Gear Leather - Druid 2£ ", --17854
-"Level 65 Test Gear Leather - Rogue 2£ ", --17855
-"Level 65 Test Gear Leather - Rogue 3£ ", --17856
-"Level 65 Test Gear Mail - Hunter 2£ ", --17857
-"Level 65 Test Gear Mail - Hunter 3£ ", --17858
-"Level 65 Test Gear Mail - Shaman 2£ ", --17859
-"Level 65 Test Gear Plate - Paladin 2£ ", --17860
-"Level 65 Test Gear Plate - Warrior 2£ ", --17861
-"Level 65 Test Gear Plate - Warrior 3£ ", --17862
-"QAEnchant Chest +100 Health£|cff00ff00使用： Permanently enchant a piece of chest armor to grant 100 health.|r", --17882
-"QAEnchant Chest +100 Mana£|cff00ff00使用： Permanently enchant a piece of chest armor to give +100 mana.|r", --17883
-"QAEnchant Cloak +5 Resistances£|cff00ff00使用： Permanently enchant a cloak to give 5 to all resistances.|r", --17884
-"QAEnchant Cloak +70 Armor£|cff00ff00使用： Permanently enchant a cloak to give 70 additional armor.|r", --17885
+"", --17851
+"", --17852
+"", --17853
+"", --17854
+"", --17855
+"", --17856
+"", --17857
+"", --17858
+"", --17859
+"", --17860
+"", --17861
+"", --17862
+"|cff00ff00使用： Permanently enchant a piece of chest armor to grant 100 health.|r£ ", --17882
+"|cff00ff00使用： Permanently enchant a piece of chest armor to give +100 mana.|r£ ", --17883
+"|cff00ff00使用： Permanently enchant a cloak to give 5 to all resistances.|r£ ", --17884
+"|cff00ff00使用： Permanently enchant a cloak to give 70 additional armor.|r£ ", --17885
 "|cff0070ddQA Test Ring +285 Spell Damage|r£|cff00ff00装备： 法术强度提高285点。|r£|cffffd100\"What the combat specialist wants, the combat specialist gets... PEWPEWLAWLZ\"|r", --17886
-"QAEnchant 2H Weapon +9 Damage£|cff00ff00使用： Permanently enchant a two-handed melee weapon to do +9 damage.|r", --17887
-"QAEnchant Weapon +5 Damage£|cff00ff00使用： 永久性地为一把近战武器附魔，使它获得伤害+5的效果。|r", --17888
-"zzOLD - QAEnchant 2H Weapon Major Intellect£ ", --17889
-"zzOLD - QAEnchant Shield +7 Spirit£ ", --17890
-"QAEnchant Shield +7 Stamina£|cff00ff00使用： Permanently enchant a shield to give 7 Stamina.|r", --17891
-"QAEnchant Shield +8 Frost Resistance£|cff00ff00使用： Permanently enchant a shield to give 8 Frost Resistance.|r", --17892
-"QAEnchant Shield +9 Spirit£|cff00ff00使用： Permanently enchant a shield to give 9 Spirit.|r", --17893
-"QAEnchant Boots +7 Agility£|cff00ff00使用： Permanently enchant boots to give 7 Agility.|r", --17894
-"QAEnchant Boots +5 Spirit£|cff00ff00使用： Permanently enchant boots to give 5 Spirit.|r", --17895
-"QAEnchant Boots +7 Stamina£|cff00ff00使用： Permanently enchant boots to give 7 Stamina.|r", --17896
-"QAEnchant Gloves +7 Strength£|cff00ff00使用： Permanently enchant gloves to grant 7 Strength.|r", --17897
-"QAEnchant Gloves +7 Agility£|cff00ff00使用： Permanently enchant gloves to grant 7 Agility.|r", --17898
-"QAEnchant Gloves +1% Haste£|cff00ff00使用： Permanently enchant gloves to grant a 10 attack speed bonus.|r", --17899
+"|cff00ff00使用： Permanently enchant a two-handed melee weapon to do +9 damage.|r£ ", --17887
+"|cff00ff00使用： 永久性地为一把近战武器附魔，使它获得伤害+5的效果。|r£ ", --17888
+"", --17889
+"", --17890
+"|cff00ff00使用： Permanently enchant a shield to give 7 Stamina.|r£ ", --17891
+"|cff00ff00使用： Permanently enchant a shield to give 8 Frost Resistance.|r£ ", --17892
+"|cff00ff00使用： Permanently enchant a shield to give 9 Spirit.|r£ ", --17893
+"|cff00ff00使用： Permanently enchant boots to give 7 Agility.|r£ ", --17894
+"|cff00ff00使用： Permanently enchant boots to give 5 Spirit.|r£ ", --17895
+"|cff00ff00使用： Permanently enchant boots to give 7 Stamina.|r£ ", --17896
+"|cff00ff00使用： Permanently enchant gloves to grant 7 Strength.|r£ ", --17897
+"|cff00ff00使用： Permanently enchant gloves to grant 7 Agility.|r£ ", --17898
+"|cff00ff00使用： Permanently enchant gloves to grant a 10 attack speed bonus.|r£ ", --17899
 "|cff1eff002级雷矛勋章|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f2|r|cff00ff00点生命值。|r£|cff00ff00使用： 将你传送到丹巴达尔。 （2分钟冷却）|r", --17900
 "|cff1eff003级雷矛勋章|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f2|r|cff00ff00点生命值。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r£|cff00ff00使用： 将你传送到丹巴达尔。 （2分钟冷却）|r", --17901
 "|cff0070dd4级雷矛勋章|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点生命值。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r£|cff00ff00使用： 将你传送到丹巴达尔。 （2分钟冷却）|r", --17902
@@ -13374,10 +13374,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd4级霜狼勋章|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点生命值。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r£|cff00ff00使用： 将你传送到霜狼要塞。 （2分钟冷却）|r", --17907
 "|cff0070dd5级霜狼勋章|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f7|r|cff00ff00点生命值。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r£|cff00ff00使用： 将你传送到霜狼要塞。 （2分钟冷却）|r", --17908
 "|cffa335ed6级霜狼勋章|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点生命值。|r£|cff00ff00装备： 使你的躲闪等级提高24。|r£|cff00ff00使用： 将你传送到霜狼要塞。|r£|cffffd100\"统御之眼\"|r", --17909
-"Test Enchantments LockBox (Enchanting Items) 2£ ", --17910
-"Test Enchantments LockBox (Enchanting Items) 3£ ", --17911
+"", --17910
+"", --17911
 "|cff1eff00狮皮护甲|r£ ", --17922
-"|cff9e9e9eMonster - Mace2H, War Maul|r£ ", --17942
+"双手£ ", --17942
 "|cff0070dd石拳|r£ ", --17943
 "|cff1eff00黑色宝石袋|r£拾取后绑定", --17962
 "|cff1eff00绿色宝石袋|r£ ", --17963
@@ -13388,7 +13388,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd充能奥妮克希亚鳞片|r£ ", --17968
 "|cff1eff00红色宝石袋|r£ ", --17969
 "|cff0070dd拉格纳罗斯之核|r£ ", --17982
-"|cff9e9e9eMonster - Axe, 2H Horde Massive Spiked Blue|r£ ", --18002
+"双手£ ", --18002
 "|cff0070dd阿莱克希斯皇家戒指|r£ ", --18022
 "|cff0070dd血红宝石坠饰|r£|cff00ff00装备： 法术强度提高10点。|r", --18023
 "|cff1eff00瑟银之箭|r£弹药£箭£每秒伤害提高17.5", --18042
@@ -13398,17 +13398,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "食谱：嫩狼肉排£使用： 教你学会烹制嫩狼肉排。£\n嫩狼肉排£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高12点，持续15分钟。|r£\n需要嫩狼肉", --18046
 "|cff0070dd烈焰行者|r£|cff00ff00装备： 攻击强度提高24点。|r", --18047
 "|cff0070dd大铸甲师之锤|r£|cff00ff00装备： 法术强度提高14点。|r", --18048
-"|cff9e9e9eMonster - Mace2H, Horde Hammer A03/C01Black|r£ ", --18062
-"|cff0070ddTest Epic Mount|r£拾取后绑定£唯一£|cff00ff00使用： 召唤或解散瑞文戴尔男爵的死亡战马。这是一种速度非常快的坐骑。|r", --18063
+"双手£ ", --18062
+"拾取后绑定£唯一£|cff00ff00使用： 召唤或解散瑞文戴尔男爵的死亡战马。这是一种速度非常快的坐骑。|r", --18063
 "|cff0070dd祖穆拉恩的能量法杖|r£|cff00ff00装备： 法术强度提高21点。|r", --18082
 "|cff0070dd苏玛赞护手|r£ ", --18083
 "|cff0070dd龙骑兵长靴|r£|cff00ff00装备： 法术强度提高18点。|r", --18102
 "|cff0070dd沉思指环|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r£|cff00ff00装备： 爆击等级提高14。|r", --18103
 "|cff0070dd野性之潮腰带|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --18104
-"PVP TEST Alliance Ear£ ", --18105
-"PVP TEST Horde Ear£ ", --18106
-"|cff9e9e9eMonster - Staff, Ornate Jeweled Staff - Blue High Blue Glow|r£ ", --18122
-"|cff9e9e9eMonster - Staff, Feathered Silver Glow|r£ ", --18123
+"", --18105
+"", --18106
+"双手£ ", --18122
+"拾取后绑定£ ", --18123
 "暗夜精灵的徽记£拾取后绑定", --18142
 "侏儒的头发£拾取后绑定", --18143
 "人类的骨头£拾取后绑定", --18144
@@ -13428,13 +13428,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "金色莫洛加宝石£任务物品£唯一£|cff00ff00使用： 召唤莫洛加的阿里亚。 （1秒冷却）|r", --18158
 "白色莫洛加宝石£任务物品£唯一£|cff00ff00使用： 召唤莫洛加的阿里亚。 （1秒冷却）|r", --18159
 "|cff1eff00食谱：菊花茶|r£拾取后绑定£使用： 教你学会烹制菊花茶。£\n菊花茶£|cff00ff00使用： 立即恢复100点能量值。 （5分钟冷却）|r£\n需要雨燕草, 清凉的泉水", --18160
-"5% Test Speed Boots£ ", --18161
-"8% Test Speed Boots£ ", --18162
-"10% Test Speed Boots£ ", --18163
-"13% Test Speed Boots£ ", --18164
-"15% Test Speed Boots£ ", --18165
-"|cff9e9e9eMonster - Shield, Royal Dreadguard|r£ ", --18166
-"|cff9e9e9eMonster - Sword, Machete C01|r£ ", --18167
+"脚£ ", --18161
+"脚£ ", --18162
+"脚£ ", --18163
+"脚£ ", --18164
+"脚£ ", --18165
+"副手£ ", --18166
+"单手£ ", --18167
 "|cffa335ed力反馈盾牌|r£|cff00ff00装备： 成功格挡之后，盾牌会释放电荷，对附近的所有敌人造成伤害。同时也有一定几率损坏盾牌。|r", --18168
 "|cff1eff00火焰黎明衬肩|r£拾取后绑定£|cff00ff00使用： 给你的护肩附加魔法效果，使火焰抗性提高5点。\r\n\r\n附魔之后，该装备会与你绑定。|r", --18169
 "|cff1eff00冰霜黎明衬肩|r£拾取后绑定£|cff00ff00使用： 给你的护肩附加魔法效果，使冰霜抗性提高5点。\r\n\r\n附魔之后，该装备会与你绑定。|r", --18170
@@ -13509,7 +13509,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd结构图：比兹尼克247x128精确瞄准镜|r£拾取后绑定£使用： 教你学会制作比兹尼克247x128精确瞄准镜。£|cff0070dd\n比兹尼克247x128精确瞄准镜|r£|cff00ff00使用： 在弓或枪械上加装永久性的瞄准镜，使其命中等级提高30。\r\n\r\n加装瞄准镜后的远程武器会变成灵魂绑定物品。|r£\n需要熔岩之核 (2), 大地精华 (2), 精密奥金转换器 (4), 黑铁锭 (6), 瑟银管", --18290
 "|cff0070dd结构图：力反馈盾牌|r£拾取后绑定£使用： 教你学会制作力反馈盾牌。£|cffa335ed\n力反馈盾牌|r£装备后绑定£副手£|cff00ff002916点护甲|r£58格挡£+11 耐力£|cff00ff00装备： 成功格挡之后，盾牌会释放电荷，对附近的所有敌人造成伤害。同时也有一定几率损坏盾牌。|r£\n需要奥金锭 (6), 精密奥金转换器 (2), 空气精华 (8), 生命精华 (12), 大地精华 (8)", --18291
 "|cff0070dd结构图：火核狙击步枪|r£拾取后绑定£使用： 教你学会制作火核狙击步枪。£|cffa335ed\n火核狙击步枪|r£装备后绑定£79 - 148伤害£速度 2.50£（每秒伤害45.4）£|cff00ff00装备： 远程攻击强度提高22点。|r£|cff00ff00装备： 使你的命中等级提高10。|r£\n需要炽热之核 (4), 熔岩之核 (2), 奥金锭 (6), 精密奥金转换器 (2), 瑟银管 (2)", --18292
-"|cff9e9e9eMonster - Glaive - 2 Blade B03 Green|r£ ", --18293
+"单手£ ", --18293
 "强力水下呼吸药剂£|cff00ff00使用： 使饮用者可以在水下呼吸，持续1小时。|r", --18294
 "|cff0070dd相位长靴|r£ ", --18295
 "|cff0070dd神射手腕轮|r£|cff00ff00装备： 命中等级提高10点。|r", --18296
@@ -13576,9 +13576,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd防御宝典|r£唯一£该物品将触发一个任务£|cffffd100\"这本书被魔法封印了起来。\"|r", --18357
 "|cff0070dd奥法师的食谱|r£唯一£该物品将触发一个任务£|cffffd100\"这本书被魔法封印了起来。\"|r", --18358
 "|cff0070dd圣光之力|r£唯一£该物品将触发一个任务£|cffffd100\"- 由乌瑟尔撰写\"|r", --18359
-"|cff0070dd束缚之影|r£唯一£该物品将触发一个任务£|cffffd100\"由瑟温妮讲述的诅咒之地的故事。\"|r", --18360
+"|cff0070dd束缚之影|r£唯一£该物品将触发一个任务£职业：术士£|cffffd100\"由瑟温妮讲述的诅咒之地的故事。\"|r", --18360
 "|cff0070dd最伟大的猎手|r£唯一£该物品将触发一个任务£|cffffd100\"一个女巨魔和她的老虎的故事\"|r", --18361
-"|cff0070dd光明不会告诉你的事情|r£唯一£该物品将触发一个任务£职业：牧师£|cffffd100\"- 由暗影牧师奥利斯特撰写\"|r", --18362
+"|cff0070dd光明不会告诉你的事情|r£唯一£该物品将触发一个任务£|cffffd100\"- 由暗影牧师奥利斯特撰写\"|r", --18362
 "|cff0070dd你与冰霜震击|r£唯一£该物品将触发一个任务£|cffffd100\"- 由德雷克塔尔撰写\"|r", --18363
 "|cff0070dd翡翠梦境|r£唯一£该物品将触发一个任务£|cffffd100\"真实或是我兄弟精心编造的谎言 - 由伊利丹撰写\"|r", --18364
 "|cff9e9e9e一本写满评论的《纳特·帕格的钓鱼技巧完全攻略》|r£|cffffd100\"看来有些家伙真的非常喜欢钓鱼。\"|r", --18365
@@ -13635,7 +13635,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd图样：地狱火手套|r£拾取后绑定£使用： 教你学会制作地狱火手套。£|cff0070dd\n地狱火手套|r£装备后绑定£手£布甲£55点护甲£+9 智力£|cff00ff00装备： 法术强度提高27点。|r£\n需要符文布卷 (12), 火焰精华 (10), 红宝石 (2), 符文线 (2)", --18416
 "|cff0070dd图样：月布手套|r£拾取后绑定£使用： 教你学会制作月布手套。£|cff0070dd\n月布手套|r£装备后绑定£手£布甲£55点护甲£+9 耐力£+16 智力£+15 精神£\n需要符文布卷 (12), 月布 (6), 金珍珠 (2), 符文线 (2)", --18417
 "|cff0070dd图样：监护披风|r£拾取后绑定£使用： 教你学会制作监护披风。£|cff0070dd\n监护披风|r£装备后绑定£背部£|cff00ff00214点护甲|r£|cff00ff00装备： 防御等级提高7。|r£\n需要符文布卷 (12), 守护之石 (4), 奥金锭, 符文线 (2)", --18418
-"|cff9e9e9eMonster - Axe, 2H Horde Red War Axe|r£ ", --18419
+"双手£ ", --18419
 "|cff0070dd碾骨者|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --18420
 "|cff0070dd密林头盔|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --18421
 "|cffa335ed奥妮克希亚的徽记|r£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"黑龙公主奥妮克希亚的徽记\"|r", --18422
@@ -13762,8 +13762,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed源质矿石|r£ ", --18562
 "|cffff7f00逐风者禁锢徽记|r£拾取后绑定£唯一£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cffffd100\"桑德兰的永恒监牢的左半部分\"|r", --18563
 "|cffff7f00逐风者禁锢徽记|r£拾取后绑定£唯一£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cffffd100\"桑德兰的永恒监牢的右半部分\"|r", --18564
-"|cffff7f00Vessel of Rebirth DEPRECATED|r£拾取后绑定£唯一£该物品将触发一个任务", --18565
-"Essence of the Firelord DEPRECATED£任务物品£唯一", --18566
+"拾取后绑定£唯一£该物品将触发一个任务", --18565
+"任务物品£唯一", --18566
 "元素助熔剂£ ", --18567
 "|cffe5cc7f埃辛诺斯双刃|r£|cff00ff00装备： 被伊利丹的愤怒吞噬：对恶魔的攻击强度提高1400点。爆击几率提高20%。近战攻击速度提高30%。|r£|cff00ff00使用： 将双刃拆分为两把月刃。|r", --18582
 "|cffe5cc7f埃辛诺斯战刃（右）|r£|cff00ff00使用： 将两把埃辛诺斯战刃组合起来成为埃辛诺斯双刃。|r", --18583
@@ -13772,17 +13772,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd独木环|r£ ", --18586
 "地精起搏器XL型£|cff00ff00使用： 起搏器有时可以让一个已死的玩家复活。无法在战斗中使用。 （30分钟冷却）|r", --18587
 "简易投掷炸弹 II£|cff00ff00使用： 对半径5码范围内的目标造成213到287点火焰伤害（前提是炸弹可以正常工作）。|r£|cffffd100\"供非工程学专业人士使用的炸弹，几乎从来不在你手中爆炸，威力超过标准简易投掷炸弹两倍！\"|r", --18588
-"|cffff7f00Dormant Wind Kissed Blade DEPRECATED|r£拾取后绑定£唯一£该物品将触发一个任务", --18589
+"拾取后绑定£唯一£该物品将触发一个任务", --18589
 "狂暴野兽的血£任务物品", --18590
 "血箱£任务物品", --18591
-"|cffa335ed设计图：萨弗隆之锤|r£唯一£使用： 教你学会制造萨弗隆之锤。£|cffa335ed\n萨弗隆战锤|r£装备后绑定£锤£176 - 295伤害£速度 3.70£（每秒伤害63.6）£|cff00ff00击中时可能： 发射一枚火球攻击目标，对其造成83到101点火焰伤害，并在8秒内造成额外的16点伤害。|r£\n需要萨弗隆铁锭 (8), 黑铁锭 (20), 奥金锭 (50), 火焰精华 (25), 山脉之血 (10), 熔岩之核 (10), 炽热之核 (10)", --18592
-"Thorium Brotherhood Contract (OLD)£唯一£32 - 33伤害£|cffffd100\"它被黑铁线捆了起来。\"|r", --18593
+"|cffa335ed设计图：萨弗隆之锤|r£唯一£使用： 教你学会制造萨弗隆之锤。£|cffa335ed\n萨弗隆战锤|r£装备后绑定£双手£176 - 295伤害£速度 3.70£（每秒伤害63.6）£|cff00ff00击中时可能： 发射一枚火球攻击目标，对其造成83到101点火焰伤害，并在8秒内造成额外的16点伤害。|r£\n需要萨弗隆铁锭 (8), 黑铁锭 (20), 奥金锭 (50), 火焰精华 (25), 山脉之血 (10), 熔岩之核 (10), 炽热之核 (10)", --18592
+"唯一£32 - 33伤害£|cffffd100\"它被黑铁线捆了起来。\"|r", --18593
 "强力爆盐炸弹£|cff00ff00使用： 可以炸开厚重的门和锁。 （1秒冷却）|r", --18594
 "|cff1eff00血红猫眼石|r£拾取后绑定", --18595
-"|cff9e9e9eMonster - Axe, Horde B01 Green|r£ ", --18596
+"单手£ ", --18596
 "兽人孤儿哨£拾取后绑定£唯一£持续时间：7天£|cff00ff00使用： 右键点击以召唤或解散你同意在儿童周中抚养的孤儿。 （1秒冷却）|r", --18597
 "人类孤儿哨£拾取后绑定£唯一£持续时间：7天£|cff00ff00使用： 右键点击以召唤或解散你同意在儿童周中抚养的孤儿。 （1秒冷却）|r", --18598
-"QAEnchant 2H Weapon +25 Agility£|cff00ff00使用： Permanently enchant a 2H weapon to give 25 Agility.|r", --18599
+"|cff00ff00使用： Permanently enchant a 2H weapon to give 25 Agility.|r£ ", --18599
 "|cff0070dd奥术光辉宝典|r£|cff00ff00使用： 教你学会施放奥术光辉（等级 1）。|r", --18600
 "光芒水晶监牢£任务物品£唯一£|cff00ff00使用： 禁锢一个末日守卫指挥官。|r", --18601
 "|cff0070dd牺牲之书|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点生命值。|r", --18602
@@ -13818,7 +13818,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "致密炸弹£|cff00ff00使用： 对半径5码范围内的目标造成340到460点火焰伤害。|r", --18641
 "吉安娜的签名£任务物品£唯一£|cffffd100\"要坚强地生存下去，兰迪斯，要立志成为一名伟大的英雄。——吉安娜-普罗德摩尔\"|r", --18642
 "凯恩的蹄印£任务物品£唯一£|cffffd100\"听从灵魂的召唤，小格伦斯。英雄就是由此而诞生的。 ——凯恩-血蹄\"|r", --18643
-"|cff9e9e9eMonster - Staff, Ornate Jeweled Staff - Red Low Red Flame|r£ ", --18644
+"双手£ ", --18644
 "|cff1eff00侏儒报警机器人|r£|cff00ff00使用： 召唤一个侏儒工程报警机器人来侦测附近的隐形敌人。不过报警机器人有时可能会发出错误的信号。最多持续 2分钟。 （5分钟冷却）|r", --18645
 "|cffa335ed神圣之眼|r£|cffffd100\"当你看着它的时候，你会发现它在动。\"|r", --18646
 "结构图：红色焰火£使用： 教你学会制造红色焰火。£\n红色焰火£|cff00ff00使用： 向空中发射一支可以绽放出无数红色星星的焰火。 （1秒冷却）|r£\n需要烈性火药, 重皮", --18647
@@ -13840,10 +13840,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "耶维尔的瓶子£拾取后绑定£唯一£|cff00ff00使用： 在厄运之槌的伊莫塔尔牢笼中心释放小鬼耶维尔。|r", --18663
 "军衔概述£ ", --18664
 "|cffa335ed暗影之眼|r£|cffffd100\"黑暗笼罩着这颗眼睛。\"|r", --18665
-"QAEnchant Weapon Crusader£|cff00ff00使用： Permanently enchant a melee weapon so that often when attacking in melee it heals for 75到125 and increases Strength by 100 for 15秒.|r", --18666
-"QAEnchant Weapon Icy Chill£|cff00ff00使用： Permanently enchant a melee weapon to often chill the target reducing their movement and attack speed.|r", --18667
-"QAEnchant Weapon Spell Power£|cff00ff00使用： Permanently enchant a Melee Weapon to add up to 30 damage to spells.|r", --18668
-"QAEnchant Weapon Healing Power£|cff00ff00使用： Permanently enchant a Melee Weapon to add up to 29 points of healing to healing spells.|r", --18669
+"|cff00ff00使用： Permanently enchant a melee weapon so that often when attacking in melee it heals for 75到125 and increases Strength by 100 for 15秒.|r£ ", --18666
+"|cff00ff00使用： Permanently enchant a melee weapon to often chill the target reducing their movement and attack speed.|r£ ", --18667
+"|cff00ff00使用： Permanently enchant a Melee Weapon to add up to 30 damage to spells.|r£ ", --18668
+"|cff00ff00使用： Permanently enchant a Melee Weapon to add up to 29 points of healing to healing spells.|r£ ", --18669
 "克索诺斯雕文£拾取后绑定£唯一£|cff00ff00使用： 在一个强大的黑暗召唤法阵中召唤克索诺斯恐惧战马。|r", --18670
 "|cff0070dd火焰男爵查尔的节杖|r£ ", --18671
 "|cff1eff00元素灰烬|r£|cff00ff00装备： 法术强度提高11点。|r", --18672
@@ -13859,7 +13859,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd食尸鬼皮护腿|r£|cff00ff00装备： 法术强度提高23点。|r", --18682
 "|cff0070dd薄暮之锤|r£ ", --18683
 "|cff0070dd白玛瑙戒指|r£ ", --18684
-"Shadowy Potion OLD£拾取后绑定£32 - 33伤害£|cff00ff00使用： 饮用者被暗影魔法的能量所污染，使他与加德纳尔的居民的关系变为友好。效果持续20分钟。|r", --18685
+"拾取后绑定£32 - 33伤害£|cff00ff00使用： 饮用者被暗影魔法的能量所污染，使他与加德纳尔的居民的关系变为友好。效果持续20分钟。|r", --18685
 "|cff0070dd骨魔护肩|r£ ", --18686
 "克索诺斯星尘£任务物品£唯一", --18687
 "瓶中的小鬼£唯一£|cff00ff00使用： 释放通灵学院炼金试验室附近的小鬼。|r", --18688
@@ -13932,9 +13932,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd妖术指环|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点生命值。|r", --18760
 "|cff0070dd赦免之触|r£ ", --18761
 "|cff0070dd绿焰碎片|r£|cff00ff00装备： 法术强度提高13点。|r", --18762
-"|cff1eff00TEST GUN Alliance20 |r£|cff00ff00装备： 远程攻击强度提高17点。|r", --18763
-"|cff1eff00TEST GUN Raid|r£|cff00ff00装备： 远程攻击强度提高17点。|r", --18764
-"|cff1eff00TEST GUN Horde50|r£|cff00ff00装备： 远程攻击强度提高17点。|r", --18765
+"装备后绑定£|cff00ff00装备： 远程攻击强度提高17点。|r", --18763
+"装备后绑定£|cff00ff00装备： 远程攻击强度提高17点。|r", --18764
+"装备后绑定£|cff00ff00装备： 远程攻击强度提高17点。|r", --18765
 "|cffa335ed迅捷霜刃豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --18766
 "|cffa335ed迅捷雾刃豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --18767
 "|cffa335ed迅捷晨刃豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --18768
@@ -13969,8 +13969,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed迅捷森林狼号角|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --18797
 "|cffa335ed迅捷灰狼号角|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --18798
 "赎罪的战马之魂£拾取后绑定£唯一", --18799
-"|cffa335edTEST 1H Amberseal Keeper|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f15|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高57点。|r", --18800
-"|cffa335edTEST 1H Benediction|r£|cff00ff00使用： 召唤咒逐。|r£|cff00ff00装备： 使你的神圣系法术的爆击和极效治疗几率提高2%。|r", --18801
+"拾取后绑定£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f15|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高57点。|r", --18800
+"拾取后绑定£|cff00ff00使用： 召唤咒逐。|r£|cff00ff00装备： 使你的神圣系法术的爆击和极效治疗几率提高2%。|r", --18801
 "暗影药水£拾取后绑定£|cff00ff00使用： 饮用者被暗影魔法的能量所污染，使他与加德纳尔的居民的关系变为友好。效果持续20分钟。|r", --18802
 "|cffa335ed超强绝热熔岩挖掘器|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f11|r|cff00ff00点法力值。|r£|cffffd100\"大旅行家皮普·急智的财产\"|r", --18803
 "格雷森公爵的背包£任务物品£唯一£|cffffd100\"你的预言水晶球和被祝福的奥金马铠都在这只背包里。\"|r", --18804
@@ -13989,7 +13989,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed毁灭王冠|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 攻击强度提高44点。|r", --18817
 "莫苏尔的指南£拾取后绑定£唯一", --18818
 "洛汉的驱魔香炉£任务物品£唯一", --18819
-"|cffa335ed短暂能量护符|r£|cff00ff00使用： 法术强度提高175点，持续15秒。 （1分钟 30秒冷却）|r", --18820
+"|cffa335ed短暂能量护符|r£|cff00ff00使用： 法术强度提高175点，持续15秒。 （1分钟30秒冷却）|r", --18820
 "|cffa335ed迅击戒指|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高30点。|r", --18821
 "|cffa335ed黑曜石之刃|r£|cff00ff00装备： 使你的精准等级提高19点。|r", --18822
 "|cffa335ed古代熔火皮手套|r£|cff00ff00装备： 使你的精准等级提高12点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --18823
@@ -14050,8 +14050,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed巫术匕首|r£|cff00ff00装备： 法术强度提高20点。|r", --18878
 "|cffa335ed沉重的黑铁戒指|r£|cff00ff00装备： 防御等级提高8。|r", --18879
 "达克雷尔的徽记£任务物品£唯一", --18880
-"|cffff7f00TEST Ragnaros Hammer|r£|cff00ff00装备： 对使用近战武器攻击你的敌人造成|r|cff7f7f7f5|r|cff00ff00点火焰伤害。|r", --18881
-"|cffa335edTEST Level 80 Epic|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --18882
+"拾取后绑定£|cff00ff00装备： 对使用近战武器攻击你的敌人造成|r|cff7f7f7f5|r|cff00ff00点火焰伤害。|r", --18881
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --18882
 "|cffa335ed迅捷雷刃豹缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --18902
 "索尔宾的超级压缩器£任务物品£唯一£持续时间：2小时£|cff00ff00使用： 使一个菲拉斯巨人的体形缩小，变得更易控制。 （30秒冷却）|r", --18904
 "秘密设计图：炽热助熔剂£任务物品£唯一£|cffffd100\"切勿靠近瑟银兄弟会。\"|r", --18922
@@ -14081,15 +14081,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "海龟蛋（鹰喙钳嘴龟）£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --18965
 "海龟蛋（硬皮钳嘴龟）£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --18966
 "海龟蛋（绿色钳嘴龟）£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --18967
-"|cffa335edRing of Critical Testing|r£|cff00ff00装备： 使你的法术造成爆击的几率提高50%。|r", --18968
+"拾取后绑定£|cff00ff00装备： 使你的法术造成爆击的几率提高50%。|r", --18968
 "原始雪人毛皮£拾取后绑定£唯一£该物品将触发一个任务", --18969
-"|cffa335edRing of Critical Testing 2|r£|cff00ff00装备： 使你的法术造成爆击的几率提高50%。|r", --18970
-"|cffa335edRing of Critical Testing 3|r£|cff00ff00装备： 使你的神圣系法术的爆击几率提高50%。|r", --18971
+"拾取后绑定£|cff00ff00装备： 使你的法术造成爆击的几率提高50%。|r", --18970
+"拾取后绑定£|cff00ff00装备： 使你的神圣系法术的爆击几率提高50%。|r", --18971
 "完美的雪人毛皮£拾取后绑定£唯一£该物品将触发一个任务", --18972
-"|cffa335edRing of Critical Testing 4|r£|cff00ff00装备： 使你的暗影法术造成爆击的几率提高50%。|r", --18982
-"|cff9e9e9eMonster - Sword, Longsword Exotic Black - Low Red Flame|r£ ", --18983
+"拾取后绑定£|cff00ff00装备： 使你的暗影法术造成爆击的几率提高50%。|r", --18982
+"单手£ ", --18983
 "|cff1eff00空间撕裂器 - 永望镇|r£|cff00ff00使用： 穿透空间限制，将你传送到冬泉谷的永望镇。虽然有些时候可能会发生技术故障，但这难道不是地精工程学的最大亮点吗？ （4小时冷却）|r", --18984
-"|cff9e9e9eMonster - Sword, Long Silver - Green Pommel - High Black Glow|r£ ", --18985
+"单手£ ", --18985
 "|cff1eff00安全传送器：加基森|r£|cff00ff00使用： 将你安全地传送到塔纳利斯的加基森。非常非常安全！没错，你完全不必有任何担心！ （4小时冷却）|r", --18986
 "黑手的命令£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"大酋长雷德·黑手的命令。\"|r", --18987
 "|cffa335ed奈法利安的徽记|r£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"死亡之翼的儿子奈法利安的徽记。\"|r", --19002
@@ -14104,8 +14104,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "强效治疗石£魔法制造的物品£唯一：治疗石（1）£|cff00ff00使用： 立即恢复960点生命值。|r", --19011
 "特效治疗石£魔法制造的物品£唯一：治疗石（1）£|cff00ff00使用： 立即恢复1320点生命值。|r", --19012
 "特效治疗石£魔法制造的物品£唯一：治疗石（1）£|cff00ff00使用： 立即恢复1440点生命值。|r", --19013
-"|cff9e9e9eMonster - Item, 2H Horde Wood Axe|r£ ", --19014
-"|cff9e9e9eMonster - Item, 2H Alliance Wood Axe|r£ ", --19015
+"双手£ ", --19014
+"双手£ ", --19015
 "|cffff7f00复生之瓶|r£拾取后绑定£唯一£该物品将触发一个任务", --19016
 "火焰之王的精华£任务物品£唯一", --19017
 "|cffff7f00风吻之刃|r£拾取后绑定£唯一£该物品将触发一个任务", --19018
@@ -14142,7 +14142,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd木喉衬肩|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --19050
 "|cff0070dd黎明束带|r£ ", --19051
 "|cff0070dd黎明皮靴|r£|cff00ff00装备： 命中等级提高11点。|r", --19052
-"|cff9e9e9eMonster - Item, Orb - A01 Blue|r£ ", --19053
+"单手£ ", --19053
 "红色龙珠£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --19054
 "绿色龙珠£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --19055
 "|cff0070dd银色长靴|r£ ", --19056
@@ -14160,7 +14160,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "猎户莫克霍尔的徽记£任务物品£唯一", --19069
 "猎户莫克霍尔的骨头£任务物品£唯一", --19070
 "腐化之血£任务物品", --19071
-"Monster - Fire Arrow£弹药£箭£每秒伤害提高1", --19082
+"弹药£箭£每秒伤害提高1", --19082
 "|cff0070dd霜狼军团士兵披风|r£|cff00ff00装备： 攻击强度提高24点。|r", --19083
 "|cff0070dd雷矛士兵披风|r£|cff00ff00装备： 攻击强度提高24点。|r", --19084
 "|cff0070dd霜狼顾问披风|r£|cff00ff00装备： 法术强度提高14点。|r", --19085
@@ -14200,7 +14200,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00枭兽毛皮手套|r£ ", --19119
 "|cff1eff00卫兵队长符文|r£|cff00ff00装备： 攻击强度提高20点。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --19120
 "|cff0070dd密林披风|r£|cff00ff00装备： 法术强度提高12点。|r", --19121
-"|cff0070ddWoven Ivy Necklace DEPRECATED|r£ ", --19122
+"拾取后绑定£ ", --19122
 "|cff1eff00温暖裹手|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --19123
 "|cff1eff00熔岩板甲护腿|r£|cff00ff00装备： 防御等级提高5。|r", --19124
 "|cff1eff00灼热锁甲束带|r£ ", --19125
@@ -14236,7 +14236,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "斥候标准护理包£拾取后绑定£唯一", --19155
 "|cffa335ed光芒长袍|r£|cff00ff00装备： 法术强度提高23点。|r", --19156
 "|cffa335ed多彩护手|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 攻击强度提高44点。|r", --19157
-"|cffff7f00TEST Sulfuras, Hand of Ragnaros|r£|cff00ff00装备： 对使用近战武器攻击你的敌人造成|r|cff7f7f7f5|r|cff00ff00点火焰伤害。|r", --19158
+"拾取后绑定£|cff00ff00装备： 对使用近战武器攻击你的敌人造成|r|cff7f7f7f5|r|cff00ff00点火焰伤害。|r", --19158
 "|cff0070dd常青藤项链|r£ ", --19159
 "冠军战袍£ ", --19160
 "|cffa335ed熔火犬皮腰带|r£|cff00ff00装备： 法术强度提高33点。|r", --19162
@@ -14250,37 +14250,37 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed黑手|r£ ", --19170
 "暗月马戏团奖券£拾取后绑定", --19182
 "沙漏£|cff00ff00使用： 为使用者治愈龙血之痛：青铜。|r", --19183
-"|cff0070dd3800 Test 2h Axe 63 blue|r£ ", --19184
-"|cff0070dd2100 Test 2h Axe 63 blue|r£ ", --19185
-"|cff0070dd2700 Test 2h Axe 63 blue|r£ ", --19186
-"|cff0070dd3200 Test 2h Axe 63 blue|r£ ", --19187
-"|cff0070dd2200 Test 2h Axe 63 blue|r£ ", --19188
-"|cff0070dd2300 Test 2h Axe 63 blue|r£ ", --19189
-"|cff0070dd2400 Test 2h Axe 63 blue|r£ ", --19190
-"|cff0070dd2500 Test 2h Axe 63 blue|r£ ", --19191
-"|cff0070dd2600 Test 2h Axe 63 blue|r£ ", --19192
-"|cff0070dd2800 Test 2h Axe 63 blue|r£ ", --19193
-"|cff0070dd2900 Test 2h Axe 63 blue|r£ ", --19194
-"|cff0070dd3000 Test 2h Axe 63 blue|r£ ", --19195
-"|cff0070dd3100 Test 2h Axe 63 blue|r£ ", --19196
-"|cff0070dd3300 Test 2h Axe 63 blue|r£ ", --19197
-"|cff0070dd3400 Test 2h Axe 63 blue|r£ ", --19198
-"|cff0070dd3500 Test 2h Axe 63 blue|r£ ", --19199
-"|cff0070dd3600 Test 2h Axe 63 blue|r£ ", --19200
-"|cff0070dd3700 Test 2h Axe 63 blue|r£ ", --19201
+"双手£ ", --19184
+"双手£ ", --19185
+"双手£ ", --19186
+"双手£ ", --19187
+"双手£ ", --19188
+"双手£ ", --19189
+"双手£ ", --19190
+"双手£ ", --19191
+"双手£ ", --19192
+"双手£ ", --19193
+"双手£ ", --19194
+"双手£ ", --19195
+"双手£ ", --19196
+"双手£ ", --19197
+"双手£ ", --19198
+"双手£ ", --19199
+"双手£ ", --19200
+"双手£ ", --19201
 "设计图：重型木喉腰带£拾取后绑定£使用： 教你学会制作重型木喉腰带。£|cff0070dd\n重型木喉腰带|r£装备后绑定£腰部£193点护甲£+9 耐力£|cff00ff00装备： 攻击强度提高42点。|r£\n需要瑟银锭 (12), 大地精华 (3), 生命精华 (3)", --19202
 "设计图：黎明束腰£拾取后绑定£使用： 教你学会制作黎明束带。£|cff0070dd\n黎明束带|r£装备后绑定£腰部£341点护甲£+21 力量£+9 耐力£\n需要瑟银锭 (8), 真银锭 (6), 正义宝珠", --19203
 "设计图：重型木喉长靴£拾取后绑定£使用： 教你学会制作重型木喉长靴。£|cff0070dd\n木喉重靴|r£装备后绑定£脚£258点护甲£+23 耐力£|cff00ff00装备： 攻击强度提高20点。|r£\n需要奥金锭 (4), 大地精华 (6), 生命精华 (6)", --19204
 "设计图：黎明手套£拾取后绑定£使用： 教你学会制作黎明手套。£|cff0070dd\n黎明手套|r£装备后绑定£手£417点护甲£+23 力量£+10 耐力£\n需要奥金锭 (2), 真银锭 (10), 正义宝珠", --19205
 "设计图：黑铁头盔£拾取后绑定£使用： 教你学会制作黑铁头盔。£|cffa335ed\n黑铁头盔|r£装备后绑定£头部£|cff00ff00845点护甲|r£+20 耐力£+35 火焰抗性£\n需要熔岩之核 (4), 炽热之核 (2), 黑铁锭 (4)", --19206
 "设计图：黑铁护手£拾取后绑定£使用： 教你学会制作黑铁护手。£|cffa335ed\n黑铁护手|r£装备后绑定£手£565点护甲£+12 敏捷£+16 耐力£+28 火焰抗性£\n需要熔岩之核 (3), 炽热之核 (5), 熔火犬皮 (4), 黑铁锭 (4), 山脉之血 (2)", --19207
-"设计图：黑色赦免者£拾取后绑定£使用： 教你学会制作黑色赦免者。£|cffa335ed\n黑色赦免者|r£装备后绑定£单手£53 - 100伤害£速度 1.60£（每秒伤害47.8）£|cff00ff00击中时可能： 降低你对当前目标造成的威胁值，降低它们攻击你的可能性。|r£\n需要熔岩之核 (3), 炽热之核 (6), 奥金锭 (12), 山脉之血, 黑铁锭 (4)", --19208
+"设计图：黑色赦免者£拾取后绑定£使用： 教你学会制作黑色赦免者。£|cffa335ed\n黑色赦免者|r£装备后绑定£单手£匕首£53 - 100伤害£速度 1.60£（每秒伤害47.8）£|cff00ff00击中时可能： 降低你对当前目标造成的威胁值，降低它们攻击你的可能性。|r£\n需要熔岩之核 (3), 炽热之核 (6), 奥金锭 (12), 山脉之血, 黑铁锭 (4)", --19208
 "设计图：黑色怒火£拾取后绑定£使用： 教你学会制作黑色怒火。£|cffa335ed\n黑色怒火|r£装备后绑定£双手£105 - 158伤害£速度 2.10£（每秒伤害62.6）£+35 力量£+15 耐力£+10 火焰抗性£|cff00ff00装备： 使你的爆击等级提高14。|r£\n需要熔岩之核 (5), 炽热之核 (2), 奥金锭 (16), 黑铁锭 (6)", --19209
-"设计图：黑手£拾取后绑定£使用： 教你学会制作黑手。£|cffa335ed\n黑手|r£装备后绑定£单手£锤£90 - 168伤害£速度 2.50£（每秒伤害51.6）£+9 耐力£+7 火焰抗性£|cff00ff00击中时可能： 向目标射出一支暗影箭，对其造成125到275点暗影伤害。|r£\n需要熔岩之核 (4), 炽热之核 (7), 奥金锭 (12), 黑铁锭 (8), 艾泽拉斯钻石 (4)", --19210
+"设计图：黑手£拾取后绑定£使用： 教你学会制作黑手。£|cffa335ed\n黑手|r£装备后绑定£单手£90 - 168伤害£速度 2.50£（每秒伤害51.6）£+9 耐力£+7 火焰抗性£|cff00ff00击中时可能： 向目标射出一支暗影箭，对其造成125到275点暗影伤害。|r£\n需要熔岩之核 (4), 炽热之核 (7), 奥金锭 (12), 黑铁锭 (8), 艾泽拉斯钻石 (4)", --19210
 "设计图：黑色卫士£拾取后绑定£使用： 教你学会制作黑色卫士。£|cffa335ed\n黑色卫士|r£装备后绑定£单手£65 - 121伤害£速度 1.80£（每秒伤害51.7）£+9 耐力£|cff00ff00装备： 使你的招架等级提高20。|r£\n需要熔岩之核 (6), 炽热之核 (6), 奥金锭 (10), 黑铁锭 (6), 守护之石 (12)", --19211
 "设计图：夜幕£拾取后绑定£使用： 教你学会制作夜幕。£|cffa335ed\n夜幕|r£装备后绑定£双手£187 - 282伤害£速度 3.50£（每秒伤害67.0）£|cff00ff00击中时可能： 使目标受到法术攻击时承受的伤害提高15%，持续5秒。对60级以上的目标可能失效。|r£\n需要熔岩之核 (8), 炽热之核 (5), 奥金锭 (10), 黑铁锭 (12), 巨型绿宝石 (4)", --19212
 "|cff1eff00银翼功勋奖章|r£拾取后绑定£唯一（10）£|cffffd100\"在战歌峡谷中获得过一场胜利的证明\"|r", --19213
-"|cff9e9e9eMonster - Staff, Wooden Handle Spiral Head Dark|r£ ", --19214
+"双手£ ", --19214
 "图样：木喉之智£拾取后绑定£使用： 教你学会制作木喉之智。£|cff0070dd\n木喉之智|r£装备后绑定£腰部£布甲£46点护甲£+21 智力£|cff00ff00装备： 每5秒恢复5点法力值。|r£\n需要符文布卷 (8), 大地精华 (3), 生命精华 (3), 铁网蛛丝 (2)", --19215
 "图样：银色长靴£拾取后绑定£使用： 教你学会制作银色长靴。£|cff0070dd\n银色长靴|r£装备后绑定£脚£布甲£57点护甲£+21 耐力£+7 精神£+4 暗影抗性£\n需要符文布卷 (6), 魔化皮 (4), 金珍珠 (2), 守护之石 (2), 铁网蛛丝 (2)", --19216
 "图样：银色护肩£拾取后绑定£使用： 教你学会制作银色护肩。£|cff0070dd\n银色护肩|r£装备后绑定£肩部£布甲£68点护甲£+23 耐力£+8 精神£+5 暗影抗性£\n需要月布 (5), 守护之石 (2), 铁网蛛丝 (2)", --19217
@@ -14292,7 +14292,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "暗月热狗£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。|r", --19223
 "红色鸡翅£|cff00ff00使用： 在27秒内恢复总计874点生命值，进食时必须保持坐姿。|r", --19224
 "干蜜饯£|cff00ff00使用： 在30秒内恢复总计2148点生命值，进食时必须保持坐姿。|r", --19225
-"|cff9e9e9eFast Test Fist|r£|cff00ff00装备： SO FAST!|r", --19226
+"|cff00ff00装备： SO FAST!|r£ ", --19226
 "|cff0070dd野兽之一|r£|cff00ff00使用： 将八张野兽卡片收集起来以完成这副套牌。|r", --19227
 "|cffa335ed野兽套牌|r£该物品将触发一个任务£|cffffd100\"暗月马戏团的财产。\"|r", --19228
 "塞格的塔罗牌#1£拾取后绑定£|cffffd100\"永远不要和牛头人一起吃牛肉。\"|r", --19229
@@ -14351,7 +14351,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd入口之六|r£|cff00ff00使用： 将八张入口卡片收集起来以完成这副套牌。|r", --19282
 "|cff0070dd入口之七|r£|cff00ff00使用： 将八张入口卡片收集起来以完成这副套牌。|r", --19283
 "|cff0070dd入口之八|r£|cff00ff00使用： 将八张入口卡片收集起来以完成这副套牌。|r", --19284
-"|cff9e9e9eFast Test Ammo|r£弹药£子弹£每秒伤害提高8", --19286
+"弹药£子弹£每秒伤害提高8", --19286
 "|cffa335ed暗月卡片：英雄|r£|cff00ff00装备： 在攻击敌人时有可能为使用者回复120到|r|cff7f7f7f180|r|cff00ff00点生命值。|r", --19287
 "|cffa335ed暗月卡片：蓝龙|r£|cff00ff00装备： 成功施放法术之后有2%的几率在施法时可继续保持100%的法力值回复速度，持续15秒。|r", --19288
 "|cffa335ed暗月卡片：漩涡|r£|cff00ff00装备： 有一定几率对你的近战目标造成200到|r|cff7f7f7f300|r|cff00ff00点自然伤害。|r", --19289
@@ -14377,8 +14377,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed冰雪之王宝典|r£|cff00ff00装备： 法术强度提高28点。|r", --19310
 "|cffa335ed火焰魔法宝典|r£|cff00ff00装备： 法术强度提高33点。|r", --19311
 "|cffa335ed生命花环|r£|cff00ff00装备： 法术强度提高28点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --19312
-"|cff0070dd1300 Test Dagger 63 blue|r£ ", --19313
-"|cff0070dd2000 Test Dagger 63 blue|r£ ", --19314
+"单手£ ", --19313
+"单手£ ", --19314
 "|cffa335ed塞拉赞恩之触|r£|cff00ff00装备： 法术强度提高33点。|r", --19315
 "|cff1eff00冰线箭矢|r£拾取后绑定£弹药£箭£每秒伤害提高16.5", --19316
 "|cff1eff00冰线枪弹|r£拾取后绑定£弹药£子弹£每秒伤害提高16.5", --19317
@@ -14386,7 +14386,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd鹰身人皮箭袋|r£拾取后绑定£唯一£16格箭袋", --19319
 "|cff0070dd豺狼人皮弹药包|r£拾取后绑定£唯一£16格弹药袋", --19320
 "|cffa335ed无法撼动之物|r£|cff00ff00装备： 使你的盾牌格挡值提高54点。|r", --19321
-"|cff1eff00zzDEPRECATED Warsong Mark of Honor|r£拾取后绑定£唯一（10）£|cffffd100\"在战歌峡谷中获得过一场胜利的证明\"|r", --19322
+"拾取后绑定£唯一（10）£|cffffd100\"在战歌峡谷中获得过一场胜利的证明\"|r", --19322
 "|cffa335ed无坚不摧之力|r£|cff00ff00装备： 使你的爆击等级提高28。|r", --19323
 "|cffa335ed剥夺者|r£ ", --19324
 "|cffa335ed胡里奥指环|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r£|cff00ff00装备： 攻击强度提高16点。|r", --19325
@@ -14467,7 +14467,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed首领锁链腿甲|r£|cff00ff00装备： 爆击等级提高28。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --19401
 "|cffa335ed堕落十字军腿甲|r£ ", --19402
 "|cffa335ed专注指环|r£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 法术强度提高21点。|r", --19403
-"|cff9e9e9eMonster - Mace, The Hand of Nefarius|r£ ", --19404
+"单手£ ", --19404
 "|cffa335ed玛法里奥的祝福|r£ ", --19405
 "|cffa335ed龙牙饰物|r£|cff00ff00装备： 攻击强度提高56点。|r£|cff00ff00装备： 使你的命中等级提高20。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r", --19406
 "|cffa335ed黑焰手套|r£|cff00ff00装备： 法术强度提高35点。|r", --19407
@@ -14476,8 +14476,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "塞格的塔罗牌#24£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"你的财富在死亡矿井中等着你。\"|r", --19424
 "|cff1eff00神秘的箱子|r£拾取后绑定£唯一", --19425
 "|cffa335ed暗月宝珠|r£|cff00ff00装备： 法术强度提高22点。|r", --19426
-"|cff0070dd1500 Test sword 63 blue|r£ ", --19427
-"|cff0070dd2900 Test sword 63 blue|r£ ", --19428
+"单手£ ", --19427
+"单手£ ", --19428
 "|cffa335ed纯净思想斗篷|r£|cff00ff00装备： 法术强度提高18点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --19430
 "|cffa335ed斯泰林的甲虫壳|r£|cff00ff00装备： 使你的格挡等级提高24。|r£|cff00ff00装备： 使你的盾牌格挡值提高48点。|r£|cff00ff00装备： 防御等级提高20。|r", --19431
 "|cffa335ed源力之环|r£ ", --19432
@@ -14503,23 +14503,23 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "塞格的塔罗牌#27£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"你的财富在灰月洞穴外等着你。\"|r", --19452
 "塞格的塔罗牌#28£拾取后绑定£|cffffd100\"专精生存技能的猎人并不见得就一定能生存下来。\"|r", --19453
 "塞格的塔罗牌#29£拾取后绑定£|cffffd100\"当心！\"|r", --19454
-"|cffa335ed3500 Test 2h Axe 70 purple|r£ ", --19455
-"|cffa335ed2900 Test sword 80 purple|r£ ", --19456
-"|cffa335ed1500 Test sword 80 purple|r£ ", --19457
+"双手£ ", --19455
+"单手£ ", --19456
+"单手£ ", --19457
 "加布林蛙卵£拾取后绑定£唯一£|cff00ff00使用： 从蛋中孵出一只加布林蛙来。孵化过程需要花费一些时间。|r", --19462
 "狡猾兔子的皮£任务物品", --19482
 "剥洋葱£|cffffd100\"论击败雷矛部族的战略 - 作者：德雷克塔尔\"|r", --19483
 "霜狼牌洋葱£|cffffd100\"雷矛的荣耀与骄傲 - 作者：范达尔-雷矛\"|r", --19484
-"|cff9e9e9eMonster - Item, Fish - Blue Offhand|r£ ", --19485
-"|cff9e9e9eMonster - Item, Fish - Green Offhand|r£ ", --19486
-"|cff9e9e9eMonster - Item, Fish - Orange Offhand|r£ ", --19487
-"|cff9e9e9eMonster - Item, Fish - Purple Offhand|r£ ", --19488
-"|cff0070dd3300 Test Crossbow 63 blue|r£ ", --19489
-"|cff0070dd2800 Test Bow 63 Blue|r£ ", --19490
+"", --19485
+"", --19486
+"", --19487
+"", --19488
+"拾取后绑定£ ", --19489
+"拾取后绑定£ ", --19490
 "|cffa335ed暗月护符|r£ ", --19491
-"|cff0070dd2200 Test sword 63 blue|r£ ", --19502
-"|cffa335ed2200 Test sword 80 purple|r£ ", --19503
-"|cffa335ed2200 Test sword 70 purple|r£ ", --19504
+"单手£ ", --19502
+"单手£ ", --19503
+"单手£ ", --19504
 "战歌军服£ ", --19505
 "银翼军服£ ", --19506
 "|cff0070dd审讯者披肩|r£|cff00ff00装备： 法术强度提高13点。|r", --19507
@@ -14637,10 +14637,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd漩涡之藤|r£ ", --19619
 "|cff0070dd漩涡之藤|r£ ", --19620
 "|cffa335ed漩涡之怒|r£|cff00ff00装备： 使你的假死技能的冷却时间减少2秒。|r£|cff00ff00装备： 攻击强度提高20点。|r", --19621
-"|cff0070dd1800 Test Dagger 63 blue|r£ ", --19622
-"|cff9e9e9eMonster - Mace2H, Horde B01/B01 Orange|r£ ", --19623
+"单手£ ", --19622
+"双手£ ", --19623
 "可口可乐宠物兑换券£任务物品£|cffffd100\"交给可口可乐兑奖使者即可获得一份虚拟奖品\"|r", --19642
-"|cffa335ed3500 Test 2h Axe 80 purple|r£ ", --19662
+"双手£ ", --19662
 "|cff0070dd血藤外套|r£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 法术强度提高27点。|r", --19682
 "|cff0070dd血藤护腿|r£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 法术强度提高37点。|r", --19683
 "|cff0070dd血藤长靴|r£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 法术强度提高19点。|r", --19684
@@ -14682,15 +14682,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed原始哈卡莱腰带|r£拾取后绑定£职业：牧师, 术士, 德鲁伊£|cffffd100\"来自古拉巴什帝国的贵重的权力珍宝。\"|r", --19720
 "|cffa335ed原始哈卡莱披肩|r£拾取后绑定£|cffffd100\"来自古拉巴什帝国的贵重的权力珍宝。\"|r", --19721
 "|cffa335ed原始哈卡莱徽章|r£拾取后绑定£|cffffd100\"来自古拉巴什帝国的贵重的权力珍宝。\"|r", --19722
-"|cffa335ed原始哈卡莱套索|r£拾取后绑定£|cffffd100\"来自古拉巴什帝国的贵重的权力珍宝。\"|r", --19723
-"|cffa335ed原始哈卡莱之盾|r£拾取后绑定£职业：猎人, 潜行者, 牧师£|cffffd100\"来自古拉巴什帝国的贵重的权力珍宝。\"|r", --19724
+"|cffa335ed原始哈卡莱套索|r£拾取后绑定£职业：战士, 法师, 术士£|cffffd100\"来自古拉巴什帝国的贵重的权力珍宝。\"|r", --19723
+"|cffa335ed原始哈卡莱之盾|r£拾取后绑定£|cffffd100\"来自古拉巴什帝国的贵重的权力珍宝。\"|r", --19724
 "阿拉希资源箱£任务物品£唯一（10）£|cffffd100\"在阿拉希盆地获胜的证明\"|r", --19725
 "|cff1eff00血藤|r£ ", --19726
 "|cff0070dd血镰刀|r£拾取后绑定£唯一£|cffffd100\"携带此物的采药者可以从祖尔格拉布的植物那里采集血藤。\"|r", --19727
-"|cff0070ddEarthborn Kilt TEST|r£ ", --19742
-"|cff1eff00Cloaked Hood TEST|r£ ", --19743
-"|cff9e9e9eMonster - Axe, Horde C04 Purple|r£ ", --19762
-"|cff9e9e9eMonster - Shield, Round A01/Buckler Damaged A02Black|r£ ", --19763
+"装备后绑定£ ", --19742
+"装备后绑定£ ", --19743
+"单手£ ", --19762
+"副手£ ", --19763
 "图样：血藤外套£拾取后绑定£使用： 教你学会制作血藤外套。£|cff0070dd\n血藤外套|r£装备后绑定£胸部£布甲£92点护甲£+13 智力£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 法术强度提高27点。|r£|cffffd100血藤（0/3）|r£|cff7f7f7f  血藤外套|r£|cff7f7f7f  血藤护腿|r£|cff7f7f7f  血藤长靴|r£|cff7f7f7f(3) 套装：使你的爆击等级提高28。|r£\n需要月布 (3), 血藤 (3), 强力魔精 (3), 铁网蛛丝 (2)", --19764
 "图样：血藤护腿£拾取后绑定£使用： 教你学会制作血藤护腿。£|cff0070dd\n血藤护腿|r£装备后绑定£腿部£布甲£80点护甲£+6 智力£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 法术强度提高37点。|r£|cffffd100血藤（0/3）|r£|cff7f7f7f  血藤外套|r£|cff7f7f7f  血藤护腿|r£|cff7f7f7f  血藤长靴|r£|cff7f7f7f(3) 套装：使你的爆击等级提高28。|r£\n需要月布 (4), 血藤 (4), 强力魔精 (4), 铁网蛛丝 (2)", --19765
 "图样：血藤长靴£拾取后绑定£使用： 教你学会制作血藤长靴。£|cff0070dd\n血藤长靴|r£装备后绑定£脚£布甲£63点护甲£+16 智力£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 法术强度提高19点。|r£|cffffd100血藤（0/3）|r£|cff7f7f7f  血藤外套|r£|cff7f7f7f  血藤护腿|r£|cff7f7f7f  血藤长靴|r£|cff7f7f7f(3) 套装：使你的爆击等级提高28。|r£\n需要月布 (4), 血藤 (4), 铁网蛛丝 (2)", --19766
@@ -14715,8 +14715,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd猎鹰的召唤|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部或腿部装备提供攻击强度+24，耐力+10，命中等级+10的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19785
 "|cff0070dd巫毒的警觉|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部或腿部装备提供法术强度提高13点、智力提高15点的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19786
 "|cff0070dd魔法的视域|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部或腿部装备提供法术强度提高18点、法术命中等级提高8的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19787
-"|cff0070dd不祥的妖术|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部或腿部装备提供耐力提高10点、法术强度提高18点的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19788
-"|cff0070dd预言的光环|r£拾取后绑定£职业：牧师£|cff00ff00使用： 永久性地为一件头部或腿部装备提供耐力提高10点、每5秒回复5点法力值、法术强度提高13点的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19789
+"|cff0070dd不祥的妖术|r£拾取后绑定£职业：术士£|cff00ff00使用： 永久性地为一件头部或腿部装备提供耐力提高10点、法术强度提高18点的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19788
+"|cff0070dd预言的光环|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部或腿部装备提供耐力提高10点、每5秒回复5点法力值、法术强度提高13点的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19789
 "|cff0070dd灵魂的安抚|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部或腿部装备提供耐力提高10点、智力提高10点、法术强度提高12点的属性。\r\n\r\n附魔之后，该装备会与你绑定。|r", --19790
 "|cffa335ed哈卡之心|r£拾取后绑定£唯一£该物品将触发一个任务", --19802
 "|cff1eff00布隆奈尔蓝斑鱼|r£拾取后绑定£|cffffd100\"藏宝海湾的某些家伙可能会感兴趣。\"|r", --19803
@@ -14725,9 +14725,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00迪森皇后鱼|r£拾取后绑定£|cffffd100\"藏宝海湾的某些家伙可能会感兴趣。\"|r", --19806
 "斑点可口鱼£拾取后绑定£持续时间：4小时", --19807
 "|cff1eff00石皮大鱼|r£ ", --19808
-"|cff0070dd2500 Test 2h Axe 60 blue|r£ ", --19809
-"|cff0070dd1000 Test dagger 60 blue|r£ ", --19810
-"|cff0070dd2500 Test 2h Axe 60 blue (bear)|r£ ", --19811
+"双手£ ", --19809
+"单手£ ", --19810
+"双手£ ", --19811
 "|cff0070dd黎明符文|r£|cff00ff00装备： 对亡灵的法术强度提高48点。同时也可为银色黎明收集天灾石。|r", --19812
 "|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个战士。\"|r", --19813
 "|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个潜行者。\"|r", --19814
@@ -14735,8 +14735,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个猎人。\"|r", --19816
 "|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个萨满祭司。\"|r", --19817
 "|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个法师。\"|r", --19818
-"|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个术士。\"|r", --19819
-"|cff1eff00打孔的巫毒人偶|r£唯一£职业：牧师£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个牧师。\"|r", --19820
+"|cff1eff00打孔的巫毒人偶|r£唯一£职业：术士£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个术士。\"|r", --19819
+"|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个牧师。\"|r", --19820
 "|cff1eff00打孔的巫毒人偶|r£唯一£|cff00ff00使用： 与格里雷克之血、雷纳塔基之牙、乌苏雷之鬃和哈扎拉尔的梦境之丝组合在一起，可制成强大的护符。|r£|cffffd100\"这只人偶代表着一个德鲁伊。\"|r", --19821
 "|cffa335ed赞达拉辩护者胸甲|r£|cff00ff00装备： 防御等级提高6。|r", --19822
 "|cffa335ed赞达拉辩护者腰带|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --19823
@@ -14753,17 +14753,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed赞达拉狂妄者外套|r£|cff00ff00装备： 使你的爆击等级提高28。|r£|cff00ff00装备： 攻击强度提高44点。|r", --19834
 "|cffa335ed赞达拉狂妄者衬肩|r£|cff00ff00装备： 使你的命中等级提高10。|r", --19835
 "|cffa335ed赞达拉狂妄者护腕|r£ ", --19836
-"|cff0070ddTest Ranged Slot|r£|cff00ff00装备： 每秒回复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --19837
+"拾取后绑定£|cff00ff00装备： 每秒回复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --19837
 "|cffa335ed赞达拉占卜师外套|r£|cff00ff00装备： 法术强度提高18点。|r", --19838
 "|cffa335ed赞达拉占卜师腰带|r£|cff00ff00装备： 法术强度提高8点。|r", --19839
 "|cffa335ed赞达拉占卜师护腕|r£|cff00ff00装备： 法术强度提高13点。|r", --19840
 "|cffa335ed赞达拉忏悔者衬肩|r£|cff00ff00装备： 法术强度提高12点。|r", --19841
 "|cffa335ed赞达拉忏悔者腰带|r£|cff00ff00装备： 法术强度提高14点。|r", --19842
 "|cffa335ed赞达拉忏悔者裹布|r£|cff00ff00装备： 法术强度提高13点。|r", --19843
-"|cffa335edZandalar Illusionist's Robe DEPRECATED|r£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 法术强度提高16点。|r", --19844
+"拾取后绑定£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 法术强度提高16点。|r", --19844
 "|cffa335ed赞达拉幻术师衬肩|r£|cff00ff00装备： 法术强度提高12点。|r", --19845
 "|cffa335ed赞达拉幻术师裹布|r£|cff00ff00装备： 法术强度提高14点。|r", --19846
-"|cffa335edZandalar Demoniac's Robe DEPRECATED|r£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 法术强度提高16点。|r", --19847
+"拾取后绑定£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 法术强度提高16点。|r", --19847
 "|cffa335ed赞达拉恶魔师裹带|r£|cff00ff00装备： 法术强度提高16点。|r", --19848
 "|cffa335ed赞达拉恶魔师衬肩|r£|cff00ff00装备： 法术强度提高12点。|r", --19849
 "乌瑟尔的祭品£任务物品£唯一£|cff00ff00使用： 在西瘟疫之地的乌瑟尔之墓前献上一份祭品。|r", --19850
@@ -14783,7 +14783,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed哈卡莱战刃|r£|cff00ff00装备： 攻击强度提高28点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cffffd100\"铸造者......\"|r", --19865
 "|cffa335ed哈卡莱战刃|r£|cff00ff00装备： 攻击强度提高40点。|r£|cffffd100\"沸腾的仇恨之火。\"|r", --19866
 "|cffa335ed血领主庇护者|r£|cff00ff00装备： 防御等级提高6。|r", --19867
-"|cffa335edMandokir's Sting DEPRECATED|r£ ", --19868
+"拾取后绑定£ ", --19868
 "|cff0070dd浴血护手|r£|cff00ff00装备： 攻击强度提高34点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --19869
 "|cff0070dd哈卡莱血披风|r£|cff00ff00装备： 法术强度提高18点。|r", --19870
 "|cff0070dd保护之符|r£|cff00ff00装备： 防御等级提高13。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r", --19871
@@ -14794,7 +14794,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed堕灵者项链|r£|cff00ff00装备： 使你的命中等级提高8。|r", --19876
 "|cff0070dd万灵护腿|r£|cff00ff00装备： 法术强度提高19点。|r", --19877
 "|cff0070dd浸血肩铠|r£|cff00ff00装备： 防御等级提高5。|r", --19878
-"|cffa335edAlex's Test Beatdown Staff|r£|cff00ff00装备： 法术强度提高840点。|r", --19879
+"拾取后绑定£|cff00ff00装备： 法术强度提高840点。|r", --19879
 "古拉巴什徽记堆£任务物品£唯一", --19880
 "导魔师的徽记£任务物品", --19881
 "妖术师的徽记£任务物品", --19882
@@ -14831,23 +14831,23 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd浸血胫甲|r£|cff00ff00装备： 防御等级提高7。|r", --19913
 "|cff0070dd豹皮背包|r£拾取后绑定£装备唯一£18格容器", --19914
 "|cff0070dd祖利安防御者|r£ ", --19915
-"|cff9e9e9eMonster - Mace, Standard Serpent Green|r£ ", --19916
-"|cff9e9e9eMonster - Wand, Horde A01 Green|r£ ", --19917
+"单手£ ", --19916
+"副手物品£ ", --19917
 "|cffa335ed耶克里克之锤|r£ ", --19918
 "|cff0070dd血污胫甲|r£ ", --19919
 "|cff0070dd首领指环|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --19920
 "|cff0070dd祖利安利斧|r£|cff00ff00装备： 使你的精准等级提高4点。|r", --19921
 "|cff0070dd娅尔罗的巫毒棒|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 法术强度提高12点。|r", --19922
 "|cff0070dd耶克里克的蛋白石护符|r£|cff00ff00装备： 法术强度提高22点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --19923
-"|cff9e9e9eMonster - Dagger, Fang Hook Curve Dark|r£ ", --19924
+"单手£ ", --19924
 "|cff0070dd巨魔族长指环|r£|cff00ff00装备： 使你的命中等级提高10。|r", --19925
-"|cffa335edFlowing Ritual Robes DEPRECATED|r£|cff00ff00装备： 法术强度提高23点。|r", --19926
+"拾取后绑定£|cff00ff00装备： 法术强度提高23点。|r", --19926
 "|cffa335ed玛尔里之触|r£ ", --19927
 "|cff0070dd万灵护肩|r£|cff00ff00装备： 法术强度提高20点。|r", --19928
 "|cff0070dd淡血手套|r£|cff00ff00装备： 法术强度提高19点。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --19929
 "|cff0070dd玛尔里之眼|r£|cff00ff00使用： 每5秒恢复|r|cff7f7f7f60|r|cff00ff00点法力值，持续30秒。 （3分钟冷却）|r", --19930
 "|cff0070dd古拉巴什疯狂魔精|r£|cff00ff00使用： 熄灭疯狂之缘的火盆。|r", --19931
-"UNUSED Empowered Mojo Bundle£|cff00ff00使用： 熄灭疯狂之缘的火盆。|r", --19932
+"|cff00ff00使用： 熄灭疯狂之缘的火盆。|r£ ", --19932
 "发光的蝎血£ ", --19933
 "|cff9e9e9e大蝎爪|r£ ", --19934
 "|cff9e9e9e空毒囊|r£ ", --19935
@@ -14862,7 +14862,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed纳特·帕格的鱼类终结者|r£|cffffd100\"上面刻有一行小字：钓鱼是小姑娘的运动 - 纳特-帕格\"|r", --19944
 "|cffa335ed蜥蜴鳞片眼罩|r£|cff00ff00装备： 使你的爆击等级提高28。|r£|cff00ff00装备： 攻击强度提高44点。|r", --19945
 "|cff0070dd提古勒的鱼叉|r£|cff00ff00装备： 使你的命中等级提高20。|r£|cff00ff00装备： 对野兽的攻击强度提高60点。|r", --19946
-"|cff0070dd纳特·帕格的卷尺|r£|cff00ff00使用： 法术命中等级提高80，持续15秒。 （1分钟 15秒冷却）|r£|cffffd100\"上面刻有一行小字：放长线钓大鱼必备之物。\"|r", --19947
+"|cff0070dd纳特·帕格的卷尺|r£|cff00ff00使用： 法术命中等级提高80，持续15秒。 （1分钟15秒冷却）|r£|cffffd100\"上面刻有一行小字：放长线钓大鱼必备之物。\"|r", --19947
 "|cffa335ed赞达拉英雄徽记|r£|cff00ff00使用： 使你的护甲值提高2000点，防御等级提高50。持续20秒。但你每受到一次近战或远程伤害，这些附加的属性就会降低200点护甲值和5防御等级。 （2分钟冷却）|r", --19948
 "|cffa335ed赞达拉英雄勋章|r£|cff00ff00使用： 使你所能造成的近战和远程伤害提高40点，持续20秒。你每击中一次目标，这个数字就减少2点。 （2分钟冷却）|r", --19949
 "|cffa335ed赞达拉英雄护符|r£|cff00ff00使用： 使你的法术强度提高204点，持续20秒。你每施放一次法术，此增益的效果就降低17点法术强度。 （2分钟冷却）|r", --19950
@@ -14881,7 +14881,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd疯狂草叉|r£|cff00ff00装备： 对恶魔的攻击强度提高117点。|r", --19963
 "|cff0070dd雷纳塔基的灵魂之管|r£|cff00ff00装备： 法术强度提高16点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --19964
 "|cff0070dd乌苏雷的火钳|r£|cff00ff00装备： 法术强度提高16点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --19965
-"|cff0070ddThrice Strung Longbow DEPRECATED|r£ ", --19966
+"拾取后绑定£ ", --19966
 "|cff0070dd心智凋零者|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r", --19967
 "|cff0070dd烈焰惩戒者|r£|cff00ff00装备： 防御等级提高8。|r£|cff00ff00装备： 为你的武器攻击附加|r|cff7f7f7f2|r|cff00ff00点火焰伤害。|r", --19968
 "|cff1eff00纳特·帕格的超级钓鱼靴|r£|cff00ff00装备： 钓鱼技能提高5点。|r", --19969
@@ -14893,14 +14893,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "祖利安臭泥鱼£ ", --19975
 "钓鱼大赛！£ ", --19978
 "|cff0070dd钓鱼大师鱼钩|r£|cff00ff00使用： 将你变形成为一条鱼，可以在水下呼吸，提高游泳速度。|r", --19979
-"|cff9e9e9eMonster - Dagger, Ornate Spikey Base Red|r£ ", --19980
-"|cff9e9e9eMonster - Sword2H, Claymore B01/Broadsword A03 Black Sharpened|r£ ", --19981
+"单手£ ", --19980
+"单手£ ", --19981
 "|cff0070dd暗色蝠斗篷|r£|cff00ff00装备： 命中等级提高10点。|r", --19982
-"|cff9e9e9eMonster - Wand, Horde Demon Skull Red|r£ ", --19983
+"魔杖£ ", --19983
 "|cff0070dd乌黑面具|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高36点。|r", --19984
 "|cff0070dd海盗的眼罩|r£|cff00ff00装备： 使你抵抗恐惧效果的几率提高4%。|r£|cffffd100\"啊啊啊啊啊啊！\"|r", --19986
-"|cff9e9e9eMonster - Dagger, Vulture Black|r£ ", --19987
-"|cff9e9e9eMonster - Mace2H, Horde C01 Steel (Green)|r£ ", --19988
+"单手£ ", --19987
+"双手£ ", --19988
 "|cff0070dd吞噬之影宝典|r£|cff00ff00装备： 法术强度提高16点。|r£|cffffd100\"某些秘密最好还是永远不要被揭穿。\"|r", --19989
 "|cff0070dd祝福珠串|r£|cff00ff00使用： 法术强度提高101点，持续20秒。 （2分钟冷却）|r£|cffffd100\"患难之交最可贵。\"|r", --19990
 "|cff0070dd魔暴龙眼|r£|cff00ff00使用： 使你的攻击强度提高150点，命中等级提高20。这个效果可以持续20秒。 （2分钟冷却）|r", --19991
@@ -15046,19 +15046,19 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "污染者战袍£ ", --20131
 "阿拉索战袍£ ", --20132
 "|cffa335ed天怒头盔|r£|cff00ff00装备： 爆击等级提高34点。|r", --20134
-"|cffa335ed90 Epic Warrior Bracelets|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --20135
-"|cffa335ed90 Epic Warrior Breastplate|r£|cff00ff00装备： 使你的命中等级提高20。|r", --20136
-"|cffa335ed90 Epic Warrior Gauntlets|r£|cff00ff00装备： +200 护甲。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20137
-"|cffa335ed90 Epic Warrior Helm|r£|cff00ff00装备： 使你的命中等级提高20。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点生命值。|r", --20138
-"|cffa335ed90 Epic Warrior Legplates|r£|cff00ff00装备： 使你的招架等级提高20。|r", --20139
-"|cffa335ed90 Epic Warrior Pauldrons|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： +200 护甲。|r", --20140
-"|cffa335ed90 Epic Warrior Sabatons|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20141
-"|cffa335ed90 Epic Warrior Waistband|r£|cff00ff00装备： +200 护甲。|r", --20142
-"|cffa335ed90 Epic Warrior Neck|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点生命值。|r", --20143
-"|cffa335ed90 Epic Warrior Ring|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点生命值。|r", --20144
-"|cffa335ed90 Epic Warrior Cloak|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --20145
-"|cffa335ed90 Epic Warrior Gun|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20146
-"|cffa335ed90 Epic Warrior Axe|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点生命值。|r£|cff00ff00装备： 使你的招架等级提高20。|r", --20149
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --20135
+"拾取后绑定£|cff00ff00装备： 使你的命中等级提高20。|r", --20136
+"拾取后绑定£|cff00ff00装备： +200 护甲。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20137
+"拾取后绑定£|cff00ff00装备： 使你的命中等级提高20。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点生命值。|r", --20138
+"拾取后绑定£|cff00ff00装备： 使你的招架等级提高20。|r", --20139
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： +200 护甲。|r", --20140
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --20141
+"拾取后绑定£|cff00ff00装备： +200 护甲。|r", --20142
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点生命值。|r", --20143
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点生命值。|r", --20144
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --20145
+"装备后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --20146
+"双手£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点生命值。|r£|cff00ff00装备： 使你的招架等级提高20。|r", --20149
 "|cff0070dd污染者的链甲束带|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高34点。|r", --20150
 "|cff0070dd污染者的链甲束带|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高20点。|r", --20151
 "|cff0070dd污染者的链甲束带|r£|cff00ff00装备： 攻击强度提高24点。|r", --20152
@@ -15147,21 +15147,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "污染者的丝质绷带£拾取后绑定£|cff00ff00使用： 在8秒内回复640点生命值。只能在阿拉希盆地内使用。|r", --20235
 "阿拉索标准医疗包£拾取后绑定£唯一", --20236
 "高地魔纹布绷带£拾取后绑定£|cff00ff00使用： 在8秒内回复1104点生命值。只能在阿拉希盆地内使用。|r", --20237
-"|cff1eff0090 Green Warrior Axe|r£ ", --20238
-"|cff1eff0090 Green Warrior Bracelets|r£ ", --20239
-"|cff1eff0090 Green Warrior Breastplate|r£ ", --20240
-"|cff1eff0090 Green Warrior Cloak|r£ ", --20241
-"|cff1eff0090 Green Warrior Gauntlets|r£ ", --20242
+"双手£ ", --20238
+"拾取后绑定£ ", --20239
+"拾取后绑定£ ", --20240
+"拾取后绑定£ ", --20241
+"拾取后绑定£ ", --20242
 "高地符文布绷带£拾取后绑定£|cff00ff00使用： 在8秒内回复2000点生命值。只能在阿拉希盆地内使用。|r", --20243
 "高地丝质绷带£拾取后绑定£|cff00ff00使用： 在8秒内回复640点生命值。只能在阿拉希盆地内使用。|r", --20244
-"|cff1eff0090 Green Warrior Gun|r£ ", --20245
-"|cff1eff0090 Green Warrior Helm|r£ ", --20246
-"|cff1eff0090 Green Warrior Legplates|r£ ", --20247
-"|cff1eff0090 Green Warrior Neck|r£ ", --20248
-"|cff1eff0090 Green Warrior Pauldrons|r£ ", --20249
-"|cff1eff0090 Green Warrior Ring|r£ ", --20250
-"|cff1eff0090 Green Warrior Sabatons|r£ ", --20251
-"|cff1eff0090 Green Warrior Waistband|r£ ", --20252
+"装备后绑定£ ", --20245
+"拾取后绑定£ ", --20246
+"拾取后绑定£ ", --20247
+"拾取后绑定£ ", --20248
+"拾取后绑定£ ", --20249
+"拾取后绑定£ ", --20250
+"拾取后绑定£ ", --20251
+"拾取后绑定£ ", --20252
 "图样：战熊背心£拾取后绑定£使用： 教你学会制作战熊背心。£|cff0070dd\n战熊背心|r£装备后绑定£胸部£158点护甲£+11 耐力£|cff00ff00装备： 攻击强度提高54点。|r£\n需要硬甲皮 (28), 战熊皮 (12), 符文线", --20253
 "图样：战熊热裤£拾取后绑定£使用： 教你学会制作战熊热裤。£|cff0070dd\n战熊热裤|r£装备后绑定£腿部£142点护甲£+12 耐力£|cff00ff00装备： 攻击强度提高56点。|r£\n需要硬甲皮 (24), 战熊皮 (14), 符文线", --20254
 "|cff0070dd耳语长靴|r£|cff00ff00装备： 使你的有效潜行等级提高1。|r", --20255
@@ -15176,108 +15176,108 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed和平守护者护手|r£|cff00ff00装备： 法术强度提高32点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20264
 "|cff0070dd和平守护者长靴|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高12点。|r", --20265
 "|cff0070dd和平守护者护腿|r£|cff00ff00装备： 法术强度提高20点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --20266
-"|cffa335ed90 Epic Rogue Belt|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20267
-"|cffa335ed90 Epic Rogue Boots|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： +200 护甲。|r", --20268
-"|cffa335ed90 Epic Rogue Bracers|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20269
-"|cffa335ed90 Epic Rogue Cap|r£|cff00ff00装备： 使你的躲闪等级提高24。|r£|cff00ff00装备： +200 护甲。|r", --20270
-"|cffa335ed90 Epic Rogue Gloves|r£|cff00ff00装备： +200 护甲。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20271
-"|cffa335ed90 Epic Rogue Pants|r£|cff00ff00装备： 使你的招架等级提高20。|r£|cff00ff00装备： +250 护甲。|r", --20272
-"|cffa335ed90 Epic Rogue Spaulders|r£|cff00ff00装备： +200 护甲。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20273
-"|cffa335ed90 Epic Rogue Tunic|r£|cff00ff00装备： 使你的躲闪等级提高24。|r£|cff00ff00装备： +200 护甲。|r", --20274
-"|cffa335ed90 Epic Rogue Neck|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20275
-"|cffa335ed90 Epic Rogue Cloak|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20276
-"|cffa335ed90 Epic Rogue Ring|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点生命值。|r", --20277
-"|cffa335ed90 Epic Rogue Bow|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f3|r|cff00ff00点法力值。|r", --20278
-"|cffa335ed90 Epic Rogue Dagger|r£|cff00ff00装备： 使你的躲闪等级提高12。|r", --20279
-"|cff1eff0063 Green Warrior Axe|r£ ", --20280
-"|cff1eff0063 Green Warrior Bracelets|r£ ", --20281
-"|cff1eff0063 Green Warrior Breastplate|r£ ", --20282
-"|cff1eff0063 Green Warrior Cloak|r£ ", --20283
-"|cff1eff0063 Green Warrior Gauntlets|r£ ", --20284
-"|cff1eff0063 Green Warrior Gun|r£ ", --20285
-"|cff1eff0063 Green Warrior Helm|r£ ", --20286
-"|cff1eff0063 Green Warrior Legplates|r£ ", --20287
-"|cff1eff0063 Green Warrior Neck|r£ ", --20288
-"|cff1eff0063 Green Warrior Pauldrons|r£ ", --20289
-"|cff1eff0063 Green Warrior Ring|r£ ", --20290
-"|cff1eff0063 Green Warrior Sabatons|r£ ", --20291
-"|cff1eff0063 Green Warrior Waistband|r£ ", --20292
+"装备后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --20267
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： +200 护甲。|r", --20268
+"装备后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --20269
+"拾取后绑定£|cff00ff00装备： 使你的躲闪等级提高24。|r£|cff00ff00装备： +200 护甲。|r", --20270
+"拾取后绑定£|cff00ff00装备： +200 护甲。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20271
+"拾取后绑定£|cff00ff00装备： 使你的招架等级提高20。|r£|cff00ff00装备： +250 护甲。|r", --20272
+"拾取后绑定£|cff00ff00装备： +200 护甲。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --20273
+"拾取后绑定£|cff00ff00装备： 使你的躲闪等级提高24。|r£|cff00ff00装备： +200 护甲。|r", --20274
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --20275
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --20276
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点生命值。|r", --20277
+"拾取后绑定£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f3|r|cff00ff00点法力值。|r", --20278
+"拾取后绑定£|cff00ff00装备： 使你的躲闪等级提高12。|r", --20279
+"双手£ ", --20280
+"拾取后绑定£ ", --20281
+"拾取后绑定£ ", --20282
+"拾取后绑定£ ", --20283
+"拾取后绑定£ ", --20284
+"装备后绑定£ ", --20285
+"拾取后绑定£ ", --20286
+"拾取后绑定£ ", --20287
+"拾取后绑定£ ", --20288
+"拾取后绑定£ ", --20289
+"拾取后绑定£ ", --20290
+"拾取后绑定£ ", --20291
+"拾取后绑定£ ", --20292
 "|cff0070dd蓝龙鳞片护腿|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f8|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高17点。|r", --20295
 "|cff0070dd绿色龙鳞护手|r£|cff00ff00装备： 法术强度提高21点。|r", --20296
-"|cff1eff0090 Green Rogue Belt|r£ ", --20297
-"|cff1eff0090 Green Rogue Boots|r£ ", --20298
-"|cff1eff0090 Green Rogue Bow|r£ ", --20299
-"|cff1eff0090 Green Rogue Bracers|r£ ", --20300
-"|cff1eff0090 Green Rogue Cap|r£ ", --20301
-"|cff1eff0090 Green Rogue Cloak|r£ ", --20302
-"|cff1eff0090 Green Rogue Dagger|r£ ", --20303
-"|cff1eff0090 Green Rogue Gloves|r£ ", --20304
-"|cff1eff0090 Green Rogue Neck|r£ ", --20305
-"|cff1eff0090 Green Rogue Pants|r£ ", --20306
-"|cff1eff0090 Green Rogue Ring|r£ ", --20307
-"|cff1eff0090 Green Rogue Spaulders|r£ ", --20308
-"|cff1eff0090 Green Rogue Tunic|r£ ", --20309
+"装备后绑定£ ", --20297
+"拾取后绑定£ ", --20298
+"拾取后绑定£ ", --20299
+"装备后绑定£ ", --20300
+"拾取后绑定£ ", --20301
+"拾取后绑定£ ", --20302
+"拾取后绑定£ ", --20303
+"拾取后绑定£ ", --20304
+"拾取后绑定£ ", --20305
+"拾取后绑定£ ", --20306
+"拾取后绑定£ ", --20307
+"拾取后绑定£ ", --20308
+"拾取后绑定£ ", --20309
 "恶魔之皮£拾取后绑定£唯一£该物品将触发一个任务", --20310
-"|cff1eff0063 Green Rogue Belt|r£ ", --20311
-"|cff1eff0063 Green Rogue Boots|r£ ", --20312
-"|cff1eff0063 Green Rogue Bow|r£ ", --20313
-"|cff1eff0063 Green Rogue Bracers|r£ ", --20314
-"|cff1eff0063 Green Rogue Cap|r£ ", --20315
-"|cff1eff0063 Green Rogue Cloak|r£ ", --20316
-"|cff1eff0063 Green Rogue Dagger|r£ ", --20317
-"|cff1eff0063 Green Rogue Gloves|r£ ", --20318
-"|cff1eff0063 Green Rogue Neck|r£ ", --20319
-"|cff1eff0063 Green Rogue Pants|r£ ", --20320
-"|cff1eff0063 Green Rogue Ring|r£ ", --20321
-"|cff1eff0063 Green Rogue Spaulders|r£ ", --20322
-"|cff1eff0063 Green Rogue Tunic|r£ ", --20323
-"|cffa335ed90 Epic Frost Belt|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20324
-"|cffa335ed90 Epic Frost Bindings|r£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20325
-"|cffa335ed90 Epic Frost Boots|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20326
-"|cffa335ed90 Epic Frost Crown|r£|cff00ff00装备： 冰霜法术强度提高37点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --20327
-"|cffa335ed90 Epic Frost Gloves|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20328
-"|cffa335ed90 Epic Frost Leggings|r£|cff00ff00装备： 冰霜法术强度提高37点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --20329
-"|cffa335ed90 Epic Frost Mantle|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20330
-"|cffa335ed90 Epic Frost Robes|r£|cff00ff00装备： 冰霜法术强度提高37点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --20331
-"|cffa335ed90 Epic Frost Neck|r£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20332
-"|cffa335ed90 Epic Frost Ring|r£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20333
-"|cffa335ed90 Epic Frost Staff|r£|cff00ff00装备： 爆击等级提高28。|r£|cff00ff00装备： 冰霜法术强度提高132点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r", --20334
-"|cffa335ed90 Epic Frost Wand|r£|cff00ff00装备： 冰霜法术强度提高11点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f3|r|cff00ff00点法力值。|r", --20335
-"|cffa335ed90 Epic Frost Shroud|r£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20336
+"装备后绑定£ ", --20311
+"拾取后绑定£ ", --20312
+"拾取后绑定£ ", --20313
+"装备后绑定£ ", --20314
+"拾取后绑定£ ", --20315
+"拾取后绑定£ ", --20316
+"拾取后绑定£ ", --20317
+"拾取后绑定£ ", --20318
+"拾取后绑定£ ", --20319
+"拾取后绑定£ ", --20320
+"拾取后绑定£ ", --20321
+"拾取后绑定£ ", --20322
+"拾取后绑定£ ", --20323
+"装备后绑定£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20324
+"装备后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20325
+"拾取后绑定£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20326
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高37点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --20327
+"装备后绑定£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20328
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高37点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --20329
+"拾取后绑定£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20330
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高37点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --20331
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20332
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20333
+"拾取后绑定£|cff00ff00装备： 爆击等级提高28。|r£|cff00ff00装备： 冰霜法术强度提高132点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r", --20334
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高11点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f3|r|cff00ff00点法力值。|r", --20335
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --20336
 "棍子上的侏儒头£1 - 0伤害", --20337
-"|cff1eff0090 Green Frost Belt|r£|cff00ff00装备： 法术强度提高23点。|r", --20338
-"|cff1eff0090 Green Frost Bindings|r£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20339
-"|cff1eff0090 Green Frost Boots|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20340
-"|cff1eff0090 Green Frost Crown|r£|cff00ff00装备： 冰霜法术强度提高39点。|r", --20341
-"|cff1eff0090 Green Frost Gloves|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20342
-"|cff1eff0090 Green Frost Leggings|r£|cff00ff00装备： 冰霜法术强度提高39点。|r", --20343
-"|cff1eff0090 Green Frost Mantle|r£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20344
-"|cff1eff0090 Green Frost Neck|r£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20345
-"|cff1eff0090 Green Frost Ring|r£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20346
-"|cff1eff0090 Green Frost Robes|r£|cff00ff00装备： 冰霜法术强度提高39点。|r", --20347
-"|cff1eff0090 Green Frost Shroud|r£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20348
-"|cff1eff0090 Green Frost Staff|r£|cff00ff00装备： 冰霜法术强度提高72点。|r", --20349
-"|cff1eff0090 Green Frost Wand|r£|cff00ff00装备： 冰霜法术强度提高11点。|r", --20350
-"|cff1eff0063 Green Frost Belt|r£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20351
-"|cff1eff0063 Green Frost Bindings|r£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20352
-"|cff1eff0063 Green Frost Boots|r£|cff00ff00装备： 冰霜法术强度提高20点。|r", --20353
-"|cff1eff0063 Green Frost Crown|r£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20354
-"|cff1eff0063 Green Frost Gloves|r£|cff00ff00装备： 冰霜法术强度提高20点。|r", --20355
-"|cff1eff0063 Green Frost Leggings|r£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20356
-"|cff1eff0063 Green Frost Mantle|r£|cff00ff00装备： 冰霜法术强度提高20点。|r", --20357
-"|cff1eff0063 Green Frost Neck|r£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20358
-"|cff1eff0063 Green Frost Ring|r£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20359
-"|cff1eff0063 Green Frost Robes|r£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20360
-"|cff1eff0063 Green Frost Shroud|r£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20361
-"|cff1eff0063 Green Frost Staff|r£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20362
-"|cff1eff0063 Green Frost Wand|r£|cff00ff00装备： 冰霜法术强度提高9点。|r", --20363
+"装备后绑定£|cff00ff00装备： 法术强度提高23点。|r", --20338
+"装备后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20339
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20340
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高39点。|r", --20341
+"装备后绑定£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20342
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高39点。|r", --20343
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高29点。|r", --20344
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20345
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20346
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高39点。|r", --20347
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高21点。|r", --20348
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高72点。|r", --20349
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高11点。|r", --20350
+"装备后绑定£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20351
+"装备后绑定£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20352
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高20点。|r", --20353
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20354
+"装备后绑定£|cff00ff00装备： 冰霜法术强度提高20点。|r", --20355
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20356
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高20点。|r", --20357
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20358
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20359
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20360
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高14点。|r", --20361
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高26点。|r", --20362
+"拾取后绑定£|cff00ff00装备： 冰霜法术强度提高9点。|r", --20363
 "Test Ammo Lockbox£ ", --20364
 "|cff0070dd狩猎装备|r£|cffffd100\"一箱狩猎用的装备。\"|r", --20367
 "|cff0070dd稳固弯弓|r£|cffffd100\"这把弓没什么特色。\"|r", --20368
 "|cff0070dd蓝铜之拳|r£|cff00ff00装备： 爆击等级提高14。|r", --20369
-"|cffa335edTest Staff 90 epic|r£|cff00ff00装备： 攻击强度提高74点。|r£|cff00ff00装备： 使你的躲闪等级提高24。|r", --20370
+"装备后绑定£|cff00ff00装备： 攻击强度提高74点。|r£|cff00ff00装备： 使你的躲闪等级提高24。|r", --20370
 "|cff0070dd蓝色鱼人卵|r£账号绑定£唯一£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --20371
-"|cffa335edTest Staff 77 epic|r£|cff00ff00装备： 攻击强度提高44点。|r£|cff00ff00装备： 使你的躲闪等级提高24。|r", --20372
+"装备后绑定£|cff00ff00装备： 攻击强度提高44点。|r£|cff00ff00装备： 使你的躲闪等级提高24。|r", --20372
 "石鞭蝎之刺£任务物品", --20373
 "石鞭巨钳蝎之刺£任务物品", --20374
 "石鞭掠夺者之刺£任务物品", --20375
@@ -15316,12 +15316,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "万圣节魔棒 - 幽灵£拾取后绑定£|cff00ff00使用： 将目标队友伪装成鬼魂。 （1秒冷却）|r", --20409
 "万圣节魔棒 - 蝙蝠£拾取后绑定£|cff00ff00使用： 将目标队友伪装成蝙蝠。 （1秒冷却）|r", --20410
 "万圣节魔棒 - 骷髅£拾取后绑定£|cff00ff00使用： 将目标队友伪装成骷髅。 （1秒冷却）|r", --20411
-"|cff9e9e9eMonster - Polearm, PVPAlliance_A01|r£ ", --20412
+"双手£ ", --20412
 "万圣节魔棒 - 随机£拾取后绑定£|cff00ff00使用： 将目标队友伪装成某种随机的形象。 （1秒冷却）|r", --20413
 "万圣节魔棒 - 小精灵£拾取后绑定£|cff00ff00使用： 将目标队友伪装成小精灵。 （1秒冷却）|r", --20414
 "流沙之战£拾取后绑定£唯一£|cffffd100\"这本书似乎是刚刚写成的。\"|r", --20415
 "召唤纹章：火£ ", --20416
-"|cff9e9e9eMonster - Glaive - 2 Blade Silver (offhand)|r£ ", --20417
+"单手£ ", --20417
 "召唤纹章：雷£ ", --20418
 "召唤纹章：石£ ", --20419
 "召唤纹章：水£ ", --20420
@@ -15348,7 +15348,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd斥候徽章|r£ ", --20442
 "|cff0070dd哨兵之刃|r£ ", --20443
 "|cff0070dd哨兵徽章|r£ ", --20444
-"|cff0070ddTest Defense Ring +120|r£|cff00ff00装备： 防御等级提高180。|r", --20445
+"拾取后绑定£|cff00ff00装备： 防御等级提高180。|r", --20445
 "|cff0070ddTest Defense Ring +140|r£|cff00ff00装备： 防御等级提高140。|r", --20446
 "召唤节杖：火£ ", --20447
 "召唤节杖：雷£ ", --20448
@@ -15370,7 +15370,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "水晶分解装置£任务物品£唯一", --20465
 "维拉尔的徽记之戒£任务物品", --20466
 "破碎的食谱£任务物品", --20467
-"|cff9e9e9eMonster - Item, Orb - A01 Green|r£ ", --20468
+"单手£ ", --20468
 "被破译的《真正的信徒》剪报£拾取后绑定", --20469
 "索兰尼亚的占卜宝珠£任务物品£唯一", --20470
 "天灾魔法卷轴£任务物品£唯一", --20471
@@ -15534,7 +15534,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed异常皮质肩甲|r£|cff00ff00装备： 攻击强度提高18点。|r", --20633
 "|cffa335ed惊骇之靴|r£|cff00ff00装备： 法术强度提高34点。|r", --20634
 "|cffa335ed镶玉外套|r£|cff00ff00装备： 法术强度提高44点。|r", --20635
-"|cffa335ed休眠水晶|r£|cff00ff00使用： 法术强度提高186点，持续15秒。 （1分钟 30秒冷却）|r", --20636
+"|cffa335ed休眠水晶|r£|cff00ff00使用： 法术强度提高186点，持续15秒。 （1分钟30秒冷却）|r", --20636
 "|cffa335ed蚀刻肩铠|r£|cff00ff00装备： 防御等级提高9。|r", --20637
 "|cffa335ed狂乱护腿|r£|cff00ff00装备： 法术强度提高21点。|r", --20638
 "|cffa335ed奇异雕文腿甲|r£|cff00ff00装备： 法术强度提高15点。|r", --20639
@@ -15616,8 +15616,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd沙丘行者长靴|r£ ", --20715
 "|cff0070dd沙虫皮护手|r£|cff00ff00装备： 法术强度提高27点。|r", --20716
 "|cff0070dd沙漠花朵手套|r£|cff00ff00装备： 法术强度提高27点。|r", --20717
-"|cff9e9e9eMonster - Staff, Jeweled Yellow Staff w/Low Purple Glow|r£ ", --20718
-"|cff9e9e9eMonster - Staff, Jeweled D01/B02 Yellow w/Low Red Flame|r£ ", --20719
+"双手£ ", --20718
+"双手£ ", --20719
 "|cff0070dd黑暗密语之刃|r£|cff00ff00装备： 法术强度提高19点。|r", --20720
 "|cff0070dd信徒指环|r£ ", --20721
 "|cff0070dd水晶掷弹器|r£|cff00ff00装备： 攻击强度提高20点。|r", --20722
@@ -15636,9 +15636,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd公式：附魔披风 - 狡诈|r£拾取后绑定£|cff00ff00使用： 教你学会永久性地为一件披风附魔，使其获得对怪物造成的威胁值降低2%的效果。|r", --20735
 "|cff0070dd公式：附魔披风 - 躲闪|r£拾取后绑定£|cff00ff00使用： 教你学会永久性地为一件披风附魔，使其获得躲闪等级+12的效果。|r", --20736
 "熔火之石£ ", --20737
-"|cff9e9e9eMonster - Mace, Scepter of the Shifting Sands|r£ ", --20738
-"Deadwood Headdress Feather DEPRECATED£32 - 33伤害", --20739
-"Winterfall Spirit Beads DEPRECATED£拾取后绑定£32 - 33伤害", --20740
+"单手£ ", --20738
+"32 - 33伤害£ ", --20739
+"拾取后绑定£32 - 33伤害", --20740
 "死木仪祭图腾£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"这根图腾充满了堕落的气息。\"|r", --20741
 "冬泉仪祭图腾£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"这根图腾充满了堕落的气息。\"|r", --20742
 "不稳定的法力水晶£任务物品", --20743
@@ -15658,7 +15658,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "公式：初级巫师之油£使用： 教你学会制作初级巫师之油。£\n初级巫师之油£|cff00ff00使用： 涂抹在目标武器上之后，使持有者的法术强度提高8点，持续1小时。不能对等级高于165的物品使用。 （1秒冷却）|r£\n需要奇异之尘 (2), 枫树种子, 空瓶", --20758
 "奥特姆比之锤£任务物品", --20759
 "祖玛洛什酋长的徽记£任务物品", --20760
-"配方：转化元素火焰£拾取后绑定£使用： 教你学会将一份火焰之心转化成为三份元素火焰。£\n元素火焰£\n需要火焰之心", --20761
+"配方：转化元素火焰£拾取后绑定£使用： 教你学会将一份火焰之心转化成为三份元素火焰。", --20761
 "DEPRECATED: Crystallized Essence£ ", --20762
 "|cff9e9e9e破损的武器|r£ ", --20763
 "安威瓦尔德的徽记£任务物品£唯一", --20764
@@ -15740,7 +15740,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "逐日者盾牌£ ", --20841
 "|cff9e9e9e磨损的藤蔓|r£ ", --20842
 "|cff9e9e9e粉碎的花瓣|r£ ", --20843
-"致命药膏 V£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成98点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --20844
+"致命药膏 V£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成97点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --20844
 "|cff9e9e9e扯碎的龙鳞|r£ ", --20845
 "|cff9e9e9e微微发光的眼睛|r£ ", --20846
 "|cff9e9e9e怨灵碎片|r£ ", --20847
@@ -15763,28 +15763,28 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00白骨甲虫|r£ ", --20864
 "|cff1eff00象牙甲虫|r£ ", --20865
 "|cff0070dd碧蓝雕像|r£ ", --20866
-"|cff0070dd玛瑙雕像|r£ ", --20867
-"|cff0070dd柔光雕像|r£职业：战士, 猎人, 牧师", --20868
-"|cff0070dd琥珀雕像|r£ ", --20869
+"|cff0070dd玛瑙雕像|r£职业：战士, 潜行者, 术士", --20867
+"|cff0070dd柔光雕像|r£ ", --20868
+"|cff0070dd琥珀雕像|r£职业：圣骑士, 猎人, 萨满祭司, 术士", --20869
 "|cff0070dd翠玉雕像|r£职业：牧师, 术士, 德鲁伊", --20870
-"|cff0070dd黑曜石雕像|r£职业：圣骑士, 牧师, 萨满祭司, 法师", --20871
+"|cff0070dd黑曜石雕像|r£ ", --20871
 "|cff0070dd朱红雕像|r£ ", --20872
 "|cff0070dd雪白雕像|r£ ", --20873
 "|cff0070dd太阳塑像|r£ ", --20874
-"|cff0070dd夜晚塑像|r£ ", --20875
+"|cff0070dd夜晚塑像|r£职业：战士, 潜行者, 法师, 术士", --20875
 "|cff0070dd死亡塑像|r£职业：战士, 牧师, 法师, 术士", --20876
 "|cff0070dd先知塑像|r£职业：圣骑士, 牧师, 萨满祭司, 法师, 术士", --20877
 "|cff0070dd复生塑像|r£职业：圣骑士, 牧师, 萨满祭司, 术士, 德鲁伊", --20878
-"|cff0070dd生命塑像|r£职业：圣骑士, 猎人, 牧师, 萨满祭司, 德鲁伊", --20879
+"|cff0070dd生命塑像|r£ ", --20879
 "|cff0070dd征战塑像|r£ ", --20881
 "|cff0070dd战争塑像|r£ ", --20882
 "|cffa335ed其拉雕文珠宝|r£拾取后绑定£职业：战士, 牧师, 法师, 术士", --20883
 "|cff0070dd其拉将领戒指|r£拾取后绑定", --20884
-"|cff0070dd其拉军用披风|r£拾取后绑定£职业：战士, 潜行者, 牧师, 法师", --20885
+"|cff0070dd其拉军用披风|r£拾取后绑定", --20885
 "|cffa335ed其拉尖刺刀柄|r£拾取后绑定", --20886
 "|cffa335ed其拉蚀刻珠宝|r£拾取后绑定", --20887
 "|cff0070dd其拉典礼戒指|r£拾取后绑定£职业：猎人, 潜行者, 牧师, 术士", --20888
-"|cff0070dd其拉帝王披风|r£拾取后绑定", --20889
+"|cff0070dd其拉帝王披风|r£拾取后绑定£职业：圣骑士, 猎人, 萨满祭司, 术士, 德鲁伊", --20889
 "|cffa335ed其拉装饰刀柄|r£拾取后绑定£职业：牧师, 法师, 术士, 德鲁伊", --20890
 "|cff9e9e9e见习祭司长袍|r£ ", --20891
 "|cff9e9e9e侍僧长袍|r£ ", --20892
@@ -15821,12 +15821,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "炎灼短裤£ ", --20924
 "炎灼外衣£ ", --20925
 "|cffa335ed维克尼拉斯的头饰|r£拾取后绑定£职业：战士, 牧师, 法师, 术士", --20926
-"|cffa335ed奥罗的外皮|r£拾取后绑定£职业：战士, 潜行者, 牧师, 法师", --20927
-"|cffa335ed其拉命令腕轮|r£拾取后绑定£职业：战士, 猎人, 潜行者, 牧师", --20928
+"|cffa335ed奥罗的外皮|r£拾取后绑定", --20927
+"|cffa335ed其拉命令腕轮|r£拾取后绑定", --20928
 "|cffa335ed上古之神的甲壳|r£拾取后绑定", --20929
 "|cffa335ed维克洛尔的王冠|r£拾取后绑定", --20930
-"|cffa335ed巨型沙虫的皮|r£拾取后绑定", --20931
-"|cffa335ed其拉统御腕轮|r£拾取后绑定", --20932
+"|cffa335ed巨型沙虫的皮|r£拾取后绑定£职业：圣骑士, 猎人, 萨满祭司, 术士, 德鲁伊", --20931
+"|cffa335ed其拉统御腕轮|r£拾取后绑定£职业：圣骑士, 萨满祭司, 法师, 术士, 德鲁伊", --20932
 "|cffa335ed上古之神的外鞘|r£拾取后绑定£职业：牧师, 法师, 术士, 德鲁伊", --20933
 "怨灵精华£任务物品", --20934
 "被污染的怨灵精华£任务物品£唯一", --20935
@@ -15994,8 +15994,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed66 Epic Shadow Wand|r£|cff00ff00装备： 暗影法术强度提高9点。|r", --21098
 "食谱：烤鼠尾鱼£使用： 教你学会烹制烤鼠尾鱼。£\n烤鼠尾鱼£|cff00ff00使用： 在21秒内恢复378点生命值和567点法力值。进食时必须保持坐姿。如果你花费至少10秒钟进食，还会获得每5秒回复4点法力值的效果，持续15分钟。|r£\n需要新鲜的鼠尾鱼", --21099
 "先祖硬币£拾取后绑定£|cffffd100\"象征着对祖先的尊敬。\"|r", --21100
-"|cff0070ddStaff of Spell Penetration - Fire (TEST)|r£|cff00ff00装备： 使你的火焰法术穿透提高300。|r", --21101
-"|cff0070ddStaff of Spell Penetration - Frost (TEST)|r£|cff00ff00装备： 使你的法术目标的冰霜抗性降低300点。|r", --21102
+"拾取后绑定£|cff00ff00装备： 使你的火焰法术穿透提高300。|r", --21101
+"拾取后绑定£|cff00ff00装备： 使你的法术目标的冰霜抗性降低300点。|r", --21102
 "|cffa335ed龙语傻瓜教程|r£拾取后绑定£唯一£|cffffd100\"第一章\"|r", --21103
 "|cffa335ed龙语傻瓜教程|r£拾取后绑定£唯一£|cffffd100\"第二章\"|r", --21104
 "|cffa335ed龙语傻瓜教程|r£拾取后绑定£唯一£|cffffd100\"第三章\"|r", --21105
@@ -16014,15 +16014,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd阿拉索护符|r£|cff00ff00使用： 吸收310到|r|cff7f7f7f378|r|cff00ff00点物理伤害，持续15秒。 （3分钟冷却）|r", --21118
 "|cff0070dd阿拉索护符|r£|cff00ff00使用： 吸收0到|r|cff7f7f7f302|r|cff00ff00点物理伤害，持续15秒。 （3分钟冷却）|r", --21119
 "|cff0070dd污染者护符|r£|cff00ff00使用： 吸收0到|r|cff7f7f7f302|r|cff00ff00点物理伤害，持续15秒。 （3分钟冷却）|r", --21120
-"|cff9e9e9eMonster - Item, Flower - Purple|r£ ", --21121
-"|cff9e9e9eMonster - Dagger, Korean A01 Black|r£ ", --21122
-"|cff9e9e9eMonster - Item, Flower - White|r£ ", --21123
-"|cffa335edAhn'Qiraj Wand [PH]|r£ ", --21124
-"|cffa335edAhn'Qiraj Staff [PH]|r£ ", --21125
+"单手£ ", --21121
+"单手£ ", --21122
+"单手£ ", --21123
+"拾取后绑定£ ", --21124
+"拾取后绑定£ ", --21125
 "|cffa335ed死亡之钉|r£|cff00ff00装备： 使你的精准等级提高7点。|r£|cff00ff00装备： 攻击强度提高38点。|r", --21126
-"|cffa335edAhn'Qiraj Mace [PH]|r£ ", --21127
+"拾取后绑定£ ", --21127
 "|cffa335ed其拉预言者法杖|r£|cff00ff00装备： 法术强度提高56点。|r£|cff00ff00装备： 你的伤害法术有一定几率在击中目标后降低其魔法抗性50点，持续8秒。|r", --21128
-"|cff9e9e9eMonster - Axe, Doctor Weavil|r£ ", --21129
+"单手£ ", --21129
 "维维尔的日记£拾取后绑定£唯一", --21130
 "后续作战指令£拾取后绑定", --21131
 "后勤指令£拾取后绑定", --21132
@@ -16082,7 +16082,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed塞纳留斯之力|r£|cff00ff00装备： +4 武器伤害。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --21189
 "|cffa335ed塞纳留斯之怒|r£|cff00ff00装备： 你的伤害法术有一定几率在击中目标后令你的法术和魔法效果所造成的伤害提高132点，持续10秒。|r", --21190
 "精心包裹的礼物£拾取后绑定", --21191
-"|cff9e9e9eMonster - Axe, 2H UBER Blackwing|r£ ", --21192
+"双手£ ", --21192
 "|cff0070ddD'Sak's Sack|r£装备后绑定£30格灵魂袋", --21193
 "|cff0070ddD'Sak's Big Sack|r£装备后绑定£32格灵魂袋", --21194
 "|cff0070ddD'Sak's Sacktastic|r£装备后绑定£36格灵魂袋", --21195
@@ -16125,7 +16125,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "冬幕节烤肉£拾取后绑定£|cff00ff00使用： 每秒恢复总生命值的2%，持续25秒。进食时必须保持坐姿。|r", --21235
 "冬幕节面包£魔法制造的物品£拾取后绑定£|cff00ff00使用： 每秒恢复总生命值的2%，持续25秒。进食时必须保持坐姿。|r", --21236
 "|cffa335ed其拉帝王徽记|r£拾取后绑定£|cffffd100\"其拉虫人贵族的徽记，由其拉施法者使用。\"|r", --21237
-"Winter Veil Cookie UNUSED£拾取后绑定£唯一（20）£|cff00ff00使用： 每秒恢复总生命值的2%，持续25秒。进食时必须保持坐姿。|r", --21238
+"拾取后绑定£唯一（20）£|cff00ff00使用： 每秒恢复总生命值的2%，持续25秒。进食时必须保持坐姿。|r", --21238
 "冬幕节糖果£拾取后绑定£唯一（20）£|cff00ff00使用： 每秒恢复总生命值的2%，持续25秒。进食时必须保持坐姿。|r", --21240
 "冬幕节蛋奶酒£拾取后绑定£唯一（20）£|cff00ff00使用： 每秒恢复总法力值的2%，持续30秒。进食时必须保持坐姿。|r", --21241
 "|cffa335ed神圣其拉战斧|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高14点。|r£|cffffd100\"这件武器经过了源质的强化。\"|r", --21242
@@ -16160,20 +16160,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "精美的礼品£拾取后绑定", --21271
 "|cffa335ed神圣其拉火枪|r£|cff00ff00装备： 远程攻击强度提高31点。|r£|cffffd100\"这件武器经过了源质的强化。\"|r", --21272
 "|cffa335ed神圣其拉侍僧法杖|r£|cff00ff00装备： 法术强度提高76点。|r£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 爆击等级提高14。|r£|cffffd100\"这件武器经过了源质的强化。\"|r", --21273
-"Test Stackable Items£ ", --21274
+"", --21274
 "|cffa335ed神圣其拉占卜法杖|r£|cff00ff00装备： 法术强度提高76点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cffffd100\"这件武器经过了源质的强化。\"|r", --21275
-"|cffa335edBlessed Qiraji Naturalist Staff UNUSED|r£|cffffd100\"这件武器经过了源质的强化。\"|r", --21276
+"拾取后绑定£|cffffd100\"这件武器经过了源质的强化。\"|r", --21276
 "安静的机械雪人£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --21277
 "|cff0070dd雷暴手套|r£|cff00ff00装备： 命中等级提高10点。|r£|cff00ff00装备： 爆击等级提高19点。|r", --21278
 "|cff0070dd秘典：火球术 XII|r£|cff00ff00使用： 教你学会施放火球术（等级 12）。|r", --21279
 "|cff0070dd秘典：奥术飞弹 VIII|r£|cff00ff00使用： 教你学会施放奥术飞弹（等级 8）。|r", --21280
-"|cff0070dd魔典：暗影箭 X|r£|cff00ff00使用： 教你学会施放暗影箭（等级 10）。|r", --21281
-"|cff0070dd魔典：献祭 VIII|r£|cff00ff00使用： 教你学会施放献祭（等级 8）。|r", --21282
-"|cff0070dd魔典：腐蚀术 VII|r£|cff00ff00使用： 教你学会施放腐蚀术（等级 7）。|r", --21283
-"|cff0070dd圣典：强效治疗术 V|r£职业：牧师£|cff00ff00使用： 教你学会施放强效治疗术（等级 5）。|r", --21284
-"|cff0070dd圣典：恢复 X|r£职业：牧师£|cff00ff00使用： 教你学会施放恢复（等级 10）。|r", --21285
-"|cff9e9e9eMonster - Axe, 2H Large Double Bladed, Gold|r£ ", --21286
-"|cff0070dd圣典：治疗祷言 V|r£职业：牧师£|cff00ff00使用： 教你学会施放治疗祷言（等级 5）。|r", --21287
+"|cff0070dd魔典：暗影箭 X|r£职业：术士£|cff00ff00使用： 教你学会施放暗影箭（等级 10）。|r", --21281
+"|cff0070dd魔典：献祭 VIII|r£职业：术士£|cff00ff00使用： 教你学会施放献祭（等级 8）。|r", --21282
+"|cff0070dd魔典：腐蚀术 VII|r£职业：术士£|cff00ff00使用： 教你学会施放腐蚀术（等级 7）。|r", --21283
+"|cff0070dd圣典：强效治疗术 V|r£|cff00ff00使用： 教你学会施放强效治疗术（等级 5）。|r", --21284
+"|cff0070dd圣典：恢复 X|r£|cff00ff00使用： 教你学会施放恢复（等级 10）。|r", --21285
+"双手£ ", --21286
+"|cff0070dd圣典：治疗祷言 V|r£|cff00ff00使用： 教你学会施放治疗祷言（等级 5）。|r", --21287
 "|cff0070dd圣契：智慧祝福 VI|r£|cff00ff00使用： 教你学会施放智慧祝福（等级 6）。|r", --21288
 "|cff0070dd圣契：力量祝福 VII|r£|cff00ff00使用： 教你学会施放力量祝福（等级 7）。|r", --21289
 "|cff0070dd圣契：圣光术 IX|r£|cff00ff00使用： 教你学会施放圣光术（等级 9）。|r", --21290
@@ -16225,10 +16225,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed厄运召唤者的长裤|r£|cff00ff00装备： 法术强度提高34点。|r£|cff00ff00装备： 爆击等级提高14。|r", --21336
 "|cffa335ed厄运召唤者的头饰|r£|cff00ff00装备： 法术强度提高33点。|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --21337
 "|cffa335ed厄运召唤者的裹足|r£|cff00ff00装备： 法术强度提高28点。|r£|cff00ff00装备： 使你的法术穿透提高10。|r", --21338
-"|cffa335edDoomcaller's Handwraps [PH]|r£ ", --21339
-"|cff1eff00灵魂袋|r£装备后绑定£20格灵魂袋", --21340
-"|cff0070dd恶魔布包|r£装备后绑定£24格灵魂袋", --21341
-"|cffa335ed熔火恶魔布包|r£装备后绑定£28格灵魂袋", --21342
+"拾取后绑定£ ", --21339
+"|cff1eff00灵魂袋|r£装备后绑定£20格灵魂袋£职业：术士", --21340
+"|cff0070dd恶魔布包|r£装备后绑定£24格灵魂袋£职业：术士", --21341
+"|cffa335ed熔火恶魔布包|r£装备后绑定£28格灵魂袋£职业：术士", --21342
 "|cffa335ed神秘长袍|r£|cff00ff00装备： 法术强度提高39点。|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 使你的法术穿透提高20。|r", --21343
 "|cffa335ed神秘长靴|r£|cff00ff00装备： 法术强度提高28点。|r£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --21344
 "|cffa335ed神秘肩垫|r£|cff00ff00装备： 法术强度提高30点。|r£|cff00ff00装备： 使你的法术穿透提高10。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --21345
@@ -16244,7 +16244,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed起源长靴|r£|cff00ff00装备： 法术强度提高20点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r£|cff00ff00装备： 使你的法术穿透提高10。|r", --21355
 "|cffa335ed起源长裤|r£|cff00ff00装备： 法术强度提高27点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --21356
 "|cffa335ed起源外套|r£|cff00ff00装备： 法术强度提高28点。|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --21357
-"图样：灵魂袋£使用： 教你学会制作灵魂袋。£|cff1eff00\n灵魂袋|r£装备后绑定£20格灵魂袋£\n需要符文布卷 (6), 硬甲皮 (4), 亡灵腐液 (2), 符文线", --21358
+"图样：灵魂袋£使用： 教你学会制作灵魂袋。£|cff1eff00\n灵魂袋|r£装备后绑定£20格灵魂袋£职业：术士£\n需要符文布卷 (6), 硬甲皮 (4), 亡灵腐液 (2), 符文线", --21358
 "|cffa335ed死亡执行者的长靴|r£|cff00ff00装备： 使你的命中等级提高10。|r", --21359
 "|cffa335ed死亡执行者的头盔|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --21360
 "|cffa335ed死亡执行者的护肩|r£|cff00ff00装备： 使你的命中等级提高10。|r", --21361
@@ -16255,9 +16255,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed攻击者的王冠|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 法术强度提高12点。|r£|cff00ff00装备： 攻击强度提高38点。|r", --21366
 "|cffa335ed攻击者的护肩|r£|cff00ff00装备： 法术强度提高6点。|r£|cff00ff00装备： 攻击强度提高34点。|r", --21367
 "|cffa335ed攻击者的护腿|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 法术强度提高9点。|r£|cff00ff00装备： 攻击强度提高48点。|r", --21368
-"图样：恶魔布包£使用： 教你学会制作恶魔布包。£|cff0070dd\n恶魔布包|r£装备后绑定£24格灵魂袋£\n需要恶魔布 (12), 魔化皮 (6), 黑暗符文 (2), 铁网蛛丝 (4)", --21369
+"图样：恶魔布包£使用： 教你学会制作恶魔布包。£|cff0070dd\n恶魔布包|r£装备后绑定£24格灵魂袋£职业：术士£\n需要恶魔布 (12), 魔化皮 (6), 黑暗符文 (2), 铁网蛛丝 (4)", --21369
 "|cffa335ed攻击者的护甲|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 法术强度提高9点。|r£|cff00ff00装备： 攻击强度提高52点。|r", --21370
-"|cff0070dd图样：熔火恶魔布包|r£使用： 教你学会制作熔火恶魔布包。£|cffa335ed\n熔火恶魔布包|r£装备后绑定£28格灵魂袋£\n需要恶魔布 (20), 熔火犬皮 (16), 火焰精华 (4), 铁网蛛丝 (4)", --21371
+"|cff0070dd图样：熔火恶魔布包|r£使用： 教你学会制作熔火恶魔布包。£|cffa335ed\n熔火恶魔布包|r£装备后绑定£28格灵魂袋£职业：术士£\n需要恶魔布 (20), 熔火犬皮 (16), 火焰精华 (4), 铁网蛛丝 (4)", --21371
 "|cffa335ed风暴召唤者的王冠|r£|cff00ff00装备： 法术强度提高32点。|r£|cff00ff00装备： 爆击等级提高14。|r", --21372
 "|cffa335ed风暴召唤者的足甲|r£|cff00ff00装备： 法术强度提高22点。|r£|cff00ff00装备： 使你的法术穿透提高10。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --21373
 "|cffa335ed风暴召唤者的护甲|r£|cff00ff00装备： 法术强度提高32点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 爆击等级提高14。|r", --21374
@@ -16305,39 +16305,39 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed禁断邪语短剑|r£|cff00ff00装备： 法术强度提高59点。|r", --21416
 "|cffa335ed禁断邪语之戒|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 法术强度提高14点。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --21417
 "|cffa335ed禁断邪语披风|r£|cff00ff00装备： 法术强度提高18点。|r", --21418
-"AHNQIRAJ TEST ITEM A CLOTH LEGS£ ", --21419
-"AHNQIRAJ TEST ITEM B LEATHER CHEST£ ", --21420
-"AHNQIRAJ TEST ITEM C MAIL CHEST£ ", --21421
-"AHNQIRAJ TEST ITEM D PLATE CHEST£ ", --21422
-"AHNQIRAJ TEST ITEM B LEATHER PANTS£ ", --21423
-"AHNQIRAJ TEST ITEM B LEATHER SHOULDER£ ", --21424
-"AHNQIRAJ TEST ITEM B LEATHER BELT£ ", --21425
-"AHNQIRAJ TEST ITEM B LEATHER HELM£ ", --21426
-"AHNQIRAJ TEST ITEM B LEATHER BOOTS£ ", --21427
-"AHNQIRAJ TEST ITEM B LEATHER GAUNTLETS£ ", --21428
-"AHNQIRAJ TEST ITEM A CLOTH BELT£ ", --21429
-"AHNQIRAJ TEST ITEM A CLOTH ROBE£ ", --21430
-"AHNQIRAJ TEST ITEM A CLOTH FEET£ ", --21431
-"AHNQIRAJ TEST ITEM B LEATHER BRACER£ ", --21432
-"AHNQIRAJ TEST ITEM A CLOTH BRACER£ ", --21433
-"AHNQIRAJ TEST ITEM A CLOTH HELM£ ", --21434
-"AHNQIRAJ TEST ITEM A CLOTH SHOULDERS£ ", --21435
+"腿部£ ", --21419
+"胸部£ ", --21420
+"胸部£ ", --21421
+"胸部£ ", --21422
+"腿部£ ", --21423
+"肩部£ ", --21424
+"腰部£ ", --21425
+"头部£ ", --21426
+"脚£ ", --21427
+"手£ ", --21428
+"腰部£ ", --21429
+"胸部£ ", --21430
+"脚£ ", --21431
+"手腕£ ", --21432
+"手腕£ ", --21433
+"头部£ ", --21434
+"肩部£ ", --21435
 "联盟荣誉徽章£拾取后绑定£|cffffd100\"在某个联盟嘉奖官处用徽章换取声望。\"|r", --21436
-"AHNQIRAJ TEST ITEM A CLOTH GLOVES£ ", --21437
+"手£ ", --21437
 "部落荣誉徽章£拾取后绑定£|cffffd100\"在某个部落嘉奖官处用徽章换取声望。\"|r", --21438
-"AHNQIRAJ TEST ITEM D PLATE HELM£ ", --21439
-"AHNQIRAJ TEST ITEM D PLATE LEGS£ ", --21440
-"AHNQIRAJ TEST ITEM D PLATE BELT£ ", --21441
-"AHNQIRAJ TEST ITEM D PLATE BOOTS£ ", --21442
-"AHNQIRAJ TEST ITEM D PLATE SHOULDERS£ ", --21443
-"AHNQIRAJ TEST ITEM D PLATE GLOVES£ ", --21444
-"AHNQIRAJ TEST ITEM D PLATE BRACER£ ", --21445
-"AHNQIRAJ TEST ITEM C MAIL HELM£ ", --21446
-"AHNQIRAJ TEST ITEM C MAIL SHOULDERS£ ", --21447
-"AHNQIRAJ TEST ITEM C MAIL LEGS£ ", --21448
-"AHNQIRAJ TEST ITEM C MAIL BOOTS£ ", --21449
-"AHNQIRAJ TEST ITEM C MAIL GLOVES£ ", --21450
-"AHNQIRAJ TEST ITEM C MAIL BELT£ ", --21451
+"头部£ ", --21439
+"腿部£ ", --21440
+"腰部£ ", --21441
+"脚£ ", --21442
+"肩部£ ", --21443
+"手£ ", --21444
+"手腕£ ", --21445
+"头部£ ", --21446
+"肩部£ ", --21447
+"腿部£ ", --21448
+"脚£ ", --21449
+"手£ ", --21450
+"腰部£ ", --21451
 "|cffa335ed废墟法杖|r£|cff00ff00装备： 法术强度提高60点。|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --21452
 "|cffa335ed霍鲁萨斯衬肩|r£|cff00ff00装备： 法术强度提高14点。|r", --21453
 "|cffa335ed符文岩石护肩|r£|cff00ff00装备： 法术强度提高14点。|r", --21454
@@ -16351,7 +16351,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed黑暗智慧手套|r£|cff00ff00装备： 法术强度提高19点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r", --21462
 "|cffa335ed奥斯里安的束缚|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --21463
 "|cffa335ed无疤者镣铐|r£|cff00ff00装备： 法术强度提高21点。|r£|cff00ff00装备： 使你的法术穿透提高10。|r", --21464
-"|cff9e9e9eMonster - Axe, Insano|r£ ", --21465
+"单手£ ", --21465
 "|cffa335ed阿亚米斯之刺|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 法术强度提高36点。|r", --21466
 "|cffa335ed厚重异种虫胸甲|r£ ", --21467
 "|cff0070dd玛兹纳迪尔衬肩|r£|cff00ff00装备： 法术强度提高21点。|r", --21468
@@ -16402,9 +16402,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "安其拉军用补给品£拾取后绑定", --21513
 "|cff1eff00后勤任务简报 XI|r£拾取后绑定£唯一£该物品将触发一个任务", --21514
 "|cff1eff00雷姆洛斯印记|r£拾取后绑定", --21515
-"|cff0070ddDagger of Spell Penetration - Fire 150 Resist (TEST)|r£|cff00ff00装备： 使你的火焰法术穿透提高150。|r", --21516
+"拾取后绑定£|cff00ff00装备： 使你的火焰法术穿透提高150。|r", --21516
 "|cffa335ed精神力量之侏儒头巾|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f11|r|cff00ff00点法力值。|r£|cff00ff00装备： 使任何沉默或打断效果对装备者的影响时间缩短20%。这个效果不与其它同类效果叠加。|r", --21517
-"|cff0070ddDagger of Spell Penetration - Frost 150 Resist (TEST)|r£|cff00ff00装备： 使你的法术目标的冰霜抗性降低150点。|r", --21518
+"拾取后绑定£|cff00ff00装备： 使你的法术目标的冰霜抗性降低150点。|r", --21518
 "槲寄生£拾取后绑定£|cff00ff00使用： 向朋友献上节日的祝福！|r", --21519
 "|cffa335ed拉文凯斯的遗产|r£ ", --21520
 "|cffa335ed红龙符文剑|r£|cff00ff00装备： 法术强度提高64点。|r", --21521
@@ -16435,13 +16435,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "强效火力药剂£|cff00ff00使用： 法术强度提高40点，持续1小时。战斗药剂。|r", --21546
 "|cff1eff00配方：强效火力药剂|r£使用： 教你学会配制强效火力药剂。£\n强效火力药剂£|cff00ff00使用： 法术强度提高40点，持续1小时。战斗药剂。|r£\n需要火焰之油 (3), 火焰花 (3), 水晶瓶", --21547
 "|cff0070dd图样：雷暴手套|r£使用： 教你学会制作雷暴手套。£|cff0070dd\n雷暴手套|r£装备后绑定£手£99点护甲£|cff00ff00装备： 命中等级提高10点。|r£|cff00ff00装备： 爆击等级提高19点。|r£|cffffd100雷暴（0/4）|r£|cff7f7f7f  雷暴护甲|r£|cff7f7f7f  雷暴短裤|r£|cff7f7f7f  雷暴护肩|r£|cff7f7f7f  雷暴手套|r£|cff7f7f7f(2) 套装：有5%的几率在成功击中目标时对其造成15到25点自然伤害。|r£|cff7f7f7f(3) 套装：有2%的几率在进行近战攻击时回复30点能量值。|r£|cff7f7f7f(4) 套装：攻击强度提高14点。|r£\n需要魔化皮 (6), 空气精华 (4), 铁网蛛丝 (2)", --21548
-"|cff9e9e9eMonster - Shield, Shieldguard|r£ ", --21549
+"副手£ ", --21549
 "|cff9e9e9eMonster - Crossbow, Hakkari|r£ ", --21550
-"|cff9e9e9eMonster - Dagger, Alliance PvP|r£ ", --21551
+"单手£ ", --21551
 "条纹黄尾鱼£|cff00ff00使用： 在30秒内恢复总计1392点生命值，进食时必须保持坐姿。|r", --21552
-"|cff9e9e9eMonster - Sword2H, Alliance PvP|r£ ", --21553
-"|cff9e9e9eMonster - Gun, PvP Horde|r£ ", --21554
-"|cff9e9e9eMonster - Mace2H, Alliance PvP|r£ ", --21555
+"单手£ ", --21553
+"", --21554
+"双手£ ", --21555
 "小型红色烟花£|cff00ff00使用： 扔进烟花发射器中！ （1秒冷却）|r", --21557
 "小型蓝色烟花£|cff00ff00使用： 扔进烟花发射器中！ （1秒冷却）|r", --21558
 "小型绿色烟花£|cff00ff00使用： 扔进烟花发射器中！ （1秒冷却）|r", --21559
@@ -16449,7 +16449,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "小型白色烟花£|cff00ff00使用： 扔进烟花发射器中！ （1秒冷却）|r", --21561
 "小型黄色烟花£|cff00ff00使用： 扔进烟花发射器中！ （1秒冷却）|r", --21562
 "|cffa335ed罗德里格的指环|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 使你的法术穿透提高20。|r", --21563
-"|cff9e9e9eMonster - Gun, Kaldorei PVP Alliance|r£ ", --21564
+"", --21564
 "|cff0070dd完美贡献符文|r£|cff00ff00装备： 使你的法术穿透提高20。|r", --21565
 "|cff0070dd完美贡献符文|r£|cff00ff00装备： 使你的法术穿透提高10。|r", --21566
 "|cff0070dd义务符文|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点生命值。|r", --21567
@@ -16457,8 +16457,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "烟花发射器£|cff00ff00使用： 放在地上以发射烟花。持续30分钟。|r", --21569
 "烟花束发射器£|cff00ff00使用： 放在地上以发射烟花束。持续30分钟。|r", --21570
 "蓝色烟花束£|cff00ff00使用： 扔进烟花束发射器中！ （1秒冷却）|r", --21571
-"|cff9e9e9eMonster - Shield, Alliance PVP|r£ ", --21572
-"|cff9e9e9eMonster - Sword, 1H Alliance PvP|r£ ", --21573
+"副手£ ", --21572
+"单手£ ", --21573
 "绿色烟花束£|cff00ff00使用： 扔进烟花束发射器中！ （1秒冷却）|r", --21574
 "紫色烟花束£|cff00ff00使用： 扔进烟花束发射器中！ （1秒冷却）|r", --21575
 "红色烟花束£|cff00ff00使用： 扔进烟花束发射器中！ （1秒冷却）|r", --21576
@@ -16513,40 +16513,40 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed甲虫胸针|r£|cff00ff00使用： 你的魔法类治疗技能可以令目标获得一层魔法护盾，这层护盾可以吸收相当于总治疗量15%的伤害，护盾效果持续30秒。 （3分钟冷却）|r", --21625
 "|cffa335ed粘液护腿|r£|cff00ff00装备： 法术强度提高11点。|r£|cff00ff00装备： 攻击强度提高40点。|r", --21626
 "|cffa335ed隐没秘密披风|r£ ", --21627
-"Test AQ Resource - Copper£ ", --21628
-"Test AQ Resource - Iron£ ", --21629
-"Test AQ Resource - Thorium£ ", --21630
-"Test AQ Resource - Light Leather£ ", --21631
-"Test AQ Resource - Medium Leather£ ", --21632
-"Test AQ Resource - Thick Leather£ ", --21633
-"Test AQ Resource - Linen Bandage£ ", --21634
+"", --21628
+"", --21629
+"", --21630
+"", --21631
+"", --21632
+"", --21633
+"", --21634
 "|cffa335ed沙漠掠夺者之刺|r£|cff00ff00装备： 攻击强度提高40点。|r", --21635
-"Test AQ Resource - Silk Bandage£ ", --21636
-"Test AQ Resource - Runecloth Bandage£ ", --21637
-"Test AQ Resource - Spotted Yellowtail£ ", --21638
+"", --21636
+"", --21637
+"", --21638
 "|cffa335ed冷酷者肩铠|r£|cff00ff00装备： 防御等级提高13。|r£|cff00ff00装备： 使你的躲闪等级提高12。|r", --21639
 "春节烟花包£拾取后绑定£|cffffd100\"装满了用来庆祝春节的烟花！\"|r", --21640
-"Test AQ Resource - Rainbow Fin Albacore£ ", --21641
-"Test AQ Resource - Roast Raptor£ ", --21642
-"Test AQ Resource - Arthas' Tear£ ", --21643
-"Test AQ Resource - Stranglekelp£ ", --21644
+"", --21641
+"", --21642
+"", --21643
+"", --21644
 "|cffa335ed掘洞者之靴|r£ ", --21645
-"Test AQ Resource - Purple Lotus£ ", --21646
+"", --21646
 "|cffa335ed沙漠掠夺者塑像|r£|cff00ff00使用： 使你产生的威胁减少70%，持续20秒。 （3分钟冷却）|r", --21647
 "|cffa335ed平静长靴|r£|cff00ff00装备： 法术强度提高20点。|r", --21648
-"Test AQ Resource - Tin£ ", --21649
+"", --21649
 "|cffa335ed上古其拉撕裂者|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高20点。|r", --21650
 "|cffa335ed缀鳞沙漠掠夺者护腿|r£|cff00ff00装备： 攻击强度提高62点。|r£|cff00ff00装备： 使你的爆击等级提高28。|r", --21651
 "|cffa335ed异种虫壳护胸|r£ ", --21652
-"Test AQ Resource - Mithril£ ", --21653
-"Test AQ Resource - Heavy Leather£ ", --21655
-"Test AQ Resource - Rugged Leather£ ", --21656
-"Test AQ Resource - Wool Bandages£ ", --21657
-"Test AQ Resource - Mageweave Bandages£ ", --21658
-"Test AQ Resource - Lean Wolf Steak£ ", --21659
-"Test AQ Resource - Baked Salmon£ ", --21660
-"Test AQ Resource - Firebloom£ ", --21661
-"Test AQ Resource - Peacebloom£ ", --21662
+"", --21653
+"", --21655
+"", --21656
+"", --21657
+"", --21658
+"", --21659
+"", --21660
+"", --21661
+"", --21662
 "|cffa335ed守护圣徒长袍|r£|cff00ff00装备： 法术强度提高37点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --21663
 "|cffa335ed尖刺颈饰|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高44点。|r", --21664
 "|cffa335ed邪恶复仇衬肩|r£ ", --21665
@@ -16665,7 +16665,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd自然火焰指环|r£|cff00ff00装备： 法术强度提高23点。|r", --21779
 "|cff0070dd血冠|r£|cff00ff00装备： 使你的爆击等级提高28。|r£|cff00ff00装备： 当你受到爆击时，为你恢复12到|r|cff7f7f7f18|r|cff00ff00点生命值。|r", --21780
 "泰里斯的徽记£任务物品£唯一", --21781
-"|cff0070dd2000 Test sword 63 blue|r£ ", --21782
+"单手£ ", --21782
 "魔导师达斯维瑟的日记£任务物品£唯一£|cffffd100\"这本日记似乎还没有用过多久，只有少数几页上有字。\"|r", --21783
 "|cff0070dd雕像 - 黑钻石螃蟹|r£|cff00ff00装备： 防御等级提高9。|r£|cff00ff00使用： 受到近战攻击时承受的伤害减少35点，持续20秒。 （5分钟冷却）|r", --21784
 "|cff1eff00切割过的翡翠|r£ ", --21785
@@ -16675,9 +16675,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd绿曜石坠饰|r£|cff00ff00装备： 法术强度提高19点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --21791
 "|cff0070dd钻石之塔项链|r£|cff00ff00装备： 防御等级提高17。|r", --21792
 "|cff0070dd奥金短剑坠饰|r£|cff00ff00装备： 攻击强度提高40点。|r", --21793
-"|cff9e9e9eMonster - Sword2H, Ahn'Qiraj|r£ ", --21794
-"|cff9e9e9eMonster - Staff, Ahn'Qiraj|r£ ", --21795
-"|cff9e9e9eMonster - Item, Ahn'Qiraj Held Scepter|r£ ", --21796
+"双手£ ", --21794
+"双手£ ", --21795
+"单手£ ", --21796
 "|cff0070dd异种獠牙发射器|r£ ", --21800
 "|cff0070dd鼓舞触角|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高7点。|r", --21801
 "|cff0070dd赛德的失落之剑|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 法术强度提高14点。|r", --21802
@@ -16689,7 +16689,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "奥术核心£任务物品", --21808
 "|cff0070dd遗忘虫群之怒|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --21809
 "|cff0070dd游荡牧民之靴|r£|cff00ff00装备： 法术强度提高20点。|r", --21810
-"[PH] Object of Affection£ ", --21811
+"", --21811
 "一盒巧克力£拾取后绑定£持续时间：10天", --21812
 "一袋情人糖£拾取后绑定£|cff00ff00使用： 从包里掏出一颗糖。|r", --21813
 "|cffa335ed灭绝胸甲|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --21814
@@ -16728,7 +16728,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00灵纹长袍|r£|cff00ff00装备： 法术强度提高44点。|r", --21854
 "|cff1eff00灵纹外套|r£|cff00ff00装备： 法术强度提高46点。|r", --21855
 "|cffa335ed奈雷萨克，饮血者|r£ ", --21856
-"|cff1eff00Test Herb Bag|r£装备后绑定£20格草药袋", --21857
+"装备后绑定£20格草药袋£职业：术士", --21857
 "|cff0070dd魔焰背包|r£装备后绑定£28格附魔材料袋", --21858
 "|cff0070dd魔化灵纹短裤|r£|cff00ff00装备： 法术强度提高30点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r", --21859
 "|cff0070dd魔化灵纹长靴|r£|cff00ff00装备： 法术强度提高23点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --21860
@@ -16743,13 +16743,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed冰霜暗纹护肩|r£|cff00ff00装备： 法术强度提高41点。|r", --21869
 "|cffa335ed冰霜暗纹长靴|r£|cff00ff00装备： 法术强度提高47点。|r", --21870
 "|cffa335ed冰霜暗纹长袍|r£|cff00ff00装备： 法术强度提高59点。|r", --21871
-"|cff0070dd黑色暗影背包|r£装备后绑定£28格灵魂袋", --21872
+"|cff0070dd黑色暗影背包|r£装备后绑定£28格灵魂袋£职业：术士", --21872
 "|cffa335ed原始月布腰带|r£|cff00ff00装备： 法术强度提高43点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --21873
 "|cffa335ed原始月布护肩|r£|cff00ff00装备： 法术强度提高49点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --21874
 "|cffa335ed原始月布长袍|r£|cff00ff00装备： 法术强度提高64点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r", --21875
 "|cff0070dd原始月布包|r£装备后绑定£20格容器", --21876
 "灵纹布£ ", --21877
-"|cff1eff00zzDEPRECATED Spellthread|r£ ", --21878
+"", --21878
 "|cff1eff00高能德莱尼水晶|r£ ", --21879
 "|cff0070dd完美的德莱尼水晶|r£ ", --21880
 "灵网蜘蛛丝£ ", --21881
@@ -16786,21 +16786,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "图样：冰霜暗纹护肩£拾取后绑定£使用： 教你学会制作冰霜暗纹护肩。£|cffa335ed\n冰霜暗纹护肩|r£装备后绑定£肩部£布甲£133点护甲£+21 耐力£+15 智力£|cff7f7f7f黄色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+3 命中等级|r£|cff00ff00装备： 法术强度提高41点。|r£|cffffd100暗影之拥（0/3）|r£|cff7f7f7f  冰霜暗纹长袍|r£|cff7f7f7f  冰霜暗纹护肩|r£|cff7f7f7f  冰霜暗纹长靴|r£|cff7f7f7f(3) 套装：你的冰霜和暗影系法术可以为你治疗，数值相当于它们所造成的伤害值的2%。|r£\n需要暗影布 (4), 源生之水 (10), 灵网蜘蛛丝 (2)", --21912
 "图样：冰霜暗纹长袍£拾取后绑定£使用： 教你学会制作冰霜暗纹长袍。£|cffa335ed\n冰霜暗纹长袍|r£装备后绑定£胸部£布甲£178点护甲£+30 耐力£+20 智力£|cff7f7f7f黄色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+3 命中等级|r£|cff00ff00装备： 法术强度提高59点。|r£|cffffd100暗影之拥（0/3）|r£|cff7f7f7f  冰霜暗纹长袍|r£|cff7f7f7f  冰霜暗纹护肩|r£|cff7f7f7f  冰霜暗纹长靴|r£|cff7f7f7f(3) 套装：你的冰霜和暗影系法术可以为你治疗，数值相当于它们所造成的伤害值的2%。|r£\n需要暗影布 (14), 源生之水 (16), 灵网蜘蛛丝 (4)", --21913
 "图样：冰霜暗纹长靴£拾取后绑定£使用： 教你学会制作冰霜暗纹长靴。£|cffa335ed\n冰霜暗纹长靴|r£装备后绑定£脚£布甲£122点护甲£+15 耐力£+9 智力£|cff7f7f7f黄色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+3 命中等级|r£|cff00ff00装备： 法术强度提高47点。|r£|cffffd100暗影之拥（0/3）|r£|cff7f7f7f  冰霜暗纹长袍|r£|cff7f7f7f  冰霜暗纹护肩|r£|cff7f7f7f  冰霜暗纹长靴|r£|cff7f7f7f(3) 套装：你的冰霜和暗影系法术可以为你治疗，数值相当于它们所造成的伤害值的2%。|r£\n需要暗影布 (8), 源生之水 (12), 灵网蜘蛛丝 (2)", --21914
-"|cff0070dd图样：黑色暗影背包|r£拾取后绑定£使用： 教你学会制作黑色暗影背包。£|cff0070dd\n黑色暗影背包|r£装备后绑定£28格灵魂袋£\n需要暗影布 (6), 灵网蜘蛛丝 (4)", --21915
+"|cff0070dd图样：黑色暗影背包|r£拾取后绑定£使用： 教你学会制作黑色暗影背包。£|cff0070dd\n黑色暗影背包|r£装备后绑定£28格灵魂袋£职业：术士£\n需要暗影布 (6), 灵网蜘蛛丝 (4)", --21915
 "图样：原始月布腰带£拾取后绑定£使用： 教你学会制作原始月布腰带。£|cffa335ed\n原始月布腰带|r£装备后绑定£腰部£布甲£109点护甲£+12 智力£+11 精神£|cff7f7f7f黄色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+3 智力|r£|cff00ff00装备： 法术强度提高43点。|r£|cff00ff00装备： 每5秒恢复10点法力值。|r£|cffffd100原始月布（0/3）|r£|cff7f7f7f  原始月布长袍|r£|cff7f7f7f  原始月布护肩|r£|cff7f7f7f  原始月布腰带|r£|cff7f7f7f(3) 套装：使你在施法时仍可保留5%的法力值恢复。|r£\n需要原始月布 (4), 灵网蜘蛛丝 (2), 源生生命 (8)", --21916
 "图样：原始月布长袍£拾取后绑定£使用： 教你学会制作原始月布长袍。£|cffa335ed\n原始月布长袍|r£装备后绑定£唯一£胸部£布甲£202点护甲£+20 智力£+20 精神£|cff7f7f7f黄色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+3 智力|r£|cff00ff00装备： 法术强度提高64点。|r£|cff00ff00装备： 每5秒恢复13点法力值。|r£|cffffd100原始月布（0/3）|r£|cff7f7f7f  原始月布长袍|r£|cff7f7f7f  原始月布护肩|r£|cff7f7f7f  原始月布腰带|r£|cff7f7f7f(3) 套装：使你在施法时仍可保留5%的法力值恢复。|r£\n需要原始月布 (14), 源生法力 (12), 灵网蜘蛛丝 (4)", --21917
 "图样：原始月布护肩£拾取后绑定£使用： 教你学会制作原始月布护肩。£|cffa335ed\n原始月布护肩|r£装备后绑定£肩部£布甲£133点护甲£+16 智力£+15 精神£|cff00ff00装备： 法术强度提高49点。|r£|cff00ff00装备： 每5秒恢复9点法力值。|r£|cffffd100原始月布（0/3）|r£|cff7f7f7f  原始月布长袍|r£|cff7f7f7f  原始月布护肩|r£|cff7f7f7f  原始月布腰带|r£|cff7f7f7f(3) 套装：使你在施法时仍可保留5%的法力值恢复。|r£\n需要原始月布 (8), 灵网蜘蛛丝 (2), 源生生命 (8)", --21918
 "|cff0070dd图样：原始月布包|r£拾取后绑定£使用： 教你学会制作原始月布包。£|cff0070dd\n原始月布包|r£装备后绑定£20格容器£\n需要原始月布 (8), 灵网蜘蛛丝 (4)", --21919
 "皱褶的信件£任务物品£唯一", --21920
 "精心书写的便笺£任务物品£唯一", --21921
-"[PH] Picnic Parcel£ ", --21923
+"", --21923
 "图样：符文布长袍£使用： 教你学会制作符文布袍。£|cff1eff00\n符文布袍|r£装备后绑定£胸部£布甲£68点护甲£+17 智力£+11 精神£\n需要符文布卷 (5), 铁网蛛丝, 符文线", --21924
 "精美的信件£任务物品£唯一", --21925
 "轻折的信件£任务物品£唯一", --21926
-"速效药膏 VII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成163点自然伤害。|r", --21927
+"速效药膏 VII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成162点自然伤害。|r", --21927
 "冬泉谷血样£任务物品", --21928
 "|cff1eff00火榴石|r£ ", --21929
-"[PH] Valentine Lockbox, Quest, Common£ ", --21930
+"", --21930
 "|cff1eff00铜纹戒指|r£ ", --21931
 "|cff1eff00重型铜戒指|r£ ", --21932
 "|cff1eff00粗制青铜项链|r£ ", --21933
@@ -16831,9 +16831,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00图鉴：奥金短剑坠饰|r£使用： 教你学会制作奥金短剑坠饰。£|cff0070dd\n奥金短剑坠饰|r£装备后绑定£颈部£|cff00ff00装备： 攻击强度提高40点。|r£\n需要奥金锭 (4), 大地精华 (4), 空气精华 (4)", --21958
 "|cff1eff00图鉴：血冠|r£使用： 教你学会制作血冠。£|cff0070dd\n血冠|r£装备后绑定£头部£布甲£75点护甲£|cff00ff00装备： 使你的爆击等级提高28。|r£|cff00ff00装备： 当你受到爆击时，为你恢复12到18点生命值。|r£\n需要瑟银锭 (8), 山脉之血 (2), 红宝石 (4), 英雄之血 (2)", --21959
 "手工艺品£持续时间：7天£|cff00ff00使用： 右键点击以将5个手工艺品合成为一箱手工艺品。|r", --21960
-"[PH] Valentine Quest Item, UncommonStormwind£ ", --21962
-"[PH] Valentine Quest Item, UncommonIronforge£ ", --21963
-"[PH] Valentine Quest Item, UncommonDarnassus£ ", --21964
+"", --21962
+"", --21963
+"", --21964
 "爱慕的信物：暴风城£拾取后绑定£持续时间：7天", --21975
 "爱慕的礼物：达纳苏斯£拾取后绑定£持续时间：7天", --21979
 "爱慕的礼物：铁炉堡£拾取后绑定£持续时间：7天", --21980
@@ -16876,32 +16876,32 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd兽王短裤|r£|cff00ff00装备： 攻击强度提高36点。|r", --22017
 "魔法冰川水£魔法制造的物品£|cff00ff00使用： 在30秒内恢复总计7200点法力值，喝水时必须保持坐姿。|r", --22018
 "魔法羊角面包£魔法制造的物品£|cff00ff00使用： 在30秒内恢复总计7500点生命值，进食时必须保持坐姿。|r", --22019
-"QAEnchant Weapon +15 Agility£|cff00ff00使用： Permanently enchant a Melee Weapon to add 15 to Agility.|r", --22020
-"QAEnchant Weapon +22 Intellect£|cff00ff00使用： Permanently enchant a Melee Weapon to add 22 to Intellect.|r", --22021
-"QAEnchant Weapon +15 Strength£|cff00ff00使用： Permanently enchant a Melee Weapon to add 15 to Strength.|r", --22022
-"QAEnchant Weapon +20 Spirit£|cff00ff00使用： Permanently enchant a Melee Weapon to add 20 to Spirit.|r", --22023
-"QAEnchant Weapon Unholy£|cff00ff00使用： Permanently enchant a melee weapon to often inflict a curse on the target reducing their melee damage.|r", --22024
-"QAEnchant Weapon Lifestealing£|cff00ff00使用： Permanently enchant a melee weapon to often steal life from the enemy and give it to the wielder.|r", --22025
+"|cff00ff00使用： Permanently enchant a Melee Weapon to add 15 to Agility.|r£ ", --22020
+"|cff00ff00使用： Permanently enchant a Melee Weapon to add 22 to Intellect.|r£ ", --22021
+"|cff00ff00使用： Permanently enchant a Melee Weapon to add 15 to Strength.|r£ ", --22022
+"|cff00ff00使用： Permanently enchant a Melee Weapon to add 20 to Spirit.|r£ ", --22023
+"|cff00ff00使用： Permanently enchant a melee weapon to often inflict a curse on the target reducing their melee damage.|r£ ", --22024
+"|cff00ff00使用： Permanently enchant a melee weapon to often steal life from the enemy and give it to the wielder.|r£ ", --22025
 "QAE Test Item Update£|cff00ff00使用： Permanently enchant a cloak to give 70 additional armor.|r", --22026
-"zzOLD - QAEnchant Weapon +5 Damage£ ", --22027
-"QAEnchant Chest +4 Stats£|cff00ff00使用： Permanently enchant a piece of chest armor to grant +4 to all stats.|r", --22028
-"QAEnchant Gloves +20 Frost Damage£|cff00ff00使用： Permanently enchant gloves to increase Frost spell power by 20.|r", --22029
-"QAEnchant Gloves +20 Fire Damage£|cff00ff00使用： Permanently enchant gloves to increase fire spell power by 20.|r", --22030
-"QAEnchant Gloves +20 Shadow Damage£|cff00ff00使用： Permanently enchant gloves to increase shadow spell power by 20.|r", --22031
-"QAEnchant Gloves +30 Healing£|cff00ff00使用： Permanently enchant gloves to increase the caster's healing spells by up to 14.|r", --22032
-"QAEnchant Gloves +15 Agility£|cff00ff00使用： Permanently enchant gloves to increase agility by 15.|r", --22033
-"QAEnchant Gloves +2% Threat£|cff00ff00使用： Permanently enchant gloves to increase threat from all attacks and spells by 2%.|r", --22034
-"QAEnchant Gloves +5 Skinning£|cff00ff00使用： Permanently enchant gloves to grant +5 skinning skill.|r", --22035
-"QAEnchant Bracer +4 Mana\\5£|cff00ff00使用： Permanently enchants bracers to restore 4 mana every 5 seconds.|r", --22036
-"QAEnchant Bracer +24 Healing£|cff00ff00使用： Permanently enchants bracers to increase the effects of your healing spells by 13.|r", --22037
-"QAEnchant Shield +2% Block Chance£|cff00ff00使用： 永久性地为一面盾牌附魔，使它获得格挡几率提高10%的效果。|r", --22038
-"QAEnchant Cloak +15 Fire Resistance£|cff00ff00使用： Permanently enchant a cloak to give 15 fire resistance.|r", --22039
-"QAEnchant Cloak +15 Nature Resistance£|cff00ff00使用： Permanently enchant a cloak to give 15 nature resistance.|r", --22040
-"QAEnchant Cloak +8 Stealth£|cff00ff00使用： Permanently enchant a cloak to increase stealth by 5.|r", --22041
-"QAEnchant Cloak -2% Threat£|cff00ff00使用： Permanently enchant a cloak to decrease threat caused by the wearer by 2%.|r", --22042
-"QAEnchant Cloak +1% Dodge£|cff00ff00使用： Permanently enchant a cloak to give a 12% chance to dodge.|r", --22043
+"", --22027
+"|cff00ff00使用： Permanently enchant a piece of chest armor to grant +4 to all stats.|r£ ", --22028
+"|cff00ff00使用： Permanently enchant gloves to increase Frost spell power by 20.|r£ ", --22029
+"|cff00ff00使用： Permanently enchant gloves to increase fire spell power by 20.|r£ ", --22030
+"|cff00ff00使用： Permanently enchant gloves to increase shadow spell power by 20.|r£ ", --22031
+"|cff00ff00使用： Permanently enchant gloves to increase the caster's healing spells by up to 14.|r£ ", --22032
+"|cff00ff00使用： Permanently enchant gloves to increase agility by 15.|r£ ", --22033
+"|cff00ff00使用： Permanently enchant gloves to increase threat from all attacks and spells by 2%.|r£ ", --22034
+"|cff00ff00使用： Permanently enchant gloves to grant +5 skinning skill.|r£ ", --22035
+"|cff00ff00使用： Permanently enchants bracers to restore 4 mana every 5 seconds.|r£ ", --22036
+"|cff00ff00使用： Permanently enchants bracers to increase the effects of your healing spells by 13.|r£ ", --22037
+"|cff00ff00使用： 永久性地为一面盾牌附魔，使它获得格挡几率提高10%的效果。|r£ ", --22038
+"|cff00ff00使用： Permanently enchant a cloak to give 15 fire resistance.|r£ ", --22039
+"|cff00ff00使用： Permanently enchant a cloak to give 15 nature resistance.|r£ ", --22040
+"|cff00ff00使用： Permanently enchant a cloak to increase stealth by 5.|r£ ", --22041
+"|cff00ff00使用： Permanently enchant a cloak to decrease threat caused by the wearer by 2%.|r£ ", --22042
+"|cff00ff00使用： Permanently enchant a cloak to give a 12% chance to dodge.|r£ ", --22043
 "法力刚玉£拾取后绑定£唯一：法力宝石（1）£|cff00ff00使用： 恢复2340到2460点法力值。|r", --22044
-"Test QARaid Uber Ammo Lockbox£ ", --22045
+"", --22045
 "瓦塔拉克饰品的右半边£任务物品£唯一£|cff00ff00使用： 将瓦塔拉克饰品的左瓣、右瓣和上瓣组合起来。|r£|cffffd100\"这件物品似乎很热切地想要和其它几块重新结合。\"|r", --22046
 "瓦塔拉克饰品的上半边£任务物品£唯一£|cff00ff00使用： 将瓦塔拉克饰品的左瓣、右瓣和上瓣组合起来。|r£|cffffd100\"触摸这件物品时会有很奇怪的感觉，仿佛有什么邪恶的力量想要挣脱出来。\"|r", --22047
 "瓦塔拉克饰品£任务物品£唯一£|cff00ff00使用： 对瓦塔拉克的尸体使用，把它的灵魂从饰品中释放出来。|r£|cffffd100\"这件重新结合起来的饰品散发出强大的邪恶力量，瓦塔拉克公爵的灵魂在其中蠢蠢欲动。\"|r", --22048
@@ -16909,9 +16909,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "召唤火盆£拾取后绑定£唯一£|cff00ff00使用： 召唤伊萨莉恩的灵魂。|r", --22050
 "召唤火盆£拾取后绑定£唯一£|cff00ff00使用： 召唤亚雷恩和索托斯的灵魂。|r", --22051
 "召唤火盆£拾取后绑定£唯一£|cff00ff00使用： 召唤库尔莫克的灵魂。|r", --22052
-"致命药膏 VI£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成162点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --22053
-"致命药膏 VII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成206点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --22054
-"致伤药膏 V£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到113点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --22055
+"致命药膏 VI£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成161点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --22053
+"致命药膏 VII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成205点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --22054
+"致伤药膏 V£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到112点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --22055
 "召唤火盆£拾取后绑定£唯一£|cff00ff00使用： 召唤瓦塔拉克公爵的灵魂。|r", --22056
 "符咒火盆£拾取后绑定£唯一£|cff00ff00使用： 在闹鬼的地点召唤死者的灵魂。|r", --22057
 "情人节信纸£ ", --22058
@@ -17029,18 +17029,18 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "自制面包£持续时间：7天£|cff00ff00使用： 右键点击以将5块自制面包合成为一袋自制面包。|r", --22176
 "刚摘的花朵£持续时间：7天£|cff00ff00使用： 右键点击以将5束刚摘的花朵合成为一篮鲜花。|r", --22177
 "友谊的誓言：暴风城£ ", --22178
-"魔典：火焰箭（等级 8）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 8）。|r", --22179
-"魔典：血契（等级 6）£拾取后绑定£唯一", --22180
-"魔典：火焰之盾（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 6）。|r", --22181
-"魔典：折磨（等级 7）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放折磨（等级 7）。|r", --22182
-"魔典：受难（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 5）。|r", --22183
-"魔典：吞噬暗影（等级 7）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 7）。|r", --22184
-"魔典：牺牲（等级 7）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 7）。|r", --22185
-"魔典：剧痛鞭笞（等级 7）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 7）。|r", --22186
-"魔典：安抚之吻（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 5）。|r", --22187
-"魔典：吞噬魔法（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 5）。|r", --22188
-"魔典：吞噬魔法（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 6）。|r", --22189
-"魔典：腐坏之血（等级 5）£拾取后绑定£唯一£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 5）。|r", --22190
+"魔典：火焰箭（等级 8）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 8）。|r", --22179
+"魔典：血契（等级 6）£拾取后绑定£唯一£职业：术士", --22180
+"魔典：火焰之盾（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 6）。|r", --22181
+"魔典：折磨（等级 7）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放折磨（等级 7）。|r", --22182
+"魔典：受难（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 5）。|r", --22183
+"魔典：吞噬暗影（等级 7）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬阴影（等级 7）。|r", --22184
+"魔典：牺牲（等级 7）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 7）。|r", --22185
+"魔典：剧痛鞭笞（等级 7）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放剧痛鞭笞（等级 7）。|r", --22186
+"魔典：安抚之吻（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教魅魔或夜魔学会施放安抚之吻（等级 5）。|r", --22187
+"魔典：吞噬魔法（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 5）。|r", --22188
+"魔典：吞噬魔法（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放吞噬魔法（等级 6）。|r", --22189
+"魔典：腐坏之血（等级 5）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教地狱猎犬学会施放腐坏之血（等级 5）。|r", --22190
 "|cffa335ed黑曜石锁甲|r£|cff00ff00装备： 攻击强度提高76点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 受到法术攻击时承受的伤害降低10点。|r", --22191
 "血藻闪避药剂£拾取后绑定£|cff00ff00使用： 躲闪等级提高36。|r", --22192
 "血藻抗性药剂£拾取后绑定£|cff00ff00使用： 所有法术抗性提高15点，持续30分钟。|r", --22193
@@ -17049,7 +17049,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed厚重黑曜石胸甲|r£|cff00ff00装备： 当你被某个伤害性法术击中之后，有30的几率获得一个持续6秒的护盾效果，可以吸收300到500点该系的伤害。|r", --22196
 "|cff0070dd重型黑曜石腰带|r£|cff00ff00装备： +5 所有魔法抗性。|r", --22197
 "|cffa335ed碎裂黑曜石盾牌|r£|cff00ff00装备： 使你的格挡等级提高9。|r£|cff00ff00装备： +5 所有魔法抗性。|r£|cff00ff00装备： 被伤害性法术击中之后5%的几率令施放该法术的敌人沉默3秒。|r", --22198
-"|cff9e9e9eMonster - Axe, 2H Arcanite Reaper|r£ ", --22199
+"双手£ ", --22199
 "银色箭头£|cff00ff00使用： 向玩家发射，匹德菲特就会找到他们！（只对没有携带小宠物的玩家有效。）|r", --22200
 "净化之匣£任务物品£唯一", --22201
 "小块黑曜石碎片£ ", --22202
@@ -17060,12 +17060,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd追猎腰带|r£|cff00ff00装备： 命中等级提高8点。|r", --22207
 "|cff0070dd熔岩石锤|r£|cff00ff00装备： 爆击等级提高17点。|r", --22208
 "设计图：重型黑曜石腰带£拾取后绑定£使用： 教你学会制作重型黑曜石腰带。£|cff0070dd\n重型黑曜石腰带|r£装备后绑定£腰部£397点护甲£+25 力量£|cff00ff00装备： +5 所有魔法抗性。|r£\n需要小块黑曜石碎片 (14), 附魔瑟银锭 (4), 大地精华 (2)", --22209
-"|cff9e9e9eMonster - Knuckle, B01 Red|r£ ", --22210
-"|cff9e9e9eMonster - Knuckle, B01 Red Offhand|r£ ", --22211
+"单手£ ", --22210
+"", --22211
 "|cff0070dd石傀儡肩铠|r£ ", --22212
-"|cff9e9e9eMonster - Mace, Hand of Edward the Odd|r£ ", --22213
+"单手£ ", --22213
 "设计图：轻型黑曜石腰带£拾取后绑定£使用： 教你学会制作轻型黑曜石腰带。£|cff0070dd\n轻型黑曜石腰带|r£装备后绑定£腰部£224点护甲£|cff00ff00装备： 攻击强度提高32点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： +5 所有魔法抗性。|r£\n需要小块黑曜石碎片 (14), 魔化皮 (4)", --22214
-"|cff9e9e9eMonster - Dagger, Bonescraper|r£ ", --22215
+"单手£ ", --22215
 "温诺希斯的毒囊£任务物品", --22216
 "库林纳克斯的毒囊£任务物品", --22217
 "一堆玫瑰花瓣£|cff00ff00使用： 向附近的一个目标抛撒玫瑰的花瓣！ （30秒冷却）|r", --22218
@@ -17093,8 +17093,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凋零绝望胫甲|r£|cff00ff00装备： 法术强度提高11点。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --22240
 "|cff0070dd黑暗守望者肩甲|r£ ", --22241
 "|cff0070dd维雷克的束缚|r£|cff00ff00装备： 攻击强度提高24点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --22242
-"|cff1eff00小灵魂包|r£拾取后绑定£12格灵魂袋", --22243
-"|cff1eff00灵魂箱|r£拾取后绑定£16格灵魂袋", --22244
+"|cff1eff00小灵魂包|r£拾取后绑定£12格灵魂袋£职业：术士", --22243
+"|cff1eff00灵魂箱|r£拾取后绑定£16格灵魂袋£职业：术士", --22244
 "|cff0070dd煤烟护足|r£|cff00ff00装备： 法术强度提高11点。|r", --22245
 "|cff1eff00魔化魔纹布包|r£装备后绑定£16格附魔材料袋", --22246
 "|cff0070dd虔诚医者长靴|r£|cff00ff00装备： 法术强度提高14点。|r", --22247
@@ -17118,7 +17118,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "充满感情的信件£任务物品£唯一", --22265
 "|cff0070dd火焰荆棘|r£|cff00ff00装备： 法术强度提高14点。|r", --22266
 "|cff0070dd织法者头巾|r£|cff00ff00装备： 法术强度提高36点。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --22267
-"|cff0070dd龙人能量徽章|r£|cff00ff00使用： 使你的法术强度提高100点，持续15秒。 （1分钟 15秒冷却）|r", --22268
+"|cff0070dd龙人能量徽章|r£|cff00ff00使用： 使你的法术强度提高100点，持续15秒。 （1分钟15秒冷却）|r", --22268
 "|cff0070dd暗影徘徊者披风|r£ ", --22269
 "|cff0070dd冒犯之靴|r£|cff00ff00装备： 命中等级提高8点。|r", --22270
 "|cff0070dd狂乱魔法护腿|r£|cff00ff00装备： 法术强度提高16点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r", --22271
@@ -17166,7 +17166,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd铁纹护腕|r£ ", --22313
 "|cff0070dd猎手之矛|r£ ", --22314
 "|cff0070dd新生之锤|r£|cff00ff00装备： 法术强度提高14点。|r", --22315
-"|cff0070ddTest Relic|r£ ", --22316
+"圣物£ ", --22316
 "|cff0070dd左撇子的黄铜指虎|r£ ", --22317
 "|cff0070dd玛尔根的长弓|r£|cff00ff00装备： 攻击强度提高20点。|r", --22318
 "|cff0070dd神圣权力之书|r£|cff00ff00装备： 法术强度提高14点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --22319
@@ -17190,12 +17190,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "火山灰£任务物品", --22338
 "|cff0070dd巫师符文指环|r£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 法术强度提高16点。|r", --22339
 "|cff0070dd迅捷坠饰|r£|cff00ff00装备： 使你的命中等级提高10。|r", --22340
-"|cff9e9e9eMonster - Mace, Horde A04 Pale - Bone Wrench|r£ ", --22341
+"单手£ ", --22341
 "|cff0070dd折磨护腿|r£|cff00ff00装备： 法术强度提高28点。|r", --22342
 "|cff0070dd残暴护手|r£|cff00ff00装备： 攻击强度提高38点。|r", --22343
 "符咒火盆用户手册£拾取后绑定£|cffffd100\"如何找到闹鬼的地点\"|r", --22344
 "|cff0070dd重生图腾|r£|cff00ff00装备： 复生的冷却时间缩短5分钟。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --22345
-"|cff9e9e9eMonster - Mace2H, Unstoppable Force|r£ ", --22346
+"双手£ ", --22346
 "|cff0070dd法拉德的装填器|r£|cff00ff00装备： 使你的命中等级提高10。|r", --22347
 "|cff0070dd康恩之怒|r£|cff00ff00装备： 使你的命中等级提高10。|r", --22348
 "|cffa335ed被玷污的胸甲|r£拾取后绑定", --22349
@@ -17239,10 +17239,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "阿努布雷坎之心£任务物品", --22387
 "|cffa335ed设计图：泰坦护腿|r£使用： 教你学会制造泰坦护腿。£|cffa335ed\n泰坦护腿|r£装备后绑定£腿部£683点护甲£+30 力量£|cff00ff00装备： 使你的命中等级提高20。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£\n需要奥金锭 (12), 附魔瑟银锭 (20), 大地精华 (10), 泰坦合剂 (2)", --22388
 "|cffa335ed设计图：先知之刃|r£使用： 教你学会制造先知之刃。£|cffa335ed\n先知之刃|r£装备后绑定£主手£49 - 100伤害£速度 1.80£（每秒伤害41.4）£+14 耐力£+6 智力£|cff00ff00装备： 法术强度提高20点。|r£|cff00ff00装备： 使你的法术穿透提高10。|r£\n需要奥金锭 (12), 连结水晶 (2), 超级能量合剂 (2), 魔化皮 (4)", --22389
-"|cffa335ed设计图：说服者|r£使用： 教你学会制造说服者。£|cffa335ed\n说服者|r£装备后绑定£单手£锤£86 - 161伤害£速度 2.70£（每秒伤害45.7）£|cff00ff00装备： 使你的命中等级提高10。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£\n需要奥金锭 (15), 黑铁锭 (10), 死灵精华 (20), 黑暗符文 (20), 魔暴龙皮 (10), 暗影之皮 (2)", --22390
-"|cff0070ddMonster - Staff, Lord Valthalak|r£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00装备： 爆击等级提高14。|r", --22391
+"|cffa335ed设计图：说服者|r£使用： 教你学会制造说服者。£|cffa335ed\n说服者|r£装备后绑定£单手£86 - 161伤害£速度 2.70£（每秒伤害45.7）£|cff00ff00装备： 使你的命中等级提高10。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£\n需要奥金锭 (15), 黑铁锭 (10), 死灵精华 (20), 黑暗符文 (20), 魔暴龙皮 (10), 暗影之皮 (2)", --22390
+"拾取后绑定£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00装备： 爆击等级提高14。|r", --22391
 "公式：附魔双手武器 - 敏捷£拾取后绑定£|cff00ff00使用： 教你学会永久性地为一件双手近战武器附魔，使其获得敏捷+25的效果。|r", --22392
-"|cff0070dd圣典：暗影防护祷言|r£职业：牧师£|cff00ff00使用： Teaches Prayer of Shadow Protection (Rank 1).|r", --22393
+"|cff0070dd圣典：暗影防护祷言|r£|cff00ff00使用： Teaches Prayer of Shadow Protection (Rank 1).|r", --22393
 "|cff0070dd混乱法杖|r£|cff00ff00装备： 法术强度提高19点。|r", --22394
 "|cff0070dd怒气图腾|r£|cff00ff00装备： 大地震击、烈焰震击和冰霜震击的法术强度提高30点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --22395
 "|cffa335ed生命图腾|r£|cff00ff00装备： 次级治疗波的法术强度提高80点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --22396
@@ -17331,8 +17331,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed骨镰护腰|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --22482
 "|cffa335ed骨镰护腕|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --22483
 "|cff1eff00死灵符文|r£拾取后绑定", --22484
-"[UNUSED] Scourge Invasion Focus Object£拾取后绑定£|cff00ff00使用： 使用被摧毁的水晶制造勋章。 （10分钟冷却）|r", --22485
-"[UNUSED] Scourge Invasion Boss Summoner£拾取后绑定", --22486
+"拾取后绑定£|cff00ff00使用： 使用被摧毁的水晶制造勋章。 （10分钟冷却）|r", --22485
+"拾取后绑定£ ", --22486
 "奥尔达隆的徽记£任务物品£唯一", --22487
 "|cffa335ed梦游者外套|r£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --22488
 "|cffa335ed梦游者护腿|r£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --22489
@@ -17430,11 +17430,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "破损的奥术器械£任务物品", --22581
 "一箱结晶精华£任务物品£唯一", --22582
 "拉提斯·托博尔的补给品£任务物品£|cffffd100\"真是令人惊讶，在满地的食尸鬼和软泥怪中，它仍然完好无损。\"|r", --22583
-"QAEnchant Cloak +3 Agility£|cff00ff00使用： Permanently enchant a cloak to give 3 Agility.|r", --22584
-"QAEnchant Gloves +5 Mining£|cff00ff00使用： Permanently enchant gloves to grant +5 mining skill.|r", --22585
-"QAEnchant Gloves +5 Herbalism£|cff00ff00使用： Permanently enchant a cloak to give +5 Herbalism|r", --22586
-"QAEnchant Boots +8% Speed£|cff00ff00使用： Permantly enchant boots to increase speed by 8%.|r", --22587
-"QAEnchant Cloak +10 Shadow Resistance£|cff00ff00使用： Permanently enchant a cloak to give 10 Shadow Resistance.|r", --22588
+"|cff00ff00使用： Permanently enchant a cloak to give 3 Agility.|r£ ", --22584
+"|cff00ff00使用： Permanently enchant gloves to grant +5 mining skill.|r£ ", --22585
+"|cff00ff00使用： Permanently enchant a cloak to give +5 Herbalism|r£ ", --22586
+"|cff00ff00使用： Permantly enchant boots to increase speed by 8%.|r£ ", --22587
+"|cff00ff00使用： Permanently enchant a cloak to give 10 Shadow Resistance.|r£ ", --22588
 "|cffff7f00埃提耶什，守护者的传说之杖|r£|cff00ff00装备： 使你的命中等级提高16。|r£|cff00ff00装备： 法术强度提高150点。|r£|cff00ff00装备： 使周围半径30码范围内的所有小队成员的法术爆击等级提高28。|r£|cff00ff00使用： 制造一道传送门，将使用它的队友传送到卡拉赞。 （1分钟冷却）|r", --22589
 "暗夜精灵计划表：安达洛斯£任务物品£|cffffd100\"包括一张安达洛斯的详细地图和军队部署情况的报告。\"|r", --22590
 "暗夜精灵计划表：安欧维恩£任务物品£|cffffd100\"包括一张安欧维恩的详细地图和军队部署情况的报告。\"|r", --22591
@@ -17442,7 +17442,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "通行文书£任务物品£唯一", --22593
 "暗夜精灵计划表£任务物品£唯一£|cffffd100\"从沙兰蒂斯岛上收集到的所有计划文件。\"|r", --22594
 "征兵公告£任务物品£唯一", --22595
-"Monster - Sword2H, Horde A02£ ", --22596
+"双手£ ", --22596
 "女王的项链£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"项链上刻着小字：\"给希尔瓦娜斯。永远爱着你的姐姐，奥蕾莉亚。\"\"|r", --22597
 "光芒之石£任务物品", --22598
 "烈焰之石£任务物品", --22599
@@ -17554,7 +17554,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "达尔坎的日记£任务物品£唯一", --22706
 "|cffa335ed拉玛兰迪的寒冰之握|r£|cffffd100\"在戒指上刻着一行字：拉玛兰迪\"|r", --22707
 "拉玛兰迪的命运£任务物品£|cffffd100\"在戒指上刻着一行字：拉玛兰迪\"|r", --22708
-"|cff9e9e9eMonster - Sword2H, Corrupted Ashbringer|r£ ", --22709
+"双手£ ", --22709
 "血蓟£|cff00ff00使用： 略微提高法术强度，持续10分钟。|r", --22710
 "|cff0070dd哈卡莱崇拜者披风|r£|cff00ff00装备： 法术强度提高23点。|r", --22711
 "|cff0070dd部族之力|r£|cff00ff00装备： 攻击强度提高28点。|r", --22712
@@ -17569,7 +17569,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed惩戒指环|r£|cff00ff00装备： 法术强度提高23点。|r", --22721
 "|cffa335ed古拉巴什狂暴者徽记|r£|cff00ff00装备： 攻击强度提高40点。|r", --22722
 "名单登记员的信£拾取后绑定£该物品将触发一个任务£|cffffd100\"银色黎明的徽记被清晰地印在封蜡上。\"|r", --22723
-"|cff9e9e9eMonster - Mace1H, Korth'azz|r£ ", --22724
+"单手£ ", --22724
 "|cff0070dd塞纳留斯指环|r£ ", --22725
 "|cffff7f00埃提耶什的碎片|r£拾取后绑定£职业：牧师, 法师, 术士, 德鲁伊£|cff00ff00使用： 将40块埃提耶什的碎片合成为埃提耶什的杖柄。|r£|cffffd100\"一块埃提耶什，守护者的传说之杖的碎片。\"|r", --22726
 "|cffff7f00埃提耶什的杖柄|r£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"这柄法杖的头部和尾部都不见了。\"|r", --22727
@@ -17583,7 +17583,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "研究笔记£任务物品£唯一", --22735
 "|cffff7f00安杜尼苏斯，灵魂的收割者|r£|cff00ff00装备： 使你的近战和远程攻击强度提高600点。|r£|cffffd100\"这柄剑虚无缥渺，仿佛正在从这个世界上消失。\"|r", --22736
 "|cffff7f00埃提耶什，守护者的传说之杖|r£拾取后绑定£唯一£|cff00ff00使用： 从埃提耶什中驱除萨格拉斯的邪恶力量。只能在神圣之地使用。|r£|cffffd100\"一股非常邪恶的力量被囚禁在法杖里。\"|r", --22737
-"|cff9e9e9eMonster - Sword, 1H Uber Demon Blade|r£ ", --22738
+"单手£ ", --22738
 "|cff0070dd秘典：变形术：龟|r£|cff00ff00使用： Teaches Polymorph: Turtle.|r", --22739
 "|cffa335ed护卫的皮甲护腿|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --22740
 "|cffa335ed护卫的蜥蜴皮裤|r£|cff00ff00装备： 法术强度提高11点。|r", --22741
@@ -17649,7 +17649,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed帝殒|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --22802
 "|cffa335ed午夜之雾|r£|cff00ff00装备： 法术强度提高85点。|r", --22803
 "|cffa335ed迈克斯纳之牙|r£|cff00ff00装备： 攻击强度提高36点。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --22804
-"|cffa335edNaxxramas Sword 1H 1 [PH]|r£ ", --22805
+"拾取后绑定£ ", --22805
 "|cffa335ed黑女巫的悔恨|r£|cff00ff00装备： 使你的命中等级提高10。|r", --22806
 "|cffa335ed怨灵之刃|r£|cff00ff00装备： 法术强度提高95点。|r£|cff00ff00装备： 使你的命中等级提高8。|r£|cff00ff00装备： 爆击等级提高14。|r", --22807
 "|cffa335ed谴责者|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r£|cff00ff00装备： 攻击强度提高16点。|r", --22808
@@ -17658,10 +17658,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed灵魂之弦|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 攻击强度提高16点。|r", --22811
 "|cffa335ed蛛魔制奴者|r£|cff00ff00装备： 攻击强度提高24点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --22812
 "|cffa335ed邪恶力量巨剑|r£|cff00ff00装备： 攻击强度提高98点。|r", --22813
-"|cffa335edNaxxramas Sword 2H 2 [PH]|r£|cff00ff00装备： 攻击强度提高86点。|r", --22814
+"拾取后绑定£|cff00ff00装备： 攻击强度提高86点。|r", --22814
 "|cffa335ed断离|r£|cff00ff00装备： 使你的爆击等级提高28。|r", --22815
 "|cffa335ed碎裂白骨战斧|r£|cff00ff00装备： 攻击强度提高36点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --22816
-"|cffa335edNaxxramas Polearm [PH]|r£ ", --22817
+"拾取后绑定£ ", --22817
 "|cffa335ed疫病携带者|r£|cff00ff00装备： 防御等级提高14。|r", --22818
 "|cffa335ed谴责之盾|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高32点。|r", --22819
 "|cffa335ed命运魔杖|r£|cff00ff00装备： 法术强度提高12点。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --22820
@@ -17735,7 +17735,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "碧蓝谷礼品券£拾取后绑定£唯一£该物品将触发一个任务", --22888
 "一瓶蛾血£任务物品£|cffffd100\"足以补充治疗水晶短缺的材料。\"|r", --22889
 "|cff0070dd秘典：防护冰霜结界 V|r£|cff00ff00使用： Teaches Frost Ward (Rank 5).|r", --22890
-"|cff0070dd魔典：防护暗影结界 IV|r£|cff00ff00使用： Teaches Shadow Ward (Rank 4).|r", --22891
+"|cff0070dd魔典：防护暗影结界 IV|r£职业：术士£|cff00ff00使用： Teaches Shadow Ward (Rank 4).|r", --22891
 "暗淡的死灵石£任务物品", --22892
 "卢兹兰的徽记£任务物品£唯一", --22893
 "纳克雷洛特的徽记£任务物品£唯一", --22894
@@ -17777,7 +17777,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "一个浸血的信封£任务物品£唯一", --22930
 "圣洁水晶£任务物品£唯一", --22931
 "一封被撕碎的信£任务物品£唯一", --22932
-"[UNUSED] Abom Stoone£任务物品£唯一", --22933
+"任务物品£唯一", --22933
 "鞭笞者样本£任务物品£|cffffd100\"看起来它的状况不错。\"|r", --22934
 "|cffa335ed寒霜之触|r£ ", --22935
 "|cffa335ed复仇腕甲|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --22936
@@ -17878,7 +17878,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed命运之戒|r£|cff00ff00装备： 法术强度提高36点。|r£|cff00ff00装备： 使你的命中等级提高8。|r", --23031
 "|cffa335ed冰川头饰|r£|cff00ff00装备： 法术强度提高18点。|r", --23032
 "|cffa335ed寒鳞罩帽|r£ ", --23033
-"|cffa335edNax PH Crit Plate Shoulders|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --23034
+"拾取后绑定£|cff00ff00装备： 使你的爆击等级提高14。|r", --23034
 "|cffa335ed导师之帽|r£|cff00ff00装备： 法术强度提高51点。|r", --23035
 "|cffa335ed尸身项链|r£|cff00ff00装备： 法术强度提高28点。|r", --23036
 "|cffa335ed灵魂热情之戒|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r", --23037
@@ -17918,7 +17918,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed天启护腿|r£|cff00ff00装备： 使你的爆击等级提高28。|r", --23071
 "|cffa335ed冷酷之拳|r£|cff00ff00装备： 缴械持续时间缩短50%。|r£|cff00ff00装备： 使你的爆击等级提高14。|r£|cff00ff00装备： 使你的命中等级提高10。|r", --23072
 "|cffa335ed偏移之靴|r£|cff00ff00装备： 使你的潜行技能等级提高。|r", --23073
-"[PH] Goblin Tooth£任务物品", --23074
+"任务物品£ ", --23074
 "|cffa335ed死亡的契约|r£|cff00ff00装备： 爆击等级提高14。|r£|cff00ff00装备： 法术强度提高15点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --23075
 "|cff1eff00魔光黄水晶|r£ ", --23076
 "|cff1eff00血榴石|r£ ", --23077
@@ -17929,7 +17929,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd被捕获的火焰|r£拾取后绑定£唯一£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --23083
 "|cff0070dd亡灵净化手套|r£|cff00ff00装备： 对亡灵的法术强度提高35点。|r", --23084
 "|cff0070dd亡灵净化之袍|r£|cff00ff00装备： 对亡灵的法术强度提高48点。|r", --23085
-"[UNUSED] Letter Cookie£ ", --23086
+"", --23086
 "|cff0070dd亡灵毁灭胸甲|r£|cff00ff00装备： 对亡灵的攻击强度提高81点。|r", --23087
 "|cff0070dd亡灵毁灭护胸|r£|cff00ff00装备： 对亡灵的攻击强度提高81点。|r", --23088
 "|cff0070dd亡灵杀手外套|r£|cff00ff00装备： 对亡灵的攻击强度提高81点。|r", --23089
@@ -18101,7 +18101,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "净化药剂£任务物品£唯一£|cff00ff00使用： 洒在被污染的地狱野猪肉上，以尝试净化它。|r", --23268
 "邪血样本£任务物品", --23269
 "被污染的地狱野猪肉£拾取后绑定£|cffffd100\"苍白而恶臭的肉块，取自一头被污染的地狱野猪。\"|r", --23270
-"QATest Darkmoon Faire Tickets£拾取后绑定£唯一", --23271
+"拾取后绑定£唯一", --23271
 "|cff0070dd骑士队长的板层甲护胸|r£|cff00ff00装备： 法术强度提高25点。|r", --23272
 "|cff0070dd骑士队长的板层甲护腿|r£|cff00ff00装备： 法术强度提高25点。|r", --23273
 "|cff0070dd骑士中尉的板层甲护手|r£|cff00ff00装备： 使你的审判造成的神圣伤害提高20点。|r£|cff00ff00装备： 使你的爆击等级提高14。|r", --23274
@@ -18157,7 +18157,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "火焰节衬肩£ ", --23324
 "仲夏腊肠£拾取后绑定£|cff00ff00使用： 急速等级提高30，持续1小时。 （1秒冷却）|r", --23326
 "火烤甜面包£拾取后绑定£|cff00ff00使用： 命中等级提高20，持续1小时。 （1秒冷却）|r", --23327
-"|cff9e9e9eMonster - Sword2H, Instructor Razuvious|r£ ", --23328
+"双手£ ", --23328
 "粗壮的鞭笞者根须£|cff00ff00使用： 恢复18到30点生命值。 （2分钟冷却）|r", --23329
 "|cff9e9e9e枯萎的花瓣|r£ ", --23330
 "|cff9e9e9e断裂的藤蔓|r£ ", --23331
@@ -18185,7 +18185,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e法力残渣|r£ ", --23353
 "晶化法力残渣£|cff00ff00使用： 恢复60点法力值。 （3分钟冷却）|r", --23354
 "|cff9e9e9e有毒的地狱野猪肉|r£|cffffd100\"请勿食用。\"|r", --23355
-"|cff9e9e9eMonster - Shield, Skullflame|r£ ", --23356
+"副手£ ", --23356
 "|cff9e9e9e掠食者蛋壳|r£|cffffd100\"这枚蛋里面的掠食者已经孵化了。\"|r", --23357
 "信号宝石£拾取后绑定£唯一£|cff00ff00使用： 在阿苟纳祭坛附近放置信号宝石，以吸引德莱尼小队靠近你。 （2分钟冷却）|r", --23358
 "教官拉苏维奥斯的徽记£任务物品", --23360
@@ -18197,7 +18197,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070ddzzDEPRECATEDPerfect Diamond|r£+12 力量(4颗蓝色宝石)£  |cff808080需要 至少4颗蓝色宝石|r", --23366
 "轻丝长袍£ ", --23367
 "软皮长靴£ ", --23368
-"|cff9e9e9eMonster - Dagger, Claw of Chromaggus|r£ ", --23369
+"单手£ ", --23369
 "魔网监护者之刃£ ", --23370
 "薇兰妮亚的手杖£ ", --23371
 "血鹰巨剑£ ", --23372
@@ -18246,7 +18246,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00生存刀|r£ ", --23415
 "|cff9e9e9eMonster - Staff, Gul'dan|r£ ", --23416
 "净化水晶£任务物品£唯一£|cff00ff00使用： 释放水晶的魔法，将一只濒临死亡的失控的虚空行者的精华封存起来。|r£|cffffd100\"被储存在水晶中的法术令这块水晶散发出微微的光芒。\"|r", --23417
-"Test Sapper Charge£|cff00ff00使用： 触发之后发生爆炸，对附近的所有敌人造成450到750点火焰伤害，对你造成375到625点伤害。 （5分钟冷却）|r", --23418
+"|cff00ff00使用： 触发之后发生爆炸，对附近的所有敌人造成450到750点火焰伤害，对你造成375到625点伤害。 （5分钟冷却）|r£ ", --23418
 "|cff1eff00铭文战斧|r£ ", --23420
 "|cff1eff00铭文轻剑|r£ ", --23421
 "|cff1eff00铭文匕首|r£ ", --23422
@@ -18393,7 +18393,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed扭曲虚空链衫|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 攻击强度提高68点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f11|r|cff00ff00点法力值。|r£|cff00ff00使用： 你在6秒内对所有物理攻击免疫，但是也无法攻击或使用物理技能。 （30分钟冷却）|r", --23564
 "|cffa335ed扭曲虚空的拥抱|r£|cff00ff00装备： 爆击等级提高35点。|r£|cff00ff00装备： 攻击强度提高84点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r£|cff00ff00使用： 你在6秒内对所有物理攻击免疫，但是也无法攻击或使用物理技能。 （30分钟冷却）|r", --23565
 "碧蓝瓶£任务物品£唯一£|cff00ff00使用： 在艾伦达尔瀑布装满碧蓝瓶。|r", --23566
-"zzOLD[PH] Silithus PvP Dust [DEP]£ ", --23567
+"", --23567
 "一组药水瓶£任务物品£唯一£|cffffd100\"小心轻放！瓶子非常易碎。\"|r", --23568
 "玛格汉的来信£任务物品£唯一", --23569
 "|cffa335ed沙虫之毒|r£|cff00ff00使用： 使攻击强度提高65点，并在接下来的时间内每2秒提高65点，效果持续20秒。 （2分钟冷却）|r", --23570
@@ -18407,17 +18407,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "健怡特效药£|cff00ff00使用： 恢复1350到2250点法力值。|r£|cffffd100\"强心健脑\"|r", --23578
 "强者特效药£|cff00ff00使用： 恢复1050到1750点生命值。|r£|cffffd100\"原装正品。\"|r", --23579
 "亚维鲁的宝珠£拾取后绑定£唯一£该物品将触发一个任务", --23580
-"|cff9e9e9eMonster - Lady Blameux|r£ ", --23582
-"|cff9e9e9eMonster - Sir Zeliek|r£ ", --23583
+"单手£ ", --23582
+"单手£ ", --23583
 "洛克莫丹啤酒£拾取后绑定£|cff00ff00使用： 烈性酒类饮料。|r", --23584
 "石锤淡啤酒£拾取后绑定£|cff00ff00使用： 在30秒内恢复总计2934点法力值，喝水时必须保持坐姿。|r£|cffffd100\"那些在阳光下挥洒青春的日子啊！\"|r", --23585
 "鹰巢山啤酒£拾取后绑定£|cff00ff00使用： 酒精含量较高的饮料。|r", --23586
 "|cff1eff00米伦的饮酒帽|r£|cff00ff00使用： 在帽子里找酒喝。 （1小时冷却）|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高35点。|r", --23587
 "卡利鸟的羽毛£任务物品", --23588
 "玛格汉先祖念珠£任务物品", --23589
-"设计图：精金重槌£使用： 教你学会制作精金重槌。£|cff1eff00\n精金重槌|r£装备后绑定£锤£179 - 269伤害£速度 3.20£（每秒伤害70.0）£+47 力量£\n需要精金锭 (8)", --23590
+"设计图：精金重槌£使用： 教你学会制作精金重槌。£|cff1eff00\n精金重槌|r£装备后绑定£双手£179 - 269伤害£速度 3.20£（每秒伤害70.0）£+47 力量£\n需要精金锭 (8)", --23590
 "设计图：精金利斧£使用： 教你学会制作精金利斧。£|cff1eff00\n精金利斧|r£装备后绑定£双手£203 - 305伤害£速度 3.50£（每秒伤害72.6）£+25 敏捷£+39 耐力£|cff00ff00装备： 攻击强度提高52点。|r£\n需要精金锭 (8)", --23591
-"设计图：精金匕首£使用： 教你学会制作精金匕首。£|cff1eff00\n精金匕首|r£装备后绑定£单手£74 - 138伤害£速度 1.90£（每秒伤害55.8）£|cff00ff00装备： 命中等级提高15点。|r£|cff00ff00装备： 爆击等级提高10点。|r£\n需要精金锭 (7), 结缔皮 (2)", --23592
+"设计图：精金匕首£使用： 教你学会制作精金匕首。£|cff1eff00\n精金匕首|r£装备后绑定£单手£匕首£74 - 138伤害£速度 1.90£（每秒伤害55.8）£|cff00ff00装备： 命中等级提高15点。|r£|cff00ff00装备： 爆击等级提高10点。|r£\n需要精金锭 (7), 结缔皮 (2)", --23592
 "设计图：精金轻剑£使用： 教你学会制作精金轻剑。£|cff1eff00\n精金轻剑|r£装备后绑定£单手£68 - 128伤害£速度 1.70£（每秒伤害57.6）£+15 耐力£|cff00ff00装备： 使你的躲闪等级提高16点。|r£\n需要精金锭 (12)", --23593
 "设计图：精金板甲护腕£使用： 教你学会制作精金板甲护腕。£|cff0070dd\n精金板甲护腕|r£装备后绑定£手腕£458点护甲£+22 力量£+24 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+4 攻击强度|r£|cffffd100精金战甲（0/3）|r£|cff7f7f7f  精金胸甲|r£|cff7f7f7f  精金板甲手套|r£|cff7f7f7f  精金板甲护腕|r£|cff7f7f7f(3) 套装：+4 武器伤害。|r£\n需要精金锭 (6), 源生之土 (2), 源生火焰 (2)", --23594
 "设计图：精金板甲手套£使用： 教你学会制作精金板甲手套。£|cff0070dd\n精金板甲手套|r£装备后绑定£手£655点护甲£+24 力量£+34 耐力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+6 攻击强度|r£|cffffd100精金战甲（0/3）|r£|cff7f7f7f  精金胸甲|r£|cff7f7f7f  精金板甲手套|r£|cff7f7f7f  精金板甲护腕|r£|cff7f7f7f(3) 套装：+4 武器伤害。|r£\n需要精金锭 (8), 结缔皮 (2), 源生之土 (3), 源生火焰 (2)", --23595
@@ -18458,11 +18458,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed设计图：氪金圣剑|r£使用： 教你学会制作氪金圣剑。£|cffa335ed\n氪金圣剑|r£装备后绑定£双手£286 - 430伤害£速度 3.30£（每秒伤害108.5）£+50 力量£|cff00ff00装备： 命中等级提高37点。|r£|cff00ff00击中时可能： 为自己恢复270到450点生命值，并使力量提高120点，持续30秒。|r£\n需要氪金锭 (20), 硬化精金锭 (2), 源生之能 (6), 源生虚空 (2)", --23630
 "|cffa335ed设计图：魔能利斧|r£使用： 教你学会制作魔能利斧。£|cffa335ed\n魔能利斧|r£装备后绑定£单手£128 - 239伤害£速度 2.20£（每秒伤害83.4）£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+3 耐力|r£|cff00ff00装备： 命中等级提高14点。|r£|cff00ff00装备： 爆击等级提高21点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23631
 "|cffa335ed设计图：魔钢收割者|r£使用： 教你学会制作魔钢收割者。£|cffa335ed\n魔钢收割者|r£装备后绑定£双手£295 - 443伤害£速度 3.40£（每秒伤害108.5）£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 攻击强度提高112点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23632
-"|cffa335ed设计图：符印战锤|r£使用： 教你学会制作符印战锤。£|cffa335ed\n符印战锤|r£装备后绑定£单手£锤£140 - 261伤害£速度 2.40£（每秒伤害83.5）£+16 耐力£|cff00ff00装备： 攻击强度提高50点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23633
-"|cffa335ed设计图：魔能强化战槌|r£使用： 教你学会制作魔能强化战槌。£|cffa335ed\n魔能强化战槌|r£装备后绑定£锤£286 - 430伤害£速度 3.30£（每秒伤害108.5）£+50 力量£+46 耐力£|cff00ff00装备： 爆击等级提高21点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23634
-"|cffa335ed设计图：恒金符文之刃|r£使用： 教你学会制作恒金符文之刃。£|cffa335ed\n恒金符文之刃|r£装备后绑定£主手£27 - 114伤害£速度 1.70£（每秒伤害41.5）£+19 智力£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 法术强度提高168点。|r£\n需要氪金锭 (10), 硬化精金锭 (4), 恒金锭 (10), 源生之能 (8), 源生虚空 (2)", --23635
-"|cffa335ed设计图：挽歌|r£使用： 教你学会制作挽歌。£|cffa335ed\n挽歌|r£装备后绑定£单手£81 - 152伤害£速度 1.40£（每秒伤害83.2）£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00装备： 攻击强度提高40点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23636
-"|cffa335ed设计图：永恒之手|r£使用： 教你学会制作永恒之手。£|cffa335ed\n永恒之手|r£装备后绑定£主手£锤£35 - 132伤害£速度 1.90£（每秒伤害43.9）£+20 智力£|cff00ff00装备： 每5秒恢复9点法力值。|r£|cff00ff00装备： 法术强度提高168点。|r£\n需要氪金锭 (10), 硬化精金锭 (4), 恒金锭 (10), 源生之能 (8), 源生虚空 (4)", --23637
+"|cffa335ed设计图：符印战锤|r£使用： 教你学会制作符印战锤。£|cffa335ed\n符印战锤|r£装备后绑定£单手£140 - 261伤害£速度 2.40£（每秒伤害83.5）£+16 耐力£|cff00ff00装备： 攻击强度提高50点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23633
+"|cffa335ed设计图：魔能强化战槌|r£使用： 教你学会制作魔能强化战槌。£|cffa335ed\n魔能强化战槌|r£装备后绑定£双手£286 - 430伤害£速度 3.30£（每秒伤害108.5）£+50 力量£+46 耐力£|cff00ff00装备： 爆击等级提高21点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23634
+"|cffa335ed设计图：恒金符文之刃|r£使用： 教你学会制作恒金符文之刃。£|cffa335ed\n恒金符文之刃|r£装备后绑定£主手£匕首£27 - 114伤害£速度 1.70£（每秒伤害41.5）£+19 智力£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 法术强度提高168点。|r£\n需要氪金锭 (10), 硬化精金锭 (4), 恒金锭 (10), 源生之能 (8), 源生虚空 (2)", --23635
+"|cffa335ed设计图：挽歌|r£使用： 教你学会制作挽歌。£|cffa335ed\n挽歌|r£装备后绑定£单手£匕首£81 - 152伤害£速度 1.40£（每秒伤害83.2）£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00装备： 攻击强度提高40点。|r£\n需要氪金锭 (10), 魔钢锭 (10), 源生之能 (8), 源生虚空 (2)", --23636
+"|cffa335ed设计图：永恒之手|r£使用： 教你学会制作永恒之手。£|cffa335ed\n永恒之手|r£装备后绑定£主手£35 - 132伤害£速度 1.90£（每秒伤害43.9）£+20 智力£|cff00ff00装备： 每5秒恢复9点法力值。|r£|cff00ff00装备： 法术强度提高168点。|r£\n需要氪金锭 (10), 硬化精金锭 (4), 恒金锭 (10), 源生之能 (8), 源生虚空 (4)", --23637
 "设计图：次级护盾结界£使用： 教你学会制作次级护盾结界。£\n次级护盾符文£|cff00ff00使用： 在你的盾牌上附加一个次级护盾结界。这个结界在吸收1000点伤害之后失效。 （1秒冷却）|r£\n需要精金锭", --23638
 "|cff0070dd设计图：强效护盾结界|r£拾取后绑定£使用： 教你学会制作强效护盾结界。£\n强效护盾符文£|cff00ff00使用： 在你的盾牌上附加一个强效护盾结界。这个结界在吸收4000点伤害之后失效。 （1秒冷却）|r£\n需要恒金锭", --23639
 "沙纳尔圣物£任务物品", --23642
@@ -18517,12 +18517,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "卡尔琳达的惩戒卷轴£任务物品£唯一£|cff00ff00使用： 释放魔导师卡尔琳达为薇拉·火语准备的法术。听起来就不会有什么好事。 （20秒冷却）|r", --23693
 "狮鹫卵£任务物品£|cffffd100\"从枯木巨魔手中夺回来的狮鹫卵，尚未孵化。\"|r", --23694
 "|cff9e9e9e羽须的地图|r£唯一£|cffffd100\"一张沙德拉洛的手绘地图，标记了被偷走的狮鹫卵的位置。\"|r", --23695
-"[PH] Potion of Heightened Senses [DEP]£|cff00ff00使用： 使你被爆击的几率降低5%。|r", --23696
+"|cff00ff00使用： 使你被爆击的几率降低5%。|r£ ", --23696
 "驯兽棒£任务物品£唯一£|cff00ff00使用： 尝试驯服一只疯狂的龙鹰作为你的宠物，持续15分钟。如果你因为任何原因失去了它的注意力，则驯服过程失败。|r", --23697
-"[PH] Nature Resist Potion [DEP]£ ", --23698
-"[PH] Light Consumable [DEP]£ ", --23699
-"[PH] Glorious Standard of the Alliance [DEP]£ ", --23700
-"[PH] Victorious Standard of the Horde [DEP]£ ", --23701
+"", --23698
+"", --23699
+"", --23700
+"", --23701
 "驯兽棒£任务物品£唯一£|cff00ff00使用： 尝试驯服一只老魔泉豹作为你的宠物，持续15分钟。如果你因为任何原因失去了它的注意力，则驯服过程失败。|r", --23702
 "驯兽棒£任务物品£唯一£|cff00ff00使用： 尝试驯服一只迷雾蝠作为你的宠物，持续15分钟。如果你因为任何原因失去了它的注意力，则驯服过程失败。|r", --23703
 "永歌波尔多酒£|cff00ff00使用： 酒精含量较高的饮料。|r", --23704
@@ -18532,7 +18532,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Mace2H, WarA01/B02Silver (1H, Special)|r£ ", --23708
 "|cffa335ed冰霜战袍|r£ ", --23709
 "Upperdeck徽章#3£ ", --23710
-"魔典：拦截（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放拦截（等级 1）。|r", --23711
+"魔典：拦截（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放拦截（等级 1）。|r", --23711
 "|cffa335ed白色虎崽|r£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --23712
 "|cffa335ed角鹰兽宝宝|r£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --23713
 "|cffa335ed永久紫色焰火|r£|cff00ff00使用： 在你的背包中制造一枚新的，永久性的永久紫色焰火。同时这件饰品会被消耗掉。 （30秒冷却）|r", --23714
@@ -18545,16 +18545,16 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Permanent Gizzard Gum£拾取后绑定£唯一£|cff00ff00使用： Increases Spirit by 25 when consumed.|r£|cffffd100\"Strawberry Flavor\"|r", --23721
 "Permanent R.O.I.D.S.£拾取后绑定£唯一£|cff00ff00使用： Increases Strength by 25 when consumed.|r£|cffffd100\"Robust Operational Imbue Derived From Snickerfang\"|r", --23722
 "卡加斯酋长之拳£任务物品£唯一£|cffffd100\"卡加斯·刃拳酋长的令人生畏的武器。\"|r", --23723
-"QAEnchant Fiery Weapon£|cff00ff00使用： 永久性地为一把近战武器附魔，使它获得附加40点火焰伤害的效果。|r", --23725
+"|cff00ff00使用： 永久性地为一把近战武器附魔，使它获得附加40点火焰伤害的效果。|r£ ", --23725
 "邪能灰烬£任务物品£唯一£|cffffd100\"仍在冒烟的灰烬中透出暗淡的紫色光芒，但是并不灼热。它的冰冷掩盖了蕴涵在灰烬中的巨大能量。\"|r", --23726
-"QAEnchant Gloves +5 Fishing£|cff00ff00使用： Permanently enchant gloves to grant 2 fishing skill.|r", --23727
-"QAEnchant Gloves Riding Skill£|cff00ff00使用： Permanently enchant gloves to grant a minor movement bonus while mounted.|r", --23728
+"|cff00ff00使用： Permanently enchant gloves to grant 2 fishing skill.|r£ ", --23727
+"|cff00ff00使用： Permanently enchant gloves to grant a minor movement bonus while mounted.|r£ ", --23728
 "邪部落军旗£任务物品£唯一", --23729
-"魔典：拦截（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放拦截（等级 2）。|r", --23730
-"魔典：拦截（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放拦截（等级 3）。|r", --23731
+"魔典：拦截（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放拦截（等级 2）。|r", --23730
+"魔典：拦截（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放拦截（等级 3）。|r", --23731
 "虚空石£任务物品£唯一£|cff00ff00使用： 在召唤符文旁召唤一个虚空行者。 （3分钟冷却）|r", --23732
 "仪祭火炬£任务物品£唯一£|cffffd100\"火炬散发出的热量让你几乎无法忍受。\"|r", --23733
-"魔典：顺劈斩（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放顺劈斩（等级 1）。|r", --23734
+"魔典：顺劈斩（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放顺劈斩（等级 1）。|r", --23734
 "高阶术士的护符£任务物品£唯一£|cff00ff00使用： 从高阶术士奈瑟库斯的王座附近的火盆中收集邪能灰烬。|r£|cffffd100\"这条项链上的坠饰是一只小盒子，可以用来从高阶术士的王座两边的火盆中收集邪能灰烬。\"|r", --23735
 "魔铁炸弹£|cff00ff00使用： 对半径5码范围内的所有敌人造成330到770点火焰伤害，并使它们瘫痪3秒。任何伤害都会打断这个效果。对76级以上目标使用的效果很差。|r", --23736
 "精金手雷£|cff00ff00使用： 对半径3码范围内的所有敌人造成450到750点火焰伤害，并使它们瘫痪3秒。任何伤害都会打断这个效果。对80级以上目标使用的效果很差。|r", --23737
@@ -18563,9 +18563,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "风险投资公司机密计划£任务物品£唯一£|cffffd100\"莫古尔·拉兹度克的文件\"|r", --23740
 "Monster - 1H Sword - Widow's Remore£ ", --23741
 "|cff1eff00魔铁步枪|r£ ", --23742
-"|cff9e9e9eMonster - Sword 1H - Widow's Remorse|r£ ", --23743
+"拾取后绑定£ ", --23743
 "邪恶精华£任务物品£|cffffd100\"这份水之精华散发着强烈的敌意。\"|r", --23744
-"魔典：顺劈斩（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放顺劈斩（等级 2）。|r", --23745
+"魔典：顺劈斩（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放顺劈斩（等级 2）。|r", --23745
 "|cff1eff00精金步枪|r£|cff00ff00装备： 攻击强度提高22点。|r", --23746
 "|cff0070dd魔钢火枪|r£|cff00ff00装备： 爆击等级提高13点。|r", --23747
 "|cff0070dd精制氪金步枪|r£|cff00ff00装备： 命中等级提高13点。|r", --23748
@@ -18575,7 +18575,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "纯水之瓶£任务物品£唯一£|cffffd100\"瓶中的水散发出纯净的能量。\"|r", --23752
 "枯顶蘑菇£任务物品", --23753
 "厚毛裂蹄牛皮£任务物品", --23754
-"魔典：顺劈斩（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放顺劈斩（等级 3）。|r", --23755
+"魔典：顺劈斩（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放顺劈斩（等级 3）。|r", --23755
 "曲奇的大餐£|cff00ff00使用： 在18秒内恢复总计61点生命值，进食时必须保持坐姿。如果你花费至少10秒钟来进食，你的耐力和精神都将提高2点，持续15分钟。|r", --23756
 "迅捷螃蟹的肉£任务物品", --23757
 "|cff0070dd旋轮护目镜|r£ ", --23758
@@ -18947,7 +18947,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "褪色的皮甲外衣£ ", --24134
 "褪色的布质外衣£ ", --24135
 "|cff1eff00远行者之弓|r£ ", --24136
-"|cff0070ddPH Plate Ramparts Reward|r£ ", --24137
+"拾取后绑定£ ", --24137
 "|cff1eff00银色轻弩|r£ ", --24138
 "暗淡的奥术精华£任务物品£唯一", --24139
 "|cff9e9e9e黑色骨灰|r£拾取后绑定£|cffffd100\"骨灰盒已经空了，但是也许还可以卖给商人赚些小钱。\"|r", --24140
@@ -19098,7 +19098,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "黄昏之尘£任务物品£唯一£|cffffd100\"这种黑暗的粉尘似乎在不断吸收光芒。\"|r", --24285
 "奥术触媒£任务物品£唯一£|cffffd100\"色泽明亮的粉尘，可以加速魔法材料之间的反应。\"|r", --24286
 "熄焰之水£拾取后绑定£唯一£|cff00ff00使用： 将瓶中的水倒在阿隆索斯礼拜堂的永恒之焰上。|r£|cffffd100\"泛着光芒的黑色液体，足以熄灭永恒的烈焰。\"|r", --24287
-"|cff0070ddzzDEPRECATED Greater Spellthread|r£ ", --24288
+"", --24288
 "时空道标£黑色沼泽£拾取后绑定£唯一£|cff00ff00使用： 在黑色沼泽中召唤一头时光守护龙协助你作战。|r", --24289
 "成熟的孢子囊£ ", --24290
 "沼泽领主的卷须£ ", --24291
@@ -19134,7 +19134,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Staff, Blood Elf A02 Red|r£ ", --24321
 "|cff9e9e9eMonster - Shield, Blood Elf A02|r£ ", --24322
 "炎鹰信函的译文£任务物品£唯一£|cffffd100\"信封上盖有血精灵的徽记。\"|r", --24323
-"|cff9e9e9eMonster - Dagger, Blood Elf A01 Gold|r£ ", --24324
+"单手£ ", --24324
 "|cff9e9e9eMonster - Sword2H, Blood Elf B02 Green|r£ ", --24325
 "|cff9e9e9eMonster - Bow, Blood Elf B01 Yellow|r£ ", --24326
 "|cff9e9e9eMonster - Axe, 1H Blood Elf A02 Purple|r£ ", --24327
@@ -19168,7 +19168,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "铁藤种子£拾取后绑定£唯一£|cff00ff00使用： 召唤粗重的铁藤根须纠缠附近的蒸汽泵控制台。 （1分钟冷却）|r", --24355
 "|cff0070dd废土行者尖刀|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 攻击强度提高28点。|r", --24356
 "|cff0070dd跃动闪电外衣|r£|cff00ff00装备： 法术强度提高18点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --24357
-"|cffa335edQATest +1000 Spell Dmg Ring|r£|cff00ff00装备： 法术强度提高1000点。|r", --24358
+"拾取后绑定£|cff00ff00装备： 法术强度提高1000点。|r", --24358
 "|cff0070dd高贵统御护腿|r£|cff00ff00装备： 命中等级提高18点。|r£|cff00ff00装备： 法术强度提高33点。|r£|cffffd100\"这件护腿可以指引你走向高贵。\"|r", --24359
 "|cff0070dd追踪者的腰带|r£|cff00ff00装备： 命中等级提高14点。|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 攻击强度提高42点。|r", --24360
 "|cff0070dd魔焰长剑|r£|cff00ff00装备： 命中等级提高10点。|r£|cff00ff00装备： 法术强度提高56点。|r", --24361
@@ -20275,7 +20275,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e断裂的触须|r£ ", --25466
 "|cff9e9e9e破损的蛾翼|r£ ", --25467
 "石拳计划书£任务物品£|cffffd100\"沾满了食物、血液、无法辨识的液体和固体。\"|r", --25468
-"魔典：躲闪£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会躲闪。|r", --25469
+"魔典：躲闪£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会躲闪。|r", --25469
 "|cff0070dd金色狮鹫|r£拾取后绑定£唯一£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德使用。|r", --25470
 "|cff0070dd黑色狮鹫|r£拾取后绑定£唯一£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德使用。|r", --25471
 "|cff0070dd雪色狮鹫|r£拾取后绑定£唯一£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德进行召唤。|r", --25472
@@ -20591,7 +20591,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00灌魔之链|r£ ", --25784
 "|cff1eff00内行指环|r£|cff00ff00装备： 爆击等级提高12点。|r£|cff00ff00装备： 法术强度提高13点。|r", --25785
 "|cff1eff00催眠怀表|r£|cff00ff00使用： 降低你对周围半径30码范围内的敌人的威胁值，降低它们攻击你的几率。 （5分钟冷却）|r£|cffffd100\"我要从三数到零。当我数到零的时候，你就不会再打我了......理论上应该是这样。\"|r", --25786
-"|cff1eff00敏锐咒符|r£|cff00ff00使用： 躲闪等级提高192，持续10秒。 （1分钟 30秒冷却）|r", --25787
+"|cff1eff00敏锐咒符|r£|cff00ff00使用： 躲闪等级提高192，持续10秒。 （1分钟30秒冷却）|r", --25787
 "|cff0070dd无惧护手|r£|cff00ff00装备： 使你的盾牌格挡等级提高25点。|r£|cff00ff00装备： 使你的盾牌格挡值提高75点。|r", --25788
 "|cff0070dd符文蚀刻腰带|r£|cff00ff00装备： 命中等级提高24点。|r£|cff00ff00装备： 攻击强度提高50点。|r", --25789
 "|cff0070dd远征军斥候护肩|r£|cff00ff00装备： 命中等级提高24点。|r£|cff00ff00装备： 攻击强度提高50点。|r", --25790
@@ -20701,7 +20701,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd鼓舞之大地风暴钻石|r£+14 法术强度，-2% 威胁£  |cff808080需要 红色宝石的数量多于蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --25897
 "|cff0070dd坚韧之大地风暴钻石|r£+12 防御等级，命中时有一定几率回复生命值£  |cff808080需要 至少5颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --25898
 "|cff0070dd蛮力之大地风暴钻石|r£+3 近战伤害，有一定几率令目标昏迷£  |cff808080需要 至少2颗红色宝石|r\n  |cff808080需要 至少2颗黄色宝石|r\n  |cff808080需要 至少2颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --25899
-"魔典：恶魔狂暴£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放恶魔狂暴。|r", --25900
+"魔典：恶魔狂暴£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放恶魔狂暴。|r", --25900
 "|cff0070dd洞察之大地风暴钻石|r£+12 智力，施法时有一定几率回复法力值£  |cff808080需要 至少2颗红色宝石|r\n  |cff808080需要 至少2颗黄色宝石|r\n  |cff808080需要 至少2颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --25901
 "图鉴：强能之大地风暴钻石£拾取后绑定£使用： 教你学会切割强能之大地风暴钻石。£|cff0070dd\n强能之大地风暴钻石|r£+18 耐力，-15% 昏迷时间£  |cff808080需要 至少3颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r£\n需要大地风暴钻石", --25902
 "图鉴：鼓舞之大地风暴钻石£拾取后绑定£使用： 教你学会切割鼓舞之大地风暴钻石。£|cff0070dd\n鼓舞之大地风暴钻石|r£+14 法术强度，-2% 威胁£  |cff808080需要 红色宝石的数量多于蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r£\n需要大地风暴钻石", --25903
@@ -20737,8 +20737,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00锋锐利刃|r£|cff00ff00装备： 命中等级提高9点。|r", --25933
 "|cff1eff00尖刺重锤|r£ ", --25934
 "|cff1eff00无敌法杖|r£|cff00ff00装备： 使你的韧性等级提高23点。|r£|cff00ff00装备： 法术强度提高42点。|r", --25935
-"|cff1eff00泰罗卡活力石板|r£|cff00ff00装备： 命中等级提高22点。|r£|cff00ff00使用： 法术强度提高84点，持续15秒。 （1分钟 30秒冷却）|r", --25936
-"|cff1eff00泰罗卡精准石板|r£|cff00ff00装备： 命中等级提高22点。|r£|cff00ff00使用： 攻击强度提高140点，持续15秒。 （1分钟 30秒冷却）|r", --25937
+"|cff1eff00泰罗卡活力石板|r£|cff00ff00装备： 命中等级提高22点。|r£|cff00ff00使用： 法术强度提高84点，持续15秒。 （1分钟30秒冷却）|r", --25936
+"|cff1eff00泰罗卡精准石板|r£|cff00ff00装备： 命中等级提高22点。|r£|cff00ff00使用： 攻击强度提高140点，持续15秒。 （1分钟30秒冷却）|r", --25937
 "圣光的秘密£任务物品£唯一£|cffffd100\"这本书被阅读过多次，但是它的主人把它保养得很好。\"|r", --25938
 "|cff0070dd灵火魔杖|r£|cff00ff00装备： 命中等级提高7点。|r£|cff00ff00装备： 法术强度提高11点。|r", --25939
 "|cff0070dd利爪神像|r£|cff00ff00装备： 每当你的终结技命中目标，你的每个连击点数都提供20%的几率为你恢复90到|r|cff7f7f7f110|r|cff00ff00点生命值。|r", --25940
@@ -20847,8 +20847,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "沃舒古水晶尘样本£拾取后绑定£唯一（100）£|cffffd100\"当联盟控制哈兰时，你可以把10份样本交给主研究员卡托斯。\"|r", --26043
 "|cff1eff00哈兰研究勋章|r£拾取后绑定", --26044
 "|cff1eff00哈兰作战勋章|r£拾取后绑定", --26045
-"[PH] Mark of Nagrand, Alliance£拾取后绑定", --26046
-"[PH] Mark of Nagrand, Horde£拾取后绑定", --26047
+"拾取后绑定£ ", --26046
+"拾取后绑定£ ", --26047
 "给基亚隆的信£任务物品£唯一", --26048
 "|cff1eff00老雷象之牙|r£ ", --26049
 "|cff1eff00阿古斯之拳|r£ ", --26050
@@ -20873,14 +20873,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff0060 TEST Green Cloth Legs|r£ ", --26069
 "|cff1eff0060 TEST Green Cloth Shoulder|r£ ", --26070
 "|cff1eff0060 TEST Green Cloth Wrist|r£ ", --26071
-"|cff1eff0061 TEST Green Cloth Belt|r£ ", --26072
-"|cff1eff0061 TEST Green Cloth Boot|r£ ", --26073
-"|cff1eff0061 TEST Green Cloth Chest|r£ ", --26074
-"|cff1eff0061 TEST Green Cloth Hand|r£ ", --26075
-"|cff1eff0061 TEST Green Cloth Head|r£ ", --26076
-"|cff1eff0061 TEST Green Cloth Legs|r£ ", --26077
-"|cff1eff0061 TEST Green Cloth Shoulder|r£ ", --26078
-"|cff1eff0061 TEST Green Cloth Wrist|r£ ", --26079
+"装备后绑定£ ", --26072
+"装备后绑定£ ", --26073
+"装备后绑定£ ", --26074
+"装备后绑定£ ", --26075
+"装备后绑定£ ", --26076
+"装备后绑定£ ", --26077
+"装备后绑定£ ", --26078
+"装备后绑定£ ", --26079
 "|cff1eff0062 TEST Green Cloth Belt|r£ ", --26080
 "|cff1eff0062 TEST Green Cloth Boot|r£ ", --26081
 "|cff1eff0062 TEST Green Cloth Chest|r£ ", --26082
@@ -21644,7 +21644,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff0062 TEST Green Druid Head|r£ ", --26840
 "|cff1eff0062 TEST Green Druid Legs|r£ ", --26841
 "|cff1eff0062 TEST Green Druid Shoulder|r£ ", --26842
-"|cff1eff0062 TEST Green Druid Wrist|r£ ", --26843
+"装备后绑定£ ", --26843
 "|cff1eff0063 TEST Green Druid Belt|r£ ", --26844
 "|cff1eff0063 TEST Green Druid Boot|r£ ", --26845
 "|cff1eff0063 TEST Green Druid Chest|r£ ", --26846
@@ -22832,8 +22832,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Sword, Shivan|r£ ", --28037
 "爆盐PU-36炸弹虚空模组£拾取后绑定£唯一£持续时间：1小时£|cff00ff00使用： 向燃烧军团传送器投掷超级炸弹。 （10秒冷却）|r£|cffffd100\"制造商：地精加尔文，52区\"|r", --28038
 "劣质炸弹£任务物品£唯一£|cffffd100\"这些炸弹是邪兽人的\"工程学\"水准的绝佳体现。即便是最有成就的地精工程学专家看到它们也会感到无地自容。\"|r", --28039
-"|cff0070dd伊利达雷的复仇|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00使用： 法术强度提高120点，持续15秒。 （1分钟 30秒冷却）|r", --28040
-"|cff0070dd刃拳的宽容|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00使用： 攻击强度提高200点，持续15秒。 （1分钟 30秒冷却）|r", --28041
+"|cff0070dd伊利达雷的复仇|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00使用： 法术强度提高120点，持续15秒。 （1分钟30秒冷却）|r", --28040
+"|cff0070dd刃拳的宽容|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00使用： 攻击强度提高200点，持续15秒。 （1分钟30秒冷却）|r", --28041
 "|cff0070dd皇家护符|r£|cff00ff00装备： 防御等级提高26。|r£|cff00ff00使用： 生命值上限提高900点，持续15秒。 （5分钟冷却）|r", --28042
 "|cff1eff00恶魔猎杀者坠饰|r£|cff00ff00装备： 防御等级提高12。|r£|cff00ff00装备： 命中等级提高6点。|r£|cff00ff00装备： 使你的格挡等级提高10。|r", --28043
 "|cff1eff00恶魔追踪者指环|r£|cff00ff00装备： 使你的躲闪等级提高6点。|r£|cff00ff00装备： 命中等级提高10点。|r", --28044
@@ -22860,12 +22860,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00毁灭圣契|r£|cff00ff00装备： 使你的驱邪术和神圣愤怒的法术强度提高120点。|r", --28065
 "|cff1eff00闪电图腾|r£|cff00ff00装备： 使你的闪电箭所消耗的法力值减少15点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --28066
 "|cff9e9e9eMonster - Staff, Atiesh (Medivh's)|r£ ", --28067
-"魔典：受难（等级 6）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 6）。|r", --28068
+"魔典：受难（等级 6）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 6）。|r", --28068
 "|cff0070dd金色塞纳里奥胫甲|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --28069
 "|cff0070dd翠绿裹手|r£|cff00ff00装备： 爆击等级提高8点。|r£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f4|r|cff00ff00点法力值。|r", --28070
-"魔典：痛楚（等级 1）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放痛楚（等级 1）。|r", --28071
-"魔典：痛楚（等级 2）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放痛楚（等级 2）。|r", --28072
-"魔典：痛楚（等级 3）£拾取后绑定£唯一£|cff00ff00使用： 教恶魔卫士学会施放痛楚（等级 3）。|r", --28073
+"魔典：痛楚（等级 1）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放痛楚（等级 1）。|r", --28071
+"魔典：痛楚（等级 2）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放痛楚（等级 2）。|r", --28072
+"魔典：痛楚（等级 3）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教恶魔卫士学会施放痛楚（等级 3）。|r", --28073
 "|cff0070dd钉皮绿色护踝|r£|cff00ff00装备： 使你的躲闪等级提高8点。|r£|cff00ff00装备： 命中等级提高8点。|r", --28074
 "|cff0070dd毁灭者的衬肩|r£|cff00ff00装备： 爆击等级提高9点。|r£|cff00ff00装备： 法术强度提高35点。|r", --28075
 "Level 60 Test Gear Green - Leather - Rogue 3£ ", --28076
@@ -23372,7 +23372,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed小红帽的披风|r£|cff00ff00装备： 法术强度提高26点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --28582
 "|cffa335ed大灰狼的头|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 法术强度提高47点。|r", --28583
 "|cffa335ed大灰狼的爪子|r£|cff00ff00装备： 爆击等级提高20点。|r", --28584
-"|cffa335ed红宝石靴子|r£|cff00ff00装备： 命中等级提高16点。|r£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00使用： 将你传送回寒脊山谷。与城镇中的旅店老板交谈可以改变你所设定的家的位置。|r£|cffffd100\"没有什么地方能比家更温暖。\"|r", --28585
+"|cffa335ed红宝石靴子|r£|cff00ff00装备： 命中等级提高16点。|r£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00使用： 将你传送回北郡山谷。与城镇中的旅店老板交谈可以改变你所设定的家的位置。|r£|cffffd100\"没有什么地方能比家更温暖。\"|r", --28585
 "|cffa335ed邪恶女巫帽|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 法术强度提高43点。|r", --28586
 "|cffa335ed遗产|r£|cff00ff00装备： 攻击强度提高80点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r£|cffffd100\"传说在德莱尼人逃出阿古斯世界时，德莱尼主教所持的就是这把巨斧。\"|r", --28587
 "|cffa335ed蓝钻魔杖|r£|cff00ff00装备： 法术强度提高15点。|r", --28588
@@ -23789,7 +23789,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed战神胫甲|r£|cff00ff00装备： 爆击等级提高37点。|r", --29022
 "|cffa335ed战神肩铠|r£|cff00ff00装备： 命中等级提高13点。|r", --29023
 "|cff1eff00风暴之眼荣誉奖章|r£拾取后绑定£唯一（100）£|cffffd100\"为表彰在风暴之眼中作战而颁发的奖章\"|r", --29024
-"[UNUSED]Triangulation Device£任务物品£唯一", --29025
+"任务物品£唯一", --29025
 "阿塔玛水晶£任务物品£唯一£|cffffd100\"这块水晶令你有充满力量和神清气爽的感觉。\"|r", --29026
 "不稳定的迁跃裂隙生成器£任务物品£唯一£|cff00ff00使用： 在迁跃平原使用，制造一条不稳定的迁跃裂隙。 （2分钟冷却）|r£|cffffd100\"魔法和科技的结合体，用来进行危险的迁跃试验。\"|r", --29027
 "|cffa335ed飓风头饰|r£|cff00ff00装备： 法术强度提高40点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --29028
@@ -23884,7 +23884,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd风暴尖塔外衣|r£|cff00ff00装备： 法术强度提高39点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f16|r|cff00ff00点法力值。|r", --29117
 "|cff0070dd走私者的弹药包|r£拾取后绑定£唯一£18格弹药袋", --29118
 "|cffa335ed哈拉迈德的契约|r£ ", --29119
-"|cffa335ed图样：信念外衣|r£职业：牧师£使用： 教你学会制作信念外衣。£|cffa335ed\n信念外衣|r£拾取后绑定£胸部£布甲£109点护甲£+14 耐力£职业：牧师£|cff00ff00装备： 法术强度提高39点。|r£|cff00ff00装备： 每5秒恢复8点法力值。|r£|cff00ff00装备： 使你的消隐技能的冷却时间缩短2秒。|r£\n需要符文布卷 (12), 月布 (10), 正义宝珠 (4), 金珍珠 (4), 幻象染料 (10), 符文线 (2)", --29120
+"|cffa335ed图样：信念外衣|r£使用： 教你学会制作信念外衣。£|cffa335ed\n信念外衣|r£拾取后绑定£胸部£布甲£109点护甲£+14 耐力£|cff00ff00装备： 法术强度提高39点。|r£|cff00ff00装备： 每5秒恢复8点法力值。|r£|cff00ff00装备： 使你的消隐技能的冷却时间缩短2秒。|r£\n需要符文布卷 (12), 月布 (10), 正义宝珠 (4), 金珍珠 (4), 幻象染料 (10), 符文线 (2)", --29120
 "|cffa335ed考莱兹的狡诈|r£|cff00ff00装备： 攻击强度提高38点。|r", --29121
 "|cffa335ed虚空行者兜帽|r£ ", --29122
 "|cffa335ed光明勋章|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --29123
@@ -23896,7 +23896,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd学者的长袍|r£|cff00ff00装备： 法术强度提高29点。|r", --29129
 "|cff0070dd奥金尼法杖|r£|cff00ff00装备： 命中等级提高19点。|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 法术强度提高121点。|r", --29130
 "|cff0070dd侍从护腿|r£|cff00ff00装备： 命中等级提高26点。|r£|cff00ff00装备： 攻击强度提高92点。|r", --29131
-"|cff0070dd占星者的血钻石|r£|cff00ff00装备： 命中等级提高32点。|r£|cff00ff00使用： 法术强度提高150点，持续15秒。 （1分钟 30秒冷却）|r", --29132
+"|cff0070dd占星者的血钻石|r£|cff00ff00装备： 命中等级提高32点。|r£|cff00ff00使用： 法术强度提高150点，持续15秒。 （1分钟30秒冷却）|r", --29132
 "|cff0070dd先知的藤条|r£|cff00ff00装备： 法术强度提高122点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r", --29133
 "|cff0070dd天选者护手|r£|cff00ff00装备： 防御等级提高35。|r", --29134
 "|cff0070dd唤地者头饰|r£|cff00ff00装备： 攻击强度提高50点。|r", --29135
@@ -23942,7 +23942,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed纯净圣光之槌|r£|cff00ff00装备： 法术强度提高159点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --29175
 "|cffa335ed沙塔尔纹章盾|r£|cff00ff00装备： 防御等级提高11。|r£|cff00ff00装备： 使你的盾牌格挡值提高30点。|r", --29176
 "|cffa335ed阿达尔的命令|r£ ", --29177
-"|cff0070dd克希利的礼物|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00使用： 法术强度提高150点，持续15秒。 （1分钟 30秒冷却）|r", --29179
+"|cff0070dd克希利的礼物|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00使用： 法术强度提高150点，持续15秒。 （1分钟30秒冷却）|r", --29179
 "|cff0070dd赐福鳞片束带|r£|cff00ff00装备： 攻击强度提高70点。|r", --29180
 "|cffa335ed时间流逝碎片|r£|cff00ff00装备： 使你的韧性等级提高24点。|r£|cff00ff00使用： 降低你对周围半径30码范围内的敌人的威胁值，降低它们攻击你的几率。 （2分钟冷却）|r", --29181
 "|cffa335ed裂隙制造者|r£|cff00ff00装备： 攻击强度提高22点。|r", --29182
@@ -24309,7 +24309,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "日怒奥术简报£任务物品", --29546
 "风鳞£ ", --29547
 "虚空龙鳞£ ", --29548
-"|cff0070dd圣典：坚韧祷言 III|r£职业：牧师£|cff00ff00使用： 教你学会施放坚韧祷言（等级 3）。|r", --29549
+"|cff0070dd圣典：坚韧祷言 III|r£|cff00ff00使用： 教你学会施放坚韧祷言（等级 3）。|r", --29549
 "|cff0070dd秘典：造水术 IX|r£使用： 教你学会施放造水术（等级 9）。£\n魔法冰川水£魔法制造的物品£|cff00ff00使用： 在30秒内恢复总计7200点法力值，喝水时必须保持坐姿。|r", --29550
 "|cff9e9e9e砍下来的尾巴|r£ ", --29551
 "|cff9e9e9e破损的剥石者利爪|r£ ", --29552
@@ -24511,21 +24511,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "法兰伦鞭笞者枝条£任务物品", --29749
 "|cff1eff00复仇军静止间钥匙|r£|cff00ff00使用： 打开复仇军静止间。|r", --29750
 "塔布羊角样本£任务物品", --29751
-"|cffa335ed阵亡卫士的胸甲|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --29753
+"|cffa335ed阵亡卫士的胸甲|r£拾取后绑定", --29753
 "|cffa335ed阵亡勇士的胸甲|r£拾取后绑定", --29754
-"|cffa335ed阵亡英雄的胸甲|r£拾取后绑定", --29755
-"|cffa335ed阵亡英雄的手套|r£拾取后绑定", --29756
+"|cffa335ed阵亡英雄的胸甲|r£拾取后绑定£职业：猎人, 法师, 术士", --29755
+"|cffa335ed阵亡英雄的手套|r£拾取后绑定£职业：猎人, 法师, 术士", --29756
 "|cffa335ed阵亡勇士的手套|r£拾取后绑定", --29757
-"|cffa335ed阵亡卫士的手套|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --29758
-"|cffa335ed阵亡英雄的头盔|r£拾取后绑定", --29759
+"|cffa335ed阵亡卫士的手套|r£拾取后绑定", --29758
+"|cffa335ed阵亡英雄的头盔|r£拾取后绑定£职业：猎人, 法师, 术士", --29759
 "|cffa335ed阵亡勇士的头盔|r£拾取后绑定", --29760
-"|cffa335ed阵亡卫士的头盔|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --29761
-"|cffa335ed阵亡英雄的护肩|r£拾取后绑定", --29762
+"|cffa335ed阵亡卫士的头盔|r£拾取后绑定", --29761
+"|cffa335ed阵亡英雄的护肩|r£拾取后绑定£职业：猎人, 法师, 术士", --29762
 "|cffa335ed阵亡勇士的护肩|r£拾取后绑定", --29763
-"|cffa335ed阵亡卫士的护肩|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --29764
-"|cffa335ed阵亡英雄的护腿|r£拾取后绑定", --29765
+"|cffa335ed阵亡卫士的护肩|r£拾取后绑定", --29764
+"|cffa335ed阵亡英雄的护腿|r£拾取后绑定£职业：猎人, 法师, 术士", --29765
 "|cffa335ed阵亡勇士的护腿|r£拾取后绑定", --29766
-"|cffa335ed阵亡卫士的护腿|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --29767
+"|cffa335ed阵亡卫士的护腿|r£拾取后绑定", --29767
 "巨大的多头怪之心£任务物品£唯一", --29768
 "诊断报告£任务物品£唯一£|cffffd100\"一份印有苏瑟伦生态圆顶发生器诊断结果的报告。\"|r", --29769
 "实验维修设备£任务物品£唯一", --29770
@@ -24647,7 +24647,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Hunter 105 Epic Ammo Box£ ", --29886
 "Hunter 150 Epic Ammo Box£ ", --29887
 "|cffa335edHunter 150 Epic Test Gun|r£ ", --29888
-"|cff0070ddHunter 105/150 Epic Test Ammo Pouch|r£拾取后绑定£唯一£18格弹药袋", --29889
+"拾取后绑定£唯一£18格弹药袋", --29889
 "|cffa335edDruid 105 Epic Feral Test Chest|r£|cff00ff00装备： 命中等级提高31点。|r£|cff00ff00装备： 爆击等级提高94点。|r£|cff00ff00装备： 在猎豹、熊、巨熊和枭兽形态下的攻击强度提高588点。|r", --29890
 "|cffa335edDruid 150 Epic Feral Test Chest|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 爆击等级提高125点。|r£|cff00ff00装备： 在猎豹、熊、巨熊和枭兽形态下的攻击强度提高886点。|r", --29891
 "|cffa335edDruid 105 Epic Moonkin Test Chest|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 爆击等级提高142点。|r£|cff00ff00装备： 法术强度提高611点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 在猎豹、熊、巨熊和枭兽形态下的攻击强度提高588点。|r", --29892
@@ -24993,20 +24993,20 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed诺达希尔愤怒褶裙|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 法术强度提高54点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --30234
 "|cffa335ed诺达希尔愤怒护肩|r£|cff00ff00装备： 命中等级提高15点。|r£|cff00ff00装备： 法术强度提高41点。|r", --30235
 "|cffa335ed战败勇士的胸甲|r£拾取后绑定", --30236
-"|cffa335ed战败卫士的胸甲|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --30237
-"|cffa335ed战败英雄的胸甲|r£拾取后绑定", --30238
+"|cffa335ed战败卫士的胸甲|r£拾取后绑定", --30237
+"|cffa335ed战败英雄的胸甲|r£拾取后绑定£职业：猎人, 法师, 术士", --30238
 "|cffa335ed战败勇士的手套|r£拾取后绑定", --30239
-"|cffa335ed战败卫士的手套|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --30240
-"|cffa335ed战败英雄的手套|r£拾取后绑定", --30241
+"|cffa335ed战败卫士的手套|r£拾取后绑定", --30240
+"|cffa335ed战败英雄的手套|r£拾取后绑定£职业：猎人, 法师, 术士", --30241
 "|cffa335ed战败勇士的头盔|r£拾取后绑定", --30242
-"|cffa335ed战败卫士的头盔|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --30243
-"|cffa335ed战败英雄的头盔|r£拾取后绑定", --30244
+"|cffa335ed战败卫士的头盔|r£拾取后绑定", --30243
+"|cffa335ed战败英雄的头盔|r£拾取后绑定£职业：猎人, 法师, 术士", --30244
 "|cffa335ed战败勇士的护腿|r£拾取后绑定", --30245
-"|cffa335ed战败卫士的护腿|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --30246
-"|cffa335ed战败英雄的护腿|r£拾取后绑定", --30247
+"|cffa335ed战败卫士的护腿|r£拾取后绑定", --30246
+"|cffa335ed战败英雄的护腿|r£拾取后绑定£职业：猎人, 法师, 术士", --30247
 "|cffa335ed战败勇士的护肩|r£拾取后绑定", --30248
-"|cffa335ed战败卫士的护肩|r£拾取后绑定£职业：战士, 牧师, 德鲁伊", --30249
-"|cffa335ed战败英雄的护肩|r£拾取后绑定", --30250
+"|cffa335ed战败卫士的护肩|r£拾取后绑定", --30249
+"|cffa335ed战败英雄的护肩|r£拾取后绑定£职业：猎人, 法师, 术士", --30250
 "莉娜的缩小粉尘£任务物品£唯一£|cff00ff00使用： 缩小血槌巨狼的体型，并减弱它们的攻击性。同一时间内不能对同一目标使用多次。无法对睡眠中的狼使用。 （5秒冷却）|r", --30251
 "|cff1eff00神秘恩卡特魔杖|r£|cff00ff00装备： 法术强度提高8点。|r", --30252
 "|cff1eff00虚灵手套|r£|cff00ff00装备： 法术强度提高19点。|r", --30253
@@ -25049,14 +25049,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00能量聚焦护腿|r£|cff00ff00装备： 法术强度提高27点。|r", --30290
 "|cff1eff00节点卫士肩铠|r£|cff00ff00装备： 使你的盾牌格挡等级提高17点。|r£|cff00ff00装备： 使你的盾牌格挡值提高51点。|r", --30291
 "|cffe5cc7f我的小伙计|r£拾取后绑定£唯一£|cff00ff00使用： 对目标发射威力强大的火箭，造成0点伤害并使其昏迷直到主动取消。    这玩意儿真带劲儿……|r£|cffffd100\"Bury those cock-a-roaches...\"|r", --30292
-"|cff1eff00神圣灵感|r£|cff00ff00使用： 法术强度提高127点，持续15秒。 （1分钟 30秒冷却）|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r", --30293
+"|cff1eff00神圣灵感|r£|cff00ff00使用： 法术强度提高127点，持续15秒。 （1分钟30秒冷却）|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r", --30293
 "|cff1eff00红色尖帽|r£|cff00ff00装备： 法术强度提高43点。|r", --30294
 "|cff1eff00异种尖刺护肩|r£|cff00ff00装备： 攻击强度提高32点。|r", --30295
 "|cff1eff00虔诚者的失落胸甲|r£|cff00ff00装备： 防御等级提高21。|r£|cff00ff00装备： 法术强度提高29点。|r", --30296
 "|cff0070dd唤星者头饰|r£|cff00ff00装备： 爆击等级提高18点。|r£|cff00ff00装备： 法术强度提高47点。|r", --30297
 "|cff0070dd虚空杀手外套|r£|cff00ff00装备： 法术强度提高47点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f10|r|cff00ff00点法力值。|r", --30298
 "|cff0070dd唤星者板甲护腿|r£|cff00ff00装备： 爆击等级提高17点。|r£|cff00ff00装备： 法术强度提高47点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --30299
-"|cff0070dd达比雷之谜|r£|cff00ff00装备： 防御等级提高30。|r£|cff00ff00使用： 格挡等级提高125，持续15秒。 （1分钟 30秒冷却）|r", --30300
+"|cff0070dd达比雷之谜|r£|cff00ff00装备： 防御等级提高30。|r£|cff00ff00使用： 格挡等级提高125，持续15秒。 （1分钟30秒冷却）|r", --30300
 "|cffa335ed图样：自然力量腰带|r£拾取后绑定£使用： 教你学会制作自然力量腰带。£|cffa335ed\n自然力量腰带|r£装备后绑定£腰部£227点护甲£+29 力量£+27 敏捷£+38 耐力£+12 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+4 耐力|r£\n需要虚空漩涡 (2), 重结缔皮 (4), 源生生命 (10), 符文线 (2), 源生空气 (10)", --30301
 "|cffa335ed图样：深邃暗影腰带|r£拾取后绑定£使用： 教你学会制作深邃暗影腰带。£|cffa335ed\n深邃暗影腰带|r£装备后绑定£腰部£227点护甲£+32 敏捷£+14 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+3 敏捷|r£|cff00ff00装备： 命中等级提高18点。|r£|cff00ff00装备： 攻击强度提高66点。|r£\n需要虚空漩涡 (2), 重结缔皮 (4), 源生暗影 (10), 符文线 (2), 源生空气 (10)", --30302
 "|cffa335ed图样：黑鹰腰带|r£拾取后绑定£使用： 教你学会制作黑鹰腰带。£|cffa335ed\n黑鹰腰带|r£装备后绑定£腰部£506点护甲£+17 敏捷£+20 耐力£+23 智力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f黄色插槽|r£|cff7f7f7f镶孔奖励：+3 敏捷|r£|cff00ff00装备： 爆击等级提高17点。|r£|cff00ff00装备： 攻击强度提高66点。|r£\n需要虚空漩涡 (2), 重结缔皮 (4), 源生空气 (10), 风鳞 (10), 符文线 (2)", --30303
@@ -25096,14 +25096,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00维序派板甲头盔|r£|cff00ff00装备： 使你的招架等级提高11点。|r£|cff00ff00装备： 命中等级提高12点。|r", --30337
 "|cff1eff00占卜者披风|r£|cff00ff00装备： 法术强度提高19点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f6|r|cff00ff00点法力值。|r", --30338
 "|cff1eff00维序派刺客指环|r£|cff00ff00装备： 命中等级提高12点。|r", --30339
-"|cff1eff00灭星饰物|r£|cff00ff00装备： 命中等级提高26点。|r£|cff00ff00使用： 法术强度提高125点，持续15秒。 （1分钟 30秒冷却）|r", --30340
+"|cff1eff00灭星饰物|r£|cff00ff00装备： 命中等级提高26点。|r£|cff00ff00使用： 法术强度提高125点，持续15秒。 （1分钟30秒冷却）|r", --30340
 "|cff1eff00驯兽者的护手|r£|cff00ff00装备： 使你的精准等级提高18点。|r", --30341
 "|cff1eff00维序派腰带|r£|cff00ff00装备： 法术强度提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --30342
 "|cff0070dd部落勋章|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --30343
 "|cff0070dd部落勋章|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --30344
 "|cff0070dd部落勋章|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --30345
 "|cff0070dd部落勋章|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --30346
-"Alexander's Test Healthstone£魔法制造的物品£唯一£|cff00ff00使用： 冬拥湖的水可以令所有机械单位的电路发生故障。|r£|cff00ff00使用： 立即恢复500点生命值。|r", --30347
+"魔法制造的物品£唯一£|cff00ff00使用： 冬拥湖的水可以令所有机械单位的电路发生故障。|r£|cff00ff00使用： 立即恢复500点生命值。|r", --30347
 "|cff0070dd联盟勋章|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --30348
 "|cff0070dd联盟勋章|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --30349
 "|cff0070dd联盟勋章|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --30350
@@ -25183,7 +25183,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Monster - Staff, Blood Elf A01 Red - High Red Glow£ ", --30424
 "血环之血£任务物品£|cff00ff00使用： 放在被诅咒的大锅中......|r", --30425
 "库斯卡宝箱钥匙£拾取后绑定£|cff00ff00使用： 打开一只库斯卡宝箱。|r", --30426
-"Naga Treasure Map - Questgiver (PH)£唯一£|cffffd100\"藏宝地点用X标了出来。\"|r", --30427
+"唯一£|cffffd100\"藏宝地点用X标了出来。\"|r", --30427
 "诅咒密码的第一块碎片£任务物品£唯一£|cffffd100\"你甚至不知道该从哪里开始读起......\"|r", --30428
 "格洛姆托的箱子£任务物品£唯一", --30429
 "沸腾之血£任务物品", --30430
@@ -25916,7 +25916,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd虚空钢铸护手|r£ ", --31164
 "|cff0070dd虚空钢纹手套|r£ ", --31165
 "|cff0070dd虚空钢丝裹手|r£ ", --31166
-"[PH] Gnome Cannon Reagent£ ", --31167
+"", --31167
 "|cff0070dd恶魔熔铸护胸|r£ ", --31168
 "斯克瑟隆作战图腾£任务物品£唯一", --31169
 "|cff0070dd恶魔熔铸战甲|r£ ", --31170
@@ -26253,7 +26253,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "灵藤水晶£任务物品", --31504
 "|cff0070dd手册：英勇打击 XI|r£|cff00ff00使用： 教你学会施放英勇打击（等级 11）。|r", --31505
 "|cff0070dd手册：复仇 VIII|r£|cff00ff00使用： 教你学会施放复仇（等级 8）。|r", --31506
-"|cff0070dd魔典：灼热之痛 VIII|r£ ", --31507
+"|cff0070dd魔典：灼热之痛 VIII|r£职业：术士", --31507
 "|cff1eff00女巫护腿|r£|cff00ff00装备： 爆击等级提高10点。|r£|cff00ff00装备： 法术强度提高25点。|r", --31508
 "|cff1eff00拜龙教徒兜帽|r£|cff00ff00装备： 爆击等级提高37点。|r£|cff00ff00装备： 法术强度提高25点。|r", --31509
 "|cff1eff00伐木手套|r£|cff00ff00装备： 法术强度提高18点。|r", --31510
@@ -26360,9 +26360,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Sword, Flaming|r£ ", --31612
 "|cffa335ed角斗士的雕饰板甲护胸|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高27点。|r£|cff00ff00装备： 法术强度提高22点。|r", --31613
 "|cffa335ed角斗士的雕饰板甲手套|r£|cff00ff00装备： 爆击等级提高24点。|r£|cff00ff00装备： 使你的韧性等级提高14点。|r£|cff00ff00装备： 法术强度提高28点。|r£|cff00ff00装备： 使你的圣光闪现的爆击几率提高2%。|r", --31614
-"|cff1eff00上古德莱尼奥术神器|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00使用： 法术强度提高120点，持续15秒。 （1分钟 30秒冷却）|r", --31615
+"|cff1eff00上古德莱尼奥术神器|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00使用： 法术强度提高120点，持续15秒。 （1分钟30秒冷却）|r", --31615
 "|cffa335ed角斗士的雕饰板甲头盔|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 使你的韧性等级提高32点。|r£|cff00ff00装备： 法术强度提高30点。|r", --31616
-"|cff1eff00上古德莱尼作战咒符|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00使用： 攻击强度提高200点，持续15秒。 （1分钟 30秒冷却）|r", --31617
+"|cff1eff00上古德莱尼作战咒符|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00使用： 攻击强度提高200点，持续15秒。 （1分钟30秒冷却）|r", --31617
 "|cffa335ed角斗士的雕饰板甲护腿|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高31点。|r£|cff00ff00装备： 法术强度提高37点。|r", --31618
 "|cffa335ed角斗士的雕饰板甲护肩|r£|cff00ff00装备： 爆击等级提高23点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 法术强度提高19点。|r", --31619
 "|cff0070dd大元帅的月布手套|r£|cff00ff00装备： 使你的韧性等级提高14点。|r£|cff00ff00装备： 使你的心灵尖啸的效果持续时间延长1秒。|r£|cff00ff00装备： 法术强度提高25点。|r", --31620
@@ -26548,7 +26548,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Claw, ZulGurub 02 Offhand|r£ ", --31803
 "塞纳里奥远征队战袍£ ", --31804
 "|cff9e9e9eMonster - Dagger, Outland Raid D04, Green|r£ ", --31805
-"|cff9e9e9eMonster - Sword, Zul'gurub 02|r£ ", --31806
+"单手£ ", --31806
 "自然能量炮弹£任务物品£唯一£|cff00ff00使用： 控制一门死亡之门邪能火炮，持续最多3分钟。使用火炮可以攻击迁跃门，使用火焰喷射器可以攻击不稳定的邪能小鬼和虚空猎犬。 （1分钟冷却）|r", --31807
 "萨博迈恩的徽记£任务物品£唯一£|cff00ff00使用： 召唤萨博迈恩帮助你与苟克作战。 （30秒冷却）|r", --31808
 "常青林魔杖£任务物品£唯一£|cff00ff00使用： 在距离30码的范围内对犬王拜尔蒙使用，召唤一些常青林古树协助你对抗这个艾瑞达恶魔，持续2.50分钟。|r", --31809
@@ -26578,7 +26578,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed褐色骑乘塔布羊缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --31834
 "|cffa335ed白色骑乘塔布羊缰绳|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --31835
 "|cffa335ed白色骑乘塔布羊缰绳|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --31836
-"|cff0070dd圣典：暗影防护祷言 II|r£职业：牧师£|cff00ff00使用： 教你学会施放暗影防护祷言（等级 2）。|r", --31837
+"|cff0070dd圣典：暗影防护祷言 II|r£|cff00ff00使用： 教你学会施放暗影防护祷言（等级 2）。|r", --31837
 "特效作战治疗药水£拾取后绑定£唯一（10）£|cff00ff00使用： 恢复1050到1750点生命值。|r£|cffffd100\"在阿拉希盆地的农场中酿制的私酒。\"|r", --31838
 "特效作战治疗药水£拾取后绑定£唯一（10）£|cff00ff00使用： 恢复1050到1750点生命值。|r£|cffffd100\"从奥特兰克山谷的雪水中萃取而来。\"|r", --31839
 "特效作战法力药水£拾取后绑定£唯一（10）£|cff00ff00使用： 恢复1350到2250点法力值。|r£|cffffd100\"在阿拉希盆地的农场中酿制的私酒。\"|r", --31840
@@ -26591,8 +26591,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "QAEnchant Bracer +12 Stamina£|cff00ff00使用： Permanently enchants bracers to give 12 Stamina.|r", --31847
 "QAEnchant Bracer +4 All Stats£|cff00ff00使用： Permanently enchants bracers to increase all Stats by 4.|r", --31848
 "QAEnchant Bracer +12 Strength£|cff00ff00使用： Permanently enchants bracers to increase Strength by 12.|r", --31849
-"|cff0070ddQATest +500 Defense Ring|r£|cff00ff00装备： 防御值提高500点。|r", --31850
-"|cff0070ddQATest +150 Defense Ring|r£|cff00ff00装备： 防御值提高150点。|r", --31851
+"拾取后绑定£|cff00ff00装备： 防御值提高500点。|r", --31850
+"拾取后绑定£|cff00ff00装备： 防御值提高150点。|r", --31851
 "特效作战治疗药水£拾取后绑定£唯一（10）£|cff00ff00使用： 恢复1050到1750点生命值。|r£|cffffd100\"从风暴之眼的虚空中提炼而来。\"|r", --31852
 "特效作战治疗药水£拾取后绑定£唯一（10）£|cff00ff00使用： 恢复1050到1750点生命值。|r£|cffffd100\"从战歌峡谷的空树干中萃取而来。\"|r", --31853
 "特效作战法力药水£拾取后绑定£唯一（10）£|cff00ff00使用： 恢复1350到2250点法力值。|r£|cffffd100\"从风暴之眼的虚空中提炼而来。\"|r", --31854
@@ -27395,7 +27395,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd晶铸饰品|r£|cff00ff00使用： 攻击强度提高216点，持续10秒。 （1分钟冷却）|r£|cff00ff00装备： +7 武器伤害。|r", --32654
 "|cffa335ed晶纹护腕|r£|cff00ff00装备： 爆击等级提高12点。|r£|cff00ff00装备： 法术强度提高23点。|r", --32655
 "|cffa335ed晶壳护手|r£|cff00ff00装备： 攻击强度提高56点。|r", --32656
-"阿尔索恩的麻鹰哨£拾取后绑定£唯一£|cff00ff00使用： 召唤一只麻鹰帮助你和阿尔索恩·风歌进行沟通。只能在泰罗卡森林地区使用。 （2分钟 20秒冷却）|r", --32657
+"阿尔索恩的麻鹰哨£拾取后绑定£唯一£|cff00ff00使用： 召唤一只麻鹰帮助你和阿尔索恩·风歌进行沟通。只能在泰罗卡森林地区使用。 （2分钟20秒冷却）|r", --32657
 "|cff0070dd坚韧徽章|r£|cff00ff00使用： 敏捷提高150点，持续20秒。 （2分钟冷却）|r", --32658
 "|cff0070dd水晶能量匕首|r£|cff00ff00装备： 攻击强度提高40点。|r", --32659
 "|cff0070dd晶铸之剑|r£|cff00ff00装备： 使你的盾牌格挡等级提高11点。|r£|cff00ff00装备： 法术强度提高121点。|r", --32660
@@ -27655,7 +27655,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Axe, Afrasiabi Particle Test Dagger (Energy)|r£ ", --32923
 "|cff9e9e9eMonster - Axe, Afrasiabi Particle Glaive Polearm Magtheridon|r£ ", --32924
 "|cff9e9e9eMonster - Axe, Afrasiabi Particle Test 2H Sword (Light)|r£ ", --32925
-"|cff9e9e9eMonster - Axe, Afrasiabi Particle Test Dagger (Light)|r£ ", --32926
+"单手£ ", --32926
 "|cff9e9e9eMonster - Axe, Afrasiabi Particle Test Dagger (Small Energy)|r£ ", --32927
 "|cff9e9e9eMonster - Axe, Afrasiabi Particle Test 2H Sword (Small Energy)|r£ ", --32928
 "|cff9e9e9eMonster - Axe, Afrasiabi Particle Test Dagger (Holy)|r£ ", --32929
@@ -27728,7 +27728,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed老兵的环甲战靴|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高27点。|r£|cff00ff00装备： 法术强度提高32点。|r", --32999
 "反光粉£拾取后绑定£|cff00ff00使用： 在树荫旅店的废墟一带撒下反光粉，以寻找证据。只能在树荫旅店使用。|r", --33001
 "|cff9e9e9eMonster - Staff, Feathered Gold (Red Flame)|r£ ", --33002
-"|cffa335edTest Sword Skill Trinket|r£|cff00ff00装备： 剑类武器技能等级提高99。|r£|cff00ff00使用： 剑类武器技能等级提高99。 （2分钟冷却）|r", --33003
+"拾取后绑定£|cff00ff00装备： 剑类武器技能等级提高99。|r£|cff00ff00使用： 剑类武器技能等级提高99。 （2分钟冷却）|r", --33003
 "蚌肉大餐£拾取后绑定£|cff00ff00使用： 在30秒内恢复总计2148点生命值和2934点法力值。进食时必须保持坐姿。如果你花费至少10秒钟进食，还会获得24点攻击强度加成和14点法术强度加成，持续1小时。|r", --33004
 "TEST CHEST MAIL HUNTER£ ", --33005
 "|cffa335ed复仇角斗士的重弩|r£|cff00ff00装备： 爆击等级提高16点。|r£|cff00ff00装备： 使你的韧性等级提高13点。|r£|cff00ff00装备： 远程攻击强度提高34点。|r", --33006
@@ -27821,7 +27821,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "匹特洛夫的集束炸弹£任务物品£唯一£|cff00ff00使用： 向封锁船海盗投掷以消灭他们。只能在飞艇上使用。 （1秒冷却）|r£|cffffd100\"感受蝙蝠粪的威力吧！\"|r", --33098
 "完整的药剂容器£任务物品£|cffffd100\"容器上的标签写有未穿戴防护服切勿触摸的警告。\"|r", --33099
 "雷杉德尔的燃烧弹£任务物品", --33100
-"被捕获的图腾£任务物品£|cff00ff00使用： 将被捕获的图腾插在地上。只能在泥潭沼泽使用。 （1分钟 30秒冷却）|r", --33101
+"被捕获的图腾£任务物品£|cff00ff00使用： 将被捕获的图腾插在地上。只能在泥潭沼泽使用。 （1分钟30秒冷却）|r", --33101
 "|cffa335ed祖尔金之血|r£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"透过玻璃瓶壁，你可以感觉到祖尔金的血液在翻腾。\"|r", --33102
 "沼泽毒药£任务物品", --33103
 "|cff0070ddRing of Skill|r£|cff00ff00装备： 使你的精准等级提高15点。|r", --33104
@@ -27838,7 +27838,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "密封的信函£拾取后绑定£唯一£该物品将触发一个任务", --33115
 "|cff9e9e9eMonster - Axe, 2H D04 Red w/Flames|r£ ", --33116
 "|cff0070dd南瓜灯|r£拾取后绑定£18格容器", --33117
-"|cffa335edSocket Test Shoulders [PH]|r£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r", --33118
+"拾取后绑定£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r", --33118
 "玛利斯特的冰霜魔杖£任务物品£唯一£|cff00ff00使用： 向距离100码以内的始祖幼龙发射威力很低但是射程超长的寒冰箭。 （10秒冷却）|r£|cffffd100\"不要把舌头冻在上面！\"|r", --33119
 "铲齿鹿肉£任务物品", --33120
 "失去光泽的情侣戒指£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"稍微擦一下，这枚戒指就可以变得光亮如新。\"|r", --33121
@@ -28014,7 +28014,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed鼓吹肩铠|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 法术强度提高34点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f14|r|cff00ff00点法力值。|r", --33299
 "|cffa335ed剑舞护肩|r£|cff00ff00装备： 命中等级提高16点。|r£|cff00ff00装备： 攻击强度提高68点。|r", --33300
 "|cff9e9e9eMonster - Axe 2H, Dragonflayer Invader (Vrykul)|r£ ", --33301
-"|cffa335ed[DNT] Test Mount|r£拾取后绑定£|cff00ff00使用： [DNT] This is a test mount.|r", --33302
+"|cffa335ed[DNT] Test Mount|r£拾取后绑定", --33302
 "|cffa335ed碎颅战靴|r£|cff00ff00装备： 爆击等级提高29点。|r", --33303
 "|cffa335ed压制能量披风|r£|cff00ff00装备： 爆击等级提高16点。|r£|cff00ff00装备： 使你的韧性等级提高23点。|r£|cff00ff00装备： 法术强度提高27点。|r", --33304
 "图鉴：胡里奥之心£拾取后绑定£使用： 教你学会切割胡里奥之心。£|cffa335ed\n胡里奥之心|r£拾取后绑定£装备唯一£|cffffd100\"对应红色插槽。镶嵌此宝石将使其变为绑定物品。\"|r£\n需要红曜石", --33305
@@ -28214,7 +28214,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed永恒生命徽记|r£|cff00ff00装备： 使你的韧性等级提高37点。|r", --33500
 "|cffa335ed嗜血者的胫甲|r£|cff00ff00装备： 命中等级提高38点。|r", --33501
 "|cffa335ed治愈圣契|r£|cff00ff00装备： 你的圣光术令你获得每5秒恢复|r|cff7f7f7f28|r|cff00ff00点法力值的效果，持续30秒。|r", --33502
-"|cffa335ed神圣裁决圣契|r£|cff00ff00装备： 你的命令审判法术有一定几率使你获得200点攻击强度加成，持续10秒。|r", --33503
+"|cffa335ed神圣裁决圣契|r£|cff00ff00装备： 你的命令审判法术有一定几率使你获得200点攻击强度加成，持续10秒。对80级或以上的玩家不生效。|r", --33503
 "|cffa335ed神圣意志圣契|r£|cff00ff00装备： 使你的正义圣印和正义审判技能的法术强度提高94点。|r", --33504
 "|cffa335ed活水图腾|r£|cff00ff00装备： 治疗链的基础法力值消耗降低20点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --33505
 "|cffa335ed天鸣图腾|r£|cff00ff00装备： 你的闪电箭法术有一定几率使你的急速等级提高100，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --33506
@@ -28395,11 +28395,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed复仇角斗士的皮甲护肩|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高30点。|r", --33703
 "|cffa335ed复仇角斗士的皮甲外套|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高17点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高48点。|r£|cff00ff00装备： 护甲穿透等级提高12。|r", --33704
 "|cffa335ed复仇角斗士的左拳刃|r£|cff00ff00装备： 命中等级提高8点。|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 使你的韧性等级提高12点。|r£|cff00ff00装备： 攻击强度提高34点。|r£|cff00ff00装备： 护甲穿透等级提高7。|r", --33705
-"|cffa335ed复仇角斗士的鳞甲护胸|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高31点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r£|cff00ff00装备： 护甲穿透等级提高12。|r", --33706
-"|cffa335ed复仇角斗士的鳞甲护手|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高22点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --33707
-"|cffa335ed复仇角斗士的鳞甲头盔|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 护甲穿透等级提高12。|r", --33708
-"|cffa335ed复仇角斗士的鳞甲护腿|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高31点。|r£|cff00ff00装备： 护甲穿透等级提高12。|r", --33709
-"|cffa335ed复仇角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高21点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --33710
+"|cffa335ed复仇角斗士的鳞甲护胸|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高31点。|r£|cff00ff00装备： 攻击强度提高54点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r£|cff00ff00装备： 护甲穿透等级提高12。|r", --33706
+"|cffa335ed复仇角斗士的鳞甲护手|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高22点。|r£|cff00ff00装备： 攻击强度提高66点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --33707
+"|cffa335ed复仇角斗士的鳞甲头盔|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 攻击强度提高68点。|r£|cff00ff00装备： 护甲穿透等级提高12。|r", --33708
+"|cffa335ed复仇角斗士的鳞甲护腿|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高31点。|r£|cff00ff00装备： 攻击强度提高76点。|r£|cff00ff00装备： 护甲穿透等级提高12。|r", --33709
+"|cffa335ed复仇角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高21点。|r£|cff00ff00装备： 攻击强度提高50点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f9|r|cff00ff00点法力值。|r", --33710
 "|cffa335ed复仇角斗士的锁甲护胸|r£|cff00ff00装备： 法术爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f11|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高42点。|r", --33711
 "|cffa335ed复仇角斗士的锁甲护手|r£|cff00ff00装备： 法术爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高23点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r£|cff00ff00装备： 法术强度提高39点。|r", --33712
 "|cffa335ed复仇角斗士的锁甲头盔|r£|cff00ff00装备： 法术爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高32点。|r£|cff00ff00装备： 法术强度提高49点。|r", --33713
@@ -28464,9 +28464,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335edTesting Gladiator's Lamellar Shoulders|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高22点。|r£|cff00ff00装备： 法术强度提高28点。|r", --33772
 "|cff9e9e9eMonster - Sword 2H, King Ymiron (Vrykul)|r£ ", --33773
 "焚香炉£任务物品£唯一£|cff00ff00使用： 使你进入灵魂世界。只能在尼弗莱瓦使用。|r", --33774
-"|cff9e9e9e[PH] Creepy Rag Doll|r£ ", --33775
-"|cff9e9e9e[PH] Tiny Creepy Rag Doll|r£ ", --33776
-"|cff9e9e9e[PH] Huge Creepy Rag Doll|r£ ", --33777
+"", --33775
+"", --33776
+"", --33777
 "符文之书 - 第一章£任务物品£|cff00ff00使用： 将符文之书的第一章、第二章和第三章组合成为完整的符文之书。|r", --33778
 "符文之书 - 第二章£任务物品£|cff00ff00使用： 将符文之书的第一章、第二章和第三章组合成为完整的符文之书。|r", --33779
 "符文之书 - 第三章£任务物品£|cff00ff00使用： 将符文之书的第一章、第二章和第三章组合成为完整的符文之书。|r", --33780
@@ -28638,7 +28638,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed角斗士的生存图腾|r£|cff00ff00装备： 你的大地震击、烈焰震击和冰霜震击技能可以使你的韧性等级提高26，效果持续6秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --33951
 "|cffa335ed残酷角斗士的生存图腾|r£|cff00ff00装备： 你的大地震击、烈焰震击和冰霜震击技能可以使你的韧性等级提高31，效果持续6秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --33952
 "|cffa335ed复仇角斗士的生存图腾|r£|cff00ff00装备： 你的大地震击、烈焰震击和冰霜震击技能可以使你的韧性等级提高34，效果持续6秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --33953
-"|cffa335ed设计图：正义力量之锤|r£使用： 教你学会制作正义力量之锤。£|cffa335ed\n正义力量之锤|r£装备后绑定£锤£93 - 186伤害£速度 2.10£（每秒伤害66.4）£+55 耐力£+37 智力£|cff00ff00装备： 法术强度提高168点。|r£|cff00ff00装备： 每5秒恢复19点法力值。|r£\n需要氪金锭 (16), 魔钢锭 (12), 源生之能 (6), 源生虚空 (2)", --33954
+"|cffa335ed设计图：正义力量之锤|r£使用： 教你学会制作正义力量之锤。£|cffa335ed\n正义力量之锤|r£装备后绑定£双手£93 - 186伤害£速度 2.10£（每秒伤害66.4）£+55 耐力£+37 智力£|cff00ff00装备： 法术强度提高168点。|r£|cff00ff00装备： 每5秒恢复19点法力值。|r£\n需要氪金锭 (16), 魔钢锭 (12), 源生之能 (6), 源生虚空 (2)", --33954
 "|cff1eff00美酒节礼品券|r£任务物品£唯一£|cffffd100\"兑换一只免费的美酒节酒杯\"|r", --33955
 "哈考尔的自酿酒£拾取后绑定£|cffffd100\"不到一品脱！\"|r", --33956
 "|cffa335ed巫术指环|r£|cff00ff00装备： 法术强度提高25点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f8|r|cff00ff00点法力值。|r", --33957
@@ -28836,7 +28836,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Player, Gnome/Blood Elf£ ", --34153
 "Player, Human/Undead£ ", --34154
 "Player, Troll/Night Elf£ ", --34155
-"BLB - Kit£ ", --34156
+"", --34156
 "凯尔萨斯的徽记£任务物品£唯一", --34157
 "Team A Tabard£ ", --34158
 "Team B Tabard£ ", --34159
@@ -29109,7 +29109,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "冬幕节的礼物£拾取后绑定", --34426
 "|cffa335ed灰暗的纳鲁薄片|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 有一定几率在近战或远程攻击命中目标时使你进入战斗专注状态，在这种状态下的每次近战或远程攻击都可以令你的攻击强度提高44点，可叠加最多10次。战斗专注效果在20秒后消失。|r", --34427
 "|cffa335ed坚硬的纳鲁薄片|r£|cff00ff00装备： 使你的精准等级提高54点。|r£|cff00ff00使用： 生命值上限提高2000点，持续15秒。 （5分钟冷却）|r", --34428
-"|cffa335ed变幻的纳鲁薄片|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00使用： 召唤一道持续15秒的能量法阵。当施法者站在法阵中时，就可以获得320点法术强度加成。 （1分钟 30秒冷却）|r", --34429
+"|cffa335ed变幻的纳鲁薄片|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00使用： 召唤一道持续15秒的能量法阵。当施法者站在法阵中时，就可以获得320点法术强度加成。 （1分钟30秒冷却）|r", --34429
 "|cffa335ed闪光的纳鲁薄片|r£|cff00ff00装备： 法术强度提高63点。|r£|cff00ff00使用： 每秒恢复|r|cff7f7f7f250|r|cff00ff00点法力值，持续8秒。需引导。 （5分钟冷却）|r", --34430
 "|cffa335ed光明使者腕环|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 急速等级提高17点。|r£|cff00ff00装备： 使你的精准等级提高16点。|r", --34431
 "|cffa335ed光明使者护腕|r£|cff00ff00装备： 爆击等级提高15点。|r£|cff00ff00装备： 法术强度提高39点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f13|r|cff00ff00点法力值。|r", --34432
@@ -29314,7 +29314,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Writing Quill DEPRECATED£ ", --34643
 "Copper Writing Nib DEPRECATED£ ", --34644
 "土色墨水£ ", --34645
-"[PH] Everburning Elixir£拾取后绑定£唯一（10）£|cff00ff00使用： 喷出一小团火焰，造成伤害。|r", --34646
+"拾取后绑定£唯一（10）£|cff00ff00使用： 喷出一小团火焰，造成伤害。|r", --34646
 "粗糙的羊皮纸£ ", --34647
 "|cff1eff00阿彻鲁斯骑士胫甲|r£ ", --34648
 "|cff1eff00阿彻鲁斯骑士护手|r£|cff00ff00装备： 爆击等级提高8点。|r", --34649
@@ -29854,7 +29854,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed结构图：湮灭全视护目镜|r£职业：牧师, 法师, 术士£使用： 教你学会制作湮灭全视护目镜。£|cffa335ed\n湮灭全视护目镜|r£拾取后绑定£头部£布甲£216点护甲£+41 耐力£+37 智力£|cff7f7f7f多彩插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 法术强度提高81点。|r£|cff00ff00使用： 使你看得更远。 （3秒冷却）|r£\n需要毁灭全视护目镜, 源生暗影 (4), 源生火焰 (4), 源生法力 (4), 源生虚空 (4)", --35186
 "|cffa335ed结构图：审判者护目镜3000型|r£使用： 教你学会制作审判者护目镜3000型。£|cffa335ed\n审判者护目镜3000型|r£拾取后绑定£头部£1611点护甲£+48 耐力£+26 智力£|cff7f7f7f多彩插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+4 爆击等级|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00使用： 使你看得更远。 （3秒冷却）|r£\n需要审判者护目镜2000型, 源生生命 (8), 源生法力 (8), 源生之土 (8), 源生虚空 (4)", --35187
 "奈辛瓦里同党的耳环£拾取后绑定£|cffffd100\"仁德会的成员看到这个东西一定会很高兴。\"|r", --35188
-"|cffa335ed结构图：超级治疗射线9000型|r£职业：牧师£使用： 教你学会制作超级治疗射线9000型。£|cffa335ed\n超级治疗射线9000型|r£拾取后绑定£头部£布甲£216点护甲£+33 耐力£+51 智力£+41 精神£|cff7f7f7f多彩插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00使用： 使你看得更远。 （3秒冷却）|r£\n需要超级治疗射线4000型, 源生生命 (8), 源生法力 (8), 源生虚空 (4)", --35189
+"|cffa335ed结构图：超级治疗射线9000型|r£使用： 教你学会制作超级治疗射线9000型。£|cffa335ed\n超级治疗射线9000型|r£拾取后绑定£头部£布甲£216点护甲£+33 耐力£+51 智力£+41 精神£|cff7f7f7f多彩插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00使用： 使你看得更远。 （3秒冷却）|r£\n需要超级治疗射线4000型, 源生生命 (8), 源生法力 (8), 源生虚空 (4)", --35189
 "|cffa335ed结构图：超级月光放大护目镜|r£使用： 教你学会制作超级月光放大护目镜。£|cffa335ed\n超级月光放大护目镜|r£拾取后绑定£头部£405点护甲£+40 耐力£+37 智力£|cff7f7f7f多彩插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 法术强度提高64点。|r£|cff00ff00使用： 使你看得更远。 （3秒冷却）|r£\n需要月光放大护目镜, 源生之水 (6), 源生生命 (12), 源生虚空 (4)", --35190
 "|cffa335ed结构图：奇迹治疗罩XT68型|r£使用： 教你学会制作奇迹治疗罩XT68型。£|cffa335ed\n奇迹治疗罩XT68型|r£拾取后绑定£头部£405点护甲£+33 耐力£+51 智力£+35 精神£|cff7f7f7f多彩插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 法术强度提高71点。|r£|cff00ff00使用： 使你看得更远。 （3秒冷却）|r£\n需要奇迹治疗罩XT40型, 源生之水 (4), 源生法力 (8), 源生虚空 (4)", --35191
 "|cffa335ed结构图：源生同频护目镜|r£使用： 教你学会制作源生同频护目镜。£|cffa335ed\n源生同频护目镜|r£拾取后绑定£头部£902点护甲£+32 耐力£+51 智力£|cff7f7f7f多彩插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 法术强度提高71点。|r£|cff00ff00装备： 每5秒恢复18点法力值。|r£|cff00ff00使用： 使你看得更远。 （3秒冷却）|r£\n需要活力复制器, 源生生命 (5), 源生法力 (5), 源生之水 (5), 源生虚空 (4)", --35192
@@ -30148,7 +30148,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "农用机械傻瓜教程£任务物品", --35482
 "冰川古树碎片£任务物品£|cffffd100\"从冰川古树身上收集的样本\"|r", --35483
 "魔缚古树碎片£任务物品£|cffffd100\"从魔缚古树身上收集的样本\"|r", --35484
-"|cff0070ddGoblin Rocket Launcher [PH]|r£|cff00ff00使用： 对敌人发射强大的火箭炮，造成960到|r|cff7f7f7f1440|r|cff00ff00点伤害，并使其昏迷3秒。当然这东西的后座力也很强...... （2分钟冷却）|r", --35485
+"装备后绑定£|cff00ff00使用： 对敌人发射强大的火箭炮，造成960到|r|cff7f7f7f1440|r|cff00ff00点伤害，并使其昏迷3秒。当然这东西的后座力也很强...... （2分钟冷却）|r", --35485
 "麦卡佐德的徽记£任务物品£唯一£|cffffd100\"仍在滴油。\"|r", --35486
 "|cffa335ed明亮赤尖石|r£拾取后绑定£+20 攻击强度£|cffffd100\"对应红色插槽。\"|r", --35487
 "|cffa335ed符文赤尖石|r£拾取后绑定£+12 法术强度£|cffffd100\"对应红色插槽。\"|r", --35488
@@ -30162,14 +30162,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed冰缚披风|r£|cff00ff00装备： 防御等级提高25。|r", --35496
 "|cffa335ed寒风斗篷|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 法术强度提高21点。|r", --35497
 "|cff0070dd公式：附魔武器 - 死亡霜冻|r£拾取后绑定£|cff00ff00使用： 教你学会永久性地为一件近战武器附魔，使你的伤害法术和近战武器攻击有一定几率对目标造成额外的冰霜伤害并使目标减速的效果。该装备等级不得低于60级。|r", --35498
-"Ninja Grenade [PH]£|cff00ff00使用： 对半径3码范围内的所有敌人造成450到750点火焰伤害，并使它们瘫痪3秒。任何伤害都会打断这个效果。对80级以上目标使用的效果很差。|r", --35499
+"|cff00ff00使用： 对半径3码范围内的所有敌人造成450到750点火焰伤害，并使它们瘫痪3秒。任何伤害都会打断这个效果。对80级以上目标使用的效果很差。|r£ ", --35499
 "公式：附魔胸甲 - 防御£拾取后绑定£|cff00ff00使用： 教你学会永久性地为一件胸甲附魔，使其获得防御等级+16的效果。该装备等级不得低于35级。|r", --35500
 "|cff0070dd永恒之大地风暴钻石|r£+12 防御等级，+5% 盾牌格挡值£  |cff808080需要 至少2颗蓝色宝石|r\n  |cff808080需要 至少1颗黄色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --35501
 "图鉴：永恒之大地风暴钻石£拾取后绑定£使用： 教你学会切割永恒之大地风暴钻石。£|cff0070dd\n永恒之大地风暴钻石|r£+12 防御等级，+5% 盾牌格挡值£  |cff808080需要 至少2颗蓝色宝石|r\n  |cff808080需要 至少1颗黄色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r£\n需要大地风暴钻石", --35502
 "|cff0070dd灰烬之天火钻石|r£+14 法术强度，+2% 智力£  |cff808080需要 至少3颗红色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --35503
 "|cff0070dd凤凰宝宝|r£拾取后绑定£唯一£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --35504
 "图鉴：灰烬之天火钻石£拾取后绑定£使用： 教你学会切割灰烬之天火钻石。£|cff0070dd\n灰烬之天火钻石|r£+14 法术强度，+2% 智力£  |cff808080需要 至少3颗红色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r£\n需要天火钻石", --35505
-"莱洛拉斯的长矛£任务物品£唯一£|cff00ff00使用： 穿刺一条魔枢雏龙，使其沾染红龙之血，在25秒后被驯服。 （3分钟 20秒冷却）|r£|cffffd100\"矛尖染上了莱洛拉斯的鲜血。\"|r", --35506
+"莱洛拉斯的长矛£任务物品£唯一£|cff00ff00使用： 穿刺一条魔枢雏龙，使其沾染红龙之血，在25秒后被驯服。 （3分钟20秒冷却）|r£|cffffd100\"矛尖染上了莱洛拉斯的鲜血。\"|r", --35506
 "|cffa335ed痛苦仇恨护符|r£|cff00ff00装备： 命中等级提高18点。|r£|cff00ff00装备： 攻击强度提高42点。|r", --35507
 "|cffa335ed凛冽寒风项圈|r£|cff00ff00装备： 法术强度提高28点。|r", --35508
 "|cffa335ed冰冷静谧护符|r£|cff00ff00装备： 法术强度提高26点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f5|r|cff00ff00点法力值。|r", --35509
@@ -30357,11 +30357,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "图鉴：雕像 - 天蓝宝石海龟£拾取后绑定£使用： 教你学会制作雕像 - 天蓝宝石海龟。£|cffa335ed\n雕像 - 天蓝宝石海龟|r£拾取后绑定£唯一£饰品£|cff00ff00装备： 防御等级提高42。|r£|cff00ff00使用： 躲闪等级提高165，持续20秒。 （2分钟冷却）|r£\n需要氪金锭 (8), 天蓝宝石 (2), 黎明石 (6)", --35695
 "图鉴：雕像 - 氪金野猪£拾取后绑定£使用： 教你学会制作雕像 - 氪金野猪。£|cffa335ed\n雕像 - 氪金野猪|r£拾取后绑定£唯一£饰品£|cff00ff00装备： 攻击强度提高84点。|r£|cff00ff00使用： 召唤氪金野猪为你作战，持续30秒。 （5分钟冷却）|r£\n需要氪金锭 (8), 焚石 (2), 源生之土 (8)", --35696
 "图鉴：雕像 - 赤尖蛇£拾取后绑定£使用： 教你学会制作雕像 - 赤尖蛇。£|cffa335ed\n雕像 - 赤尖蛇|r£拾取后绑定£唯一£饰品£+49 耐力£+33 智力£|cff00ff00使用： 法术强度提高150点，持续20秒。 （2分钟冷却）|r£\n需要恒金锭 (8), 赤尖石 (2), 源生火焰 (8)", --35697
-"图鉴：雕像 - 影歌猎豹£拾取后绑定£使用： 教你学会制作雕像 - 影歌猎豹。£|cffa335ed\n雕像 - 影歌猎豹|r£拾取后绑定£唯一£饰品£|cff00ff00装备： 攻击强度提高80点。|r£|cff00ff00使用： 攻击强度提高320点，持续15秒。 （1分钟 30秒冷却）|r£\n需要硬化精金锭 (4), 影歌紫玉 (2), 源生暗影 (8)", --35698
+"图鉴：雕像 - 影歌猎豹£拾取后绑定£使用： 教你学会制作雕像 - 影歌猎豹。£|cffa335ed\n雕像 - 影歌猎豹|r£拾取后绑定£唯一£饰品£|cff00ff00装备： 攻击强度提高80点。|r£|cff00ff00使用： 攻击强度提高320点，持续15秒。 （1分钟30秒冷却）|r£\n需要硬化精金锭 (4), 影歌紫玉 (2), 源生暗影 (8)", --35698
 "图鉴：雕像 - 海浪信天翁£拾取后绑定£使用： 教你学会制作雕像 - 海浪信天翁。£|cffa335ed\n雕像 - 海浪信天翁|r£拾取后绑定£唯一£饰品£|cff00ff00装备： 每5秒恢复23点法力值。|r£|cff00ff00使用： 在12秒内恢复总计900点法力值。 （3分钟冷却）|r£\n需要恒金锭 (8), 海浪翡翠 (2), 源生法力 (8)", --35699
 "|cffa335ed雕像 - 赤尖蛇|r£|cff00ff00使用： 法术强度提高150点，持续20秒。 （2分钟冷却）|r", --35700
 "伊斯利鲁克的图腾£任务物品£唯一", --35701
-"|cffa335ed雕像 - 影歌猎豹|r£|cff00ff00装备： 攻击强度提高80点。|r£|cff00ff00使用： 攻击强度提高320点，持续15秒。 （1分钟 30秒冷却）|r", --35702
+"|cffa335ed雕像 - 影歌猎豹|r£|cff00ff00装备： 攻击强度提高80点。|r£|cff00ff00使用： 攻击强度提高320点，持续15秒。 （1分钟30秒冷却）|r", --35702
 "|cffa335ed雕像 - 海浪信天翁|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00使用： 在12秒内恢复总计|r|cff7f7f7f900|r|cff00ff00点法力值。 （3分钟冷却）|r", --35703
 "火焰炸弹£任务物品£唯一£|cff00ff00使用： 将炸药放在天灾虫孔上。 （5秒冷却）|r", --35704
 "矿石车钥匙£任务物品£唯一", --35705
@@ -30372,7 +30372,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "美味的烤火腿£|cff00ff00使用： 在30秒内恢复总计7800点生命值，进食时必须保持坐姿。|r", --35710
 "卡斯卡拉补给品£任务物品", --35711
 "|cff9e9e9eMonster - Sword, 2H Blood Elf C03 Blue (Med Blue Glow)|r£ ", --35712
-"|cff0070ddNinja Hook [PH]|r£|cff00ff00使用： 在你的鱼竿上附加一份鱼饵，使钓鱼技能提高75点，持续10分钟。|r", --35713
+"|cff00ff00使用： 在你的鱼竿上附加一份鱼饵，使钓鱼技能提高75点，持续10分钟。|r£ ", --35713
 "|cff9e9e9eMonster - Staff, Velen|r£ ", --35714
 "|cff0070ddDeprecated Glyph of Venomous Mana [PH]|r£猎人£+4 法术强度，+3 智力£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff00ff00使用： 强化一枚大型雕文，使你的蝰蛇钉刺抵抗驱散效果的几率提高15%。|r", --35715
 "沙塔斯纯粹死亡合剂£拾取后绑定£|cff00ff00使用： 使你的暗影、火焰和冰霜法术所造成的伤害提高最多80点，持续1小时。这种效果在死亡后仍可继续存在。战斗和守护药剂。\r\n\r\n只能在风暴要塞、毒蛇神殿、时光之穴：海加尔山、黑暗神殿和太阳之井高地中使用。|r", --35716
@@ -30381,7 +30381,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Claw Insect Offhand|r£ ", --35719
 "冰霜之王的私藏佳酿£|cff00ff00使用： 最冷的饮料。|r", --35720
 "Flaskataur's Lamp£拾取后绑定£|cff00ff00使用： 使你所有的梦想皆成真。|r£|cffffd100\"Home of the Flaskataur.\"|r", --35721
-"全体中和器£拾取后绑定£|cff00ff00使用： DEBUG\r\nAssist a raid when it wipes.  For use on Test Realms only.|r", --35722
+"全体中和器£拾取后绑定", --35722
 "埃霍恩的碎片£拾取后绑定£唯一£该物品将触发一个任务", --35723
 "Monster - Northrend - Hammer, 2H - Agmar's Hammer£ ", --35724
 "夏季焚香£任务物品£唯一", --35725
@@ -30394,7 +30394,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335edTEST HELM|r£ ", --35732
 "|cffa335ed谐和之戒|r£|cff00ff00装备： 法术强度提高39点。|r", --35733
 "巨石£任务物品£|cff00ff00使用： 向索尔莫丹的开阔区域中的铁矮人投掷巨石。|r£|cffffd100\"一块巨大而笨重的石头，取自索尔莫丹上方的丘陵。\"|r", --35734
-"|cffa335edCraig's Test Boots of Righteous Affliction|r£|cff00ff00装备： 使你的盾牌格挡等级提高34点。|r£|cff00ff00装备： 命中等级提高23点。|r£|cff00ff00装备： 法术强度提高26点。|r", --35735
+"|cffa335edCraig's Test Boots of Righteous Affliction|r£|cff00ff00装备： 使你的躲闪等级提高67点。|r£|cff00ff00装备： 法术强度提高26点。|r", --35735
 "赏金猎人的笼子£任务物品£唯一£|cff00ff00使用： 在被击昏的冰巨魔周围竖起赏金猎人的牢笼。 （2分钟冷却）|r£|cffffd100\"需要扎得结实一些。\"|r", --35736
 "遗失的日记书页£任务物品", --35737
 "布莱恩·铜须的日记£任务物品", --35738
@@ -31518,7 +31518,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "达卡莱灵魂微粒£任务物品", --36868
 "|cff0070ddMonster - Staff, Lord Valthalak (Particles)|r£|cff00ff00装备： 法术强度提高35点。|r£|cff00ff00装备： 爆击等级提高14。|r", --36869
 "神圣达卡莱供品£任务物品", --36870
-"|cff0070dd临近风暴之怒|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00使用： 攻击强度提高280点，持续20秒。 （1分钟 30秒冷却）|r", --36871
+"|cff0070dd临近风暴之怒|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00使用： 攻击强度提高280点，持续20秒。 （1分钟30秒冷却）|r", --36871
 "|cff0070dd破晓的治愈者|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00使用： 法术强度提高173点，持续20秒。 （2分钟冷却）|r", --36872
 "达卡莱灵魂之尘£任务物品£|cff00ff00使用： 将古代哈卡莱巨魔的复仇之魂注入神圣达卡莱供品中。|r", --36873
 "|cff0070dd先锋的号角|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00使用： 法术强度提高183点，持续20秒。 （2分钟冷却）|r", --36874
@@ -31602,22 +31602,22 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd遮蔽束带|r£|cff00ff00装备： 防御等级提高29。|r£|cff00ff00装备： 使你的招架等级提高37点。|r", --36952
 "|cff0070dd机动肩甲|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --36953
 "|cff0070dd咒术师的便鞋|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高60点。|r", --36954
-"魔典：火焰箭（等级 9）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 9）。|r", --36955
+"魔典：火焰箭（等级 9）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰箭（等级 9）。|r", --36955
 "艾露恩的火油£任务物品£唯一£|cff00ff00使用： 洒在被感染的麋鹿或狂暴灰熊的尸体上，净化它所受到的天灾污染。|r", --36956
 "教徒的衣物£任务物品£|cffffd100\"很难在它所散发出来的毒气中摒住呼吸。\"|r", --36957
 "扎古斯的礼物£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"表面上写有铭文。\"|r", --36958
-"魔典：血契（等级 7）£拾取后绑定£唯一", --36959
-"魔典：火焰之盾（等级 7）£拾取后绑定£唯一£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 7）。|r", --36960
+"魔典：血契（等级 7）£拾取后绑定£唯一£职业：术士", --36959
+"魔典：火焰之盾（等级 7）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教小鬼学会施放火焰之盾（等级 7）。|r", --36960
 "|cff0070dd龙族重戒|r£|cff00ff00装备： 防御等级提高38。|r£|cff00ff00装备： 命中等级提高24点。|r", --36961
 "|cff0070dd龙爪战斧|r£|cff00ff00装备： 急速等级提高50点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --36962
-"魔典：折磨（等级 8）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 8）。|r", --36963
-"魔典：牺牲（等级 8）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 8）。|r", --36964
-"魔典：牺牲（等级 9）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 9）。|r", --36965
-"魔典：吞噬暗影（等级 8）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬暗影（等级 8）。|r", --36966
-"魔典：吞噬暗影（等级 9）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放吞噬暗影（等级 9）。|r", --36967
-"魔典：受难（等级 7）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 7）。|r", --36968
+"魔典：折磨（等级 8）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 8）。|r", --36963
+"魔典：牺牲（等级 8）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 8）。|r", --36964
+"魔典：牺牲（等级 9）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放牺牲（等级 9）。|r", --36965
+"魔典：吞噬暗影（等级 8）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬暗影（等级 8）。|r", --36966
+"魔典：吞噬暗影（等级 9）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放吞噬暗影（等级 9）。|r", --36967
+"魔典：受难（等级 7）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 7）。|r", --36968
 "|cff0070dd魔网卫士头盔|r£|cff00ff00装备： 防御等级提高68。|r£|cff00ff00装备： 命中等级提高36点。|r", --36969
-"魔典：受难（等级 8）£拾取后绑定£唯一£|cff00ff00使用： 教虚空行者学会施放受难（等级 8）。|r", --36970
+"魔典：受难（等级 8）£拾取后绑定£唯一£职业：术士£|cff00ff00使用： 教虚空行者学会施放受难（等级 8）。|r", --36970
 "|cff0070dd西部裂隙头盔|r£|cff00ff00装备： 命中等级提高35点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --36971
 "|cff0070dd奥法之书|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00使用： 使你的急速等级提高256，持续20秒。 （2分钟冷却）|r", --36972
 "|cff0070dd学者外衣|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 法术强度提高81点。|r", --36973
@@ -31765,7 +31765,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd十字军广场护肩|r£|cff00ff00装备： 防御等级提高29。|r£|cff00ff00装备： 使你的躲闪等级提高37点。|r", --37115
 "|cff0070dd市场区护肩|r£|cff00ff00装备： 法术强度提高60点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f25|r|cff00ff00点法力值。|r", --37116
 "|cff0070dd国王广场护腕|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --37117
-"召回卷轴£|cff00ff00使用： 将你送回寒脊山谷。40级以上的角色在传送后可能发生异常。|r", --37118
+"召回卷轴£|cff00ff00使用： 将你送回北郡山谷。40级以上的角色在传送后可能发生异常。|r", --37118
 "|cff9e9e9eMonster - Shield, Forgotten Footman|r£ ", --37119
 "Monster - Mace, Alliance 1H£ ", --37120
 "灵质残渣£任务物品", --37121
@@ -31773,7 +31773,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Sword2H, Horde Massive Black|r£ ", --37123
 "翡翠龙泪£任务物品", --37124
 "罗卡尔的照相机£任务物品£|cff00ff00使用： 尝试在丹厄古尔拍摄一张死去的铁矮人的照片。|r", --37125
-"Clayton's Test Item Three TEST£胸部£563点护甲£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+0 耐力 （++��|r", --37126
+"胸部£563点护甲£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+0 耐力 （++��|r", --37126
 "|cffa335ed光明美酒护符|r£|cff00ff00使用： 右键点击以召唤一名美酒女郎，她的出现可以提高队伍的士气。向她招手就可以获得美酒节的佳酿！ （10分钟冷却）|r", --37127
 "|cffa335ed黑暗美酒护符|r£|cff00ff00使用： 右键点击以召唤一名黑铁美酒女郎，她会用你的空酒杯去揍你的敌人。向她招手就可以获得美酒节的佳酿！ （10分钟冷却）|r", --37128
 "凋零药剂瓶£任务物品£唯一£|cff00ff00使用： 泼向怨毒镇中的血色先锋军士兵。|r", --37129
@@ -32076,7 +32076,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00平原猎手腰带|r£|cff00ff00装备： 攻击强度提高54点。|r", --37427
 "|cff1eff00压环护腕|r£|cff00ff00装备： 爆击等级提高16点。|r£|cff00ff00装备： 法术强度提高35点。|r", --37428
 "|cff1eff00闪光环甲手套|r£|cff00ff00装备： 攻击强度提高78点。|r", --37429
-"|cff0070ddSolid Sky Sapphire (Unused)|r£+21 耐力£|cffffd100\"对应蓝色插槽。\"|r", --37430
+"+21 耐力£|cffffd100\"对应蓝色插槽。\"|r", --37430
 "|cff1eff00玩具球|r£拾取后绑定£|cff00ff00使用： 右键点击，与非战斗宠物玩绒线球。大部分非战斗宠物都可以玩这种游戏。|r", --37431
 "拷问者的魔棒£拾取后绑定£唯一£该物品将触发一个任务£|cffffd100\"魔棒的周身布满了魔法符文。\"|r", --37432
 "|cff1eff00层鳞长靴|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --37433
@@ -32560,7 +32560,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "塞尔赞的护命匣£任务物品£唯一£|cffffd100\"侧面刻着大写字母I.M.。\"|r", --37920
 "死亡荨麻£ ", --37921
 "诺兹拉斯炸药包£任务物品£|cffffd100\"这东西……似乎在发出嘀嗒嘀嗒的声音？\"|r", --37922
-"永恒沙漏£任务物品£唯一£|cff00ff00使用： 将永恒沙漏放在青铜巨龙圣地的地面上。不能放置在另一只沙漏附近40码的范围内。 （3分钟 30秒冷却）|r", --37923
+"永恒沙漏£任务物品£唯一£|cff00ff00使用： 将永恒沙漏放在青铜巨龙圣地的地面上。不能放置在另一只沙漏附近40码的范围内。 （3分钟30秒冷却）|r", --37923
 "|cff9e9e9eMonster - Dagger, Bowie Knife (Savagery)|r£ ", --37924
 "实验混合剂£拾取后绑定£唯一£持续时间：30分钟£|cff00ff00使用： 喂给你的非战斗宠物……如果你够胆的话。|r", --37925
 "DEPCREATED Epic Mana Potion£|cff00ff00使用： 恢复4000点法力值。\r\n\r\n引用法力药水造成法力恶心症状，1分钟后抽空你的所有法力值。|r", --37926
@@ -32944,7 +32944,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed愤怒战袍|r£ ", --38313
 "|cffa335ed防御者战袍|r£ ", --38314
 "|cff9e9e9eMonster - Staff, Epic A (Blue Fire)|r£ ", --38315
-"|cff00ccffScaling Stat Test Shoulders|r£ ", --38316
+"|cff00ccffScaling Stat Test Shoulders|r£|cff00ff00装备： 攻击强度提高1点。|r£|cff00ff00装备： 远程攻击强度提高1点。|r£|cff00ff00装备： 全能|r£|cff00ff00装备： 魔法法术和效果的伤害量提高最多3点。|r£|cff00ff00装备： 魔法法术和效果的治疗量提高最多3点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f3|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高3点。|r", --38316
 "准备好的达卡莱供品£任务物品£|cff00ff00使用： 在一座巨魔神像前献上供品。|r", --38317
 "|cff1eff00暗月长袍|r£ ", --38318
 "调度命令£任务物品£唯一£|cffffd100\"这份命令中要求中士将他的部队带去增援银色前沿。\"|r", --38319
@@ -33012,16 +33012,16 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "石化蜥蜴水晶£任务物品£|cffffd100\"放在安全的地方，免得碎掉！\"|r", --38382
 "|cff1eff00瓦伦弗斯的愚行|r£|cff00ff00装备： 法术强度提高50点。|r£|cff00ff00装备： 法术命中目标之后有一定几率使你的精神提高222点，持续10秒。|r", --38383
 "石像鬼牙齿粉末£祖达克£拾取后绑定£唯一£持续时间：30秒£|cffffd100\"有口臭味。\"|r", --38384
-"|cff00ccffScaling Stat Test Trinket|r£ ", --38385
+"|cff00ccffScaling Stat Test Trinket|r£|cff00ff00装备： 法术强度提高2点。|r", --38385
 "泥潭蛆虫£祖达克£拾取后绑定£唯一£持续时间：30秒£|cffffd100\"嗯……\"|r", --38386
 "|cff0070dd灰白软帽|r£|cff00ff00使用： 使周围半径30码范围内的小队成员的耐力提高10点。 （1分钟冷却）|r", --38387
 "|cff0070dd北地斗篷|r£|cff00ff00使用： 使周围半径30码范围内的小队成员的耐力提高10点。 （1分钟冷却）|r", --38388
 "|cff0070dd舒适的浣熊皮帽|r£|cff00ff00使用： 使周围半径30码范围内的小队成员的耐力提高10点。 （1分钟冷却）|r", --38389
 "|cff0070dd粗糙的射手之帽|r£|cff00ff00使用： 使周围半径30码范围内的小队成员的耐力提高10点。 （1分钟冷却）|r", --38390
-"|cff00ccffScaling Stat Test 1H Sword|r£ ", --38391
-"|cff00ccffScaling Stat Test 2H Sword|r£ ", --38392
+"|cff00ccffScaling Stat Test 1H Sword|r£|cff00ff00装备： 远程命中等级提高1点。|r£|cff00ff00装备： 法术命中等级提高1点。|r£|cff00ff00装备： 近战爆击等级提高1点。|r£|cff00ff00装备： 远程爆击等级提高1点。|r£|cff00ff00装备： 法术爆击等级提高1点。|r£|cff00ff00装备： 近战命中躲闪等级提高1点。|r£|cff00ff00装备： 远程命中躲闪等级提高1点。|r£|cff00ff00装备： 法术命中躲闪等级提高1点。|r£|cff00ff00装备： 近战爆击躲闪等级提高1点。|r£|cff00ff00装备： 远程爆击躲闪等级提高1点。|r", --38391
+"|cff00ccffScaling Stat Test 2H Sword|r£|cff00ff00装备： 法术爆击躲闪等级提高3点。|r£|cff00ff00装备： 法术急速等级提高3点。|r£|cff00ff00装备： 命中等级提高3点。|r£|cff00ff00装备： 爆击等级提高3点。|r£|cff00ff00装备： 命中躲闪等级提高3点。|r£|cff00ff00装备： 爆击躲闪等级提高3点。|r£|cff00ff00装备： 使你的韧性等级提高3点。|r£|cff00ff00装备： 急速等级提高3点。|r", --38392
 "尖刺蜘蛛卵£祖达克£拾取后绑定£唯一£持续时间：30秒£|cffffd100\"孵化了一半。\"|r", --38393
-"|cff00ccffScaling Stat Test Wand|r£ ", --38394
+"|cff00ccffScaling Stat Test Wand|r£|cff00ff00装备： 防御等级提高1。|r£|cff00ff00装备： 使你的躲闪等级提高1点。|r£|cff00ff00装备： 使你的招架等级提高1点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高1点。|r£|cff00ff00装备： 近战命中等级提高1点。|r", --38394
 "|cff00ccffScaling Stat Test Bow|r£ ", --38395
 "毛茸茸的鲱鱼头£祖达克£拾取后绑定£唯一£持续时间：30秒£|cffffd100\"左边已经裂了……\"|r", --38396
 "恶臭的海盗汗液£祖达克£拾取后绑定£唯一£持续时间：30秒£|cffffd100\"从南海进口。\"|r", --38397
@@ -33313,10 +33313,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "雷酒的丛林佳酿£任务物品", --38688
 "小鸡网£任务物品£|cff00ff00使用： 扔出一张轻便的网，捕获不愿合作的逃亡小鸡。最远射程20码。 （6秒冷却）|r", --38689
 "|cffa335ed结冰的冰霜巨龙之心|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德使用。|r", --38690
-"|cff00ccffAncestral Claymore|r£ ", --38691
-"|cff0070ddWarbranch of Cenarius|r£ ", --38692
-"|cff0070ddTirisfal Spellblade|r£ ", --38693
-"|cff00ccffFamily Shoulderpads|r£ ", --38694
+"|cff00ccffAncestral Claymore|r£|cff00ff00装备： 爆击等级提高1点。|r", --38691
+"|cff0070ddWarbranch of Cenarius|r£|cff00ff00装备： 使你的护甲穿透提高1点。|r", --38692
+"|cff0070ddTirisfal Spellblade|r£|cff00ff00装备： 法术强度提高1点。|r", --38693
+"|cff00ccffFamily Shoulderpads|r£|cff00ff00装备： 攻击强度提高1点。|r", --38694
 "极地熊神魔精£任务物品£唯一£|cffffd100\"这件物品所发出的金色光芒使你沐浴在纯净的能量中。\"|r", --38695
 "折磨者的薰香£任务物品£唯一£|cff00ff00使用： 使你可以将伦诺克从昏迷中唤醒。 （5秒冷却）|r", --38696
 "丛林佳酿酒样£任务物品£|cff00ff00使用： 将雷酒的丛林佳酿酒样交给一位有品位的美酒鉴赏家。 （15秒冷却）|r", --38697
@@ -33331,7 +33331,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "动物杂碎£|cff00ff00使用： 在30秒内恢复总计22500点生命值，进食时必须保持坐姿。|r£|cffffd100\"味道不错。\"|r", --38706
 "|cff0070dd符文灵魂之剑|r£ ", --38707
 "欧米伽符文£任务物品£唯一", --38708
-"欧米伽符文£任务物品£唯一£|cff00ff00使用： 在索拉查盆地的雪崩山麓召唤源生石像。 （1分钟 30秒冷却）|r", --38709
+"欧米伽符文£任务物品£唯一£|cff00ff00使用： 在索拉查盆地的雪崩山麓召唤源生石像。 （1分钟30秒冷却）|r", --38709
 "|cff1eff00寻路者护腕|r£|cff00ff00装备： 法术强度提高25点。|r", --38710
 "|cff1eff00震地手套|r£|cff00ff00装备： 法术强度提高33点。|r", --38711
 "|cff1eff00束缚之冠|r£|cff00ff00装备： 法术强度提高44点。|r", --38712
@@ -33442,7 +33442,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "卷轴：附魔护腕 - 力量£|cff00ff00使用： 永久性地为一副护腕附魔，使它们获得力量+5的效果。|r", --38817
 "卷轴：附魔胸甲 - 强效法力£|cff00ff00使用： 永久性地为一件胸甲附魔，使它获得法力值+50的效果。|r", --38818
 "卷轴：附魔靴子 - 次级精神£|cff00ff00使用： 永久性地为一双靴子附魔，使其获得精神+3的效果。|r", --38819
-"卷轴：附魔盾牌 - 次级格挡£|cff00ff00使用： Permanently enchant a shield to increase block rating by 10.|r", --38820
+"卷轴：附魔盾牌 - 次级格挡£ ", --38820
 "|cff0070dd卷轴：附魔武器 - 攻击|r£|cff00ff00使用： 永久性地为一把近战武器附魔，使其获得伤害提高3点的效果。|r", --38821
 "|cff0070dd卷轴：附魔双手武器 - 冲击|r£|cff00ff00使用： 永久性地为一把双手近战武器附魔，使其获得伤害提高5点的效果。|r", --38822
 "卷轴：附魔手套 - 剥皮£|cff00ff00使用： 永久性地为一双手套附魔，使其获得剥皮技能+5的效果。|r", --38823
@@ -33833,7 +33833,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e锯缘尖齿|r£ ", --39211
 "|cff9e9e9e坚硬的爪子|r£ ", --39212
 "大型爆盐炸弹£远古海滩£唯一£|cff00ff00使用： 放置一枚巨型爆盐炸弹，10秒后爆炸。 （1秒冷却）|r£|cff00ff00死亡时会丢掉爆盐炸弹。|r", --39213
-"|cff0070ddobsolete|r£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00使用： 攻击强度提高200点，持续15秒。 （1分钟 30秒冷却）|r", --39214
+"|cff0070ddobsolete|r£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00使用： 攻击强度提高200点，持续15秒。 （1分钟30秒冷却）|r", --39214
 "|cffa335ed追随者之靴|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 法术强度提高77点。|r", --39215
 "|cffa335ed欲望腰带|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 法术强度提高76点。|r", --39216
 "|cffa335ed复仇战斗护腿|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高85点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f19|r|cff00ff00点法力值。|r", --39217
@@ -35191,7 +35191,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed勇猛的救赎胸铠|r£|cff00ff00装备： 防御等级提高46。|r£|cff00ff00装备： 使你的盾牌格挡等级提高53点。|r£|cff00ff00装备： 使你的盾牌格挡值提高129点。|r", --40579
 "|cffa335ed勇猛的救赎手甲|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的躲闪等级提高42点。|r£|cff00ff00装备： 命中等级提高37点。|r", --40580
 "|cffa335ed勇猛的救赎面甲|r£|cff00ff00装备： 防御等级提高66。|r£|cff00ff00装备： 使你的精准等级提高35点。|r£|cff00ff00装备： 使你的盾牌格挡值提高153点。|r", --40581
-"天灾石£拾取后绑定£唯一£|cff00ff00使用： 将你送回寒脊山谷。你必须是一名巫妖王的仆从。 （1小时冷却）|r", --40582
+"天灾石£拾取后绑定£唯一£|cff00ff00使用： 将你送回北郡山谷。你必须是一名巫妖王的仆从。 （1小时冷却）|r", --40582
 "|cffa335ed勇猛的救赎护腿|r£|cff00ff00装备： 防御等级提高54。|r£|cff00ff00装备： 使你的盾牌格挡等级提高52点。|r£|cff00ff00装备： 使你的盾牌格挡值提高108点。|r", --40583
 "|cffa335ed勇猛的救赎护肩|r£|cff00ff00装备： 防御等级提高40。|r£|cff00ff00装备： 使你的躲闪等级提高37点。|r£|cff00ff00装备： 使你的招架等级提高39点。|r", --40584
 "|cffa335ed肯瑞托徽记|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 急速等级提高28点。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --40585
@@ -35394,9 +35394,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed致命角斗士的恐怖板甲护胸|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r", --40784
 "|cffa335ed致命角斗士的板鳞甲护胸|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r", --40785
 "|cffa335ed致命角斗士的板甲护胸|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r", --40786
-"|cffa335ed狂怒角斗士的恐怖板甲护胸|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40787
-"|cffa335ed狂怒角斗士的板鳞甲护胸|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40788
-"|cffa335ed狂怒角斗士的板甲护胸|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40789
+"|cffa335ed狂怒角斗士的恐怖板甲护胸|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --40787
+"|cffa335ed狂怒角斗士的板鳞甲护胸|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --40788
+"|cffa335ed狂怒角斗士的板甲护胸|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --40789
 "|cffa335ed无情角斗士的板甲护胸|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r", --40790
 "|cffa335ed无情角斗士的恐怖板甲护胸|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r", --40791
 "|cffa335ed无情角斗士的板鳞甲护胸|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r", --40792
@@ -35411,9 +35411,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed致命角斗士的板甲手套|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 断筋技能所消耗的怒气值降低3点。|r", --40804
 "|cffa335ed致命角斗士的板鳞甲护手|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 使你的十字军打击所造成的伤害提高5%。|r", --40805
 "|cffa335ed致命角斗士的恐怖板甲护手|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 你的寒冰锁链技能现在可以生成5点额外的符文能量。|r", --40806
-"|cffa335ed狂怒角斗士的板甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 断筋技能所消耗的怒气值降低3点。|r", --40807
-"|cffa335ed狂怒角斗士的板鳞甲护手|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 使你的十字军打击所造成的伤害提高5%。|r", --40808
-"|cffa335ed狂怒角斗士的恐怖板甲护手|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 你的寒冰锁链技能现在可以生成5点额外的符文能量。|r", --40809
+"|cffa335ed狂怒角斗士的板甲手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 断筋技能所消耗的怒气值降低3点。|r", --40807
+"|cffa335ed狂怒角斗士的板鳞甲护手|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 使你的十字军打击所造成的伤害提高5%。|r", --40808
+"|cffa335ed狂怒角斗士的恐怖板甲护手|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 你的寒冰锁链技能现在可以生成5点额外的符文能量。|r", --40809
 "|cffa335ed无情角斗士的板甲手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 断筋技能所消耗的怒气值降低3点。|r", --40810
 "|cffa335ed无情角斗士的恐怖板甲护手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 你的寒冰锁链技能现在可以生成5点额外的符文能量。|r", --40811
 "|cffa335ed无情角斗士的板鳞甲护手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 使你的十字军打击所造成的伤害提高5%。|r", --40812
@@ -35427,9 +35427,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed致命角斗士的板甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40823
 "|cffa335ed致命角斗士的恐怖板甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40824
 "|cffa335ed致命角斗士的板鳞甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40825
-"|cffa335ed狂怒角斗士的板甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r", --40826
-"|cffa335ed狂怒角斗士的恐怖板甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r", --40827
-"|cffa335ed狂怒角斗士的板鳞甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r", --40828
+"|cffa335ed狂怒角斗士的板甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r", --40826
+"|cffa335ed狂怒角斗士的恐怖板甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r", --40827
+"|cffa335ed狂怒角斗士的板鳞甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r", --40828
 "|cffa335ed无情角斗士的板甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40829
 "|cffa335ed无情角斗士的恐怖板甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40830
 "|cffa335ed无情角斗士的板鳞甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40831
@@ -35445,9 +35445,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed致命角斗士的板甲护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r", --40844
 "|cffa335ed致命角斗士的恐怖板甲护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r", --40845
 "|cffa335ed致命角斗士的板鳞甲护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r", --40846
-"|cffa335ed狂怒角斗士的板甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40847
-"|cffa335ed狂怒角斗士的恐怖板甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40848
-"|cffa335ed狂怒角斗士的板鳞甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --40849
+"|cffa335ed狂怒角斗士的板甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --40847
+"|cffa335ed狂怒角斗士的恐怖板甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --40848
+"|cffa335ed狂怒角斗士的板鳞甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --40849
 "|cffa335ed无情角斗士的板甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r", --40850
 "|cffa335ed无情角斗士的恐怖板甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r", --40851
 "|cffa335ed无情角斗士的板鳞甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r", --40852
@@ -35461,10 +35461,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed致命角斗士的恐怖板甲护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40863
 "|cffa335ed致命角斗士的板鳞甲护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40864
 "|cff0070dd噪声机|r£|cff00ff00装备： 法术强度提高63点。|r£|cff00ff00装备： 对你进行的近战攻击有一定几率触发声波护盾，吸收|r|cff7f7f7f1100|r|cff00ff00点伤害。这个效果每分钟只能触发一次。|r", --40865
-"|cffa335ed狂怒角斗士的板甲护肩|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r", --40866
+"|cffa335ed狂怒角斗士的板甲护肩|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 使你的韧性等级提高63点。|r", --40866
 "|cff0070dd野鹿魔印|r£|cff00ff00装备： 凋零缠绕造成的伤害提高80点。|r", --40867
-"|cffa335ed狂怒角斗士的恐怖板甲护肩|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r", --40868
-"|cffa335ed狂怒角斗士的板鳞甲护肩|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r", --40869
+"|cffa335ed狂怒角斗士的恐怖板甲护肩|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 使你的韧性等级提高63点。|r", --40868
+"|cffa335ed狂怒角斗士的板鳞甲护肩|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 使你的韧性等级提高63点。|r", --40869
 "|cffa335ed无情角斗士的板甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r", --40870
 "|cffa335ed无情角斗士的恐怖板甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r", --40871
 "|cffa335ed无情角斗士的板鳞甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r", --40872
@@ -35473,13 +35473,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed憎恨角斗士的凯旋胫甲|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r", --40878
 "|cffa335ed致命角斗士的凯旋束带|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40879
 "|cffa335ed致命角斗士的凯旋胫甲|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40880
-"|cffa335ed狂怒角斗士的凯旋束带|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r", --40881
-"|cffa335ed狂怒角斗士的凯旋胫甲|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r", --40882
+"|cffa335ed狂怒角斗士的凯旋束带|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r", --40881
+"|cffa335ed狂怒角斗士的凯旋胫甲|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r", --40882
 "|cffa335ed无情角斗士的凯旋束带|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r", --40883
 "|cffa335ed无情角斗士的凯旋胫甲|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r", --40884
 "|cffa335ed憎恨角斗士的凯旋护腕|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r", --40887
 "|cffa335ed致命角斗士的凯旋护腕|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r", --40888
-"|cffa335ed狂怒角斗士的凯旋护腕|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r", --40889
+"|cffa335ed狂怒角斗士的凯旋护腕|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r", --40889
 "|cffa335ed无情角斗士的凯旋护腕|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r", --40890
 "锤头锄£|cffffd100\"可以当作矿工锄或锻造锤使用。\"|r", --40892
 "锋刃锄£|cffffd100\"可以当作矿工锄或剥皮刀使用。\"|r", --40893
@@ -35496,7 +35496,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed憎恨角斗士的雕饰板甲护胸|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --40904
 "|cffa335ed致命角斗士的雕饰板甲护胸|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --40905
 "迅捷治疗雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的迅捷治愈技能不再吞噬目标身上的愈合或回春效果。|r", --40906
-"|cffa335ed狂怒角斗士的雕饰板甲护胸|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --40907
+"|cffa335ed狂怒角斗士的雕饰板甲护胸|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --40907
 "激活雕文£德鲁伊£|cff66baff大型雕文|r£|cff00ff00使用： 激活现在除了正常效果外，还会使施法者在10秒内获得其基础法力值的45%。|r", --40908
 "复生雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 被你的复生法术所复活的目标拥有100%的起始生命值。|r", --40909
 "|cffa335ed无情角斗士的雕饰板甲护胸|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --40910
@@ -35515,17 +35515,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "纠缠根须雕文£德鲁伊£|cff66baff大型雕文|r£|cff00ff00使用： 使你的纠缠根须的目标在解除纠缠效果之前所能承受的伤害提高20%。|r", --40924
 "|cffa335ed憎恨角斗士的雕饰板甲手套|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你的圣光闪现的爆击几率提高2%。|r", --40925
 "|cffa335ed致命角斗士的雕饰板甲手套|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的圣光闪现的爆击几率提高2%。|r", --40926
-"|cffa335ed狂怒角斗士的雕饰板甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你的圣光闪现的爆击几率提高2%。|r", --40927
+"|cffa335ed狂怒角斗士的雕饰板甲手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你的圣光闪现的爆击几率提高2%。|r", --40927
 "|cffa335ed无情角斗士的雕饰板甲手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你的圣光闪现的爆击几率提高2%。|r", --40928
 "|cff0070dd凶残角斗士的雕饰板甲头盔|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高73点。|r", --40930
 "|cffa335ed憎恨角斗士的雕饰板甲头盔|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --40931
 "|cffa335ed致命角斗士的雕饰板甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --40932
-"|cffa335ed狂怒角斗士的雕饰板甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --40933
+"|cffa335ed狂怒角斗士的雕饰板甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --40933
 "|cffa335ed无情角斗士的雕饰板甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --40934
 "|cff0070dd凶残角斗士的雕饰板甲护腿|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 法术强度提高73点。|r", --40936
 "|cffa335ed憎恨角斗士的雕饰板甲护腿|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --40937
 "|cffa335ed致命角斗士的雕饰板甲护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --40938
-"|cffa335ed狂怒角斗士的雕饰板甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --40939
+"|cffa335ed狂怒角斗士的雕饰板甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --40939
 "|cffa335ed无情角斗士的雕饰板甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --40940
 "|cff1eff00尖刺钴质头盔|r£|cff00ff00装备： 命中等级提高29点。|r£|cff00ff00装备： 爆击等级提高29点。|r", --40942
 "|cff1eff00尖刺钴质腿铠|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高32点。|r", --40943
@@ -35548,7 +35548,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的雕饰板甲护肩|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高59点。|r", --40960
 "|cffa335ed憎恨角斗士的雕饰板甲护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --40961
 "|cffa335ed致命角斗士的雕饰板甲护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --40962
-"|cffa335ed狂怒角斗士的雕饰板甲护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --40963
+"|cffa335ed狂怒角斗士的雕饰板甲护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --40963
 "|cffa335ed无情角斗士的雕饰板甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --40964
 "|cffa335ed憎恨角斗士的拯救束带|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高68点。|r", --40966
 "|cff9e9e9eMonster - Claw, Wolvar MH|r£ ", --40967
@@ -35560,12 +35560,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed憎恨角斗士的拯救胫甲|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高68点。|r", --40973
 "|cffa335ed致命角斗士的拯救束带|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --40974
 "|cffa335ed致命角斗士的拯救胫甲|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --40975
-"|cffa335ed狂怒角斗士的拯救束带|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --40976
-"|cffa335ed狂怒角斗士的拯救胫甲|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --40977
+"|cffa335ed狂怒角斗士的拯救束带|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --40976
+"|cffa335ed狂怒角斗士的拯救胫甲|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --40977
 "|cffa335ed无情角斗士的拯救束带|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高109点。|r", --40978
 "|cffa335ed无情角斗士的拯救胫甲|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高109点。|r", --40979
 "|cffa335ed致命角斗士的拯救护腕|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r", --40982
-"|cffa335ed狂怒角斗士的拯救护腕|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --40983
+"|cffa335ed狂怒角斗士的拯救护腕|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高77点。|r", --40983
 "|cffa335ed无情角斗士的拯救护腕|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高89点。|r", --40984
 "|cff0070dd凶残角斗士的环甲护胸|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --40986
 "|cff0070dd凶残角斗士的锁甲护胸|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 法术强度提高73点。|r", --40987
@@ -35573,85 +35573,85 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed憎恨角斗士的锁甲护胸|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --40989
 "|cffa335ed致命角斗士的环甲护胸|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高98点。|r", --40990
 "|cffa335ed致命角斗士的锁甲护胸|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --40991
-"|cffa335ed狂怒角斗士的环甲护胸|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f33|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高123点。|r", --40992
-"|cffa335ed狂怒角斗士的锁甲护胸|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --40993
+"|cffa335ed狂怒角斗士的环甲护胸|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高131点。|r", --40992
+"|cffa335ed狂怒角斗士的锁甲护胸|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --40993
 "|cffa335ed无情角斗士的环甲护胸|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高149点。|r", --40994
 "|cffa335ed无情角斗士的锁甲护胸|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --40995
 "|cff0070dd凶残角斗士的环甲手套|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f11|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --40998
 "|cffa335ed憎恨角斗士的环甲手套|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f14|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --40999
 "|cffa335ed致命角斗士的环甲手套|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f16|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41000
-"|cffa335ed狂怒角斗士的环甲手套|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f20|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41001
+"|cffa335ed狂怒角斗士的环甲手套|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41001
 "|cffa335ed无情角斗士的环甲手套|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41002
 "|cff0070dd凶残角斗士的锁甲手套|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41004
 "|cffa335ed憎恨角斗士的锁甲手套|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41005
 "|cffa335ed致命角斗士的锁甲手套|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41006
-"|cffa335ed狂怒角斗士的锁甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41007
+"|cffa335ed狂怒角斗士的锁甲手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41007
 "|cffa335ed无情角斗士的锁甲手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41008
 "|cff0070dd凶残角斗士的环甲头盔|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --41010
 "|cffa335ed憎恨角斗士的环甲头盔|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高87点。|r", --41011
 "|cffa335ed致命角斗士的环甲头盔|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高99点。|r", --41012
-"|cffa335ed狂怒角斗士的环甲头盔|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f33|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高123点。|r", --41013
+"|cffa335ed狂怒角斗士的环甲头盔|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高131点。|r", --41013
 "|cffa335ed无情角斗士的环甲头盔|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高149点。|r", --41014
 "|cff0070dd凶残角斗士的锁甲头盔|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41016
 "|cffa335ed憎恨角斗士的锁甲头盔|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41017
 "|cffa335ed致命角斗士的锁甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41018
-"|cffa335ed狂怒角斗士的锁甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41019
+"|cffa335ed狂怒角斗士的锁甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41019
 "|cffa335ed无情角斗士的锁甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41020
 "|cff9e9e9eMonster - Polearm, Dragon Hunter 003 (Disintegrate)|r£ ", --41022
 "|cff0070dd凶残角斗士的环甲护腿|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --41023
 "|cff0070dd凶残角斗士的环甲护肩|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f15|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高59点。|r", --41024
 "|cffa335ed憎恨角斗士的环甲护腿|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高87点。|r", --41025
 "|cffa335ed致命角斗士的环甲护腿|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高99点。|r", --41026
-"|cffa335ed狂怒角斗士的环甲护腿|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f33|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高123点。|r", --41027
+"|cffa335ed狂怒角斗士的环甲护腿|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高131点。|r", --41027
 "|cffa335ed无情角斗士的环甲护腿|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高149点。|r", --41028
 "|cff0070dd凶残角斗士的锁甲护腿|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41030
 "|cffa335ed憎恨角斗士的锁甲护腿|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41031
 "|cffa335ed致命角斗士的锁甲护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41032
-"|cffa335ed狂怒角斗士的锁甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41033
+"|cffa335ed狂怒角斗士的锁甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41033
 "|cffa335ed无情角斗士的锁甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41034
 "|cffa335ed憎恨角斗士的环甲护肩|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高68点。|r", --41036
 "|cffa335ed致命角斗士的环甲护肩|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --41037
-"|cffa335ed狂怒角斗士的环甲护肩|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高96点。|r", --41038
+"|cffa335ed狂怒角斗士的环甲护肩|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高102点。|r", --41038
 "|cffa335ed无情角斗士的环甲护肩|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高116点。|r", --41039
 "|cff0070dd凶残角斗士的锁甲护肩|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41041
 "|cffa335ed憎恨角斗士的锁甲护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41042
 "|cffa335ed致命角斗士的锁甲护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41043
-"|cffa335ed狂怒角斗士的锁甲护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --41044
+"|cffa335ed狂怒角斗士的锁甲护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --41044
 "|cffa335ed无情角斗士的锁甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --41045
 "|cffa335ed憎恨角斗士的拯救腕甲|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高59点。|r", --41047
 "|cffa335ed致命角斗士的拯救护腰|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --41048
 "|cffa335ed憎恨角斗士的拯救马靴|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高68点。|r", --41049
 "|cffa335ed憎恨角斗士的拯救护腰|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高68点。|r", --41050
-"|cffa335ed狂怒角斗士的拯救护腰|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --41051
+"|cffa335ed狂怒角斗士的拯救护腰|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --41051
 "|cffa335ed无情角斗士的拯救护腰|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高109点。|r", --41052
 "|cffa335ed致命角斗士的拯救马靴|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --41054
-"|cffa335ed狂怒角斗士的拯救马靴|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --41055
+"|cffa335ed狂怒角斗士的拯救马靴|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --41055
 "|cffa335ed无情角斗士的拯救马靴|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高109点。|r", --41056
 "海德尼尔鱼叉£任务物品£唯一£|cff00ff00使用： 使用你的鱼叉攻击附近的始祖幼龙。也可以用来击中装饰圆柱以结束驭龙赛。 （6秒冷却）|r", --41058
 "|cffa335ed致命角斗士的拯救腕甲|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r", --41059
-"|cffa335ed狂怒角斗士的拯救腕甲|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --41060
+"|cffa335ed狂怒角斗士的拯救腕甲|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高77点。|r", --41060
 "|cffa335ed无情角斗士的拯救腕甲|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高89点。|r", --41061
 "|cffa335ed憎恨角斗士的统御腕甲|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41063
 "|cffa335ed致命角斗士的统御腕甲|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --41064
-"|cffa335ed狂怒角斗士的统御腕甲|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41065
+"|cffa335ed狂怒角斗士的统御腕甲|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --41065
 "|cffa335ed无情角斗士的统御腕甲|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --41066
 "|cffa335ed憎恨角斗士的统御护腰|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41068
 "|cffa335ed致命角斗士的统御护腰|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41069
-"|cffa335ed狂怒角斗士的统御护腰|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41070
+"|cffa335ed狂怒角斗士的统御护腰|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41070
 "|cffa335ed无情角斗士的统御护腰|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41071
 "|cffa335ed憎恨角斗士的统御马靴|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41073
 "|cffa335ed致命角斗士的统御马靴|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41074
-"|cffa335ed狂怒角斗士的统御马靴|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41075
+"|cffa335ed狂怒角斗士的统御马靴|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41075
 "|cffa335ed无情角斗士的统御马靴|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41076
 "|cff0070dd凶残角斗士的鳞甲护胸|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41078
 "|cffa335ed憎恨角斗士的鳞甲护胸|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高88点。|r", --41079
 "|cffa335ed致命角斗士的鳞甲护胸|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41080
-"|cffa335ed狂怒角斗士的鳞甲护胸|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --41081
+"|cffa335ed狂怒角斗士的鳞甲护胸|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --41081
 "|cffa335ed无情角斗士的鳞甲护胸|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高159点。|r", --41082
 "|cff0070dd凶残角斗士的链甲护胸|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41084
 "|cffa335ed憎恨角斗士的链甲护胸|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高88点。|r", --41085
 "|cffa335ed致命角斗士的链甲护胸|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41086
-"|cffa335ed狂怒角斗士的链甲护胸|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --41087
+"|cffa335ed狂怒角斗士的链甲护胸|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --41087
 "|cffa335ed无情角斗士的链甲护胸|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高159点。|r", --41088
 "Monster - Zul'Aman - Staff, 2H, Drakuru Prophet£ ", --41090
 "手部火箭发射器£|cff00ff00使用： 永久性地在你的手套上加装一副手部火箭发射器，经验丰富的技师可以使用它对远处的敌人造成1654到2020点火焰伤害。每45秒只能发射一次。\r\n\r\n只能对你自己的手套进行改造，且改造之后这副手套会与你绑定。|r", --41091
@@ -35700,24 +35700,24 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的鳞甲手套|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 攻击强度提高60点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41134
 "|cffa335ed憎恨角斗士的鳞甲手套|r£|cff00ff00装备： 爆击等级提高35点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 攻击强度提高72点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41135
 "|cffa335ed致命角斗士的鳞甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高84点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41136
-"|cffa335ed狂怒角斗士的鳞甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 攻击强度提高104点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41137
+"|cffa335ed狂怒角斗士的鳞甲手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高110点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41137
 "|cffa335ed无情角斗士的鳞甲手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高126点。|r£|cff00ff00装备： 使你的所有震击和风剪法术的射程延长5码。|r", --41138
 "|cff0070dd凶残角斗士的链甲手套|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 攻击强度提高60点。|r£|cff00ff00装备： 宁神射击的冷却时间缩短2秒。|r", --41140
 "|cffa335ed憎恨角斗士的链甲手套|r£|cff00ff00装备： 爆击等级提高35点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 攻击强度提高72点。|r£|cff00ff00装备： 宁神射击的冷却时间缩短2秒。|r", --41141
 "|cffa335ed致命角斗士的链甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高84点。|r£|cff00ff00装备： 宁神射击的冷却时间缩短2秒。|r", --41142
-"|cffa335ed狂怒角斗士的链甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 攻击强度提高104点。|r£|cff00ff00装备： 宁神射击的冷却时间缩短2秒。|r", --41143
+"|cffa335ed狂怒角斗士的链甲手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高110点。|r£|cff00ff00装备： 宁神射击的冷却时间缩短2秒。|r", --41143
 "|cffa335ed无情角斗士的链甲手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高126点。|r£|cff00ff00装备： 宁神射击的冷却时间缩短2秒。|r", --41144
 "|cff0070dd太阳瞄准镜|r£|cff00ff00使用： 在弓或枪上加装永久性的瞄准镜，使其急速等级提高40。\r\n\r\n加装该瞄准镜后的远程武器会变成灵魂绑定物品。|r", --41146
 "趣味桶£ ", --41147
 "|cff0070dd凶残角斗士的鳞甲头盔|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41148
 "|cffa335ed憎恨角斗士的鳞甲头盔|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高88点。|r", --41149
 "|cffa335ed致命角斗士的鳞甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41150
-"|cffa335ed狂怒角斗士的鳞甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --41151
+"|cffa335ed狂怒角斗士的鳞甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --41151
 "|cffa335ed无情角斗士的鳞甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高159点。|r", --41152
 "|cff0070dd凶残角斗士的链甲头盔|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41154
 "|cffa335ed憎恨角斗士的链甲头盔|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高88点。|r", --41155
 "|cffa335ed致命角斗士的链甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41156
-"|cffa335ed狂怒角斗士的链甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --41157
+"|cffa335ed狂怒角斗士的链甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --41157
 "|cffa335ed无情角斗士的链甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高159点。|r", --41158
 "|cff0070dd凶残角斗士的鳞甲护腿|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41160
 "达库鲁“开锁器”£任务物品£|cff00ff00使用： “解开”达库鲁的镣铐。|r£|cffffd100\"这东西看起来很像是一柄锤。\"|r", --41161
@@ -35758,34 +35758,34 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "完美法术石£拾取后绑定£唯一£|cff00ff00使用： 附加在武器上，使其获得持续伤害法术造成的伤害提高1%、法术急速等级提高60的效果，持续1小时。 （1秒冷却）|r", --41196
 "创世者的圆盘£任务物品", --41197
 "|cffa335ed致命角斗士的鳞甲护腿|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41198
-"|cffa335ed狂怒角斗士的鳞甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41199
+"|cffa335ed狂怒角斗士的鳞甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高136点。|r", --41199
 "|cffa335ed无情角斗士的鳞甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高159点。|r", --41200
 "|cff0070dd凶残角斗士的链甲护腿|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41202
 "|cffa335ed憎恨角斗士的链甲护腿|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高88点。|r", --41203
 "|cffa335ed致命角斗士的链甲护腿|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41204
-"|cffa335ed狂怒角斗士的链甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41205
+"|cffa335ed狂怒角斗士的链甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高136点。|r", --41205
 "|cffa335ed无情角斗士的链甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高159点。|r", --41206
 "|cff0070dd凶残角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 攻击强度提高60点。|r", --41208
 "|cffa335ed憎恨角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41209
 "|cffa335ed致命角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --41210
-"|cffa335ed狂怒角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41211
+"|cffa335ed狂怒角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高108点。|r", --41211
 "|cffa335ed无情角斗士的鳞甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --41212
 "|cff0070dd凶残角斗士的链甲护肩|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 攻击强度提高60点。|r", --41214
 "|cffa335ed憎恨角斗士的链甲护肩|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --41215
 "|cffa335ed致命角斗士的链甲护肩|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --41216
-"|cffa335ed狂怒角斗士的链甲护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41217
+"|cffa335ed狂怒角斗士的链甲护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高108点。|r", --41217
 "|cffa335ed无情角斗士的链甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --41218
 "|cffa335ed憎恨角斗士的凯旋腕甲|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高32点。|r£|cff00ff00装备： 攻击强度提高50点。|r", --41223
 "|cffa335ed致命角斗士的凯旋腕甲|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --41224
-"|cffa335ed狂怒角斗士的凯旋腕甲|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --41225
+"|cffa335ed狂怒角斗士的凯旋腕甲|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 攻击强度提高89点。|r", --41225
 "|cffa335ed无情角斗士的凯旋腕甲|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --41226
 "|cffa335ed憎恨角斗士的凯旋马靴|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高50点。|r", --41228
 "|cffa335ed致命角斗士的凯旋马靴|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --41229
-"|cffa335ed狂怒角斗士的凯旋马靴|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 攻击强度提高96点。|r", --41230
+"|cffa335ed狂怒角斗士的凯旋马靴|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41230
 "|cffa335ed无情角斗士的凯旋马靴|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 攻击强度提高119点。|r", --41231
 "|cffa335ed憎恨角斗士的凯旋护腰|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高50点。|r", --41233
 "|cffa335ed致命角斗士的凯旋护腰|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --41234
-"|cffa335ed狂怒角斗士的凯旋护腰|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 攻击强度提高96点。|r", --41235
+"|cffa335ed狂怒角斗士的凯旋护腰|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41235
 "|cffa335ed无情角斗士的凯旋护腰|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 攻击强度提高119点。|r", --41236
 "|cff0070dd痛苦苍穹斗篷|r£|cff00ff00装备： 防御等级提高24。|r", --41238
 "|cff1eff00坚硬的钴质迅捷之刃|r£|cff00ff00装备： 爆击等级提高19点。|r£|cff00ff00装备： 攻击强度提高48点。|r", --41239
@@ -35823,50 +35823,50 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的科多皮长袍|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41272
 "|cffa335ed憎恨角斗士的科多皮护肩|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41273
 "|cffa335ed致命角斗士的科多皮护肩|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41274
-"|cffa335ed狂怒角斗士的科多皮护肩|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --41275
+"|cffa335ed狂怒角斗士的科多皮护肩|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --41275
 "|cffa335ed无情角斗士的科多皮护肩|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --41276
 "|cff0070dd凶残角斗士的蟒皮护肩|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41278
 "|cffa335ed憎恨角斗士的蟒皮护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41279
 "|cffa335ed致命角斗士的蟒皮护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41280
-"|cffa335ed狂怒角斗士的蟒皮护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --41281
+"|cffa335ed狂怒角斗士的蟒皮护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --41281
 "|cffa335ed无情角斗士的蟒皮护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --41282
 "|cffa335ed憎恨角斗士的科多皮手套|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41284
 "|cff0070dd混乱之天焰钻石|r£+21 爆击等级，+3% 爆击伤害£  |cff808080需要 至少2颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --41285
 "|cffa335ed致命角斗士的科多皮手套|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41286
-"|cffa335ed狂怒角斗士的科多皮手套|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41287
+"|cffa335ed狂怒角斗士的科多皮手套|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41287
 "|cffa335ed无情角斗士的科多皮手套|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41288
 "|cff0070dd凶残角斗士的蟒皮手套|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41290
 "|cffa335ed憎恨角斗士的蟒皮手套|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41291
 "|cffa335ed致命角斗士的蟒皮手套|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41292
-"|cffa335ed狂怒角斗士的蟒皮手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41293
+"|cffa335ed狂怒角斗士的蟒皮手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41293
 "|cffa335ed无情角斗士的蟒皮手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你的旋风法术的施法时间缩短0.1秒。|r", --41294
 "|cffa335ed憎恨角斗士的科多皮护腿|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41296
 "|cffa335ed致命角斗士的科多皮护腿|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41297
-"|cffa335ed狂怒角斗士的科多皮护腿|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41298
+"|cffa335ed狂怒角斗士的科多皮护腿|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41298
 "|cffa335ed无情角斗士的科多皮护腿|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41299
 "|cff0070dd凶残角斗士的蟒皮护腿|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41301
 "|cffa335ed憎恨角斗士的蟒皮护腿|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41302
 "|cffa335ed致命角斗士的蟒皮护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41303
-"|cffa335ed狂怒角斗士的蟒皮护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41304
+"|cffa335ed狂怒角斗士的蟒皮护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41304
 "|cffa335ed无情角斗士的蟒皮护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41305
 "|cff0070dd毁灭之天焰钻石|r£+25 爆击等级，1% 法术反射£  |cff808080需要 至少1颗红色宝石|r\n  |cff808080需要 至少1颗黄色宝石|r\n  |cff808080需要 至少1颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --41307
 "|cffa335ed憎恨角斗士的科多皮长袍|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41308
 "|cffa335ed致命角斗士的科多皮长袍|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --41309
-"|cffa335ed狂怒角斗士的科多皮长袍|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41310
+"|cffa335ed狂怒角斗士的科多皮长袍|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41310
 "|cffa335ed无情角斗士的科多皮长袍|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41311
 "|cff0070dd凶残角斗士的蟒皮长袍|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41313
 "|cffa335ed憎恨角斗士的蟒皮长袍|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41314
 "|cffa335ed致命角斗士的蟒皮长袍|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --41315
-"|cffa335ed狂怒角斗士的蟒皮长袍|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41316
+"|cffa335ed狂怒角斗士的蟒皮长袍|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41316
 "|cffa335ed无情角斗士的蟒皮长袍|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41317
 "|cffa335ed憎恨角斗士的科多皮头盔|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41319
 "|cffa335ed致命角斗士的科多皮头盔|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41320
-"|cffa335ed狂怒角斗士的科多皮头盔|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41321
+"|cffa335ed狂怒角斗士的科多皮头盔|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41321
 "|cffa335ed无情角斗士的科多皮头盔|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41322
 "|cff0070dd凶残角斗士的蟒皮头盔|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41324
 "|cffa335ed憎恨角斗士的蟒皮头盔|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41325
 "|cffa335ed致命角斗士的蟒皮头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41326
-"|cffa335ed狂怒角斗士的蟒皮头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41327
+"|cffa335ed狂怒角斗士的蟒皮头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41327
 "|cffa335ed无情角斗士的蟒皮头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41328
 "|cffa335ed憎恨角斗士的拯救腰带|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41330
 "|cffa335ed憎恨角斗士的拯救之靴|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41331
@@ -36134,7 +36134,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd月影布|r£ ", --41594
 "|cff0070dd法纹布|r£ ", --41595
 "|cff1eff00达拉然珠宝匠硬币|r£拾取后绑定£唯一（2147483647）£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cffffd100\"在达拉然的珠宝店兑换物品。\"|r", --41596
-"|cff0070dd深渊背包|r£装备后绑定£32格灵魂袋", --41597
+"|cff0070dd深渊背包|r£装备后绑定£32格灵魂袋£职业：术士", --41597
 "|cff0070dd神秘背包|r£装备后绑定£32格附魔材料袋£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼", --41598
 "|cff1eff00霜纹包|r£装备后绑定£20格容器", --41599
 "|cff0070dd冰川背包|r£装备后绑定£22格容器", --41600
@@ -36154,25 +36154,25 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "魔化土壤£任务物品", --41614
 "土灵采矿锄£任务物品£|cff00ff00使用： 采集魔化土壤。 （5秒冷却）|r", --41615
 "|cffa335ed致命角斗士的拯救腰带|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41616
-"|cffa335ed狂怒角斗士的拯救腰带|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41617
+"|cffa335ed狂怒角斗士的拯救腰带|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41617
 "|cffa335ed无情角斗士的拯救腰带|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41618
 "|cffa335ed致命角斗士的拯救之靴|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41620
-"|cffa335ed狂怒角斗士的拯救之靴|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41621
+"|cffa335ed狂怒角斗士的拯救之靴|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41621
 "|cffa335ed无情角斗士的拯救之靴|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41622
 "|cffa335ed致命角斗士的拯救裹臂|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --41624
-"|cffa335ed狂怒角斗士的拯救裹臂|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41625
+"|cffa335ed狂怒角斗士的拯救裹臂|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --41625
 "|cffa335ed无情角斗士的拯救裹臂|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --41626
 "|cffa335ed憎恨角斗士的统御腰带|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41628
 "|cffa335ed致命角斗士的统御腰带|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41629
-"|cffa335ed狂怒角斗士的统御腰带|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41630
+"|cffa335ed狂怒角斗士的统御腰带|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41630
 "|cffa335ed无情角斗士的统御腰带|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41631
 "|cffa335ed憎恨角斗士的统御之靴|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41633
 "|cffa335ed致命角斗士的统御之靴|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41634
-"|cffa335ed狂怒角斗士的统御之靴|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41635
+"|cffa335ed狂怒角斗士的统御之靴|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41635
 "|cffa335ed无情角斗士的统御之靴|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41636
 "|cffa335ed憎恨角斗士的统御裹臂|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41638
 "|cffa335ed致命角斗士的统御裹臂|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --41639
-"|cffa335ed狂怒角斗士的统御裹臂|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41640
+"|cffa335ed狂怒角斗士的统御裹臂|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --41640
 "|cffa335ed无情角斗士的统御裹臂|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --41641
 "|cff0070dd凶残角斗士的皮甲手套|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 攻击强度提高58点。|r£|cff00ff00装备： 脚踢技能的能量值消耗降低10点。|r", --41643
 "|cff0070dd凶残角斗士的皮甲头盔|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高46点。|r", --41644
@@ -36181,34 +36181,34 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的皮甲外套|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --41647
 "|cffa335ed憎恨角斗士的皮甲外套|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --41648
 "|cffa335ed致命角斗士的皮甲外套|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41649
-"|cffa335ed狂怒角斗士的皮甲外套|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --41650
+"|cffa335ed狂怒角斗士的皮甲外套|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41650
 "|cffa335ed无情角斗士的皮甲外套|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高145点。|r", --41651
 "|cffa335ed憎恨角斗士的皮甲护腿|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --41653
 "|cffa335ed致命角斗士的皮甲护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41654
-"|cffa335ed狂怒角斗士的皮甲护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --41655
+"|cffa335ed狂怒角斗士的皮甲护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41655
 "|cffa335ed无情角斗士的皮甲护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高145点。|r", --41656
 "|cff0070dd凶残角斗士的龙皮长袍|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --41658
 "|cffa335ed憎恨角斗士的龙皮长袍|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --41659
 "|cffa335ed致命角斗士的龙皮长袍|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41660
-"|cffa335ed狂怒角斗士的龙皮长袍|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --41661
+"|cffa335ed狂怒角斗士的龙皮长袍|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41661
 "|cffa335ed无情角斗士的龙皮长袍|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高145点。|r", --41662
 "|cff0070dd凶残角斗士的龙皮护腿|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --41664
 "|cffa335ed憎恨角斗士的龙皮护腿|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --41665
 "|cffa335ed致命角斗士的龙皮护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41666
-"|cffa335ed狂怒角斗士的龙皮护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --41667
+"|cffa335ed狂怒角斗士的龙皮护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41667
 "|cffa335ed无情角斗士的龙皮护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 攻击强度提高145点。|r", --41668
 "|cffa335ed憎恨角斗士的皮甲头盔|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高58点。|r", --41670
 "|cffa335ed致命角斗士的皮甲头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高70点。|r", --41671
-"|cffa335ed狂怒角斗士的皮甲头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --41672
+"|cffa335ed狂怒角斗士的皮甲头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41672
 "|cffa335ed无情角斗士的皮甲头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高145点。|r", --41673
 "|cff0070dd凶残角斗士的龙皮头盔|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高46点。|r", --41675
 "|cffa335ed憎恨角斗士的龙皮头盔|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高58点。|r", --41676
 "|cffa335ed致命角斗士的龙皮头盔|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高70点。|r", --41677
-"|cffa335ed狂怒角斗士的龙皮头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --41678
+"|cffa335ed狂怒角斗士的龙皮头盔|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --41678
 "|cffa335ed无情角斗士的龙皮头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高145点。|r", --41679
 "|cffa335ed憎恨角斗士的皮甲护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高66点。|r", --41681
 "|cffa335ed致命角斗士的皮甲护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高49点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --41682
-"|cffa335ed狂怒角斗士的皮甲护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --41683
+"|cffa335ed狂怒角斗士的皮甲护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高95点。|r", --41683
 "|cffa335ed无情角斗士的皮甲护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高108点。|r", --41684
 "|cff0070dd图鉴：高能帝黄晶|r£拾取后绑定£使用： 教你学会切割高能帝黄晶。£|cff0070dd\n高能帝黄晶|r£+9 法术强度，+8 爆击等级£|cffffd100\"对应红色或黄色插槽。\"|r£\n需要帝黄晶", --41686
 "|cff0070dd图鉴：荒凉帝黄晶|r£拾取后绑定£使用： 教你学会切割荒凉帝黄晶。£|cff0070dd\n荒凉帝黄晶|r£+16 攻击强度，+8 急速等级£|cffffd100\"对应红色或黄色插槽。\"|r£\n需要帝黄晶", --41687
@@ -36238,7 +36238,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的龙皮护肩|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 攻击强度提高58点。|r", --41712
 "|cffa335ed憎恨角斗士的龙皮护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高66点。|r", --41713
 "|cffa335ed致命角斗士的龙皮护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高49点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --41714
-"|cffa335ed狂怒角斗士的龙皮护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --41715
+"|cffa335ed狂怒角斗士的龙皮护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 攻击强度提高95点。|r", --41715
 "|cffa335ed无情角斗士的龙皮护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高108点。|r", --41716
 "|cff0070dd图鉴：符文血玉石|r£拾取后绑定£使用： 教你学会切割符文血玉石。£|cff0070dd\n符文血玉石|r£+19 法术强度£|cffffd100\"对应红色插槽。\"|r£\n需要血玉石", --41718
 "|cff0070dd图鉴：诡秘血玉石|r£拾取后绑定£使用： 教你学会切割诡秘血玉石。£|cff0070dd\n诡秘血玉石|r£+16 躲闪等级£|cffffd100\"对应红色插槽。\"|r£\n需要血玉石", --41719
@@ -36287,12 +36287,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Axe, Vladof|r£ ", --41764
 "|cffa335ed憎恨角斗士的皮甲手套|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 攻击强度提高66点。|r£|cff00ff00装备： 脚踢技能的能量值消耗降低10点。|r", --41765
 "|cffa335ed致命角斗士的皮甲手套|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高74点。|r£|cff00ff00装备： 脚踢技能的能量值消耗降低10点。|r", --41766
-"|cffa335ed狂怒角斗士的皮甲手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 攻击强度提高90点。|r£|cff00ff00装备： 脚踢技能的能量值消耗降低10点。|r", --41767
+"|cffa335ed狂怒角斗士的皮甲手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高95点。|r£|cff00ff00装备： 脚踢技能的能量值消耗降低10点。|r", --41767
 "|cffa335ed无情角斗士的皮甲手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高108点。|r£|cff00ff00装备： 脚踢技能的能量值消耗降低10点。|r", --41768
 "|cff0070dd凶残角斗士的龙皮手套|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 攻击强度提高58点。|r£|cff00ff00装备： 割碎的能量值消耗降低15点。|r", --41770
 "|cffa335ed憎恨角斗士的龙皮手套|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 攻击强度提高66点。|r£|cff00ff00装备： 割碎的能量值消耗降低15点。|r", --41771
 "|cffa335ed致命角斗士的龙皮手套|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高74点。|r£|cff00ff00装备： 割碎的能量值消耗降低15点。|r", --41772
-"|cffa335ed狂怒角斗士的龙皮手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 攻击强度提高90点。|r£|cff00ff00装备： 割碎的能量值消耗降低15点。|r", --41773
+"|cffa335ed狂怒角斗士的龙皮手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高95点。|r£|cff00ff00装备： 割碎的能量值消耗降低15点。|r", --41773
 "|cffa335ed无情角斗士的龙皮手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 攻击强度提高108点。|r£|cff00ff00装备： 割碎的能量值消耗降低15点。|r", --41774
 "暗影拱顶裁决令£任务物品£唯一£|cff00ff00使用： 站在强大的乌弗朗领主面前，阅读暗影拱顶裁决令。不能在战斗中使用，也不能在乌弗朗领主正在战斗或不在场时使用。 （5秒冷却）|r", --41776
 "|cff0070dd图鉴：蚀刻帝黄晶|r£使用： 教你学会切割蚀刻帝黄晶。£|cff0070dd\n蚀刻帝黄晶|r£+8 力量，+8 命中等级£|cffffd100\"对应红色或黄色插槽。\"|r£\n需要帝黄晶", --41777
@@ -36350,13 +36350,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd闪电恐惧之角|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 攻击强度提高104点。|r", --41829
 "|cffa335ed憎恨角斗士的凯旋裹臂|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高32点。|r£|cff00ff00装备： 攻击强度提高50点。|r", --41830
 "|cffa335ed致命角斗士的凯旋腰带|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高49点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --41831
-"|cffa335ed狂怒角斗士的凯旋腰带|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --41832
+"|cffa335ed狂怒角斗士的凯旋腰带|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高89点。|r", --41832
 "|cffa335ed无情角斗士的凯旋腰带|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41833
 "|cffa335ed致命角斗士的凯旋之靴|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高49点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --41835
-"|cffa335ed狂怒角斗士的凯旋之靴|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --41836
+"|cffa335ed狂怒角斗士的凯旋之靴|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高89点。|r", --41836
 "|cffa335ed无情角斗士的凯旋之靴|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --41837
 "|cffa335ed致命角斗士的凯旋裹臂|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 攻击强度提高58点。|r", --41839
-"|cffa335ed狂怒角斗士的凯旋裹臂|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高62点。|r", --41840
+"|cffa335ed狂怒角斗士的凯旋裹臂|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 攻击强度提高66点。|r", --41840
 "|cffa335ed无情角斗士的凯旋裹臂|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高77点。|r", --41841
 "维林的锁链钥匙£任务物品£唯一£|cffffd100\"维库人的尺寸。\"|r", --41843
 "|cff0070dd复仇征程护腕|r£|cff00ff00装备： 攻击强度提高58点。|r", --41844
@@ -36369,103 +36369,103 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的月布长袍|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41851
 "|cffa335ed憎恨角斗士的月布软帽|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41852
 "|cffa335ed致命角斗士的月布软帽|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41853
-"|cffa335ed狂怒角斗士的月布软帽|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41854
+"|cffa335ed狂怒角斗士的月布软帽|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41854
 "|cffa335ed无情角斗士的月布软帽|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41855
 "|cffa335ed憎恨角斗士的月布长袍|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41857
 "|cffa335ed致命角斗士的月布长袍|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --41858
-"|cffa335ed狂怒角斗士的月布长袍|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41859
+"|cffa335ed狂怒角斗士的月布长袍|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41859
 "|cffa335ed无情角斗士的月布长袍|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41860
 "|cffa335ed憎恨角斗士的月布护腿|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41862
 "|cffa335ed致命角斗士的月布护腿|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41863
-"|cffa335ed狂怒角斗士的月布护腿|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41864
+"|cffa335ed狂怒角斗士的月布护腿|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41864
 "|cffa335ed无情角斗士的月布护腿|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41865
 "|cffa335ed憎恨角斗士的月布衬肩|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41867
 "|cffa335ed致命角斗士的月布衬肩|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41868
-"|cffa335ed狂怒角斗士的月布衬肩|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --41869
+"|cffa335ed狂怒角斗士的月布衬肩|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --41869
 "|cffa335ed无情角斗士的月布衬肩|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --41870
 "|cffa335ed憎恨角斗士的月布手套|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41872
 "|cffa335ed致命角斗士的月布手套|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41873
-"|cffa335ed狂怒角斗士的月布手套|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41874
+"|cffa335ed狂怒角斗士的月布手套|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41874
 "|cffa335ed无情角斗士的月布手套|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41875
 "|cffa335ed憎恨角斗士的拯救裹腰|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41877
 "|cffa335ed憎恨角斗士的拯救裹腕|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41878
 "|cffa335ed憎恨角斗士的拯救便鞋|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41879
 "|cffa335ed致命角斗士的拯救裹腰|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41880
-"|cffa335ed狂怒角斗士的拯救裹腰|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41881
+"|cffa335ed狂怒角斗士的拯救裹腰|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41881
 "|cffa335ed无情角斗士的拯救裹腰|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41882
 "|cffa335ed致命角斗士的拯救便鞋|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41884
-"|cffa335ed狂怒角斗士的拯救便鞋|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41885
+"|cffa335ed狂怒角斗士的拯救便鞋|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41885
 "|cffa335ed无情角斗士的拯救便鞋|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41886
 "|cff1eff00天鹅绒小包|r£拾取后绑定", --41888
 "|cff0070ddMonster - Polearm, PvPAlliance Purple|r£ ", --41889
 "|cff0070dd征服先知长袍|r£|cff00ff00装备： 法术强度提高62点。|r", --41890
 "|cff0070dd精致赞达拉外套|r£|cff00ff00装备： 攻击强度提高106点。|r£|cff00ff00装备： 使你的护甲穿透提高30点。|r", --41891
 "|cffa335ed致命角斗士的拯救裹腕|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --41892
-"|cffa335ed狂怒角斗士的拯救裹腕|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41893
+"|cffa335ed狂怒角斗士的拯救裹腕|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --41893
 "|cffa335ed无情角斗士的拯救裹腕|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --41894
 "|cffa335ed憎恨角斗士的统御裹腰|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41896
 "|cffa335ed致命角斗士的统御裹腰|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41897
-"|cffa335ed狂怒角斗士的统御裹腰|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41898
+"|cffa335ed狂怒角斗士的统御裹腰|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41898
 "|cffa335ed无情角斗士的统御裹腰|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41899
 "|cffa335ed憎恨角斗士的统御便鞋|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41901
 "|cffa335ed致命角斗士的统御便鞋|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41902
-"|cffa335ed狂怒角斗士的统御便鞋|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的韧性等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --41903
+"|cffa335ed狂怒角斗士的统御便鞋|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --41903
 "|cffa335ed无情角斗士的统御便鞋|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 法术强度提高109点。|r", --41904
 "|cff0070dd狂暴愤怒胸甲|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --41905
 "|cffa335ed憎恨角斗士的统御裹腕|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41907
 "|cffa335ed致命角斗士的统御裹腕|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --41908
-"|cffa335ed狂怒角斗士的统御裹腕|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41909
+"|cffa335ed狂怒角斗士的统御裹腕|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --41909
 "|cffa335ed无情角斗士的统御裹腕|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --41910
 "|cff0070dd凶残角斗士的绸缎软帽|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41912
 "|cffa335ed憎恨角斗士的绸缎软帽|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41913
 "|cffa335ed致命角斗士的绸缎软帽|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41914
-"|cffa335ed狂怒角斗士的绸缎软帽|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41915
+"|cffa335ed狂怒角斗士的绸缎软帽|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41915
 "|cffa335ed无情角斗士的绸缎软帽|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41916
 "|cff0070dd凶残角斗士的绸缎长袍|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41918
 "|cffa335ed憎恨角斗士的绸缎长袍|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41919
 "|cffa335ed致命角斗士的绸缎长袍|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --41920
-"|cffa335ed狂怒角斗士的绸缎长袍|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41921
+"|cffa335ed狂怒角斗士的绸缎长袍|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41921
 "|cffa335ed无情角斗士的绸缎长袍|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41922
 "|cff0070dd凶残角斗士的绸缎护腿|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41924
 "|cffa335ed憎恨角斗士的绸缎护腿|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41925
 "|cffa335ed致命角斗士的绸缎护腿|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41926
-"|cffa335ed狂怒角斗士的绸缎护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41927
+"|cffa335ed狂怒角斗士的绸缎护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41927
 "|cffa335ed无情角斗士的绸缎护腿|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41928
 "|cff0070dd凶残角斗士的绸缎衬肩|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41930
 "|cffa335ed憎恨角斗士的绸缎衬肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41931
 "|cff0070dd恐惧神灵胸甲|r£|cff00ff00装备： 爆击等级提高53点。|r", --41932
 "|cffa335ed致命角斗士的绸缎衬肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41933
-"|cffa335ed狂怒角斗士的绸缎衬肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --41934
+"|cffa335ed狂怒角斗士的绸缎衬肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --41934
 "|cffa335ed无情角斗士的绸缎衬肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --41935
 "|cff0070dd凶残角斗士的绸缎手套|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41937
 "|cffa335ed憎恨角斗士的绸缎手套|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41938
 "|cffa335ed致命角斗士的绸缎手套|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41939
-"|cffa335ed狂怒角斗士的绸缎手套|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41940
+"|cffa335ed狂怒角斗士的绸缎手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41940
 "|cffa335ed无情角斗士的绸缎手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你的心灵尖啸技能的冷却时间缩短3秒。|r", --41941
 "|cff0070dd凶残角斗士的丝质罩帽|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41943
 "|cffa335ed憎恨角斗士的丝质罩帽|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41944
 "|cffa335ed致命角斗士的丝质罩帽|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41945
-"|cffa335ed狂怒角斗士的丝质罩帽|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41946
+"|cffa335ed狂怒角斗士的丝质罩帽|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41946
 "|cffa335ed无情角斗士的丝质罩帽|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41947
 "|cff0070dd凶残角斗士的丝质外衣|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41949
 "|cffa335ed憎恨角斗士的丝质外衣|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41950
 "|cffa335ed致命角斗士的丝质外衣|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --41951
-"|cffa335ed狂怒角斗士的丝质外衣|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41953
+"|cffa335ed狂怒角斗士的丝质外衣|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41953
 "|cffa335ed无情角斗士的丝质外衣|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41954
 "|cff0070dd凶残角斗士的丝质长裤|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41956
 "|cffa335ed憎恨角斗士的丝质长裤|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41957
 "|cffa335ed致命角斗士的丝质长裤|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41958
-"|cffa335ed狂怒角斗士的丝质长裤|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41959
+"|cffa335ed狂怒角斗士的丝质长裤|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41959
 "|cffa335ed无情角斗士的丝质长裤|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41960
 "|cff0070dd凶残角斗士的丝质护肩|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高59点。|r", --41962
 "|cffa335ed憎恨角斗士的丝质护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --41963
 "|cffa335ed致命角斗士的丝质护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --41964
-"|cffa335ed狂怒角斗士的丝质护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --41965
+"|cffa335ed狂怒角斗士的丝质护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --41965
 "|cffa335ed无情角斗士的丝质护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --41966
 "|cff0070dd凶残角斗士的丝质护手|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00装备： 使你在施放变形术时因受到伤害而承受的施法打退效果降低50%。|r", --41968
 "|cffa335ed憎恨角斗士的丝质护手|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你在施放变形术时因受到伤害而承受的施法打退效果降低50%。|r", --41969
 "|cffa335ed致命角斗士的丝质护手|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你在施放变形术时因受到伤害而承受的施法打退效果降低50%。|r", --41970
-"|cffa335ed狂怒角斗士的丝质护手|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你在施放变形术时因受到伤害而承受的施法打退效果降低50%。|r", --41971
+"|cffa335ed狂怒角斗士的丝质护手|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你在施放变形术时因受到伤害而承受的施法打退效果降低50%。|r", --41971
 "|cffa335ed无情角斗士的丝质护手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你在施放变形术时因受到伤害而承受的施法打退效果降低50%。|r", --41972
 "|cff1eff00钴质护腕|r£|cff00ff00装备： 防御等级提高45。|r", --41974
 "|cff1eff00钴质护手|r£|cff00ff00装备： 防御等级提高25。|r", --41975
@@ -36486,27 +36486,27 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的邪纹罩帽|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41990
 "|cffa335ed憎恨角斗士的邪纹罩帽|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高87点。|r", --41991
 "|cffa335ed致命角斗士的邪纹罩帽|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高99点。|r", --41992
-"|cffa335ed狂怒角斗士的邪纹罩帽|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41993
+"|cffa335ed狂怒角斗士的邪纹罩帽|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高68点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41993
 "|cffa335ed无情角斗士的邪纹罩帽|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41994
 "|cff0070dd凶残角斗士的邪纹外衣|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 法术强度提高73点。|r", --41996
 "|cffa335ed致命角斗士的邪纹外衣|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --41997
-"|cffa335ed狂怒角斗士的邪纹外衣|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --41998
+"|cffa335ed狂怒角斗士的邪纹外衣|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --41998
 "|cffa335ed无情角斗士的邪纹外衣|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --41999
 "|cffa335ed憎恨角斗士的邪纹外衣|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --42001
 "|cff0070dd凶残角斗士的邪纹长裤|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高52点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42002
 "|cffa335ed憎恨角斗士的邪纹长裤|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 法术强度提高87点。|r", --42003
 "|cffa335ed致命角斗士的邪纹长裤|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高99点。|r", --42004
-"|cffa335ed狂怒角斗士的邪纹长裤|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 法术强度提高123点。|r", --42005
+"|cffa335ed狂怒角斗士的邪纹长裤|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 法术强度提高131点。|r", --42005
 "|cffa335ed无情角斗士的邪纹长裤|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高96点。|r£|cff00ff00装备： 法术强度提高149点。|r", --42006
 "|cff0070dd凶残角斗士的邪纹护肩|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高59点。|r", --42008
 "|cffa335ed憎恨角斗士的邪纹护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高68点。|r", --42009
 "|cffa335ed致命角斗士的邪纹护肩|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --42010
-"|cffa335ed狂怒角斗士的邪纹护肩|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --42011
+"|cffa335ed狂怒角斗士的邪纹护肩|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的韧性等级提高64点。|r£|cff00ff00装备： 法术强度提高102点。|r", --42011
 "|cffa335ed无情角斗士的邪纹护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r", --42012
 "|cff0070dd凶残角斗士的邪纹护手|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高30点。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00装备： 使你在施放恐惧术时因受到伤害而承受的施法打退效果降低50%。|r", --42014
 "|cffa335ed憎恨角斗士的邪纹护手|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高35点。|r£|cff00ff00装备： 法术强度提高68点。|r£|cff00ff00装备： 使你在施放恐惧术时因受到伤害而承受的施法打退效果降低50%。|r", --42015
 "|cffa335ed致命角斗士的邪纹护手|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你在施放恐惧术时因受到伤害而承受的施法打退效果降低50%。|r", --42016
-"|cffa335ed狂怒角斗士的邪纹护手|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高96点。|r£|cff00ff00装备： 使你在施放恐惧术时因受到伤害而承受的施法打退效果降低50%。|r", --42017
+"|cffa335ed狂怒角斗士的邪纹护手|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高102点。|r£|cff00ff00装备： 使你在施放恐惧术时因受到伤害而承受的施法打退效果降低50%。|r", --42017
 "|cffa335ed无情角斗士的邪纹护手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的韧性等级提高71点。|r£|cff00ff00装备： 法术强度提高116点。|r£|cff00ff00装备： 使你在施放恐惧术时因受到伤害而承受的施法打退效果降低50%。|r", --42018
 "|cffa335ed憎恨角斗士的凯旋坠饰|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 攻击强度提高100点。|r", --42020
 "|cffa335ed憎恨角斗士的胜利坠饰|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 攻击强度提高100点。|r", --42021
@@ -36522,13 +36522,13 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed致命角斗士的镇压坠饰|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42031
 "|cffa335ed致命角斗士的解救坠饰|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42032
 "|cffa335ed致命角斗士的拯救坠饰|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r", --42033
-"|cffa335ed狂怒角斗士的凯旋坠饰|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --42034
-"|cffa335ed狂怒角斗士的胜利坠饰|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --42035
-"|cffa335ed狂怒角斗士的统御坠饰|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42036
-"|cffa335ed狂怒角斗士的支配坠饰|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42037
-"|cffa335ed狂怒角斗士的镇压坠饰|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42038
-"|cffa335ed狂怒角斗士的解救坠饰|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42039
-"|cffa335ed狂怒角斗士的拯救坠饰|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --42040
+"|cffa335ed狂怒角斗士的凯旋坠饰|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --42034
+"|cffa335ed狂怒角斗士的胜利坠饰|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --42035
+"|cffa335ed狂怒角斗士的统御坠饰|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42036
+"|cffa335ed狂怒角斗士的支配坠饰|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42037
+"|cffa335ed狂怒角斗士的镇压坠饰|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42038
+"|cffa335ed狂怒角斗士的解救坠饰|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42039
+"|cffa335ed狂怒角斗士的拯救坠饰|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高77点。|r", --42040
 "|cffa335ed无情角斗士的凯旋坠饰|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高151点。|r", --42041
 "|cffa335ed无情角斗士的胜利坠饰|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高151点。|r", --42042
 "|cffa335ed无情角斗士的统御坠饰|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --42043
@@ -36546,17 +36546,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed致命角斗士的统御披风|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42062
 "|cffa335ed致命角斗士的镇压披风|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42063
 "|cffa335ed致命角斗士的支配披风|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42064
-"|cffa335ed致命角斗士的拯救裹腕|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r", --42065
+"|cffa335ed致命角斗士的拯救斗篷|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r", --42065
 "|cffa335ed致命角斗士的解救披风|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42066
 "|cffa335ed致命角斗士的凯旋披风|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --42067
 "|cffa335ed致命角斗士的胜利披风|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --42068
-"|cffa335ed狂怒角斗士的统御披风|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42069
-"|cffa335ed狂怒角斗士的镇压披风|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42070
-"|cffa335ed狂怒角斗士的支配披风|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42071
-"|cffa335ed狂怒角斗士的拯救披风|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --42072
-"|cffa335ed狂怒角斗士的解救披风|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42073
-"|cffa335ed狂怒角斗士的凯旋披风|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --42074
-"|cffa335ed狂怒角斗士的胜利披风|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --42075
+"|cffa335ed狂怒角斗士的统御披风|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42069
+"|cffa335ed狂怒角斗士的镇压披风|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42070
+"|cffa335ed狂怒角斗士的支配披风|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42071
+"|cffa335ed狂怒角斗士的拯救披风|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高77点。|r", --42072
+"|cffa335ed狂怒角斗士的解救披风|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42073
+"|cffa335ed狂怒角斗士的凯旋披风|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --42074
+"|cffa335ed狂怒角斗士的胜利披风|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --42075
 "|cffa335ed无情角斗士的统御披风|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --42076
 "|cffa335ed无情角斗士的镇压披风|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 急速等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --42077
 "|cffa335ed无情角斗士的支配披风|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --42078
@@ -36590,8 +36590,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed法纹手套|r£|cff00ff00装备： 急速等级提高65点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42113
 "|cffa335ed致命角斗士的支配指环|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42114
 "|cffa335ed致命角斗士的胜利指环|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --42115
-"|cffa335ed狂怒角斗士的统御指环|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高73点。|r", --42116
-"|cffa335ed狂怒角斗士的凯旋指环|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --42117
+"|cffa335ed狂怒角斗士的统御指环|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高77点。|r", --42116
+"|cffa335ed狂怒角斗士的凯旋指环|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --42117
 "|cffa335ed无情角斗士的支配指环|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --42118
 "|cffa335ed无情角斗士的胜利指环|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高151点。|r", --42119
 "|cffa335ed部落勋章|r£|cff00ff00装备： 使你的韧性等级提高84点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （2分钟冷却）|r", --42122
@@ -36652,7 +36652,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "图样：乌纹布£拾取后绑定£使用： 教你学会制作乌纹布。£|cff0070dd\n乌纹布|r£\n需要魔化霜纹布卷, 永恒暗影 (2)", --42180
 "图样：月影布£拾取后绑定£使用： 教你学会制作月影布。£|cff0070dd\n月影布|r£\n需要魔化霜纹布卷, 永恒生命 (2)", --42181
 "图样：法纹布£拾取后绑定£使用： 教你学会制作法纹布。£|cff0070dd\n法纹布|r£\n需要魔化霜纹布卷, 永恒火焰 (2)", --42182
-"图样：深渊背包£拾取后绑定£使用： 教你学会制作深渊背包。£|cff0070dd\n深渊背包|r£装备后绑定£32格灵魂袋£\n需要乌纹布 (4), 法纹布 (2), 恒金线", --42183
+"图样：深渊背包£拾取后绑定£使用： 教你学会制作深渊背包。£|cff0070dd\n深渊背包|r£装备后绑定£32格灵魂袋£职业：术士£\n需要乌纹布 (4), 法纹布 (2), 恒金线", --42183
 "图样：冰川背包£拾取后绑定£使用： 教你学会制作冰川背包。£|cff0070dd\n冰川背包|r£装备后绑定£22格容器£\n需要月影布 (4), 乌纹布 (4), 恒金线", --42184
 "图样：神秘背包£拾取后绑定£使用： 教你学会制作神秘背包。£|cff0070dd\n神秘背包|r£装备后绑定£32格附魔材料袋£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£\n需要法纹布 (4), 月影布 (2), 恒金线", --42185
 "图样：霜纹包£拾取后绑定£使用： 教你学会制作霜纹包。£|cff1eff00\n霜纹包|r£装备后绑定£20格容器£\n需要魔化霜纹布卷 (6), 恒金线 (2)", --42186
@@ -36678,7 +36678,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的利斧|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高22点。|r£|cff00ff00装备： 攻击强度提高66点。|r", --42206
 "|cffa335ed憎恨角斗士的利斧|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42207
 "|cffa335ed致命角斗士的利斧|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42208
-"|cffa335ed狂怒角斗士的利斧|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42209
+"|cffa335ed狂怒角斗士的利斧|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42209
 "|cffa335ed无情角斗士的利斧|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42210
 "|cff0070dd凶残角斗士的切碎者|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高22点。|r£|cff00ff00装备： 攻击强度提高66点。|r", --42212
 "|cff0070dd凶残角斗士的轻斧|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 使你的韧性等级提高22点。|r£|cff00ff00装备： 攻击强度提高66点。|r", --42213
@@ -36696,59 +36696,59 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd龙眼石|r£ ", --42225
 "|cffa335ed憎恨角斗士的轻斧|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42226
 "|cffa335ed致命角斗士的轻斧|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42227
-"|cffa335ed狂怒角斗士的轻斧|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42228
+"|cffa335ed狂怒角斗士的轻斧|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42228
 "|cffa335ed无情角斗士的轻斧|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42229
 "|cffa335ed憎恨角斗士的切碎者|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42231
 "|cffa335ed致命角斗士的切碎者|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42232
-"|cffa335ed狂怒角斗士的切碎者|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42233
+"|cffa335ed狂怒角斗士的切碎者|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42233
 "|cffa335ed无情角斗士的切碎者|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42234
 "|cffa335ed憎恨角斗士的战斧|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42236
 "|cffa335ed致命角斗士的战斧|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42237
-"|cffa335ed狂怒角斗士的战斧|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42238
+"|cffa335ed狂怒角斗士的战斧|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42238
 "|cffa335edOBSOLETE - LK Arena 5 Hunter 1h Axe - OBSOLETE|r£|cff00ff00装备： 爆击等级提高37点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高110点。|r", --42239
 "|cffa335edOBSOLETE - LK Arena 6 Hunter 1h Axe - OBSOLETE|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高124点。|r", --42240
 "|cffa335ed憎恨角斗士的军刺|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42241
 "|cffa335ed致命角斗士的军刺|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42242
-"|cffa335ed狂怒角斗士的军刺|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42243
+"|cffa335ed狂怒角斗士的军刺|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42243
 "|cffa335ed无情角斗士的军刺|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42244
 "冰之精华£任务物品£|cff00ff00使用： 将冰之精华扔进附近的一块冒烟的碎片中。 （10秒冷却）|r", --42246
 "|cffa335ed憎恨角斗士的刺刀|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42247
 "|cffa335ed致命角斗士的刺刀|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42248
-"|cffa335ed狂怒角斗士的刺刀|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42249
+"|cffa335ed狂怒角斗士的刺刀|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42249
 "|cffa335ed无情角斗士的刺刀|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42250
 "冻铁碎片£任务物品", --42252
 "冰网蛛丝£ ", --42253
 "|cffa335ed憎恨角斗士的切割者|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42254
 "|cffa335ed致命角斗士的切割者|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42255
-"|cffa335ed狂怒角斗士的切割者|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42256
+"|cffa335ed狂怒角斗士的切割者|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42256
 "|cffa335ed无情角斗士的切割者|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42257
 "|cffa335ed憎恨角斗士的右拳刃|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42259
 "|cffa335ed致命角斗士的右拳刃|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42260
-"|cffa335ed狂怒角斗士的右拳刃|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42261
+"|cffa335ed狂怒角斗士的右拳刃|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42261
 "|cffa335ed无情角斗士的右拳刃|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42262
 "|cffa335ed憎恨角斗士的左拳套|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42264
 "|cffa335ed致命角斗士的左拳套|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42265
-"|cffa335ed狂怒角斗士的左拳套|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42266
+"|cffa335ed狂怒角斗士的左拳套|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42266
 "|cffa335ed无情角斗士的左拳套|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42267
 "|cffa335ed憎恨角斗士的左拳刃|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42269
 "|cffa335ed致命角斗士的左拳刃|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42270
-"|cffa335ed狂怒角斗士的左拳刃|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42271
+"|cffa335ed狂怒角斗士的左拳刃|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42271
 "|cffa335ed无情角斗士的左拳刃|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42272
 "|cffa335ed憎恨角斗士的轻锤|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42274
 "|cffa335ed致命角斗士的轻锤|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42275
-"|cffa335ed狂怒角斗士的轻锤|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42276
+"|cffa335ed狂怒角斗士的轻锤|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42276
 "|cffa335ed无情角斗士的轻锤|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42277
 "|cffa335ed憎恨角斗士的碎骨锤|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42279
 "|cffa335ed致命角斗士的碎骨锤|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42280
-"|cffa335ed狂怒角斗士的碎骨锤|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42281
+"|cffa335ed狂怒角斗士的碎骨锤|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42281
 "|cffa335ed无情角斗士的碎骨锤|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42282
 "|cffa335ed憎恨角斗士的军刀|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42284
 "|cffa335ed致命角斗士的军刀|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42285
-"|cffa335ed狂怒角斗士的军刀|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42286
+"|cffa335ed狂怒角斗士的军刀|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42286
 "|cffa335ed无情角斗士的军刀|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42287
 "|cffa335ed憎恨角斗士的迅捷之刃|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42289
 "|cffa335ed致命角斗士的迅捷之刃|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42290
-"|cffa335ed狂怒角斗士的迅捷之刃|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高34点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --42291
+"|cffa335ed狂怒角斗士的迅捷之刃|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --42291
 "|cffa335ed无情角斗士的迅捷之刃|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的韧性等级提高39点。|r£|cff00ff00装备： 攻击强度提高101点。|r", --42292
 "|cff0070dd凶残角斗士的斩首斧|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高156点。|r", --42294
 "|cff0070dd凶残角斗士的碾骨锤|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的韧性等级提高51点。|r£|cff00ff00装备： 攻击强度提高156点。|r", --42295
@@ -36774,19 +36774,19 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd图鉴：厚重龙眼石|r£拾取后绑定£使用： 教你学会切割厚重龙眼石。£|cffa335ed\n厚重龙眼石|r£拾取后绑定£装备唯一：珠宝匠的宝石 （3）£|cffffd100\"对应黄色插槽。\"|r£\n需要龙眼石", --42315
 "|cffa335ed憎恨角斗士的斩首斧|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高178点。|r", --42316
 "|cffa335ed致命角斗士的斩首斧|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高200点。|r", --42317
-"|cffa335ed狂怒角斗士的斩首斧|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高210点。|r", --42318
+"|cffa335ed狂怒角斗士的斩首斧|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高223点。|r", --42318
 "|cffa335ed无情角斗士的斩首斧|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 使你的韧性等级提高74点。|r£|cff00ff00装备： 攻击强度提高271点。|r", --42319
 "|cffa335ed憎恨角斗士的碾骨锤|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高178点。|r", --42321
 "|cffa335ed致命角斗士的碾骨锤|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高200点。|r", --42322
-"|cffa335ed狂怒角斗士的碾骨锤|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高210点。|r", --42323
+"|cffa335ed狂怒角斗士的碾骨锤|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高223点。|r", --42323
 "|cffa335ed无情角斗士的碾骨锤|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 使你的韧性等级提高74点。|r£|cff00ff00装备： 攻击强度提高271点。|r", --42324
 "|cffa335ed憎恨角斗士的长刺|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高178点。|r", --42326
 "|cffa335ed致命角斗士的长刺|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高200点。|r", --42327
-"|cffa335ed狂怒角斗士的长刺|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高210点。|r", --42328
+"|cffa335ed狂怒角斗士的长刺|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高223点。|r", --42328
 "|cffa335ed无情角斗士的长刺|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 使你的韧性等级提高74点。|r£|cff00ff00装备： 攻击强度提高271点。|r", --42329
 "|cffa335ed憎恨角斗士的巨剑|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的韧性等级提高59点。|r£|cff00ff00装备： 攻击强度提高178点。|r", --42331
 "|cffa335ed致命角斗士的巨剑|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 攻击强度提高200点。|r", --42332
-"|cffa335ed狂怒角斗士的巨剑|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r£|cff00ff00装备： 攻击强度提高210点。|r", --42333
+"|cffa335ed狂怒角斗士的巨剑|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高223点。|r", --42333
 "|cffa335ed无情角斗士的巨剑|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 使你的韧性等级提高74点。|r£|cff00ff00装备： 攻击强度提高271点。|r", --42334
 "|cff1eff00血石指环|r£|cff00ff00装备： 命中等级提高4点。|r£|cff00ff00装备： 爆击等级提高16点。|r£|cff00ff00装备： 攻击强度提高44点。|r", --42336
 "|cff1eff00烈日石戒|r£|cff00ff00装备： 爆击等级提高8点。|r£|cff00ff00装备： 法术强度提高25点。|r", --42337
@@ -36799,12 +36799,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的木槌|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f14|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高355点。|r", --42344
 "|cffa335ed憎恨角斗士的法术之刃|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 使你的韧性等级提高32点。|r£|cff00ff00装备： 法术强度提高408点。|r", --42345
 "|cffa335ed致命角斗士的法术之刃|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高461点。|r", --42346
-"|cffa335ed狂怒角斗士的法术之刃|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 法术强度提高550点。|r", --42347
+"|cffa335ed狂怒角斗士的法术之刃|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高583点。|r", --42347
 "|cffa335ed无情角斗士的法术之刃|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 法术强度提高621点。|r", --42348
 "|cff9e9e9e一包花生米|r£魔法制造的物品£拾取后绑定£唯一£|cff00ff00使用： 在15秒内恢复总计30点生命值，进食时必须保持坐姿。 （1秒冷却）|r", --42350
 "|cffa335ed憎恨角斗士的木槌|r£|cff00ff00装备： 使你的韧性等级提高32点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f16|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高408点。|r", --42351
 "|cffa335ed致命角斗士的木槌|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高461点。|r", --42352
-"|cffa335ed狂怒角斗士的木槌|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高550点。|r", --42353
+"|cffa335ed狂怒角斗士的木槌|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高583点。|r", --42353
 "|cffa335ed无情角斗士的木槌|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高621点。|r", --42354
 "|cff0070dd凶残角斗士的战斗法杖|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 使你的韧性等级提高65点。|r£|cff00ff00装备： 法术强度提高355点。|r", --42356
 "|cffa335ed憎恨角斗士的战斗法杖|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 使你的韧性等级提高75点。|r£|cff00ff00装备： 法术强度提高408点。|r", --42359
@@ -36812,7 +36812,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "蓝色金丝紧身衣£ ", --42361
 "|cffa335ed致命角斗士的战斗法杖|r£|cff00ff00装备： 爆击等级提高85点。|r£|cff00ff00装备： 使你的韧性等级提高84点。|r£|cff00ff00装备： 法术强度提高461点。|r", --42362
 "金色金丝紧身衣£ ", --42363
-"|cffa335ed狂怒角斗士的战斗法杖|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 使你的韧性等级提高86点。|r£|cff00ff00装备： 法术强度提高550点。|r", --42364
+"|cffa335ed狂怒角斗士的战斗法杖|r£|cff00ff00装备： 爆击等级提高91点。|r£|cff00ff00装备： 使你的韧性等级提高91点。|r£|cff00ff00装备： 法术强度提高584点。|r", --42364
 "琥珀金丝紧身衣£ ", --42365
 "|cffa335ed无情角斗士的战斗法杖|r£|cff00ff00装备： 爆击等级提高99点。|r£|cff00ff00装备： 使你的韧性等级提高99点。|r£|cff00ff00装备： 法术强度提高621点。|r", --42366
 "红色金丝紧身衣£ ", --42368
@@ -36832,37 +36832,37 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的能量法杖|r£|cff00ff00装备： 使你的韧性等级提高65点。|r£|cff00ff00装备： 法术强度提高355点。|r", --42382
 "|cffa335ed憎恨角斗士的能量法杖|r£|cff00ff00装备： 使你的韧性等级提高75点。|r£|cff00ff00装备： 法术强度提高408点。|r", --42383
 "|cffa335ed致命角斗士的能量法杖|r£|cff00ff00装备： 使你的韧性等级提高84点。|r£|cff00ff00装备： 法术强度提高461点。|r", --42384
-"|cffa335ed狂怒角斗士的能量法杖|r£|cff00ff00装备： 使你的韧性等级提高86点。|r£|cff00ff00装备： 法术强度提高550点。|r", --42385
+"|cffa335ed狂怒角斗士的能量法杖|r£|cff00ff00装备： 使你的韧性等级提高91点。|r£|cff00ff00装备： 法术强度提高584点。|r", --42385
 "|cffa335ed无情角斗士的能量法杖|r£|cff00ff00装备： 使你的韧性等级提高98点。|r£|cff00ff00装备： 法术强度提高621点。|r", --42386
 "|cff0070dd凶残角斗士的法杖|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 使你的韧性等级提高65点。|r", --42388
 "|cffa335ed憎恨角斗士的法杖|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 使你的韧性等级提高75点。|r", --42389
 "|cffa335ed致命角斗士的法杖|r£|cff00ff00装备： 爆击等级提高85点。|r£|cff00ff00装备： 使你的韧性等级提高84点。|r", --42390
-"|cffa335ed狂怒角斗士的法杖|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的韧性等级提高80点。|r", --42391
+"|cffa335ed狂怒角斗士的法杖|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --42391
 "|cffa335ed无情角斗士的法杖|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 使你的韧性等级提高90点。|r", --42392
 "黑暗护甲板£任务物品", --42394
 "|cff0070dd雕像 - 暮光蛇|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00使用： 法术强度提高292点，持续20秒。 （2分钟冷却）|r", --42395
-"治疗之环雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的治疗之环可以多治疗1个目标。|r", --42396
-"驱散魔法雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的驱散魔法可以为目标恢复3%的生命值。|r", --42397
-"渐隐雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的渐隐术的冷却时间缩短9秒。|r", --42398
-"防护恐惧结界雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 防护恐惧结界的冷却时间和持续时间缩短60秒。|r", --42399
-"快速治疗雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的快速治疗消耗的法力值降低10%。|r", --42400
-"神圣新星雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的神圣新星的治疗量和伤害量提高20%。|r", --42401
-"心灵之火雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的心灵之火提供的护甲值加成提高50%。|r", --42402
-"光明之泉雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的光明之泉的治疗效果提高20%。|r", --42403
-"群体驱散雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的群体驱散消耗的法力值减少35%。|r", --42404
-"精神控制雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使目标抵抗或挣脱你的精神控制的几率降低17%。|r", --42405
-"暗言术：痛雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的暗言术：痛法术的持续伤害会为你恢复基础法力值的1% 。|r", --42406
-"暗影雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 在暗影形态下，你的非周期性法术爆击可以使你的法术强度提高，数值相当于你的精神值的30%，持续10秒。|r", --42407
-"真言术：盾雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的真言术：盾也会治疗目标，数值相当于吸收伤害量的20%。|r", --42408
-"治疗祷言雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的治疗祷言可以在6秒内为目标恢复额外的生命值，数值相当于该次治疗祷言治疗量的20%。|r", --42409
-"心灵尖啸雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的心灵尖啸的持续时间延长2秒，冷却时间延长8秒。|r", --42410
-"恢复雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恢复的持续时间缩短3秒，但是每一跳的治疗量提高25%。|r", --42411
-"天灾禁锢雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使你的束缚亡灵的施法时间缩短1.0秒。|r", --42412
+"治疗之环雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的治疗之环可以多治疗1个目标。|r", --42396
+"驱散魔法雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的驱散魔法可以为目标恢复3%的生命值。|r", --42397
+"渐隐雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的渐隐术的冷却时间缩短9秒。|r", --42398
+"防护恐惧结界雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 防护恐惧结界的冷却时间和持续时间缩短60秒。|r", --42399
+"快速治疗雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的快速治疗消耗的法力值降低10%。|r", --42400
+"神圣新星雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的神圣新星的治疗量和伤害量提高20%。|r", --42401
+"心灵之火雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的心灵之火提供的护甲值加成提高50%。|r", --42402
+"光明之泉雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的光明之泉的治疗效果提高20%。|r", --42403
+"群体驱散雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的群体驱散消耗的法力值减少35%。|r", --42404
+"精神控制雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使目标抵抗或挣脱你的精神控制的几率降低17%。|r", --42405
+"暗言术：痛雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的暗言术：痛法术的持续伤害会为你恢复基础法力值的1% 。|r", --42406
+"暗影雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 在暗影形态下，你的非周期性法术爆击可以使你的法术强度提高，数值相当于你的精神值的30%，持续10秒。|r", --42407
+"真言术：盾雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的真言术：盾也会治疗目标，数值相当于吸收伤害量的20%。|r", --42408
+"治疗祷言雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的治疗祷言可以在6秒内为目标恢复额外的生命值，数值相当于该次治疗祷言治疗量的20%。|r", --42409
+"心灵尖啸雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的心灵尖啸的持续时间延长2秒，冷却时间延长8秒。|r", --42410
+"恢复雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恢复的持续时间缩短3秒，但是每一跳的治疗量提高25%。|r", --42411
+"天灾禁锢雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的束缚亡灵的施法时间缩短1.0秒。|r", --42412
 "|cff0070dd雕像 - 蓝宝石猫头鹰|r£|cff00ff00使用： 在12秒内恢复|r|cff7f7f7f2340|r|cff00ff00点法力值。 （5分钟冷却）|r", --42413
-"暗言术：灭雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 当目标的生命值低于35%时，你的暗言术：灭对其造成的伤害提高10%。|r", --42414
-"精神鞭笞雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 当目标受到暗言术：痛的效果影响时，使你的精神鞭笞造成的伤害提高10%。|r", --42415
-"惩击雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的惩击法术对于已经受到神圣之火影响的目标造成的伤害提高20%。|r", --42416
-"拯救之魂雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 救赎之魂的持续时间延长6秒。|r", --42417
+"暗言术：灭雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当目标的生命值低于35%时，你的暗言术：灭对其造成的伤害提高10%。|r", --42414
+"精神鞭笞雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当目标受到暗言术：痛的效果影响时，使你的精神鞭笞造成的伤害提高10%。|r", --42415
+"惩击雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的惩击法术对于已经受到神圣之火影响的目标造成的伤害提高20%。|r", --42416
+"拯救之魂雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 救赎之魂的持续时间延长6秒。|r", --42417
 "|cff0070dd雕像 - 翡翠野猪|r£|cff00ff00装备： 攻击强度提高84点。|r£|cff00ff00使用： 召唤一头幻影野猪为你作战，持续30秒。 （5分钟冷却）|r", --42418
 "布德克拉格的作战号角£任务物品£|cff00ff00使用： 吹响号角，召唤布鲁沃·斩铁和塑石者布德克拉格前来帮助你。 （1分钟冷却）|r", --42419
 "|cff1eff00暗影水晶聚焦射线|r£|cff00ff00使用： 向你的当前目标投射一道紫色的指示光。|r", --42420
@@ -36895,28 +36895,28 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的挫败之触|r£|cff00ff00装备： 爆击等级提高16点。|r£|cff00ff00装备： 使你的韧性等级提高16点。|r£|cff00ff00装备： 法术强度提高28点。|r", --42448
 "|cffa335ed憎恨角斗士的战刃|r£|cff00ff00装备： 爆击等级提高18点。|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 攻击强度提高56点。|r", --42449
 "|cffa335ed致命角斗士的战刃|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 攻击强度提高62点。|r", --42450
-"|cffa335ed狂怒角斗士的战刃|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42451
-"烧尽雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的烧尽法术造成的伤害提高5%。|r", --42453
-"燃烧雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的燃烧法术不再消耗你施放在目标身上的献祭或暗影烈焰法术。|r", --42454
-"腐蚀雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的腐蚀术在对目标造成伤害之后有4%的几率使你进入暗影冥思状态，使得你的下一次暗影箭的施法时间缩短100%。|r", --42455
-"痛苦诅咒雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的痛苦诅咒的持续时间延长4秒。|r", --42456
-"死亡缠绕雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的死亡缠绕的持续时间延长0.5秒。|r", --42457
-"恐惧雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恐惧术的目标在解除恐惧效果之前所能承受的伤害提高20%。|r", --42458
-"恶魔卫士雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恶魔卫士的攻击强度提高20%。|r", --42459
-"地狱猎犬雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当你的地狱猎犬使用吞噬魔法时，你也会获得等量的治疗。|r", --42460
-"生命通道雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你在引导生命通道法术时受到施法打退效果的几率提高100%。|r", --42461
-"治疗石雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你通过治疗石恢复的生命值提高30%。|r", --42462
-"恐惧嚎叫雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恐惧嚎叫的冷却时间缩短8秒。|r", --42463
-"献祭雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的献祭的持续伤害提高10%。|r", --42464
-"小鬼雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的小鬼的火焰箭造成的伤害提高20%。|r", --42465
-"灼热之痛雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的灼热之痛的爆击伤害加成提高20%。|r", --42466
-"暗影箭雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的暗影箭消耗的法力值降低10%。|r", --42467
-"暗影灼烧雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当目标的生命值低于35%时，使你的暗影灼烧的爆击几率提高20%。|r", --42468
-"生命虹吸雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的生命虹吸天赋的治疗效果提高25%。|r", --42469
-"灵魂石雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你通过灵魂石复活后的起始生命值提高300%。|r", --42470
-"魅魔雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的魅魔的魅惑技能可以移除目标身上的所有持续伤害效果。|r", --42471
-"痛苦无常雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的痛苦无常的施法时间缩短0.2秒。|r", --42472
-"虚空行者雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的虚空行者的耐力总值提高20%。|r", --42473
+"|cffa335ed狂怒角斗士的战刃|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高26点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --42451
+"烧尽雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的烧尽法术造成的伤害提高5%。|r", --42453
+"燃烧雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你的燃烧法术不再消耗你施放在目标身上的献祭或暗影烈焰法术。|r", --42454
+"腐蚀雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你的腐蚀术在对目标造成伤害之后有4%的几率使你进入暗影冥思状态，使得你的下一次暗影箭的施法时间缩短100%。|r", --42455
+"痛苦诅咒雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的痛苦诅咒的持续时间延长4秒。|r", --42456
+"死亡缠绕雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的死亡缠绕的持续时间延长0.5秒。|r", --42457
+"恐惧雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恐惧术的目标在解除恐惧效果之前所能承受的伤害提高20%。|r", --42458
+"恶魔卫士雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恶魔卫士的攻击强度提高20%。|r", --42459
+"地狱猎犬雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 当你的地狱猎犬使用吞噬魔法时，你也会获得等量的治疗。|r", --42460
+"生命通道雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你在引导生命通道法术时受到施法打退效果的几率提高100%。|r", --42461
+"治疗石雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你通过治疗石恢复的生命值提高30%。|r", --42462
+"恐惧嚎叫雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恐惧嚎叫的冷却时间缩短8秒。|r", --42463
+"献祭雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的献祭的持续伤害提高10%。|r", --42464
+"小鬼雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的小鬼的火焰箭造成的伤害提高20%。|r", --42465
+"灼热之痛雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的灼热之痛的爆击伤害加成提高20%。|r", --42466
+"暗影箭雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的暗影箭消耗的法力值降低10%。|r", --42467
+"暗影灼烧雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 当目标的生命值低于35%时，使你的暗影灼烧的爆击几率提高20%。|r", --42468
+"生命虹吸雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的生命虹吸天赋的治疗效果提高25%。|r", --42469
+"灵魂石雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你通过灵魂石复活后的起始生命值提高300%。|r", --42470
+"魅魔雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你的魅魔的魅惑技能可以移除目标身上的所有持续伤害效果。|r", --42471
+"痛苦无常雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的痛苦无常的施法时间缩短0.2秒。|r", --42472
+"虚空行者雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的虚空行者的耐力总值提高20%。|r", --42473
 "巨像攻击规格说明书£任务物品", --42475
 "巨像防御规格说明书£任务物品", --42476
 "|cff9e9e9eMonster - Sword, 2H Deathknight B01 Blue|r£ ", --42477
@@ -36928,21 +36928,21 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed无情角斗士的战刃|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高85点。|r", --42483
 "|cffa335ed憎恨角斗士的火枪|r£|cff00ff00装备： 爆击等级提高18点。|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 攻击强度提高56点。|r", --42484
 "|cffa335ed致命角斗士的火枪|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 攻击强度提高62点。|r", --42485
-"|cffa335ed狂怒角斗士的火枪|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42486
+"|cffa335ed狂怒角斗士的火枪|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高26点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --42486
 "|cffa335ed无情角斗士的火枪|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高85点。|r", --42487
 "|cffa335ed憎恨角斗士的长弓|r£|cff00ff00装备： 爆击等级提高18点。|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 攻击强度提高56点。|r", --42489
 "|cffa335ed致命角斗士的长弓|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 攻击强度提高62点。|r", --42490
-"|cffa335ed狂怒角斗士的长弓|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42491
+"|cffa335ed狂怒角斗士的长弓|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高26点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --42491
 "|cffa335ed无情角斗士的长弓|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高85点。|r", --42492
 "|cffa335ed憎恨角斗士的重弩|r£|cff00ff00装备： 爆击等级提高18点。|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 攻击强度提高56点。|r", --42494
 "|cffa335ed致命角斗士的重弩|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 攻击强度提高62点。|r", --42495
-"|cffa335ed狂怒角斗士的重弩|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --42496
+"|cffa335ed狂怒角斗士的重弩|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高26点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --42496
 "|cffa335ed无情角斗士的重弩|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 攻击强度提高85点。|r", --42498
 "冰喉母熊的缰绳£任务物品£|cff00ff00使用： 在利齿之坑内召唤一头雌性战熊。 （15秒冷却）|r", --42499
 "|cff1eff00泰坦神铁盾刺|r£|cff00ff00使用： 在你的盾牌上加装一根泰坦神铁盾刺，每次使用这块盾牌格挡都会对攻击者造成45到67点伤害。\r\n\r\n附加泰坦神铁盾刺的盾牌会与你绑定。|r", --42500
 "|cffa335ed憎恨角斗士的挫败之触|r£|cff00ff00装备： 爆击等级提高19点。|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 法术强度提高33点。|r", --42501
 "|cffa335ed致命角斗士的挫败之触|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 法术强度提高37点。|r", --42502
-"|cffa335ed狂怒角斗士的挫败之触|r£|cff00ff00装备： 爆击等级提高25点。|r£|cff00ff00装备： 使你的韧性等级提高24点。|r£|cff00ff00装备： 法术强度提高44点。|r", --42503
+"|cffa335ed狂怒角斗士的挫败之触|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 法术强度提高47点。|r", --42503
 "|cffa335ed无情角斗士的挫败之触|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 法术强度提高50点。|r", --42504
 "|cff9e9e9eMonster - Mace, Basic Metal Hammer (Glow, Blue - High)|r£ ", --42506
 "|cff9e9e9eMonster - Harpoon, D01|r£ ", --42507
@@ -36952,27 +36952,27 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的光明法杖|r£|cff00ff00装备： 使你的韧性等级提高16点。|r£|cff00ff00装备： 法术强度提高28点。|r", --42511
 "|cffa335ed憎恨角斗士的光明法杖|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 法术强度提高33点。|r", --42512
 "|cffa335ed致命角斗士的光明法杖|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 法术强度提高37点。|r", --42513
-"|cffa335ed狂怒角斗士的光明法杖|r£|cff00ff00装备： 使你的韧性等级提高24点。|r£|cff00ff00装备： 法术强度提高44点。|r", --42514
+"|cffa335ed狂怒角斗士的光明法杖|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 法术强度提高47点。|r", --42514
 "|cffa335ed无情角斗士的光明法杖|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 法术强度提高50点。|r", --42515
 "|cff0070dd凶残角斗士的穿刺之触|r£|cff00ff00装备： 使你的韧性等级提高16点。|r£|cff00ff00装备： 法术强度提高28点。|r£|cff00ff00装备： 使你的法术穿透提高20。|r", --42517
 "|cffa335ed憎恨角斗士的穿刺之触|r£|cff00ff00装备： 使你的韧性等级提高18点。|r£|cff00ff00装备： 法术强度提高33点。|r£|cff00ff00装备： 使你的法术穿透提高24。|r", --42518
 "|cffa335ed致命角斗士的穿刺之触|r£|cff00ff00装备： 使你的韧性等级提高20点。|r£|cff00ff00装备： 法术强度提高37点。|r£|cff00ff00装备： 使你的法术穿透提高26。|r", --42519
-"|cffa335ed狂怒角斗士的穿刺之触|r£|cff00ff00装备： 使你的韧性等级提高24点。|r£|cff00ff00装备： 法术强度提高44点。|r£|cff00ff00装备： 使你的法术穿透提高31。|r", --42520
+"|cffa335ed狂怒角斗士的穿刺之触|r£|cff00ff00装备： 使你的韧性等级提高25点。|r£|cff00ff00装备： 法术强度提高47点。|r£|cff00ff00装备： 使你的法术穿透提高31。|r", --42520
 "|cffa335ed无情角斗士的穿刺之触|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 法术强度提高50点。|r£|cff00ff00装备： 法术穿透提高35点。|r", --42521
 "|cff0070dd凶残角斗士的决战|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 法术强度提高50点。|r", --42523
 "|cffa335ed憎恨角斗士的决战|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r", --42524
 "|cffa335ed致命角斗士的决战|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42525
-"|cffa335ed狂怒角斗士的决战|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r", --42526
+"|cffa335ed狂怒角斗士的决战|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高82点。|r", --42526
 "|cffa335ed无情角斗士的决战|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 使你的韧性等级提高53点。|r£|cff00ff00装备： 法术强度提高94点。|r", --42527
 "|cff0070dd凶残角斗士的缓刑|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 法术强度提高50点。|r", --42529
 "|cffa335ed憎恨角斗士的缓刑|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r", --42530
 "|cffa335ed致命角斗士的缓刑|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42531
-"|cffa335ed狂怒角斗士的缓刑|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r", --42532
+"|cffa335ed狂怒角斗士的缓刑|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高82点。|r", --42532
 "|cffa335ed无情角斗士的缓刑|r£|cff00ff00装备： 使你的韧性等级提高53点。|r£|cff00ff00装备： 法术强度提高94点。|r", --42533
 "|cff0070dd凶残角斗士的魔典|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 法术强度提高50点。|r£|cff00ff00装备： 使你的法术穿透提高36。|r", --42535
 "|cffa335ed憎恨角斗士的魔典|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r£|cff00ff00装备： 使你的法术穿透提高43。|r", --42536
 "|cffa335ed致命角斗士的魔典|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r£|cff00ff00装备： 使你的法术穿透提高48。|r", --42537
-"|cffa335ed狂怒角斗士的魔典|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00装备： 使你的法术穿透提高55。|r", --42538
+"|cffa335ed狂怒角斗士的魔典|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高82点。|r£|cff00ff00装备： 使你的法术穿透提高55。|r", --42538
 "|cffa335ed无情角斗士的魔典|r£|cff00ff00装备： 使你的韧性等级提高53点。|r£|cff00ff00装备： 法术强度提高94点。|r£|cff00ff00装备： 法术穿透提高67点。|r", --42539
 "永冻碎片£任务物品£|cffffd100\"一个失落的时代残留下来的痕迹。\"|r", --42541
 "坚韧猛犸象的毛皮£任务物品", --42542
@@ -36993,31 +36993,31 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的屏障|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 法术强度提高50点。|r", --42557
 "|cffa335ed憎恨角斗士的墙盾|r£|cff00ff00装备： 使你的韧性等级提高63点。|r", --42558
 "|cffa335ed致命角斗士的墙盾|r£|cff00ff00装备： 使你的韧性等级提高71点。|r", --42559
-"|cffa335ed狂怒角斗士的墙盾|r£|cff00ff00装备： 使你的韧性等级提高84点。|r", --42560
+"|cffa335ed狂怒角斗士的墙盾|r£|cff00ff00装备： 使你的韧性等级提高89点。|r", --42560
 "|cffa335ed无情角斗士的墙盾|r£|cff00ff00装备： 使你的韧性等级提高101点。|r", --42561
 "|cffa335ed憎恨角斗士的屏障|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 法术强度提高59点。|r", --42563
 "|cffa335ed致命角斗士的屏障|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 法术强度提高66点。|r", --42564
-"|cffa335ed狂怒角斗士的屏障|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r", --42565
+"|cffa335ed狂怒角斗士的屏障|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 法术强度提高82点。|r", --42565
 "|cffa335ed无情角斗士的屏障|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 使你的韧性等级提高53点。|r£|cff00ff00装备： 法术强度提高94点。|r", --42566
 "|cff0070dd凶残角斗士的壁垒|r£|cff00ff00装备： 使你的韧性等级提高28点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f15|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高50点。|r", --42568
 "|cffa335ed憎恨角斗士的壁垒|r£|cff00ff00装备： 使你的韧性等级提高33点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高59点。|r", --42569
 "|cffa335ed致命角斗士的壁垒|r£|cff00ff00装备： 使你的韧性等级提高37点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r", --42570
-"|cffa335ed狂怒角斗士的壁垒|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --42571
+"|cffa335ed狂怒角斗士的壁垒|r£|cff00ff00装备： 使你的韧性等级提高47点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高82点。|r", --42571
 "|cffa335ed无情角斗士的壁垒|r£|cff00ff00装备： 使你的韧性等级提高53点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高94点。|r", --42572
 "|cff0070dd凶残角斗士的决心神像|r£|cff00ff00装备： 你的裂伤技能使你获得94点攻击强度加成，持续6秒。|r", --42574
 "|cff0070dd凶残角斗士的坚定神像|r£|cff00ff00装备： 你的月火术使你获得52点法术强度加成，持续6秒。|r", --42575
 "|cff0070dd凶残角斗士的顽强神像|r£|cff00ff00装备： 使你的生命绽放法术的最终治疗法术强度提高188点。|r", --42576
 "|cffa335ed憎恨角斗士的顽强神像|r£|cff00ff00装备： 使你的生命绽放法术的最终治疗法术强度提高217点。|r", --42577
 "|cffa335ed致命角斗士的顽强神像|r£|cff00ff00装备： 使你的生命绽放法术的最终治疗法术强度提高246点。|r", --42578
-"|cffa335ed狂怒角斗士的顽强神像|r£|cff00ff00装备： 使你的生命绽放法术的最终治疗法术强度提高294点。|r", --42579
+"|cffa335ed狂怒角斗士的顽强神像|r£|cff00ff00装备： 使你的生命绽放法术的最终治疗法术强度提高311点。|r", --42579
 "|cffa335ed无情角斗士的顽强神像|r£|cff00ff00装备： 使你的生命绽放法术的最终治疗法术强度提高376点。|r", --42580
 "|cffa335ed憎恨角斗士的坚定神像|r£|cff00ff00装备： 你的月火术使你的法术强度提高62点，持续6秒。|r", --42582
 "|cffa335ed致命角斗士的坚定神像|r£|cff00ff00装备： 你的月火术使你获得70点法术强度加成，持续10秒。|r", --42583
-"|cffa335ed狂怒角斗士的坚定神像|r£|cff00ff00装备： 你的月火术使你获得84点法术强度加成，持续10秒。|r", --42584
+"|cffa335ed狂怒角斗士的坚定神像|r£|cff00ff00装备： 你的月火术使你获得89点法术强度加成，持续10秒。|r", --42584
 "|cffa335ed无情角斗士的坚定神像|r£|cff00ff00装备： 你的月火术使你获得101点法术强度加成，持续10秒。|r", --42585
 "|cffa335ed憎恨角斗士的决心神像|r£|cff00ff00装备： 你的裂伤技能使你获得106点攻击强度加成，持续6秒。|r", --42587
 "|cffa335ed致命角斗士的决心神像|r£|cff00ff00装备： 你的裂伤技能使你获得120点攻击强度加成，持续10秒。|r", --42588
-"|cffa335ed狂怒角斗士的决心神像|r£|cff00ff00装备： 你的裂伤技能使你获得144点攻击强度加成，持续10秒。|r", --42589
+"|cffa335ed狂怒角斗士的决心神像|r£|cff00ff00装备： 你的裂伤技能使你获得152点攻击强度加成，持续10秒。|r", --42589
 "TEST FRUITCAKE£拾取后绑定£|cff00ff00使用： Restores 5% of your health and mana per second for 20秒.  Must remain seated while eating.  You should also probably like the taste of fruitcake.|r", --42590
 "|cffa335ed无情角斗士的决心神像|r£|cff00ff00装备： 你的裂伤技能使你获得172点攻击强度加成，持续10秒。|r", --42591
 "|cff0070dd凶残角斗士的无畏图腾|r£|cff00ff00装备： 你的熔岩猛击使你获得94点攻击强度加成，持续6秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42593
@@ -37025,15 +37025,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的狂风图腾|r£|cff00ff00装备： 次级治疗波的法术强度提高204点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42595
 "|cffa335ed憎恨角斗士的狂风图腾|r£|cff00ff00装备： 次级治疗波的法术强度提高236点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42596
 "|cffa335ed致命角斗士的狂风图腾|r£|cff00ff00装备： 次级治疗波的法术强度提高267点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42597
-"|cffa335ed狂怒角斗士的狂风图腾|r£|cff00ff00装备： 次级治疗波的法术强度提高320点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42598
+"|cffa335ed狂怒角斗士的狂风图腾|r£|cff00ff00装备： 次级治疗波的法术强度提高338点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42598
 "|cffa335ed无情角斗士的狂风图腾|r£|cff00ff00装备： 次级治疗波的法术强度提高404点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42599
 "|cffa335ed憎恨角斗士的生存图腾|r£|cff00ff00装备： 你的震击法术使你获得62点法术强度加成，持续6秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42601
 "|cffa335ed致命角斗士的生存图腾|r£|cff00ff00装备： 你的震击法术使你获得70点法术强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42602
-"|cffa335ed狂怒角斗士的生存图腾|r£|cff00ff00装备： 你的震击法术使你获得84点法术强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42603
+"|cffa335ed狂怒角斗士的生存图腾|r£|cff00ff00装备： 你的震击法术使你获得89点法术强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42603
 "|cffa335ed无情角斗士的生存图腾|r£|cff00ff00装备： 你的震击法术使你获得101点法术强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42604
 "|cffa335ed憎恨角斗士的无畏图腾|r£|cff00ff00装备： 你的熔岩猛击使你获得106点攻击强度加成，持续6秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42606
 "|cffa335ed致命角斗士的无畏图腾|r£|cff00ff00装备： 你的熔岩猛击使你获得120点攻击强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42607
-"|cffa335ed狂怒角斗士的无畏图腾|r£|cff00ff00装备： 你的熔岩猛击使你获得144点攻击强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42608
+"|cffa335ed狂怒角斗士的无畏图腾|r£|cff00ff00装备： 你的熔岩猛击使你获得152点攻击强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42608
 "|cffa335ed无情角斗士的无畏图腾|r£|cff00ff00装备： 你的熔岩猛击使你获得172点攻击强度加成，持续10秒。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --42609
 "|cff0070dd凶残角斗士的坚韧圣契|r£|cff00ff00装备： 你的十字军打击使你获得94点攻击强度加成，持续6秒。|r", --42611
 "|cff0070dd凶残角斗士的公正圣契|r£|cff00ff00装备： 圣光闪现的法术强度提高204点。|r", --42612
@@ -37044,7 +37044,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd凶残角斗士的冲突魔印|r£|cff00ff00装备： 你的暗影打击使你获得94点攻击强度加成，持续6秒。|r", --42618
 "|cffa335ed憎恨角斗士的冲突魔印|r£|cff00ff00装备： 你的暗影打击使你获得106点攻击强度加成，持续6秒。|r", --42619
 "|cffa335ed致命角斗士的冲突魔印|r£|cff00ff00装备： 你的暗影打击使你获得120点攻击强度加成，持续10秒。|r", --42620
-"|cffa335ed狂怒角斗士的冲突魔印|r£|cff00ff00装备： 你的暗影打击使你获得144点攻击强度加成，持续10秒。|r", --42621
+"|cffa335ed狂怒角斗士的冲突魔印|r£|cff00ff00装备： 你的暗影打击使你获得152点攻击强度加成，持续10秒。|r", --42621
 "|cffa335ed无情角斗士的冲突魔印|r£|cff00ff00装备： 你的暗影打击使你获得172点攻击强度加成，持续10秒。|r", --42622
 "碎裂的风暴之锤£任务物品£|cff00ff00使用： 向目标投掷风暴之锤，造成巨大的伤害，并使其昏迷4秒。风暴之锤会在命中目标之后回到主人手中。 （10秒冷却）|r", --42624
 "|cffa335ed角斗士的板甲护胸|r£|cff00ff00装备： 命中等级提高12点。|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高23点。|r", --42625
@@ -37274,7 +37274,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00烈焰使者之冠|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 法术强度提高82点。|r", --42850
 "|cffa335ed憎恨角斗士的坚韧圣契|r£|cff00ff00装备： 你的十字军打击使你获得106点攻击强度加成，持续6秒。|r", --42851
 "|cffa335ed致命角斗士的坚韧圣契|r£|cff00ff00装备： 你的十字军打击使你获得120点攻击强度加成，持续10秒。|r", --42852
-"|cffa335ed狂怒角斗士的坚韧圣契|r£|cff00ff00装备： 你的十字军打击使你获得144点攻击强度加成，持续10秒。|r", --42853
+"|cffa335ed狂怒角斗士的坚韧圣契|r£|cff00ff00装备： 你的十字军打击使你获得152点攻击强度加成，持续10秒。|r", --42853
 "|cffa335ed无情角斗士的坚韧圣契|r£|cff00ff00装备： 你的十字军打击使你获得172点攻击强度加成，持续10秒。|r", --42854
 "|cff1eff00霜吼符咒|r£|cff00ff00装备： 法术强度提高41点。|r", --42856
 "|cff1eff00托里姆的骑鞭|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高242点。|r", --42857
@@ -37363,16 +37363,16 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Mace, Zul'aman 1H - D02 Blue|r£ ", --42940
 "|cff9e9e9eMonster - Staff, Special NPC (Northrend)|r£ ", --42941
 "烤鳐鱼£|cff00ff00使用： 在30秒内恢复总计22500点生命值和19200点法力值。如果你花费至少10秒钟来进食，你的急速等级将提高30，耐力将提高40点，持续1小时。|r", --42942
-"|cff00ccff染血的奥金斧|r£ ", --42943
-"|cff00ccff平衡的觅心者|r£ ", --42944
-"|cff00ccff破旧的雷德神圣控诉者|r£ ", --42945
-"|cff00ccff精致的上古骨弓|r£ ", --42946
-"|cff00ccff高贵的院长之杖|r£ ", --42947
-"|cff00ccff虔诚的光环石锤|r£ ", --42948
+"|cff00ccff染血的奥金斧|r£|cff00ff00装备： 爆击等级提高1点。|r", --42943
+"|cff00ccff平衡的觅心者|r£|cff00ff00装备： 攻击强度提高1点。|r", --42944
+"|cff00ccff破旧的雷德神圣控诉者|r£|cff00ff00装备： 攻击强度提高1点。|r", --42945
+"|cff00ccff精致的上古骨弓|r£|cff00ff00装备： 攻击强度提高1点。|r", --42946
+"|cff00ccff高贵的院长之杖|r£|cff00ff00装备： 爆击等级提高1点。|r£|cff00ff00装备： 法术强度提高1点。|r", --42947
+"|cff00ccff虔诚的光环石锤|r£|cff00ff00装备： 法术强度提高1点。|r", --42948
 "|cff00ccff擦亮的勇气肩甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42949
-"|cff00ccff勇士的赫洛德护肩|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42950
-"|cff00ccff神秘的元素护肩|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42951
-"|cff00ccff褪色的迅影肩甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42952
+"|cff00ccff勇士的赫洛德护肩|r£|cff00ff00装备： 攻击强度提高2点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42950
+"|cff00ccff神秘的元素护肩|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42951
+"|cff00ccff褪色的迅影肩甲|r£|cff00ff00装备： 攻击强度提高2点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42952
 "|cff0070dd奇怪的信封|r£|cff3fbf3f已加密|r£|cffffd100\"暗月马戏团的财产。\"|r", --42953
 "冲动雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的冲动技能的持续时间延长5秒。|r", --42954
 "伏击雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 伏击的射程延长5码。|r", --42955
@@ -37404,15 +37404,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd贵族之六|r£|cff00ff00使用： 将贵族之一到贵族之八的所有卡片组合成为一副套牌。|r", --42981
 "|cff0070dd贵族之七|r£|cff00ff00使用： 将贵族之一到贵族之八的所有卡片组合成为一副套牌。|r", --42982
 "|cff0070dd贵族之八|r£|cff00ff00使用： 将贵族之一到贵族之八的所有卡片组合成为一副套牌。|r", --42983
-"|cff00ccff漂亮的铁羽护肩|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42984
-"|cff00ccff褴褛的鬼雾衬肩|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42985
+"|cff00ccff漂亮的铁羽护肩|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42984
+"|cff00ccff褴褛的鬼雾衬肩|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --42985
 "RP-GG£冬拥湖£唯一（5）£|cff00ff00使用： 发射一枚热追踪导弹，它会尝试定位敌方的坦克。 （1秒冷却）|r£|cff00ff00死亡后会扔掉RP-GG。|r£|cffffd100\"仅供军用\"|r", --42986
 "|cffa335ed暗月卡片：伟大|r£|cff00ff00装备： 当你进行治疗或对敌人造成伤害时，有一定几率获得伟大效果，力量、敏捷、智力或精神提高300点，持续15秒。总是会选择提升数值最高的那个属性。|r", --42987
 "|cffa335ed暗月卡片：幻象|r£|cff00ff00装备： 法术强度提高100点。|r£|cff00ff00使用： 吸收|r|cff7f7f7f1500|r|cff00ff00点伤害，持续6秒。当护盾被移除（无论什么方式）时，你获得|r|cff7f7f7f1500|r|cff00ff00点法力值。 （5分钟冷却）|r", --42988
 "|cffa335ed暗月卡片：狂暴！|r£|cff00ff00装备： 使你的韧性等级提高100点。|r£|cff00ff00装备： 你有一定几率在战斗中击中目标或被击中时获得狂暴效果，爆击等级提高35，持续12秒。这个效果可以叠加最多3次。|r", --42989
 "|cffa335ed暗月卡片：死亡|r£|cff00ff00装备： 爆击等级提高85点。|r£|cff00ff00装备： 你每次对敌人造成伤害，都有一定几率造成额外的1750到|r|cff7f7f7f2250|r|cff00ff00点暗影伤害。|r", --42990
-"|cff00ccff迅捷的正义之手|r£|cff00ff00装备： 当你杀死一个可以为你提供经验值或荣誉值的目标之后，为你恢复相当于你的生命值上限2%的生命值。|r", --42991
-"|cff00ccff敏锐的比斯巨兽之眼|r£|cff00ff00装备： 每当你杀死一个能获取经验值或荣誉值的目标，恢复你最大法力值的2%。|r", --42992
+"|cff00ccff迅捷的正义之手|r£|cff00ff00装备： 急速等级提高1点。|r£|cff00ff00装备： 当你杀死一个可以为你提供经验值或荣誉值的目标之后，为你恢复相当于你的生命值上限2%的生命值。|r", --42991
+"|cff00ccff敏锐的比斯巨兽之眼|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 每当你杀死一个能获取经验值或荣誉值的目标，恢复你最大法力值的2%。|r", --42992
 "香辣油炸青鱼£|cff00ff00使用： 在30秒内恢复总计22500点生命值和19200点法力值。如果你花费至少10秒钟来进食，你的法力回复将提高每5秒20点，耐力将提高40点，持续1小时。|r", --42993
 "虫犀肉排£|cff00ff00使用： 在30秒内恢复总计22500点生命值。如果你花费至少10秒钟来进食，你的精准将提高40，耐力将提高40点，持续1小时。|r", --42994
 "犀牛大餐£|cff00ff00使用： 在30秒内恢复总计22500点生命值。如果你花费至少10秒钟来进食，你的护甲穿透将提高40，耐力将提高40点，持续1小时。|r", --42995
@@ -37423,7 +37423,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "龙鳞鱼片£|cff00ff00使用： 在30秒内恢复总计22500点生命值和19200点法力值。如果你花费至少10秒钟来进食，你的力量将提高40点，耐力将提高40点，持续1小时。|r", --43000
 "追踪快餐£|cff00ff00使用： 在30秒内恢复总计22500点生命值。如果你花费至少10秒钟来进食，你将获得追踪野兽的能力，持续1小时。|r", --43001
 "充气地雷£冬拥湖£唯一（3）£|cff00ff00使用： 召唤3颗地雷。过于靠近地雷的敌人会导致地雷爆炸，造成850点火焰伤害。对机械单位造成额外的伤害。 （1秒冷却）|r£|cff00ff00死亡后会扔掉塑胶地雷。|r£|cffffd100\"仅供军用\"|r", --43002
-"|cff9e9e9eMarcus's Special Coin [PH]|r£|cffffd100\"我希望有一天可以成为一个大明星……被写进书里什么的。\"|r", --43003
+"|cffffd100\"我希望有一天可以成为一个大明星……被写进书里什么的。\"|r£ ", --43003
 "小动物的零食£|cff00ff00使用： 将小动物的零食丢给某只小动物以控制它。所谓“小动物”是指老鼠或火鸡之类的无害的……小动物。|r", --43004
 "香辣猛犸小吃£|cff00ff00使用： 使你的宠物的力量和耐力提高30点，持续1小时。|r", --43005
 "翡翠橡果£任务物品£|cff00ff00使用： 对红玉看守者的尸体使用，使其重归大地。 （1秒冷却）|r", --43006
@@ -37623,12 +37623,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Staff, OutlandRaid Squid (Blue)|r£ ", --43227
 "|cff0070dd岩石守卫者的碎片|r£拾取后绑定", --43228
 "死亡凝视宝珠£任务物品£|cff00ff00使用： 将死亡凝视宝珠放置在憎恶装配台宝珠支架、血肉巨人装配台宝珠支架和天灾之锅区域宝珠支架上。 （5秒冷却）|r", --43229
-"速效药膏 VIII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成247点自然伤害。|r", --43230
-"速效药膏 IX£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成302点自然伤害。|r", --43231
-"致命药膏 VIII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成246点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --43232
-"致命药膏 IX£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成298点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --43233
-"致伤药膏 VI£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到189点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --43234
-"致伤药膏 VII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到232点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --43235
+"速效药膏 VIII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成246点自然伤害。|r", --43230
+"速效药膏 IX£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，立即对其造成301点自然伤害。|r", --43231
+"致命药膏 VIII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成245点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --43232
+"致命药膏 IX£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有30%的几率令敌人中毒，在12秒内对其造成297点自然伤害，对单一目标最多可以叠加5次。一旦叠加到5次，每一层致命药膏还会令敌人染上盗贼另一把武器上的药膏之毒。|r", --43233
+"致伤药膏 VI£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到188点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --43234
+"致伤药膏 VII£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有一定几率令敌人中毒，使其受到231点自然伤害，并且在受到治疗时效果降低50%，持续15秒。|r", --43235
 "星辰之悲£|cff00ff00使用： 在30秒内恢复19200点法力值。饮水时必须保持坐姿。|r£|cffffd100\"精心提炼，供战争中使用。\"|r", --43236
 "麻醉药膏 II£|cff00ff00使用： 给一件武器浸毒，效果持续1小时。\r\n每次攻击都有50%的几率令敌人中毒，立即对其造成218到280点自然伤害，并驱散1个激怒效果，但不造成额外的威胁值。|r", --43237
 "失去光泽的银锭£任务物品£唯一（5）", --43238
@@ -37735,7 +37735,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "奥术智慧雕文£法师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的奥术智慧和奥术光辉的法力值消耗降低50%。|r", --43339
 "力量祝福雕文£圣骑士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你对自己施放的力量祝福的持续时间延长20分钟。|r", --43340
 "|cff9e9e9e没暖热的鞋子|r£|cffffd100\"一定很冷。\"|r", --43341
-"渐隐雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff小型雕文|r£|cff00ff00使用： 你的渐隐术的法力值消耗降低30%。|r", --43342
+"渐隐雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的渐隐术的法力值消耗降低30%。|r", --43342
 "妙手空空雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的搜索技能的射程延长5码。|r", --43343
 "水下呼吸雕文£萨满祭司£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的水下呼吸法术不再需要施法材料。|r", --43344
 "|cffa335ed龙皮包|r£拾取后绑定£唯一£22格容器", --43345
@@ -37763,11 +37763,11 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "圣疗雕文£圣骑士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的圣疗术的冷却时间缩短5分钟。|r", --43367
 "感知亡灵雕文£圣骑士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 当你的感知亡灵技能处于激活状态下时，使你对亡灵造成的伤害提高1%。|r", --43368
 "智者雕文£圣骑士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的智慧圣印的法力值消耗降低50%。|r", --43369
-"漂浮雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff小型雕文|r£|cff00ff00使用： 你的漂浮术不再需要施法材料。|r", --43370
-"坚韧雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff小型雕文|r£|cff00ff00使用： 你的真言术：韧和坚韧祷言的法力值消耗降低50%。|r", --43371
-"防护暗影雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff小型雕文|r£|cff00ff00使用： 使你的暗影防护和暗影防护祷言的持续时间延长10分钟。|r", --43372
-"束缚亡灵雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff小型雕文|r£|cff00ff00使用： 使你的束缚亡灵法术的射程延长5码。|r", --43373
-"暗影魔雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff小型雕文|r£|cff00ff00使用： 如果你的暗影恶魔被杀死，则你可以恢复法力总值的5%。|r", --43374
+"漂浮雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的漂浮术不再需要施法材料。|r", --43370
+"坚韧雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的真言术：韧和坚韧祷言的法力值消耗降低50%。|r", --43371
+"防护暗影雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的暗影防护和暗影防护祷言的持续时间延长10分钟。|r", --43372
+"束缚亡灵雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的束缚亡灵法术的射程延长5码。|r", --43373
+"暗影魔雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 如果你的暗影恶魔被杀死，则你可以恢复法力总值的5%。|r", --43374
 "|cff0070dd鸦人的长裤|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 法术强度提高80点。|r", --43375
 "扰乱雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的扰乱技能的作用范围延长5码。|r", --43376
 "开锁雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的开锁技能的施放时间缩短100%。|r", --43377
@@ -37782,12 +37782,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "水之护盾雕文£萨满祭司£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的水之护盾的使用次数增加1次。|r", --43386
 "|cff0070dd眼魔肩铠|r£|cff00ff00装备： 命中等级提高36点。|r", --43387
 "水上行走雕文£萨满祭司£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的水上行走法术不再需要施法材料。|r", --43388
-"水下呼吸雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 受到你的魔息术影响的目标游泳速度提高20%。|r", --43389
-"吸取灵魂雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的吸取灵魂技能有一定几率制造一块额外的灵魂碎片。|r", --43390
-"基尔罗格雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的基尔罗格之眼的移动速度提高50%，并使其可以在允许使用飞行坐骑的地方飞行。|r", --43391
-"疲劳诅咒雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的疲劳诅咒的射程延长5码。|r", --43392
-"征服恶魔雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的征服恶魔法术的施法时间缩短50%。|r", --43393
-"灵魂雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的灵魂仪式法术消耗的法力值降低70%。|r", --43394
+"水下呼吸雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff小型雕文|r£|cff00ff00使用： 受到你的魔息术影响的目标游泳速度提高20%。|r", --43389
+"吸取灵魂雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff小型雕文|r£|cff00ff00使用： 你的吸取灵魂技能有一定几率制造一块额外的灵魂碎片。|r", --43390
+"基尔罗格雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff小型雕文|r£|cff00ff00使用： 使你的基尔罗格之眼的移动速度提高50%，并使其可以在允许使用飞行坐骑的地方飞行。|r", --43391
+"疲劳诅咒雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff小型雕文|r£|cff00ff00使用： 使你的疲劳诅咒的射程延长5码。|r", --43392
+"征服恶魔雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff小型雕文|r£|cff00ff00使用： 使你的征服恶魔法术的施法时间缩短50%。|r", --43393
+"灵魂雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff小型雕文|r£|cff00ff00使用： 你的灵魂仪式法术消耗的法力值降低70%。|r", --43394
 "战斗雕文£战士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的战斗怒吼的持续时间延长2分钟。|r", --43395
 "血性狂暴雕文£战士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 你的血性狂暴技能消耗的生命值降低100%。|r", --43396
 "冲锋雕文£战士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff小型雕文|r£|cff00ff00使用： 使你的冲锋技能的射程延长5码。|r", --43397
@@ -38038,7 +38038,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "喷泉金鱼£|cff00ff00使用： 在30秒内恢复总计7500点生命值，进食时必须保持坐姿。|r", --43646
 "亮鳞鲤鱼£|cff00ff00使用： 在30秒内恢复总计18480点生命值，进食时必须保持坐姿。|r", --43647
 "|cff1eff00RESILIENCE TEST RING DO NOT LOCALIZE|r£|cff00ff00装备： 使你的韧性等级提高1229点。|r", --43648
-"|cffa335edITEMIZER TEST RING DO NOT LOCALIZE|r£|cff00ff00装备： 爆击等级提高1000点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --43649
+"拾取后绑定£|cff00ff00装备： 爆击等级提高1000点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --43649
 "生锈的监狱钥匙£拾取后绑定£|cffffd100\"很像一把用来打开水下宝箱的钥匙……\"|r", --43650
 "|cffff7f00Crafty's Pole|r£|cff00ff00装备： 钓鱼技能提高1000点。|r£|cffffd100\"Just holding this fishing pole makes you shiver with excitement.  This is possibly the most amazing thing you've ever seen.\"|r", --43651
 "光滑的鳗鱼£|cff00ff00使用： 在30秒内恢复总计18480点生命值。如果你花费至少10秒钟来进食，你的躲闪等级将提高40，持续1小时。|r", --43652
@@ -38396,7 +38396,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed顺从头饰|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高113点。|r", --44007
 "|cffa335ed清白裹腕|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 法术强度提高64点。|r", --44008
 "血肉巨人的脊骨£任务物品£唯一£|cff00ff00使用： 从起脓的血肉巨人的脊骨中抽取脓液。|r", --44009
-"脊骨脓液£任务物品£唯一£|cff00ff00使用： 将一些特殊液体倒进毒素之中。 （1分钟 30秒冷却）|r", --44010
+"脊骨脓液£任务物品£唯一£|cff00ff00使用： 将一些特殊液体倒进毒素之中。 （1分钟30秒冷却）|r", --44010
 "|cffa335ed荣耀者的护腿|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 急速等级提高65点。|r£|cff00ff00装备： 攻击强度提高196点。|r", --44011
 "下水道药剂£拾取后绑定£|cff00ff00使用： 你真的要喝它吗？这种药剂只能在达拉然城中生效。|r£|cffffd100\"把这瓶药剂拿到眼前仔细观看之后，你发现它是由达拉然城中的各种废弃药水混合而成的。\"|r", --44012
 "|cff0070dd炮兵的点火器|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00使用： 法术强度提高281点，持续20秒。 （2分钟冷却）|r", --44013
@@ -38473,24 +38473,24 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd稳固之大地崩裂钻石|r£+34 攻击强度，-10% 昏迷时间£  |cff808080需要 至少3颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --44087
 "|cff0070dd强能之大地崩裂钻石|r£+26 耐力，-10% 昏迷时间£  |cff808080需要 至少2颗蓝色宝石|r\n  |cff808080需要 至少1颗黄色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --44088
 "|cff0070dd锋利之大地崩裂钻石|r£+20 法术强度，-10% 昏迷时间£  |cff808080需要 至少1颗红色宝石|r\n  |cff808080需要 至少1颗黄色宝石|r\n  |cff808080需要 至少1颗蓝色宝石|r£|cffffd100\"只能镶嵌在多彩宝石插槽中。\"|r", --44089
-"|cff00ccffTest Mail Shoulder 2|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44090
-"|cff00ccff锋利的血色十字军波刃剑|r£ ", --44091
-"|cff00ccff重铸的真银圣剑|r£ ", --44092
+"|cff00ccffTest Mail Shoulder 2|r£|cff00ff00装备： 攻击强度提高4点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44090
+"|cff00ccff锋利的血色十字军波刃剑|r£|cff00ff00装备： 攻击强度提高1点。|r", --44091
+"|cff00ccff重铸的真银圣剑|r£|cff00ff00装备： 使你的韧性等级提高1点。|r", --44092
 "|cff00ccff改进型矮人手持火炮|r£ ", --44093
-"|cff00ccff神圣的恩赐之锤|r£ ", --44094
-"|cff00ccff高贵的乔丹法杖|r£ ", --44095
+"|cff00ccff神圣的恩赐之锤|r£|cff00ff00装备： 法术强度提高1点。|r", --44094
+"|cff00ccff高贵的乔丹法杖|r£|cff00ff00装备： 命中等级提高1点。|r£|cff00ff00装备： 使你的韧性等级提高1点。|r£|cff00ff00装备： 法术强度提高1点。|r", --44095
 "|cff00ccff磨旧的痛击之刃|r£ ", --44096
-"|cff00ccff家传的部落徽记|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （5分钟冷却）|r", --44097
-"|cff00ccff家传的联盟徽记|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （5分钟冷却）|r", --44098
-"|cff00ccff强化的牢狱肩甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44099
-"|cff00ccff朴素的光铸肩铠|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44100
-"|cff00ccff珍贵的兽王护肩|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44101
-"|cff00ccff古老的五雷肩甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44102
-"|cff00ccff优良的雷暴护肩|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44103
+"|cff00ccff家传的部落徽记|r£|cff00ff00装备： 使你的韧性等级提高1点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （5分钟冷却）|r", --44097
+"|cff00ccff家传的联盟徽记|r£|cff00ff00装备： 使你的韧性等级提高1点。|r£|cff00ff00使用： 驱散所有移动限制效果以及所有会导致你的角色不受控制的效果。 （5分钟冷却）|r", --44098
+"|cff00ccff强化的牢狱肩甲|r£|cff00ff00装备： 使你的韧性等级提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44099
+"|cff00ccff朴素的光铸肩铠|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44100
+"|cff00ccff珍贵的兽王护肩|r£|cff00ff00装备： 攻击强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44101
+"|cff00ccff古老的五雷肩甲|r£|cff00ff00装备： 使你的韧性等级提高1点。|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44102
+"|cff00ccff优良的雷暴护肩|r£|cff00ff00装备： 攻击强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44103
 "|cff0070dd腥臭的束带|r£|cff00ff00装备： 法术强度提高60点。|r", --44104
-"|cff00ccff耐磨的狂野之心肩甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44105
+"|cff00ccff耐磨的狂野之心肩甲|r£|cff00ff00装备： 使你的韧性等级提高1点。|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44105
 "|cff0070dd闪光鳞片腰带|r£|cff00ff00装备： 攻击强度提高102点。|r£|cff00ff00装备： 使你的护甲穿透提高25点。|r", --44106
-"|cff00ccff精致的碎裂先知衬肩|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44107
+"|cff00ccff精致的碎裂先知衬肩|r£|cff00ff00装备： 使你的韧性等级提高1点。|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --44107
 "|cff0070dd闪光宝石魔杖|r£|cff00ff00装备： 爆击等级提高16点。|r£|cff00ff00装备： 法术强度提高26点。|r", --44108
 "|cff0070dd牙片头盔|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --44109
 "|cff0070dd鲨腭帽|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 法术强度提高81点。|r", --44110
@@ -38498,7 +38498,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd闪亮贝壳肩铠|r£|cff00ff00装备： 使你的招架等级提高51点。|r", --44112
 "小香料袋£拾取后绑定", --44113
 "老辣椒£拾取后绑定£|cff00ff00使用： 陈年的辣椒使得目标闻起来很不错。 （10秒冷却）|r", --44114
-"|cff00ccff冬拥湖奖章|r£账号绑定£|cff00ff00使用： 使你获得2000点荣誉值。 （2秒冷却）|r", --44115
+"|cff00ccff冬拥湖奖章|r£绑定至暴雪游戏通行证£|cff00ff00使用： 使你获得2000点荣誉值。 （2秒冷却）|r", --44115
 "|cff0070dd染泥的红色手套|r£|cff00ff00装备： 法术强度提高60点。|r", --44116
 "|cff0070dd蓝色皮带短裤|r£|cff00ff00装备： 命中等级提高53点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --44117
 "|cff0070dd偷来的维库鱼叉|r£|cff00ff00装备： 急速等级提高10点。|r£|cff00ff00装备： 攻击强度提高44点。|r", --44118
@@ -38516,10 +38516,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd次级峭壁铭文|r£拾取后绑定£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高18点、每5秒恢复5点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44130
 "|cff0070dd次级利斧铭文|r£拾取后绑定£|cff00ff00使用： 永久性地为一件肩部装备附加攻击强度提高30点、爆击等级提高10的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44131
 "|cff0070dd次级巅峰铭文|r£拾取后绑定£|cff00ff00使用： 永久性地为一件肩部装备附加躲闪等级提高15、防御等级提高10的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44132
-"|cff00ccff强效利斧铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附加攻击强度提高40点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44133
-"|cff00ccff强效峭壁铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、每5秒恢复8点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44134
-"|cff00ccff强效风暴铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44135
-"|cff00ccff强效巅峰铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附加躲闪等级提高20、防御等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44136
+"|cff00ccff强效利斧铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附加攻击强度提高40点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44133
+"|cff00ccff强效峭壁铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、每5秒恢复8点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44134
+"|cff00ccff强效风暴铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44135
+"|cff00ccff强效巅峰铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附加躲闪等级提高20、防御等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44136
 "|cff0070dd冰霜之魂秘药|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得冰霜抗性提高25点、耐力提高30点的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44137
 "|cff0070dd防毒秘药|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得自然抗性提高25点、耐力提高30点的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44138
 "|cff0070dd消散之影秘药|r£拾取后绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得暗影抗性提高25点、耐力提高30点的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44139
@@ -38532,17 +38532,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "法师之四£|cff00ff00使用： 将五张法师卡片收集起来以完成这副套牌。|r", --44146
 "法师之五£|cff00ff00使用： 将五张法师卡片收集起来以完成这副套牌。|r", --44147
 "|cff0070dd法师套牌|r£该物品将触发一个任务", --44148
-"|cff00ccff折磨秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得攻击强度提高50点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44149
-"|cff00ccff坚定防御者秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得耐力提高37点、防御等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44150
+"|cff00ccff折磨秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得攻击强度提高50点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44149
+"|cff00ccff坚定防御者秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得耐力提高37点、防御等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44150
 "|cffa335ed蓝色始祖幼龙的缰绳|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德进行召唤。这是一种速度非常快的坐骑。|r", --44151
-"|cff00ccff祝福治愈秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、每5秒恢复10点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44152
+"|cff00ccff祝福治愈秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、每5秒恢复10点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44152
 "工头的钥匙£任务物品£唯一£|cffffd100\"那个怪物的声音一直在你的脑海中回响，恳求你将钥匙交给它。\"|r", --44153
 "恶魔之二£|cff00ff00使用： 将五张恶魔卡片收集起来以完成这副套牌。|r", --44154
 "恶魔之三£|cff00ff00使用： 将五张恶魔卡片收集起来以完成这副套牌。|r", --44155
 "恶魔之四£|cff00ff00使用： 将五张恶魔卡片收集起来以完成这副套牌。|r", --44156
 "恶魔之五£|cff00ff00使用： 将五张恶魔卡片收集起来以完成这副套牌。|r", --44157
 "|cff0070dd恶魔套牌|r£该物品将触发一个任务", --44158
-"|cff00ccff燃烧谜团秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44159
+"|cff00ccff燃烧谜团秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44159
 "|cffa335ed红色始祖幼龙的缰绳|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德进行召唤。这是一种速度非常快的坐骑。|r", --44160
 "奥法塔罗牌£|cffffd100\"一张随机的法师卡片。集齐全套即可获得奖励。\"|r", --44161
 "|cffa335edMonster - Sword, Iblis (Red particle)|r£ ", --44162
@@ -38696,8 +38696,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed艾沃尔的巨魔剑|r£|cff00ff00装备： 命中等级提高31点。|r£|cff00ff00装备： 攻击强度提高62点。|r", --44311
 "|cffa335ed瓦帕克的团结护肩|r£|cff00ff00装备： 防御等级提高58。|r£|cff00ff00装备： 使你的精准等级提高42点。|r", --44312
 "|cffa335ed佐姆的爆裂盾牌|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高58点。|r", --44313
-"召回卷轴 II£|cff00ff00使用： 将你送回寒脊山谷。70级以上的角色在传送后可能发生异常。|r", --44314
-"召回卷轴 III£|cff00ff00使用： 将你送回寒脊山谷。80级以上的角色在传送后可能发生异常。|r", --44315
+"召回卷轴 II£|cff00ff00使用： 将你送回北郡山谷。70级以上的角色在传送后可能发生异常。|r", --44314
+"召回卷轴 III£|cff00ff00使用： 将你送回北郡山谷。80级以上的角色在传送后可能发生异常。|r", --44315
 "|cff0070dd暗月卡片|r£|cffffd100\"一张随机的暗月卡片。集齐全套即可获得奖励。\"|r", --44316
 "|cff0070dd强力暗月卡片|r£|cffffd100\"一张随机的强力暗月卡片。集齐全套即可获得奖励。\"|r", --44317
 "|cff0070dd暗月北地卡片|r£|cffffd100\"一张随机的暗月北地卡片。集齐全套即可获得奖励。\"|r", --44318
@@ -38803,8 +38803,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed憎恨角斗士的聚焦法杖|r£|cff00ff00装备： 命中等级提高75点。|r£|cff00ff00装备： 使你的韧性等级提高75点。|r£|cff00ff00装备： 法术强度提高408点。|r", --44418
 "|cffa335ed致命角斗士的作战法杖|r£|cff00ff00装备： 使你的韧性等级提高84点。|r£|cff00ff00装备： 急速等级提高85点。|r£|cff00ff00装备： 法术强度提高461点。|r", --44419
 "|cffa335ed致命角斗士的聚焦法杖|r£|cff00ff00装备： 命中等级提高85点。|r£|cff00ff00装备： 使你的韧性等级提高84点。|r£|cff00ff00装备： 法术强度提高461点。|r", --44420
-"|cffa335ed狂怒角斗士的作战法杖|r£|cff00ff00装备： 使你的韧性等级提高86点。|r£|cff00ff00装备： 急速等级提高86点。|r£|cff00ff00装备： 法术强度提高550点。|r", --44421
-"|cffa335ed狂怒角斗士的聚焦法杖|r£|cff00ff00装备： 命中等级提高86点。|r£|cff00ff00装备： 使你的韧性等级提高86点。|r£|cff00ff00装备： 法术强度提高550点。|r", --44422
+"|cffa335ed狂怒角斗士的作战法杖|r£|cff00ff00装备： 使你的韧性等级提高91点。|r£|cff00ff00装备： 急速等级提高91点。|r£|cff00ff00装备： 法术强度提高584点。|r", --44421
+"|cffa335ed狂怒角斗士的聚焦法杖|r£|cff00ff00装备： 命中等级提高91点。|r£|cff00ff00装备： 使你的韧性等级提高91点。|r£|cff00ff00装备： 法术强度提高584点。|r", --44422
 "|cffa335ed无情角斗士的作战法杖|r£|cff00ff00装备： 使你的韧性等级提高99点。|r£|cff00ff00装备： 急速等级提高99点。|r£|cff00ff00装备： 法术强度提高621点。|r", --44423
 "|cffa335ed无情角斗士的聚焦法杖|r£|cff00ff00装备： 命中等级提高99点。|r£|cff00ff00装备： 使你的韧性等级提高99点。|r£|cff00ff00装备： 法术强度提高621点。|r", --44424
 "|cff1eff00黑暗霜鳞胸甲|r£|cff00ff00装备： 攻击强度提高74点。|r", --44428
@@ -38829,7 +38829,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd龙鳞弹药包|r£装备后绑定£28格弹药袋", --44447
 "|cff0070dd蛛魔强固箭袋|r£装备后绑定£28格箭袋", --44448
 "卷轴：附魔靴子 - 突袭£|cff00ff00使用： 永久性地为一双靴子附魔，使其获得攻击强度提高24点的效果。该装备等级不得低于60级。|r", --44449
-"永恒沙漏£任务物品£唯一£|cff00ff00使用： 将永恒沙漏放在青铜巨龙圣地的地面上。不能放置在另一只沙漏附近40码的范围内。 （3分钟 30秒冷却）|r", --44450
+"永恒沙漏£任务物品£唯一£|cff00ff00使用： 将永恒沙漏放在青铜巨龙圣地的地面上。不能放置在另一只沙漏附近40码的范围内。 （3分钟30秒冷却）|r", --44450
 "|cff0070dd符文钴棒|r£拾取后绑定£|cffffd100\"可代替任何较低等级的附魔棒。\"|r", --44451
 "|cff0070dd符文泰坦神铁棒|r£拾取后绑定£|cffffd100\"可代替任何较低等级的附魔棒。\"|r", --44452
 "|cff0070dd卷轴：附魔武器 - 强效潜能|r£|cff00ff00使用： 永久性地为一把近战武器附魔，使其获得攻击强度提高50点的效果。该装备等级不得低于60级。|r", --44453
@@ -39073,8 +39073,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "治疗药水点滴架£|cff00ff00使用： 为你的小队设置一根治疗药水点滴架，可以在30秒内恢复15000点生命值和12960点法力值。无法在战斗中使用。 （3分钟冷却）|r", --44698
 "|cff9e9e9e损坏的语音模组|r£ ", --44699
 "繁殖期的黑水蚌£|cffffd100\"这只蚌壳不愿意与其它蚌壳重叠起来。\"|r", --44700
-"|cff00ccff凶残角斗士秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44701
-"|cff00ccff凶残角斗士秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44702
+"|cff00ccff凶残角斗士秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44701
+"|cff00ccff凶残角斗士秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --44702
 "|cff1eff00黑暗鲱鱼|r£|cff00ff00装备： 爆击等级提高50点。|r£|cffffd100\"鲱鱼找你索命来了！\"|r", --44703
 "充能的圆盘£任务物品£|cff00ff00使用： 召唤诺甘农之壳的守护者，档案员麦卡顿。 （5秒冷却）|r", --44704
 "|cff9e9e9eMonster - Sword - 1H, King Varian Wrynn|r£ ", --44705
@@ -39166,8 +39166,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "春季长袍£|cff00ff00使用： 种一朵花。 （1分钟冷却）|r", --44800
 "彩蛋篮£|cff00ff00使用： 速度提高60%，持续10秒。只能在复活节期间藏有鲜艳的彩蛋的地方生效。|r", --44802
 "春季头饰£ ", --44803
-"|cffe5cc7fIndalamar's Debuffer|r£拾取后绑定£唯一£|cff00ff00使用： Debuff the target increasing spell damage taken by 13%, reducing Fire, Frost, Shadow, Nature, and Arcane resistances by 165, and reducing armor by 25%.|r", --44804
-"|cffe5cc7fIndalamar's Test Totem|r£拾取后绑定£唯一£|cff00ff00使用： Summons a Stoneclaw Totem TEST.|r", --44805
+"|cffe5cc7fIndalamar's Debuffer|r£拾取后绑定£唯一", --44804
+"|cffe5cc7fIndalamar's Test Totem|r£拾取后绑定£唯一", --44805
 "鲜艳的蛋壳碎片£任务物品", --44806
 "|cffe5cc7fIndalamar's Holy Hand Grenade|r£拾取后绑定£唯一£|cff00ff00使用： 使用神圣灌注的能量祝福所有目标或使其受到众生之灾的诅咒。 （5秒冷却）|r", --44807
 "灌魔的部落护甲£任务物品£|cffffd100\"士兵的灵魂萦绕在这件护甲上。\"|r", --44808
@@ -39351,8 +39351,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "[PH] Bridle of the Hawkstrider£任务物品£|cff00ff00使用： 在锦标赛兽栏旁使用以召唤你的坐骑。|r", --45035
 "[PH] Bridle of the Warhorse£任务物品£|cff00ff00使用： 在锦标赛兽栏旁使用以召唤你的坐骑。|r", --45036
 "|cffa335ed史诗级紫色衬衫|r£|cff00ff00使用： 成为人们瞩目的焦点。 （10秒冷却）|r", --45037
-"|cffff7f00瓦兰奈尔的碎片|r£拾取后绑定£唯一（30）£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：圣骑士, 牧师, 萨满祭司, 德鲁伊£|cff00ff00使用： 将30块瓦兰奈尔的碎片合成为破损的瓦兰奈尔碎片。|r£|cffffd100\"这柄远古之锤的碎片笼罩在沉静而温柔的光芒中。\"|r", --45038
-"|cffff7f00破损的瓦兰奈尔碎片|r£拾取后绑定£唯一£该物品将触发一个任务£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：圣骑士, 牧师, 萨满祭司, 德鲁伊£|cffffd100\"这柄远古之锤的碎片笼罩在沉静而温柔的光芒中。\"|r", --45039
+"|cffff7f00瓦兰奈尔的碎片|r£拾取后绑定£唯一（30）£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff00ff00使用： 将30块瓦兰奈尔的碎片合成为破损的瓦兰奈尔碎片。|r£|cffffd100\"这柄远古之锤的碎片笼罩在沉静而温柔的光芒中。\"|r", --45038
+"|cffff7f00破损的瓦兰奈尔碎片|r£拾取后绑定£唯一£该物品将触发一个任务£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cffffd100\"这柄远古之锤的碎片笼罩在沉静而温柔的光芒中。\"|r", --45039
 "|cffa335edArt Test|r£|cff00ff00装备： 法术强度提高520点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f19|r|cff00ff00点法力值。|r", --45041
 "做工粗糙的木板£任务物品", --45045
 "伐木之斧£任务物品£|cff00ff00使用： 劈砍一棵晶歌森林橡树，制成做工粗糙的木板。 （4秒冷却）|r", --45046
@@ -39387,40 +39387,40 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "魔法缰绳£任务物品£|cff00ff00使用： 控制黑骑士的狮鹫，强迫其将你带到黑骑士接受训练、为锦标赛做准备的地方。 （5秒冷却）|r", --45083
 "|cff00ccff秘密之书|r£ ", --45084
 "|cffa335ed泰坦神铁法术之刃|r£|cff00ff00装备： 命中等级提高30点。|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 法术强度提高408点。|r", --45085
-"|cffa335ed旭日|r£|cff00ff00装备： 命中等级提高25点。|r£|cff00ff00装备： 急速等级提高21点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --45086
+"|cffa335ed旭日|r£|cff00ff00装备： 命中等级提高26点。|r£|cff00ff00装备： 急速等级提高22点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --45086
 "|cff0070dd符文宝珠|r£ ", --45087
-"|cffa335ed设计图：泰坦腰带|r£使用： 教你学会制作泰坦腰带。£|cffa335ed\n泰坦腰带|r£装备后绑定£腰部£1321点护甲£+69 力量£+126 耐力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+6 力量|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 使你的精准等级提高40点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45088
-"|cffa335ed设计图：领主的板甲战靴|r£使用： 教你学会制作领主的板甲战靴。£|cffa335ed\n领主的板甲战靴|r£装备后绑定£脚£1614点护甲£+69 力量£+126 耐力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+6 力量|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高48点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45089
-"|cffa335ed设计图：正义板甲束带|r£使用： 教你学会制作正义板甲束带。£|cffa335ed\n正义板甲束带|r£装备后绑定£腰部£1321点护甲£+49 耐力£+62 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 每5秒回复28点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45090
-"|cffa335ed设计图：命运之靴|r£使用： 教你学会制作命运之靴。£|cffa335ed\n命运之靴|r£装备后绑定£脚£1614点护甲£+73 耐力£+60 智力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 每5秒回复24点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45091
-"|cffa335ed设计图：牢固板甲束带|r£使用： 教你学会制作牢固板甲束带。£|cffa335ed\n牢固板甲束带|r£装备后绑定£腰部£1321点护甲£+84 力量£+103 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+9 耐力|r£|cff00ff00装备： 防御等级提高36。|r£|cff00ff00装备： 使你的躲闪等级提高45点。|r£|cff00ff00装备： 使你的招架等级提高37点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45092
-"|cffa335ed设计图：尖刺死亡战靴|r£使用： 教你学会制作尖刺死亡战靴。£|cffa335ed\n尖刺死亡战靴|r£装备后绑定£脚£1614点护甲£+85 力量£+103 耐力£|cff7f7f7f黄色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+9 耐力|r£|cff00ff00装备： 防御等级提高37。|r£|cff00ff00装备： 使你的躲闪等级提高44点。|r£|cff00ff00装备： 使你的招架等级提高37点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45093
-"|cffa335ed图样：巨龙腰带|r£使用： 教你学会制作巨龙腰带。£|cffa335ed\n巨龙腰带|r£装备后绑定£腰部£739点护甲£+48 敏捷£+66 耐力£+44 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+12 攻击强度|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 攻击强度提高138点。|r£\n需要极地毛皮 (3), 冰冷的龙鳞 (20), 符文宝珠 (6)", --45094
-"|cffa335ed图样：生命鳞片长靴|r£使用： 教你学会制作生命鳞片长靴。£|cffa335ed\n生命鳞片长靴|r£装备后绑定£脚£903点护甲£+48 敏捷£+66 耐力£+45 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+12 攻击强度|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 攻击强度提高138点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r£\n需要极地毛皮 (3), 冰虫鳞片 (20), 符文宝珠 (6)", --45095
-"|cffa335ed图样：蓝色混沌腰带|r£使用： 教你学会制作蓝色混沌腰带。£|cffa335ed\n蓝色混沌腰带|r£装备后绑定£腰部£739点护甲£+64 耐力£+65 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 每5秒回复20点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要极地毛皮 (3), 蛛魔几丁质 (20), 符文宝珠 (6)", --45096
-"|cffa335ed图样：闪电根基长靴|r£使用： 教你学会制作闪电根基长靴。£|cffa335ed\n闪电根基长靴|r£装备后绑定£脚£903点护甲£+63 耐力£+64 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 每5秒回复20点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要极地毛皮 (3), 冰冷的龙鳞 (20), 符文宝珠 (6)", --45097
-"|cffa335ed图样：温暖死亡腰带|r£使用： 教你学会制作温暖死亡腰带。£|cffa335ed\n温暖死亡腰带|r£装备后绑定£腰部£333点护甲£+69 敏捷£+73 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+6 敏捷|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高112点。|r£\n需要极地毛皮 (3), 永恒暗影 (4), 符文宝珠 (6)", --45098
-"|cffa335ed图样：沉寂足垫|r£使用： 教你学会制作沉寂足垫。£|cffa335ed\n沉寂足垫|r£装备后绑定£脚£406点护甲£+69 敏捷£+64 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+6 敏捷|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高114点。|r£\n需要极地毛皮 (3), 永恒暗影 (2), 符文宝珠 (6)", --45099
-"|cffa335ed图样：极地生命腰带|r£使用： 教你学会制作极地生命腰带。£|cffa335ed\n极地生命腰带|r£装备后绑定£腰部£333点护甲£+73 耐力£+60 智力£+57 精神£|cff7f7f7f红色插槽|r£|cff7f7f7f黄色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要厚北地皮 (4), 极地毛皮 (3), 符文宝珠 (6)", --45100
-"|cffa335ed图样：寒冬耐久长靴|r£使用： 教你学会制作寒冬耐久长靴。£|cffa335ed\n寒冬耐久长靴|r£装备后绑定£脚£406点护甲£+63 耐力£+64 智力£+49 精神£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要极地毛皮 (3), 冰冷的龙鳞 (20), 符文宝珠 (6)", --45101
-"|cffa335ed图样：远古能量腰带|r£使用： 教你学会制作远古能量腰带。£|cffa335ed\n远古能量腰带|r£装备后绑定£腰部£布甲£177点护甲£+63 耐力£+64 智力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要法纹布 (4), 乌纹布 (4), 符文宝珠 (6)", --45102
-"|cffa335ed图样：法术爆发便鞋|r£使用： 教你学会制作法术爆发便鞋。£|cffa335ed\n法术爆发便鞋|r£装备后绑定£脚£布甲£216点护甲£+63 耐力£+64 智力£+41 精神£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要法纹布 (4), 乌纹布 (4), 符文宝珠 (6)", --45103
-"|cffa335ed图样：雪白黎明束带|r£使用： 教你学会制作雪白黎明束带。£|cffa335ed\n雪白黎明束带|r£装备后绑定£腰部£布甲£177点护甲£+73 耐力£+62 智力£+48 精神£|cff7f7f7f红色插槽|r£|cff7f7f7f黄色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要月影布 (8), 符文宝珠 (6)", --45104
-"|cffa335ed图样：救世主的便鞋|r£使用： 教你学会制作救世主的便鞋。£|cffa335ed\n救世主的便鞋|r£装备后绑定£脚£布甲£216点护甲£+73 耐力£+60 智力£+57 精神£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 法术强度提高81点。|r£\n需要月影布 (8), 符文宝珠 (6)", --45105
-"|cffa335ed机械之力|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 使你的护甲穿透提高36点。|r", --45106
-"|cffa335ed铁铆战盔|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 急速等级提高68点。|r", --45107
-"|cffa335ed机械师的护腕|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --45108
-"|cffa335ed烈焰巨兽手套|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 攻击强度提高114点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45109
-"|cffa335ed泰坦禁卫|r£|cff00ff00装备： 防御等级提高35。|r£|cff00ff00装备： 使你的招架等级提高33点。|r£|cff00ff00装备： 命中等级提高29点。|r", --45110
-"|cffa335ed米米尔隆的烈焰铁箍|r£|cff00ff00装备： 防御等级提高39。|r£|cff00ff00装备： 使你的躲闪等级提高44点。|r£|cff00ff00装备： 命中等级提高36点。|r", --45111
-"|cffa335ed巨兽螺旋|r£|cff00ff00装备： 防御等级提高32。|r£|cff00ff00装备： 使你的躲闪等级提高34点。|r", --45112
-"|cffa335ed光芒拯救指环|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45113
-"|cffa335ed蒸汽召唤者图腾|r£|cff00ff00装备： 使你的治疗链的基础治疗量提高243点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --45114
-"|cffa335ed巨兽燃料手册|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45115
-"|cffa335ed弗蕾亚的守护项圈|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45116
-"|cffa335ed建造者的裹手|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45117
-"|cffa335ed蒸汽工程师护目镜|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高113点。|r", --45118
-"|cffa335ed巨兽之拥|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45119
+"|cffa335ed设计图：泰坦腰带|r£使用： 教你学会制作泰坦腰带。£|cffa335ed\n泰坦腰带|r£装备后绑定£腰部£1355点护甲£+73 力量£+134 耐力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+6 力量|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 使你的精准等级提高43点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45088
+"|cffa335ed设计图：领主的板甲战靴|r£使用： 教你学会制作领主的板甲战靴。£|cffa335ed\n领主的板甲战靴|r£装备后绑定£脚£1656点护甲£+73 力量£+134 耐力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+6 力量|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高51点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45089
+"|cffa335ed设计图：正义板甲束带|r£使用： 教你学会制作正义板甲束带。£|cffa335ed\n正义板甲束带|r£装备后绑定£腰部£1355点护甲£+52 耐力£+66 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 每5秒回复30点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45090
+"|cffa335ed设计图：命运之靴|r£使用： 教你学会制作命运之靴。£|cffa335ed\n命运之靴|r£装备后绑定£脚£1656点护甲£+78 耐力£+64 智力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 每5秒回复26点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45091
+"|cffa335ed设计图：牢固板甲束带|r£使用： 教你学会制作牢固板甲束带。£|cffa335ed\n牢固板甲束带|r£装备后绑定£腰部£1355点护甲£+89 力量£+109 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+9 耐力|r£|cff00ff00装备： 防御等级提高38。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的招架等级提高39点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45092
+"|cffa335ed设计图：尖刺死亡战靴|r£使用： 教你学会制作尖刺死亡战靴。£|cffa335ed\n尖刺死亡战靴|r£装备后绑定£脚£1656点护甲£+90 力量£+109 耐力£|cff7f7f7f黄色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+9 耐力|r£|cff00ff00装备： 防御等级提高39。|r£|cff00ff00装备： 使你的躲闪等级提高47点。|r£|cff00ff00装备： 使你的招架等级提高39点。|r£\n需要泰坦精钢锭 (5), 符文宝珠 (6)", --45093
+"|cffa335ed图样：巨龙腰带|r£使用： 教你学会制作巨龙腰带。£|cffa335ed\n巨龙腰带|r£装备后绑定£腰部£758点护甲£+51 敏捷£+70 耐力£+47 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+12 攻击强度|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 攻击强度提高147点。|r£\n需要极地毛皮 (3), 冰冷的龙鳞 (20), 符文宝珠 (6)", --45094
+"|cffa335ed图样：生命鳞片长靴|r£使用： 教你学会制作生命鳞片长靴。£|cffa335ed\n生命鳞片长靴|r£装备后绑定£脚£926点护甲£+51 敏捷£+70 耐力£+48 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+12 攻击强度|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 攻击强度提高147点。|r£|cff00ff00装备： 使你的护甲穿透提高48点。|r£\n需要极地毛皮 (3), 冰虫鳞片 (20), 符文宝珠 (6)", --45095
+"|cffa335ed图样：蓝色混沌腰带|r£使用： 教你学会制作蓝色混沌腰带。£|cffa335ed\n蓝色混沌腰带|r£装备后绑定£腰部£758点护甲£+68 耐力£+69 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复21点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要极地毛皮 (3), 蛛魔几丁质 (20), 符文宝珠 (6)", --45096
+"|cffa335ed图样：闪电根基长靴|r£使用： 教你学会制作闪电根基长靴。£|cffa335ed\n闪电根基长靴|r£装备后绑定£脚£926点护甲£+67 耐力£+68 智力£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 每5秒回复21点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要极地毛皮 (3), 冰冷的龙鳞 (20), 符文宝珠 (6)", --45097
+"|cffa335ed图样：温暖死亡腰带|r£使用： 教你学会制作温暖死亡腰带。£|cffa335ed\n温暖死亡腰带|r£装备后绑定£腰部£342点护甲£+73 敏捷£+78 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+6 敏捷|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高119点。|r£\n需要极地毛皮 (3), 永恒暗影 (4), 符文宝珠 (6)", --45098
+"|cffa335ed图样：沉寂足垫|r£使用： 教你学会制作沉寂足垫。£|cffa335ed\n沉寂足垫|r£装备后绑定£脚£417点护甲£+73 敏捷£+68 耐力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+6 敏捷|r£|cff00ff00装备： 命中等级提高51点。|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高121点。|r£\n需要极地毛皮 (3), 永恒暗影 (2), 符文宝珠 (6)", --45099
+"|cffa335ed图样：极地生命腰带|r£使用： 教你学会制作极地生命腰带。£|cffa335ed\n极地生命腰带|r£装备后绑定£腰部£342点护甲£+78 耐力£+64 智力£+61 精神£|cff7f7f7f红色插槽|r£|cff7f7f7f黄色插槽|r£|cff7f7f7f镶孔奖励：+5 法术强度|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要厚北地皮 (4), 极地毛皮 (3), 符文宝珠 (6)", --45100
+"|cffa335ed图样：寒冬耐久长靴|r£使用： 教你学会制作寒冬耐久长靴。£|cffa335ed\n寒冬耐久长靴|r£装备后绑定£脚£417点护甲£+67 耐力£+68 智力£+52 精神£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要极地毛皮 (3), 冰冷的龙鳞 (20), 符文宝珠 (6)", --45101
+"|cffa335ed图样：远古能量腰带|r£使用： 教你学会制作远古能量腰带。£|cffa335ed\n远古能量腰带|r£装备后绑定£腰部£布甲£182点护甲£+67 耐力£+68 智力£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要法纹布 (4), 乌纹布 (4), 符文宝珠 (6)", --45102
+"|cffa335ed图样：法术爆发便鞋|r£使用： 教你学会制作法术爆发便鞋。£|cffa335ed\n法术爆发便鞋|r£装备后绑定£脚£布甲£222点护甲£+67 耐力£+68 智力£+44 精神£|cff7f7f7f蓝色插槽|r£|cff7f7f7f红色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要法纹布 (4), 乌纹布 (4), 符文宝珠 (6)", --45103
+"|cffa335ed图样：雪白黎明束带|r£使用： 教你学会制作雪白黎明束带。£|cffa335ed\n雪白黎明束带|r£装备后绑定£腰部£布甲£182点护甲£+78 耐力£+66 智力£+51 精神£|cff7f7f7f红色插槽|r£|cff7f7f7f黄色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要月影布 (8), 符文宝珠 (6)", --45104
+"|cffa335ed图样：救世主的便鞋|r£使用： 教你学会制作救世主的便鞋。£|cffa335ed\n救世主的便鞋|r£装备后绑定£脚£布甲£222点护甲£+78 耐力£+64 智力£+61 精神£|cff7f7f7f红色插槽|r£|cff7f7f7f蓝色插槽|r£|cff7f7f7f镶孔奖励：+7 法术强度|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 法术强度提高86点。|r£\n需要月影布 (8), 符文宝珠 (6)", --45105
+"|cffa335ed机械之力|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 使你的护甲穿透提高38点。|r", --45106
+"|cffa335ed铁铆战盔|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 急速等级提高72点。|r", --45107
+"|cffa335ed机械师的护腕|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 攻击强度提高89点。|r", --45108
+"|cffa335ed烈焰巨兽手套|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 攻击强度提高121点。|r£|cff00ff00装备： 使你的护甲穿透提高48点。|r", --45109
+"|cffa335ed泰坦禁卫|r£|cff00ff00装备： 防御等级提高37。|r£|cff00ff00装备： 使你的招架等级提高35点。|r£|cff00ff00装备： 命中等级提高31点。|r", --45110
+"|cffa335ed米米尔隆的烈焰铁箍|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的躲闪等级提高47点。|r£|cff00ff00装备： 命中等级提高38点。|r", --45111
+"|cffa335ed巨兽螺旋|r£|cff00ff00装备： 防御等级提高34。|r£|cff00ff00装备： 使你的躲闪等级提高36点。|r", --45112
+"|cffa335ed光芒拯救指环|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45113
+"|cffa335ed蒸汽召唤者图腾|r£|cff00ff00装备： 使你的治疗链的基础治疗量提高257点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --45114
+"|cffa335ed巨兽燃料手册|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 法术强度提高79点。|r", --45115
+"|cffa335ed弗蕾亚的守护项圈|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45116
+"|cffa335ed建造者的裹手|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45117
+"|cffa335ed蒸汽工程师护目镜|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高120点。|r", --45118
+"|cffa335ed巨兽之拥|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45119
 "普通鱼竿£ ", --45120
 "被偷走的锦标赛邀请函£任务物品", --45121
 "黑骑士的命令£任务物品£|cffffd100\"在我们的敌人中散播猜疑和混乱。借这场锦标赛的机会，毁灭他们最强大的战士。\"|r", --45122
@@ -39433,46 +39433,46 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed诺莫瑞根骨锯|r£|cff00ff00装备： 命中等级提高29点。|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 法术强度提高408点。|r", --45129
 "|cffa335ed卡兹莫丹大口径火枪|r£|cff00ff00装备： 急速等级提高22点。|r£|cff00ff00装备： 攻击强度提高28点。|r", --45130
 "|cff0070dd竞技者之怒|r£|cff00ff00装备： 使你的韧性等级提高73点。|r£|cff00ff00装备： 命中时有一定几率使你的爆击等级提高328，持续10秒。|r", --45131
-"|cffa335ed萨隆邪铁金龙之拳|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45132
-"|cffa335ed炽热灾难坠饰|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45133
-"|cffa335ed毁灭之板甲护腿|r£|cff00ff00装备： 爆击等级提高85点。|r£|cff00ff00装备： 急速等级提高62点。|r", --45134
-"|cffa335ed炽热决心之靴|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高102点。|r", --45135
-"|cffa335ed潜在能量护肩|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高93点。|r", --45136
-"|cffa335ed维拉努斯之灾|r£|cff00ff00装备： 防御等级提高26。|r£|cff00ff00装备： 使你的躲闪等级提高25点。|r£|cff00ff00装备： 命中等级提高21点。|r", --45137
-"|cffa335ed龙骑士披风|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 使你的护甲穿透提高36点。|r", --45138
-"|cffa335ed屠龙者的束带|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的盾牌格挡等级提高45点。|r£|cff00ff00装备： 使你的盾牌格挡值提高135点。|r", --45139
-"|cffa335ed锋鳞护肩|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高99点。|r", --45140
-"|cffa335ed始祖龙皮腿甲|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 使你的精准等级提高57点。|r£|cff00ff00装备： 攻击强度提高148点。|r", --45141
-"|cffa335ed悔恨|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 使你的精准等级提高29点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --45142
-"|cffa335ed萨隆邪铁捕猎护腿|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 攻击强度提高146点。|r£|cff00ff00装备： 使你的护甲穿透提高60点。|r", --45143
-"|cffa335ed偏斜魔印|r£|cff00ff00装备： 你的符文打击技能可以使你的躲闪等级提高136，持续5秒。|r", --45144
-"|cffa335ed神圣护盾圣契|r£|cff00ff00装备： 每次使用神圣之盾时，你的盾牌格挡值提高450点，持续20秒。|r", --45145
-"|cffa335ed侍女镣铐|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45146
-"|cffa335ed指路星|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高550点。|r", --45147
-"|cffa335ed活焰|r£|cff00ff00装备： 命中等级提高107点。|r£|cff00ff00使用： 法术强度提高505点，持续20秒。 （2分钟冷却）|r", --45148
-"|cffa335ed龙母护腕|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45149
-"|cffa335ed猎龙者的项圈|r£|cff00ff00装备： 命中等级提高51点。|r£|cff00ff00装备： 急速等级提高68点。|r£|cff00ff00装备： 法术强度提高114点。|r", --45150
-"|cffa335ed陨落巨龙腰带|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45151
+"|cffa335ed萨隆邪铁金龙之拳|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45132
+"|cffa335ed炽热灾难坠饰|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 法术强度提高85点。|r", --45133
+"|cffa335ed毁灭之板甲护腿|r£|cff00ff00装备： 爆击等级提高97点。|r£|cff00ff00装备： 急速等级提高71点。|r", --45134
+"|cffa335ed炽热决心之靴|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高116点。|r", --45135
+"|cffa335ed潜在能量护肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 法术强度提高106点。|r", --45136
+"|cffa335ed维拉努斯之灾|r£|cff00ff00装备： 防御等级提高27。|r£|cff00ff00装备： 使你的躲闪等级提高26点。|r£|cff00ff00装备： 命中等级提高22点。|r", --45137
+"|cffa335ed龙骑士披风|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 使你的护甲穿透提高38点。|r", --45138
+"|cffa335ed屠龙者的束带|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的盾牌格挡等级提高48点。|r£|cff00ff00装备： 使你的盾牌格挡值提高143点。|r", --45139
+"|cffa335ed锋鳞护肩|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f26|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45140
+"|cffa335ed始祖龙皮腿甲|r£|cff00ff00装备： 爆击等级提高91点。|r£|cff00ff00装备： 使你的精准等级提高60点。|r£|cff00ff00装备： 攻击强度提高157点。|r", --45141
+"|cffa335ed悔恨|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高31点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --45142
+"|cffa335ed萨隆邪铁捕猎护腿|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 攻击强度提高155点。|r£|cff00ff00装备： 使你的护甲穿透提高64点。|r", --45143
+"|cffa335ed偏斜魔印|r£|cff00ff00装备： 你的符文打击技能可以使你的躲闪等级提高144，持续5秒。|r", --45144
+"|cffa335ed神圣护盾圣契|r£|cff00ff00装备： 每次使用神圣之盾时，你的盾牌格挡值提高476点，持续20秒。|r", --45145
+"|cffa335ed侍女镣铐|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45146
+"|cffa335ed指路星|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f20|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高582点。|r", --45147
+"|cffa335ed活焰|r£|cff00ff00装备： 命中等级提高113点。|r£|cff00ff00使用： 法术强度提高534点，持续20秒。 （2分钟冷却）|r", --45148
+"|cffa335ed龙母护腕|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45149
+"|cffa335ed猎龙者的项圈|r£|cff00ff00装备： 命中等级提高54点。|r£|cff00ff00装备： 急速等级提高72点。|r£|cff00ff00装备： 法术强度提高121点。|r", --45150
+"|cffa335ed陨落巨龙腰带|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45151
 "|cff0070dd碧蓝梦境坠饰|r£|cff00ff00装备： 使你的护甲穿透提高47点。|r", --45152
 "|cff0070dd海音贝壳项链|r£|cff00ff00装备： 急速等级提高26点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --45153
 "|cff0070dd勇士之血项链|r£|cff00ff00装备： 法术强度提高50点。|r", --45154
 "|cff0070dd螺旋聚焦项圈|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 法术强度提高52点。|r", --45155
 "|cff0070dd碎裂之心腰带|r£|cff00ff00装备： 急速等级提高50点。|r£|cff00ff00装备： 法术强度提高67点。|r", --45156
-"|cffa335ed灰烬碎片指环|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 攻击强度提高84点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45157
-"|cffa335ed钢铁之心|r£|cff00ff00使用： 躲闪等级提高432，持续20秒。 （2分钟冷却）|r", --45158
+"|cffa335ed灰烬碎片指环|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 攻击强度提高89点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45157
+"|cffa335ed钢铁之心|r£|cff00ff00使用： 躲闪等级提高457，持续20秒。 （2分钟冷却）|r", --45158
 "|cff0070dd迅捷躲闪之靴|r£|cff00ff00装备： 攻击强度提高116点。|r£|cff00ff00装备： 使你的护甲穿透提高41点。|r", --45159
 "|cff0070dd败北束带|r£|cff00ff00装备： 使你的精准等级提高57点。|r", --45160
-"|cffa335ed余烬束带|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45161
-"|cffa335ed踏火之靴|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --45162
+"|cffa335ed余烬束带|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的护甲穿透提高52点。|r", --45161
+"|cffa335ed踏火之靴|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 攻击强度提高118点。|r", --45162
 "|cff0070dd怒火爆发战靴|r£|cff00ff00装备： 防御等级提高34。|r£|cff00ff00装备： 使你的躲闪等级提高41点。|r", --45163
-"|cffa335ed掌炉者之盔|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 攻击强度提高194点。|r", --45164
-"|cffa335ed开天|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 使你的精准等级提高87点。|r", --45165
-"|cffa335ed焦黑萨隆邪铁胫甲|r£|cff00ff00装备： 防御等级提高55。|r£|cff00ff00装备： 使你的躲闪等级提高57点。|r£|cff00ff00装备： 命中等级提高49点。|r", --45166
-"|cffa335ed生命熔炉胸铠|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高123点。|r", --45167
-"|cffa335ed火光之环|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45168
-"|cffa335ed舞动烈焰图腾|r£|cff00ff00装备： 当你使用风暴打击时，武器伤害提高155点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --45169
-"|cffa335ed创世权杖|r£|cff00ff00装备： 爆击等级提高24点。|r£|cff00ff00装备： 法术强度提高44点。|r", --45170
-"|cffa335ed热情|r£|cff00ff00装备： 命中等级提高120点。|r£|cff00ff00装备： 法术强度提高550点。|r", --45171
+"|cffa335ed掌炉者之盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 攻击强度提高206点。|r", --45164
+"|cffa335ed开天|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 使你的精准等级提高92点。|r", --45165
+"|cffa335ed焦黑萨隆邪铁胫甲|r£|cff00ff00装备： 防御等级提高58。|r£|cff00ff00装备： 使你的躲闪等级提高60点。|r£|cff00ff00装备： 命中等级提高52点。|r", --45166
+"|cffa335ed生命熔炉胸铠|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高130点。|r", --45167
+"|cffa335ed火光之环|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45168
+"|cffa335ed舞动烈焰图腾|r£|cff00ff00装备： 当你使用风暴打击时，武器伤害提高164点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --45169
+"|cffa335ed创世权杖|r£|cff00ff00装备： 爆击等级提高25点。|r£|cff00ff00装备： 法术强度提高47点。|r", --45170
+"|cffa335ed热情|r£|cff00ff00装备： 命中等级提高127点。|r£|cff00ff00装备： 法术强度提高582点。|r", --45171
 "|cff0070ddQA Test Normalized Dagger|r£|cffffd100\"Looks like this is for internal use only.\"|r", --45172
 "|cff0070ddQA Test Normalized One-Hander|r£|cffffd100\"Looks like this is for internal use only.\"|r", --45173
 "|cff0070ddQA Test Normalized Two-Hander|r£|cffffd100\"Looks like this is for internal use only.\"|r", --45174
@@ -39486,15 +39486,15 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd破碎荣耀护手|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 法术强度提高69点。|r", --45182
 "|cff0070dd荣耀灵魂之靴|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高71点。|r", --45183
 "|cff0070dd苦役腰带|r£|cff00ff00装备： 攻击强度提高116点。|r£|cff00ff00装备： 使你的护甲穿透提高33点。|r", --45184
-"|cffa335ed焰铸束带|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45185
-"|cffa335ed煤烟衬肩|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45186
-"|cffa335ed护火腕甲|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45187
+"|cffa335ed焰铸束带|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45185
+"|cffa335ed煤烟衬肩|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45186
+"|cffa335ed护火腕甲|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45187
 "|cff9e9e9e干枯的海藻|r£ ", --45188
 "|cff9e9e9e破旧的船帆|r£ ", --45189
 "|cff9e9e9e漂木|r£ ", --45190
 "|cff9e9e9e空蚌壳|r£ ", --45191
 "候选者的徽记£拾取后绑定", --45192
-"|cffa335ed无尽的热情|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高36点。|r", --45193
+"|cffa335ed无尽的热情|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高38点。|r", --45193
 "|cff9e9e9e纠结的鱼线|r£ ", --45194
 "|cff9e9e9e空的郎姆酒瓶|r£ ", --45195
 "|cff9e9e9e破布|r£ ", --45196
@@ -39525,343 +39525,343 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd低语梦境之靴|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高71点。|r", --45221
 "|cffa335ed断骨匕首|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --45222
 "|cff0070dd刃锋坠饰|r£|cff00ff00装备： 使你的护甲穿透提高47点。|r", --45223
-"|cffa335ed柔软斗篷|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --45224
-"|cffa335ed断钢者的拥抱|r£|cff00ff00装备： 爆击等级提高82点。|r£|cff00ff00装备： 使你的精准等级提高58点。|r", --45225
-"|cffa335ed远古铁盔|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45226
-"|cffa335ed铁钉衬肩|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 攻击强度提高170点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45227
-"|cffa335ed孤立护手|r£|cff00ff00装备： 防御等级提高45。|r£|cff00ff00装备： 使你的盾牌格挡等级提高44点。|r£|cff00ff00装备： 使你的盾牌格挡值提高135点。|r", --45228
+"|cffa335ed柔软斗篷|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 攻击强度提高89点。|r", --45224
+"|cffa335ed断钢者的拥抱|r£|cff00ff00装备： 爆击等级提高87点。|r£|cff00ff00装备： 使你的精准等级提高61点。|r", --45225
+"|cffa335ed远古铁盔|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 急速等级提高64点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45226
+"|cffa335ed铁钉衬肩|r£|cff00ff00装备： 命中等级提高47点。|r£|cff00ff00装备： 攻击强度提高180点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45227
+"|cffa335ed孤立护手|r£|cff00ff00装备： 防御等级提高48。|r£|cff00ff00装备： 使你的盾牌格挡等级提高47点。|r£|cff00ff00装备： 使你的盾牌格挡值提高143点。|r", --45228
 "|cff1eff00[ph] Mark of the Scourge Boss 01|r£拾取后绑定£唯一", --45229
 "|cff1eff00[ph] Mark of the Scourge Boss 02|r£拾取后绑定£唯一", --45230
 "|cff1eff00[ph] Mark of the Scourge Boss 03|r£拾取后绑定£唯一", --45231
-"|cffa335ed符印铁皮之靴|r£|cff00ff00装备： 使你的精准等级提高56点。|r£|cff00ff00装备： 攻击强度提高98点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45232
-"|cffa335ed风暴符文剑|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 攻击强度提高160点。|r£|cff00ff00装备： 使你的护甲穿透提高70点。|r", --45233
-"|cffa335ed专注|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 法术强度提高550点。|r", --45234
-"|cffa335ed光芒徽记之戒|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45235
-"|cffa335ed坚定之眼|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45236
-"|cffa335ed菲莉的萌芽外套|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45237
-"|cffa335ed过载裹腿|r£|cff00ff00装备： 命中等级提高81点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高132点。|r", --45238
-"|cffa335ed符文塑造者的手套|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高64点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45239
-"|cffa335ed钢铁议会外衣|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45240
-"|cffa335ed巨像怒火腰带|r£|cff00ff00装备： 命中等级提高47点。|r£|cff00ff00装备： 爆击等级提高64点。|r", --45241
-"|cffa335ed灭亡斗篷|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45242
-"|cffa335ed蓝宝石治愈护符|r£|cff00ff00装备： 急速等级提高35点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45243
-"|cffa335ed迅捷复仇胫甲|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --45244
-"|cffa335ed入侵者的肩垫|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 使你的精准等级提高47点。|r£|cff00ff00装备： 攻击强度提高122点。|r", --45245
-"|cffa335ed魔像碎片尖刀|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的精准等级提高29点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --45246
-"|cffa335ed撼地者的徽记|r£|cff00ff00装备： 防御等级提高33。|r£|cff00ff00装备： 使你的盾牌格挡等级提高32点。|r£|cff00ff00装备： 使你的盾牌格挡值提高102点。|r", --45247
-"|cffa335ed发条腿铠|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 使你的护甲穿透提高78点。|r", --45248
-"|cffa335ed铜丝战靴|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 攻击强度提高114点。|r£|cff00ff00装备： 使你的护甲穿透提高57点。|r", --45249
-"|cffa335ed疯狂机械之戒|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 急速等级提高42点。|r", --45250
-"|cffa335ed拆解者肩铠|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高44点。|r£|cff00ff00装备： 命中等级提高43点。|r", --45251
-"|cffa335ed钟表匠的护腕|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45252
-"|cffa335ed心绪波动衬肩|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45253
-"|cffa335ed复仇之心魔印|r£|cff00ff00装备： 使你的凋零缠绕技能造成的伤害提高380点，冰霜打击技能造成的伤害提高113点。|r", --45254
-"|cffa335ed落雷图腾|r£|cff00ff00装备： 使你的熔岩爆裂的基础伤害提高215点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --45255
-"|cffa335ed扭曲的面容|r£|cff00ff00装备： 命中等级提高70点。|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 攻击强度提高160点。|r", --45256
-"|cffa335ed石英水晶魔杖|r£|cff00ff00装备： 命中等级提高27点。|r£|cff00ff00装备： 法术强度提高44点。|r", --45257
-"|cffa335ed急躁轻鞋|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45258
-"|cffa335ed石英镶饰外套|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f33|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高113点。|r", --45259
-"|cffa335ed急速复苏之靴|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45260
-"|cffa335ed巨人之灾|r£|cff00ff00装备： 急速等级提高27点。|r£|cff00ff00装备： 攻击强度提高54点。|r£|cff00ff00装备： 使你的护甲穿透提高21点。|r", --45261
-"|cffa335ed正义勇气项链|r£|cff00ff00装备： 防御等级提高42。|r£|cff00ff00装备： 使你的盾牌格挡等级提高28点。|r£|cff00ff00装备： 使你的盾牌格挡值提高84点。|r", --45262
-"|cffa335ed天谴之石|r£|cff00ff00装备： 爆击等级提高108点。|r£|cff00ff00使用： 攻击强度提高856点，持续20秒。 （2分钟冷却）|r", --45263
-"|cffa335ed杀戮者臂甲|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45264
-"|cffa335ed巨石肩垫|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --45265
-"|cffa335ed恶毒|r£|cff00ff00装备： 爆击等级提高37点。|r£|cff00ff00装备： 急速等级提高29点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --45266
-"|cffa335ed萨隆邪铁固化护腿|r£|cff00ff00装备： 防御等级提高52。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r", --45267
-"|cffa335ed神圣卫士手套|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高99点。|r", --45268
-"|cffa335ed坚决臂甲|r£|cff00ff00装备： 急速等级提高28点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高64点。|r", --45269
-"|cffa335ed哀嚎强风神像|r£|cff00ff00装备： 使你的虫群法术的法术强度提高374点。|r", --45270
-"|cffa335ed愈石者|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45271
-"|cffa335ed阴暗蛮族长袍|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 急速等级提高82点。|r£|cff00ff00装备： 法术强度提高123点。|r", --45272
-"|cffa335ed丰饶治愈裹手|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45273
-"|cffa335ed石纹腿甲|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高124点。|r", --45274
-"|cffa335ed魔法释放护腕|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45275
+"|cffa335ed符印铁皮之靴|r£|cff00ff00装备： 使你的精准等级提高59点。|r£|cff00ff00装备： 攻击强度提高104点。|r£|cff00ff00装备： 使你的护甲穿透提高52点。|r", --45232
+"|cffa335ed风暴符文剑|r£|cff00ff00装备： 爆击等级提高91点。|r£|cff00ff00装备： 攻击强度提高169点。|r£|cff00ff00装备： 使你的护甲穿透提高74点。|r", --45233
+"|cffa335ed专注|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 法术强度提高582点。|r", --45234
+"|cffa335ed光芒徽记之戒|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45235
+"|cffa335ed坚定之眼|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45236
+"|cffa335ed菲莉的萌芽外套|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 法术强度提高131点。|r", --45237
+"|cffa335ed过载裹腿|r£|cff00ff00装备： 命中等级提高86点。|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高140点。|r", --45238
+"|cffa335ed符文塑造者的手套|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高68点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45239
+"|cffa335ed钢铁议会外衣|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45240
+"|cffa335ed巨像怒火腰带|r£|cff00ff00装备： 命中等级提高54点。|r£|cff00ff00装备： 爆击等级提高73点。|r", --45241
+"|cffa335ed灭亡斗篷|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高85点。|r", --45242
+"|cffa335ed蓝宝石治愈护符|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高85点。|r", --45243
+"|cffa335ed迅捷复仇胫甲|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --45244
+"|cffa335ed入侵者的肩垫|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 使你的精准等级提高54点。|r£|cff00ff00装备： 攻击强度提高139点。|r", --45245
+"|cffa335ed魔像碎片尖刀|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高31点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --45246
+"|cffa335ed撼地者的徽记|r£|cff00ff00装备： 防御等级提高35。|r£|cff00ff00装备： 使你的盾牌格挡等级提高34点。|r£|cff00ff00装备： 使你的盾牌格挡值提高102点。|r", --45247
+"|cffa335ed发条腿铠|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 使你的护甲穿透提高83点。|r", --45248
+"|cffa335ed铜丝战靴|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高121点。|r£|cff00ff00装备： 使你的护甲穿透提高60点。|r", --45249
+"|cffa335ed疯狂机械之戒|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 急速等级提高44点。|r", --45250
+"|cffa335ed拆解者肩铠|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的躲闪等级提高47点。|r£|cff00ff00装备： 命中等级提高45点。|r", --45251
+"|cffa335ed钟表匠的护腕|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45252
+"|cffa335ed心绪波动衬肩|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45253
+"|cffa335ed复仇之心魔印|r£|cff00ff00装备： 使你的凋零缠绕技能造成的伤害提高437点，冰霜打击技能造成的伤害提高136点。|r", --45254
+"|cffa335ed落雷图腾|r£|cff00ff00装备： 使你的熔岩爆裂的基础伤害提高227点。|r£|cffffd100\"可以作为空气图腾、大地图腾、火焰图腾和水之图腾使用。\"|r", --45255
+"|cffa335ed扭曲的面容|r£|cff00ff00装备： 命中等级提高74点。|r£|cff00ff00装备： 爆击等级提高91点。|r£|cff00ff00装备： 攻击强度提高169点。|r", --45256
+"|cffa335ed石英水晶魔杖|r£|cff00ff00装备： 命中等级提高29点。|r£|cff00ff00装备： 法术强度提高47点。|r", --45257
+"|cffa335ed急躁轻鞋|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45258
+"|cffa335ed石英镶饰外套|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高120点。|r", --45259
+"|cffa335ed急速复苏之靴|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45260
+"|cffa335ed巨人之灾|r£|cff00ff00装备： 急速等级提高29点。|r£|cff00ff00装备： 攻击强度提高57点。|r£|cff00ff00装备： 使你的护甲穿透提高22点。|r", --45261
+"|cffa335ed正义勇气项链|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的盾牌格挡等级提高30点。|r£|cff00ff00装备： 使你的盾牌格挡值提高89点。|r", --45262
+"|cffa335ed天谴之石|r£|cff00ff00装备： 爆击等级提高114点。|r£|cff00ff00使用： 攻击强度提高905点，持续20秒。 （2分钟冷却）|r", --45263
+"|cffa335ed杀戮者臂甲|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 使你的护甲穿透提高52点。|r", --45264
+"|cffa335ed巨石肩垫|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 攻击强度提高119点。|r", --45265
+"|cffa335ed恶毒|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 急速等级提高31点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --45266
+"|cffa335ed萨隆邪铁固化护腿|r£|cff00ff00装备： 防御等级提高55。|r£|cff00ff00装备： 使你的躲闪等级提高54点。|r", --45267
+"|cffa335ed神圣卫士手套|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45268
+"|cffa335ed坚决臂甲|r£|cff00ff00装备： 急速等级提高30点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高68点。|r", --45269
+"|cffa335ed哀嚎强风神像|r£|cff00ff00装备： 使你的虫群法术的法术强度提高396点。|r", --45270
+"|cffa335ed愈石者|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45271
+"|cffa335ed阴暗蛮族长袍|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 急速等级提高87点。|r£|cff00ff00装备： 法术强度提高130点。|r", --45272
+"|cffa335ed丰饶治愈裹手|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45273
+"|cffa335ed石纹腿甲|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高131点。|r", --45274
+"|cffa335ed魔法释放护腕|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45275
 "Jillian's Genius Juice£|cff00ff00使用： 恢复4200到4400点法力值。|r£|cffffd100\"Smarter and Juicier!\"|r", --45276
 "基里安的救命药水£|cff00ff00使用： 恢复2700到4500点生命值。|r£|cffffd100\"在紧急关头使用！\"|r", --45277
 "小石块£任务物品", --45278
 "基里安的鱼肉大餐£拾取后绑定£|cff00ff00使用： 摆放一桌筵席，供你的队友大快朵颐！在30秒内恢复总计22500点生命值和19200点法力值。如果你花费至少10秒钟进食，还可以获得进食充分效果，攻击强度提高80点，法术强度提高46点，耐力提高40点，持续1小时。|r", --45279
 "|cffa335ed高玩背心|r£|cff00ff00装备： Increases all statistics by 8% and all ratings by 130.|r£|cffffd100\"I tested Ulduar Hard Mode and all I got was this stupid T-shirt!\"|r", --45280
 "地精凿石器£任务物品£|cff00ff00使用： 将地精凿石器放在石块旁。必须在石块周围5码范围内使用。在安置炸弹之后，你必须马上离开！ （7秒冷却）|r", --45281
-"|cffa335ed铁魂|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 使你的护甲穿透提高84点。|r", --45282
-"|cffa335ed火光护臂|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高35点。|r£|cff00ff00装备： 命中等级提高28点。|r", --45283
-"|cffa335ed动力撕裂者|r£|cff00ff00装备： 命中等级提高22点。|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 攻击强度提高70点。|r", --45284
-"|cffa335ed巨兽之力|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --45285
-"|cffa335ed蓝铁灌注器|r£|cff00ff00装备： 命中等级提高95点。|r£|cff00ff00装备： 近战和远程爆击有一定几率使你的攻击强度提高1234点，持续10秒。|r", --45286
-"|cffa335ed火魄|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 急速等级提高26点。|r£|cff00ff00装备： 法术强度提高487点。|r", --45287
-"|cffa335ed踏火者的护胸|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 急速等级提高81点。|r£|cff00ff00装备： 法术强度提高109点。|r", --45288
-"|cffa335ed生命火花面甲|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45289
+"|cffa335ed铁魂|r£|cff00ff00装备： 爆击等级提高73点。|r£|cff00ff00装备： 使你的护甲穿透提高89点。|r", --45282
+"|cffa335ed火光护臂|r£|cff00ff00装备： 防御等级提高45。|r£|cff00ff00装备： 使你的躲闪等级提高37点。|r£|cff00ff00装备： 命中等级提高30点。|r", --45283
+"|cffa335ed动力撕裂者|r£|cff00ff00装备： 命中等级提高23点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --45284
+"|cffa335ed巨兽之力|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45285
+"|cffa335ed蓝铁灌注器|r£|cff00ff00装备： 命中等级提高100点。|r£|cff00ff00装备： 近战和远程爆击有一定几率使你的攻击强度提高1305点，持续10秒。|r", --45286
+"|cffa335ed火魄|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 急速等级提高27点。|r£|cff00ff00装备： 法术强度提高515点。|r", --45287
+"|cffa335ed踏火者的护胸|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高86点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45288
+"|cffa335ed生命火花面甲|r£|cff00ff00装备： 急速等级提高67点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45289
 "|cff0070dd黑色企鹅羽毛|r£拾取后绑定£唯一", --45290
-"|cffa335ed内燃护腕|r£|cff00ff00装备： 命中等级提高32点。|r£|cff00ff00装备： 法术强度提高70点。|r", --45291
-"|cffa335ed能量弯管|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f54|r|cff00ff00点法力值。|r£|cff00ff00使用： 法术强度提高408点，持续20秒。 （2分钟冷却）|r", --45292
-"|cffa335ed强效治愈护手|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 法术强度提高98点。|r", --45293
-"|cffa335ed石化藤条|r£|cff00ff00装备： 命中等级提高29点。|r£|cff00ff00装备： 法术强度提高45点。|r", --45294
-"|cffa335ed镀金精钢腿铠|r£|cff00ff00装备： 防御等级提高71。|r£|cff00ff00装备： 使你的招架等级提高68点。|r£|cff00ff00装备： 使你的精准等级提高66点。|r", --45295
-"|cffa335ed旋转飞刀|r£|cff00ff00装备： 命中等级提高22点。|r£|cff00ff00装备： 攻击强度提高62点。|r£|cff00ff00装备： 使你的护甲穿透提高28点。|r", --45296
-"|cffa335ed闪烁徽记|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45297
-"|cffa335ed锋鳞之爪|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 急速等级提高20点。|r£|cff00ff00装备： 攻击强度提高90点。|r", --45298
-"|cffa335ed龙钢面甲|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45299
-"|cffa335ed炽热复仇衬肩|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高108点。|r£|cff00ff00装备： 使你的护甲穿透提高41点。|r", --45300
-"|cffa335ed窒息烈焰护腕|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 攻击强度提高92点。|r£|cff00ff00装备： 使你的护甲穿透提高29点。|r", --45301
-"|cffa335ed入侵者之靴|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --45302
-"|cffa335ed龙类狡诈指环|r£|cff00ff00装备： 急速等级提高35点。|r£|cff00ff00装备： 攻击强度提高70点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --45303
-"|cffa335ed风暴锻造束带|r£|cff00ff00装备： 防御等级提高57。|r£|cff00ff00装备： 使你的躲闪等级提高46点。|r£|cff00ff00装备： 命中等级提高45点。|r", --45304
-"|cffa335ed冥界胸铠|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --45305
-"|cffa335ed龙母腰带|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 法术强度提高91点。|r", --45306
-"|cffa335ed铁鳞护腿|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高109点。|r", --45307
-"|cffa335ed龙母之眼|r£|cff00ff00装备： 爆击等级提高87点。|r£|cff00ff00装备： 你每次施放伤害或治疗法术，都可以使你的法术强度提高25，持续10秒。可叠加最多5次。|r", --45308
-"|cffa335ed白金卫士火枪|r£|cff00ff00装备： 命中等级提高24点。|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的护甲穿透提高31点。|r", --45309
-"|cffa335ed钢铁熔炉护手|r£|cff00ff00装备： 防御等级提高48。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --45310
-"|cffa335ed无情之刃|r£|cff00ff00装备： 爆击等级提高76点。|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 攻击强度提高212点。|r", --45311
-"|cffa335ed燃火手套|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --45312
-"|cffa335ed熔炉之石|r£|cff00ff00装备： 使你的躲闪等级提高105点。|r£|cff00ff00使用： 护甲值提高5152点，持续20秒。 （2分钟冷却）|r", --45313
-"|cffa335ed点火短杖|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高64点。|r", --45314
-"|cffa335ed碎石者|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 攻击强度提高68点。|r", --45315
-"|cffa335ed跃动烈焰臂甲|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f18|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高79点。|r", --45316
-"|cffa335ed看守者的披风|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f15|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45317
-"|cffa335ed浓烟之怒披风|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 急速等级提高46点。|r", --45318
-"|cffa335ed造物者披风|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高41点。|r£|cff00ff00装备： 命中等级提高36点。|r", --45319
-"|cffa335ed永恒肩铠|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 爆击等级提高60点。|r", --45320
-"|cffa335ed淬炼意志肩铠|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45321
-"|cffa335ed钢铁议会披风|r£|cff00ff00装备： 防御等级提高32。|r£|cff00ff00装备： 使你的盾牌格挡等级提高40点。|r£|cff00ff00装备： 使你的精准等级提高26点。|r", --45322
+"|cffa335ed内燃护腕|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45291
+"|cffa335ed能量弯管|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f57|r|cff00ff00点法力值。|r£|cff00ff00使用： 法术强度提高431点，持续20秒。 （2分钟冷却）|r", --45292
+"|cffa335ed强效治愈护手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 法术强度提高111点。|r", --45293
+"|cffa335ed石化藤条|r£|cff00ff00装备： 命中等级提高33点。|r£|cff00ff00装备： 法术强度提高51点。|r", --45294
+"|cffa335ed镀金精钢腿铠|r£|cff00ff00装备： 防御等级提高80。|r£|cff00ff00装备： 使你的招架等级提高77点。|r£|cff00ff00装备： 使你的精准等级提高75点。|r", --45295
+"|cffa335ed旋转飞刀|r£|cff00ff00装备： 命中等级提高25点。|r£|cff00ff00装备： 攻击强度提高70点。|r£|cff00ff00装备： 使你的护甲穿透提高32点。|r", --45296
+"|cffa335ed闪烁徽记|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 法术强度提高84点。|r", --45297
+"|cffa335ed锋鳞之爪|r£|cff00ff00装备： 爆击等级提高35点。|r£|cff00ff00装备： 急速等级提高21点。|r£|cff00ff00装备： 攻击强度提高95点。|r", --45298
+"|cffa335ed龙钢面甲|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45299
+"|cffa335ed炽热复仇衬肩|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 攻击强度提高122点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45300
+"|cffa335ed窒息烈焰护腕|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 攻击强度提高97点。|r£|cff00ff00装备： 使你的护甲穿透提高31点。|r", --45301
+"|cffa335ed入侵者之靴|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --45302
+"|cffa335ed龙类狡诈指环|r£|cff00ff00装备： 急速等级提高37点。|r£|cff00ff00装备： 攻击强度提高74点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45303
+"|cffa335ed风暴锻造束带|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高49点。|r£|cff00ff00装备： 命中等级提高48点。|r", --45304
+"|cffa335ed冥界胸铠|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高101点。|r", --45305
+"|cffa335ed龙母腰带|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --45306
+"|cffa335ed铁鳞护腿|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高115点。|r", --45307
+"|cffa335ed龙母之眼|r£|cff00ff00装备： 爆击等级提高92点。|r£|cff00ff00装备： 你每次施放伤害或治疗法术，都可以使你的法术强度提高26，持续10秒。可叠加最多5次。|r", --45308
+"|cffa335ed白金卫士火枪|r£|cff00ff00装备： 命中等级提高25点。|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 使你的护甲穿透提高33点。|r", --45309
+"|cffa335ed钢铁熔炉护手|r£|cff00ff00装备： 防御等级提高51。|r£|cff00ff00装备： 使你的躲闪等级提高59点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45310
+"|cffa335ed无情之刃|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --45311
+"|cffa335ed燃火手套|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 攻击强度提高118点。|r", --45312
+"|cffa335ed熔炉之石|r£|cff00ff00装备： 使你的躲闪等级提高111点。|r£|cff00ff00使用： 护甲值提高5448点，持续20秒。 （2分钟冷却）|r", --45313
+"|cffa335ed点火短杖|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 法术强度提高68点。|r", --45314
+"|cffa335ed碎石者|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --45315
+"|cffa335ed跃动烈焰臂甲|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高84点。|r", --45316
+"|cffa335ed看守者的披风|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f16|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45317
+"|cffa335ed浓烟之怒披风|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 急速等级提高49点。|r", --45318
+"|cffa335ed造物者披风|r£|cff00ff00装备： 防御等级提高45。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 命中等级提高38点。|r", --45319
+"|cffa335ed永恒肩铠|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 爆击等级提高64点。|r", --45320
+"|cffa335ed淬炼意志肩铠|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高97点。|r", --45321
+"|cffa335ed钢铁议会披风|r£|cff00ff00装备： 防御等级提高34。|r£|cff00ff00装备： 使你的盾牌格挡等级提高42点。|r£|cff00ff00装备： 使你的精准等级提高27点。|r", --45322
 "断臂£任务物品", --45323
-"|cffa335ed迅捷反射护腿|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 急速等级提高76点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --45324
-"|cffa335ed岩石死神手套|r£|cff00ff00装备： 命中等级提高65点。|r£|cff00ff00装备： 攻击强度提高112点。|r£|cff00ff00装备： 使你的护甲穿透提高41点。|r", --45325
-"|cffa335ed艾塞尔的白金指环|r£|cff00ff00装备： 防御等级提高46。|r£|cff00ff00装备： 使你的躲闪等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高42点。|r", --45326
-"|cffa335ed海妖的悲鸣|r£|cff00ff00装备： 爆击等级提高25点。|r£|cff00ff00装备： 急速等级提高22点。|r£|cff00ff00装备： 攻击强度提高54点。|r", --45327
+"|cffa335ed迅捷反射护腿|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 攻击强度提高171点。|r", --45324
+"|cffa335ed岩石死神手套|r£|cff00ff00装备： 命中等级提高69点。|r£|cff00ff00装备： 攻击强度提高119点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --45325
+"|cffa335ed艾塞尔的白金指环|r£|cff00ff00装备： 防御等级提高49。|r£|cff00ff00装备： 使你的躲闪等级提高38点。|r£|cff00ff00装备： 使你的精准等级提高44点。|r", --45326
+"|cffa335ed海妖的悲鸣|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 急速等级提高23点。|r£|cff00ff00装备： 攻击强度提高57点。|r", --45327
 "浮肿的鳗鱼£任务物品", --45328
-"|cffa335ed真视头饰|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 攻击强度提高156点。|r", --45329
-"|cffa335ed钢铁热情胫甲|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 爆击等级提高45点。|r", --45330
-"|cffa335ed符文蚀刻夜刃|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 攻击强度提高56点。|r£|cff00ff00装备： 使你的护甲穿透提高26点。|r", --45331
-"|cffa335ed风暴之刺|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 法术强度提高487点。|r", --45332
-"|cffa335ed钢铁仆从腰带|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f29|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高93点。|r", --45333
-"|cffa335ed铁壁胸甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的盾牌格挡等级提高51点。|r£|cff00ff00装备： 使你的盾牌格挡值提高153点。|r", --45334
-"|cffa335ed勇猛的黑暗符印护胸|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高55点。|r£|cff00ff00装备： 使你的招架等级提高49点。|r", --45335
-"|cffa335ed勇猛的黑暗符印面甲|r£|cff00ff00装备： 防御等级提高65。|r£|cff00ff00装备： 使你的躲闪等级提高53点。|r£|cff00ff00装备： 命中等级提高37点。|r", --45336
-"|cffa335ed勇猛的黑暗符印护手|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的招架等级提高52点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r", --45337
-"|cffa335ed勇猛的黑暗符印护腿|r£|cff00ff00装备： 防御等级提高62。|r£|cff00ff00装备： 使你的招架等级提高76点。|r£|cff00ff00装备： 使你的精准等级提高54点。|r", --45338
-"|cffa335ed勇猛的黑暗符印肩铠|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的躲闪等级提高45点。|r£|cff00ff00装备： 使你的招架等级提高36点。|r", --45339
-"|cffa335ed勇猛的黑暗符印战甲|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 使你的精准等级提高51点。|r", --45340
-"|cffa335ed勇猛的黑暗符印手套|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 爆击等级提高39点。|r", --45341
-"|cffa335ed勇猛的黑暗符印头盔|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45342
-"|cffa335ed勇猛的黑暗符印腿铠|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 急速等级提高60点。|r", --45343
-"|cffa335ed勇猛的黑暗符印肩甲|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 急速等级提高52点。|r", --45344
-"|cffa335ed勇猛的夜歌护手|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45345
-"|cffa335ed勇猛的夜歌头饰|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45346
-"|cffa335ed勇猛的夜歌护腿|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45347
-"|cffa335ed勇猛的夜歌长袍|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45348
-"|cffa335ed勇猛的夜歌护肩|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高82点。|r", --45349
-"|cffa335ed夜歌罩帽|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45350
-"|cffa335ed勇猛的夜歌手套|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45351
-"|cffa335ed勇猛的夜歌衬肩|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45352
-"|cffa335ed勇猛的夜歌长裤|r£|cff00ff00装备： 命中等级提高54点。|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45353
-"|cffa335ed勇猛的夜歌外衣|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45354
-"|cffa335ed勇猛的夜歌手甲|r£|cff00ff00装备： 急速等级提高30点。|r£|cff00ff00装备： 攻击强度提高120点。|r£|cff00ff00装备： 使你的护甲穿透提高40点。|r", --45355
-"|cffa335ed勇猛的夜歌头盔|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 攻击强度提高142点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45356
-"|cffa335ed勇猛的夜歌腿甲|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 攻击强度提高106点。|r", --45357
-"|cffa335ed勇猛的夜歌外套|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 攻击强度提高152点。|r", --45358
-"|cffa335ed勇猛的夜歌肩垫|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 使你的精准等级提高44点。|r£|cff00ff00装备： 攻击强度提高104点。|r", --45359
-"|cffa335ed勇猛的天灾追猎者护手|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 攻击强度提高158点。|r", --45360
-"|cffa335ed勇猛的天灾追猎者头饰|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高180点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45361
-"|cffa335ed勇猛的天灾追猎者护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 攻击强度提高212点。|r", --45362
-"|cffa335ed勇猛的天灾追猎者肩甲|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --45363
-"|cffa335ed勇猛的天灾追猎者外套|r£|cff00ff00装备： 命中等级提高53点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高180点。|r", --45364
-"|cffa335ed勇猛的肯瑞托兜帽|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45365
-"|cffa335ed勇猛的肯瑞托护腿|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45367
-"|cffa335ed勇猛的肯瑞托外套|r£|cff00ff00装备： 爆击等级提高76点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45368
-"|cffa335ed勇猛的肯瑞托肩垫|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高91点。|r", --45369
-"|cffa335ed勇猛的庇护手套|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高83点。|r", --45370
-"|cffa335ed勇猛的庇护胫甲|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45371
-"|cffa335ed勇猛的庇护头饰|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45372
-"|cffa335ed勇猛的庇护肩饰|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45373
-"|cffa335ed勇猛的庇护外套|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45374
-"|cffa335ed勇猛的庇护战甲|r£|cff00ff00装备： 命中等级提高73点。|r£|cff00ff00装备： 爆击等级提高45点。|r", --45375
-"|cffa335ed勇猛的庇护手甲|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 使你的精准等级提高35点。|r", --45376
-"|cffa335ed勇猛的庇护头盔|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高54点。|r", --45377
-"|cffa335ed石化森林之靴|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 法术强度提高93点。|r", --45378
-"|cffa335ed勇猛的庇护腿铠|r£|cff00ff00装备： 命中等级提高54点。|r£|cff00ff00装备： 爆击等级提高68点。|r", --45379
-"|cffa335ed勇猛的庇护肩铠|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高41点。|r", --45380
-"|cffa335ed勇猛的庇护胸铠|r£|cff00ff00装备： 防御等级提高55。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的招架等级提高48点。|r", --45381
-"|cffa335ed勇猛的庇护面甲|r£|cff00ff00装备： 防御等级提高56。|r£|cff00ff00装备： 使你的躲闪等级提高55点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高40点。|r", --45382
-"|cffa335ed勇猛的庇护护手|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的招架等级提高32点。|r£|cff00ff00装备： 使你的盾牌格挡值提高129点。|r", --45383
-"|cffa335ed勇猛的庇护腿甲|r£|cff00ff00装备： 防御等级提高56。|r£|cff00ff00装备： 使你的躲闪等级提高40点。|r£|cff00ff00装备： 使你的招架等级提高55点。|r", --45384
-"|cffa335ed勇猛的庇护肩甲|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的盾牌格挡等级提高34点。|r£|cff00ff00装备： 使你的盾牌格挡值提高126点。|r", --45385
-"|cffa335ed勇猛的圣灵兜帽|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45386
-"|cffa335ed勇猛的圣灵手套|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 法术强度提高93点。|r", --45387
-"|cffa335ed勇猛的圣灵护腿|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45388
-"|cffa335ed勇猛的圣灵长袍|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45389
-"|cffa335ed勇猛的圣灵肩垫|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45390
-"|cffa335ed勇猛的圣灵头饰|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45391
-"|cffa335ed勇猛的圣灵裹手|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45392
-"|cffa335ed勇猛的圣灵衬肩|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45393
-"|cffa335ed勇猛的圣灵短裤|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45394
-"|cffa335ed勇猛的圣灵外衣|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45395
-"|cffa335ed勇猛的恐怖利刃胸甲|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 使你的精准等级提高71点。|r£|cff00ff00装备： 攻击强度提高152点。|r", --45396
-"|cffa335ed勇猛的恐怖利刃护手|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --45397
-"|cffa335ed勇猛的恐怖利刃头盔|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --45398
-"|cffa335ed勇猛的恐怖利刃腿甲|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 攻击强度提高152点。|r", --45399
-"|cffa335ed勇猛的恐怖利刃肩甲|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --45400
-"|cffa335ed勇猛的世界击碎者护手|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45401
-"|cffa335ed勇猛的世界击碎者头饰|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45402
-"|cffa335ed勇猛的世界击碎者护腿|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45403
-"|cffa335ed勇猛的世界击碎者肩甲|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高83点。|r", --45404
-"|cffa335ed勇猛的世界击碎者外套|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45405
-"|cffa335ed勇猛的世界击碎者手套|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45406
-"|cffa335ed勇猛的世界击碎者头盔|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45408
-"|cffa335ed勇猛的世界击碎者褶裙|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45409
-"|cffa335ed勇猛的世界击碎者肩垫|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 法术强度提高83点。|r", --45410
-"|cffa335ed勇猛的世界击碎者战甲|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45411
-"|cffa335ed勇猛的世界击碎者面甲|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 攻击强度提高188点。|r", --45412
-"|cffa335ed勇猛的世界击碎者胸甲|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 攻击强度提高196点。|r", --45413
-"|cffa335ed勇猛的世界击碎者手甲|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r£|cff00ff00装备： 攻击强度提高158点。|r", --45414
-"|cffa335ed勇猛的世界击碎者护肩|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 使你的精准等级提高31点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --45415
-"|cffa335ed勇猛的世界击碎者战裙|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 急速等级提高76点。|r£|cff00ff00装备： 攻击强度提高180点。|r", --45416
-"|cffa335ed勇猛的死亡信使兜帽|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45417
-"|cffa335ed麦耶的蓝宝石戒指|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 法术强度提高71点。|r", --45418
-"|cffa335ed勇猛的死亡信使手套|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45419
-"|cffa335ed勇猛的死亡信使护腿|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45420
-"|cffa335ed勇猛的死亡信使长袍|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45421
-"|cffa335ed勇猛的死亡信使肩垫|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45422
-"|cffa335ed符文之触裹手|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 法术强度提高69点。|r", --45423
-"|cffa335ed勇猛的突围胸铠|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的招架等级提高56点。|r£|cff00ff00装备： 使你的盾牌格挡值提高147点。|r", --45424
-"|cffa335ed勇猛的突围巨盔|r£|cff00ff00装备： 防御等级提高56。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高47点。|r", --45425
-"|cffa335ed勇猛的突围手甲|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的躲闪等级提高53点。|r£|cff00ff00装备： 命中等级提高45点。|r", --45426
-"|cffa335ed勇猛的突围护腿|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的盾牌格挡值提高168点。|r", --45427
-"|cffa335ed勇猛的突围肩铠|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的躲闪等级提高53点。|r£|cff00ff00装备： 使你的精准等级提高45点。|r", --45428
-"|cffa335ed勇猛的突围战甲|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 使你的护甲穿透提高68点。|r", --45429
-"|cffa335ed勇猛的突围护手|r£|cff00ff00装备： 命中等级提高35点。|r£|cff00ff00装备： 使你的精准等级提高56点。|r", --45430
-"|cffa335ed勇猛的突围头盔|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 使你的护甲穿透提高62点。|r", --45431
-"|cffa335ed勇猛的突围腿铠|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 使你的精准等级提高56点。|r", --45432
-"|cffa335ed勇猛的突围肩甲|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 爆击等级提高50点。|r", --45433
-"|cffa335ed岩石治愈胫甲|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --45434
-"|cffa335ed神灵兜帽|r£|cff00ff00装备： 命中等级提高86点。|r£|cff00ff00装备： 法术强度提高133点。|r", --45435
-"|cffa335ed坚定圣契|r£|cff00ff00装备： 圣光术的法术强度提高160点。|r", --45436
-"|cffa335ed符文铭刻之刃|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高550点。|r", --45437
-"|cffa335ed忠诚仆从之戒|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45438
-"|cffa335ed坚毅的凝视|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45439
-"|cffa335ed淡泊守护肩饰|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --45440
-"|cffa335ed远古守护者便鞋|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45441
-"|cffa335ed索萨利斯，守护者之锤|r£|cff00ff00装备： 防御等级提高29。|r£|cff00ff00装备： 使你的招架等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高32点。|r", --45442
-"|cffa335ed谨慎抉择符咒|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高75点。|r", --45443
-"|cffa335ed稳固手套|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 攻击强度提高106点。|r", --45444
-"|cffa335ed虔诚者胸铠|r£|cff00ff00装备： 爆击等级提高76点。|r£|cff00ff00装备： 急速等级提高58点。|r£|cff00ff00装备： 法术强度提高131点。|r", --45445
-"|cffa335ed理智之握|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45446
-"|cffa335ed警觉命运之眼|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45447
-"|cffa335ed危险之噬|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 攻击强度提高62点。|r£|cff00ff00装备： 使你的护甲穿透提高24点。|r", --45448
-"|cffa335ed切碎者|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --45449
-"|cffa335ed北地屏障|r£|cff00ff00装备： 防御等级提高63。|r£|cff00ff00装备： 命中等级提高28点。|r£|cff00ff00装备： 使你的精准等级提高28点。|r", --45450
-"|cffa335ed冰封之环|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45451
-"|cffa335ed霜板胫甲|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f34|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高124点。|r", --45452
-"|cffa335ed严冬之拥|r£|cff00ff00装备： 使你的精准等级提高57点。|r£|cff00ff00装备： 攻击强度提高136点。|r£|cff00ff00装备： 使你的护甲穿透提高81点。|r", --45453
-"|cffa335ed冰箍锁链护腕|r£|cff00ff00装备： 命中等级提高33点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --45454
-"|cffa335ed水晶之树腰带|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高98点。|r", --45455
-"|cffa335ed敏捷之环|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 攻击强度提高76点。|r", --45456
-"|cffa335ed无尽寒冬法杖|r£|cff00ff00装备： 爆击等级提高104点。|r£|cff00ff00装备： 法术强度提高587点。|r", --45457
-"|cffa335ed雷暴|r£|cff00ff00装备： 命中等级提高96点。|r£|cff00ff00装备： 使你的护甲穿透提高74点。|r", --45458
-"|cffa335ed霍迪尔的寒冰之力|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 使你的护甲穿透提高48点。|r", --45459
-"|cffa335ed寒冬强风束腕|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45460
-"|cffa335ed冰冷意图披风|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 攻击强度提高102点。|r", --45461
-"|cffa335ed冰冻林地手套|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45462
-"|cffa335ed乌米尔，北地的风暴|r£|cff00ff00装备： 命中等级提高37点。|r£|cff00ff00装备： 使你的精准等级提高29点。|r£|cff00ff00装备： 攻击强度提高74点。|r£|cffffd100\"风暴的力量与你同行。\"|r", --45463
-"|cffa335ed冰息兜帽|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45464
-"|cffa335ed命运之鳞|r£|cff00ff00装备： 法术强度提高125点。|r£|cff00ff00使用： 使你的急速等级提高432，持续20秒。 （2分钟冷却）|r", --45466
-"|cffa335ed背弃腰带|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 攻击强度提高170点。|r£|cff00ff00装备： 使你的护甲穿透提高56点。|r", --45467
-"|cffa335ed失落挚爱护腿|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45468
-"|cffa335ed西芙的承诺|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的精准等级提高42点。|r£|cffffd100\"我的爱永不逝去，你的力量也永不消退。\"|r", --45469
-"|cffa335ed智慧的坚持|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45470
-"|cffa335ed命运的约束|r£|cff00ff00装备： 防御等级提高48。|r£|cff00ff00装备： 使你的躲闪等级提高39点。|r£|cff00ff00装备： 使你的精准等级提高41点。|r", --45471
-"|cffa335ed勇士的战盔|r£|cff00ff00装备： 命中等级提高61点。|r£|cff00ff00装备： 爆击等级提高86点。|r", --45472
-"|cffa335ed角斗士的拥抱|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 急速等级提高85点。|r£|cff00ff00装备： 攻击强度提高140点。|r", --45473
-"|cffa335ed斗士的肩铠|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f31|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高92点。|r", --45474
-"|cffa335ed生命的缚誓者|r£|cff00ff00装备： 急速等级提高120点。|r£|cff00ff00装备： 法术强度提高550点。|r", --45479
-"|cffa335ed仙子之心|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 攻击强度提高92点。|r", --45480
-"|cffa335ed无情报复护手|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高49点。|r", --45481
-"|cffa335ed呵护腿甲|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45482
-"|cffa335ed仆从之靴|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45483
-"|cffa335ed扭曲之刃|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 急速等级提高37点。|r£|cff00ff00装备： 攻击强度提高64点。|r", --45484
-"|cffa335ed瓦尼尔的青铜坠饰|r£|cff00ff00装备： 防御等级提高37。|r£|cff00ff00装备： 使你的躲闪等级提高30点。|r£|cff00ff00装备： 使你的招架等级提高37点。|r", --45485
-"|cffa335ed忧郁女神斗篷|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高75点。|r", --45486
-"|cffa335ed新兴护手|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的躲闪等级提高44点。|r£|cff00ff00装备： 使你的招架等级提高46点。|r", --45487
-"|cffa335ed奴役圣像护腿|r£|cff00ff00装备： 命中等级提高70点。|r£|cff00ff00装备： 爆击等级提高77点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45488
-"|cffa335ed疯狂之握|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 使你的精准等级提高25点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --45489
-"|cffa335ed潘多拉的恳求|r£|cff00ff00装备： 你的法术有一定几率使你的法术强度提高751点，持续10秒。|r", --45490
-"|cffa335ed创世者的腰带|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --45491
-"|cffa335ed韧性钢纹衬肩|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45492
-"|cffa335ed阿西莫夫的斗篷|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45493
-"|cffa335ed狂乱之触|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 攻击强度提高94点。|r£|cff00ff00装备： 使你的护甲穿透提高37点。|r", --45494
-"|cffa335ed导能封印|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45495
-"|cffa335ed泰坦外皮披风|r£|cff00ff00装备： 防御等级提高71。|r£|cff00ff00装备： 命中等级提高24点。|r£|cff00ff00装备： 使你的精准等级提高31点。|r", --45496
-"|cffa335ed荧光之冠|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 法术强度提高131点。|r", --45497
-"|cffa335ed洛塔芬，诅咒之矛|r£|cff00ff00装备： 爆击等级提高87点。|r£|cff00ff00装备： 攻击强度提高160点。|r£|cff00ff00装备： 使你的护甲穿透提高80点。|r", --45498
+"|cffa335ed真视头饰|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 攻击强度提高166点。|r", --45329
+"|cffa335ed钢铁热情胫甲|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 爆击等级提高48点。|r", --45330
+"|cffa335ed符文蚀刻夜刃|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 攻击强度提高59点。|r£|cff00ff00装备： 使你的护甲穿透提高27点。|r", --45331
+"|cffa335ed风暴之刺|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高515点。|r", --45332
+"|cffa335ed钢铁仆从腰带|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f31|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高98点。|r", --45333
+"|cffa335ed铁壁胸甲|r£|cff00ff00装备： 防御等级提高64。|r£|cff00ff00装备： 使你的盾牌格挡等级提高54点。|r£|cff00ff00装备： 使你的盾牌格挡值提高153点。|r", --45334
+"|cffa335ed勇猛的黑暗符印护胸|r£|cff00ff00装备： 防御等级提高64。|r£|cff00ff00装备： 使你的躲闪等级提高58点。|r£|cff00ff00装备： 使你的招架等级提高52点。|r", --45335
+"|cffa335ed勇猛的黑暗符印面甲|r£|cff00ff00装备： 防御等级提高69。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 命中等级提高39点。|r", --45336
+"|cffa335ed勇猛的黑暗符印护手|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的招架等级提高55点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r", --45337
+"|cffa335ed勇猛的黑暗符印护腿|r£|cff00ff00装备： 防御等级提高66。|r£|cff00ff00装备： 使你的招架等级提高81点。|r£|cff00ff00装备： 使你的精准等级提高57点。|r", --45338
+"|cffa335ed勇猛的黑暗符印肩铠|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的招架等级提高38点。|r", --45339
+"|cffa335ed勇猛的黑暗符印战甲|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 使你的精准等级提高54点。|r", --45340
+"|cffa335ed勇猛的黑暗符印手套|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 爆击等级提高41点。|r", --45341
+"|cffa335ed勇猛的黑暗符印头盔|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 使你的护甲穿透提高48点。|r", --45342
+"|cffa335ed勇猛的黑暗符印腿铠|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高63点。|r", --45343
+"|cffa335ed勇猛的黑暗符印肩甲|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 急速等级提高55点。|r", --45344
+"|cffa335ed勇猛的夜歌护手|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45345
+"|cffa335ed勇猛的夜歌头饰|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45346
+"|cffa335ed勇猛的夜歌护腿|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45347
+"|cffa335ed勇猛的夜歌长袍|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45348
+"|cffa335ed勇猛的夜歌护肩|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 法术强度提高87点。|r", --45349
+"|cffa335ed夜歌罩帽|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45350
+"|cffa335ed勇猛的夜歌手套|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45351
+"|cffa335ed勇猛的夜歌衬肩|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45352
+"|cffa335ed勇猛的夜歌长裤|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45353
+"|cffa335ed勇猛的夜歌外衣|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45354
+"|cffa335ed勇猛的夜歌手甲|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 攻击强度提高127点。|r£|cff00ff00装备： 使你的护甲穿透提高42点。|r", --45355
+"|cffa335ed勇猛的夜歌头盔|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 攻击强度提高151点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45356
+"|cffa335ed勇猛的夜歌腿甲|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 攻击强度提高113点。|r", --45357
+"|cffa335ed勇猛的夜歌外套|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --45358
+"|cffa335ed勇猛的夜歌肩垫|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的精准等级提高47点。|r£|cff00ff00装备： 攻击强度提高110点。|r", --45359
+"|cffa335ed勇猛的天灾追猎者护手|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 攻击强度提高167点。|r", --45360
+"|cffa335ed勇猛的天灾追猎者头饰|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高191点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45361
+"|cffa335ed勇猛的天灾追猎者护腿|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高225点。|r", --45362
+"|cffa335ed勇猛的天灾追猎者肩甲|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --45363
+"|cffa335ed勇猛的天灾追猎者外套|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高191点。|r", --45364
+"|cffa335ed勇猛的肯瑞托兜帽|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45365
+"|cffa335ed勇猛的肯瑞托护腿|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45367
+"|cffa335ed勇猛的肯瑞托外套|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 法术强度提高132点。|r", --45368
+"|cffa335ed勇猛的肯瑞托肩垫|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --45369
+"|cffa335ed勇猛的庇护手套|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高88点。|r", --45370
+"|cffa335ed勇猛的庇护胫甲|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高112点。|r", --45371
+"|cffa335ed勇猛的庇护头饰|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 急速等级提高58点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45372
+"|cffa335ed勇猛的庇护肩饰|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45373
+"|cffa335ed勇猛的庇护外套|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高112点。|r", --45374
+"|cffa335ed勇猛的庇护战甲|r£|cff00ff00装备： 命中等级提高78点。|r£|cff00ff00装备： 爆击等级提高48点。|r", --45375
+"|cffa335ed勇猛的庇护手甲|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的精准等级提高37点。|r", --45376
+"|cffa335ed勇猛的庇护头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 急速等级提高57点。|r", --45377
+"|cffa335ed石化森林之靴|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高98点。|r", --45378
+"|cffa335ed勇猛的庇护腿铠|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 爆击等级提高72点。|r", --45379
+"|cffa335ed勇猛的庇护肩铠|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 急速等级提高43点。|r", --45380
+"|cffa335ed勇猛的庇护胸铠|r£|cff00ff00装备： 防御等级提高58。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的招架等级提高51点。|r", --45381
+"|cffa335ed勇猛的庇护面甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高58点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高43点。|r", --45382
+"|cffa335ed勇猛的庇护护手|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的招架等级提高34点。|r£|cff00ff00装备： 使你的盾牌格挡值提高129点。|r", --45383
+"|cffa335ed勇猛的庇护腿甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 使你的招架等级提高58点。|r", --45384
+"|cffa335ed勇猛的庇护肩甲|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的盾牌格挡等级提高36点。|r£|cff00ff00装备： 使你的盾牌格挡值提高126点。|r", --45385
+"|cffa335ed勇猛的圣灵兜帽|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45386
+"|cffa335ed勇猛的圣灵手套|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45387
+"|cffa335ed勇猛的圣灵护腿|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高132点。|r", --45388
+"|cffa335ed勇猛的圣灵长袍|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45389
+"|cffa335ed勇猛的圣灵肩垫|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45390
+"|cffa335ed勇猛的圣灵头饰|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高64点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45391
+"|cffa335ed勇猛的圣灵裹手|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高97点。|r", --45392
+"|cffa335ed勇猛的圣灵衬肩|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45393
+"|cffa335ed勇猛的圣灵短裤|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45394
+"|cffa335ed勇猛的圣灵外衣|r£|cff00ff00装备： 命中等级提高72点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高132点。|r", --45395
+"|cffa335ed勇猛的恐怖利刃胸甲|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 使你的精准等级提高75点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --45396
+"|cffa335ed勇猛的恐怖利刃护手|r£|cff00ff00装备： 命中等级提高53点。|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 攻击强度提高127点。|r", --45397
+"|cffa335ed勇猛的恐怖利刃头盔|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --45398
+"|cffa335ed勇猛的恐怖利刃腿甲|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --45399
+"|cffa335ed勇猛的恐怖利刃肩甲|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --45400
+"|cffa335ed勇猛的世界击碎者护手|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45401
+"|cffa335ed勇猛的世界击碎者头饰|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45402
+"|cffa335ed勇猛的世界击碎者护腿|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高112点。|r", --45403
+"|cffa335ed勇猛的世界击碎者肩甲|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高88点。|r", --45404
+"|cffa335ed勇猛的世界击碎者外套|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高112点。|r", --45405
+"|cffa335ed勇猛的世界击碎者手套|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45406
+"|cffa335ed勇猛的世界击碎者头盔|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45408
+"|cffa335ed勇猛的世界击碎者褶裙|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45409
+"|cffa335ed勇猛的世界击碎者肩垫|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 法术强度提高88点。|r", --45410
+"|cffa335ed勇猛的世界击碎者战甲|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45411
+"|cffa335ed勇猛的世界击碎者面甲|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 攻击强度提高200点。|r", --45412
+"|cffa335ed勇猛的世界击碎者胸甲|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 攻击强度提高208点。|r", --45413
+"|cffa335ed勇猛的世界击碎者手甲|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r£|cff00ff00装备： 攻击强度提高167点。|r", --45414
+"|cffa335ed勇猛的世界击碎者护肩|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 使你的精准等级提高33点。|r£|cff00ff00装备： 攻击强度提高134点。|r", --45415
+"|cffa335ed勇猛的世界击碎者战裙|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 急速等级提高81点。|r£|cff00ff00装备： 攻击强度提高191点。|r", --45416
+"|cffa335ed勇猛的死亡信使兜帽|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45417
+"|cffa335ed麦耶的蓝宝石戒指|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45418
+"|cffa335ed勇猛的死亡信使手套|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 法术强度提高97点。|r", --45419
+"|cffa335ed勇猛的死亡信使护腿|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高132点。|r", --45420
+"|cffa335ed勇猛的死亡信使长袍|r£|cff00ff00装备： 命中等级提高72点。|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45421
+"|cffa335ed勇猛的死亡信使肩垫|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高97点。|r", --45422
+"|cffa335ed符文之触裹手|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高73点。|r", --45423
+"|cffa335ed勇猛的突围胸铠|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的招架等级提高60点。|r£|cff00ff00装备： 使你的盾牌格挡值提高147点。|r", --45424
+"|cffa335ed勇猛的突围巨盔|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高50点。|r", --45425
+"|cffa335ed勇猛的突围手甲|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 命中等级提高48点。|r", --45426
+"|cffa335ed勇猛的突围护腿|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的盾牌格挡值提高168点。|r", --45427
+"|cffa335ed勇猛的突围肩铠|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 使你的精准等级提高48点。|r", --45428
+"|cffa335ed勇猛的突围战甲|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 使你的护甲穿透提高72点。|r", --45429
+"|cffa335ed勇猛的突围护手|r£|cff00ff00装备： 命中等级提高37点。|r£|cff00ff00装备： 使你的精准等级提高59点。|r", --45430
+"|cffa335ed勇猛的突围头盔|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 使你的护甲穿透提高66点。|r", --45431
+"|cffa335ed勇猛的突围腿铠|r£|cff00ff00装备： 命中等级提高72点。|r£|cff00ff00装备： 使你的精准等级提高60点。|r", --45432
+"|cffa335ed勇猛的突围肩甲|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 爆击等级提高53点。|r", --45433
+"|cffa335ed岩石治愈胫甲|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --45434
+"|cffa335ed神灵兜帽|r£|cff00ff00装备： 命中等级提高91点。|r£|cff00ff00装备： 法术强度提高141点。|r", --45435
+"|cffa335ed坚定圣契|r£|cff00ff00装备： 圣光术的法术强度提高169点。|r", --45436
+"|cffa335ed符文铭刻之刃|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高582点。|r", --45437
+"|cffa335ed忠诚仆从之戒|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45438
+"|cffa335ed坚毅的凝视|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45439
+"|cffa335ed淡泊守护肩饰|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --45440
+"|cffa335ed远古守护者便鞋|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45441
+"|cffa335ed索萨利斯，守护者之锤|r£|cff00ff00装备： 防御等级提高33。|r£|cff00ff00装备： 使你的招架等级提高41点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r", --45442
+"|cffa335ed谨慎抉择符咒|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高85点。|r", --45443
+"|cffa335ed稳固手套|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --45444
+"|cffa335ed虔诚者胸铠|r£|cff00ff00装备： 爆击等级提高87点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高150点。|r", --45445
+"|cffa335ed理智之握|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高85点。|r", --45446
+"|cffa335ed警觉命运之眼|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 法术强度提高84点。|r", --45447
+"|cffa335ed危险之噬|r£|cff00ff00装备： 命中等级提高39点。|r£|cff00ff00装备： 攻击强度提高70点。|r£|cff00ff00装备： 使你的护甲穿透提高27点。|r", --45448
+"|cffa335ed切碎者|r£|cff00ff00装备： 命中等级提高39点。|r£|cff00ff00装备： 爆击等级提高34点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --45449
+"|cffa335ed北地屏障|r£|cff00ff00装备： 防御等级提高67。|r£|cff00ff00装备： 命中等级提高30点。|r£|cff00ff00装备： 使你的精准等级提高30点。|r", --45450
+"|cffa335ed冰封之环|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45451
+"|cffa335ed霜板胫甲|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f36|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高131点。|r", --45452
+"|cffa335ed严冬之拥|r£|cff00ff00装备： 使你的精准等级提高61点。|r£|cff00ff00装备： 攻击强度提高145点。|r£|cff00ff00装备： 使你的护甲穿透提高86点。|r", --45453
+"|cffa335ed冰箍锁链护腕|r£|cff00ff00装备： 命中等级提高35点。|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --45454
+"|cffa335ed水晶之树腰带|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 法术强度提高111点。|r", --45455
+"|cffa335ed敏捷之环|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --45456
+"|cffa335ed无尽寒冬法杖|r£|cff00ff00装备： 爆击等级提高118点。|r£|cff00ff00装备： 法术强度提高668点。|r", --45457
+"|cffa335ed雷暴|r£|cff00ff00装备： 命中等级提高102点。|r£|cff00ff00装备： 使你的护甲穿透提高78点。|r", --45458
+"|cffa335ed霍迪尔的寒冰之力|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 使你的护甲穿透提高54点。|r", --45459
+"|cffa335ed寒冬强风束腕|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高85点。|r", --45460
+"|cffa335ed冰冷意图披风|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 攻击强度提高116点。|r", --45461
+"|cffa335ed冰冻林地手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45462
+"|cffa335ed乌米尔，北地的风暴|r£|cff00ff00装备： 命中等级提高39点。|r£|cff00ff00装备： 使你的精准等级提高31点。|r£|cff00ff00装备： 攻击强度提高78点。|r£|cffffd100\"风暴的力量与你同行。\"|r", --45463
+"|cffa335ed冰息兜帽|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45464
+"|cffa335ed命运之鳞|r£|cff00ff00装备： 法术强度提高132点。|r£|cff00ff00使用： 使你的急速等级提高457，持续20秒。 （2分钟冷却）|r", --45466
+"|cffa335ed背弃腰带|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 攻击强度提高180点。|r£|cff00ff00装备： 使你的护甲穿透提高59点。|r", --45467
+"|cffa335ed失落挚爱护腿|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45468
+"|cffa335ed西芙的承诺|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的精准等级提高44点。|r£|cffffd100\"我的爱永不逝去，你的力量也永不消退。\"|r", --45469
+"|cffa335ed智慧的坚持|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 法术强度提高85点。|r", --45470
+"|cffa335ed命运的约束|r£|cff00ff00装备： 防御等级提高54。|r£|cff00ff00装备： 使你的躲闪等级提高44点。|r£|cff00ff00装备： 使你的精准等级提高46点。|r", --45471
+"|cffa335ed勇士的战盔|r£|cff00ff00装备： 命中等级提高69点。|r£|cff00ff00装备： 爆击等级提高98点。|r", --45472
+"|cffa335ed角斗士的拥抱|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 急速等级提高97点。|r£|cff00ff00装备： 攻击强度提高160点。|r", --45473
+"|cffa335ed斗士的肩铠|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45474
+"|cffa335ed生命的缚誓者|r£|cff00ff00装备： 急速等级提高127点。|r£|cff00ff00装备： 法术强度提高582点。|r", --45479
+"|cffa335ed仙子之心|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 攻击强度提高97点。|r", --45480
+"|cffa335ed无情报复护手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 急速等级提高52点。|r", --45481
+"|cffa335ed呵护腿甲|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45482
+"|cffa335ed仆从之靴|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45483
+"|cffa335ed扭曲之刃|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 攻击强度提高73点。|r", --45484
+"|cffa335ed瓦尼尔的青铜坠饰|r£|cff00ff00装备： 防御等级提高42。|r£|cff00ff00装备： 使你的躲闪等级提高34点。|r£|cff00ff00装备： 使你的招架等级提高42点。|r", --45485
+"|cffa335ed忧郁女神斗篷|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高85点。|r", --45486
+"|cffa335ed新兴护手|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的躲闪等级提高50点。|r£|cff00ff00装备： 使你的招架等级提高52点。|r", --45487
+"|cffa335ed奴役圣像护腿|r£|cff00ff00装备： 命中等级提高80点。|r£|cff00ff00装备： 爆击等级提高88点。|r£|cff00ff00装备： 法术强度提高140点。|r", --45488
+"|cffa335ed疯狂之握|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高26点。|r£|cff00ff00装备： 攻击强度提高85点。|r", --45489
+"|cffa335ed潘多拉的恳求|r£|cff00ff00装备： 你的法术有一定几率使你的法术强度提高794点，持续10秒。|r", --45490
+"|cffa335ed创世者的腰带|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --45491
+"|cffa335ed韧性钢纹衬肩|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45492
+"|cffa335ed阿西莫夫的斗篷|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45493
+"|cffa335ed狂乱之触|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 攻击强度提高99点。|r£|cff00ff00装备： 使你的护甲穿透提高39点。|r", --45494
+"|cffa335ed导能封印|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高85点。|r", --45495
+"|cffa335ed泰坦外皮披风|r£|cff00ff00装备： 防御等级提高80。|r£|cff00ff00装备： 命中等级提高27点。|r£|cff00ff00装备： 使你的精准等级提高35点。|r", --45496
+"|cffa335ed荧光之冠|r£|cff00ff00装备： 爆击等级提高79点。|r£|cff00ff00装备： 法术强度提高149点。|r", --45497
+"|cffa335ed洛塔芬，诅咒之矛|r£|cff00ff00装备： 爆击等级提高92点。|r£|cff00ff00装备： 攻击强度提高169点。|r£|cff00ff00装备： 使你的护甲穿透提高85点。|r", --45498
 "|cffa335edTest Wraps of the Item Purchase Refund|r£|cff00ff00装备： 命中等级提高28点。|r£|cff00ff00装备： 法术强度提高65点。|r", --45499
 "|cff1eff00冠军的印记|r£拾取后绑定£唯一（4）", --45500
-"|cffa335ed地底族群之靴|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 爆击等级提高60点。|r", --45501
-"|cffa335ed无面者头盔|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 使你的招架等级提高59点。|r", --45502
-"|cffa335ed受难者的金属指环|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 攻击强度提高92点。|r", --45503
-"|cffa335ed黑暗核心护腿|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 急速等级提高75点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --45504
-"|cffa335ed执着希望腰带|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高99点。|r", --45505
+"|cffa335ed地底族群之靴|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 爆击等级提高63点。|r", --45501
+"|cffa335ed无面者头盔|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高46点。|r£|cff00ff00装备： 使你的招架等级提高63点。|r", --45502
+"|cffa335ed受难者的金属指环|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 攻击强度提高97点。|r", --45503
+"|cffa335ed黑暗核心护腿|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --45504
+"|cffa335ed执着希望腰带|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45505
 "|cffa335ed档案馆数据圆盘|r£拾取后绑定£该物品将触发一个任务", --45506
-"|cffa335ed将军之心|r£|cff00ff00装备： 使你的躲闪等级提高107点。|r£|cff00ff00装备： 被击中之后有一定几率使你获得一道防护盾，使你每次受到的攻击降低205点，持续10秒。|r", --45507
-"|cffa335ed暗语者腰带|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45508
-"|cffa335ed腐蚀者神像|r£|cff00ff00装备： 你的裂伤技能有一定几率使你的敏捷提高153点，持续12秒。|r", --45509
-"|cffa335ed分歧圣契|r£|cff00ff00装备： 使你的神圣风暴造成的伤害提高235点。|r", --45510
-"|cffa335ed迷失灵魂节杖|r£|cff00ff00装备： 爆击等级提高18点。|r£|cff00ff00装备： 急速等级提高29点。|r£|cff00ff00装备： 法术强度提高44点。|r", --45511
-"|cffa335ed坚持之握|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45512
-"|cffa335ed遗忘深渊长靴|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高99点。|r", --45513
-"|cffa335ed无知衬肩|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 法术强度提高90点。|r", --45514
-"|cffa335ed空洞之眼|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45515
-"|cffa335ed沃德雷萨，黑暗湮灭之剑|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 使你的护甲穿透提高69点。|r", --45516
-"|cffa335ed无限钟摆|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --45517
-"|cffa335ed天堂之焰|r£|cff00ff00装备： 爆击等级提高120点。|r£|cff00ff00装备： 你的伤害法术有一定几率使你的法术强度提高850点，持续10秒。|r", --45518
-"|cffa335ed盲眼者的外衣|r£|cff00ff00装备： 急速等级提高69点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45519
-"|cffa335ed警戒裹手|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45520
-"|cffa335ed辟地|r£|cff00ff00装备： 命中等级提高70点。|r£|cff00ff00装备： 爆击等级提高87点。|r", --45521
-"|cffa335ed古神之血|r£|cff00ff00装备： 命中等级提高108点。|r£|cff00ff00装备： 近战和远程爆击有一定几率使你的攻击强度提高1284点，持续10秒。|r", --45522
-"|cffa335ed迦罗娜的伪装|r£|cff00ff00装备： 急速等级提高76点。|r£|cff00ff00装备： 使你的精准等级提高59点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --45523
-"|cffa335ed阴险意图胸甲|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 攻击强度提高196点。|r£|cff00ff00装备： 使你的护甲穿透提高67点。|r", --45524
-"|cffa335ed屠神徽记|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --45525
-"|cffa335ed灵魂之痕|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 法术强度提高550点。|r", --45527
+"|cffa335ed将军之心|r£|cff00ff00装备： 使你的躲闪等级提高113点。|r£|cff00ff00装备： 被击中之后有一定几率使你获得一道防护盾，使你每次受到的攻击降低205点，持续10秒。|r", --45507
+"|cffa335ed暗语者腰带|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45508
+"|cffa335ed腐蚀者神像|r£|cff00ff00装备： 你的裂伤技能有一定几率使你的敏捷提高162点，持续12秒。|r", --45509
+"|cffa335ed分歧圣契|r£|cff00ff00装备： 使你的神圣风暴造成的伤害提高249点。|r", --45510
+"|cffa335ed迷失灵魂节杖|r£|cff00ff00装备： 爆击等级提高19点。|r£|cff00ff00装备： 急速等级提高31点。|r£|cff00ff00装备： 法术强度提高47点。|r", --45511
+"|cffa335ed坚持之握|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45512
+"|cffa335ed遗忘深渊长靴|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f26|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45513
+"|cffa335ed无知衬肩|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45514
+"|cffa335ed空洞之眼|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45515
+"|cffa335ed沃德雷萨，黑暗湮灭之剑|r£|cff00ff00装备： 爆击等级提高98点。|r£|cff00ff00装备： 使你的护甲穿透提高79点。|r", --45516
+"|cffa335ed无限钟摆|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 攻击强度提高98点。|r", --45517
+"|cffa335ed天堂之焰|r£|cff00ff00装备： 爆击等级提高135点。|r£|cff00ff00装备： 你的伤害法术有一定几率使你的法术强度提高959点，持续10秒。|r", --45518
+"|cffa335ed盲眼者的外衣|r£|cff00ff00装备： 急速等级提高79点。|r£|cff00ff00装备： 法术强度提高140点。|r", --45519
+"|cffa335ed警戒裹手|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45520
+"|cffa335ed辟地|r£|cff00ff00装备： 命中等级提高74点。|r£|cff00ff00装备： 爆击等级提高92点。|r", --45521
+"|cffa335ed古神之血|r£|cff00ff00装备： 命中等级提高114点。|r£|cff00ff00装备： 近战和远程爆击有一定几率使你的攻击强度提高1284点，持续10秒。|r", --45522
+"|cffa335ed迦罗娜的伪装|r£|cff00ff00装备： 急速等级提高81点。|r£|cff00ff00装备： 使你的精准等级提高63点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --45523
+"|cffa335ed阴险意图胸甲|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 攻击强度提高208点。|r£|cff00ff00装备： 使你的护甲穿透提高71点。|r", --45524
+"|cffa335ed屠神徽记|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r£|cff00ff00装备： 攻击强度提高133点。|r", --45525
+"|cffa335ed灵魂之痕|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 法术强度提高582点。|r", --45527
 "|cff9e9e9eMonster - Axe, 2H Deathknight C01, Purple|r£ ", --45528
-"|cffa335ed鬼魅记忆斗篷|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45529
-"|cffa335ed理智的束缚|r£|cff00ff00装备： 急速等级提高31点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45530
-"|cffa335ed堕落神明胸甲|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 急速等级提高68点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45531
-"|cffa335ed黑暗低语兜帽|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45532
-"|cffa335ed堕落黑暗之刃|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 急速等级提高85点。|r£|cff00ff00装备： 攻击强度提高164点。|r", --45533
-"|cffa335ed背弃国王的徽记之戒|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 爆击等级提高48点。|r", --45534
-"|cffa335ed信仰的证明|r£|cff00ff00装备： 法术强度提高140点。|r£|cff00ff00装备： 每当你施放一个法术，就有一定几率获得每5秒回复最多|r|cff7f7f7f241|r|cff00ff00点法力值的效果，持续15秒。|r", --45535
-"|cffa335ed狡诈欺瞒护腿|r£|cff00ff00装备： 爆击等级提高78点。|r£|cff00ff00装备： 攻击强度提高152点。|r£|cff00ff00装备： 使你的护甲穿透提高66点。|r", --45536
-"|cffa335ed伪神之靴|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45537
-"|cffa335ed泰坦石坠|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r", --45538
-"|cffa335ed聚焦能量坠饰|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45539
-"|cffa335ed持剑者的徽记之戒|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r", --45540
-"|cffa335ed变更斗篷|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45541
-"|cffa335ed岩石卫士胫甲|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的招架等级提高36点。|r£|cff00ff00装备： 使你的盾牌格挡值提高135点。|r", --45542
-"|cffa335ed灾祸护肩|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 攻击强度提高154点。|r", --45543
-"|cffa335ed苦痛大地护腿|r£|cff00ff00装备： 急速等级提高75点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高133点。|r", --45544
-"|cffa335ed圣物猎人的腰带|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 攻击强度提高120点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45547
-"|cffa335ed沉睡者束带|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45548
-"|cffa335ed混乱之箍|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45549
-"|cffa335ed泰坦腰带|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 使你的精准等级提高40点。|r", --45550
-"|cffa335ed牢固板甲束带|r£|cff00ff00装备： 防御等级提高36。|r£|cff00ff00装备： 使你的躲闪等级提高45点。|r£|cff00ff00装备： 使你的招架等级提高37点。|r", --45551
-"|cffa335ed正义板甲束带|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r", --45552
-"|cffa335ed巨龙腰带|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --45553
-"|cffa335ed蓝色混沌腰带|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f20|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r", --45554
-"|cffa335ed温暖死亡腰带|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --45555
-"|cffa335ed极地生命腰带|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高81点。|r", --45556
-"|cffa335ed远古能量腰带|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高81点。|r", --45557
-"|cffa335ed雪白黎明束带|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 法术强度提高81点。|r", --45558
-"|cffa335ed领主的板甲战靴|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高48点。|r", --45559
-"|cffa335ed尖刺死亡战靴|r£|cff00ff00装备： 防御等级提高37。|r£|cff00ff00装备： 使你的躲闪等级提高44点。|r£|cff00ff00装备： 使你的招架等级提高37点。|r", --45560
-"|cffa335ed命运之靴|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r", --45561
-"|cffa335ed生命鳞片长靴|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 攻击强度提高138点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45562
-"|cffa335ed闪电根基长靴|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f20|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高81点。|r", --45563
-"|cffa335ed沉寂足垫|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --45564
-"|cffa335ed寒冬耐久长靴|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 法术强度提高81点。|r", --45565
-"|cffa335ed法术爆发便鞋|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高81点。|r", --45566
-"|cffa335ed救世主的便鞋|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 法术强度提高81点。|r", --45567
-"[PH] Bridle of the Argent Charger£任务物品£|cff00ff00使用： 在锦标赛兽栏附近使用，召唤你的坐骑。|r", --45568
+"|cffa335ed鬼魅记忆斗篷|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45529
+"|cffa335ed理智的束缚|r£|cff00ff00装备： 急速等级提高33点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f26|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45530
+"|cffa335ed堕落神明胸甲|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 急速等级提高72点。|r£|cff00ff00装备： 法术强度提高131点。|r", --45531
+"|cffa335ed黑暗低语兜帽|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45532
+"|cffa335ed堕落黑暗之刃|r£|cff00ff00装备： 命中等级提高73点。|r£|cff00ff00装备： 急速等级提高97点。|r£|cff00ff00装备： 攻击强度提高187点。|r", --45533
+"|cffa335ed背弃国王的徽记之戒|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 爆击等级提高54点。|r", --45534
+"|cffa335ed信仰的证明|r£|cff00ff00装备： 法术强度提高158点。|r£|cff00ff00装备： 每当你施放一个法术，就有一定几率获得每5秒回复最多|r|cff7f7f7f272|r|cff00ff00点法力值的效果，持续15秒。|r", --45535
+"|cffa335ed狡诈欺瞒护腿|r£|cff00ff00装备： 爆击等级提高89点。|r£|cff00ff00装备： 攻击强度提高174点。|r£|cff00ff00装备： 使你的护甲穿透提高75点。|r", --45536
+"|cffa335ed伪神之靴|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45537
+"|cffa335ed泰坦石坠|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高45点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r", --45538
+"|cffa335ed聚焦能量坠饰|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45539
+"|cffa335ed持剑者的徽记之戒|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r", --45540
+"|cffa335ed变更斗篷|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45541
+"|cffa335ed岩石卫士胫甲|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的招架等级提高38点。|r£|cff00ff00装备： 使你的盾牌格挡值提高143点。|r", --45542
+"|cffa335ed灾祸护肩|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 攻击强度提高163点。|r", --45543
+"|cffa335ed苦痛大地护腿|r£|cff00ff00装备： 急速等级提高79点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高141点。|r", --45544
+"|cffa335ed圣物猎人的腰带|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 攻击强度提高127点。|r£|cff00ff00装备： 使你的护甲穿透提高52点。|r", --45547
+"|cffa335ed沉睡者束带|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45548
+"|cffa335ed混乱之箍|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45549
+"|cffa335ed泰坦腰带|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 使你的精准等级提高43点。|r", --45550
+"|cffa335ed牢固板甲束带|r£|cff00ff00装备： 防御等级提高38。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的招架等级提高39点。|r", --45551
+"|cffa335ed正义板甲束带|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r", --45552
+"|cffa335ed巨龙腰带|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 攻击强度提高147点。|r", --45553
+"|cffa335ed蓝色混沌腰带|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r", --45554
+"|cffa335ed温暖死亡腰带|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高119点。|r", --45555
+"|cffa335ed极地生命腰带|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 法术强度提高86点。|r", --45556
+"|cffa335ed远古能量腰带|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高86点。|r", --45557
+"|cffa335ed雪白黎明束带|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 法术强度提高86点。|r", --45558
+"|cffa335ed领主的板甲战靴|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高51点。|r", --45559
+"|cffa335ed尖刺死亡战靴|r£|cff00ff00装备： 防御等级提高39。|r£|cff00ff00装备： 使你的躲闪等级提高47点。|r£|cff00ff00装备： 使你的招架等级提高39点。|r", --45560
+"|cffa335ed命运之靴|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f26|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r", --45561
+"|cffa335ed生命鳞片长靴|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 攻击强度提高147点。|r£|cff00ff00装备： 使你的护甲穿透提高48点。|r", --45562
+"|cffa335ed闪电根基长靴|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r", --45563
+"|cffa335ed沉寂足垫|r£|cff00ff00装备： 命中等级提高51点。|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --45564
+"|cffa335ed寒冬耐久长靴|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 法术强度提高86点。|r", --45565
+"|cffa335ed法术爆发便鞋|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高86点。|r", --45566
+"|cffa335ed救世主的便鞋|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 法术强度提高86点。|r", --45567
+"任务物品£|cff00ff00使用： 在锦标赛兽栏附近使用，召唤你的坐骑。|r", --45568
 "[PH] Bridle of the Deathcharger£任务物品£|cff00ff00使用： 在锦标赛兽栏附近使用，召唤你的坐骑。|r", --45569
-"|cffa335ed天铸之弩|r£|cff00ff00装备： 命中等级提高23点。|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 攻击强度提高58点。|r", --45570
+"|cffa335ed天铸之弩|r£|cff00ff00装备： 命中等级提高26点。|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 攻击强度提高65点。|r", --45570
 "暴风城战袍£ ", --45574
 "|cff1eff00Test Melee Rifle [PH]|r£|cff00ff00使用： 射击敌人，造成物理伤害。 （3秒冷却）|r", --45575
 "铁炉堡战袍£ ", --45577
@@ -39874,38 +39874,38 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "雷霆崖战袍£ ", --45584
 "银月城战袍£ ", --45585
 "|cffa335ed铁炉堡战羊|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45586
-"|cffa335ed奥尔加隆的壁垒|r£|cff00ff00装备： 防御等级提高38。|r£|cff00ff00装备： 使你的躲闪等级提高29点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高37点。|r", --45587
-"|cffa335ed天界斗篷|r£|cff00ff00装备： 命中等级提高37点。|r£|cff00ff00装备： 爆击等级提高47点。|r", --45588
+"|cffa335ed奥尔加隆的壁垒|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高33点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高42点。|r", --45587
+"|cffa335ed天界斗篷|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 爆击等级提高53点。|r", --45588
 "|cffa335ed诺莫瑞根机械陆行鸟|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45589
 "|cffa335ed埃索达雷象|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45590
 "|cffa335ed达纳苏斯夜刃豹|r£拾取后绑定£坐骑£种族：人类, 矮人, 暗夜精灵, 侏儒, 德莱尼£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45591
 "|cffa335ed雷霆崖科多兽|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45592
 "|cffa335ed暗矛迅猛龙|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45593
-"|cffa335ed无尽虚空腿铠|r£|cff00ff00装备： 防御等级提高59。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的招架等级提高67点。|r", --45594
+"|cffa335ed无尽虚空腿铠|r£|cff00ff00装备： 防御等级提高68。|r£|cff00ff00装备： 使你的躲闪等级提高58点。|r£|cff00ff00装备： 使你的招架等级提高76点。|r", --45594
 "|cffa335ed奥格瑞玛战狼|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45595
 "|cffa335ed银月城陆行鸟|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45596
 "|cffa335ed被遗忘者战马|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。这是一种速度非常快的坐骑。|r", --45597
-"|cffa335ed寂夜战靴|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 急速等级提高47点。|r", --45599
+"|cffa335ed寂夜战靴|r£|cff00ff00装备： 爆击等级提高73点。|r£|cff00ff00装备： 急速等级提高54点。|r", --45599
 "狂暴雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 狂暴的持续时间延长5秒。|r", --45601
 "野性成长雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 野性成长可以影响1个额外的目标。|r", --45602
 "滋养雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你施加于目标身上的每个持续治疗效果都可以使你的滋养法术的治疗量提高6%。|r", --45603
 "野蛮咆哮雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的野蛮咆哮技能提供的伤害加成效果提高3%。|r", --45604
-"|cffa335ed达斯卡尔之牙|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 攻击强度提高68点。|r£|cff00ff00装备： 使你的护甲穿透提高29点。|r", --45605
+"|cffa335ed达斯卡尔之牙|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 攻击强度提高72点。|r£|cff00ff00装备： 使你的护甲穿透提高31点。|r", --45605
 "|cff0070dd森金神像|r£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --45606
-"|cffa335ed湮灭之牙|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 急速等级提高24点。|r£|cff00ff00装备： 攻击强度提高80点。|r", --45607
-"|cffa335ed布莱恩的徽记之戒|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 攻击强度提高96点。|r£|cff00ff00装备： 使你的护甲穿透提高33点。|r", --45608
-"|cffa335ed彗星之痕|r£|cff00ff00装备： 攻击强度提高240点。|r£|cff00ff00装备： 你的近战和远程攻击有一定几率使你的急速等级提高726，持续10秒。|r", --45609
-"|cffa335ed无限的注视|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --45610
-"|cffa335ed太阳护腕|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 使你的精准等级提高47点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --45611
-"|cffa335ed星座|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高587点。|r", --45612
-"|cffa335ed缚梦者|r£|cff00ff00装备： 急速等级提高86点。|r£|cff00ff00装备： 攻击强度提高140点。|r£|cff00ff00装备： 使你的护甲穿透提高85点。|r", --45613
-"|cffa335ed星光之环|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高75点。|r", --45614
-"|cffa335ed位面行者之靴|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高92点。|r", --45615
-"|cffa335ed星珠束腰|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45616
-"|cffa335ed宇宙|r£|cff00ff00装备： 命中等级提高51点。|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 法术强度提高84点。|r", --45617
-"|cffa335ed阳光披风|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 法术强度提高75点。|r", --45618
-"|cffa335ed观星者的护腕|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45619
-"|cffa335ed星辰碎片之刃|r£|cff00ff00装备： 命中等级提高39点。|r£|cff00ff00装备： 法术强度提高587点。|r", --45620
+"|cffa335ed湮灭之牙|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 急速等级提高27点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --45607
+"|cffa335ed布莱恩的徽记之戒|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 攻击强度提高109点。|r£|cff00ff00装备： 使你的护甲穿透提高37点。|r", --45608
+"|cffa335ed彗星之痕|r£|cff00ff00装备： 攻击强度提高271点。|r£|cff00ff00装备： 你的近战和远程攻击有一定几率使你的急速等级提高768，持续10秒。|r", --45609
+"|cffa335ed无限的注视|r£|cff00ff00装备： 命中等级提高75点。|r£|cff00ff00装备： 爆击等级提高78点。|r£|cff00ff00装备： 攻击强度提高255点。|r", --45610
+"|cffa335ed太阳护腕|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 使你的精准等级提高53点。|r£|cff00ff00装备： 攻击强度提高97点。|r", --45611
+"|cffa335ed星座|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高665点。|r", --45612
+"|cffa335ed缚梦者|r£|cff00ff00装备： 急速等级提高98点。|r£|cff00ff00装备： 攻击强度提高160点。|r£|cff00ff00装备： 使你的护甲穿透提高96点。|r", --45613
+"|cffa335ed星光之环|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f27|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高86点。|r", --45614
+"|cffa335ed位面行者之靴|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --45615
+"|cffa335ed星珠束腰|r£|cff00ff00装备： 急速等级提高72点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45616
+"|cffa335ed宇宙|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 法术强度提高95点。|r", --45617
+"|cffa335ed阳光披风|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高86点。|r", --45618
+"|cffa335ed观星者的护腕|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45619
+"|cffa335ed星辰碎片之刃|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 法术强度提高665点。|r", --45620
 "初级精准药剂£|cff00ff00使用： 使你的命中等级提高10，持续1小时。战斗药剂。|r", --45621
 "季风雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的台风法术的冷却时间缩短3秒。|r", --45622
 "树皮雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 在激活树皮术的状态下，使你受到爆击的几率降低25%。|r", --45623
@@ -39947,9 +39947,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed固执征服者的护肩|r£拾取后绑定£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：圣骑士, 牧师, 术士", --45659
 "|cffa335ed固执保卫者的护肩|r£拾取后绑定£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼", --45660
 "|cffa335ed固执胜利者的护肩|r£拾取后绑定£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼", --45661
-"|cffa335ed疯乱臂甲|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高40点。|r", --45663
+"|cffa335ed疯乱臂甲|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 急速等级提高45点。|r", --45663
 "银月城上衣£ ", --45664
-"|cffa335ed灯塔手套|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45665
+"|cffa335ed灯塔手套|r£|cff00ff00装备： 爆击等级提高73点。|r£|cff00ff00装备： 急速等级提高85点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45665
 "铁炉堡上衣£ ", --45666
 "暴风城上衣£ ", --45667
 "埃索达上衣£ ", --45668
@@ -39959,40 +39959,40 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "奥格瑞玛上衣£ ", --45672
 "雷霆崖上衣£ ", --45673
 "幽暗城上衣£ ", --45674
-"|cffa335ed能量强化指环|r£|cff00ff00装备： 命中等级提高35点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --45675
-"|cffa335ed堕落力量胸铠|r£|cff00ff00装备： 急速等级提高81点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45676
-"|cffa335ed叛逆肩垫|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 攻击强度提高126点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45677
-"|cffa335ed钳制手套|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 攻击强度提高118点。|r£|cff00ff00装备： 使你的护甲穿透提高37点。|r", --45679
-"|cffa335ed构造体的臂甲|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f16|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高69点。|r", --45680
-"|cffa335ed脉冲魔法之盾|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 法术强度提高69点。|r", --45682
-"|cffa335ed等离子薄片|r£|cff00ff00装备： 爆击等级提高35点。|r£|cff00ff00装备： 法术强度提高487点。|r", --45685
-"|cffa335ed皎洁新月外套|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45686
-"|cffa335ed隐藏能量之盔|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45687
-"|cffa335ed肯瑞托铭文指环|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 急速等级提高37点。|r£|cff00ff00装备： 攻击强度提高112点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45688
-"|cffa335ed肯瑞托铭文指箍|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45689
-"|cffa335ed肯瑞托铭文戒指|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 使你的精准等级提高37点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45690
-"|cffa335ed肯瑞托铭文徽记|r£|cff00ff00装备： 爆击等级提高37点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高66点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45691
+"|cffa335ed能量强化指环|r£|cff00ff00装备： 命中等级提高37点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r", --45675
+"|cffa335ed堕落力量胸铠|r£|cff00ff00装备： 急速等级提高86点。|r£|cff00ff00装备： 使你的护甲穿透提高48点。|r", --45676
+"|cffa335ed叛逆肩垫|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 攻击强度提高134点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45677
+"|cffa335ed钳制手套|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高125点。|r£|cff00ff00装备： 使你的护甲穿透提高39点。|r", --45679
+"|cffa335ed构造体的臂甲|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f17|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --45680
+"|cffa335ed脉冲魔法之盾|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高73点。|r", --45682
+"|cffa335ed等离子薄片|r£|cff00ff00装备： 爆击等级提高37点。|r£|cff00ff00装备： 法术强度提高515点。|r", --45685
+"|cffa335ed皎洁新月外套|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 法术强度提高131点。|r", --45686
+"|cffa335ed隐藏能量之盔|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45687
+"|cffa335ed肯瑞托铭文指环|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 攻击强度提高125点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45688
+"|cffa335ed肯瑞托铭文指箍|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45689
+"|cffa335ed肯瑞托铭文戒指|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 使你的精准等级提高41点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45690
+"|cffa335ed肯瑞托铭文徽记|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 法术强度提高74点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --45691
 "|cff0070ddMonster - Sword, Vargul (Blue) (2H)|r£ ", --45692
 "|cffa335ed米米尔隆的头部|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤这种机械体。只能在外域或诺森德进行召唤。这是一种速度非常快的……装置。|r", --45693
-"|cffa335ed导能束腰|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 法术强度提高93点。|r", --45694
-"|cffa335ed凋零梦境之塔|r£|cff00ff00装备： 急速等级提高76点。|r£|cff00ff00装备： 攻击强度提高212点。|r£|cff00ff00装备： 使你的护甲穿透提高67点。|r", --45695
-"|cffa335ed不屈印记|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的躲闪等级提高37点。|r", --45696
-"|cffa335ed庄严守望肩甲|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的招架等级提高45点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高36点。|r", --45697
-"|cffa335ed钢铁守护者战靴|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高91点。|r", --45698
-"|cffa335ed炫目坠饰|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 急速等级提高29点。|r£|cff00ff00装备： 法术强度提高69点。|r", --45699
-"|cffa335ed岩石禁卫|r£|cff00ff00装备： 使你的躲闪等级提高31点。|r£|cff00ff00装备： 使你的招架等级提高30点。|r£|cff00ff00装备： 命中等级提高24点。|r", --45700
-"|cffa335ed缚地者胫甲|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高88点。|r", --45701
-"|cffa335ed翡翠徽记之戒|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 法术强度提高70点。|r", --45702
-"|cffa335ed希望的火花|r£|cff00ff00装备： 使你的法术的法力值消耗降低42点。|r", --45703
-"|cffa335ed碎裂巨人披风|r£|cff00ff00装备： 命中等级提高32点。|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 攻击强度提高86点。|r", --45704
+"|cffa335ed导能束腰|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 法术强度提高98点。|r", --45694
+"|cffa335ed凋零梦境之塔|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 攻击强度提高224点。|r£|cff00ff00装备： 使你的护甲穿透提高71点。|r", --45695
+"|cffa335ed不屈印记|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高39点。|r", --45696
+"|cffa335ed庄严守望肩甲|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的招架等级提高48点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高38点。|r", --45697
+"|cffa335ed钢铁守护者战靴|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高96点。|r", --45698
+"|cffa335ed炫目坠饰|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 急速等级提高31点。|r£|cff00ff00装备： 法术强度提高73点。|r", --45699
+"|cffa335ed岩石禁卫|r£|cff00ff00装备： 使你的躲闪等级提高33点。|r£|cff00ff00装备： 使你的招架等级提高32点。|r£|cff00ff00装备： 命中等级提高25点。|r", --45700
+"|cffa335ed缚地者胫甲|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高93点。|r", --45701
+"|cffa335ed翡翠徽记之戒|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45702
+"|cffa335ed希望的火花|r£|cff00ff00装备： 使你的法术的法力值消耗降低44点。|r", --45703
+"|cffa335ed碎裂巨人披风|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 攻击强度提高91点。|r", --45704
 "|cff0070dd银色锦标赛邀请函|r£拾取后绑定£唯一£|cff00ff00使用： 传送到冰冠冰川的银色比武场。|r", --45705
 "|cffa335ed勇猛奖章|r£拾取后绑定£唯一（5）£|cff00ff00使用： 使你获得2000点荣誉值。 （2秒冷却）|r", --45706
-"|cffa335ed破坏者的盾墙|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的招架等级提高32点。|r£|cff00ff00装备： 使你的精准等级提高32点。|r", --45707
-"|cffa335ed阿扎达斯的遗失腿铠|r£|cff00ff00装备： 使你的躲闪等级提高65点。|r£|cff00ff00装备： 使你的招架等级提高52点。|r£|cff00ff00装备： 使你的精准等级提高58点。|r", --45708
-"|cffa335ed灵敏攀登者腰带|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --45709
-"|cffa335ed艾隆纳亚的遗弃衬肩|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高158点。|r", --45711
-"|cffa335ed泰坦愤怒胸甲|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 使你的护甲穿透提高71点。|r", --45712
-"|cffa335ed培育之触|r£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00装备： 法术强度提高39点。|r", --45713
+"|cffa335ed破坏者的盾墙|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的招架等级提高34点。|r£|cff00ff00装备： 使你的精准等级提高34点。|r", --45707
+"|cffa335ed阿扎达斯的遗失腿铠|r£|cff00ff00装备： 使你的躲闪等级提高69点。|r£|cff00ff00装备： 使你的招架等级提高55点。|r£|cff00ff00装备： 使你的精准等级提高61点。|r", --45708
+"|cffa335ed灵敏攀登者腰带|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --45709
+"|cffa335ed艾隆纳亚的遗弃衬肩|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 攻击强度提高167点。|r", --45711
+"|cffa335ed泰坦愤怒胸甲|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 使你的护甲穿透提高75点。|r", --45712
+"|cffa335ed培育之触|r£|cff00ff00装备： 爆击等级提高21点。|r£|cff00ff00装备： 法术强度提高41点。|r", --45713
 "|cff1eff00达纳苏斯奖章|r£拾取后绑定£|cff00ff00使用： 使你在达纳苏斯中的声望提高250点。|r", --45714
 "|cff1eff00埃索达奖章|r£拾取后绑定£|cff00ff00使用： 使你在埃索达中的声望提高250点。|r", --45715
 "|cff1eff00诺莫瑞根奖章|r£拾取后绑定£|cff00ff00使用： 使你在诺莫瑞根中的声望提高250点。|r", --45716
@@ -40024,12 +40024,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "神圣恳求雕文£圣骑士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当神圣恳求处于激活状态时，你受到的所有伤害降低3%。|r", --45745
 "神圣震击雕文£圣骑士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 神圣震击的冷却时间缩短1秒。|r", --45746
 "拯救雕文£圣骑士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当你对自己施放拯救之手时，你受到的伤害也降低20%。|r", --45747
-"消散雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 消散的冷却时间缩短45秒。|r", --45753
-"守护之魂雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 如果你的守护之魂在整个效果持续期间都没有被触发，则这个法术的冷却时间缩短到1分钟。|r", --45755
-"苦修雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 苦修的冷却时间缩短2秒。|r", --45756
-"精神灼烧雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 使精神灼烧的影响半径延长5码。|r", --45757
-"希望圣歌雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 你的希望圣歌的持续时间延长2秒。|r", --45758
-"痛苦压制雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：牧师£|cff66baff大型雕文|r£|cff00ff00使用： 可以在昏迷时施放痛苦压制。|r", --45760
+"消散雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 消散的冷却时间缩短45秒。|r", --45753
+"守护之魂雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 如果你的守护之魂在整个效果持续期间都没有被触发，则这个法术的冷却时间缩短到1分钟。|r", --45755
+"苦修雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 苦修的冷却时间缩短2秒。|r", --45756
+"精神灼烧雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使精神灼烧的影响半径延长5码。|r", --45757
+"希望圣歌雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的希望圣歌的持续时间延长2秒。|r", --45758
+"痛苦压制雕文£牧师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 可以在昏迷时施放痛苦压制。|r", --45760
 "血之饥渴雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 血之饥渴提供的伤害加成效果提高3%。|r", --45761
 "杀戮盛筵雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 杀戮盛筵的冷却时间缩短45秒。|r", --45762
 "暗影之舞雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 暗影之舞的持续时间延长2秒。|r", --45764
@@ -40047,17 +40047,17 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "天怒图腾雕文£萨满祭司£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当你施放天怒图腾时，你由该图腾获得的法术强度加成提高30%，持续5分钟。|r", --45776
 "妖术雕文£萨满祭司£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的妖术目标在解除妖术效果之前可以承受的伤害提高20%。|r", --45777
 "石爪图腾雕文£萨满祭司£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的石爪图腾会为你附加一道吸收伤害的护盾，伤害吸收量相当于它为你的图腾提供的护盾强度的4倍。|r", --45778
-"鬼影缠身雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的鬼影缠身法术提供的伤害加成效果提高3%。|r", --45779
-"恶魔变形雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恶魔变形的持续时间延长6秒。|r", --45780
-"混乱之箭雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 混乱之箭的冷却时间缩短2秒。|r", --45781
-"恶魔法阵雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 恶魔法阵的冷却时间缩短4秒。|r", --45782
-"暗影烈焰雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的暗影烈焰可以使目标的移动速度降低70%。|r", --45783
+"鬼影缠身雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你的鬼影缠身法术提供的伤害加成效果提高3%。|r", --45779
+"恶魔变形雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的恶魔变形的持续时间延长6秒。|r", --45780
+"混乱之箭雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 混乱之箭的冷却时间缩短2秒。|r", --45781
+"恶魔法阵雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 恶魔法阵的冷却时间缩短4秒。|r", --45782
+"暗影烈焰雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你的暗影烈焰可以使目标的移动速度降低70%。|r", --45783
 "托里姆的徽记£任务物品", --45784
-"生命分流雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 当你使用生命分流时，你的法术强度提高，数值相当于你的精神值的20%，持续40秒。|r", --45785
+"生命分流雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 当你使用生命分流时，你的法术强度提高，数值相当于你的精神值的20%，持续40秒。|r", --45785
 "霍迪尔的徽记£任务物品", --45786
 "米米尔隆的徽记£任务物品", --45787
 "弗蕾亚的徽记£任务物品", --45788
-"灵魂链接雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 使你的灵魂链接分担伤害的百分比提高5%。|r", --45789
+"灵魂链接雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 使你的灵魂链接分担伤害的百分比提高5%。|r", --45789
 "利刃风暴雕文£战士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 利刃风暴的冷却时间缩短15秒。|r", --45790
 "守护者的徽记£任务物品", --45791
 "震荡波雕文£战士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 震荡波的冷却时间缩短3秒。|r", --45792
@@ -40085,36 +40085,36 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "霍迪尔的徽记£任务物品", --45815
 "米米尔隆的徽记£任务物品", --45816
 "托里姆的徽记£任务物品", --45817
-"|cffa335ed尖刺卫士项圈|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 爆击等级提高36点。|r", --45819
-"|cffa335ed哀嚎长夜胸针|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 攻击强度提高84点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --45820
-"|cffa335ed水晶森林碎片|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 命中等级提高42点。|r", --45821
-"|cffa335ed唤魔师的符咒|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45822
-"|cffa335ed艾露恩的冰冷之泪|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45823
-"|cffa335ed刃歌腰带|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 爆击等级提高60点。|r", --45824
-"|cffa335ed持盾护卫束带|r£|cff00ff00装备： 防御等级提高49。|r£|cff00ff00装备： 使你的躲闪等级提高60点。|r£|cff00ff00装备： 命中等级提高56点。|r", --45825
-"|cffa335ed坚定信任束带|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高100点。|r", --45826
-"|cffa335ed热情射手腰带|r£|cff00ff00装备： 命中等级提高44点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --45827
-"|cffa335ed寒风腰带|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高100点。|r", --45828
-"|cffa335ed暮光刺客腰带|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 使你的精准等级提高57点。|r£|cff00ff00装备： 攻击强度提高124点。|r", --45829
-"|cffa335ed生命森林腰带|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高100点。|r", --45830
-"|cffa335ed魔咒腰带|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 法术强度提高100点。|r", --45831
-"|cffa335ed保护者的衬肩|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 法术强度提高91点。|r", --45832
-"|cffa335ed裂刃护手|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45833
-"|cffa335ed皇家卫兵护手|r£|cff00ff00装备： 防御等级提高55。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 命中等级提高49点。|r", --45834
-"|cffa335ed平静祝福护手|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高100点。|r", --45835
-"|cffa335ed精确瞄准手套|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 攻击强度提高170点。|r", --45836
-"|cffa335ed征兆手套|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高100点。|r", --45837
-"|cffa335ed盲眼追猎手套|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --45838
-"|cffa335ed隐秘林地手套|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高100点。|r", --45839
-"|cffa335ed奥秘之触|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高100点。|r", --45840
-"|cffa335ed紫罗兰勇士腿铠|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 急速等级提高67点。|r", --45841
-"|cffa335ed巨龙卫士腿铠|r£|cff00ff00装备： 防御等级提高59。|r£|cff00ff00装备： 使你的盾牌格挡等级提高60点。|r£|cff00ff00装备： 使你的盾牌格挡值提高129点。|r", --45842
-"|cffa335ed和平契约护腿|r£|cff00ff00装备： 急速等级提高58点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f36|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高115点。|r", --45843
-"|cffa335ed不倦斥候护腿|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 攻击强度提高196点。|r", --45844
-"|cffa335ed疲惫秘法师的护腿|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高115点。|r", --45845
-"|cffa335ed迷影护腿|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 急速等级提高75点。|r£|cff00ff00装备： 攻击强度提高136点。|r", --45846
-"|cffa335ed荒野行者护腿|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45847
-"|cffa335ed咒术大师裹腿|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 法术强度提高115点。|r", --45848
+"|cffa335ed尖刺卫士项圈|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 爆击等级提高38点。|r", --45819
+"|cffa335ed哀嚎长夜胸针|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 攻击强度提高89点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --45820
+"|cffa335ed水晶森林碎片|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高45点。|r£|cff00ff00装备： 命中等级提高44点。|r", --45821
+"|cffa335ed唤魔师的符咒|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高78点。|r", --45822
+"|cffa335ed艾露恩的冰冷之泪|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45823
+"|cffa335ed刃歌腰带|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 爆击等级提高63点。|r", --45824
+"|cffa335ed持盾护卫束带|r£|cff00ff00装备： 防御等级提高52。|r£|cff00ff00装备： 使你的躲闪等级提高63点。|r£|cff00ff00装备： 命中等级提高59点。|r", --45825
+"|cffa335ed坚定信任束带|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高106点。|r", --45826
+"|cffa335ed热情射手腰带|r£|cff00ff00装备： 命中等级提高47点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 攻击强度提高127点。|r", --45827
+"|cffa335ed寒风腰带|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f26|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高106点。|r", --45828
+"|cffa335ed暮光刺客腰带|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 使你的精准等级提高60点。|r£|cff00ff00装备： 攻击强度提高131点。|r", --45829
+"|cffa335ed生命森林腰带|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高106点。|r", --45830
+"|cffa335ed魔咒腰带|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 法术强度提高106点。|r", --45831
+"|cffa335ed保护者的衬肩|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --45832
+"|cffa335ed裂刃护手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 使你的护甲穿透提高52点。|r", --45833
+"|cffa335ed皇家卫兵护手|r£|cff00ff00装备： 防御等级提高58。|r£|cff00ff00装备： 使你的躲闪等级提高59点。|r£|cff00ff00装备： 命中等级提高52点。|r", --45834
+"|cffa335ed平静祝福护手|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高106点。|r", --45835
+"|cffa335ed精确瞄准手套|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 攻击强度提高180点。|r", --45836
+"|cffa335ed征兆手套|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f26|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高106点。|r", --45837
+"|cffa335ed盲眼追猎手套|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 攻击强度提高127点。|r", --45838
+"|cffa335ed隐秘林地手套|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高106点。|r", --45839
+"|cffa335ed奥秘之触|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高106点。|r", --45840
+"|cffa335ed紫罗兰勇士腿铠|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 急速等级提高71点。|r", --45841
+"|cffa335ed巨龙卫士腿铠|r£|cff00ff00装备： 防御等级提高63。|r£|cff00ff00装备： 使你的盾牌格挡等级提高64点。|r£|cff00ff00装备： 使你的盾牌格挡值提高129点。|r", --45842
+"|cffa335ed和平契约护腿|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高122点。|r", --45843
+"|cffa335ed不倦斥候护腿|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 攻击强度提高208点。|r", --45844
+"|cffa335ed疲惫秘法师的护腿|r£|cff00ff00装备： 急速等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高122点。|r", --45845
+"|cffa335ed迷影护腿|r£|cff00ff00装备： 命中等级提高72点。|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 攻击强度提高145点。|r", --45846
+"|cffa335ed荒野行者护腿|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45847
+"|cffa335ed咒术大师裹腿|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 法术强度提高122点。|r", --45848
 "|cff0070dd暮光宝典|r£|cff00ff00装备： 急速等级提高25点。|r£|cff00ff00装备： 法术强度提高41点。|r£|cffffd100\"拿着这本厚重的书籍使你感到非常笨拙……\"|r", --45849
 "|cff0070dd新月仪式之书|r£|cff00ff00装备： 命中等级提高25点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00使用： 变形成为一条巨型赤狼。 （10分钟冷却）|r", --45850
 "|cff0070dd新月仪式之书|r£|cff00ff00装备： 命中等级提高25点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00使用： 变形成为一条巨型白狼。 （10分钟冷却）|r", --45851
@@ -40128,38 +40128,38 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed至尊五戒|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 爆击等级提高55点。|r£|cffffd100\"这枚戒指好像把至尊三戒和至尊四戒给吃掉了。\"|r", --45859
 "水晶饰冠£ ", --45860
 "钻石长棍£ ", --45861
-"|cffa335ed朴素风暴宝钻|r£+20 力量£|cffffd100\"对应红色插槽。\"|r", --45862
+"|cffa335ed朴素风暴宝钻|r£装备唯一£+20 力量£|cffffd100\"对应红色插槽。\"|r", --45862
 "腐烂的藏宝图£拾取后绑定", --45863
-"|cffa335ed守护者的罩帽|r£|cff00ff00装备： 急速等级提高73点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45864
-"|cffa335ed堕落者的外衣|r£|cff00ff00装备： 命中等级提高76点。|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 法术强度提高117点。|r", --45865
-"|cffa335ed元素聚焦之石|r£|cff00ff00装备： 命中等级提高108点。|r£|cff00ff00装备： 你的伤害性法术有一定几率使你的急速等级提高522，持续10秒。|r", --45866
-"|cffa335ed塑石者的胸铠|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高114点。|r", --45867
-"|cffa335ed艾塞尔之刃|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 使你的护甲穿透提高64点。|r", --45868
-"|cffa335ed熔化能量线圈|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 攻击强度提高72点。|r£|cff00ff00装备： 使你的护甲穿透提高30点。|r", --45869
-"|cffa335ed磁化弹药发射器|r£|cff00ff00装备： 命中等级提高27点。|r£|cff00ff00装备： 攻击强度提高66点。|r", --45870
-"|cffa335ed奥杜尔的徽记|r£|cff00ff00装备： 使你的招架等级提高35点。|r£|cff00ff00装备： 使你的精准等级提高22点。|r", --45871
-"|cffa335ed雪崩|r£|cff00ff00装备： 命中等级提高16点。|r£|cff00ff00装备： 攻击强度提高66点。|r£|cff00ff00装备： 使你的护甲穿透提高17点。|r", --45872
-"|cffa335ed寒冬之拥|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高29点。|r£|cff00ff00装备： 攻击强度提高92点。|r", --45873
-"|cffa335ed寒冬徽记|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 使你的招架等级提高34点。|r", --45874
+"|cffa335ed守护者的罩帽|r£|cff00ff00装备： 急速等级提高78点。|r£|cff00ff00装备： 法术强度提高112点。|r", --45864
+"|cffa335ed堕落者的外衣|r£|cff00ff00装备： 命中等级提高81点。|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45865
+"|cffa335ed元素聚焦之石|r£|cff00ff00装备： 命中等级提高114点。|r£|cff00ff00装备： 你的伤害性法术有一定几率使你的急速等级提高552，持续10秒。|r", --45866
+"|cffa335ed塑石者的胸铠|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 急速等级提高65点。|r£|cff00ff00装备： 法术强度提高130点。|r", --45867
+"|cffa335ed艾塞尔之刃|r£|cff00ff00装备： 爆击等级提高92点。|r£|cff00ff00装备： 使你的护甲穿透提高73点。|r", --45868
+"|cffa335ed熔化能量线圈|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 攻击强度提高82点。|r£|cff00ff00装备： 使你的护甲穿透提高34点。|r", --45869
+"|cffa335ed磁化弹药发射器|r£|cff00ff00装备： 命中等级提高31点。|r£|cff00ff00装备： 攻击强度提高75点。|r", --45870
+"|cffa335ed奥杜尔的徽记|r£|cff00ff00装备： 使你的招架等级提高40点。|r£|cff00ff00装备： 使你的精准等级提高25点。|r", --45871
+"|cffa335ed雪崩|r£|cff00ff00装备： 命中等级提高17点。|r£|cff00ff00装备： 攻击强度提高70点。|r£|cff00ff00装备： 使你的护甲穿透提高18点。|r", --45872
+"|cffa335ed寒冬之拥|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高31点。|r£|cff00ff00装备： 攻击强度提高97点。|r", --45873
+"|cffa335ed寒冬徽记|r£|cff00ff00装备： 使你的躲闪等级提高45点。|r£|cff00ff00装备： 使你的招架等级提高36点。|r", --45874
 "|cffa335ed一包奥杜尔战利品|r£拾取后绑定", --45875
-"|cffa335ed战栗|r£|cff00ff00装备： 防御等级提高27。|r£|cff00ff00装备： 使你的招架等级提高33点。|r£|cff00ff00装备： 命中等级提高23点。|r£|cffffd100\"极度的冰冷。\"|r", --45876
-"|cffa335ed北风卫士|r£|cff00ff00装备： 防御等级提高35。|r£|cff00ff00装备： 使你的招架等级提高37点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高33点。|r", --45877
+"|cffa335ed战栗|r£|cff00ff00装备： 防御等级提高31。|r£|cff00ff00装备： 使你的招架等级提高37点。|r£|cff00ff00装备： 命中等级提高26点。|r£|cffffd100\"极度的冰冷。\"|r", --45876
+"|cffa335ed北风卫士|r£|cff00ff00装备： 防御等级提高40。|r£|cff00ff00装备： 使你的招架等级提高42点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高38点。|r", --45877
 "|cffa335ed一大包奥杜尔战利品|r£拾取后绑定", --45878
-"|cffa335ed精致风暴宝钻|r£+20 敏捷£|cffffd100\"对应红色插槽。\"|r", --45879
-"|cffa335ed致密风暴宝钻|r£+30 耐力£|cffffd100\"对应蓝色插槽。\"|r", --45880
-"|cffa335ed火花风暴宝钻|r£+20 精神£|cffffd100\"对应蓝色插槽。\"|r", --45881
-"|cffa335ed闪耀风暴宝钻|r£+20 智力£|cffffd100\"对应黄色插槽。\"|r", --45882
-"|cffa335ed符文风暴宝钻|r£+23 法术强度£|cffffd100\"对应红色插槽。\"|r", --45883
+"|cffa335ed精致风暴宝钻|r£装备唯一£+20 敏捷£|cffffd100\"对应红色插槽。\"|r", --45879
+"|cffa335ed致密风暴宝钻|r£装备唯一£+30 耐力£|cffffd100\"对应蓝色插槽。\"|r", --45880
+"|cffa335ed火花风暴宝钻|r£装备唯一£+20 精神£|cffffd100\"对应蓝色插槽。\"|r", --45881
+"|cffa335ed闪耀风暴宝钻|r£装备唯一£+20 智力£|cffffd100\"对应黄色插槽。\"|r", --45882
+"|cffa335ed符文风暴宝钻|r£装备唯一£+23 法术强度£|cffffd100\"对应红色插槽。\"|r", --45883
 "|cff9e9e9eMonster - Polearm, Northrend D02 Gold|r£ ", --45884
-"|cffa335ed冰核法杖|r£|cff00ff00装备： 急速等级提高93点。|r£|cff00ff00装备： 法术强度提高550点。|r", --45886
-"|cffa335ed覆冰屏障|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f20|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r", --45887
-"|cffa335ed严寒臂甲|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的护甲穿透提高34点。|r", --45888
-"|cffa335ed雷霆的传承|r£|cff00ff00装备： 防御等级提高26。|r£|cff00ff00装备： 使你的躲闪等级提高34点。|r£|cff00ff00装备： 使你的精准等级提高23点。|r", --45892
-"|cffa335ed尘世巨蟒的伪装|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的精准等级提高53点。|r£|cff00ff00装备： 攻击强度提高146点。|r", --45893
-"|cffa335ed偿还护腿|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 法术强度提高124点。|r", --45894
-"|cffa335ed血池腰带|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 攻击强度提高158点。|r£|cff00ff00装备： 使你的护甲穿透提高36点。|r", --45895
-"|cffff7f00松散的瓦兰奈尔碎片|r£拾取后绑定£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：圣骑士, 牧师, 萨满祭司, 德鲁伊£|cff00ff00使用： 在尤格-萨隆发出震耳咆哮时，将瓦兰纳尔的碎片扔进它的口中。 （20秒冷却）|r£|cffffd100\"如果能想办法把这些碎片重新熔合的话，就可以铸成一把强大的战锤。\"|r", --45896
-"|cffff7f00重铸的远古王者之锤|r£任务物品£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：圣骑士, 牧师, 萨满祭司, 德鲁伊£|cffffd100\"酸液已经凝固成了清澈的水晶，包裹了这把传说中的神圣战锤。\"|r", --45897
+"|cffa335ed冰核法杖|r£|cff00ff00装备： 急速等级提高106点。|r£|cff00ff00装备： 法术强度提高626点。|r", --45886
+"|cffa335ed覆冰屏障|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高88点。|r", --45887
+"|cffa335ed严寒臂甲|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 使你的护甲穿透提高39点。|r", --45888
+"|cffa335ed雷霆的传承|r£|cff00ff00装备： 防御等级提高27。|r£|cff00ff00装备： 使你的躲闪等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高24点。|r", --45892
+"|cffa335ed尘世巨蟒的伪装|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的精准等级提高56点。|r£|cff00ff00装备： 攻击强度提高155点。|r", --45893
+"|cffa335ed偿还护腿|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 法术强度提高131点。|r", --45894
+"|cffa335ed血池腰带|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 攻击强度提高167点。|r£|cff00ff00装备： 使你的护甲穿透提高38点。|r", --45895
+"|cffff7f00松散的瓦兰奈尔碎片|r£拾取后绑定£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff00ff00使用： 在尤格-萨隆发出震耳咆哮时，将瓦兰纳尔的碎片扔进它的口中。 （20秒冷却）|r£|cffffd100\"如果能想办法把这些碎片重新熔合的话，就可以铸成一把强大的战锤。\"|r", --45896
+"|cffff7f00重铸的远古王者之锤|r£任务物品£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cffffd100\"酸液已经凝固成了清澈的水晶，包裹了这把传说中的神圣战锤。\"|r", --45897
 "Monster - 1H Sword - Varian's Blade£ ", --45899
 "|cff9e9e9eMonster - Mace, Thorim (Ulduar Raid)|r£ ", --45900
 "自制炸鱼£|cff00ff00使用： 在30秒内恢复总计22500点生命值，进食时必须保持坐姿。|r", --45901
@@ -40168,82 +40168,83 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "恐怖鱼£任务物品£|cffffd100\"不错，非常可怕！\"|r", --45904
 "血齿狂鱼£任务物品", --45905
 "|cff9e9e9e几乎被吃光的骨鳞钳鱼|r£ ", --45907
+"毒伤雕文£潜行者£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的毒伤技能不再吞噬目标身上的致命药膏效果。|r", --45908
 "巨型深水蚌£|cff00ff00使用： 打开蚌壳！|r", --45909
 "|cff1eff00雕文精通之书|r£|cff00ff00使用： 通过此书领悟新的雕文。|r", --45912
 "Monster - Forsaken Lance [PH]£ ", --45918
 "|cffa335ed感谢证书|r£拾取后绑定£|cff00ff00使用： 将40份感谢证明组合在一起制造一份特殊限量版感谢礼物。|r£|cffffd100\"感谢您的协助。不幸的是，您的紫装在另一个地下城中。请稍后重试。\"|r", --45924
 "Monster - Ebon Cavalry Blade [PH]£ ", --45925
 "|cff9e9e9eMonster - Vrykul, Sword 2H (Ulduar)|r£ ", --45926
-"|cffa335ed共鸣裹手|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45927
-"|cffa335ed雷神护手|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高99点。|r", --45928
-"|cffa335ed西芙的记忆|r£|cff00ff00装备： 法术强度提高110点。|r£|cff00ff00装备： 你每次施放法术，都有一定几率获得每5秒回复|r|cff7f7f7f195|r|cff00ff00点法力值的效果，持续15秒。|r", --45929
-"|cffa335ed格斗者的靴中剑|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --45930
-"|cffa335ed雷神符石|r£|cff00ff00装备： 爆击等级提高102点。|r£|cff00ff00装备： 你的近战和远程攻击有一定几率使你的护甲穿透等级提高665，持续10秒。|r", --45931
+"|cffa335ed共鸣裹手|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高105点。|r", --45927
+"|cffa335ed雷神护手|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 急速等级提高61点。|r£|cff00ff00装备： 法术强度提高113点。|r", --45928
+"|cffa335ed西芙的记忆|r£|cff00ff00装备： 法术强度提高124点。|r£|cff00ff00装备： 你每次施放法术，都有一定几率获得每5秒回复|r|cff7f7f7f220|r|cff00ff00点法力值的效果，持续15秒。|r", --45929
+"|cffa335ed格斗者的靴中剑|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --45930
+"|cffa335ed雷神符石|r£|cff00ff00装备： 爆击等级提高115点。|r£|cff00ff00装备： 你的近战和远程攻击有一定几率使你的护甲穿透等级提高751，持续10秒。|r", --45931
 "黑肉冻£|cff00ff00使用： 在1分钟内恢复总计45000点生命值和38400点法力值。进食时必须保持坐姿。|r", --45932
-"|cffa335ed浅墓坠饰|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高31点。|r£|cff00ff00装备： 法术强度提高74点。|r", --45933
-"|cffa335ed边际法杖|r£|cff00ff00装备： 命中等级提高114点。|r£|cff00ff00装备： 法术强度提高487点。|r", --45934
-"|cffa335ed钢铁树皮面甲|r£|cff00ff00装备： 防御等级提高62。|r£|cff00ff00装备： 使你的躲闪等级提高54点。|r£|cff00ff00装备： 使你的精准等级提高62点。|r", --45935
-"|cffa335ed繁盛决心腿铠|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f33|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高124点。|r", --45936
-"|cffa335ed狂怒角斗士的猎枪|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高26点。|r£|cff00ff00装备： 攻击强度提高82点。|r", --45937
-"|cffa335ed狂怒角斗士的反曲弓|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高26点。|r£|cff00ff00装备： 攻击强度提高82点。|r", --45938
-"|cffa335ed狂怒角斗士的强弩|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 使你的韧性等级提高26点。|r£|cff00ff00装备： 攻击强度提高82点。|r", --45939
-"|cffa335ed轻灵猎手外套|r£|cff00ff00装备： 命中等级提高61点。|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --45940
-"|cffa335ed鞭笞者胸甲|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 攻击强度提高212点。|r", --45941
+"|cffa335ed浅墓坠饰|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高35点。|r£|cff00ff00装备： 法术强度提高84点。|r", --45933
+"|cffa335ed边际法杖|r£|cff00ff00装备： 命中等级提高121点。|r£|cff00ff00装备： 法术强度提高515点。|r", --45934
+"|cffa335ed钢铁树皮面甲|r£|cff00ff00装备： 防御等级提高66。|r£|cff00ff00装备： 使你的躲闪等级提高57点。|r£|cff00ff00装备： 使你的精准等级提高66点。|r", --45935
+"|cffa335ed繁盛决心腿铠|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高131点。|r", --45936
+"|cffa335ed狂怒角斗士的猎枪|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高29点。|r£|cff00ff00装备： 攻击强度提高93点。|r", --45937
+"|cffa335ed狂怒角斗士的反曲弓|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高29点。|r£|cff00ff00装备： 攻击强度提高93点。|r", --45938
+"|cffa335ed狂怒角斗士的强弩|r£|cff00ff00装备： 爆击等级提高30点。|r£|cff00ff00装备： 使你的韧性等级提高29点。|r£|cff00ff00装备： 攻击强度提高93点。|r", --45939
+"|cffa335ed轻灵猎手外套|r£|cff00ff00装备： 命中等级提高65点。|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 攻击强度提高127点。|r", --45940
+"|cffa335ed鞭笞者胸甲|r£|cff00ff00装备： 命中等级提高51点。|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --45941
 "XS-001建筑机器人£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --45942
-"|cffa335ed低语轻风手套|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 法术强度提高100点。|r", --45943
-"|cffa335ed杀戮之种|r£|cff00ff00装备： 命中等级提高32点。|r£|cff00ff00装备： 攻击强度提高92点。|r£|cff00ff00装备： 使你的护甲穿透提高38点。|r", --45945
-"|cffa335ed火兰花徽记|r£|cff00ff00装备： 急速等级提高30点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --45946
-"|cffa335ed瑟利拉斯，因瓦尔·独臂的血刃|r£|cff00ff00装备： 命中等级提高32点。|r£|cff00ff00装备： 使你的精准等级提高26点。|r£|cff00ff00装备： 攻击强度提高72点。|r£|cffffd100\"这把剑的表面上刻着无数的凹槽。\"|r", --45947
-"|cffa335ed狂怒角斗士的碎灵斧|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --45948
-"|cffa335ed狂怒角斗士的碾压锤|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --45949
-"|cffa335ed狂怒角斗士的双刃刀|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --45950
-"|cffa335ed狂怒角斗士的长戟|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --45951
-"|cffa335ed狂怒角斗士的巨杖|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 使你的韧性等级提高85点。|r", --45952
-"|cffa335ed狂怒角斗士的格斗法杖|r£|cff00ff00装备： 使你的韧性等级提高92点。|r£|cff00ff00装备： 急速等级提高92点。|r£|cff00ff00装备： 法术强度提高587点。|r", --45953
-"|cffa335ed狂怒角斗士的敏锐法杖|r£|cff00ff00装备： 命中等级提高92点。|r£|cff00ff00装备： 使你的韧性等级提高92点。|r£|cff00ff00装备： 法术强度提高587点。|r", --45954
-"|cffa335ed狂怒角斗士的冲突法杖|r£|cff00ff00装备： 爆击等级提高92点。|r£|cff00ff00装备： 使你的韧性等级提高92点。|r£|cff00ff00装备： 法术强度提高587点。|r", --45955
-"|cffa335ed狂怒角斗士的轻杖|r£|cff00ff00装备： 使你的韧性等级提高92点。|r£|cff00ff00装备： 法术强度提高587点。|r", --45956
-"|cffa335ed狂怒角斗士的手斧|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45957
-"|cffa335ed狂怒角斗士的长钉|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45958
-"|cffa335ed狂怒角斗士的短棍|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45959
-"|cffa335ed狂怒角斗士的长剑|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45960
-"|cffa335ed狂怒角斗士的切割斧|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45961
-"|cffa335ed狂怒角斗士的匕首|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45962
-"|cffa335ed狂怒角斗士的左拳刃|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45963
-"|cffa335ed狂怒角斗士的惩罚者|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45964
-"|cffa335ed狂怒角斗士的敏锐之刃|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45965
-"|cffa335ed狂怒角斗士的劈砍斧|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45966
-"|cffa335ed狂怒角斗士的剔骨刀|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45967
-"|cffa335ed狂怒角斗士的左拳套|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45968
-"|cffa335ed狂怒角斗士的钳爪|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 使你的韧性等级提高36点。|r£|cff00ff00装备： 攻击强度提高94点。|r", --45969
-"|cffa335ed狂怒角斗士的魔刃|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 法术强度提高587点。|r", --45970
-"|cffa335ed狂怒角斗士的拯救|r£|cff00ff00装备： 使你的韧性等级提高38点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f20|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高587点。|r", --45971
-"|cffa335ed脉冲权杖|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高487点。|r", --45972
-"|cffa335ed时髦的能量斗篷|r£|cff00ff00装备： 爆击等级提高35点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r£|cffffd100\"绿色是新的流行色。\"|r", --45973
-"|cffa335ed同化护肩|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高91点。|r", --45974
-"|cffa335ed机械侏儒的电缆|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高92点。|r£|cffffd100\"计时腰带。\"|r", --45975
-"|cffa335ed静电充能裹手|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 法术强度提高92点。|r", --45976
+"|cffa335ed低语轻风手套|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高113点。|r", --45943
+"|cffa335ed杀戮之种|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 攻击强度提高104点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --45945
+"|cffa335ed火兰花徽记|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高84点。|r", --45946
+"|cffa335ed瑟利拉斯，因瓦尔·独臂的血刃|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高29点。|r£|cff00ff00装备： 攻击强度提高82点。|r£|cffffd100\"这把剑的表面上刻着无数的凹槽。\"|r", --45947
+"|cffa335ed狂怒角斗士的碎灵斧|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高97点。|r£|cff00ff00装备： 攻击强度提高255点。|r", --45948
+"|cffa335ed狂怒角斗士的碾压锤|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高97点。|r£|cff00ff00装备： 攻击强度提高255点。|r", --45949
+"|cffa335ed狂怒角斗士的双刃刀|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高97点。|r£|cff00ff00装备： 攻击强度提高255点。|r", --45950
+"|cffa335ed狂怒角斗士的长戟|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高97点。|r£|cff00ff00装备： 攻击强度提高255点。|r", --45951
+"|cffa335ed狂怒角斗士的巨杖|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 使你的韧性等级提高97点。|r", --45952
+"|cffa335ed狂怒角斗士的格斗法杖|r£|cff00ff00装备： 使你的韧性等级提高105点。|r£|cff00ff00装备： 急速等级提高105点。|r£|cff00ff00装备： 法术强度提高668点。|r", --45953
+"|cffa335ed狂怒角斗士的敏锐法杖|r£|cff00ff00装备： 命中等级提高105点。|r£|cff00ff00装备： 使你的韧性等级提高105点。|r£|cff00ff00装备： 法术强度提高668点。|r", --45954
+"|cffa335ed狂怒角斗士的冲突法杖|r£|cff00ff00装备： 爆击等级提高105点。|r£|cff00ff00装备： 使你的韧性等级提高105点。|r£|cff00ff00装备： 法术强度提高668点。|r", --45955
+"|cffa335ed狂怒角斗士的轻杖|r£|cff00ff00装备： 使你的韧性等级提高105点。|r£|cff00ff00装备： 法术强度提高668点。|r", --45956
+"|cffa335ed狂怒角斗士的手斧|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45957
+"|cffa335ed狂怒角斗士的长钉|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45958
+"|cffa335ed狂怒角斗士的短棍|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45959
+"|cffa335ed狂怒角斗士的长剑|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45960
+"|cffa335ed狂怒角斗士的切割斧|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45961
+"|cffa335ed狂怒角斗士的匕首|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45962
+"|cffa335ed狂怒角斗士的左拳刃|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45963
+"|cffa335ed狂怒角斗士的惩罚者|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45964
+"|cffa335ed狂怒角斗士的敏锐之刃|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45965
+"|cffa335ed狂怒角斗士的劈砍斧|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45966
+"|cffa335ed狂怒角斗士的剔骨刀|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45967
+"|cffa335ed狂怒角斗士的左拳套|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45968
+"|cffa335ed狂怒角斗士的钳爪|r£|cff00ff00装备： 爆击等级提高33点。|r£|cff00ff00装备： 使你的韧性等级提高41点。|r£|cff00ff00装备： 攻击强度提高107点。|r", --45969
+"|cffa335ed狂怒角斗士的魔刃|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 法术强度提高666点。|r", --45970
+"|cffa335ed狂怒角斗士的拯救|r£|cff00ff00装备： 使你的韧性等级提高43点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高666点。|r", --45971
+"|cffa335ed脉冲权杖|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f20|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高515点。|r", --45972
+"|cffa335ed时髦的能量斗篷|r£|cff00ff00装备： 爆击等级提高37点。|r£|cff00ff00装备： 使你的护甲穿透提高45点。|r£|cffffd100\"绿色是新的流行色。\"|r", --45973
+"|cffa335ed同化护肩|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --45974
+"|cffa335ed机械侏儒的电缆|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高97点。|r£|cffffd100\"计时腰带。\"|r", --45975
+"|cffa335ed静电充能裹手|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 法术强度提高97点。|r", --45976
 "|cff9e9e9e陶瓷铃铛|r£|cffffd100\"这是一件精美无比的宝贝，表面上绘着一个正在游向一只天鹅的人。任何人都会愿意出大价钱买下它。把它弄丢了的人可真是个傻瓜。\"|r", --45977
 "|cff9e9e9e沉甸甸的金币|r£ ", --45978
 "|cff9e9e9e塔楼钥匙|r£ ", --45979
 "|cff9e9e9e鲸鱼雕像|r£ ", --45980
 "|cff9e9e9e新世纪油画|r£|cffffd100\"上面有玛西娅·切斯的亲笔签名。\"|r", --45981
-"|cffa335ed合金腿铠|r£|cff00ff00装备： 命中等级提高76点。|r£|cff00ff00装备： 爆击等级提高60点。|r", --45982
+"|cffa335ed合金腿铠|r£|cff00ff00装备： 命中等级提高87点。|r£|cff00ff00装备： 爆击等级提高68点。|r", --45982
 "|cffa335ed狂怒角斗士的战袍|r£ ", --45983
 "不寻常的指南针£|cff00ff00使用： 看看指南针指向哪里！ （10秒冷却）|r", --45984
 "|cff9e9e9eMonster - Dagger (Algalon)|r£ ", --45985
 "|cff0070dd泰坦神铁小宝箱|r£ ", --45986
-"|cffa335ed刚硬风暴宝钻|r£+20 命中等级£|cffffd100\"对应黄色插槽。\"|r", --45987
-"|cffa335ed钢铁军队胫甲|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的招架等级提高57点。|r£|cff00ff00装备： 使你的精准等级提高43点。|r", --45988
-"|cffa335ed淬炼水银胫甲|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --45989
-"|cffa335ed熔合之剑|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 爆击等级提高37点。|r£|cff00ff00装备： 法术强度提高550点。|r", --45990
+"|cffa335ed刚硬风暴宝钻|r£装备唯一£+20 命中等级£|cffffd100\"对应黄色插槽。\"|r", --45987
+"|cffa335ed钢铁军队胫甲|r£|cff00ff00装备： 防御等级提高57。|r£|cff00ff00装备： 使你的招架等级提高65点。|r£|cff00ff00装备： 使你的精准等级提高49点。|r", --45988
+"|cffa335ed淬炼水银胫甲|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 攻击强度提高157点。|r", --45989
+"|cffa335ed熔合之剑|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 法术强度提高624点。|r", --45990
 "|cff0070dd骨质鱼竿|r£|cff00ff00装备： 钓鱼技能提高30点。|r", --45991
 "|cff0070dd珠宝鱼竿|r£|cff00ff00装备： 钓鱼技能提高30点。|r£|cffffd100\"蒂凡妮·卡蒂亚荣誉出品。\"|r", --45992
-"|cffa335ed米米尔隆的飞行眼镜|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 攻击强度提高164点。|r", --45993
+"|cffa335ed米米尔隆的飞行眼镜|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 急速等级提高75点。|r£|cff00ff00装备： 攻击强度提高187点。|r", --45993
 "|cff0070dd失落戒指|r£ ", --45994
 "|cff0070dd遗忘项链|r£ ", --45995
-"|cffa335ed幻灭的希望|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 攻击强度提高138点。|r£|cff00ff00装备： 使你的护甲穿透提高78点。|r", --45996
-"|cffa335ed恶劣者的手套|r£|cff00ff00装备： 命中等级提高39点。|r£|cff00ff00装备： 使你的护甲穿透提高60点。|r", --45997
+"|cffa335ed幻灭的希望|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 攻击强度提高146点。|r£|cff00ff00装备： 使你的护甲穿透提高83点。|r", --45996
+"|cffa335ed恶劣者的手套|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 使你的护甲穿透提高63点。|r", --45997
 "破损的丛林帽£ ", --45998
 "|cff9e9e9e不值钱的白色碎玻璃|r£|cffffd100\"这块玻璃上有星形的裂纹，似乎是砸中了什么东西之后留下的。\"|r", --45999
 "|cff9e9e9e不值钱的红色碎玻璃|r£ ", --46000
@@ -40254,49 +40255,49 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "密封的毒药瓶£任务物品£|cffffd100\"喝下去可能会出事……\"|r", --46005
 "发光的虫子£拾取后绑定£|cff00ff00使用： 装备在鱼竿上之后，可以使你的钓鱼技能提高100点，持续1小时。|r", --46006
 "钓鱼宝藏£拾取后绑定", --46007
-"|cffa335ed地狱项圈|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 攻击强度提高54点。|r", --46008
-"|cffa335ed深渊束腕|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 法术强度提高70点。|r", --46009
-"|cffa335ed暗石之戒|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 爆击等级提高40点。|r", --46010
-"|cffa335ed暗影撕咬|r£|cff00ff00装备： 命中等级提高35点。|r£|cff00ff00装备： 使你的精准等级提高31点。|r£|cff00ff00装备： 攻击强度提高60点。|r", --46011
-"|cffa335ed炫目光芒外衣|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高124点。|r", --46012
-"|cffa335ed冥界衬肩|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高92点。|r", --46013
-"|cffa335ed萨隆邪铁畸体披风|r£|cff00ff00装备： 防御等级提高46。|r£|cff00ff00装备： 使你的招架等级提高29点。|r£|cff00ff00装备： 命中等级提高35点。|r", --46014
-"|cffa335ed无尽绝望坠饰|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高70点。|r", --46015
-"|cffa335ed魔渊|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 使你的护甲穿透提高76点。|r", --46016
-"|cffff7f00瓦兰奈尔，远古王者之锤|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高621点。|r£|cff00ff00装备： 你的治疗法术有一定几率触发远古王者的祝福，使目标获得一层护盾，吸收相当于该目标所受治疗量15%的伤害，持续15秒。|r£|cffffd100\"创世的力量在这把武器中涌动。\"|r", --46017
-"|cffa335ed判决|r£|cff00ff00装备： 命中等级提高16点。|r£|cff00ff00装备： 攻击强度提高68点。|r£|cff00ff00装备： 使你的护甲穿透提高26点。|r", --46018
-"|cffa335ed贪欲护腿|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 攻击强度提高212点。|r", --46019
+"|cffa335ed地狱项圈|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高57点。|r", --46008
+"|cffa335ed深渊束腕|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高74点。|r", --46009
+"|cffa335ed暗石之戒|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 爆击等级提高42点。|r", --46010
+"|cffa335ed暗影撕咬|r£|cff00ff00装备： 命中等级提高37点。|r£|cff00ff00装备： 使你的精准等级提高33点。|r£|cff00ff00装备： 攻击强度提高63点。|r", --46011
+"|cffa335ed炫目光芒外衣|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高131点。|r", --46012
+"|cffa335ed冥界衬肩|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46013
+"|cffa335ed萨隆邪铁畸体披风|r£|cff00ff00装备： 防御等级提高49。|r£|cff00ff00装备： 使你的招架等级提高31点。|r£|cff00ff00装备： 命中等级提高37点。|r", --46014
+"|cffa335ed无尽绝望坠饰|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r", --46015
+"|cffa335ed魔渊|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 使你的护甲穿透提高80点。|r", --46016
+"|cffff7f00瓦兰奈尔，远古王者之锤|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高701点。|r£|cff00ff00装备： 你的治疗法术有一定几率触发远古王者的祝福，使目标获得一层护盾，吸收相当于该目标所受治疗量15%的伤害，持续15秒。|r£|cffffd100\"创世的力量在这把武器中涌动。\"|r", --46017
+"|cffa335ed判决|r£|cff00ff00装备： 命中等级提高17点。|r£|cff00ff00装备： 攻击强度提高72点。|r£|cff00ff00装备： 使你的护甲穿透提高27点。|r", --46018
+"|cffa335ed贪欲护腿|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 急速等级提高58点。|r£|cff00ff00装备： 攻击强度提高224点。|r", --46019
 "|cff9e9e9eMonster - Ulduar Raid - Mace 04|r£ ", --46020
-"|cffa335ed莱恩国王的皇家徽记|r£|cff00ff00使用： 招架等级提高380，持续20秒。 （2分钟冷却）|r£|cffffd100\"沾满了无法洗掉的鲜血。\"|r", --46021
-"|cffa335ed千喉坠饰|r£|cff00ff00装备： 命中等级提高35点。|r£|cff00ff00装备： 爆击等级提高43点。|r", --46022
+"|cffa335ed莱恩国王的皇家徽记|r£|cff00ff00使用： 招架等级提高402，持续20秒。 （2分钟冷却）|r£|cffffd100\"沾满了无法洗掉的鲜血。\"|r", --46021
+"|cffa335ed千喉坠饰|r£|cff00ff00装备： 命中等级提高37点。|r£|cff00ff00装备： 爆击等级提高45点。|r", --46022
 "|cff9e9e9e浪漫小说：北地柔情|r£ ", --46023
-"|cffa335ed弑君|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 使你的精准等级提高23点。|r£|cff00ff00装备： 攻击强度提高70点。|r£|cffffd100\"这把匕首周围弥漫着深深的哀伤。\"|r", --46024
-"|cffa335ed虔诚|r£|cff00ff00装备： 急速等级提高87点。|r£|cff00ff00装备： 法术强度提高487点。|r", --46025
+"|cffa335ed弑君|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 使你的精准等级提高24点。|r£|cff00ff00装备： 攻击强度提高74点。|r£|cffffd100\"这把匕首周围弥漫着深深的哀伤。\"|r", --46024
+"|cffa335ed虔诚|r£|cff00ff00装备： 急速等级提高92点。|r£|cff00ff00装备： 法术强度提高515点。|r", --46025
 "|cff0070dd卷轴：附魔武器 - 利刃防护|r£|cff00ff00使用： 永久性地为一件武器附魔，使其在攻击敌人时有可能触发利刃防护效果。利刃防护效果可以使你的招架等级提高200，并在下一次招架时造成600到800点伤害，效果持续10秒。\r\n\r\n装备者的等级不得低于75级。|r", --46026
 "|cffa335ed公式：附魔武器 - 利刃防护|r£拾取后绑定£|cff00ff00使用： 教你学会永久性地为一件武器附魔，使其在攻击敌人时有可能触发利刃防护效果，使你的招架等级提高，并在下一次招架时造成伤害。附魔要求装备者的等级不得低于75级。|r", --46027
-"|cffa335ed无眼恶魔面甲|r£|cff00ff00装备： 爆击等级提高76点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --46028
+"|cffa335ed无眼恶魔面甲|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f32|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高112点。|r", --46028
 "磁核£持续时间：1分钟£|cff00ff00使用： 将这块磁铁放在空中指挥单位下方，将其暂时吸附在地面上，并使其瘫痪。在瘫痪期间，空中指挥单位受到的所有伤害提高50%。|r", --46029
-"|cffa335ed巨龙议会之靴|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高93点。|r", --46030
-"|cffa335ed疯狂之触|r£|cff00ff00装备： 命中等级提高34点。|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 攻击强度提高92点。|r", --46031
-"|cffa335ed无面者将军斗篷|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 攻击强度提高92点。|r£|cff00ff00装备： 使你的护甲穿透提高30点。|r", --46032
-"|cffa335ed苦痛之地|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 爆击等级提高73点。|r£|cff00ff00装备： 攻击强度提高204点。|r", --46033
-"|cffa335ed深邃黑暗护腿|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46034
-"|cffa335ed埃尔苏加，热情勇士之手|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高22点。|r£|cff00ff00装备： 法术强度提高550点。|r", --46035
-"|cffa335ed虚空弯刀|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 爆击等级提高20点。|r£|cff00ff00装备： 攻击强度提高72点。|r", --46036
-"|cffa335ed观星肩铠|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 使你的护甲穿透提高34点。|r", --46037
-"|cffa335ed黑暗物质|r£|cff00ff00装备： 攻击强度提高222点。|r£|cff00ff00装备： 你的近战和远程攻击有一定几率使你的爆击等级提高612，持续10秒。|r", --46038
-"|cffa335ed永恒胸铠|r£|cff00ff00装备： 防御等级提高81。|r£|cff00ff00装备： 使你的招架等级提高50点。|r£|cff00ff00装备： 使你的精准等级提高66点。|r", --46039
-"|cffa335ed天堂之力|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 急速等级提高36点。|r", --46040
-"|cffa335ed坠星束带|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 使你的精准等级提高56点。|r", --46041
-"|cffa335ed信使斗篷|r£|cff00ff00装备： 命中等级提高31点。|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高74点。|r", --46042
-"|cffa335ed无尽黑暗手套|r£|cff00ff00装备： 命中等级提高65点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 攻击强度提高84点。|r", --46043
-"|cffa335ed观察者的衬肩|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高50点。|r£|cff00ff00装备： 法术强度提高100点。|r", --46044
-"|cffa335ed脉冲星手套|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 法术强度提高100点。|r", --46045
-"|cffa335ed星云指环|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 法术强度提高74点。|r", --46046
-"|cffa335ed忧郁见证者坠饰|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f19|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高66点。|r", --46047
-"|cffa335ed光明指环|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 攻击强度提高98点。|r£|cff00ff00装备： 使你的护甲穿透提高31点。|r", --46048
-"|cffa335ed十二宫护腿|r£|cff00ff00装备： 急速等级提高71点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46049
-"|cffa335ed星光之靴|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 法术强度提高94点。|r", --46050
+"|cffa335ed巨龙议会之靴|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46030
+"|cffa335ed疯狂之触|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 爆击等级提高27点。|r£|cff00ff00装备： 攻击强度提高97点。|r", --46031
+"|cffa335ed无面者将军斗篷|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 攻击强度提高105点。|r£|cff00ff00装备： 使你的护甲穿透提高34点。|r", --46032
+"|cffa335ed苦痛之地|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 爆击等级提高83点。|r£|cff00ff00装备： 攻击强度提高232点。|r", --46033
+"|cffa335ed深邃黑暗护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 法术强度提高150点。|r", --46034
+"|cffa335ed埃尔苏加，热情勇士之手|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 急速等级提高25点。|r£|cff00ff00装备： 法术强度提高624点。|r", --46035
+"|cffa335ed虚空弯刀|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 爆击等级提高23点。|r£|cff00ff00装备： 攻击强度提高82点。|r", --46036
+"|cffa335ed观星肩铠|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的护甲穿透提高39点。|r", --46037
+"|cffa335ed黑暗物质|r£|cff00ff00装备： 攻击强度提高251点。|r£|cff00ff00装备： 你的近战和远程攻击有一定几率使你的爆击等级提高647，持续10秒。|r", --46038
+"|cffa335ed永恒胸铠|r£|cff00ff00装备： 防御等级提高92。|r£|cff00ff00装备： 使你的招架等级提高57点。|r£|cff00ff00装备： 使你的精准等级提高75点。|r", --46039
+"|cffa335ed天堂之力|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高41点。|r", --46040
+"|cffa335ed坠星束带|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 使你的精准等级提高64点。|r", --46041
+"|cffa335ed信使斗篷|r£|cff00ff00装备： 命中等级提高35点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46042
+"|cffa335ed无尽黑暗手套|r£|cff00ff00装备： 命中等级提高74点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 攻击强度提高95点。|r", --46043
+"|cffa335ed观察者的衬肩|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高114点。|r", --46044
+"|cffa335ed脉冲星手套|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 法术强度提高114点。|r", --46045
+"|cffa335ed星云指环|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46046
+"|cffa335ed忧郁见证者坠饰|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高75点。|r", --46047
+"|cffa335ed光明指环|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 攻击强度提高111点。|r£|cff00ff00装备： 使你的护甲穿透提高35点。|r", --46048
+"|cffa335ed十二宫护腿|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 法术强度提高150点。|r", --46049
+"|cffa335ed星光之靴|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 法术强度提高107点。|r", --46050
 "|cffa335ed陨星水晶|r£|cff00ff00使用： 在20秒内每次施法都可以获得每5秒回复|r|cff7f7f7f60|r|cff00ff00点法力值的可叠加效果。20秒后失效。不消耗法力值的技能不会触发这个效果。 （2分钟冷却）|r", --46051
 "|cffa335ed回复代码阿尔法|r£拾取后绑定£该物品将触发一个任务", --46052
 "|cffa335ed回复代码阿尔法|r£拾取后绑定£该物品将触发一个任务", --46053
@@ -40312,8 +40313,8 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed泰坦铸造皮甲统御护胸|r£|cff00ff00装备： 命中等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46064
 "|cffa335ed泰坦铸造统御外衣|r£|cff00ff00装备： 命中等级提高51点。|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46065
 "|cffa335ed泰坦铸造拯救外衣|r£|cff00ff00装备： 使你的韧性等级提高66点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46066
-"|cffa335ed毁灭低语之锤|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 爆击等级提高82点。|r", --46067
-"|cffa335ed非凡恐怖肩饰|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高100点。|r", --46068
+"|cffa335ed毁灭低语之锤|r£|cff00ff00装备： 命中等级提高75点。|r£|cff00ff00装备： 爆击等级提高93点。|r", --46067
+"|cffa335ed非凡恐怖肩饰|r£|cff00ff00装备： 急速等级提高71点。|r£|cff00ff00装备： 法术强度提高114点。|r", --46068
 "联盟长枪£ ", --46069
 "部落长枪£ ", --46070
 "|cffa335ed泰坦铸造拯救束带|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 法术强度提高78点。|r", --46071
@@ -40338,9 +40339,9 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "Monster - Alliance Lance£ ", --46090
 "|cff9e9e9eMonster - Shield, Horde PVP|r£ ", --46092
 "|cff9e9e9eMonster - Shield, Sunwell D01 Red|r£ ", --46093
-"|cffa335ed噬灵束带|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 使你的精准等级提高56点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --46095
-"|cffa335ed悲歌徽记|r£|cff00ff00装备： 爆击等级提高32点。|r£|cff00ff00装备： 法术强度提高74点。|r", --46096
-"|cffa335ed疯狂之吻|r£|cff00ff00装备： 急速等级提高25点。|r£|cff00ff00装备： 使你的精准等级提高34点。|r£|cff00ff00装备： 攻击强度提高104点。|r", --46097
+"|cffa335ed噬灵束带|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的精准等级提高64点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --46095
+"|cffa335ed悲歌徽记|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 法术强度提高84点。|r", --46096
+"|cffa335ed疯狂之吻|r£|cff00ff00装备： 急速等级提高28点。|r£|cff00ff00装备： 使你的精准等级提高39点。|r£|cff00ff00装备： 攻击强度提高118点。|r", --46097
 "|cff0070dd卷轴：附魔武器 - 吸血|r£|cff00ff00使用： 永久性地为一件武器附魔，在攻击敌人或受到流血伤害时，它有可能触发储备血浆效果。当你的生命值低于35%时，储备血浆可以为你恢复360到440点生命值。持续20秒，可以叠加最多5次。\r\n\r\n装备者的等级不得低于75级。|r", --46098
 "|cff0070dd黑狼号角|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --46099
 "|cff0070dd白色科多兽|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --46100
@@ -40354,209 +40355,209 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00技巧：新月仪式之书|r£拾取后绑定£使用： 教你学会铭刻新月仪式之书。£|cff0070dd\n新月仪式之书|r£装备后绑定£副手物品£+37 耐力£|cff00ff00装备： 命中等级提高25点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00使用： 变形成为一条巨狼。 （10分钟冷却）|r£\n需要海洋墨水 (5), 坚韧羊皮纸 (10), 永恒暗影 (3)", --46108
 "|cff0070dd海龟|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤海龟坐骑。这种坐骑在陆地上的移动速度不是很快，但在水里就大不一样了。|r", --46109
 "|cff0070dd炼金师的宝箱|r£拾取后绑定", --46110
-"|cffa335ed征服者的黑暗符印战甲|r£|cff00ff00装备： 爆击等级提高77点。|r£|cff00ff00装备： 使你的精准等级提高55点。|r", --46111
+"|cffa335ed征服者的黑暗符印战甲|r£|cff00ff00装备： 爆击等级提高82点。|r£|cff00ff00装备： 使你的精准等级提高58点。|r", --46111
 "|cff9e9e9eMonster - Gun, Blood Elf (D) Silver|r£ ", --46112
-"|cffa335ed征服者的黑暗符印手套|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 爆击等级提高42点。|r", --46113
+"|cffa335ed征服者的黑暗符印手套|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 爆击等级提高45点。|r", --46113
 "冠军的文书£拾取后绑定£|cffffd100\"可以在锦标赛军需官那里购买奖章。\"|r", --46114
-"|cffa335ed征服者的黑暗符印头盔|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --46115
-"|cffa335ed征服者的黑暗符印腿铠|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 急速等级提高66点。|r", --46116
-"|cffa335ed征服者的黑暗符印肩甲|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 急速等级提高56点。|r", --46117
-"|cffa335ed征服者的黑暗符印护胸|r£|cff00ff00装备： 防御等级提高64。|r£|cff00ff00装备： 使你的躲闪等级提高60点。|r£|cff00ff00装备： 使你的招架等级提高52点。|r", --46118
-"|cffa335ed征服者的黑暗符印护手|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的招架等级提高56点。|r£|cff00ff00装备： 使你的精准等级提高39点。|r", --46119
-"|cffa335ed征服者的黑暗符印面甲|r£|cff00ff00装备： 防御等级提高70。|r£|cff00ff00装备： 使你的躲闪等级提高57点。|r£|cff00ff00装备： 命中等级提高41点。|r", --46120
-"|cffa335ed征服者的黑暗符印护腿|r£|cff00ff00装备： 防御等级提高66。|r£|cff00ff00装备： 使你的招架等级提高81点。|r£|cff00ff00装备： 使你的精准等级提高59点。|r", --46121
-"|cffa335ed征服者的黑暗符印肩铠|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的招架等级提高38点。|r", --46122
-"|cffa335ed征服者的恐怖利刃胸甲|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 使你的精准等级提高76点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --46123
-"|cffa335ed征服者的恐怖利刃护手|r£|cff00ff00装备： 命中等级提高54点。|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --46124
-"|cffa335ed征服者的恐怖利刃头盔|r£|cff00ff00装备： 爆击等级提高77点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 攻击强度提高130点。|r", --46125
-"|cffa335ed征服者的恐怖利刃腿甲|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 急速等级提高72点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --46126
-"|cffa335ed征服者的恐怖利刃肩甲|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 攻击强度提高124点。|r", --46127
-"|cffa335ed征服者的肯瑞托兜帽|r£|cff00ff00装备： 命中等级提高69点。|r£|cff00ff00装备： 法术强度提高113点。|r", --46129
-"|cffa335ed征服者的肯瑞托外套|r£|cff00ff00装备： 爆击等级提高82点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46130
-"|cffa335ed勇猛的肯瑞托护手|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高93点。|r", --46131
-"|cffa335ed征服者的肯瑞托护手|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 法术强度提高100点。|r", --46132
-"|cffa335ed征服者的肯瑞托护腿|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 法术强度提高123点。|r", --46133
-"|cffa335ed征服者的肯瑞托护肩|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46134
-"|cffa335ed征服者的死亡信使手套|r£|cff00ff00装备： 命中等级提高65点。|r£|cff00ff00装备： 法术强度提高99点。|r", --46135
-"|cffa335ed征服者的死亡信使肩垫|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 法术强度提高99点。|r", --46136
-"|cffa335ed征服者的死亡信使长袍|r£|cff00ff00装备： 命中等级提高73点。|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高124点。|r", --46137
-"|cffa335ed繁荣生命神像|r£|cff00ff00装备： 使你的滋养法术的法术强度提高187点。|r", --46138
-"|cffa335ed征服者的死亡信使护腿|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46139
-"|cffa335ed征服者的死亡信使兜帽|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 法术强度提高113点。|r", --46140
-"|cffa335ed征服者的天灾追猎者外套|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 攻击强度提高194点。|r", --46141
-"|cffa335ed征服者的天灾追猎者护手|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 攻击强度提高170点。|r", --46142
-"|cffa335ed征服者的天灾追猎者头饰|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 攻击强度提高196点。|r£|cff00ff00装备： 使你的护甲穿透提高50点。|r", --46143
-"|cffa335ed征服者的天灾追猎者护腿|r£|cff00ff00装备： 爆击等级提高73点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高228点。|r", --46144
-"|cffa335ed征服者的天灾追猎者肩甲|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --46145
-"|cffa335ed征服者的突围战甲|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 使你的护甲穿透提高74点。|r", --46146
-"|cffa335ed征服者的突围护手|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 使你的精准等级提高60点。|r", --46148
-"|cffa335ed征服者的突围肩甲|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 爆击等级提高54点。|r", --46149
-"|cffa335ed征服者的突围腿铠|r£|cff00ff00装备： 命中等级提高74点。|r£|cff00ff00装备： 使你的精准等级提高58点。|r", --46150
-"|cffa335ed征服者的突围头盔|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的护甲穿透提高68点。|r", --46151
-"|cffa335ed征服者的庇护肩铠|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 急速等级提高45点。|r", --46152
-"|cffa335ed征服者的庇护腿铠|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 爆击等级提高74点。|r", --46153
-"|cffa335ed征服者的庇护战甲|r£|cff00ff00装备： 命中等级提高79点。|r£|cff00ff00装备： 爆击等级提高49点。|r", --46154
-"|cffa335ed征服者的庇护手甲|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r", --46155
-"|cffa335ed征服者的庇护头盔|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 急速等级提高58点。|r", --46156
-"|cffa335ed征服者的夜歌肩垫|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 使你的精准等级提高48点。|r£|cff00ff00装备： 攻击强度提高112点。|r", --46157
-"|cffa335ed征服者的夜歌手甲|r£|cff00ff00装备： 急速等级提高33点。|r£|cff00ff00装备： 攻击强度提高130点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --46158
-"|cffa335ed征服者的夜歌外套|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --46159
-"|cffa335ed征服者的夜歌腿甲|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 急速等级提高50点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --46160
-"|cffa335ed征服者的夜歌头盔|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 攻击强度提高152点。|r£|cff00ff00装备： 使你的护甲穿透提高50点。|r", --46161
-"|cffa335ed征服者的突围胸铠|r£|cff00ff00装备： 防御等级提高51。|r£|cff00ff00装备： 使你的招架等级提高60点。|r£|cff00ff00装备： 使你的盾牌格挡值提高153点。|r", --46162
-"|cffa335ed征服者的圣灵裹手|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 法术强度提高99点。|r", --46163
-"|cffa335ed征服者的突围手甲|r£|cff00ff00装备： 防御等级提高48。|r£|cff00ff00装备： 使你的躲闪等级提高57点。|r£|cff00ff00装备： 命中等级提高49点。|r", --46164
-"|cffa335ed征服者的圣灵衬肩|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46165
-"|cffa335ed征服者的突围巨盔|r£|cff00ff00装备： 防御等级提高59。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高51点。|r", --46166
-"|cffa335ed征服者的突围肩铠|r£|cff00ff00装备： 防御等级提高48。|r£|cff00ff00装备： 使你的躲闪等级提高57点。|r£|cff00ff00装备： 使你的精准等级提高49点。|r", --46167
-"|cffa335ed征服者的圣灵外衣|r£|cff00ff00装备： 命中等级提高74点。|r£|cff00ff00装备： 急速等级提高58点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46168
-"|cffa335ed征服者的突围护腿|r£|cff00ff00装备： 防御等级提高51。|r£|cff00ff00装备： 使你的躲闪等级提高52点。|r£|cff00ff00装备： 使你的盾牌格挡值提高177点。|r", --46169
-"|cffa335ed征服者的圣灵短裤|r£|cff00ff00装备： 急速等级提高76点。|r£|cff00ff00装备： 法术强度提高113点。|r", --46170
+"|cffa335ed征服者的黑暗符印头盔|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 使你的护甲穿透提高52点。|r", --46115
+"|cffa335ed征服者的黑暗符印腿铠|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 急速等级提高70点。|r", --46116
+"|cffa335ed征服者的黑暗符印肩甲|r£|cff00ff00装备： 命中等级提高43点。|r£|cff00ff00装备： 急速等级提高59点。|r", --46117
+"|cffa335ed征服者的黑暗符印护胸|r£|cff00ff00装备： 防御等级提高68。|r£|cff00ff00装备： 使你的躲闪等级提高64点。|r£|cff00ff00装备： 使你的招架等级提高55点。|r", --46118
+"|cffa335ed征服者的黑暗符印护手|r£|cff00ff00装备： 防御等级提高53。|r£|cff00ff00装备： 使你的招架等级提高59点。|r£|cff00ff00装备： 使你的精准等级提高41点。|r", --46119
+"|cffa335ed征服者的黑暗符印面甲|r£|cff00ff00装备： 防御等级提高74。|r£|cff00ff00装备： 使你的躲闪等级提高61点。|r£|cff00ff00装备： 命中等级提高44点。|r", --46120
+"|cffa335ed征服者的黑暗符印护腿|r£|cff00ff00装备： 防御等级提高70。|r£|cff00ff00装备： 使你的招架等级提高86点。|r£|cff00ff00装备： 使你的精准等级提高63点。|r", --46121
+"|cffa335ed征服者的黑暗符印肩铠|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的招架等级提高40点。|r", --46122
+"|cffa335ed征服者的恐怖利刃胸甲|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 使你的精准等级提高81点。|r£|cff00ff00装备： 攻击强度提高172点。|r", --46123
+"|cffa335ed征服者的恐怖利刃护手|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --46124
+"|cffa335ed征服者的恐怖利刃头盔|r£|cff00ff00装备： 爆击等级提高82点。|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --46125
+"|cffa335ed征服者的恐怖利刃腿甲|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 急速等级提高77点。|r£|cff00ff00装备： 攻击强度提高172点。|r", --46126
+"|cffa335ed征服者的恐怖利刃肩甲|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 攻击强度提高131点。|r", --46127
+"|cffa335ed征服者的肯瑞托兜帽|r£|cff00ff00装备： 命中等级提高73点。|r£|cff00ff00装备： 法术强度提高120点。|r", --46129
+"|cffa335ed征服者的肯瑞托外套|r£|cff00ff00装备： 爆击等级提高87点。|r£|cff00ff00装备： 法术强度提高140点。|r", --46130
+"|cffa335ed勇猛的肯瑞托护手|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 法术强度提高99点。|r", --46131
+"|cffa335ed征服者的肯瑞托护手|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 急速等级提高50点。|r£|cff00ff00装备： 法术强度提高106点。|r", --46132
+"|cffa335ed征服者的肯瑞托护腿|r£|cff00ff00装备： 命中等级提高70点。|r£|cff00ff00装备： 爆击等级提高79点。|r£|cff00ff00装备： 法术强度提高131点。|r", --46133
+"|cffa335ed征服者的肯瑞托护肩|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高104点。|r", --46134
+"|cffa335ed征服者的死亡信使手套|r£|cff00ff00装备： 命中等级提高69点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46135
+"|cffa335ed征服者的死亡信使肩垫|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46136
+"|cffa335ed征服者的死亡信使长袍|r£|cff00ff00装备： 命中等级提高78点。|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46137
+"|cffa335ed繁荣生命神像|r£|cff00ff00装备： 使你的滋养法术的法术强度提高198点。|r", --46138
+"|cffa335ed征服者的死亡信使护腿|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高140点。|r", --46139
+"|cffa335ed征服者的死亡信使兜帽|r£|cff00ff00装备： 爆击等级提高91点。|r£|cff00ff00装备： 法术强度提高120点。|r", --46140
+"|cffa335ed征服者的天灾追猎者外套|r£|cff00ff00装备： 命中等级提高61点。|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 攻击强度提高206点。|r", --46141
+"|cffa335ed征服者的天灾追猎者护手|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 攻击强度提高180点。|r", --46142
+"|cffa335ed征服者的天灾追猎者头饰|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 攻击强度提高208点。|r£|cff00ff00装备： 使你的护甲穿透提高53点。|r", --46143
+"|cffa335ed征服者的天灾追猎者护腿|r£|cff00ff00装备： 爆击等级提高78点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 攻击强度提高242点。|r", --46144
+"|cffa335ed征服者的天灾追猎者肩甲|r£|cff00ff00装备： 命中等级提高46点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 攻击强度提高146点。|r", --46145
+"|cffa335ed征服者的突围战甲|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 使你的护甲穿透提高79点。|r", --46146
+"|cffa335ed征服者的突围护手|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 使你的精准等级提高64点。|r", --46148
+"|cffa335ed征服者的突围肩甲|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 爆击等级提高57点。|r", --46149
+"|cffa335ed征服者的突围腿铠|r£|cff00ff00装备： 命中等级提高79点。|r£|cff00ff00装备： 使你的精准等级提高62点。|r", --46150
+"|cffa335ed征服者的突围头盔|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的护甲穿透提高72点。|r", --46151
+"|cffa335ed征服者的庇护肩铠|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 急速等级提高48点。|r", --46152
+"|cffa335ed征服者的庇护腿铠|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 爆击等级提高79点。|r", --46153
+"|cffa335ed征服者的庇护战甲|r£|cff00ff00装备： 命中等级提高84点。|r£|cff00ff00装备： 爆击等级提高52点。|r", --46154
+"|cffa335ed征服者的庇护手甲|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 使你的精准等级提高40点。|r", --46155
+"|cffa335ed征服者的庇护头盔|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 急速等级提高62点。|r", --46156
+"|cffa335ed征服者的夜歌肩垫|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 使你的精准等级提高51点。|r£|cff00ff00装备： 攻击强度提高119点。|r", --46157
+"|cffa335ed征服者的夜歌手甲|r£|cff00ff00装备： 急速等级提高35点。|r£|cff00ff00装备： 攻击强度提高138点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --46158
+"|cffa335ed征服者的夜歌外套|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 攻击强度提高172点。|r", --46159
+"|cffa335ed征服者的夜歌腿甲|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --46160
+"|cffa335ed征服者的夜歌头盔|r£|cff00ff00装备： 爆击等级提高80点。|r£|cff00ff00装备： 攻击强度提高162点。|r£|cff00ff00装备： 使你的护甲穿透提高53点。|r", --46161
+"|cffa335ed征服者的突围胸铠|r£|cff00ff00装备： 防御等级提高54。|r£|cff00ff00装备： 使你的招架等级提高64点。|r£|cff00ff00装备： 使你的盾牌格挡值提高153点。|r", --46162
+"|cffa335ed征服者的圣灵裹手|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46163
+"|cffa335ed征服者的突围手甲|r£|cff00ff00装备： 防御等级提高51。|r£|cff00ff00装备： 使你的躲闪等级提高60点。|r£|cff00ff00装备： 命中等级提高52点。|r", --46164
+"|cffa335ed征服者的圣灵衬肩|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46165
+"|cffa335ed征服者的突围巨盔|r£|cff00ff00装备： 防御等级提高63。|r£|cff00ff00装备： 使你的躲闪等级提高54点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高54点。|r", --46166
+"|cffa335ed征服者的突围肩铠|r£|cff00ff00装备： 防御等级提高51。|r£|cff00ff00装备： 使你的躲闪等级提高60点。|r£|cff00ff00装备： 使你的精准等级提高52点。|r", --46167
+"|cffa335ed征服者的圣灵外衣|r£|cff00ff00装备： 命中等级提高79点。|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高140点。|r", --46168
+"|cffa335ed征服者的突围护腿|r£|cff00ff00装备： 防御等级提高54。|r£|cff00ff00装备： 使你的躲闪等级提高55点。|r£|cff00ff00装备： 使你的盾牌格挡值提高177点。|r", --46169
+"|cffa335ed征服者的圣灵短裤|r£|cff00ff00装备： 急速等级提高81点。|r£|cff00ff00装备： 法术强度提高120点。|r", --46170
 "|cffa335ed狂怒角斗士的冰霜巨龙|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德进行召唤。这是一种速度极快的坐骑。|r", --46171
-"|cffa335ed征服者的圣灵头饰|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高113点。|r", --46172
-"|cffa335ed征服者的庇护胸铠|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的招架等级提高51点。|r", --46173
-"|cffa335ed征服者的庇护护手|r£|cff00ff00装备： 防御等级提高45。|r£|cff00ff00装备： 使你的招架等级提高36点。|r£|cff00ff00装备： 使你的盾牌格挡值提高135点。|r", --46174
-"|cffa335ed征服者的庇护面甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高59点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高43点。|r", --46175
-"|cffa335ed征服者的庇护腿甲|r£|cff00ff00装备： 防御等级提高59。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 使你的招架等级提高60点。|r", --46176
-"|cffa335ed征服者的庇护肩甲|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的盾牌格挡等级提高37点。|r£|cff00ff00装备： 使你的盾牌格挡值提高135点。|r", --46177
-"|cffa335ed征服者的庇护外套|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高115点。|r", --46178
-"|cffa335ed征服者的庇护手套|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --46179
-"|cffa335ed征服者的庇护头饰|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46180
-"|cffa335ed征服者的庇护胫甲|r£|cff00ff00装备： 急速等级提高75点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高115点。|r", --46181
-"|cffa335ed征服者的庇护肩饰|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46182
-"|cffa335ed征服者的夜歌护手|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46183
-"|cffa335ed征服者的夜歌头饰|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46184
-"|cffa335ed征服者的夜歌护腿|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46185
-"|cffa335ed征服者的夜歌长袍|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46186
-"|cffa335ed征服者的夜歌护肩|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46187
-"|cffa335ed征服者的圣灵手套|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高100点。|r", --46188
-"|cffa335ed征服者的夜歌手套|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46189
-"|cffa335ed征服者的圣灵肩垫|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46190
-"|cffa335ed征服者的夜歌罩帽|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46191
-"|cffa335ed征服者的夜歌长裤|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 爆击等级提高76点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46192
-"|cffa335ed征服者的圣灵长袍|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46193
-"|cffa335ed征服者的夜歌外衣|r£|cff00ff00装备： 急速等级提高75点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46194
-"|cffa335ed征服者的圣灵护腿|r£|cff00ff00装备： 急速等级提高72点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46195
-"|cffa335ed征服者的夜歌衬肩|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46196
-"|cffa335ed征服者的圣灵兜帽|r£|cff00ff00装备： 爆击等级提高67点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46197
-"|cffa335ed征服者的世界击碎者外套|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高115点。|r", --46198
-"|cffa335ed征服者的世界击碎者护手|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46199
-"|cffa335ed征服者的世界击碎者手甲|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 使你的精准等级提高40点。|r£|cff00ff00装备： 攻击强度提高170点。|r", --46200
-"|cffa335ed征服者的世界击碎者头饰|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46201
-"|cffa335ed征服者的世界击碎者护腿|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f38|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高115点。|r", --46202
-"|cffa335ed征服者的世界击碎者护肩|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 使你的精准等级提高34点。|r£|cff00ff00装备： 攻击强度提高138点。|r", --46203
-"|cffa335ed征服者的世界击碎者肩甲|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高90点。|r", --46204
-"|cffa335ed征服者的世界击碎者胸甲|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 攻击强度提高212点。|r", --46205
-"|cffa335ed征服者的世界击碎者战甲|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 急速等级提高75点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46206
-"|cffa335ed征服者的世界击碎者手套|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46207
-"|cffa335ed征服者的世界击碎者战裙|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 急速等级提高81点。|r£|cff00ff00装备： 攻击强度提高196点。|r", --46208
-"|cffa335ed征服者的世界击碎者头盔|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46209
-"|cffa335ed征服者的世界击碎者褶裙|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 爆击等级提高76点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46210
-"|cffa335ed征服者的世界击碎者肩垫|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 法术强度提高90点。|r", --46211
-"|cffa335ed征服者的世界击碎者面甲|r£|cff00ff00装备： 爆击等级提高73点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 攻击强度提高204点。|r", --46212
-"|cffa335ed庇护战甲|r£|cff00ff00装备： 命中等级提高81点。|r£|cff00ff00装备： 爆击等级提高53点。|r", --46213
-"|cffa335ed庇护胸铠|r£|cff00ff00装备： 防御等级提高55。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的招架等级提高48点。|r", --46214
-"|cffa335ed庇护面甲|r£|cff00ff00装备： 防御等级提高56。|r£|cff00ff00装备： 使你的躲闪等级提高55点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高40点。|r", --46215
-"|cffa335ed庇护手甲|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r", --46216
-"|cffa335ed庇护手套|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高83点。|r", --46217
-"|cffa335ed庇护胫甲|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --46218
-"|cffa335ed庇护护手|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的招架等级提高32点。|r£|cff00ff00装备： 使你的盾牌格挡值提高129点。|r", --46219
-"|cffa335ed庇护头饰|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46220
-"|cffa335ed庇护头盔|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 急速等级提高60点。|r", --46221
-"|cffa335ed庇护腿甲|r£|cff00ff00装备： 防御等级提高56。|r£|cff00ff00装备： 使你的躲闪等级提高40点。|r£|cff00ff00装备： 使你的招架等级提高55点。|r", --46222
-"|cffa335ed庇护腿甲|r£|cff00ff00装备： 防御等级提高56。|r£|cff00ff00装备： 使你的躲闪等级提高40点。|r£|cff00ff00装备： 使你的招架等级提高55点。|r", --46223
-"|cffa335ed庇护腿铠|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 爆击等级提高76点。|r", --46224
-"|cffa335ed庇护肩甲|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的盾牌格挡等级提高34点。|r£|cff00ff00装备： 使你的盾牌格挡值提高126点。|r", --46225
-"|cffa335ed庇护肩铠|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 急速等级提高48点。|r", --46226
-"|cffa335ed庇护肩饰|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46227
-"|cffa335ed庇护外套|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --46228
-"|cffa335ed圣灵头饰|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46230
-"|cffa335ed圣灵兜帽|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46231
-"|cffa335ed黑暗符印战甲|r£|cff00ff00装备： 爆击等级提高87点。|r£|cff00ff00装备： 使你的精准等级提高64点。|r", --46232
-"|cffa335ed黑暗符印护胸|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高55点。|r£|cff00ff00装备： 使你的招架等级提高49点。|r", --46233
-"|cffa335ed黑暗符印面甲|r£|cff00ff00装备： 防御等级提高65。|r£|cff00ff00装备： 使你的躲闪等级提高53点。|r£|cff00ff00装备： 命中等级提高37点。|r", --46234
-"|cffa335ed黑暗符印手套|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 爆击等级提高42点。|r", --46235
-"|cffa335ed黑暗符印护手|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的招架等级提高52点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r", --46236
-"|cffa335ed黑暗符印头盔|r£|cff00ff00装备： 爆击等级提高96点。|r£|cff00ff00装备： 使你的护甲穿透提高56点。|r", --46237
-"|cffa335ed黑暗符印护腿|r£|cff00ff00装备： 防御等级提高62。|r£|cff00ff00装备： 使你的招架等级提高76点。|r£|cff00ff00装备： 使你的精准等级提高54点。|r", --46238
-"|cffa335ed黑暗符印腿铠|r£|cff00ff00装备： 爆击等级提高90点。|r£|cff00ff00装备： 急速等级提高65点。|r", --46239
-"|cffa335ed黑暗符印肩铠|r£|cff00ff00装备： 防御等级提高41。|r£|cff00ff00装备： 使你的躲闪等级提高45点。|r£|cff00ff00装备： 使你的招架等级提高36点。|r", --46240
-"|cffa335ed黑暗符印肩甲|r£|cff00ff00装备： 命中等级提高53点。|r£|cff00ff00装备： 爆击等级提高72点。|r", --46241
-"|cffa335ed死亡信使手套|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 法术强度提高92点。|r", --46242
-"|cffa335ed死亡信使兜帽|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46243
-"|cffa335ed死亡信使护腿|r£|cff00ff00装备： 急速等级提高62点。|r£|cff00ff00装备： 法术强度提高124点。|r", --46244
-"|cffa335ed死亡信使长袍|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46245
-"|cffa335ed死亡信使肩垫|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 急速等级提高38点。|r£|cff00ff00装备： 法术强度提高92点。|r", --46246
-"|cffa335ed圣灵手套|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 法术强度提高93点。|r", --46247
-"|cffa335ed圣灵裹手|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高92点。|r", --46248
-"|cffa335ed肯瑞托护手|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高93点。|r", --46249
-"|cffa335ed肯瑞托兜帽|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46250
-"|cffa335ed肯瑞托护腿|r£|cff00ff00装备： 命中等级提高62点。|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 法术强度提高115点。|r", --46251
-"|cffa335ed肯瑞托肩垫|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高91点。|r", --46252
-"|cffa335ed肯瑞托外套|r£|cff00ff00装备： 爆击等级提高76点。|r£|cff00ff00装备： 法术强度提高124点。|r", --46253
-"|cffa335ed圣灵护腿|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高124点。|r", --46254
-"|cffa335ed圣灵衬肩|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46255
-"|cffa335ed圣灵短裤|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46256
-"|cffa335ed圣灵外衣|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高124点。|r", --46257
-"|cffa335ed圣灵长袍|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46258
-"|cffa335ed圣灵肩垫|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46259
-"|cffa335ed夜歌手甲|r£|cff00ff00装备： 急速等级提高30点。|r£|cff00ff00装备： 攻击强度提高120点。|r£|cff00ff00装备： 使你的护甲穿透提高40点。|r", --46260
-"|cffa335ed夜歌护手|r£|cff00ff00装备： 爆击等级提高44点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46261
-"|cffa335ed夜歌头盔|r£|cff00ff00装备： 爆击等级提高70点。|r£|cff00ff00装备： 攻击强度提高142点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --46262
-"|cffa335ed夜歌头饰|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46263
-"|cffa335ed夜歌护腿|r£|cff00ff00装备： 爆击等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46264
-"|cffa335ed夜歌腿甲|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 急速等级提高46点。|r£|cff00ff00装备： 攻击强度提高106点。|r", --46265
-"|cffa335ed夜歌衬肩|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46266
-"|cffa335ed夜歌外套|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 攻击强度提高152点。|r", --46267
-"|cffa335ed夜歌长袍|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46268
-"|cffa335ed夜歌肩垫|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 使你的精准等级提高44点。|r£|cff00ff00装备： 攻击强度提高104点。|r", --46269
-"|cffa335ed夜歌护肩|r£|cff00ff00装备： 急速等级提高44点。|r£|cff00ff00装备： 法术强度提高82点。|r", --46270
-"|cffa335ed夜歌长裤|r£|cff00ff00装备： 命中等级提高54点。|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46271
-"|cffa335ed夜歌外衣|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46272
-"|cffa335ed天灾追猎者护手|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 攻击强度提高158点。|r", --46273
-"|cffa335ed天灾追猎者头饰|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高180点。|r£|cff00ff00装备： 使你的护甲穿透提高46点。|r", --46274
-"|cffa335ed天灾追猎者护腿|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 攻击强度提高212点。|r", --46275
-"|cffa335ed天灾追猎者肩甲|r£|cff00ff00装备： 命中等级提高40点。|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --46276
-"|cffa335ed天灾追猎者外套|r£|cff00ff00装备： 命中等级提高53点。|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 攻击强度提高180点。|r", --46277
-"|cffa335ed突围战甲|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 使你的护甲穿透提高76点。|r", --46278
-"|cffa335ed突围胸铠|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的招架等级提高56点。|r£|cff00ff00装备： 使你的盾牌格挡值提高147点。|r", --46279
-"|cffa335ed突围护手|r£|cff00ff00装备： 命中等级提高45点。|r£|cff00ff00装备： 使你的精准等级提高52点。|r", --46280
-"|cffa335ed突围巨盔|r£|cff00ff00装备： 防御等级提高56。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高47点。|r", --46281
-"|cffa335ed突围头盔|r£|cff00ff00装备： 爆击等级提高61点。|r£|cff00ff00装备： 使你的护甲穿透提高64点。|r", --46282
-"|cffa335ed突围手甲|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的躲闪等级提高53点。|r£|cff00ff00装备： 命中等级提高45点。|r", --46283
-"|cffa335ed突围护腿|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的盾牌格挡值提高168点。|r", --46284
-"|cffa335ed突围腿铠|r£|cff00ff00装备： 命中等级提高71点。|r£|cff00ff00装备： 使你的精准等级提高70点。|r", --46285
-"|cffa335ed突围肩铠|r£|cff00ff00装备： 防御等级提高44。|r£|cff00ff00装备： 使你的躲闪等级提高53点。|r£|cff00ff00装备： 使你的精准等级提高45点。|r", --46286
-"|cffa335ed突围肩甲|r£|cff00ff00装备： 命中等级提高39点。|r£|cff00ff00装备： 爆击等级提高60点。|r", --46287
-"|cffa335ed恐怖利刃胸甲|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 使你的精准等级提高71点。|r£|cff00ff00装备： 攻击强度提高152点。|r", --46288
-"|cffa335ed恐怖利刃护手|r£|cff00ff00装备： 命中等级提高50点。|r£|cff00ff00装备： 爆击等级提高40点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --46289
-"|cffa335ed恐怖利刃头盔|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 攻击强度提高120点。|r", --46290
-"|cffa335ed恐怖利刃腿甲|r£|cff00ff00装备： 爆击等级提高62点。|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 攻击强度提高152点。|r", --46291
-"|cffa335ed恐怖利刃肩甲|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --46292
-"|cffa335ed世界击碎者胸甲|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 攻击强度提高196点。|r", --46293
-"|cffa335ed世界击碎者面甲|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 攻击强度提高188点。|r", --46294
-"|cffa335ed世界击碎者手套|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46295
-"|cffa335ed世界击碎者手甲|r£|cff00ff00装备： 急速等级提高48点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r£|cff00ff00装备： 攻击强度提高158点。|r", --46296
-"|cffa335ed世界击碎者护手|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46297
-"|cffa335ed世界击碎者战甲|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46298
-"|cffa335ed世界击碎者头饰|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46299
-"|cffa335ed世界击碎者头盔|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --46300
-"|cffa335ed世界击碎者褶裙|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f28|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --46301
-"|cffa335ed世界击碎者护腿|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --46302
-"|cffa335ed世界击碎者护肩|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 使你的精准等级提高31点。|r£|cff00ff00装备： 攻击强度提高126点。|r", --46303
-"|cffa335ed世界击碎者肩垫|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高83点。|r", --46304
-"|cffa335ed世界击碎者肩甲|r£|cff00ff00装备： 急速等级提高53点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高83点。|r", --46305
-"|cffa335ed世界击碎者外套|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f35|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高105点。|r", --46306
-"|cffa335ed世界击碎者战裙|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 急速等级提高76点。|r£|cff00ff00装备： 攻击强度提高180点。|r", --46307
+"|cffa335ed征服者的圣灵头饰|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高120点。|r", --46172
+"|cffa335ed征服者的庇护胸铠|r£|cff00ff00装备： 防御等级提高64。|r£|cff00ff00装备： 使你的躲闪等级提高54点。|r£|cff00ff00装备： 使你的招架等级提高54点。|r", --46173
+"|cffa335ed征服者的庇护护手|r£|cff00ff00装备： 防御等级提高48。|r£|cff00ff00装备： 使你的招架等级提高38点。|r£|cff00ff00装备： 使你的盾牌格挡值提高143点。|r", --46174
+"|cffa335ed征服者的庇护面甲|r£|cff00ff00装备： 防御等级提高64。|r£|cff00ff00装备： 使你的躲闪等级提高63点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高46点。|r", --46175
+"|cffa335ed征服者的庇护腿甲|r£|cff00ff00装备： 防御等级提高63。|r£|cff00ff00装备： 使你的躲闪等级提高46点。|r£|cff00ff00装备： 使你的招架等级提高64点。|r", --46176
+"|cffa335ed征服者的庇护肩甲|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的盾牌格挡等级提高39点。|r£|cff00ff00装备： 使你的盾牌格挡值提高143点。|r", --46177
+"|cffa335ed征服者的庇护外套|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高122点。|r", --46178
+"|cffa335ed征服者的庇护手套|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --46179
+"|cffa335ed征服者的庇护头饰|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 急速等级提高64点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46180
+"|cffa335ed征服者的庇护胫甲|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高122点。|r", --46181
+"|cffa335ed征服者的庇护肩饰|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46182
+"|cffa335ed征服者的夜歌护手|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46183
+"|cffa335ed征服者的夜歌头饰|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46184
+"|cffa335ed征服者的夜歌护腿|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46185
+"|cffa335ed征服者的夜歌长袍|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46186
+"|cffa335ed征服者的夜歌护肩|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46187
+"|cffa335ed征服者的圣灵手套|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 法术强度提高106点。|r", --46188
+"|cffa335ed征服者的夜歌手套|r£|cff00ff00装备： 命中等级提高60点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46189
+"|cffa335ed征服者的圣灵肩垫|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46190
+"|cffa335ed征服者的夜歌罩帽|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46191
+"|cffa335ed征服者的夜歌长裤|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46192
+"|cffa335ed征服者的圣灵长袍|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46193
+"|cffa335ed征服者的夜歌外衣|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46194
+"|cffa335ed征服者的圣灵护腿|r£|cff00ff00装备： 急速等级提高77点。|r£|cff00ff00装备： 法术强度提高140点。|r", --46195
+"|cffa335ed征服者的夜歌衬肩|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46196
+"|cffa335ed征服者的圣灵兜帽|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46197
+"|cffa335ed征服者的世界击碎者外套|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高122点。|r", --46198
+"|cffa335ed征服者的世界击碎者护手|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46199
+"|cffa335ed征服者的世界击碎者手甲|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 使你的精准等级提高42点。|r£|cff00ff00装备： 攻击强度提高180点。|r", --46200
+"|cffa335ed征服者的世界击碎者头饰|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46201
+"|cffa335ed征服者的世界击碎者护腿|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f40|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高122点。|r", --46202
+"|cffa335ed征服者的世界击碎者护肩|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 使你的精准等级提高36点。|r£|cff00ff00装备： 攻击强度提高146点。|r", --46203
+"|cffa335ed征服者的世界击碎者肩甲|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高95点。|r", --46204
+"|cffa335ed征服者的世界击碎者胸甲|r£|cff00ff00装备： 命中等级提高70点。|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 攻击强度提高225点。|r", --46205
+"|cffa335ed征服者的世界击碎者战甲|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46206
+"|cffa335ed征服者的世界击碎者手套|r£|cff00ff00装备： 爆击等级提高51点。|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46207
+"|cffa335ed征服者的世界击碎者战裙|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 急速等级提高86点。|r£|cff00ff00装备： 攻击强度提高208点。|r", --46208
+"|cffa335ed征服者的世界击碎者头盔|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 爆击等级提高64点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46209
+"|cffa335ed征服者的世界击碎者褶裙|r£|cff00ff00装备： 命中等级提高64点。|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46210
+"|cffa335ed征服者的世界击碎者肩垫|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 法术强度提高95点。|r", --46211
+"|cffa335ed征服者的世界击碎者面甲|r£|cff00ff00装备： 爆击等级提高78点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 攻击强度提高217点。|r", --46212
+"|cffa335ed庇护战甲|r£|cff00ff00装备： 命中等级提高86点。|r£|cff00ff00装备： 爆击等级提高56点。|r", --46213
+"|cffa335ed庇护胸铠|r£|cff00ff00装备： 防御等级提高58。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的招架等级提高51点。|r", --46214
+"|cffa335ed庇护面甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高58点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高43点。|r", --46215
+"|cffa335ed庇护手甲|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的精准等级提高40点。|r", --46216
+"|cffa335ed庇护手套|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高88点。|r", --46217
+"|cffa335ed庇护胫甲|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高112点。|r", --46218
+"|cffa335ed庇护护手|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的招架等级提高34点。|r£|cff00ff00装备： 使你的盾牌格挡值提高129点。|r", --46219
+"|cffa335ed庇护头饰|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 急速等级提高58点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46220
+"|cffa335ed庇护头盔|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高64点。|r", --46221
+"|cffa335ed庇护腿甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 使你的招架等级提高58点。|r", --46222
+"|cffa335ed庇护腿甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高43点。|r£|cff00ff00装备： 使你的招架等级提高58点。|r", --46223
+"|cffa335ed庇护腿铠|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 爆击等级提高81点。|r", --46224
+"|cffa335ed庇护肩甲|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的盾牌格挡等级提高36点。|r£|cff00ff00装备： 使你的盾牌格挡值提高126点。|r", --46225
+"|cffa335ed庇护肩铠|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 急速等级提高51点。|r", --46226
+"|cffa335ed庇护肩饰|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46227
+"|cffa335ed庇护外套|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高112点。|r", --46228
+"|cffa335ed圣灵头饰|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高64点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46230
+"|cffa335ed圣灵兜帽|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46231
+"|cffa335ed黑暗符印战甲|r£|cff00ff00装备： 爆击等级提高92点。|r£|cff00ff00装备： 使你的精准等级提高68点。|r", --46232
+"|cffa335ed黑暗符印护胸|r£|cff00ff00装备： 防御等级提高64。|r£|cff00ff00装备： 使你的躲闪等级提高58点。|r£|cff00ff00装备： 使你的招架等级提高52点。|r", --46233
+"|cffa335ed黑暗符印面甲|r£|cff00ff00装备： 防御等级提高69。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 命中等级提高39点。|r", --46234
+"|cffa335ed黑暗符印手套|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 爆击等级提高45点。|r", --46235
+"|cffa335ed黑暗符印护手|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的招架等级提高55点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r", --46236
+"|cffa335ed黑暗符印头盔|r£|cff00ff00装备： 爆击等级提高102点。|r£|cff00ff00装备： 使你的护甲穿透提高60点。|r", --46237
+"|cffa335ed黑暗符印护腿|r£|cff00ff00装备： 防御等级提高66。|r£|cff00ff00装备： 使你的招架等级提高81点。|r£|cff00ff00装备： 使你的精准等级提高57点。|r", --46238
+"|cffa335ed黑暗符印腿铠|r£|cff00ff00装备： 爆击等级提高96点。|r£|cff00ff00装备： 急速等级提高69点。|r", --46239
+"|cffa335ed黑暗符印肩铠|r£|cff00ff00装备： 防御等级提高43。|r£|cff00ff00装备： 使你的躲闪等级提高48点。|r£|cff00ff00装备： 使你的招架等级提高38点。|r", --46240
+"|cffa335ed黑暗符印肩甲|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 爆击等级提高76点。|r", --46241
+"|cffa335ed死亡信使手套|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46242
+"|cffa335ed死亡信使兜帽|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46243
+"|cffa335ed死亡信使护腿|r£|cff00ff00装备： 急速等级提高66点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46244
+"|cffa335ed死亡信使长袍|r£|cff00ff00装备： 命中等级提高72点。|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46245
+"|cffa335ed死亡信使肩垫|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 急速等级提高40点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46246
+"|cffa335ed圣灵手套|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 法术强度提高99点。|r", --46247
+"|cffa335ed圣灵裹手|r£|cff00ff00装备： 爆击等级提高63点。|r£|cff00ff00装备： 法术强度提高98点。|r", --46248
+"|cffa335ed肯瑞托护手|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 法术强度提高99点。|r", --46249
+"|cffa335ed肯瑞托兜帽|r£|cff00ff00装备： 命中等级提高68点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46250
+"|cffa335ed肯瑞托护腿|r£|cff00ff00装备： 命中等级提高66点。|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 法术强度提高122点。|r", --46251
+"|cffa335ed肯瑞托肩垫|r£|cff00ff00装备： 急速等级提高60点。|r£|cff00ff00装备： 法术强度提高96点。|r", --46252
+"|cffa335ed肯瑞托外套|r£|cff00ff00装备： 爆击等级提高81点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46253
+"|cffa335ed圣灵护腿|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46254
+"|cffa335ed圣灵衬肩|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46255
+"|cffa335ed圣灵短裤|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46256
+"|cffa335ed圣灵外衣|r£|cff00ff00装备： 命中等级提高72点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高132点。|r", --46257
+"|cffa335ed圣灵长袍|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46258
+"|cffa335ed圣灵肩垫|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46259
+"|cffa335ed夜歌手甲|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 攻击强度提高127点。|r£|cff00ff00装备： 使你的护甲穿透提高42点。|r", --46260
+"|cffa335ed夜歌护手|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46261
+"|cffa335ed夜歌头盔|r£|cff00ff00装备： 爆击等级提高74点。|r£|cff00ff00装备： 攻击强度提高151点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --46262
+"|cffa335ed夜歌头饰|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46263
+"|cffa335ed夜歌护腿|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46264
+"|cffa335ed夜歌腿甲|r£|cff00ff00装备： 爆击等级提高69点。|r£|cff00ff00装备： 急速等级提高49点。|r£|cff00ff00装备： 攻击强度提高113点。|r", --46265
+"|cffa335ed夜歌衬肩|r£|cff00ff00装备： 爆击等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46266
+"|cffa335ed夜歌外套|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --46267
+"|cffa335ed夜歌长袍|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46268
+"|cffa335ed夜歌肩垫|r£|cff00ff00装备： 爆击等级提高59点。|r£|cff00ff00装备： 使你的精准等级提高47点。|r£|cff00ff00装备： 攻击强度提高110点。|r", --46269
+"|cffa335ed夜歌护肩|r£|cff00ff00装备： 急速等级提高47点。|r£|cff00ff00装备： 法术强度提高87点。|r", --46270
+"|cffa335ed夜歌长裤|r£|cff00ff00装备： 命中等级提高57点。|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46271
+"|cffa335ed夜歌外衣|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46272
+"|cffa335ed天灾追猎者护手|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 攻击强度提高167点。|r", --46273
+"|cffa335ed天灾追猎者头饰|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高191点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --46274
+"|cffa335ed天灾追猎者护腿|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 攻击强度提高225点。|r", --46275
+"|cffa335ed天灾追猎者肩甲|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 攻击强度提高134点。|r", --46276
+"|cffa335ed天灾追猎者外套|r£|cff00ff00装备： 命中等级提高56点。|r£|cff00ff00装备： 爆击等级提高60点。|r£|cff00ff00装备： 攻击强度提高191点。|r", --46277
+"|cffa335ed突围战甲|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 使你的护甲穿透提高81点。|r", --46278
+"|cffa335ed突围胸铠|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的招架等级提高60点。|r£|cff00ff00装备： 使你的盾牌格挡值提高147点。|r", --46279
+"|cffa335ed突围护手|r£|cff00ff00装备： 命中等级提高48点。|r£|cff00ff00装备： 使你的精准等级提高55点。|r", --46280
+"|cffa335ed突围巨盔|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高50点。|r", --46281
+"|cffa335ed突围头盔|r£|cff00ff00装备： 爆击等级提高65点。|r£|cff00ff00装备： 使你的护甲穿透提高68点。|r", --46282
+"|cffa335ed突围手甲|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 命中等级提高48点。|r", --46283
+"|cffa335ed突围护腿|r£|cff00ff00装备： 防御等级提高50。|r£|cff00ff00装备： 使你的躲闪等级提高51点。|r£|cff00ff00装备： 使你的盾牌格挡值提高168点。|r", --46284
+"|cffa335ed突围腿铠|r£|cff00ff00装备： 命中等级提高75点。|r£|cff00ff00装备： 使你的精准等级提高74点。|r", --46285
+"|cffa335ed突围肩铠|r£|cff00ff00装备： 防御等级提高47。|r£|cff00ff00装备： 使你的躲闪等级提高56点。|r£|cff00ff00装备： 使你的精准等级提高48点。|r", --46286
+"|cffa335ed突围肩甲|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 爆击等级提高64点。|r", --46287
+"|cffa335ed恐怖利刃胸甲|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 使你的精准等级提高75点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --46288
+"|cffa335ed恐怖利刃护手|r£|cff00ff00装备： 命中等级提高53点。|r£|cff00ff00装备： 爆击等级提高42点。|r£|cff00ff00装备： 攻击强度提高127点。|r", --46289
+"|cffa335ed恐怖利刃头盔|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 攻击强度提高128点。|r", --46290
+"|cffa335ed恐怖利刃腿甲|r£|cff00ff00装备： 爆击等级提高66点。|r£|cff00ff00装备： 急速等级提高70点。|r£|cff00ff00装备： 攻击强度提高162点。|r", --46291
+"|cffa335ed恐怖利刃肩甲|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 攻击强度提高121点。|r", --46292
+"|cffa335ed世界击碎者胸甲|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 爆击等级提高68点。|r£|cff00ff00装备： 攻击强度提高207点。|r", --46293
+"|cffa335ed世界击碎者面甲|r£|cff00ff00装备： 爆击等级提高72点。|r£|cff00ff00装备： 急速等级提高52点。|r£|cff00ff00装备： 攻击强度提高199点。|r", --46294
+"|cffa335ed世界击碎者手套|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46295
+"|cffa335ed世界击碎者手甲|r£|cff00ff00装备： 急速等级提高51点。|r£|cff00ff00装备： 使你的精准等级提高38点。|r£|cff00ff00装备： 攻击强度提高167点。|r", --46296
+"|cffa335ed世界击碎者护手|r£|cff00ff00装备： 爆击等级提高48点。|r£|cff00ff00装备： 急速等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46297
+"|cffa335ed世界击碎者战甲|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 急速等级提高74点。|r£|cff00ff00装备： 法术强度提高111点。|r", --46298
+"|cffa335ed世界击碎者头饰|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高111点。|r", --46299
+"|cffa335ed世界击碎者头盔|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高111点。|r", --46300
+"|cffa335ed世界击碎者褶裙|r£|cff00ff00装备： 爆击等级提高75点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f30|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高111点。|r", --46301
+"|cffa335ed世界击碎者护腿|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高111点。|r", --46302
+"|cffa335ed世界击碎者护肩|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 使你的精准等级提高33点。|r£|cff00ff00装备： 攻击强度提高134点。|r", --46303
+"|cffa335ed世界击碎者肩垫|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高88点。|r", --46304
+"|cffa335ed世界击碎者肩甲|r£|cff00ff00装备： 急速等级提高56点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高88点。|r", --46305
+"|cffa335ed世界击碎者外套|r£|cff00ff00装备： 爆击等级提高58点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f37|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高111点。|r", --46306
+"|cffa335ed世界击碎者战裙|r£|cff00ff00装备： 命中等级提高59点。|r£|cff00ff00装备： 急速等级提高80点。|r£|cff00ff00装备： 攻击强度提高190点。|r", --46307
 "|cff0070dd黑色骷髅战马|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --46308
-"|cffa335ed夜歌手套|r£|cff00ff00装备： 命中等级提高52点。|r£|cff00ff00装备： 法术强度提高83点。|r", --46309
-"|cffa335ed被征服的尤格-萨隆之爪|r£|cff00ff00装备： 爆击等级提高136点。|r£|cff00ff00使用： 召唤一条被征服的尤格-萨隆触须协助你作战。 （2分钟冷却）|r", --46312
-"|cffa335ed勇猛的夜歌罩帽|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 法术强度提高105点。|r", --46313
+"|cffa335ed夜歌手套|r£|cff00ff00装备： 命中等级提高55点。|r£|cff00ff00装备： 法术强度提高88点。|r", --46309
+"|cffa335ed被征服的尤格-萨隆之爪|r£|cff00ff00装备： 爆击等级提高154点。|r£|cff00ff00使用： 召唤一条被征服的尤格-萨隆触须协助你作战。 （2分钟冷却）|r", --46312
+"|cffa335ed勇猛的夜歌罩帽|r£|cff00ff00装备： 命中等级提高58点。|r£|cff00ff00装备： 法术强度提高112点。|r", --46313
 "锦标赛美酒£魔法制造的物品£唯一£|cff00ff00使用： 酒精含量较少的饮料。|r£|cffffd100\"记住：不要碰杯洒出来！\"|r", --46319
-"|cffa335ed天空使者斗篷|r£|cff00ff00装备： 命中等级提高32点。|r£|cff00ff00装备： 爆击等级提高42点。|r", --46320
-"|cffa335ed阳光斗篷|r£|cff00ff00装备： 急速等级提高34点。|r£|cff00ff00装备： 法术强度提高64点。|r", --46321
-"|cffa335ed布莱恩的焊接戒指|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 攻击强度提高96点。|r£|cff00ff00装备： 使你的护甲穿透提高33点。|r", --46322
-"|cffa335ed星芒徽记|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高64点。|r", --46323
+"|cffa335ed天空使者斗篷|r£|cff00ff00装备： 命中等级提高36点。|r£|cff00ff00装备： 爆击等级提高48点。|r", --46320
+"|cffa335ed阳光斗篷|r£|cff00ff00装备： 急速等级提高39点。|r£|cff00ff00装备： 法术强度提高73点。|r", --46321
+"|cffa335ed布莱恩的焊接戒指|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 攻击强度提高109点。|r£|cff00ff00装备： 使你的护甲穿透提高37点。|r", --46322
+"|cffa335ed星芒徽记|r£|cff00ff00装备： 急速等级提高36点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --46323
 "|cff0070dd古德利亚的幽灵爪|r£ ", --46324
 "|cff0070dd征服者的黑暗符印战靴|r£|cff00ff00装备： 防御等级提高34。|r£|cff00ff00装备： 使你的躲闪等级提高41点。|r", --46326
 "|cff0070dd征服者的突围战靴|r£|cff00ff00装备： 防御等级提高34。|r£|cff00ff00装备： 使你的躲闪等级提高41点。|r", --46327
@@ -40569,19 +40570,19 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd征服者的世界击碎者战靴|r£|cff00ff00装备： 防御等级提高34。|r£|cff00ff00装备： 使你的躲闪等级提高41点。|r", --46334
 "|cff0070dd征服者的天灾追猎者战靴|r£|cff00ff00装备： 防御等级提高34。|r£|cff00ff00装备： 使你的躲闪等级提高41点。|r", --46335
 "zzOLD[ph]£ ", --46336
-"|cffa335ed米米尔隆的连发枪|r£|cff00ff00装备： 爆击等级提高22点。|r£|cff00ff00装备： 急速等级提高22点。|r", --46339
-"|cffa335ed强硬护手|r£|cff00ff00装备： 防御等级提高51。|r£|cff00ff00装备： 使你的招架等级提高41点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高25点。|r", --46340
-"|cffa335ed织法者斗篷|r£|cff00ff00装备： 爆击等级提高39点。|r£|cff00ff00装备： 急速等级提高30点。|r£|cff00ff00装备： 法术强度提高68点。|r", --46341
-"|cffa335ed魔像之心长弓|r£|cff00ff00装备： 爆击等级提高17点。|r£|cff00ff00装备： 急速等级提高22点。|r£|cff00ff00装备： 攻击强度提高46点。|r", --46342
-"|cffa335ed庇护者的热情|r£|cff00ff00装备： 使你的招架等级提高59点。|r£|cff00ff00装备： 使你的精准等级提高30点。|r", --46343
-"|cffa335ed冰锋衬肩|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高92点。|r", --46344
-"|cffa335ed正义革新护腕|r£|cff00ff00装备： 急速等级提高29点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f23|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高52点。|r", --46345
-"|cffa335ed掠食之靴|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 攻击强度提高158点。|r£|cff00ff00装备： 使你的护甲穿透提高41点。|r", --46346
-"|cffa335ed休眠火焰披风|r£|cff00ff00装备： 爆击等级提高29点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高69点。|r", --46347
+"|cffa335ed米米尔隆的连发枪|r£|cff00ff00装备： 爆击等级提高23点。|r£|cff00ff00装备： 急速等级提高23点。|r", --46339
+"|cffa335ed强硬护手|r£|cff00ff00装备： 防御等级提高54。|r£|cff00ff00装备： 使你的招架等级提高43点。|r£|cff00ff00装备： 使你的盾牌格挡等级提高26点。|r", --46340
+"|cffa335ed织法者斗篷|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高32点。|r£|cff00ff00装备： 法术强度提高72点。|r", --46341
+"|cffa335ed魔像之心长弓|r£|cff00ff00装备： 爆击等级提高18点。|r£|cff00ff00装备： 急速等级提高23点。|r£|cff00ff00装备： 攻击强度提高49点。|r", --46342
+"|cffa335ed庇护者的热情|r£|cff00ff00装备： 使你的招架等级提高62点。|r£|cff00ff00装备： 使你的精准等级提高32点。|r", --46343
+"|cffa335ed冰锋衬肩|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 法术强度提高97点。|r", --46344
+"|cffa335ed正义革新护腕|r£|cff00ff00装备： 急速等级提高31点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f24|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高55点。|r", --46345
+"|cffa335ed掠食之靴|r£|cff00ff00装备： 爆击等级提高49点。|r£|cff00ff00装备： 攻击强度提高167点。|r£|cff00ff00装备： 使你的护甲穿透提高43点。|r", --46346
+"|cffa335ed休眠火焰披风|r£|cff00ff00装备： 爆击等级提高31点。|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f25|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高73点。|r", --46347
 "|cffa335ed公式：附魔武器 - 吸血|r£拾取后绑定£|cff00ff00使用： 教你学会永久性地为一件武器附魔，在攻击敌人或受到流血伤害时，它有可能触发储备血浆效果。当你的生命值过低时，储备血浆可以为你恢复生命值。附魔要求装备者的等级不得低于75级。|r", --46348
 "|cff0070dd大厨的帽子|r£|cff00ff00装备： 使你的烹饪速度加快。|r", --46349
-"|cffa335ed坚韧之柱|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 法术强度提高487点。|r", --46350
-"|cffa335ed血碎之锤|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 使你的精准等级提高25点。|r£|cff00ff00装备： 攻击强度提高74点。|r", --46351
+"|cffa335ed坚韧之柱|r£|cff00ff00装备： 爆击等级提高56点。|r£|cff00ff00装备： 法术强度提高515点。|r", --46350
+"|cffa335ed血碎之锤|r£|cff00ff00装备： 爆击等级提高50点。|r£|cff00ff00装备： 使你的精准等级提高26点。|r£|cff00ff00装备： 攻击强度提高78点。|r", --46351
 "Dummy Item [PH]£ ", --46358
 "|cff9e9e9e盗龙的颅骨|r£ ", --46359
 "|cff9e9e9e鲨鱼头标本|r£ ", --46360
@@ -40593,7 +40594,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9e腐烂的情感绘画|r£ ", --46369
 "|cff0070dd盛满的绿色美酒节酒杯|r£|cff00ff00使用： 酒精含量较少的饮料。 （5秒冷却）|r£|cffffd100\"塔卡里的巫毒酒蕴含着你不想去了解的魔法力量。\"|r", --46371
 "生存本能雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的生存本能提供的生命值加成提高15%。|r", --46372
-"|cffa335ed狂怒角斗士的分裂坠饰|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 攻击强度提高126点。|r£|cff00ff00装备： 使你的护甲穿透提高42点。|r", --46373
+"|cffa335ed狂怒角斗士的分裂坠饰|r£|cff00ff00装备： 使你的韧性等级提高44点。|r£|cff00ff00装备： 攻击强度提高133点。|r£|cff00ff00装备： 使你的护甲穿透提高44点。|r", --46373
 "|cffa335ed无情角斗士的分裂坠饰|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 攻击强度提高151点。|r£|cff00ff00装备： 使你的护甲穿透提高50点。|r", --46374
 "冰霜巨龙合剂£|cff00ff00使用： 法术强度提高125点，持续1小时。这种效果在死亡后仍可继续存在。战斗和守护药剂。|r", --46376
 "无尽怒气合剂£|cff00ff00使用： 攻击强度提高180点，持续1小时。这种效果在死亡后仍可继续存在。战斗和守护药剂。|r", --46377
@@ -40620,7 +40621,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "小型纸飞艇£任务物品£|cff00ff00使用： 将纸飞艇扔给你在诺森德抚养的孤儿 （15秒冷却）|r£|cffffd100\"尺寸刚好适合一个孩子。\"|r", --46693
 "|cff0070dd小丸子|r£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --46707
 "|cffa335ed致命角斗士的冰霜巨龙|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。只能在外域或诺森德进行召唤。这是一种速度极快的坐骑。|r", --46708
-"|cff0070dd[PH] MiniZep Controller|r£拾取后绑定£|cff00ff00使用： 召唤并控制你的蒸汽坦克。 （30秒冷却）|r", --46709
+"拾取后绑定£|cff00ff00使用： 召唤并控制你的蒸汽坦克。 （30秒冷却）|r", --46709
 "食谱：悼念糕饼£拾取后绑定£使用： 教你学会烹制悼念糕饼。£\n悼念糕饼£拾取后绑定£|cff00ff00使用： 每秒恢复总生命值的2%，持续24秒。进食时必须保持坐姿。如果你花费至少10秒钟进食，还会获得耐力和精神加值，持续15分钟。|r£\n需要面粉, 冰镇牛奶", --46710
 "灵魂之烛£拾取后绑定£|cff00ff00使用： 放置一支灵魂之烛，提高距离它最近的4个人的精神。 （5分钟冷却）|r", --46711
 "橙菊£拾取后绑定£|cff00ff00使用： 侦测次级隐形术，持续30秒。仅在悼念日中有效。 （30秒冷却）|r£|cffffd100\"据说在悼念日使用可以招来魂灵并与其交流。\"|r", --46718
@@ -40830,7 +40831,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed破晓者胫甲|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高52点。|r£|cff00ff00装备： 使你的招架等级提高52点。|r", --47003
 "|cffa335ed厄运胸甲|r£|cff00ff00装备： 爆击等级提高86点。|r£|cff00ff00装备： 急速等级提高102点。|r£|cff00ff00装备： 攻击强度提高172点。|r", --47004
 "|cff9e9e9eMonster - Dagger, Horde PvP (Red)|r£ ", --47005
-"克瓦迪尔战争号角£任务物品£|cff00ff00使用： 吹响克瓦迪尔战争号角来召唤德罗丁·洛斯加尔。只能在洛斯加尔登陆点的图亚里克纪念碑附近使用。 （1秒冷却）|r", --47006
+"克瓦迪尔战争号角£任务物品£|cff00ff00使用： 吹响克瓦迪尔战争号角来召唤德罗丁洛斯加尔。只能在洛斯加尔登陆点的图亚里克纪念碑附近使用。 （1秒冷却）|r", --47006
 "|cff0070dd图鉴：鲁莽紫黄晶|r£拾取后绑定£使用： 教你学会切割鲁莽紫黄晶。£|cffa335ed\n鲁莽紫黄晶|r£+12 法术强度，+10 急速等级£|cffffd100\"对应红色或黄色插槽。\"|r£\n需要紫黄晶", --47007
 "|cff0070dd图鉴：反光紫黄晶|r£拾取后绑定£使用： 教你学会切割反光紫黄晶。£|cffa335ed\n反光紫黄晶|r£+10 敏捷，+10 命中等级£|cffffd100\"对应红色或黄色插槽。\"|r£\n需要紫黄晶", --47008
 "唤雾者的符咒£任务物品£|cff00ff00使用： 尝试召唤唤雾者伊戈瓦尔。需要在洛斯加尔登陆点西面的唤雾者洞穴中。 （1秒冷却）|r", --47009
@@ -42266,14 +42267,14 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed银色盟约披风|r£|cff00ff00装备： 爆击等级提高57点。|r£|cff00ff00装备： 攻击强度提高98点。|r£|cff00ff00装备： 使你的护甲穿透提高49点。|r", --48673
 "|cffa335ed胜利斗士披风|r£|cff00ff00装备： 命中等级提高49点。|r£|cff00ff00装备： 爆击等级提高57点。|r", --48674
 "|cffa335ed坚定卫士披风|r£|cff00ff00装备： 防御等级提高45。|r£|cff00ff00装备： 使你的躲闪等级提高37点。|r£|cff00ff00装备： 使你的招架等级提高45点。|r", --48675
-"|cff00ccff勇士的死亡执行者胸甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48677
+"|cff00ccff勇士的死亡执行者胸甲|r£|cff00ff00装备： 攻击强度提高3点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48677
 "浸水的配方£该物品将触发一个任务£|cffffd100\"在某些人那里可以换来一把达拉然烹饪硬币。\"|r", --48679
 "浸水的配方£拾取后绑定£|cffffd100\"在某些人那里可以换来一把达拉然烹饪硬币。\"|r", --48681
-"|cff00ccff神秘的元素外衣|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48683
-"|cff00ccff抛光后的勇气胸甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48685
-"|cff00ccff梳理过的铁羽胸甲|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48687
-"|cff00ccff褪色的迅影外套|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48689
-"|cff00ccff破烂的鬼雾长袍|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48691
+"|cff00ccff神秘的元素外衣|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48683
+"|cff00ccff抛光后的勇气胸甲|r£|cff00ff00装备： 爆击等级提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48685
+"|cff00ccff梳理过的铁羽胸甲|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48687
+"|cff00ccff褪色的迅影外套|r£|cff00ff00装备： 命中等级提高1点。|r£|cff00ff00装备： 攻击强度提高3点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48689
+"|cff00ccff破烂的鬼雾长袍|r£|cff00ff00装备： 法术强度提高1点。|r£|cff00ff00装备： 通过杀死怪物和完成任务获得的经验值提高10%。|r", --48691
 "|cffa335ed破心者|r£|cff00ff00装备： 爆击等级提高36点。|r£|cff00ff00装备： 急速等级提高54点。|r£|cff00ff00装备： 法术强度提高621点。|r", --48693
 "|cffa335ed莫克什，舐血者|r£|cff00ff00装备： 命中等级提高70点。|r£|cff00ff00装备： 爆击等级提高85点。|r", --48695
 "|cffa335ed狂击长弓|r£|cff00ff00装备： 命中等级提高24点。|r£|cff00ff00装备： 攻击强度提高57点。|r£|cff00ff00装备： 使你的护甲穿透提高24点。|r", --48697
@@ -42289,7 +42290,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed洛萨战斧|r£|cff00ff00装备： 命中等级提高70点。|r£|cff00ff00装备： 爆击等级提高85点。|r", --48713
 "|cffa335ed忠烈之锤|r£|cff00ff00装备： 防御等级提高32。|r£|cff00ff00装备： 使你的躲闪等级提高29点。|r£|cff00ff00装备： 使你的招架等级提高23点。|r", --48714
 "|cff00ccff古旧的玛克迦文之锤|r£ ", --48716
-"|cff00ccff重铸的熔岩挖掘器|r£ ", --48718
+"|cff00ccff重铸的熔岩挖掘器|r£|cff00ff00装备： 攻击强度提高2点。|r£|cff00ff00装备： 使你的护甲穿透提高1点。|r", --48718
 "爪击雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的爪击技能所消耗的能量值降低5点。|r", --48720
 "|cffa335ed水晶之心碎片|r£|cff00ff00装备： 命中等级提高128点。|r£|cff00ff00使用： 急速等级提高512，持续20秒。 （2分钟冷却）|r", --48722
 "|cffa335ed复苏饰物|r£|cff00ff00使用： 法术强度提高599点，持续20秒。 （2分钟冷却）|r", --48724
@@ -42487,10 +42488,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd侏儒思考帽|r£|cff00ff00使用： 接触目标的思想并尝试安抚或控制它。 （10分钟冷却）|r£|cffffd100\"心诚则灵……\"|r", --48945
 "|cff9e9e9eMonster - Axe, 1H Northrend D01|r£ ", --48947
 "|cff9e9e9eMonster - Axe, 2H Northrend D01 Purple|r£ ", --48949
-"|cffa335ed肯瑞托铭刻指环|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 攻击强度提高126点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48954
-"|cffa335ed肯瑞托铭刻指箍|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f21|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高74点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48955
-"|cffa335ed肯瑞托铭刻戒指|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 使你的精准等级提高41点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48956
-"|cffa335ed肯瑞托铭刻徽记|r£|cff00ff00装备： 爆击等级提高41点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 法术强度提高74点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48957
+"|cffa335ed肯瑞托铭刻指环|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 急速等级提高43点。|r£|cff00ff00装备： 攻击强度提高133点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48954
+"|cffa335ed肯瑞托铭刻指箍|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f22|r|cff00ff00点法力值。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48955
+"|cffa335ed肯瑞托铭刻戒指|r£|cff00ff00装备： 爆击等级提高45点。|r£|cff00ff00装备： 使你的精准等级提高43点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48956
+"|cffa335ed肯瑞托铭刻徽记|r£|cff00ff00装备： 爆击等级提高43点。|r£|cff00ff00装备： 急速等级提高45点。|r£|cff00ff00装备： 法术强度提高78点。|r£|cff00ff00使用： 将施法者传送到达拉然。 （30分钟冷却）|r", --48957
 "|cffa335ed泰坦铸造统御臂甲|r£|cff00ff00装备： 命中等级提高42点。|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 法术强度提高74点。|r", --48974
 "|cffa335ed泰坦铸造拯救臂甲|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 急速等级提高42点。|r£|cff00ff00装备： 法术强度提高74点。|r", --48975
 "|cffa335ed泰坦铸造凯旋臂甲|r£|cff00ff00装备： 使你的韧性等级提高42点。|r£|cff00ff00装备： 攻击强度提高64点。|r£|cff00ff00装备： 使你的护甲穿透提高42点。|r", --48976
@@ -42549,7 +42550,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff9e9e9eMonster - Axe, 2H Zul'Aman Black|r£ ", --49156
 "|cffa335edMonster - Ancient Amani Longbow (Dark)|r£|cff00ff00装备： 攻击强度提高38点。|r£|cff00ff00装备： 护甲穿透等级提高18。|r", --49158
 "|cff9e9e9eMonster - Item, Book - C01 Silver|r£ ", --49160
-"|cff00ccff寒冷天气飞行宝典|r£账号绑定£|cff00ff00使用： 教你学会寒冷飞行，使你可以在诺森德使用飞行坐骑。此宝典学习后即消失。|r", --49177
+"|cff00ccff寒冷天气飞行宝典|r£绑定至暴雪游戏通行证£|cff00ff00使用： 教你学会寒冷飞行，使你可以在诺森德使用飞行坐骑。此宝典学习后即消失。|r", --49177
 "|cffa335ed无情角斗士的活跃裹腰|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高109点。|r", --49179
 "|cffa335ed无情角斗士的活跃护腕|r£|cff00ff00装备： 使你的韧性等级提高50点。|r£|cff00ff00装备： 急速等级提高50点。|r£|cff00ff00装备： 法术强度提高89点。|r", --49181
 "|cffa335ed无情角斗士的活跃便鞋|r£|cff00ff00装备： 使你的韧性等级提高67点。|r£|cff00ff00装备： 急速等级提高59点。|r£|cff00ff00装备： 法术强度提高109点。|r", --49183
@@ -42604,7 +42605,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed远古角石魔典|r£|cff00ff00装备： 法术强度提高64点。|r£|cff00ff00使用： 召唤一个骷髅为你作战，持续1分钟。 （15分钟冷却）|r", --49308
 "|cffa335ed符文禁锢之戒|r£|cff00ff00装备： 防御等级提高50。|r", --49309
 "|cffa335ed纯净的龙鳞碎片|r£|cff00ff00装备： 每5秒回复|r|cff7f7f7f85|r|cff00ff00点法力值。|r", --49310
-"|cff9e9e9eMonster - Staff, Jeweled D01 Blue (Med Blue Glow)|r£ ", --49311
+"双手£ ", --49311
 "|cffa335ed纯净奥妮克希亚龙血护符|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的招架等级提高95点。|r£|cff00ff00装备： 每5秒恢复|r|cff7f7f7f89|r|cff00ff00点生命值。|r", --49312
 "|cffa335ed抛光的屠龙者的徽记|r£|cff00ff00装备： 爆击等级提高47点。|r£|cff00ff00装备： 法术强度提高78点。|r", --49313
 "|cffa335ed闪耀的奥妮克希亚龙牙坠饰|r£|cff00ff00装备： 命中等级提高41点。|r£|cff00ff00装备： 爆击等级提高46点。|r£|cff00ff00装备： 攻击强度提高85点。|r", --49314
@@ -42639,7 +42640,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff1eff00金链子|r£拾取后绑定£唯一£持续时间：1天£|cff00ff00使用： 召唤一位暗夜精灵莫霍克 （10分钟冷却）|r", --49349
 "香水中和剂£拾取后绑定£唯一£|cff00ff00使用： 消除诱惑香水的有害效果。施法者同时只能对一种“香味”免疫。 （15秒冷却）|r", --49351
 "古龙水中和剂£拾取后绑定£唯一£|cff00ff00使用： 移除无法抗拒的古龙水的负面效果。施法者一次只能对一种香气免疫。 （15秒冷却）|r", --49352
-"|cff0070ddMonster - Polearm, Epic D 02 Glow Red Low, On Fire (Onyxia Special)|r£ ", --49353
+"双手£ ", --49353
 "|cffa335edMonster - Mace, 1H Tauren (Red, Fire)|r£|cff00ff00装备： 爆击等级提高28点。|r£|cff00ff00装备： 急速等级提高25点。|r", --49357
 "|cff9e9e9eMonster - Mace, Tauren Spiked (Lightning)|r£ ", --49358
 "奥妮克希亚龙宝宝£账号绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --49362
@@ -43030,7 +43031,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed皇家血色披风|r£|cff00ff00装备： 防御等级提高60。|r£|cff00ff00装备： 使你的躲闪等级提高60点。|r£|cff00ff00装备： 命中等级提高38点。|r", --50074
 "|cffa335ed塔达拉姆的板铸拳套|r£|cff00ff00装备： 防御等级提高63。|r£|cff00ff00装备： 使你的躲闪等级提高47点。|r£|cff00ff00装备： 使你的招架等级提高63点。|r", --50075
 "宠物预习：专家必读£拾取后绑定£唯一£|cff00ff00使用： 使你当前的宠物等级与你的等级相同。|r", --50076
-"急速凋零雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的急速效果现在可以缩短腐蚀术造成的周期性伤害间隔。|r", --50077
+"急速凋零雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你的急速效果现在可以缩短腐蚀术造成的周期性伤害间隔。|r", --50077
 "|cffa335ed伊米亚之王战甲|r£|cff00ff00装备： 爆击等级提高96点。|r£|cff00ff00装备： 使你的护甲穿透提高80点。|r", --50078
 "|cffa335ed伊米亚之王护手|r£|cff00ff00装备： 命中等级提高63点。|r£|cff00ff00装备： 爆击等级提高71点。|r", --50079
 "|cffa335ed伊米亚之王头盔|r£|cff00ff00装备： 爆击等级提高88点。|r£|cff00ff00装备： 使你的护甲穿透提高80点。|r", --50080
@@ -43071,7 +43072,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "弗拉斯·席比的稀世增高酒£|cff00ff00使用： 喝下这瓶酒。 （1分钟冷却）|r£|cffffd100\"喝一口长一节\"|r", --50164
 "技巧：永恒之水雕文£使用： 教你学会铭刻永恒之水雕文。£\n永恒之水雕文£法师£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你所召唤的水元素现在可以一直协同你作战，但水元素无法施放冰冻术。|r£\n需要虚灵墨水, 坚韧羊皮纸", --50166
 "技巧：急速回春雕文£使用： 教你学会铭刻急速回春雕文。£\n急速回春雕文£德鲁伊£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的急速效果现在可以缩短回春术造成的周期性治疗间隔。|r£\n需要海洋墨水, 坚韧羊皮纸", --50167
-"技巧：急速凋零雕文£使用： 教你学会铭刻急速凋零雕文。£\n急速凋零雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£|cff66baff大型雕文|r£|cff00ff00使用： 你的急速效果现在可以缩短腐蚀术造成的周期性伤害间隔。|r£\n需要海洋墨水, 坚韧羊皮纸", --50168
+"技巧：急速凋零雕文£使用： 教你学会铭刻急速凋零雕文。£\n急速凋零雕文£术士£种族：人类, 兽人, 矮人, 暗夜精灵, 亡灵, 牛头人, 侏儒, 巨魔, 血精灵, 德莱尼£职业：术士£|cff66baff大型雕文|r£|cff00ff00使用： 你的急速效果现在可以缩短腐蚀术造成的周期性伤害间隔。|r£\n需要海洋墨水, 坚韧羊皮纸", --50168
 "|cffa335ed老爹的最新款飞刀|r£|cff00ff00装备： 爆击等级提高26点。|r£|cff00ff00装备： 急速等级提高23点。|r£|cff00ff00装备： 攻击强度提高54点。|r", --50169
 "|cffa335ed瓦拉纳的备用徽记之戒|r£|cff00ff00装备： 命中等级提高38点。|r£|cff00ff00装备： 急速等级提高69点。|r£|cff00ff00装备： 法术强度提高97点。|r", --50170
 "|cffa335ed覆霜荆棘肩甲|r£|cff00ff00装备： 急速等级提高64点。|r£|cff00ff00装备： 法术强度提高122点。|r", --50171
@@ -43211,10 +43212,10 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335edIcecrown-25 Heroic Loot Token|r£拾取后绑定£手腕£1105点护甲", --50331
 "|cffa335edIcecrown-25 Normal Loot Token|r£拾取后绑定£手腕£1105点护甲", --50332
 "|cffa335ed托斯克的巨型腕甲|r£|cff00ff00装备： 爆击等级提高52点。|r£|cff00ff00装备： 攻击强度提高105点。|r£|cff00ff00装备： 使你的护甲穿透提高60点。|r", --50333
-"|cff00ccff强效利斧铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附加攻击强度提高40点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50335
-"|cff00ccff强效峭壁铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、每5秒恢复8点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50336
-"|cff00ccff强效巅峰铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附加躲闪等级提高20、防御等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50337
-"|cff00ccff强效风暴铭文|r£账号绑定£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50338
+"|cff00ccff强效利斧铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附加攻击强度提高40点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50335
+"|cff00ccff强效峭壁铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、每5秒恢复8点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50336
+"|cff00ccff强效巅峰铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附加躲闪等级提高20、防御等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50337
+"|cff00ccff强效风暴铭文|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件肩部装备附魔，使其获得法术强度提高24点、爆击等级提高15的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50338
 "|cffa335ed纯冰薄片|r£|cff00ff00装备： 法术强度提高158点。|r£|cff00ff00使用： 恢复|r|cff7f7f7f1625|r|cff00ff00点法力值。 （2分钟冷却）|r", --50339
 "|cffa335ed穆拉丁的望远镜|r£|cff00ff00装备： 爆击等级提高131点。|r£|cff00ff00装备： 每当你对敌人造成法术伤害，你即可在接下来的10秒内获得18点法术强度加成，该效果最多可叠加10次。|r", --50340
 "|cffa335ed未鉴定的器官|r£|cff00ff00装备： 每当你成功躲闪，你就有60%的几率在接下来的10秒内获得24点耐力加成，该效果最多可叠加10次。|r", --50341
@@ -43241,12 +43242,12 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed完美之牙|r£|cff00ff00使用： 对奥术、火焰、冰霜、自然、暗影等法术的抗性提高268，持续10秒。 （1分钟冷却）|r", --50364
 "|cffa335ed无名巫妖的护符匣|r£|cff00ff00装备： 爆击等级提高172点。|r£|cff00ff00装备： 你的持续伤害法术每次对敌人造成伤害，都有一定几率获得1207点法术强度加成，持续20秒。|r", --50365
 "|cffa335ed阿尔索的算盘|r£|cff00ff00装备： 法术强度提高201点。|r£|cff00ff00装备： 每当你的法术治疗了一个目标，你都有一定几率使附近的另一个友方目标立即恢复6280到|r|cff7f7f7f7298|r|cff00ff00点生命值。|r", --50366
-"|cff00ccff折磨秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得攻击强度提高50点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50367
-"|cff00ccff燃烧谜团秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50368
-"|cff00ccff坚定防御者秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得耐力提高37点、防御等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50369
-"|cff00ccff祝福治愈秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、每5秒恢复10点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50370
-"|cff00ccff凶残角斗士秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50372
-"|cff00ccff凶残角斗士秘药|r£账号绑定£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50373
+"|cff00ccff折磨秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得攻击强度提高50点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50367
+"|cff00ccff燃烧谜团秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、爆击等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50368
+"|cff00ccff坚定防御者秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得耐力提高37点、防御等级提高20的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50369
+"|cff00ccff祝福治愈秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附魔，使其获得法术强度提高30点、每5秒恢复10点法力值的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50370
+"|cff00ccff凶残角斗士秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50372
+"|cff00ccff凶残角斗士秘药|r£绑定至暴雪游戏通行证£|cff00ff00使用： 永久性地为一件头部装备附加耐力提高30点、韧性等级提高25的效果。\r\n\r\n附魔之后，该装备会与你绑定。|r", --50373
 "|cffa335ed勇气之灰烬指环|r£|cff00ff00装备： 防御等级提高53。|r£|cff00ff00装备： 使你的躲闪等级提高53点。|r£|cff00ff00装备： 命中等级提高47点。|r", --50375
 "|cffa335ed复仇之灰烬指环|r£|cff00ff00装备： 命中等级提高53点。|r£|cff00ff00装备： 爆击等级提高53点。|r£|cff00ff00装备： 攻击强度提高114点。|r", --50376
 "|cffa335ed毁灭之灰烬指环|r£|cff00ff00装备： 命中等级提高47点。|r£|cff00ff00装备： 急速等级提高57点。|r£|cff00ff00装备： 法术强度提高94点。|r", --50377
@@ -44534,7 +44535,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cff0070dd蓝色发条战士|r£拾取后绑定£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --54436
 "|cff1eff00绿色洋娃娃|r£拾取后绑定£唯一£|cff00ff00使用： 右键点击来放置一个绿色洋娃娃。 （30分钟冷却）|r", --54437
 "|cff1eff00蓝色洋娃娃|r£拾取后绑定£唯一£|cff00ff00使用： 右键点击来放置一个蓝色洋娃娃。 （30分钟冷却）|r", --54438
-"|cff0070dd虚灵之门|r£拾取后绑定£|cff00ff00使用： 将你传送回寒脊山谷。与城镇中的旅店老板交谈可以改变你所设定的家的位置。 （30分钟冷却）|r£|cffffd100\"卡雷什的魔力之作现在听你号令。\"|r", --54452
+"|cff0070dd虚灵之门|r£拾取后绑定£|cff00ff00使用： 将你传送回北郡山谷。与城镇中的旅店老板交谈可以改变你所设定的家的位置。 （30分钟冷却）|r£|cffffd100\"卡雷什的魔力之作现在听你号令。\"|r", --54452
 "彩弹£拾取后绑定£|cff00ff00使用： 向敌对玩家投掷颜料弹。 （1秒冷却）|r", --54455
 "战袍认领箱£拾取后绑定£唯一£|cffffd100\"装有丢失之后无法补办的战袍。\"|r", --54467
 "|cff9e9e9e味道刺鼻的卫生球|r£|cffffd100\"让你的战袍远离虫害困扰。\"|r", --54468
@@ -44580,7 +44581,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335ed苏利萨斯鳞甲护腕|r£|cff00ff00装备： 爆击等级提高38点。|r£|cff00ff00装备： 急速等级提高41点。|r£|cff00ff00装备： 法术强度提高69点。|r", --54592
 "|cff9e9e9eMonster - Item, Orb - A01 Ice|r£ ", --54612
 "暗矛斗篷£ ", --54617
-"|cffa335ed战斗的奖励|r£拾取后绑定£唯一（10）£|cff00ff00使用： 使你获得185点荣誉值。 （2秒冷却）|r", --54637
+"|cffa335ed战斗的奖励|r£拾取后绑定£|cff00ff00使用： 使你获得185点荣誉值。 （2秒冷却）|r", --54637
 "|cff0070dd诺莫瑞根的荣耀|r£拾取后绑定£|cff00ff00使用： 变为诺莫瑞根步兵。 （4小时冷却）|r", --54651
 "|cff0070dd暗矛的荣耀|r£拾取后绑定£|cff00ff00使用： 变为一名暗矛战士。 （4小时冷却）|r", --54653
 "|cffa335ed凝霜飞毯|r£拾取后绑定£坐骑£|cff00ff00使用： 教你学会如何召唤这种飞毯。只能在外域或诺森德使用。这是一种速度非常快的飞毯。|r", --54797
@@ -44598,6 +44599,7 @@ WoWeuCN_Tooltips_ItemData_0 = {
 "|cffa335edFrost Witch's Shoulderpads (Test)|r£|cff00ff00装备： 爆击等级提高71点。|r£|cff00ff00装备： 急速等级提高63点。|r£|cff00ff00装备： 法术强度提高116点。|r", --54848
 "|cff0070dd莫叽姆斯的小矛|r£拾取后绑定£唯一£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --54857
 "|cffa335edX-53型观光火箭|r£拾取后绑定£唯一£坐骑£|cff00ff00使用： 教你学会召唤这种坐骑。|r", --54860
+"|cff0070dd迷你雷神|r£账号绑定£|cff00ff00使用： 教会你如何召唤迷你雷神。|r", --56806
  };
 end
 
@@ -84770,11 +84772,11 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40165,
 40166,
 40167,nil,
-40168,nil,
-40169,nil,nil,
-40170,nil,nil,nil,nil,nil,
+40168,
+40169,
+40170,nil,nil,
 40171,nil,nil,nil,nil,nil,
-40172,
+40172,nil,nil,nil,nil,nil,
 40173,
 40174,
 40175,
@@ -84793,8 +84795,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40188,
 40189,
 40190,
-40191,nil,
-40192,
+40191,
+40192,nil,
 40193,
 40194,
 40195,
@@ -84904,8 +84906,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40299,
 40300,
 40301,
-40302,nil,
-40303,
+40302,
+40303,nil,
 40304,
 40305,
 40306,
@@ -84938,10 +84940,10 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40333,
 40334,
 40335,
-40336,nil,
-40337,
-40338,nil,
-40339,
+40336,
+40337,nil,
+40338,
+40339,nil,
 40340,
 40341,
 40342,
@@ -84973,8 +84975,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40368,
 40369,
 40370,
-40371,nil,
-40372,
+40371,
+40372,nil,
 40373,
 40374,
 40375,
@@ -84991,8 +84993,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40386,
 40387,
 40388,
-40389,nil,
-40390,
+40389,
+40390,nil,
 40391,
 40392,
 40393,
@@ -85072,8 +85074,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40467,
 40468,
 40469,
-40470,nil,
-40471,
+40470,
+40471,nil,
 40472,
 40473,
 40474,
@@ -85152,16 +85154,16 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40547,
 40548,
 40549,
-40550,nil,nil,
-40551,
-40552,nil,nil,nil,nil,nil,
-40553,
+40550,
+40551,nil,nil,
+40552,
+40553,nil,nil,nil,nil,nil,
 40554,
 40555,
 40556,
 40557,
-40558,nil,
-40559,
+40558,
+40559,nil,
 40560,
 40561,
 40562,
@@ -85171,8 +85173,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40566,
 40567,
 40568,
-40569,nil,nil,
-40570,
+40569,
+40570,nil,nil,
 40571,
 40572,
 40573,
@@ -85184,28 +85186,28 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40579,
 40580,
 40581,
-40582,nil,nil,nil,nil,nil,nil,
-40583,
+40582,
+40583,nil,nil,nil,nil,nil,nil,
 40584,
 40585,
 40586,
-40587,nil,
-40588,nil,nil,
-40589,
+40587,
+40588,nil,
+40589,nil,nil,
 40590,
-40591,nil,
-40592,
+40591,
+40592,nil,
 40593,
 40594,
-40595,nil,
-40596,
+40595,
+40596,nil,
 40597,
 40598,
 40599,
 40600,
 40601,
-40602,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-40603,
+40602,
+40603,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40604,
 40605,
 40606,
@@ -85215,27 +85217,27 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40610,
 40611,
 40612,
-40613,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-40614,
-40615,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-40616,
-40617,nil,
-40618,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-40619,
+40613,
+40614,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+40615,
+40616,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+40617,
+40618,nil,
+40619,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40620,
 40621,
 40622,
-40623,nil,nil,nil,nil,nil,nil,
-40624,nil,nil,nil,nil,
-40625,nil,
-40626,nil,nil,nil,nil,nil,nil,nil,
-40627,nil,
-40628,
+40623,
+40624,nil,nil,nil,nil,nil,nil,
+40625,nil,nil,nil,nil,
+40626,nil,
+40627,nil,nil,nil,nil,nil,nil,nil,
+40628,nil,
 40629,
 40630,
-40631,nil,
-40632,nil,nil,
-40633,
+40631,
+40632,nil,
+40633,nil,nil,
 40634,
 40635,
 40636,
@@ -85244,8 +85246,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40639,
 40640,
 40641,
-40642,nil,nil,
-40643,
+40642,
+40643,nil,nil,
 40644,
 40645,
 40646,
@@ -85257,54 +85259,54 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40652,
 40653,
 40654,
-40655,nil,nil,nil,nil,nil,nil,nil,
-40656,nil,nil,
-40657,
+40655,
+40656,nil,nil,nil,nil,nil,nil,nil,
+40657,nil,nil,
 40658,
-40659,nil,nil,
-40660,
-40661,nil,nil,nil,nil,nil,nil,nil,nil,
-40662,nil,nil,
-40663,
-40664,nil,nil,
-40665,nil,
-40666,
+40659,
+40660,nil,nil,
+40661,
+40662,nil,nil,nil,nil,nil,nil,nil,nil,
+40663,nil,nil,
+40664,
+40665,nil,nil,
+40666,nil,
 40667,
 40668,
 40669,
 40670,
-40671,nil,
-40672,
-40673,nil,
-40674,
+40671,
+40672,nil,
+40673,
+40674,nil,
 40675,
 40676,
 40677,
 40678,
 40679,
-40680,nil,
-40681,
-40682,nil,nil,
-40683,nil,nil,nil,nil,nil,
-40684,
-40685,nil,nil,nil,nil,nil,
-40686,nil,
-40687,
+40680,
+40681,nil,
+40682,
+40683,nil,nil,
+40684,nil,nil,nil,nil,nil,
+40685,
+40686,nil,nil,nil,nil,nil,
+40687,nil,
 40688,
 40689,
 40690,
 40691,
 40692,
-40693,nil,
+40693,
 40694,nil,
-40695,nil,nil,
-40696,nil,
-40697,nil,nil,nil,nil,
-40698,
+40695,nil,
+40696,nil,nil,
+40697,nil,
+40698,nil,nil,nil,nil,
 40699,
-40700,nil,nil,nil,nil,nil,nil,nil,nil,
-40701,nil,nil,nil,
-40702,
+40700,
+40701,nil,nil,nil,nil,nil,nil,nil,nil,
+40702,nil,nil,nil,
 40703,
 40704,
 40705,
@@ -85319,12 +85321,12 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40714,
 40715,
 40716,
-40717,nil,nil,
-40718,
+40717,
+40718,nil,nil,
 40719,
 40720,
-40721,nil,
-40722,
+40721,
+40722,nil,
 40723,
 40724,
 40725,
@@ -85450,8 +85452,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40845,
 40846,
 40847,
-40848,nil,nil,nil,nil,nil,
-40849,
+40848,
+40849,nil,nil,nil,nil,nil,
 40850,
 40851,
 40852,
@@ -85459,25 +85461,25 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40854,
 40855,
 40856,
-40857,nil,nil,nil,
-40858,
+40857,
+40858,nil,nil,nil,
 40859,
-40860,nil,nil,nil,nil,
-40861,nil,nil,
-40862,
+40860,
+40861,nil,nil,nil,nil,
+40862,nil,nil,
 40863,
 40864,
 40865,
 40866,
 40867,
-40868,nil,
-40869,
+40868,
+40869,nil,
 40870,
 40871,
 40872,
 40873,
-40874,nil,
-40875,
+40874,
+40875,nil,
 40876,
 40877,
 40878,
@@ -85501,8 +85503,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40896,
 40897,
 40898,
-40899,nil,
-40900,
+40899,
+40900,nil,
 40901,
 40902,
 40903,
@@ -85526,15 +85528,15 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40921,
 40922,
 40923,
-40924,nil,nil,nil,nil,
+40924,
 40925,nil,nil,nil,nil,
-40926,nil,nil,
-40927,
+40926,nil,nil,nil,nil,
+40927,nil,nil,
 40928,
 40929,
 40930,
-40931,nil,nil,nil,nil,
-40932,
+40931,
+40932,nil,nil,nil,nil,
 40933,
 40934,
 40935,
@@ -85553,8 +85555,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40948,
 40949,
 40950,
-40951,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-40952,
+40951,
+40952,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40953,
 40954,
 40955,
@@ -85581,8 +85583,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 40976,
 40977,
 40978,
-40979,nil,
-40980,
+40979,
+40980,nil,
 40981,
 40982,
 40983,
@@ -85713,9 +85715,9 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41108,
 41109,
 41110,
-41111,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-41112,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-41113,
+41111,
+41112,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+41113,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41114,
 41115,
 41116,
@@ -85790,8 +85792,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41185,
 41186,
 41187,
-41188,nil,
-41189,
+41188,
+41189,nil,
 41190,
 41191,
 41192,
@@ -85831,8 +85833,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41226,
 41227,
 41228,
-41229,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-41230,
+41229,
+41230,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41231,
 41232,
 41233,
@@ -85845,8 +85847,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41240,
 41241,
 41242,
-41243,nil,
-41244,
+41243,
+41244,nil,
 41245,
 41246,
 41247,
@@ -86011,8 +86013,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41406,
 41407,
 41408,
-41409,nil,nil,
-41410,
+41409,
+41410,nil,nil,
 41411,
 41412,
 41413,
@@ -86104,21 +86106,21 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41499,
 41500,
 41501,
-41502,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-41503,
+41502,
+41503,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41504,
-41505,nil,
+41505,
 41506,nil,
-41507,
+41507,nil,
 41508,
 41509,
 41510,
-41511,nil,
+41511,
 41512,nil,
 41513,nil,
 41514,nil,
-41515,nil,nil,
-41516,
+41515,nil,
+41516,nil,nil,
 41517,
 41518,
 41519,
@@ -86180,8 +86182,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41575,
 41576,
 41577,
-41578,nil,
-41579,
+41578,
+41579,nil,
 41580,
 41581,
 41582,
@@ -86370,16 +86372,16 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41765,
 41766,
 41767,
-41768,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-41769,nil,
+41768,
+41769,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41770,nil,
 41771,nil,
 41772,nil,
 41773,nil,
 41774,nil,
 41775,nil,
-41776,nil,nil,
-41777,
+41776,nil,
+41777,nil,nil,
 41778,
 41779,
 41780,
@@ -86497,8 +86499,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41892,
 41893,
 41894,
-41895,nil,nil,
-41896,
+41895,
+41896,nil,nil,
 41897,
 41898,
 41899,
@@ -86558,8 +86560,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 41953,
 41954,
 41955,
-41956,nil,
-41957,
+41956,
+41957,nil,
 41958,
 41959,
 41960,
@@ -86647,30 +86649,30 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42042,
 42043,
 42044,
-42045,nil,
+42045,
 42046,nil,
 42047,nil,
 42048,nil,
 42049,nil,
 42050,nil,
 42051,nil,
-42052,nil,nil,nil,
-42053,nil,
+42052,nil,
+42053,nil,nil,nil,
 42054,nil,
 42055,nil,
 42056,nil,
 42057,nil,
-42058,
+42058,nil,
 42059,
-42060,nil,
-42061,
-42062,nil,
-42063,
-42064,nil,
+42060,
+42061,nil,
+42062,
+42063,nil,
+42064,
 42065,nil,
 42066,nil,
 42067,nil,
-42068,
+42068,nil,
 42069,
 42070,
 42071,
@@ -86696,12 +86698,12 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42091,
 42092,
 42093,
-42094,nil,
+42094,
 42095,nil,
 42096,nil,
 42097,nil,
 42098,nil,
-42099,
+42099,nil,
 42100,
 42101,
 42102,
@@ -86726,7 +86728,7 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42121,
 42122,
 42123,
-42124,nil,
+42124,
 42125,nil,
 42126,nil,
 42127,nil,
@@ -86735,13 +86737,13 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42130,nil,
 42131,nil,
 42132,nil,
-42133,nil,nil,nil,
-42134,nil,
+42133,nil,
+42134,nil,nil,nil,
 42135,nil,
 42136,nil,
 42137,nil,
 42138,nil,
-42139,
+42139,nil,
 42140,
 42141,
 42142,
@@ -86766,12 +86768,12 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42161,
 42162,
 42163,
-42164,nil,
+42164,
 42165,nil,
 42166,nil,
-42167,nil,nil,nil,
-42168,nil,
-42169,
+42167,nil,
+42168,nil,nil,nil,
+42169,nil,
 42170,
 42171,
 42172,
@@ -86796,8 +86798,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42191,
 42192,
 42193,
-42194,nil,
-42195,
+42194,
+42195,nil,
 42196,
 42197,
 42198,
@@ -86857,9 +86859,9 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42252,
 42253,
 42254,
-42255,nil,
-42256,nil,nil,
-42257,
+42255,
+42256,nil,
+42257,nil,nil,
 42258,
 42259,
 42260,
@@ -86868,7 +86870,7 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42263,
 42264,
 42265,
-42266,nil,
+42266,
 42267,nil,
 42268,nil,
 42269,nil,
@@ -86883,19 +86885,19 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42278,nil,
 42279,nil,
 42280,nil,
-42281,nil,nil,
-42282,
+42281,nil,
+42282,nil,nil,
 42283,
 42284,
 42285,
 42286,
 42287,
-42288,nil,
+42288,
 42289,nil,
 42290,nil,
 42291,nil,
 42292,nil,
-42293,
+42293,nil,
 42294,
 42295,
 42296,
@@ -86935,8 +86937,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42330,
 42331,
 42332,
-42333,nil,nil,nil,nil,
-42334,
+42333,
+42334,nil,nil,nil,nil,
 42335,
 42336,
 42337,
@@ -86945,8 +86947,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42340,
 42341,
 42342,
-42343,nil,nil,
-42344,
+42343,
+42344,nil,nil,
 42345,
 42346,
 42347,
@@ -86955,8 +86957,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42350,
 42351,
 42352,
-42353,nil,nil,nil,
-42354,
+42353,
+42354,nil,nil,nil,
 42355,
 42356,
 42357,
@@ -86995,8 +86997,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42390,
 42391,
 42392,
-42393,nil,nil,
-42394,
+42393,
+42394,nil,nil,
 42395,
 42396,
 42397,
@@ -87015,8 +87017,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42410,
 42411,
 42412,
-42413,nil,nil,nil,nil,
-42414,
+42413,
+42414,nil,nil,nil,nil,
 42415,
 42416,
 42417,
@@ -87075,8 +87077,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42470,
 42471,
 42472,
-42473,nil,nil,
-42474,
+42473,
+42474,nil,nil,
 42475,
 42476,
 42477,
@@ -87085,16 +87087,16 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42480,
 42481,
 42482,
-42483,nil,
-42484,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42485,nil,
+42483,
+42484,nil,
+42485,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42486,nil,
-42487,nil,nil,nil,nil,
-42488,
+42487,nil,
+42488,nil,nil,nil,nil,
 42489,
 42490,
-42491,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42492,
+42491,
+42492,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42493,
 42494,
 42495,
@@ -87103,83 +87105,83 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42498,
 42499,
 42500,
-42501,nil,nil,nil,
-42502,
-42503,nil,
-42504,
+42501,
+42502,nil,nil,nil,
+42503,
+42504,nil,
 42505,
 42506,
 42507,
-42508,nil,nil,
-42509,
+42508,
+42509,nil,nil,
 42510,
 42511,
-42512,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42513,nil,
+42512,
+42513,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42514,nil,
 42515,nil,
 42516,nil,
-42517,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42518,nil,nil,nil,
-42519,nil,
-42520,nil,nil,nil,
-42521,nil,
+42517,nil,
+42518,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42519,nil,nil,nil,
+42520,nil,
+42521,nil,nil,nil,
 42522,nil,
-42523,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42524,nil,
+42523,nil,
+42524,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42525,nil,
 42526,nil,
 42527,nil,
 42528,nil,
-42529,nil,nil,nil,
-42530,nil,
-42531,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42532,nil,
-42533,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42534,nil,
-42535,nil,nil,nil,
-42536,nil,
+42529,nil,
+42530,nil,nil,nil,
+42531,nil,
+42532,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42533,nil,
+42534,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42535,nil,
+42536,nil,nil,nil,
 42537,nil,
-42538,
-42539,nil,
-42540,
-42541,nil,
+42538,nil,
+42539,
+42540,nil,
+42541,
 42542,nil,
-42543,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42544,nil,nil,nil,
-42545,nil,
+42543,nil,
+42544,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42545,nil,nil,nil,
 42546,nil,
 42547,nil,
 42548,nil,
-42549,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42550,nil,
+42549,nil,
+42550,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42551,nil,
 42552,nil,
 42553,nil,
 42554,nil,
 42555,nil,
 42556,nil,
-42557,
+42557,nil,
 42558,
-42559,nil,nil,nil,nil,
-42560,nil,nil,nil,nil,nil,nil,
-42561,
-42562,nil,nil,
-42563,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42564,
+42559,
+42560,nil,nil,nil,nil,
+42561,nil,nil,nil,nil,nil,nil,
+42562,
+42563,nil,nil,
+42564,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42565,
-42566,nil,
-42567,nil,nil,nil,
-42568,
+42566,
+42567,nil,
+42568,nil,nil,nil,
 42569,
 42570,
 42571,
 42572,
 42573,
 42574,
-42575,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42576,nil,nil,nil,
-42577,
+42575,
+42576,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42577,nil,nil,nil,
 42578,
 42579,
 42580,
@@ -87196,8 +87198,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42591,
 42592,
 42593,
-42594,nil,
-42595,
+42594,
+42595,nil,
 42596,
 42597,
 42598,
@@ -87231,29 +87233,29 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42626,
 42627,
 42628,
-42629,nil,nil,nil,nil,
-42630,
+42629,
+42630,nil,nil,nil,nil,
 42631,
 42632,
 42633,
 42634,
 42635,
-42636,nil,nil,
-42637,nil,
-42638,
+42636,
+42637,nil,nil,
+42638,nil,
 42639,
-42640,nil,nil,nil,
-42641,
-42642,nil,nil,nil,
-42643,
-42644,nil,nil,nil,nil,nil,nil,nil,nil,
-42645,
+42640,
+42641,nil,nil,nil,
+42642,
+42643,nil,nil,nil,
+42644,
+42645,nil,nil,nil,nil,nil,nil,nil,nil,
 42646,
-42647,nil,nil,
-42648,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42649,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42650,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42651,
+42647,
+42648,nil,nil,
+42649,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42650,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42651,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42652,
 42653,
 42654,
@@ -87291,28 +87293,28 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42686,
 42687,
 42688,
-42689,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42690,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42691,nil,nil,nil,nil,nil,nil,nil,
-42692,
+42689,
+42690,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42691,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42692,nil,nil,nil,nil,nil,nil,nil,
 42693,
 42694,
 42695,
 42696,
 42697,
 42698,
-42699,nil,
-42700,
-42701,nil,
-42702,
+42699,
+42700,nil,
+42701,
+42702,nil,
 42703,
 42704,
-42705,nil,
-42706,nil,nil,nil,nil,
-42707,
+42705,
+42706,nil,
+42707,nil,nil,nil,nil,
 42708,
-42709,nil,nil,nil,nil,nil,
-42710,
+42709,
+42710,nil,nil,nil,nil,nil,
 42711,
 42712,
 42713,
@@ -87321,27 +87323,27 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42716,
 42717,
 42718,
-42719,nil,nil,nil,nil,nil,
-42720,nil,
+42719,
+42720,nil,nil,nil,nil,nil,
 42721,nil,
-42722,
+42722,nil,
 42723,
-42724,nil,
+42724,
 42725,nil,
-42726,
-42727,nil,
+42726,nil,
+42727,
 42728,nil,
-42729,
+42729,nil,
 42730,
-42731,nil,nil,nil,nil,
-42732,nil,nil,nil,
-42733,
+42731,
+42732,nil,nil,nil,nil,
+42733,nil,nil,nil,
 42734,
-42735,nil,
+42735,
 42736,nil,
-42737,
-42738,nil,nil,nil,
-42739,
+42737,nil,
+42738,
+42739,nil,nil,nil,
 42740,
 42741,
 42742,
@@ -87368,21 +87370,21 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42763,
 42764,
 42765,
-42766,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42767,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-42768,
+42766,
+42767,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+42768,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42769,
 42770,
-42771,nil,
-42772,
+42771,
+42772,nil,
 42773,
-42774,nil,nil,nil,nil,
-42775,
+42774,
+42775,nil,nil,nil,nil,
 42776,
-42777,nil,
-42778,
-42779,nil,nil,nil,nil,
-42780,
+42777,
+42778,nil,
+42779,
+42780,nil,nil,nil,nil,
 42781,
 42782,
 42783,
@@ -87413,8 +87415,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42808,
 42809,
 42810,
-42811,nil,
-42812,
+42811,
+42812,nil,
 42813,
 42814,
 42815,
@@ -87447,8 +87449,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42842,
 42843,
 42844,
-42845,nil,
-42846,
+42845,
+42846,nil,
 42847,
 42848,
 42849,
@@ -87458,19 +87460,19 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42853,
 42854,
 42855,
-42856,nil,nil,
-42857,
-42858,nil,
-42859,
+42856,
+42857,nil,nil,
+42858,
+42859,nil,
 42860,
 42861,
 42862,
 42863,
 42864,
-42865,nil,nil,nil,nil,nil,
-42866,nil,nil,nil,nil,nil,nil,
-42867,nil,
-42868,
+42865,
+42866,nil,nil,nil,nil,nil,
+42867,nil,nil,nil,nil,nil,nil,
+42868,nil,
 42869,
 42870,
 42871,
@@ -87491,24 +87493,24 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42886,
 42887,
 42888,
-42889,nil,nil,
-42890,
-42891,nil,
-42892,
+42889,
+42890,nil,nil,
+42891,
+42892,nil,
 42893,
 42894,
 42895,
 42896,
-42897,nil,
-42898,
+42897,
+42898,nil,
 42899,
 42900,
 42901,
 42902,
-42903,nil,nil,nil,
-42904,nil,
+42903,
+42904,nil,nil,nil,
 42905,nil,
-42906,
+42906,nil,
 42907,
 42908,
 42909,
@@ -87516,8 +87518,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42911,
 42912,
 42913,
-42914,nil,nil,nil,nil,nil,
-42915,
+42914,
+42915,nil,nil,nil,nil,nil,
 42916,
 42917,
 42918,
@@ -87571,18 +87573,18 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42966,
 42967,
 42968,
-42969,nil,
-42970,
-42971,nil,
-42972,
+42969,
+42970,nil,
+42971,
+42972,nil,
 42973,
 42974,
 42975,
-42976,nil,
-42977,
+42976,
+42977,nil,
 42978,
-42979,nil,nil,
-42980,
+42979,
+42980,nil,nil,
 42981,
 42982,
 42983,
@@ -87591,9 +87593,9 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42986,
 42987,
 42988,
-42989,nil,
+42989,
 42990,nil,
-42991,
+42991,nil,
 42992,
 42993,
 42994,
@@ -87604,26 +87606,26 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 42999,
 43000,
 43001,
-43002,nil,
-43003,
+43002,
+43003,nil,
 43004,
 43005,
 43006,
 43007,
 43008,
 43009,
-43010,nil,nil,
-43011,
+43010,
+43011,nil,nil,
 43012,
-43013,nil,
-43014,
+43013,
+43014,nil,
 43015,
 43016,
 43017,
 43018,
 43019,
-43020,nil,
-43021,
+43020,
+43021,nil,
 43022,
 43023,
 43024,
@@ -87638,8 +87640,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43033,
 43034,
 43035,
-43036,nil,nil,nil,nil,
-43037,
+43036,
+43037,nil,nil,nil,nil,
 43038,
 43039,
 43040,
@@ -87650,29 +87652,29 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43045,
 43046,
 43047,
-43048,nil,nil,nil,nil,nil,nil,
-43049,
+43048,
+43049,nil,nil,nil,nil,nil,nil,
 43050,
 43051,
 43052,
-43053,nil,nil,nil,
-43054,
+43053,
+43054,nil,nil,nil,
 43055,
 43056,
 43057,
 43058,
-43059,nil,nil,nil,nil,nil,nil,
-43060,nil,nil,nil,
-43061,
+43059,
+43060,nil,nil,nil,nil,nil,nil,
+43061,nil,nil,nil,
 43062,
 43063,
 43064,
-43065,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-43066,
-43067,nil,
-43068,
-43069,nil,
-43070,
+43065,
+43066,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+43067,
+43068,nil,
+43069,
+43070,nil,
 43071,
 43072,
 43073,
@@ -87694,8 +87696,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43089,
 43090,
 43091,
-43092,nil,
-43093,
+43092,
+43093,nil,
 43094,
 43095,
 43096,
@@ -87704,8 +87706,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43099,
 43100,
 43101,
-43102,nil,nil,
-43103,
+43102,
+43103,nil,nil,
 43104,
 43105,
 43106,
@@ -87720,36 +87722,36 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43115,
 43116,
 43117,
-43118,nil,nil,nil,
-43119,nil,nil,
-43120,
+43118,
+43119,nil,nil,nil,
+43120,nil,nil,
 43121,
 43122,
 43123,
 43124,
 43125,
 43126,
-43127,nil,
-43128,
+43127,
+43128,nil,
 43129,
-43130,nil,nil,nil,nil,
-43131,
+43130,
+43131,nil,nil,nil,nil,
 43132,
 43133,
 43134,
-43135,nil,nil,nil,
-43136,
+43135,
+43136,nil,nil,nil,
 43137,
 43138,
 43139,
-43140,nil,
-43141,
+43140,
+43141,nil,
 43142,
 43143,
-43144,nil,
-43145,
-43146,nil,
-43147,
+43144,
+43145,nil,
+43146,
+43147,nil,
 43148,
 43149,
 43150,
@@ -87766,13 +87768,13 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43161,
 43162,
 43163,
-43164,nil,nil,nil,
-43165,
+43164,
+43165,nil,nil,nil,
 43166,
 43167,
 43168,
-43169,nil,
-43170,
+43169,
+43170,nil,
 43171,
 43172,
 43173,
@@ -87803,8 +87805,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43198,
 43199,
 43200,
-43201,nil,nil,nil,
-43202,
+43201,
+43202,nil,nil,nil,
 43203,
 43204,
 43205,
@@ -87813,8 +87815,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43208,
 43209,
 43210,
-43211,nil,
-43212,
+43211,
+43212,nil,
 43213,
 43214,
 43215,
@@ -87825,10 +87827,10 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43220,
 43221,
 43222,
-43223,nil,
-43224,
-43225,nil,
-43226,
+43223,
+43224,nil,
+43225,
+43226,nil,
 43227,
 43228,
 43229,
@@ -87847,24 +87849,24 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43242,
 43243,
 43244,
-43245,nil,
-43246,
-43247,nil,
-43248,
+43245,
+43246,nil,
+43247,
+43248,nil,
 43249,
 43250,
 43251,
 43252,
-43253,nil,nil,nil,
-43254,nil,
-43255,
+43253,
+43254,nil,nil,nil,
+43255,nil,
 43256,
-43257,nil,nil,
-43258,
+43257,
+43258,nil,nil,
 43259,
 43260,
-43261,nil,
-43262,
+43261,
+43262,nil,
 43263,
 43264,
 43265,
@@ -87872,9 +87874,9 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43267,
 43268,
 43269,
-43270,nil,
-43271,nil,nil,nil,nil,
-43272,
+43270,
+43271,nil,
+43272,nil,nil,nil,nil,
 43273,
 43274,
 43275,
@@ -87882,8 +87884,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43277,
 43278,
 43279,
-43280,nil,
-43281,
+43280,
+43281,nil,
 43282,
 43283,
 43284,
@@ -87891,17 +87893,17 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43286,
 43287,
 43288,
-43289,nil,
-43290,
+43289,
+43290,nil,
 43291,
 43292,
 43293,
-43294,nil,nil,nil,nil,nil,nil,
-43295,nil,
+43294,
+43295,nil,nil,nil,nil,nil,nil,
 43296,nil,
-43297,
-43298,nil,
-43299,
+43297,nil,
+43298,
+43299,nil,
 43300,
 43301,
 43302,
@@ -87916,16 +87918,16 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43311,
 43312,
 43313,
-43314,nil,
-43315,
+43314,
+43315,nil,
 43316,
 43317,
 43318,
 43319,
 43320,
-43321,nil,
-43322,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-43323,
+43321,
+43322,nil,
+43323,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43324,
 43325,
 43326,
@@ -87955,10 +87957,10 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43350,
 43351,
 43352,
-43353,nil,
-43354,
-43355,nil,
-43356,
+43353,
+43354,nil,
+43355,
+43356,nil,
 43357,
 43358,
 43359,
@@ -87981,13 +87983,13 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43376,
 43377,
 43378,
-43379,nil,
-43380,
+43379,
+43380,nil,
 43381,
-43382,nil,
-43383,
-43384,nil,
-43385,
+43382,
+43383,nil,
+43384,
+43385,nil,
 43386,
 43387,
 43388,
@@ -87999,8 +88001,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43394,
 43395,
 43396,
-43397,nil,
-43398,
+43397,
+43398,nil,
 43399,
 43400,
 43401,
@@ -88054,11 +88056,11 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43449,
 43450,
 43451,
-43452,nil,nil,
-43453,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-43454,
-43455,nil,nil,nil,
-43456,
+43452,
+43453,nil,nil,
+43454,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+43455,
+43456,nil,nil,nil,
 43457,
 43458,
 43459,
@@ -88070,8 +88072,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43465,
 43466,
 43467,
-43468,nil,
-43469,
+43468,
+43469,nil,
 43470,
 43471,
 43472,
@@ -88112,8 +88114,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43507,
 43508,
 43509,
-43510,nil,
-43511,
+43510,
+43511,nil,
 43512,
 43513,
 43514,
@@ -88127,8 +88129,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43522,
 43523,
 43524,
-43525,nil,
-43526,
+43525,
+43526,nil,
 43527,
 43528,
 43529,
@@ -88167,8 +88169,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43562,
 43563,
 43564,
-43565,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-43566,
+43565,
+43566,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43567,
 43568,
 43569,
@@ -88232,8 +88234,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43627,
 43628,
 43629,
-43630,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-43631,
+43630,
+43631,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 43632,
 43633,
 43634,
@@ -88653,9 +88655,9 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44048,
 44049,
 44050,
-44051,nil,nil,
-44052,nil,
-44053,
+44051,
+44052,nil,nil,
+44053,nil,
 44054,
 44055,
 44056,
@@ -88671,8 +88673,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44066,
 44067,
 44068,
-44069,nil,
-44070,
+44069,
+44070,nil,
 44071,
 44072,
 44073,
@@ -88690,8 +88692,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44085,
 44086,
 44087,
-44088,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44089,
+44088,
+44089,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44090,
 44091,
 44092,
@@ -88786,9 +88788,9 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44181,
 44182,
 44183,
-44184,nil,
-44185,nil,nil,
-44186,
+44184,
+44185,nil,
+44186,nil,nil,
 44187,
 44188,
 44189,
@@ -88798,8 +88800,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44193,
 44194,
 44195,
-44196,nil,nil,
-44197,
+44196,
+44197,nil,nil,
 44198,
 44199,
 44200,
@@ -88813,8 +88815,8 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44208,
 44209,
 44210,
-44211,nil,
-44212,
+44211,
+44212,nil,
 44213,
 44214,
 44215,
@@ -88950,11 +88952,11 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44345,
 44346,
 44347,
-44348,nil,
-44349,nil,nil,nil,nil,
-44350,
-44351,nil,nil,
-44352,
+44348,
+44349,nil,
+44350,nil,nil,nil,nil,
+44351,
+44352,nil,nil,
 44353,
 44354,
 44355,
@@ -89008,67 +89010,67 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44403,
 44404,
 44405,
-44406,nil,nil,
-44407,
-44408,nil,nil,
-44409,
+44406,
+44407,nil,nil,
+44408,
+44409,nil,nil,
 44410,
 44411,
 44412,
-44413,nil,
-44414,
+44413,
+44414,nil,
 44415,
 44416,
 44417,
 44418,
-44419,nil,nil,nil,
-44420,nil,nil,
-44421,nil,nil,nil,nil,
-44422,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44423,nil,nil,nil,
-44424,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44425,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44426,
+44419,
+44420,nil,nil,nil,
+44421,nil,nil,
+44422,nil,nil,nil,nil,
+44423,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44424,nil,nil,nil,
+44425,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44426,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44427,
-44428,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44429,
+44428,
+44429,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44430,
-44431,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44432,nil,
-44433,
+44431,
+44432,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44433,nil,
 44434,
-44435,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44436,
-44437,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44438,
-44439,nil,
-44440,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44441,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44442,
-44443,nil,
-44444,
+44435,
+44436,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44437,
+44438,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44439,
+44440,nil,
+44441,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44442,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44443,
+44444,nil,
 44445,
-44446,nil,
-44447,
+44446,
+44447,nil,
 44448,
 44449,
-44450,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44451,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44452,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44453,
-44454,nil,
-44455,nil,nil,nil,
-44456,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44457,nil,
-44458,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44459,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44460,nil,nil,nil,nil,nil,nil,
-44461,
-44462,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44463,
-44464,nil,nil,nil,nil,nil,
-44465,nil,nil,nil,nil,nil,nil,
-44466,
+44450,
+44451,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44452,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44453,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44454,
+44455,nil,
+44456,nil,nil,nil,
+44457,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44458,nil,
+44459,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44460,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44461,nil,nil,nil,nil,nil,nil,
+44462,
+44463,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44464,
+44465,nil,nil,nil,nil,nil,
+44466,nil,nil,nil,nil,nil,nil,
 44467,
 44468,
 44469,
@@ -89077,17 +89079,17 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44472,
 44473,
 44474,
-44475,nil,
-44476,nil,nil,nil,
-44477,
+44475,
+44476,nil,
+44477,nil,nil,nil,
 44478,
-44479,nil,
-44480,nil,nil,
-44481,
+44479,
+44480,nil,
+44481,nil,nil,
 44482,
-44483,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44484,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44485,
+44483,
+44484,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44485,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44486,
 44487,
 44488,
@@ -89111,43 +89113,43 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44506,
 44507,
 44508,
-44509,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44510,nil,nil,nil,
-44511,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44512,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44513,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44514,
+44509,
+44510,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44511,nil,nil,nil,
+44512,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44513,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44514,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44515,
-44516,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44517,nil,nil,nil,nil,nil,nil,nil,nil,
-44518,
+44516,
+44517,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44518,nil,nil,nil,nil,nil,nil,nil,nil,
 44519,
 44520,
 44521,
 44522,
-44523,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44524,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44525,
-44526,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44527,nil,nil,
+44523,
+44524,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44525,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44526,
+44527,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44528,nil,nil,
-44529,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44530,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44531,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44532,
+44529,nil,nil,
+44530,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44531,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44532,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44533,
-44534,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44535,nil,nil,
-44536,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44537,
+44534,
+44535,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44536,nil,nil,
+44537,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44538,
 44539,
-44540,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44541,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44542,
+44540,
+44541,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44542,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44543,
-44544,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44545,
+44544,
+44545,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44546,
 44547,
 44548,
@@ -89159,12 +89161,12 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44554,
 44555,
 44556,
-44557,nil,
+44557,
 44558,nil,
-44559,
+44559,nil,
 44560,
-44561,nil,nil,
-44562,
+44561,
+44562,nil,nil,
 44563,
 44564,
 44565,
@@ -89180,33 +89182,35 @@ nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
 44575,
 44576,
 44577,
-44578,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44579,nil,nil,nil,nil,
-44580,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44581,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44582,nil,
-44583,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44584,
-44585,nil,nil,
-44586,
+44578,
+44579,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44580,nil,nil,nil,nil,
+44581,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44582,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44583,nil,
+44584,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44585,
+44586,nil,nil,
 44587,
 44588,
 44589,
 44590,
-44591,nil,nil,nil,
-44592,
-44593,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44594,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
-44595,
-44596,nil,nil,nil,nil,nil,nil,nil,nil,
-44597,nil,nil,
-44598,
+44591,
+44592,nil,nil,nil,
+44593,
+44594,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44595,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44596,
+44597,nil,nil,nil,nil,nil,nil,nil,nil,
+44598,nil,nil,
+44599,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,nil,
+44600,
 };
 function loadItemData100000()
 WoWeuCN_Tooltips_ItemData_100000 = {
 "|cff0070dd熊猫项圈|r£拾取后绑定£唯一£|cff00ff00使用： 教你学会召唤这种小伙伴。|r", --180089
 "|cffa335ed再度觉醒的相位捕猎者|r£拾取后绑定£唯一£坐骑£需要等级 20£需要骑术（75）£|cff00ff00使用： 它在迷时之地沉眠已久，但觉醒之时已经近了。|r", --184865
-"|cff0070dd黑暗之门|r£拾取后绑定£唯一£|cff00ff00使用： 将你传送回旅店。与城镇中的旅店老板交谈可以改变你设定的家的位置。 （30分钟冷却）|r£|cffffd100\"快看，黑暗之门！呃，至少可以算是个迷你版的。\"|r", --184871
+"|cff0070dd黑暗之门|r£拾取后绑定£唯一£|cff00ff00使用： 将你传送回菲兹兰克机场。与城镇中的旅店老板交谈可以改变你设定的家的位置。 （30分钟冷却）|r£|cffffd100\"快看，黑暗之门！呃，至少可以算是个迷你版的。\"|r", --184871
 "时光祝福置换器£|cff00ff00使用： 改变时间的结构，暂停屠龙、厄运之槌、祖尔格拉布和费伍德森林的世界效果。|r", --184937
 "|cff1eff00超级充能的时光祝福置换器|r£拾取后绑定£唯一£|cff00ff00使用： 恢复你暂停的世界效果。|r", --184938
 "焰铸钥匙£拾取后绑定£唯一：焰铸钥匙（1）£|cffffd100\"允许你进入英雄难度的地狱火堡垒地下城。\"|r", --185686

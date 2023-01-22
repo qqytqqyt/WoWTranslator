@@ -187,29 +187,6 @@ function WoWeuCN_Quests_wait(delay, func, ...)
 end
 
 
-local function scanAuto(startIndex, attempt, counter)
-  if (startIndex > 70000) then
-    return;
-  end
-  if (counter == 0) then
-   print(startIndex)
-  end
-  
-  for i = startIndex, startIndex + 150 do
-   local title = C_QuestLog.GetQuestInfo(i)
-   if (title ~= '' and title ~= nil) then
-    print(title)
-   end
-  end
-  
-  WoWeuCN_Quests_QuestIndex = startIndex
-  if (counter >= 5) then
-    WoWeuCN_Quests_wait(0.2, scanAuto, startIndex + 150, attempt + 1, 0)
-  else
-    WoWeuCN_Quests_wait(0.2, scanAuto, startIndex, attempt + 1, counter + 1)
-  end
-end
-
 -- Checks the availability of Wow's special function: GetQuestID()
 function DetectEmuServer()
   WoWeuCN_Quests_PS["isGetQuestID"]="0";
@@ -303,25 +280,6 @@ function WoWeuCN_Quests_SlashCommand(msg)
          print ("WoWeuCN - 翻译NPC对话状态 : 禁用.");
       end
 
-   elseif (msg=="reset" or msg=="RESET") then
-      WoWeuCN_Quests_QuestIndex = 1;
-      print("Reset");
-    elseif (msg=="clear" or msg=="CLEAR") then
-      WoWeuCN_Quests_QuestIndex = 1;
-      WoWeuCN_Quests_QuestToolTips = {} 
-      print("Clear");
-   elseif (msg=="jump" or msg=="JUMP") then
-      WoWeuCN_Quests_QuestIndex = 63970;
-      WoWeuCN_Quests_QuestToolTips = {} 
-      print("Jump");
-   elseif (msg=="scanauto" or msg=="SCANAUTO") then
-      if (WoWeuCN_Quests_QuestToolTips == nil) then
-        WoWeuCN_Quests_QuestToolTips = {} 
-      end
-      if (WoWeuCN_Quests_QuestIndex == nil) then
-        WoWeuCN_Quests_QuestIndex = 1
-      end
-      WoWeuCN_Quests_wait(0.1, scanAuto, WoWeuCN_Quests_QuestIndex, 1, 0)
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
       InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Quests");
@@ -333,8 +291,6 @@ function WoWeuCN_Quests_SlashCommand(msg)
       print ("      /WoWeuCN title off - 禁用标题翻译");
    end
 end
-
-
 
 function WoWeuCN_Quests_SetCheckButtonState()
   WoWeuCN_QuestsCheckButton0:SetChecked(WoWeuCN_Quests_PS["active"]=="1");
