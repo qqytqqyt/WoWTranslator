@@ -713,13 +713,13 @@ local reminded = false
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
     if text == "VERSION" then
-      if sender ~= nil then
+      if sender == nil then
        C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
       else
        C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel, sender)
       end
     elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
-      local hash = string.match(text, "^.-(%d+)")
+      local hash = tonumber(string.match(text, "^.-(%d+)"))
       WoWeuCN_Tooltips_HashList[hash] = true
       WoWeuCN_Tooltips_PS["active"] = "0";
       WoWeuCN_Tooltips_Force = true
