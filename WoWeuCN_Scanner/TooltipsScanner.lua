@@ -2,6 +2,33 @@
 local WoWeuCN_Scanner_waitFrame = nil;
 local WoWeuCN_Scanner_waitTable = {};
 
+local function EnumerateTooltipStyledLines_helper(...)
+  local texts = '';
+  local hasObjectivesSet = false
+    for i = 1, select("#", ...) do
+        local region = select(i, ...)
+        if region and region:GetObjectType() == "FontString" then
+      local text = region:GetText() -- string or nil
+			if (text ~= nil) then
+        if (text ~= " ")
+          then
+            text = "{{" .. text .. "}}"
+            local r, g, b, a = region:GetTextColor()
+            text = text .. "[[" .. r .. "]]" .. "[[" .. g .. "]]" .. "[[" .. b .. "]]"
+          end
+        print(i)
+        print(text)
+        texts = texts .. text	
+			end
+        end
+	end
+	return texts
+end
+
+local function EnumerateTooltipStyledLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
+  return EnumerateTooltipStyledLines_helper(tooltip:GetRegions())
+end
+
 function WoWeuCN_Scanner_ScanClear()
     WoWeuCN_Scanner_SpellToolIndex = 1;
     WoWeuCN_Scanner_SpellToolTips0 = {} 
@@ -15,6 +42,7 @@ function WoWeuCN_Scanner_ScanClear()
     WoWeuCN_Scanner_UnitIndex = 1
     WoWeuCN_Scanner_Achivements0 = {} 
     WoWeuCN_Scanner_AchivementsIndex = 1
+    WoWeuCN_Scanner_QuestIndex = 1
     print("Clear");
 end
 
@@ -285,7 +313,7 @@ function WoWeuCN_Scanner_ScanQuestAuto(startIndex, attempt, counter)
     qcInformationTooltip:ClearLines()
     qcInformationTooltip:SetHyperlink('quest:' .. i)
     qcInformationTooltip:Show()
-    local text =  EnumerateTooltipLines(qcInformationTooltip)
+    local text =  EnumerateTooltipStyledLines(qcInformationTooltip)
     if (text ~= '' and text ~= nil) then
       WoWeuCN_Scanner_QuestToolTips[i .. ''] = text
       print(i)
@@ -295,9 +323,9 @@ function WoWeuCN_Scanner_ScanQuestAuto(startIndex, attempt, counter)
   print('index ' .. startIndex)
   WoWeuCN_Scanner_QuestIndex = startIndex
   if (counter >= 5) then
-     WoWeuCN_Scanner_wait(0.5, scanAuto, startIndex + 100, attempt + 1, 0)
+     WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanQuestAuto, startIndex + 100, attempt + 1, 0)
   else
-     WoWeuCN_Scanner_wait(0.5, scanAuto, startIndex, attempt + 1, counter + 1)
+     WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanQuestAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
@@ -330,33 +358,6 @@ function WoWeuCN_Scanner_ScanCacheAuto(startIndex, attempt, counter)
     else
       WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanCacheAuto, startIndex, attempt + 1, counter + 1)
     end
-end
-
-local function EnumerateTooltipStyledLines_helper(...)
-  local texts = '';
-  local hasObjectivesSet = false
-    for i = 1, select("#", ...) do
-        local region = select(i, ...)
-        if region and region:GetObjectType() == "FontString" then
-      local text = region:GetText() -- string or nil
-			if (text ~= nil) then
-        if (text ~= " ")
-          then
-            text = "{{" .. text .. "}}"
-            local r, g, b, a = region:GetTextColor()
-            text = text .. "[[" .. r .. "]]" .. "[[" .. g .. "]]" .. "[[" .. b .. "]]"
-          end
-        print(i)
-        print(text)
-        texts = texts .. text	
-			end
-        end
-	end
-	return texts
-end
-
-local function EnumerateTooltipStyledLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
-  return EnumerateTooltipStyledLines_helper(tooltip:GetRegions())
 end
 
 function qcInformationTooltipSetup() -- *
