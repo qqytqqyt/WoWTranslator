@@ -274,61 +274,59 @@ function WoWeuCN_Tooltips_OnLoad()
    WoWeuCN_Tooltips:SetScript("OnEvent", WoWeuCN_Tooltips_OnEvent);
    WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
    
-   if (GetLocale() ~= "zhCN") then
-    if TooltipDataProcessor then
-      TooltipDataProcessor.AddTooltipPostCall(TooltipDataProcessor.AllTypes, function(tooltip, data)
-        if not data or not data.type then return end
-        if data.type == Enum.TooltipDataType.Spell then
-          translateTooltip(tooltip, data, kinds.spell)
-        elseif data.type == Enum.TooltipDataType.Item then
-          translateTooltip(tooltip, data, kinds.item)
-        elseif data.type == Enum.TooltipDataType.Unit then
-          translateTooltip(tooltip, data, kinds.unit)
-        elseif data.type == Enum.TooltipDataType.Currency then
-          translateTooltip(tooltip, data, kinds.currency)
-        elseif data.type == Enum.TooltipDataType.UnitAura then
-          translateTooltip(tooltip, data, kinds.spell)
-        elseif data.type == Enum.TooltipDataType.Mount then
-          translateTooltip(tooltip, data, kinds.mount)
-        elseif data.type == Enum.TooltipDataType.Achievement then
-          translateTooltip(tooltip, data, kinds.achievement)
-        elseif data.type == Enum.TooltipDataType.EquipmentSet then
-          translateTooltip(tooltip, data, kinds.equipmentset)
-        elseif data.type == Enum.TooltipDataType.RecipeRankInfo then
-          translateTooltip(tooltip, data, kinds.spell)
-        elseif data.type == Enum.TooltipDataType.Totem then
-          translateTooltip(tooltip, data, kinds.spell)
-        elseif data.type == Enum.TooltipDataType.Toy then
-          translateTooltip(tooltip, data, kinds.item)
-        elseif data.type == Enum.TooltipDataType.Quest then
-          translateTooltip(tooltip, data, kinds.quest)
-        elseif data.type == Enum.TooltipDataType.Macro then
-          translateTooltip(tooltip, data, kinds.macro)
-        end
-      end)
-    end
-
-    if LootFrame then
-      hooksecurefunc(LootFrameElementMixin, "Init", function(self, ...) OnLootUpdate(self, ...) end);
-    end
-    if MerchantFrame then
-      hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function(...) OnMerchantInfoUpdate(...) end);
-    end
-    --if SpellBookFrame then
-      --hooksecurefunc("SpellBookFrame_UpdateSpells", function(...) OnSpellBookUpdate(...) end);
-    --end
-    if (_G.ElvUI ~= nil) then
-      local E, L, V, P, G = unpack(ElvUI)
-      if E then
-        local M = E:GetModule('Misc')
-        if M then
-          hooksecurefunc(M, "LOOT_OPENED", function(self, ...) OnLootUpdateElvUI(self, ...) end);
-        end
+  if TooltipDataProcessor then
+    TooltipDataProcessor.AddTooltipPostCall(TooltipDataProcessor.AllTypes, function(tooltip, data)
+      if not data or not data.type then return end
+      if data.type == Enum.TooltipDataType.Spell then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Item then
+        translateTooltip(tooltip, data, kinds.item)
+      elseif data.type == Enum.TooltipDataType.Unit then
+        translateTooltip(tooltip, data, kinds.unit)
+      elseif data.type == Enum.TooltipDataType.Currency then
+        translateTooltip(tooltip, data, kinds.currency)
+      elseif data.type == Enum.TooltipDataType.UnitAura then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Mount then
+        translateTooltip(tooltip, data, kinds.mount)
+      elseif data.type == Enum.TooltipDataType.Achievement then
+        translateTooltip(tooltip, data, kinds.achievement)
+      elseif data.type == Enum.TooltipDataType.EquipmentSet then
+        translateTooltip(tooltip, data, kinds.equipmentset)
+      elseif data.type == Enum.TooltipDataType.RecipeRankInfo then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Totem then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Toy then
+        translateTooltip(tooltip, data, kinds.item)
+      elseif data.type == Enum.TooltipDataType.Quest then
+        translateTooltip(tooltip, data, kinds.quest)
+      elseif data.type == Enum.TooltipDataType.Macro then
+        translateTooltip(tooltip, data, kinds.macro)
       end
-     end
+    end)
+  end
 
-    hooksecurefunc(GameTooltip, "SetAction", function(...) OnTooltipSetAction(...) end)
-   end
+  if LootFrame then
+    hooksecurefunc(LootFrameElementMixin, "Init", function(self, ...) OnLootUpdate(self, ...) end);
+  end
+  if MerchantFrame then
+    hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function(...) OnMerchantInfoUpdate(...) end);
+  end
+  --if SpellBookFrame then
+    --hooksecurefunc("SpellBookFrame_UpdateSpells", function(...) OnSpellBookUpdate(...) end);
+  --end
+  if (_G.ElvUI ~= nil) then
+    local E, L, V, P, G = unpack(ElvUI)
+    if E then
+      local M = E:GetModule('Misc')
+      if M then
+        hooksecurefunc(M, "LOOT_OPENED", function(self, ...) OnLootUpdateElvUI(self, ...) end);
+      end
+    end
+    end
+
+  hooksecurefunc(GameTooltip, "SetAction", function(...) OnTooltipSetAction(...) end)
    
    RegisterChatFilterEvents()
 
@@ -752,10 +750,8 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
   end
   
   if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not achievementHooked and AchievementFrame) then
-    if (GetLocale() ~= "zhCN") then
-      hooksecurefunc(AchievementTemplateMixin,"Init", function(self, ...) OnAchievement(self, ...) end);
-      hooksecurefunc("AchievementFrameSummary_UpdateAchievements", function(...) OnAchievementSummary(...) end);    
-    end
+    hooksecurefunc(AchievementTemplateMixin,"Init", function(self, ...) OnAchievement(self, ...) end);
+    hooksecurefunc("AchievementFrameSummary_UpdateAchievements", function(...) OnAchievementSummary(...) end);    
     achievementHooked = true
   end
 end
