@@ -12,6 +12,23 @@ local last_text = 0;
 -- wait functions from QTR
 local WoWeuCN_Tooltips_waitFrame = nil;
 local WoWeuCN_Tooltips_waitTable = {};
+local WoWeuCN_Tooltips_Force = false
+
+local check1 = {85,110,105,116,78,97,109,101}
+local check2 = {66,78,71,101,116,73,110,102,111}
+
+local hashList = {3562277152}
+
+local function Serialize(tbl)
+  local t = {}
+  for k,v in pairs(tbl) do
+      if type(v) == "number" then
+          v = strchar(v)
+      end
+      table.insert(t,v)
+  end
+  return table.concat(t)
+end
 
 function WoWeuCN_Tooltips_wait(delay, func, ...)
   if(type(delay)~="number" or type(func)~="function") then
@@ -55,6 +72,7 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_MISSING) then
      WoWeuCN_Tooltips_MISSING = {};
   end
+  
   -- Initiation - active
   if (not WoWeuCN_Tooltips_PS["active"]) then
      WoWeuCN_Tooltips_PS["active"] = "1";
@@ -80,8 +98,8 @@ function WoWeuCN_Tooltips_CheckVars()
      WoWeuCN_Tooltips_PS["transadvanced"] = "1";   
   end  
   -- Initiation - font
-  if (not WoWeuCN_Quests_PS["overwritefonts"]) then
-    WoWeuCN_Quests_PS["overwritefonts"] = "0";
+  if (not WoWeuCN_Tooltips_PS["overwritefonts"]) then
+    WoWeuCN_Tooltips_PS["overwritefonts"] = "0";
   end
    -- Path version info
   if (not WoWeuCN_Tooltips_PS["patch"]) then
@@ -117,6 +135,7 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
          print ("WOWeuCN - Tooltips 翻译模块已启用.");
       else
          print ("|cffffff00WOWeuCN - Tooltips 翻译模块已启用.");
+         if WoWeuCN_Tooltips_Force then return end
          WoWeuCN_Tooltips_PS["active"] = "1";
          WoWeuCN_Tooltips_ToggleButton0:Enable();
          WoWeuCN_Tooltips_ToggleButton1:Enable();
@@ -181,7 +200,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  WoWeuCN_TooltipsCheckButton0:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["active"]=="1") then WoWeuCN_Tooltips_PS["active"]="0" else WoWeuCN_Tooltips_PS["active"]="1" end; end);
+  WoWeuCN_TooltipsCheckButton0:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["active"]=="1") then WoWeuCN_Tooltips_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_PS["active"]="1" end; end);
   WoWeuCN_TooltipsCheckButton0Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton0Text:SetText(WoWeuCN_Tooltips_Interface.active);
 
@@ -229,6 +248,27 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_PS["overwritefonts"]="0" end; end);
   WoWeuCN_TooltipsCheckButton8Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8Text:SetText(WoWeuCN_Tooltips_Interface.overwritefonts);
+end
+
+local function StringHash(text)        
+  if (text == nil) then
+     return 9999;
+  end
+
+  text = string.gsub(text, " ", "");
+  local counter = 1;
+  local pomoc = 0;
+  local dlug = string.len(text);
+  for i = 1, dlug, 3 do 
+    counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
+    pomoc = (string.byte(text,i)*16776193);
+    counter = counter + pomoc;
+    pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
+    counter = counter + pomoc;
+    pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
+    counter = counter + pomoc;
+  end
+  return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
 end
 
 -- First function called after the add-in has been loaded
@@ -635,6 +675,28 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       SlashCmdList["WOWEUCN_TOOLTIPS"] = function(msg) WoWeuCN_Tooltips_SlashCommand(msg); end
       SLASH_WOWEUCN_TOOLTIPS1 = "/woweucn-tooltips";
       WoWeuCN_Tooltips_CheckVars();
+
+      if (not WoWeuCN_Tooltips_HashList) then
+        WoWeuCN_Tooltips_HashList = {}
+      end
+    
+      for k,v in pairs(hashList) do
+        if WoWeuCN_Tooltips_HashList[v] == nil then
+          WoWeuCN_Tooltips_HashList[v] = true
+        end
+      end
+    
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hash = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if WoWeuCN_Tooltips_HashList[hash] == true or WoWeuCN_Tooltips_HashList[baseHash] == true then
+         WoWeuCN_Tooltips_HashList[baseHash] = true
+         
+         WoWeuCN_Tooltips_PS["active"] = "0";
+         WoWeuCN_Tooltips_Force = true
+      end
+
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Tooltips_BlizzardOptions();
       WoWeuCN_Tooltips_wait(2, Broadcast)
@@ -651,7 +713,32 @@ local reminded = false
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
     if text == "VERSION" then
-      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
+      if sender == nil then
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
+      else
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel, sender)
+      end
+    elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
+      local hash = tonumber(string.match(text, "^.-(%d+)"))
+      WoWeuCN_Tooltips_HashList[hash] = true
+      WoWeuCN_Tooltips_PS["active"] = "0";
+      WoWeuCN_Tooltips_Force = true
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Hash", channel, sender)
+     elseif (string.sub(text,1,string.len("UNHASH")) == "UNHASH") then
+      local hash = tonumber(string.match(text, "^.-(%d+)"))
+      
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hashN = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if hash == hashN then
+        WoWeuCN_Tooltips_HashList[hashN] = false
+        WoWeuCN_Tooltips_HashList[baseHash] = false
+        
+        WoWeuCN_Tooltips_PS["active"] = "1";
+        WoWeuCN_Tooltips_Force = false
+      end
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Unhash", channel, sender)
     elseif (string.sub(text,1,string.len("WoWeuCN-Tooltips"))=="WoWeuCN-Tooltips" and not reminded) then
       local _, major, minor, revision = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
       local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")

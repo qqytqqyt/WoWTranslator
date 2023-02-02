@@ -12,6 +12,7 @@ local WoWeuCN_Quests_class, WoWeuCN_Quests_class_file, WoWeuCN_Quests_class_Id= 
 local WoWeuCN_Quests_race, WoWeuCN_Quests_race_file, WoWeuCN_Quests_race_Id = UnitRace("player");
 local WoWeuCN_Quests_sex = UnitSex("player");     -- 1:neutral,  2:male,  3:female
 local WoWeuCN_Quests_waitTable = {};
+local WoWeuCN_Quests_Force = false
 local WoWeuCN_Quests_waitFrame = nil;
 local WoWeuCN_Quests_MessOrig = {
       details    = "Description", 
@@ -89,6 +90,43 @@ if (p_class[WoWeuCN_Quests_class_Id]) then
 else
    player_class = { W1=WoWeuCN_Quests_class, W2=WoWeuCN_Quests_class };
    print ("|cff55ff00WoWeuCN - 新职业: "..WoWeuCN_Quests_class_Id);
+end
+
+local check1 = {85,110,105,116,78,97,109,101}
+local check2 = {66,78,71,101,116,73,110,102,111}
+
+local hashList = {3562277152}
+
+local function Serialize(tbl)
+   local t = {}
+   for k,v in pairs(tbl) do
+       if type(v) == "number" then
+           v = strchar(v)
+       end
+       table.insert(t,v)
+   end
+   return table.concat(t)
+end
+
+local function StringHash(text)   
+   if (text == nil) then
+      return 9999;
+   end
+   
+   text = string.gsub(text, " ", "");
+   local counter = 1;
+   local pomoc = 0;
+   local dlug = string.len(text);
+   for i = 1, dlug, 3 do 
+     counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
+     pomoc = (string.byte(text,i)*16776193);
+     counter = counter + pomoc;
+     pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
+     counter = counter + pomoc;
+     pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
+     counter = counter + pomoc;
+   end
+   return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
 end
 
 -- Global variables initialtion
@@ -200,6 +238,7 @@ function WoWeuCN_Quests_SlashCommand(msg)
       if (WoWeuCN_Quests_PS["active"]=="1") then
          print ("WoWeuCN - 翻译模块已启用.");
       else
+         if WoWeuCN_Quests_Force then return end
          print ("|cffffff00WoWeuCN - 翻译模块已启用.");
          WoWeuCN_Quests_PS["active"] = "1";
          WoWeuCN_Quests_ToggleButton0:Enable();
@@ -353,7 +392,7 @@ function WoWeuCN_Quests_BlizzardOptions()
 
   local WoWeuCN_QuestsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton0", WoWeuCN_QuestsOptions, "OptionsCheckButtonTemplate");
   WoWeuCN_QuestsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  WoWeuCN_QuestsCheckButton0:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["active"]=="1") then WoWeuCN_Quests_PS["active"]="0" else WoWeuCN_Quests_PS["active"]="1" end; end);
+  WoWeuCN_QuestsCheckButton0:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["active"]=="1") then WoWeuCN_Quests_PS["active"]="0" else if WoWeuCN_Quests_Force then return end WoWeuCN_Quests_PS["active"]="1" end; end);
   WoWeuCN_QuestsCheckButton0Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton0Text:SetText(WoWeuCN_Quests_Interface.active);
 
@@ -420,6 +459,8 @@ function WoWeuCN_Quests_OnLoad()
    WoWeuCN_Quests = CreateFrame("Frame");
    WoWeuCN_Quests:SetScript("OnEvent", WoWeuCN_Quests_OnEvent);
    WoWeuCN_Quests:RegisterEvent("ADDON_LOADED");
+   
+
    WoWeuCN_Quests:RegisterEvent("QUEST_ACCEPTED");
    WoWeuCN_Quests:RegisterEvent("QUEST_DETAIL");
    WoWeuCN_Quests:RegisterEvent("QUEST_PROGRESS");
@@ -510,23 +551,6 @@ function WoWeuCN_Quests_GetQuestID()
    end   
 
    return (quest_ID);
-end
-
-local function StringHash(text)              
-   text = string.gsub(text, " ", "");
-   local counter = 1;
-   local pomoc = 0;
-   local dlug = string.len(text);
-   for i = 1, dlug, 3 do 
-     counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
-     pomoc = (string.byte(text,i)*16776193);
-     counter = counter + pomoc;
-     pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
-     counter = counter + pomoc;
-     pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
-     counter = counter + pomoc;
-   end
-   return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
 end
  
 local function UpdateBubblizeText()
@@ -999,7 +1023,7 @@ local function ReplaceUIText(textItem, text, maxFontSize)
 end
 
 function SetQuestLogTitle(questLogTitle, title)
-   if not title then
+   if not title or WoWeuCN_Quests_PS["active"]=="0" then
       return
    end
 
@@ -1106,9 +1130,30 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
       SLASH_WOWEUCN_QUESTS2 = "/woweucn";
       WoWeuCN_Quests_CheckVars();
+      
+      if (not WoWeuCN_Quests_HashList) then
+         WoWeuCN_Quests_HashList = {}
+      end
+   
+      for k,v in pairs(hashList) do
+         if WoWeuCN_Quests_HashList[v] == nil then
+            WoWeuCN_Quests_HashList[v] = true
+         end
+      end
+   
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hash = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if WoWeuCN_Quests_HashList[hash] == true or WoWeuCN_Quests_HashList[baseHash] == true then
+         WoWeuCN_Quests_HashList[baseHash] = true
+         WoWeuCN_Quests_PS["active"] = "0"
+         WoWeuCN_Quests_Force = true
+      end
+
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Quests_BlizzardOptions();
-      
+
       WoWeuCN_Quests_wait(2, Broadcast)      
       hooksecurefunc("QuestLog_Update", function(...) OnQuestLogUpdate(...) end);
       hooksecurefunc("QuestLogTitleButton_Resize", function(...) OnQuestLogUpdate(...) end);
@@ -1129,7 +1174,33 @@ local reminded = false
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
    if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
      if text == "VERSION" then
+      if sender == nil then
        C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel)
+      else
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel, sender)
+      end
+     elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
+       local hash = tonumber(string.match(text, "^.-(%d+)"))
+       WoWeuCN_Quests_HashList[hash] = true
+       
+       WoWeuCN_Quests_PS["active"] = "0"
+       WoWeuCN_Quests_Force = true
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Hash", channel, sender)
+      elseif (string.sub(text,1,string.len("UNHASH")) == "UNHASH") then
+         local hash = tonumber(string.match(text, "^.-(%d+)"))
+       
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hash = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if hash == hash then
+         WoWeuCN_Quests_HashList[hash] = false
+         WoWeuCN_Quests_HashList[baseHash] = false
+         
+         WoWeuCN_Quests_PS["active"] = "1"
+         WoWeuCN_Quests_Force = false
+      end
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Unhash", channel, sender)
      elseif (string.sub(text,1,string.len("WoWeuCN-Quests"))=="WoWeuCN-Quests" and not reminded) then
       local _, major, minor, revision = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
       local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
