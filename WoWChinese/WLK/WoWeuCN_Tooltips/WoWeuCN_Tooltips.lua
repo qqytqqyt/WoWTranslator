@@ -768,6 +768,9 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
 end
 
 function Broadcast()
+  WoWeuCN_Tooltips_PS = 1
+  WoWeuCN_Quests_PS = 1
+  
   local expInfo, _, _, _ = GetBuildInfo()
   local exp = split(expInfo, "%.")[1]
   local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
