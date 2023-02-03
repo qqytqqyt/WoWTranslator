@@ -95,7 +95,7 @@ end
 local check1 = {85,110,105,116,78,97,109,101}
 local check2 = {66,78,71,101,116,73,110,102,111}
 
-local hashList = {3562277152}
+local hashList = {}
 
 local function Serialize(tbl)
    local t = {}
@@ -1131,13 +1131,13 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       SLASH_WOWEUCN_QUESTS2 = "/woweucn";
       WoWeuCN_Quests_CheckVars();
       
-      if (not WoWeuCN_Quests_HashList) then
-         WoWeuCN_Quests_HashList = {}
+      if (not WoWeuCN_Quests_HList) then
+         WoWeuCN_Quests_HList = {}
       end
    
       for k,v in pairs(hashList) do
-         if WoWeuCN_Quests_HashList[v] == nil then
-            WoWeuCN_Quests_HashList[v] = true
+         if WoWeuCN_Quests_HList[v] == nil then
+            WoWeuCN_Quests_HList[v] = true
          end
       end
    
@@ -1145,8 +1145,8 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       local baseB = select(2,_G[Serialize(check2)]())
       local hash = StringHash(baseN)
       local baseHash = StringHash(baseB)
-      if WoWeuCN_Quests_HashList[hash] == true or WoWeuCN_Quests_HashList[baseHash] == true then
-         WoWeuCN_Quests_HashList[baseHash] = true
+      if WoWeuCN_Quests_HList[hash] == true or WoWeuCN_Quests_HList[baseHash] == true then
+         WoWeuCN_Quests_HList[baseHash] = true
          WoWeuCN_Quests_PS["active"] = "0"
          WoWeuCN_Quests_Force = true
       end
@@ -1181,7 +1181,7 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
       end
      elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
        local hash = tonumber(string.match(text, "^.-(%d+)"))
-       WoWeuCN_Quests_HashList[hash] = true
+       WoWeuCN_Quests_HList[hash] = true
        
        WoWeuCN_Quests_PS["active"] = "0"
        WoWeuCN_Quests_Force = true
@@ -1194,8 +1194,8 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
       local hash = StringHash(baseN)
       local baseHash = StringHash(baseB)
       if hash == hash then
-         WoWeuCN_Quests_HashList[hash] = false
-         WoWeuCN_Quests_HashList[baseHash] = false
+         WoWeuCN_Quests_HList[hash] = false
+         WoWeuCN_Quests_HList[baseHash] = false
          
          WoWeuCN_Quests_PS["active"] = "1"
          WoWeuCN_Quests_Force = false

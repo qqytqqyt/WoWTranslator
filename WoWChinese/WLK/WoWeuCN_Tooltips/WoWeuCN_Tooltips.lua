@@ -17,7 +17,7 @@ local WoWeuCN_Tooltips_Force = false
 local check1 = {85,110,105,116,78,97,109,101}
 local check2 = {66,78,71,101,116,73,110,102,111}
 
-local hashList = {3562277152}
+local hashList = {}
 
 local function Serialize(tbl)
   local t = {}
@@ -676,13 +676,13 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       SLASH_WOWEUCN_TOOLTIPS1 = "/woweucn-tooltips";
       WoWeuCN_Tooltips_CheckVars();
 
-      if (not WoWeuCN_Tooltips_HashList) then
-        WoWeuCN_Tooltips_HashList = {}
+      if (not WoWeuCN_Tooltips_HList) then
+        WoWeuCN_Tooltips_HList = {}
       end
     
       for k,v in pairs(hashList) do
-        if WoWeuCN_Tooltips_HashList[v] == nil then
-          WoWeuCN_Tooltips_HashList[v] = true
+        if WoWeuCN_Tooltips_HList[v] == nil then
+          WoWeuCN_Tooltips_HList[v] = true
         end
       end
     
@@ -690,8 +690,8 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       local baseB = select(2,_G[Serialize(check2)]())
       local hash = StringHash(baseN)
       local baseHash = StringHash(baseB)
-      if WoWeuCN_Tooltips_HashList[hash] == true or WoWeuCN_Tooltips_HashList[baseHash] == true then
-         WoWeuCN_Tooltips_HashList[baseHash] = true
+      if WoWeuCN_Tooltips_HList[hash] == true or WoWeuCN_Tooltips_HList[baseHash] == true then
+         WoWeuCN_Tooltips_HList[baseHash] = true
          
          WoWeuCN_Tooltips_PS["active"] = "0";
          WoWeuCN_Tooltips_Force = true
@@ -720,7 +720,7 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
       end
     elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
       local hash = tonumber(string.match(text, "^.-(%d+)"))
-      WoWeuCN_Tooltips_HashList[hash] = true
+      WoWeuCN_Tooltips_HList[hash] = true
       WoWeuCN_Tooltips_PS["active"] = "0";
       WoWeuCN_Tooltips_Force = true
       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Hash", channel, sender)
@@ -732,8 +732,8 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
       local hashN = StringHash(baseN)
       local baseHash = StringHash(baseB)
       if hash == hashN then
-        WoWeuCN_Tooltips_HashList[hashN] = false
-        WoWeuCN_Tooltips_HashList[baseHash] = false
+        WoWeuCN_Tooltips_HList[hashN] = false
+        WoWeuCN_Tooltips_HList[baseHash] = false
         
         WoWeuCN_Tooltips_PS["active"] = "1";
         WoWeuCN_Tooltips_Force = false
