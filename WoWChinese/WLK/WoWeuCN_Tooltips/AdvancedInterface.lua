@@ -13,7 +13,7 @@ function ReplaceUIText(textItem, text, maxFontSize)
     return
   end
 
-  if (WoWeuCN_Tooltips_PS["overwritefonts"]=="0") then    
+  if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then    
     textItem:SetText(RemoveColourCode(ReplaceText(text)))
     return
   end
@@ -52,7 +52,7 @@ function GetTradeSkillName(skillIndex)
 end
 
 function OnTradeSkillSelectionUpdate(index)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
 
@@ -101,7 +101,7 @@ function OnTradeSkillSelectionUpdate(index)
 end
 
 function OnTradeSkillUpdate()
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
 
@@ -126,7 +126,7 @@ function OnTradeSkillUpdate()
 end
 
 function OnSpellBookUpdate(self)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
 
@@ -152,7 +152,7 @@ function OnSpellBookUpdate(self)
 end
 
 function OnMerchantInfoUpdate(...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
 
@@ -173,7 +173,7 @@ function OnMerchantInfoUpdate(...)
 end
 
 function OnLootUpdate(index)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
   
@@ -207,7 +207,7 @@ function OnLootUpdate(index)
 end
 
 function OnLootUpdateElvUI(self, ...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") or not _G.ElvLootFrame then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") or not _G.ElvLootFrame then
     return
   end
 
