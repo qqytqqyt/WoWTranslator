@@ -5,10 +5,10 @@ local function regexEscape(str)
 end
 
 ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...)
-    if (WoWeuCN_Tooltips_PS["active"]=="0") then
+    if (WoWeuCN_Tooltips_N_PS["active"]=="0") then
         return
     end
-    if (WoWeuCN_Tooltips_PS["transitem"]=="1") then
+    if (WoWeuCN_Tooltips_N_PS["transitem"]=="1") then
         if string.find(msg, "Hitem:") then
             if chatFrame and chatFrame.historyBuffer and #(chatFrame.historyBuffer.elements) > 0 and chatFrame ~= _G.ChatFrame2 then
                 while (string.find(msg, "Hitem:")) do
@@ -25,7 +25,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
         end
     end
     
-    if (WoWeuCN_Tooltips_PS["transspell"]=="1") then
+    if (WoWeuCN_Tooltips_N_PS["transspell"]=="1") then
         if string.find(msg, "Hspell:") then
             if chatFrame and chatFrame.historyBuffer and #(chatFrame.historyBuffer.elements) > 0 and chatFrame ~= _G.ChatFrame2 then
                 while (string.find(msg, "Hspell:")) do
@@ -56,7 +56,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
         end
     end
     
-    if (WoWeuCN_Tooltips_PS["transachievement"]=="1") then
+    if (WoWeuCN_Tooltips_N_PS["transachievement"]=="1") then
         if string.find(msg, "Hachievement:") then
             if chatFrame and chatFrame.historyBuffer and #(chatFrame.historyBuffer.elements) > 0 and chatFrame ~= _G.ChatFrame2 then
                 while (string.find(msg, "Hachievement:")) do
