@@ -34,14 +34,18 @@ function WoWeuCN_Scanner_ScanClear()
     WoWeuCN_Scanner_SpellToolTips0 = {} 
     WoWeuCN_Scanner_SpellToolTips100000 = {} 
     WoWeuCN_Scanner_SpellToolTips200000 = {} 
-    WoWeuCN_Scanner_SpellToolTips300000 = {}      
+    WoWeuCN_Scanner_SpellToolTips300000 = {}    
+    WoWeuCN_Scanner_SpellToolTips400000 = {}       
     WoWeuCN_Scanner_ItemToolTips0 = {} 
     WoWeuCN_Scanner_ItemToolTips100000 = {} 
+    WoWeuCN_Scanner_ItemToolTips200000 = {} 
     WoWeuCN_Scanner_ItemIndex = 1
     WoWeuCN_Scanner_UnitToolTips0 = {} 
+    WoWeuCN_Scanner_UnitToolTips100000 = {} 
     WoWeuCN_Scanner_UnitIndex = 1
     WoWeuCN_Scanner_Achivements0 = {} 
     WoWeuCN_Scanner_AchivementsIndex = 1
+    WoWeuCN_Scanner_QuestToolTips = {}
     WoWeuCN_Scanner_QuestIndex = 1
     print("Clear");
 end
@@ -171,6 +175,10 @@ function WoWeuCN_Scanner_ScanSpellAuto(startIndex, attempt, counter)
         if (WoWeuCN_Scanner_SpellToolTips300000[i .. ''] == nil or string.len(WoWeuCN_Scanner_SpellToolTips300000[i .. '']) < string.len(text)) then
           WoWeuCN_Scanner_SpellToolTips300000[i .. ''] = text
         end
+      elseif (i >=400000 and i < 500000) then
+        if (WoWeuCN_Scanner_SpellToolTips400000[i .. ''] == nil or string.len(WoWeuCN_Scanner_SpellToolTips400000[i .. '']) < string.len(text)) then
+          WoWeuCN_Scanner_SpellToolTips400000[i .. ''] = text
+        end
       end
       print(i)
     end
@@ -204,6 +212,10 @@ function WoWeuCN_Scanner_ScanUnitAuto(startIndex, attempt, counter)
     elseif (i >=100000 and i < 200000) then
       if (WoWeuCN_Scanner_UnitToolTips100000[i .. ''] == nil or string.len(WoWeuCN_Scanner_UnitToolTips100000[i .. '']) < string.len(text)) then
         WoWeuCN_Scanner_UnitToolTips100000[i .. ''] = text
+      end
+    elseif (i >=200000 and i < 300000) then
+      if (WoWeuCN_Scanner_UnitToolTips200000[i .. ''] == nil or string.len(WoWeuCN_Scanner_UnitToolTips200000[i .. '']) < string.len(text)) then
+        WoWeuCN_Scanner_UnitToolTips200000[i .. ''] = text
       end
     end
     end
@@ -240,6 +252,10 @@ function WoWeuCN_Scanner_ScanItemAuto(startIndex, attempt, counter)
         elseif (i >=100000 and i < 200000) then
           if (WoWeuCN_Scanner_ItemToolTips100000[i .. ''] == nil or string.len(WoWeuCN_Scanner_ItemToolTips100000[i .. '']) < string.len(text)) then
             WoWeuCN_Scanner_ItemToolTips100000[i .. ''] = text
+          end
+        elseif (i >=200000 and i < 300000) then
+          if (WoWeuCN_Scanner_ItemToolTips200000[i .. ''] == nil or string.len(WoWeuCN_Scanner_ItemToolTips200000[i .. '']) < string.len(text)) then
+            WoWeuCN_Scanner_ItemToolTips200000[i .. ''] = text
           end
           print(i)
         end
