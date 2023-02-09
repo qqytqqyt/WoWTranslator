@@ -36,6 +36,23 @@ local kinds = {
 -- wait functions from QTR
 local WoWeuCN_Tooltips_waitFrame = nil;
 local WoWeuCN_Tooltips_waitTable = {};
+local WoWeuCN_Tooltips_Force = false
+
+local check1 = {85,110,105,116,78,97,109,101}
+local check2 = {66,78,71,101,116,73,110,102,111}
+
+local hashList = {}
+
+local function Serialize(tbl)
+  local t = {}
+  for k,v in pairs(tbl) do
+      if type(v) == "number" then
+          v = strchar(v)
+      end
+      table.insert(t,v)
+  end
+  return table.concat(t)
+end
 
 function WoWeuCN_Tooltips_wait(delay, func, ...)
   if(type(delay)~="number" or type(func)~="function") then
@@ -67,39 +84,42 @@ end
 
 -- Global variables initialtion
 function WoWeuCN_Tooltips_CheckVars()
+  WoWeuCN_Quests_PS = 1
+  WoWeuCN_Tooltips_PS = 1
+
   if (not WoWeuCN_Tooltips_LastAnnounceDate) then
     WoWeuCN_Tooltips_LastAnnounceDate = 0;
   end
-  if (not WoWeuCN_Tooltips_PS) then
-     WoWeuCN_Tooltips_PS = {};
+  if (not WoWeuCN_Tooltips_N_PS) then
+     WoWeuCN_Tooltips_N_PS = {};
   end
   -- Initiation - active
-  if (not WoWeuCN_Tooltips_PS["active"]) then
-     WoWeuCN_Tooltips_PS["active"] = "1";
+  if (not WoWeuCN_Tooltips_N_PS["active"]) then
+     WoWeuCN_Tooltips_N_PS["active"] = "1";
   end
   -- Initiation - spell translation
-  if (not WoWeuCN_Tooltips_PS["transspell"] ) then
-     WoWeuCN_Tooltips_PS["transspell"] = "1";   
+  if (not WoWeuCN_Tooltips_N_PS["transspell"] ) then
+     WoWeuCN_Tooltips_N_PS["transspell"] = "1";   
   end
   -- Initiation - item translation
-  if (not WoWeuCN_Tooltips_PS["transitem"] ) then
-     WoWeuCN_Tooltips_PS["transitem"] = "1";   
+  if (not WoWeuCN_Tooltips_N_PS["transitem"] ) then
+     WoWeuCN_Tooltips_N_PS["transitem"] = "1";   
   end
     -- Initiation - unit translation
-  if (not WoWeuCN_Tooltips_PS["transunit"] ) then
-     WoWeuCN_Tooltips_PS["transunit"] = "1";   
+  if (not WoWeuCN_Tooltips_N_PS["transunit"] ) then
+     WoWeuCN_Tooltips_N_PS["transunit"] = "1";   
   end
   -- Initiation - achievement translation
-  if (not WoWeuCN_Tooltips_PS["transachievement"] ) then
-     WoWeuCN_Tooltips_PS["transachievement"] = "1";   
+  if (not WoWeuCN_Tooltips_N_PS["transachievement"] ) then
+     WoWeuCN_Tooltips_N_PS["transachievement"] = "1";   
   end  
   -- Initiation - advanced translation
-  if (not WoWeuCN_Tooltips_PS["transadvanced"] ) then
-     WoWeuCN_Tooltips_PS["transadvanced"] = "1";   
+  if (not WoWeuCN_Tooltips_N_PS["transadvanced"] ) then
+     WoWeuCN_Tooltips_N_PS["transadvanced"] = "1";   
   end
    -- Path version info
-  if (not WoWeuCN_Tooltips_PS["patch"]) then
-     WoWeuCN_Tooltips_PS["patch"] = GetBuildInfo();
+  if (not WoWeuCN_Tooltips_N_PS["patch"]) then
+     WoWeuCN_Tooltips_N_PS["patch"] = GetBuildInfo();
   end
 end
 
@@ -130,22 +150,23 @@ end
 -- commands
 function WoWeuCN_Tooltips_SlashCommand(msg)
    if (msg=="on" or msg=="ON") then
-      if (WoWeuCN_Tooltips_PS["active"]=="1") then
+      if (WoWeuCN_Tooltips_N_PS["active"]=="1") then
          print ("WOWeuCN - Tooltips 翻译模块已启用.");
       else
-         print ("|cffffff00WOWeuCN - Tooltips 翻译模块已启用.");
-         WoWeuCN_Tooltips_PS["active"] = "1";
+         print ("|cffffff00WOWeuCN - Tooltips 翻译模块已启用.");         
+         if WoWeuCN_Tooltips_Force then return end
+         WoWeuCN_Tooltips_N_PS["active"] = "1";
          WoWeuCN_Tooltips_ToggleButton0:Enable();
          WoWeuCN_Tooltips_ToggleButton1:Enable();
          WoWeuCN_Tooltips_ToggleButton2:Enable();
          WoWeuCN_Tooltips_ToggleButton3:Enable();
       end
    elseif (msg=="off" or msg=="OFF") then
-      if (WoWeuCN_Tooltips_PS["active"]=="0") then
+      if (WoWeuCN_Tooltips_N_PS["active"]=="0") then
          print ("WOWeuCN - Tooltips 翻译模块已关闭.");
       else
          print ("|cffffff00WOWeuCN - Tooltips 翻译模块已关闭.");
-         WoWeuCN_Tooltips_PS["active"] = "0";
+         WoWeuCN_Tooltips_N_PS["active"] = "0";
          WoWeuCN_Tooltips_ToggleButton0:Disable();
          WoWeuCN_Tooltips_ToggleButton1:Disable();
          WoWeuCN_Tooltips_ToggleButton2:Disable();
@@ -163,12 +184,12 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
 end
 
 function WoWeuCN_Tooltips_SetCheckButtonState()
-  WoWeuCN_TooltipsCheckButton0:SetValue(WoWeuCN_Tooltips_PS["active"]=="1");
-  WoWeuCN_TooltipsCheckButton3:SetValue(WoWeuCN_Tooltips_PS["transspell"]=="1");
-  WoWeuCN_TooltipsCheckButton4:SetValue(WoWeuCN_Tooltips_PS["transitem"]=="1");
-  WoWeuCN_TooltipsCheckButton5:SetValue(WoWeuCN_Tooltips_PS["transunit"]=="1");
-  WoWeuCN_TooltipsCheckButton6:SetValue(WoWeuCN_Tooltips_PS["transachievement"]=="1");
-  WoWeuCN_TooltipsCheckButton7:SetValue(WoWeuCN_Tooltips_PS["transadvanced"]=="1");
+  WoWeuCN_TooltipsCheckButton0:SetValue(WoWeuCN_Tooltips_N_PS["active"]=="1");
+  WoWeuCN_TooltipsCheckButton3:SetValue(WoWeuCN_Tooltips_N_PS["transspell"]=="1");
+  WoWeuCN_TooltipsCheckButton4:SetValue(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
+  WoWeuCN_TooltipsCheckButton5:SetValue(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
+  WoWeuCN_TooltipsCheckButton6:SetValue(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
+  WoWeuCN_TooltipsCheckButton7:SetValue(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -198,7 +219,8 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  WoWeuCN_TooltipsCheckButton0.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["active"]=="1") then WoWeuCN_Tooltips_PS["active"]="0" else WoWeuCN_Tooltips_PS["active"]="1" end; end);
+  
+  WoWeuCN_TooltipsCheckButton0.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
   WoWeuCN_TooltipsCheckButton0.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton0.Text:SetText(WoWeuCN_Tooltips_Interface.active);
 
@@ -213,35 +235,35 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   
   local WoWeuCN_TooltipsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton3", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -5);
-  WoWeuCN_TooltipsCheckButton3.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transspell"]=="0") then WoWeuCN_Tooltips_PS["transspell"]="1" else WoWeuCN_Tooltips_PS["transspell"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton3.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then WoWeuCN_Tooltips_N_PS["transspell"]="1" else WoWeuCN_Tooltips_N_PS["transspell"]="0" end; end);
   WoWeuCN_TooltipsCheckButton3.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton3:SetSize(500, 21)
   WoWeuCN_TooltipsCheckButton3.Text:SetText(WoWeuCN_Tooltips_Interface.transspell);
   
   local WoWeuCN_TooltipsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton4", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -25);
-  WoWeuCN_TooltipsCheckButton4.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transitem"]=="0") then WoWeuCN_Tooltips_PS["transitem"]="1" else WoWeuCN_Tooltips_PS["transitem"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton4.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then WoWeuCN_Tooltips_N_PS["transitem"]="1" else WoWeuCN_Tooltips_N_PS["transitem"]="0" end; end);
   WoWeuCN_TooltipsCheckButton4.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton4:SetSize(500, 21)
   WoWeuCN_TooltipsCheckButton4.Text:SetText(WoWeuCN_Tooltips_Interface.transitem);
   
   local WoWeuCN_TooltipsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton5", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -45);
-  WoWeuCN_TooltipsCheckButton5.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transunit"]=="0") then WoWeuCN_Tooltips_PS["transunit"]="1" else WoWeuCN_Tooltips_PS["transunit"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton5.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transunit"]=="0") then WoWeuCN_Tooltips_N_PS["transunit"]="1" else WoWeuCN_Tooltips_N_PS["transunit"]="0" end; end);
   WoWeuCN_TooltipsCheckButton5.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton5:SetSize(500, 21)
   WoWeuCN_TooltipsCheckButton5.Text:SetText(WoWeuCN_Tooltips_Interface.transunit);
   
   local WoWeuCN_TooltipsCheckButton6 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton6", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -65);
-  WoWeuCN_TooltipsCheckButton6.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transachievement"]=="0") then WoWeuCN_Tooltips_PS["transachievement"]="1" else WoWeuCN_Tooltips_PS["transachievement"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton6.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then WoWeuCN_Tooltips_N_PS["transachievement"]="1" else WoWeuCN_Tooltips_N_PS["transachievement"]="0" end; end);
   WoWeuCN_TooltipsCheckButton6.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton6:SetSize(500, 21)
   WoWeuCN_TooltipsCheckButton6.Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
 
   local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -85);
-  WoWeuCN_TooltipsCheckButton7.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_PS["transadvanced"]="1" else WoWeuCN_Tooltips_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton7.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
   WoWeuCN_TooltipsCheckButton7.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton7:SetSize(500, 21)
   WoWeuCN_TooltipsCheckButton7.Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
@@ -266,6 +288,27 @@ local function translateTooltip(tooltip, data, kind)
       end
     end
   end
+end
+
+local function StringHash(text)        
+  if (text == nil) then
+     return 9999;
+  end
+
+  text = string.gsub(text, " ", "");
+  local counter = 1;
+  local pomoc = 0;
+  local dlug = string.len(text);
+  for i = 1, dlug, 3 do 
+    counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
+    pomoc = (string.byte(text,i)*16776193);
+    counter = counter + pomoc;
+    pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
+    counter = counter + pomoc;
+    pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
+    counter = counter + pomoc;
+  end
+  return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
 end
 
 -- First function called after the add-in has been loaded
@@ -406,7 +449,7 @@ function GetFirstLineColorCode(...)
 end
 
 function OnAchievement(self, elementData)  
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transachievement"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then
     return
   end
 
@@ -431,7 +474,7 @@ function OnAchievement(self, elementData)
 end
 
 function OnAchievementSummary(...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transachievement"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then
     return
   end
 
@@ -475,7 +518,7 @@ function GetAchievementData(id)
 end
 
 function OnTooltipUnit(self, tooltip)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transunit"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transunit"]=="0") then
     return
   end
 
@@ -495,7 +538,7 @@ function OnTooltipUnit(self, tooltip)
 end
 
 function SetUnitTooltip(self, id)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transunit"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transunit"]=="0") then
     return
   end
   
@@ -550,7 +593,7 @@ function GetUnitData(id)
 end
 
 function OnTooltipSetAction(self, slot)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transitem"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transitem"]=="0") then
     return
   end
 
@@ -561,7 +604,7 @@ function OnTooltipSetAction(self, slot)
 end
 
 function OnTooltipItem(self, tooltip)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transitem"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transitem"]=="0") then
     return
   end
   -- Case for linked item
@@ -628,7 +671,7 @@ function GetItemData(id)
 end
 
 function OnTooltipSpellElvUi(self)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transspell"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
     return
   end
 	-- Case for linked spell
@@ -638,7 +681,7 @@ function OnTooltipSpellElvUi(self)
 end
 
 function OnTooltipSpell(self, tooltip)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transspell"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
     return
   end
 	-- Case for linked spell
@@ -722,6 +765,28 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       SlashCmdList["WOWEUCN_TOOLTIPS"] = function(msg) WoWeuCN_Tooltips_SlashCommand(msg); end
       SLASH_WOWEUCN_TOOLTIPS1 = "/woweucn-tooltips";
       WoWeuCN_Tooltips_CheckVars();
+      
+      if (not WoWeuCN_Tooltips_HList) then
+        WoWeuCN_Tooltips_HList = {}
+      end
+    
+      for k,v in pairs(hashList) do
+        if WoWeuCN_Tooltips_HList[v] == nil then
+          WoWeuCN_Tooltips_HList[v] = true
+        end
+      end
+    
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hash = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if WoWeuCN_Tooltips_HList[hash] == true or WoWeuCN_Tooltips_HList[baseHash] == true then
+         WoWeuCN_Tooltips_HList[baseHash] = true
+         
+         WoWeuCN_Tooltips_N_PS["active"] = "0";
+         WoWeuCN_Tooltips_Force = true
+      end
+
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Tooltips_BlizzardOptions();
       WoWeuCN_Tooltips_wait(2, Broadcast);
@@ -736,7 +801,32 @@ local reminded = false
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
     if text == "VERSION" then
-      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
+      if sender == nil then
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
+      else
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel, sender)
+      end
+    elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
+      local hash = tonumber(string.match(text, "^.-(%d+)"))
+      WoWeuCN_Tooltips_HList[hash] = true
+      WoWeuCN_Tooltips_N_PS["active"] = "0";
+      WoWeuCN_Tooltips_Force = true
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Hash", channel, sender)
+     elseif (string.sub(text,1,string.len("UNHASH")) == "UNHASH") then
+      local hash = tonumber(string.match(text, "^.-(%d+)"))
+      
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hashN = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if hash == hashN then
+        WoWeuCN_Tooltips_HList[hashN] = false
+        WoWeuCN_Tooltips_HList[baseHash] = false
+        
+        WoWeuCN_Tooltips_N_PS["active"] = "1";
+        WoWeuCN_Tooltips_Force = false
+      end
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Unhash", channel, sender)
     elseif (string.sub(text,1,string.len("WoWeuCN-Tooltips"))=="WoWeuCN-Tooltips" and not reminded) then
       local _, major, minor, revision = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
       local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
@@ -756,7 +846,9 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
   end
 end
 
-function Broadcast()
+function Broadcast()  
+  WoWeuCN_Tooltips_PS = 1
+  WoWeuCN_Quests_PS = 1
   local expInfo, _, _, _ = GetBuildInfo()
   local exp = split(expInfo, "%.")[1]
   local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")

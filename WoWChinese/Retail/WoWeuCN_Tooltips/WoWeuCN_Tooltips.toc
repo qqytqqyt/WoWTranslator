@@ -1,12 +1,12 @@
 ﻿## Interface: 100005
 ## Title: WoWeuCN-Tooltips
-## Version: 10.0.5.1
+## Version: 10.0.5.2
 ## Notes_en: AddOn displays the translated tooltips information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: WoWeuCN_Tooltips_PS
+## SavedVariables: WoWeuCN_Tooltips_PS, WoWeuCN_Tooltips_N_PS, WoWeuCN_Tooltips_HList
 ## SavedVariablesPerCharacter: WoWeuCN_Tooltips_LastAnnounceDate
 
 TooltipsData_cn.lua
