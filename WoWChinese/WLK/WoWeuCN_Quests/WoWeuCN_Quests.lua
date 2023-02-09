@@ -12,6 +12,7 @@ local WoWeuCN_Quests_class, WoWeuCN_Quests_class_file, WoWeuCN_Quests_class_Id= 
 local WoWeuCN_Quests_race, WoWeuCN_Quests_race_file, WoWeuCN_Quests_race_Id = UnitRace("player");
 local WoWeuCN_Quests_sex = UnitSex("player");     -- 1:neutral,  2:male,  3:female
 local WoWeuCN_Quests_waitTable = {};
+local WoWeuCN_Quests_first_show = 0;
 local WoWeuCN_Quests_Force = false
 local WoWeuCN_Quests_waitFrame = nil;
 local WoWeuCN_Quests_MessOrig = {
@@ -382,7 +383,6 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsHeader:ClearAllPoints();
   WoWeuCN_QuestsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
   WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." by qqytqqyt © 2023");
-  WoWeuCN_QuestsOptionsHeader:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsPlayer = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
   WoWeuCN_QuestsPlayer:SetFontObject(GameFontNormalLarge);
@@ -391,7 +391,6 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsPlayer:ClearAllPoints();
   WoWeuCN_QuestsPlayer:SetPoint("TOPRIGHT", WoWeuCN_QuestsOptionsHeader, "TOPRIGHT", 0, -22);
   WoWeuCN_QuestsPlayer:SetText("作者 : "..WoWeuCN_Quests_Messages.author);
-  WoWeuCN_QuestsPlayer:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton0", WoWeuCN_QuestsOptions, "OptionsCheckButtonTemplate");
   WoWeuCN_QuestsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsHeader, "BOTTOMLEFT", 0, -44);
@@ -767,6 +766,15 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_LG.id.." "..WoWeuCN_Quests_lang);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
          WoWeuCN_Quests_Translate_On(1);
+         if (WoWeuCN_Quests_first_show==0) then 
+            if (not WoWeuCN_Quests_wait(0.2,WoWeuCN_Quests_ON_OFF)) then
+            ---
+            end
+            if (not WoWeuCN_Quests_wait(0.2,WoWeuCN_Quests_ON_OFF)) then
+            ---
+            end
+            WoWeuCN_Quests_first_show=1;
+         end
       else	      -- Quest cannot be translated
          WoWeuCN_Quests_ToggleButton0:Disable();
          WoWeuCN_Quests_ToggleButton1:Disable();
