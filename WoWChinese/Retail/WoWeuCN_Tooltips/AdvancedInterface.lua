@@ -24,7 +24,7 @@ function ReplaceUIText(textItem, text, maxFontSize)
 end
 
 function OnMerchantInfoUpdate(...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
 
@@ -45,7 +45,7 @@ function OnMerchantInfoUpdate(...)
 end
 
 function OnLootUpdate(self, ...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
   
@@ -63,7 +63,7 @@ function OnLootUpdate(self, ...)
 end
 
 function OnLootUpdateElvUI(self, ...)
-  if (WoWeuCN_Tooltips_PS["active"]=="0" or WoWeuCN_Tooltips_PS["transadvanced"]=="0") or not _G.ElvLootFrame then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") or not _G.ElvLootFrame then
     return
   end
   

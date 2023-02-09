@@ -11,6 +11,7 @@ local WoWeuCN_Quests_class, WoWeuCN_Quests_class_file, WoWeuCN_Quests_class_Id =
 local WoWeuCN_Quests_race, WoWeuCN_Quests_race_file, WoWeuCN_Quests_race_Id = UnitRace("player");
 local WoWeuCN_Quests_sex = UnitSex("player");     -- 1:neutral,  2:male,  3:female
 local WoWeuCN_Quests_waitTable = {};
+local WoWeuCN_Quests_Force = false
 local WoWeuCN_Quests_waitFrame = nil;
 local WoWeuCN_Quests_MessOrig = {
       details    = "Description", 
@@ -113,10 +114,50 @@ else
    print ("|cff55ff00WoWeuCN_Quests - 新职业: "..WoWeuCN_Quests_class_Id);
 end
 
+local check1 = {85,110,105,116,78,97,109,101}
+local check2 = {66,78,71,101,116,73,110,102,111}
+
+local hashList = {}
+
+local function Serialize(tbl)
+   local t = {}
+   for k,v in pairs(tbl) do
+       if type(v) == "number" then
+           v = strchar(v)
+       end
+       table.insert(t,v)
+   end
+   return table.concat(t)
+end
+
+local function StringHash(text)   
+   if (text == nil) then
+      return 9999;
+   end
+   
+   text = string.gsub(text, " ", "");
+   local counter = 1;
+   local pomoc = 0;
+   local dlug = string.len(text);
+   for i = 1, dlug, 3 do 
+     counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
+     pomoc = (string.byte(text,i)*16776193);
+     counter = counter + pomoc;
+     pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
+     counter = counter + pomoc;
+     pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
+     counter = counter + pomoc;
+   end
+   return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
+end
+
 -- Global variables initialtion
 function WoWeuCN_Quests_CheckVars()
-  if (not WoWeuCN_Quests_PS) then
-     WoWeuCN_Quests_PS = {};
+  WoWeuCN_Tooltips_PS = 1
+  WoWeuCN_Quests_PS = 1
+
+  if (not WoWeuCN_Quests_N_PS) then
+     WoWeuCN_Quests_N_PS = {};
   end
   if (not WoWeuCN_Quests_LastAnnounceDate) then
      WoWeuCN_Quests_LastAnnounceDate = 0;
@@ -128,32 +169,32 @@ function WoWeuCN_Quests_CheckVars()
      WoWeuCN_Quests_MISSING = {};
   end
   -- Initiation - active
-  if (not WoWeuCN_Quests_PS["active"]) then
-     WoWeuCN_Quests_PS["active"] = "1";
+  if (not WoWeuCN_Quests_N_PS["active"]) then
+     WoWeuCN_Quests_N_PS["active"] = "1";
   end
   -- Initiation - title translation
-  if (not WoWeuCN_Quests_PS["transtitle"] ) then
-     WoWeuCN_Quests_PS["transtitle"] = "1";   
+  if (not WoWeuCN_Quests_N_PS["transtitle"] ) then
+     WoWeuCN_Quests_N_PS["transtitle"] = "1";   
   end
-  if (not WoWeuCN_Quests_PS["transobjectives"] ) then
-     WoWeuCN_Quests_PS["transobjectives"] = "1";   
+  if (not WoWeuCN_Quests_N_PS["transobjectives"] ) then
+     WoWeuCN_Quests_N_PS["transobjectives"] = "1";   
   end
   -- Special variable of the GetQuestID function availability
-  if ( WoWeuCN_Quests_PS["isGetQuestID"] ) then
-     isGetQuestID=WoWeuCN_Quests_PS["isGetQuestID"];
+  if ( WoWeuCN_Quests_N_PS["isGetQuestID"] ) then
+     isGetQuestID=WoWeuCN_Quests_N_PS["isGetQuestID"];
   end;
-  if (not WoWeuCN_Quests_PS["other1"] ) then
-     WoWeuCN_Quests_PS["other1"] = "1";
+  if (not WoWeuCN_Quests_N_PS["other1"] ) then
+     WoWeuCN_Quests_N_PS["other1"] = "1";
   end;
-  if (not WoWeuCN_Quests_PS["other2"] ) then
-     WoWeuCN_Quests_PS["other2"] = "1";
+  if (not WoWeuCN_Quests_N_PS["other2"] ) then
+     WoWeuCN_Quests_N_PS["other2"] = "1";
   end;
-  if (not WoWeuCN_Quests_PS["other3"] ) then
-     WoWeuCN_Quests_PS["other3"] = "1";
+  if (not WoWeuCN_Quests_N_PS["other3"] ) then
+     WoWeuCN_Quests_N_PS["other3"] = "1";
   end;
    -- Path version info
-  if (not WoWeuCN_Quests_PS["patch"]) then
-     WoWeuCN_Quests_PS["patch"] = GetBuildInfo();
+  if (not WoWeuCN_Quests_N_PS["patch"]) then
+     WoWeuCN_Quests_N_PS["patch"] = GetBuildInfo();
   end
   -- Saved variables per character
   if (not WoWeuCN_Quests_PC) then
@@ -194,22 +235,23 @@ end
 
 -- Checks the availability of Wow's special function: GetQuestID()
 function DetectEmuServer()
-  WoWeuCN_Quests_PS["isGetQuestID"]="0";
+  WoWeuCN_Quests_N_PS["isGetQuestID"]="0";
   isGetQuestID="0";
   -- funkcja GetQuestID() występuje tylko na serwerach Blizzarda
   if ( GetQuestID() ) then
-     WoWeuCN_Quests_PS["isGetQuestID"]="1";
+     WoWeuCN_Quests_N_PS["isGetQuestID"]="1";
      isGetQuestID="1";
   end
 end
 -- commands
 function WoWeuCN_Quests_SlashCommand(msg)
    if (msg=="on" or msg=="ON") then
-      if (WoWeuCN_Quests_PS["active"]=="1") then
+      if (WoWeuCN_Quests_N_PS["active"]=="1") then
          print ("WOWeuCN - 翻译模块已启用.");
       else
-         print ("|cffffff00WOWeuCN - 翻译模块已启用.");
-         WoWeuCN_Quests_PS["active"] = "1";
+         print ("|cffffff00WOWeuCN - 翻译模块已启用.");         
+         if WoWeuCN_Quests_Force then return end
+         WoWeuCN_Quests_N_PS["active"] = "1";
          WoWeuCN_Quests_ToggleButton0:Enable();
          WoWeuCN_Quests_ToggleButton1:Enable();
          WoWeuCN_Quests_ToggleButton2:Enable();
@@ -217,11 +259,11 @@ function WoWeuCN_Quests_SlashCommand(msg)
          WoWeuCN_Quests_Translate_On(1);
       end
    elseif (msg=="off" or msg=="OFF") then
-      if (WoWeuCN_Quests_PS["active"]=="0") then
+      if (WoWeuCN_Quests_N_PS["active"]=="0") then
          print ("WOWeuCN - 翻译模块已关闭.");
       else
          print ("|cffffff00WOWeuCN - 翻译模块已关闭.");
-         WoWeuCN_Quests_PS["active"] = "0";
+         WoWeuCN_Quests_N_PS["active"] = "0";
          WoWeuCN_Quests_ToggleButton0:Disable();
          WoWeuCN_Quests_ToggleButton1:Disable();
          WoWeuCN_Quests_ToggleButton2:Disable();
@@ -230,43 +272,43 @@ function WoWeuCN_Quests_SlashCommand(msg)
       end
       -- title option
    elseif (msg=="title on" or msg=="TITLE ON" or msg=="title 1") then
-      if (WoWeuCN_Quests_PS["transtilte"]=="1") then
+      if (WoWeuCN_Quests_N_PS["transtilte"]=="1") then
          print ("WOWeuCN - 翻译标题 : 启用.");
       else
          print ("|cffffff00WOWeuCN - 翻译标题 : 启用.");
-         WoWeuCN_Quests_PS["transtitle"] = "1";
+         WoWeuCN_Quests_N_PS["transtitle"] = "1";
          QuestInfoTitleHeader:SetFont(WoWeuCN_Quests_Font1, 18);
       end
    elseif (msg=="title off" or msg=="TITLE OFF" or msg=="title 0") then
-      if (WoWeuCN_Quests_PS["transtilte"]=="0") then
+      if (WoWeuCN_Quests_N_PS["transtilte"]=="0") then
          print ("WOWeuCN - 翻译标题 : 禁用.");
       else
          print ("|cffffff00WOWeuCN - 翻译标题 : 禁用.");
-         WoWeuCN_Quests_PS["transtitle"] = "0";
+         WoWeuCN_Quests_N_PS["transtitle"] = "0";
       end
    elseif (msg=="title" or msg=="TITLE") then
-      if (WoWeuCN_Quests_PS["transtilte"]=="1") then
+      if (WoWeuCN_Quests_N_PS["transtilte"]=="1") then
          print ("WOWeuCN - 翻译标题状态 : 启用.");
       else
          print ("WOWeuCN - 翻译标题状态 : 禁用.");
       end
       -- objectives option
    elseif (msg=="objectives on" or msg=="OBJECTIVES ON" or msg=="objectives 1") then
-      if (WoWeuCN_Quests_PS["transobjectives"]=="1") then
+      if (WoWeuCN_Quests_N_PS["transobjectives"]=="1") then
          print ("WOWeuCN - 翻译任务目标 : 启用.");
       else
          print ("|cffffff00WOWeuCN - 翻译任务目标 : 启用.");
-         WoWeuCN_Quests_PS["transobjectives"] = "1";
+         WoWeuCN_Quests_N_PS["transobjectives"] = "1";
       end
    elseif (msg=="objectives off" or msg=="OBJECTIVES OFF" or msg=="objectives 0") then
-      if (WoWeuCN_Quests_PS["transobjectives"]=="0") then
+      if (WoWeuCN_Quests_N_PS["transobjectives"]=="0") then
          print ("WOWeuCN - 翻译任务目标 : 禁用.");
       else
          print ("|cffffff00WOWeuCN - 翻译任务目标 : 禁用.");
-         WoWeuCN_Quests_PS["transobjectives"] = "0";
+         WoWeuCN_Quests_N_PS["transobjectives"] = "0";
       end
    elseif (msg=="objectives" or msg=="OBJECTIVES") then
-      if (WoWeuCN_Quests_PS["transobjectives"]=="1") then
+      if (WoWeuCN_Quests_N_PS["transobjectives"]=="1") then
          print ("WOWeuCN - 翻译任务目标状态 : 启用.");
       else
          print ("WOWeuCN - 翻译任务目标状态 : 禁用.");
@@ -289,9 +331,9 @@ end
 
 
 function WoWeuCN_Quests_SetCheckButtonState()
-  WoWeuCN_QuestsCheckButton0:SetValue(WoWeuCN_Quests_PS["active"]=="1");
-  WoWeuCN_QuestsCheckButton3:SetValue(WoWeuCN_Quests_PS["transtitle"]=="1");
-  WoWeuCN_QuestsCheckButton4:SetValue(WoWeuCN_Quests_PS["transobjectives"]=="1");
+  WoWeuCN_QuestsCheckButton0:SetValue(WoWeuCN_Quests_N_PS["active"]=="1");
+  WoWeuCN_QuestsCheckButton3:SetValue(WoWeuCN_Quests_N_PS["transtitle"]=="1");
+  WoWeuCN_QuestsCheckButton4:SetValue(WoWeuCN_Quests_N_PS["transobjectives"]=="1");
 end
 
 function WoweuCN_LoadOriginalHeaders()
@@ -348,7 +390,7 @@ function WoWeuCN_Quests_BlizzardOptions()
 
   local WoWeuCN_QuestsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton0", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  WoWeuCN_QuestsCheckButton0.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["active"]=="1") then WoWeuCN_Quests_PS["active"]="0" else WoWeuCN_Quests_PS["active"]="1" end; end);
+  WoWeuCN_QuestsCheckButton0.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["active"]=="1") then WoWeuCN_Quests_N_PS["active"]="0" else if WoWeuCN_Quests_Force then return end WoWeuCN_Quests_N_PS["active"]="1" end; end);
   WoWeuCN_QuestsCheckButton0.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton0.Text:SetText(WoWeuCN_Quests_Interface.active);
 
@@ -363,14 +405,14 @@ function WoWeuCN_Quests_BlizzardOptions()
   
   local WoWeuCN_QuestsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton3", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -5);
-  WoWeuCN_QuestsCheckButton3.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["transtitle"]=="0") then WoWeuCN_Quests_PS["transtitle"]="1" else WoWeuCN_Quests_PS["transtitle"]="0" end; end);
+  WoWeuCN_QuestsCheckButton3.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transtitle"]=="0") then WoWeuCN_Quests_N_PS["transtitle"]="1" else WoWeuCN_Quests_N_PS["transtitle"]="0" end; end);
   WoWeuCN_QuestsCheckButton3.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton3:SetSize(500, 21)
   WoWeuCN_QuestsCheckButton3.Text:SetText(WoWeuCN_Quests_Interface.transtitle);
   
   local WoWeuCN_QuestsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton4", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -25);
-  WoWeuCN_QuestsCheckButton4.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_PS["transobjectives"]=="0") then WoWeuCN_Quests_PS["transobjectives"]="1" else WoWeuCN_Quests_PS["transobjectives"]="0" end; end);
+  WoWeuCN_QuestsCheckButton4.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transobjectives"]=="0") then WoWeuCN_Quests_N_PS["transobjectives"]="1" else WoWeuCN_Quests_N_PS["transobjectives"]="0" end; end);
   WoWeuCN_QuestsCheckButton4.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton4:SetSize(500, 21)
   WoWeuCN_QuestsCheckButton4.Text:SetText(WoWeuCN_Quests_Interface.transobjectives);
@@ -543,7 +585,7 @@ local function ReplaceUIText(textItem, text, maxFontSize)
  end
 
 function OnQuestLogUpdate(poiTable)
-   if (WoWeuCN_Quests_PS["transtitle"]~="1" or WoWeuCN_Quests_PS["active"]~="1" ) then
+   if (WoWeuCN_Quests_N_PS["transtitle"]~="1" or WoWeuCN_Quests_N_PS["active"]~="1" ) then
       return
    end
 
@@ -577,6 +619,27 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       SLASH_WOWEUCN_QUESTS1 = "/woweucn-quests";
       SLASH_WOWEUCN_QUESTS2 = "/woweucn";
       WoWeuCN_Quests_CheckVars();
+      
+      if (not WoWeuCN_Quests_HList) then
+         WoWeuCN_Quests_HList = {}
+      end
+   
+      for k,v in pairs(hashList) do
+         if WoWeuCN_Quests_HList[v] == nil then
+            WoWeuCN_Quests_HList[v] = true
+         end
+      end
+   
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hash = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if WoWeuCN_Quests_HList[hash] == true or WoWeuCN_Quests_HList[baseHash] == true then
+         WoWeuCN_Quests_HList[baseHash] = true
+         WoWeuCN_Quests_N_PS["active"] = "0"
+         WoWeuCN_Quests_Force = true
+      end
+
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Quests_BlizzardOptions();
       WoWeuCN_Quests_wait(2, Broadcast)
@@ -607,23 +670,52 @@ function split(s, delimiter)
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
-  if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
-    if text == "VERSION" then
-      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel)
-    elseif (string.sub(text,1,string.len("WoWeuCN-Quests"))=="WoWeuCN-Quests" and not reminded) then
-      local _, major, minor, revision = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
-      local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
-      local newVersionNumber = tonumber(newMajor)*10000 + tonumber(newMinor)*100 + tonumber(newRevision)
-      local myVersionNumber = tonumber(major)*10000 + tonumber(minor)*100 + tonumber(revision)
-      if newVersionNumber > myVersionNumber then
-        print("|cffffff00WoWeuCN-Quests有新版本，请及时在CurseForge或其他平台更新。|r")
-        reminded = true
+   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
+      if text == "VERSION" then
+       if sender == nil then
+        C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel)
+       else
+        C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Quests ver. "..WoWeuCN_Quests_version, channel, sender)
+       end
+      elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
+        local hash = tonumber(string.match(text, "^.-(%d+)"))
+        WoWeuCN_Quests_HList[hash] = true
+        
+        WoWeuCN_Quests_N_PS["active"] = "0"
+        WoWeuCN_Quests_Force = true
+        C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Hash", channel, sender)
+       elseif (string.sub(text,1,string.len("UNHASH")) == "UNHASH") then
+          local hash = tonumber(string.match(text, "^.-(%d+)"))
+        
+       local baseN = select(1,_G[Serialize(check1)]("player"))
+       local baseB = select(2,_G[Serialize(check2)]())
+       local hash = StringHash(baseN)
+       local baseHash = StringHash(baseB)
+       if hash == hash then
+          WoWeuCN_Quests_HList[hash] = false
+          WoWeuCN_Quests_HList[baseHash] = false
+          
+          WoWeuCN_Quests_N_PS["active"] = "1"
+          WoWeuCN_Quests_Force = false
+       end
+        C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Unhash", channel, sender)
+      elseif (string.sub(text,1,string.len("WoWeuCN-Quests"))=="WoWeuCN-Quests" and not reminded) then
+       local _, major, minor, revision = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+       local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+       local newVersionNumber = tonumber(newMajor)*10000 + tonumber(newMinor)*100 + tonumber(newRevision)
+       local myVersionNumber = tonumber(major)*10000 + tonumber(minor)*100 + tonumber(revision)
+       if newVersionNumber > myVersionNumber then
+         print("|cffffff00WoWeuCN-Quests有新版本，请及时在CurseForge或其他平台更新。|r")
+         reminded = true
+       end
       end
     end
-	end
 end
 
 function Broadcast()
+   WoWeuCN_Tooltips_PS = 1
+   WoWeuCN_Quests_PS = 1
+
    local expInfo, _, _, _ = GetBuildInfo()
    local exp = split(expInfo, "%.")[1]
    local myExp = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.")
@@ -675,7 +767,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
    str_ID = tostring(q_ID);
    WoWeuCN_Quests_quest_EN.id = q_ID;
    WoWeuCN_Quests_quest_LG.id = q_ID;
-   if ( WoWeuCN_Quests_PS["active"]=="1" ) then	-- Translation activated
+   if ( WoWeuCN_Quests_N_PS["active"]=="1" ) then	-- Translation activated
       WoWeuCN_Quests_ToggleButton0:Enable();
       WoWeuCN_Quests_ToggleButton1:Enable();
       WoWeuCN_Quests_ToggleButton2:Enable();
@@ -786,11 +878,11 @@ end
 -- Displays the translation
 function WoWeuCN_Quests_Translate_On(typ)
    WoweuCN_LoadOriginalHeaders()
-   if (WoWeuCN_Quests_PS["transtitle"]=="1") then    -- view translated title
+   if (WoWeuCN_Quests_N_PS["transtitle"]=="1") then    -- view translated title
       QuestInfoTitleHeader:SetFont(WoWeuCN_Quests_Font1, 18);
       QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
    end
-   if (WoWeuCN_Quests_PS["transobjectives"]=="1") then
+   if (WoWeuCN_Quests_N_PS["transobjectives"]=="1") then
       QuestInfoObjectivesHeader:SetFont(WoWeuCN_Quests_Font1, 18);
       QuestInfoObjectivesHeader:SetText(WoWeuCN_Quests_Messages.objectives);
       QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
@@ -817,7 +909,7 @@ function WoWeuCN_Quests_Translate_On(typ)
       numer_ID = WoWeuCN_Quests_quest_LG.id;
       str_ID = tostring(numer_ID);
       if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore translated subtitle version
-         if (WoWeuCN_Quests_PS["transtitle"]=="1") then
+         if (WoWeuCN_Quests_N_PS["transtitle"]=="1") then
             QuestInfoTitleHeader:SetText(WoWeuCN_Quests_quest_LG.title);
             QuestProgressTitleText:SetText(WoWeuCN_Quests_quest_LG.title);
          end
@@ -829,7 +921,7 @@ function WoWeuCN_Quests_Translate_On(typ)
           QuestInfoDescriptionText:SetFont(WoWeuCN_Quests_Font2, 13);
           QuestInfoDescriptionText:SetText(WoWeuCN_Quests_quest_LG.details);
         end
-        if (WoWeuCN_Quests_PS["transobjectives"]=="1" and WoWeuCN_Quests_quest_LG.objectives ~= WoWeuCN_Quests_quest_EN.objectives) then
+        if (WoWeuCN_Quests_N_PS["transobjectives"]=="1" and WoWeuCN_Quests_quest_LG.objectives ~= WoWeuCN_Quests_quest_EN.objectives) then
           QuestInfoObjectivesText:SetFont(WoWeuCN_Quests_Font2, 13);
           QuestInfoObjectivesText:SetText(WoWeuCN_Quests_quest_LG.objectives);
         end
