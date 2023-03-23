@@ -42,6 +42,7 @@ function WoWeuCN_Scanner_ScanClear()
     WoWeuCN_Scanner_ItemIndex = 1
     WoWeuCN_Scanner_UnitToolTips0 = {} 
     WoWeuCN_Scanner_UnitToolTips100000 = {} 
+    WoWeuCN_Scanner_UnitToolTips200000 = {} 
     WoWeuCN_Scanner_UnitIndex = 1
     WoWeuCN_Scanner_Achivements0 = {} 
     WoWeuCN_Scanner_AchivementsIndex = 1
@@ -149,7 +150,7 @@ function WoWeuCN_Scanner_wait(delay, func, ...)
 end
 
 function WoWeuCN_Scanner_ScanSpellAuto(startIndex, attempt, counter)
-  if (startIndex > 400000) then
+  if (startIndex > 500000) then
     return;
   end
   for i = startIndex, startIndex + 150 do
@@ -194,7 +195,7 @@ function WoWeuCN_Scanner_ScanSpellAuto(startIndex, attempt, counter)
 end
 
 function WoWeuCN_Scanner_ScanUnitAuto(startIndex, attempt, counter)
-  if (startIndex > 200000) then
+  if (startIndex > 300000) then
     return;
   end
   for i = startIndex, startIndex + 250 do
@@ -346,10 +347,7 @@ function WoWeuCN_Scanner_ScanQuestAuto(startIndex, attempt, counter)
 end
 
 function WoWeuCN_Scanner_ScanCacheAuto(startIndex, attempt, counter)
-  if (startIndex > 30000 and startIndex < 60000) then
-    startIndex = 60000
-  end
-  if (startIndex > 80000) then
+  if (startIndex > 90000) then
     return;
   end
   if (counter == 0) then

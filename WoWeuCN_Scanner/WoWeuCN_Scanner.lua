@@ -31,7 +31,7 @@ function WoWeuCN_Scanner_SlashCommand(msg)
       WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanItemAuto, WoWeuCN_Scanner_ItemIndex, 1, 0)
 
     -- achivement auto scan
-    elseif (msg=="achievescanauto" or msg=="ACHIVESCANAUTO") then      
+    elseif (msg=="achievescanauto" or msg=="ACHIEVESCANAUTO") then      
       WoWeuCN_Scanner_ScanInit()
       WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanAchivementAuto, WoWeuCN_Scanner_ItemIndex, 1, 0)
 
