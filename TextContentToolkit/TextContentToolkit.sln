@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.168
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextContentToolkit", "TextContentToolkit\TextContentToolkit.csproj", "{C70157DF-24C7-4675-876E-4D14BD39087C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C70157DF-24C7-4675-876E-4D14BD39087C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C70157DF-24C7-4675-876E-4D14BD39087C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C70157DF-24C7-4675-876E-4D14BD39087C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C70157DF-24C7-4675-876E-4D14BD39087C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB6F05AB-6B31-4240-A3E9-7A8756CD1E9A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1 @@
+["$Id$"]={["Title"]="$Title$", ["Objectives"]="$Objectives$", ["Description"]="$Description$", ["Progress"]="$Progress$", ["Completion"]="$Completion$", ["Translator"]=""},
