@@ -5,16 +5,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using QuestTextRetriever.Configs;
+using QuestTextRetriever.Readers;
 
 namespace QuestTextRetriever
 {
-    public class AchievementReader
+    public class AchievementReader : TooltipsReader
     {
-        public AchievementReader()
+        public AchievementReader(AchievementConfig achievementConfig)
         {
+            TooltipsConfig = achievementConfig;
         }
 
-        public void Read(string achievementTipPath, Dictionary<string, Tooltip> achievementTipsList)
+        private void Read(string achievementTipPath, Dictionary<string, Tooltip> achievementTipsList)
         {
             var lines = File.ReadAllLines(achievementTipPath);
             var usedId = new HashSet<string>();
@@ -78,31 +81,8 @@ namespace QuestTextRetriever
                 achievementTipsList[id] = achievementTips;
             }
         }
-
-        public void ExecuteOnQuestieFolder(string dirPath)
-        {
-            var dirInfo = new DirectoryInfo(dirPath);
-
-            foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
-            {
-                var outputPath = Path.Combine(dirPath, "output", fileInfo.Name);
-
-                var inputPaths = new List<string>();
-                inputPaths.Add(fileInfo.FullName);
-                var locale = fileInfo.Name.Split('.')[0];
-                Write(outputPath, inputPaths, OutputMode.Questie, locale);
-            }
-        }
-
-        public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
-        {
-            var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\achievements\wlk_achievements_47585.lua");
-
-            Write(outputPath, inputPaths, outputMode);
-        }
-
-        public void Write(string outputPath, List<string> inputPaths, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
+        
+        protected override void Write(string outputPath, List<string> inputPaths, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
         {
             var achievementTipList = new Dictionary<string, Tooltip>();
 

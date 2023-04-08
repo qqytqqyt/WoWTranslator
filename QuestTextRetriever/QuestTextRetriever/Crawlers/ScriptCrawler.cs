@@ -15,7 +15,6 @@ namespace QuestTextRetriever.Crawlers
 {
     public class ScriptCrawler
     {
-
         public static List<SimpleScriptObject> ExecuteSql()
         {
             var scripts = new List<SimpleScriptObject>();
@@ -69,9 +68,8 @@ namespace QuestTextRetriever.Crawlers
             scripts.RemoveAll(s => string.IsNullOrEmpty(s.TextCN));
             return scripts;
         }
-            
 
-        public void Execute()
+        public void ExecuteWowDB()
         {
             var scripts = new List<Script>();
             bool retry = true;

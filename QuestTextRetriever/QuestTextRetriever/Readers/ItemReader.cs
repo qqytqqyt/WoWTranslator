@@ -7,15 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using QuestTextRetriever.Configs;
 using QuestTextRetriever.Models;
+using QuestTextRetriever.Readers;
 using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
-    public class ItemReader
+    public class ItemReader : TooltipsReader
     {
-        public ItemReader()
+        public ItemReader(ItemConfig itemConfig)
         {
+            TooltipsConfig = itemConfig;
         }
 
         private static readonly List<string> BlackListedText = new List<string>
@@ -23,7 +26,7 @@ namespace QuestTextRetriever
             "你尚未收藏过此外观",
         };
 
-        public void Read(string tooltipPath, Dictionary<string, Tooltip> itemTipsList)
+        private void Read(string tooltipPath, Dictionary<string, Tooltip> itemTipsList)
         {
             var lines = File.ReadAllLines(tooltipPath);
             var usedId = new HashSet<string>();
@@ -138,33 +141,7 @@ namespace QuestTextRetriever
             }
         }
 
-        public void ExecuteOnQuestieFolder(string dirPath)
-        {
-            var dirInfo = new DirectoryInfo(dirPath);
-
-            foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
-            {
-                var outputPath = Path.Combine(dirPath, "output", fileInfo.Name);
-
-                var inputPaths = new List<string>();
-                inputPaths.Add(fileInfo.FullName);
-                var locale = fileInfo.Name.Split('.')[0];
-                Write(outputPath, inputPaths, OutputMode.Questie, locale);
-            }
-        }
-
-        public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
-        {
-            var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\ptr_items.43903.lua");
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\retail_items.46144.lua");
-            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45166.lua");
-            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\items\wlk_items_45327.lua");
-
-            Write(outputPath, inputPaths, outputMode);
-        }
-
-        public void Write(string outputPath, List<string> inputPaths, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
+        protected override void Write(string outputPath, List<string> inputPaths, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
         {
             var itemTipList = new Dictionary<string, Tooltip>();
 
@@ -176,23 +153,26 @@ namespace QuestTextRetriever
             if (outputMode == OutputMode.WoWeuCN)
                 WriteToWoWEuCN(outputPath, itemTipList);
             else
+                WriteToQuestie(outputPath, locale, itemTipList);
+        }
+
+        private void WriteToQuestie(string outputPath, string locale, Dictionary<string, Tooltip> itemTipList)
+        {
+            var filterPath = TooltipsConfig.QuestieFilterPath;
+
+            var lines = File.ReadAllLines(filterPath);
+            var validIds = new HashSet<string>();
+            foreach (var line in lines)
             {
-                var filterPath =
-                    @"G:\Games\World of Warcraft\_classic_beta_\Interface\AddOns\Questie\Database\Wotlk\wotlkItemDB.lua";
+                if (!line.Trim().StartsWith("["))
+                    continue;
 
-                var lines = File.ReadAllLines(filterPath);
-                var validIds = new HashSet<string>();
-                foreach (var line in lines)
-                {
-                    if (!line.Trim().StartsWith("["))
-                        continue;
+                var id = line.FirstBetween("[", "]");
+                validIds.Add(id);
+            }
 
-                    var id = line.FirstBetween("[", "]");
-                    validIds.Add(id);
-                }
-
-                var sb = new StringBuilder();
-                var preText = @"if GetLocale() ~= ""localeCode"" then
+            var sb = new StringBuilder();
+            var preText = @"if GetLocale() ~= ""localeCode"" then
     return
 end
 
@@ -200,30 +180,29 @@ end
 local l10n = QuestieLoader:ImportModule(""l10n"")
 
 l10n.itemLookup[""localeCode""] = { ";
-                preText = preText.Replace("localeCode", locale);
-                sb.AppendLine(preText);
-                var itemTipOrderedList = itemTipList.Select(i => i.Value).OrderBy(q => int.Parse(q.Id)).ToList();
-                foreach (var itemTips in itemTipOrderedList)
-                {
-                    if (!validIds.Contains(itemTips.Id))
-                        continue;
+            preText = preText.Replace("localeCode", locale);
+            sb.AppendLine(preText);
+            var itemTipOrderedList = itemTipList.Select(i => i.Value).OrderBy(q => int.Parse(q.Id)).ToList();
+            foreach (var itemTips in itemTipOrderedList)
+            {
+                if (!validIds.Contains(itemTips.Id))
+                    continue;
 
-                    validIds.Remove(itemTips.Id);
+                validIds.Remove(itemTips.Id);
 
-                    if (!itemTips.TooltipLines.Any())
-                        continue;
+                if (!itemTips.TooltipLines.Any())
+                    continue;
 
-                    sb.Append("[").Append(itemTips.Id).Append("] = \"");
-                    sb.Append(itemTips.TooltipLines.First().Line);
-                    sb.Append("\",");
-                    validIds.Remove(itemTips.Id);
-                    sb.AppendLine();
-                }
-
-                sb.AppendLine("}");
-
-                File.WriteAllText(outputPath, sb.ToString());
+                sb.Append("[").Append(itemTips.Id).Append("] = \"");
+                sb.Append(itemTips.TooltipLines.First().Line);
+                sb.Append("\",");
+                validIds.Remove(itemTips.Id);
+                sb.AppendLine();
             }
+
+            sb.AppendLine("}");
+
+            File.WriteAllText(outputPath, sb.ToString());
         }
 
         private static void WriteToWoWEuCN(string outputPath, Dictionary<string, Tooltip> itemTipList)

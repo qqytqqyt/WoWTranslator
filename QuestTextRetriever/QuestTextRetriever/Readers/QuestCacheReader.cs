@@ -5,48 +5,13 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Web.Caching;
-using Newtonsoft.Json;
 using QuestTextRetriever.Extensions;
 using QuestTextRetriever.Models;
-using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever.Readers
 {
-    public class QuestCacheReader
+    public static class QuestCacheReader
     {
-        public QuestCacheReader(string templateFilePath)
-        {
-            m_template = File.ReadAllText(templateFilePath);
-        }
-
-        public void Execute(string outputPath)
-        {
-            var questObjects = new List<Quest>();
-            //ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache_38339_zhcn.wdb", questObjects);
-            //ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\zhcn_tbcextra_questcache38548zhcn.wdb", questObjects);
-            //ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\zhcn_tbcextra_questcache42328zhcn.wdb", questObjects);
-            ReadQuestCache(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache44644_tw.wdb", questObjects);
-
-            var sb = new StringBuilder();
-            foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
-            {
-                var line = PrintLine(questObject);
-                //line = SpecialTreatment(line);
-                line = line.Replace(Environment.NewLine, @"NEW_LINE").Replace("\n", @"NEW_LINE");
-                line = line.Replace(@"$r", @"{race}").Replace(@"$R", @"{race}");
-                line = line.Replace(@"$c", @"{class}").Replace(@"$C", @"{class}");
-                line = line.Replace(@"$n", @"{name}").Replace(@"$N", @"{name}");
-                line = line.Replace(@"$b", @"NEW_LINE").Replace(@"$B", @"NEW_LINE");
-                line = ReplaceGender(line);
-                //line = ReplacePlayer(line, questObject, sbQuestToCheck);
-                sb.AppendLine(line);
-            }
-
-            var finalText = sb.ToString();
-            File.WriteAllText(outputPath, finalText);
-        }
-
         public static void ReadQuestCache(string fileName, List<Quest> questObjects)
         {
             var index = 0;
@@ -425,7 +390,7 @@ namespace QuestTextRetriever.Readers
             }
         }
 
-        static bool IsLegalUnicode(string str)
+        private static bool IsLegalUnicode(string str)
         {
             for (int i = 0; i < str.Length; i++)
             {
@@ -503,16 +468,5 @@ namespace QuestTextRetriever.Readers
 
             return text;
         }
-        
-        public string PrintLine(Quest quest)
-        {
-            var text = m_template.Replace("$Id$", quest.Id).Replace("$Title$", quest.Title)
-                .Replace("$Objectives$", quest.Objectives).Replace("$Description$", quest.Description)
-                .Replace("$Progress$", quest.Progress).Replace("$Completion$", quest.Completion);
-            return text;
-        }
-
-        private string[] m_sampleText;
-        private readonly string m_template;
     }
 }

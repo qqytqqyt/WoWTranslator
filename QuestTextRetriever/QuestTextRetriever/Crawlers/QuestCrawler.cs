@@ -6,7 +6,7 @@ using System.Threading;
 
 namespace QuestTextRetriever.Crawlers
 {
-    public class Crawler
+    public class QuestCrawler
     {
         public void Execute()
         {

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using Newtonsoft.Json;
+using QuestTextRetriever.Configs;
 using QuestTextRetriever.Models;
 using QuestTextRetriever.Readers;
 using QuestTextRetriever.Utils;
@@ -12,27 +13,23 @@ namespace QuestTextRetriever
 {
     public class QuestReader
     {
-        public QuestReader()
+        public QuestReader(QuestConfig questConfig)
         {
-            m_dirPath = @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\WoWHeadData\WoWHead37844\";
-            m_template = File.ReadAllText(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\template.txt");
+            m_dirPath = questConfig.JsonDirPath;
+            m_template = File.ReadAllText(questConfig.TemplatePath);
+            m_questConfig = questConfig;
         }
 
-        public static void MergeOutputs(string output)
+        public void MergeOutputs()
         {
             var dic = new SortedDictionary<int, string>();
-            var filelist = new List<string>();
-            filelist.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\output_46144.lua");
-            filelist.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\outputretail9.2.5.43971.txt");
-
-            foreach (var file in filelist)
+            m_questConfig.FileMergeList.Add(m_questConfig.OutputPath);
+            foreach (var file in m_questConfig.FileMergeList)
             {
                 var lines = File.ReadAllLines(file);
                 foreach (var line in lines)
                 {
                     var id = int.Parse(line.FirstBetween("[\"", "\"]"));
-                    if (dic.ContainsKey(id))
-                        continue;
 
                     dic[id] = line;
                 }
@@ -40,7 +37,7 @@ namespace QuestTextRetriever
 
 
             var list = dic.OrderBy(l => l.Key).Select(d => d.Value);
-            File.WriteAllLines(output, list);
+            File.WriteAllLines(m_questConfig.OutputPath, list);
         }
         
         public void ReadObjectives(string objectivesPath, List<QuestObjectives> objectives)
@@ -86,148 +83,64 @@ namespace QuestTextRetriever
                 }
             }
         }
-
-
-        public void ExecuteOnQuestieFolder(string dirPath)
+        
+        public void ExecuteOnQuestieFolder()
         {
-            var dirInfo = new DirectoryInfo(dirPath);
+            var dirInfo = new DirectoryInfo(m_questConfig.QuestieDir);
 
             foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
             {
-                var outputPath = Path.Combine(dirPath, "output", fileInfo.Name);
+                var outputPath = Path.Combine(m_questConfig.QuestieDir, "output", fileInfo.Name);
 
                 var inputPaths = new List<string>();
                 inputPaths.Add(fileInfo.FullName);
                 var locale = fileInfo.Name.Split('.')[0];
-                Execute(outputPath, inputPaths, VersionMode.Classic, OutputMode.Questie, locale);
+                Execute(outputPath, VersionMode.Classic, OutputMode.Questie, locale);
             }
         }
 
-        public void Execute(string outputPath, VersionMode versionMode = VersionMode.Retail, OutputMode outputMode = OutputMode.WoWeuCN)
+        public void Execute()
         {
-            var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questobjectives46144.lua");
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questobjectives46144_1.lua");
-            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR.lua");
-            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR2.lua");
-            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR3.lua");
-            //inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\questie\WLK-input\quests\koKR4.lua");
-
-            Execute(outputPath, inputPaths, versionMode, outputMode);
+            Execute(m_questConfig.OutputPath, m_questConfig.VersionMode, m_questConfig.OutputMode);
+            MergeOutputs();
         }
 
-
-        public void Execute(string outputPath, List<string> inputPaths,  VersionMode versionMode = VersionMode.Retail, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
+        private void Execute(string outputPath, VersionMode versionMode, OutputMode outputMode, string locale = "zhCN")
         {
             var objectives = new List<QuestObjectives>();
             var apis = new List<QuestApi>();
             var cachedQuests = new List<Quest>();
 
-            foreach (var inputPath in inputPaths)
-            {
-                ReadObjectives(inputPath, objectives);
-            }
-
-            //ReadObjectives(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\beta-quest-objectives.36639.lua",
-            //    objectives);
-
-            //QuestCacheReader.ReadQuestCacheRetail(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39069.wdb", cachedQuests);
 
             if (versionMode == VersionMode.Retail)
             {
                 #region legacy
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39226.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39318.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39427.1.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39497.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39617.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache39653.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache40843.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache42423.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43903.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43971.wdb", cachedQuests);
-
-                // ReadObjectives(
-                //@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39226.lua",
-                //objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39318.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39427.1.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39497.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39617.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.39653.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.40843.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.42423.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.43903.lua",
-                //     objectives);
-                // ReadObjectives(
-                //     @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.43971.lua",
-                //     objectives);
-
-                // var dirPath = new DirectoryInfo(m_dirPath);
                 // ReadQuestApis(dirPath, apis);
                 #endregion
 
-                //QuestCacheReader.ReadQuestCacheRetail(
-                //    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache43971.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache46144.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache46144_2.wdb", cachedQuests);
-                QuestCacheReader.ReadQuestCacheRetail(
-                    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache46144_3.wdb", cachedQuests);
+                foreach (var inputPath in m_questConfig.QuestObjectiveListRetail)
+                {
+                    ReadObjectives(inputPath, objectives);
+                }
+
+                foreach (var inputPath in m_questConfig.QuestCacheListRetail)
+                {
+                    QuestCacheReader.ReadQuestCacheRetail(inputPath, cachedQuests);
+                }
             }
 
             if (versionMode == VersionMode.Classic)
             {
-                //QuestCacheReader.ReadQuestCache(
-                //    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache45166_cn.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCache(
-                //    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache45166_cn_2.wdb", cachedQuests);
-                //QuestCacheReader.ReadQuestCache(
-                //    @"G:\OneDrive\OwnProjects\WoWTranslator\Data\quests\questcache45166_cn_3.wdb", cachedQuests);
-            }
+                foreach (var inputPath in m_questConfig.QuestObjectiveListClassic)
+                {
+                    ReadObjectives(inputPath, objectives);
+                }
 
-            //ReadObjectives(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\retail-quest-objectives.36753.lua",
-            //    objectives);
-            //ReadObjectives(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.37844.lua",
-            //    objectives);
-            //ReadObjectives(
-            //    @"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\quests\ptr-quest-objectives.39136.lua",
-            //    objectives);
+                foreach (var inputPath in m_questConfig.QuestCacheListClassic)
+                {
+                    QuestCacheReader.ReadQuestCache(inputPath, cachedQuests);
+                }
+            }
            
             var usedId = new HashSet<string>();
             var questObjects = new List<Quest>();
@@ -285,88 +198,97 @@ namespace QuestTextRetriever
                 WriteToWoWEuCN(outputPath, questObjects);
 
             if (outputMode == OutputMode.Questie)
+                WrtieToQuestie(outputPath, locale, questObjects);
+
+        }
+
+        private void WrtieToQuestie(string outputPath, string locale, List<Quest> questObjects)
+        {
+            var sb = new StringBuilder();
+            var filterPath = m_questConfig.QuestieFilterPath;
+
+            var lines = File.ReadAllLines(filterPath);
+            var validIds = new HashSet<string>();
+            foreach (var line in lines)
             {
-                var sb = new StringBuilder();
-                var filterPath =
-                    @"G:\Games\World of Warcraft\_classic_beta_\Interface\AddOns\Questie\Database\Wotlk\wotlkQuestDB.lua";
+                if (!line.Trim().StartsWith("["))
+                    continue;
 
-                var lines = File.ReadAllLines(filterPath);
-                var validIds = new HashSet<string>();
-                foreach (var line in lines)
-                {
-                    if (!line.Trim().StartsWith("["))
-                        continue;
+                var id = line.FirstBetween("[", "]");
+                validIds.Add(id);
+            }
 
-                    var id = line.FirstBetween("[", "]");
-                    validIds.Add(id);
-                }
-
-                var preText = @"---@type l10n
+            var preText = @"---@type l10n
 local l10n = QuestieLoader:ImportModule(""l10n"")
 
 l10n.questLookup[""localeCode""] = { ";
-                preText = preText.Replace("localeCode", locale);
-                sb.AppendLine(preText);
-                foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
+            preText = preText.Replace("localeCode", locale);
+            sb.AppendLine(preText);
+            foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
+            {
+                validIds.Remove(questObject.Id);
+
+                sb.Append("[" + questObject.Id + "] = {");
+                sb.Append("\"" + questObject.Title.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") +
+                          "\", ");
+                if (string.IsNullOrEmpty(questObject.Description.Trim()))
+                    sb.Append("nil, ");
+                else
                 {
-                    validIds.Remove(questObject.Id);
-
-                    sb.Append("[" + questObject.Id + "] = {");
-                    sb.Append("\"" + questObject.Title.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\", ");
-                    if (string.IsNullOrEmpty(questObject.Description.Trim()))
-                        sb.Append("nil, ");
-                    else
+                    var questLines = questObject.Description.Split(new[] {"$b", "$B", Environment.NewLine},
+                        StringSplitOptions.RemoveEmptyEntries);
+                    var questLinesModified = new List<string>();
+                    foreach (var questLine in questLines)
                     {
-                        var questLines = questObject.Description.Split(new[] { "$b", "$B", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-                        var questLinesModified = new List<string>();
-                        foreach (var questLine in questLines)
-                        {
-                            var line = questLine;
+                        var line = questLine;
 
-                            line = line.Replace(@"$r", @"<race>").Replace(@"$R", @"<race>");
-                            line = line.Replace(@"$c", @"<class>").Replace(@"$C", @"<class>");
-                            line = line.Replace(@"$n", @"<name>").Replace(@"$N", @"<name>");
-                            line = line.Replace(@"$p", @"<name>").Replace(@"$P", @",name>");
+                        line = line.Replace(@"$r", @"<race>").Replace(@"$R", @"<race>");
+                        line = line.Replace(@"$c", @"<class>").Replace(@"$C", @"<class>");
+                        line = line.Replace(@"$n", @"<name>").Replace(@"$N", @"<name>");
+                        line = line.Replace(@"$p", @"<name>").Replace(@"$P", @",name>");
 
-                            line = ReplaceGenderQuestie(line);
-                            questLinesModified.Add(line);
-                        }
-
-                        string questDescText = string.Join(",", questLinesModified.Select(s => "\"" + s.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\""));
-                        sb.Append("{" + questDescText + "}, ");
+                        line = ReplaceGenderQuestie(line);
+                        questLinesModified.Add(line);
                     }
 
-                    if (string.IsNullOrEmpty(questObject.Objectives.Trim()))
-                        sb.Append("nil}");
-                    else
-                    {
-                        var questLines = questObject.Objectives.Split(new[] { "$b", "$B", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
-                        var questLinesModified = new List<string>();
-                        foreach (var questLine in questLines)
-                        {
-                            var line = questLine;
-
-                            line = line.Replace(@"$r", @"<race>").Replace(@"$R", @"<race>");
-                            line = line.Replace(@"$c", @"<class>").Replace(@"$C", @"<class>");
-                            line = line.Replace(@"$n", @"<name>").Replace(@"$N", @"<name>");
-                            line = line.Replace(@"$p", @"<name>").Replace(@"$P", @",name>");
-
-                            line = ReplaceGenderQuestie(line);
-                            questLinesModified.Add(line);
-                        }
-
-                        string questDescText = string.Join(",", questLinesModified.Select(s => "\"" + s.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\""));
-                        sb.Append("{" + questDescText + "}").Append("}");
-                    }
-
-                    sb.AppendLine(",");
+                    string questDescText = string.Join(",",
+                        questLinesModified.Select(s =>
+                            "\"" + s.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\""));
+                    sb.Append("{" + questDescText + "}, ");
                 }
 
-                sb.AppendLine("}");
-                var finalText = sb.ToString();
-                File.WriteAllText(outputPath, finalText);
+                if (string.IsNullOrEmpty(questObject.Objectives.Trim()))
+                    sb.Append("nil}");
+                else
+                {
+                    var questLines = questObject.Objectives.Split(new[] {"$b", "$B", Environment.NewLine},
+                        StringSplitOptions.RemoveEmptyEntries);
+                    var questLinesModified = new List<string>();
+                    foreach (var questLine in questLines)
+                    {
+                        var line = questLine;
+
+                        line = line.Replace(@"$r", @"<race>").Replace(@"$R", @"<race>");
+                        line = line.Replace(@"$c", @"<class>").Replace(@"$C", @"<class>");
+                        line = line.Replace(@"$n", @"<name>").Replace(@"$N", @"<name>");
+                        line = line.Replace(@"$p", @"<name>").Replace(@"$P", @",name>");
+
+                        line = ReplaceGenderQuestie(line);
+                        questLinesModified.Add(line);
+                    }
+
+                    string questDescText = string.Join(",",
+                        questLinesModified.Select(s =>
+                            "\"" + s.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\""));
+                    sb.Append("{" + questDescText + "}").Append("}");
+                }
+
+                sb.AppendLine(",");
             }
 
+            sb.AppendLine("}");
+            var finalText = sb.ToString();
+            File.WriteAllText(outputPath, finalText);
         }
 
         private void WriteToWoWEuCN(string outputPath, List<Quest> questObjects)
@@ -387,9 +309,9 @@ l10n.questLookup[""localeCode""] = { ";
                 line = ReplaceGender(line);
                 //line = ReplacePlayer(line, questObject, sbQuestToCheck);
                 sb.AppendLine(line);
-                var finalText = sb.ToString();
-                File.WriteAllText(outputPath, finalText);
             }
+            var finalText = sb.ToString();
+            File.WriteAllText(outputPath, finalText);
         }
 
         private static void ReadQuestApis(DirectoryInfo dirPath, List<QuestApi> apis)
@@ -619,5 +541,6 @@ l10n.questLookup[""localeCode""] = { ";
 
         private string[] m_sampleText;
         private readonly string m_template;
+        private QuestConfig m_questConfig;
     }
 }

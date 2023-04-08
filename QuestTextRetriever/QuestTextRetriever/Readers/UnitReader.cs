@@ -5,16 +5,19 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using QuestTextRetriever.Configs;
+using QuestTextRetriever.Readers;
 
 namespace QuestTextRetriever
 {
-    public class UnitReader
+    public class UnitReader : TooltipsReader
     {
-        public UnitReader()
+        public UnitReader(UnitConfig unitConfig)
         {
+            TooltipsConfig = unitConfig;
         }
 
-        public void Read(string unitTipPath, Dictionary<string, Tooltip> unitTipsList)
+        private void Read(string unitTipPath, Dictionary<string, Tooltip> unitTipsList)
         {
             var lines = File.ReadAllLines(unitTipPath);
             var usedId = new HashSet<string>();
@@ -77,31 +80,8 @@ namespace QuestTextRetriever
                 unitTipsList[id] = unitTips;
             }
         }
-
-        public void ExecuteOnQuestieFolder(string dirPath)
-        {
-            var dirInfo = new DirectoryInfo(dirPath);
-
-            foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
-            {
-                var outputPath = Path.Combine(dirPath, "output", fileInfo.Name);
-
-                var inputPaths = new List<string>();
-                inputPaths.Add(fileInfo.FullName);
-                var locale = fileInfo.Name.Split('.')[0];
-                Write(outputPath, inputPaths, OutputMode.Questie, locale);
-            }
-        }
-
-        public void Write(string outputPath, OutputMode outputMode = OutputMode.WoWeuCN)
-        {
-            var inputPaths = new List<string>();
-            inputPaths.Add(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\units\dragon_units_46144.lua");
-
-            Write(outputPath, inputPaths, outputMode);
-        }
-
-        public void Write(string outputPath, List<string> inputPaths, OutputMode outputMode = OutputMode.WoWeuCN, string locale = "zhCN")
+        
+        protected override void Write(string outputPath, List<string> inputPaths, OutputMode outputMode, string locale = "zhCN")
         {
             var unitTipList = new Dictionary<string, Tooltip>();
 
@@ -113,22 +93,26 @@ namespace QuestTextRetriever
             if (outputMode == OutputMode.WoWeuCN)
                 WriteToWoWEuCN(outputPath, unitTipList);
             else
+                WriteToQuestie(outputPath, locale, unitTipList);
+        }
+
+        private void WriteToQuestie(string outputPath, string locale, Dictionary<string, Tooltip> unitTipList)
+        {
+            var lines = File.ReadAllLines(TooltipsConfig.QuestieFilterPath);
+            var validIds = new HashSet<string>();
+            foreach (var line in lines)
             {
-                var lines = File.ReadAllLines(@"G:\Games\World of Warcraft\_classic_beta_\Interface\AddOns\Questie\Database\Wotlk\wotlkNpcDB.lua");
-                var validIds = new HashSet<string>();
-                foreach (var line in lines)
-                {
-                    if (!line.Trim().StartsWith("["))
-                        continue;
+                if (!line.Trim().StartsWith("["))
+                    continue;
 
-                    var id = line.FirstBetween("[", "]");
-                    validIds.Add(id);
-                }
+                var id = line.FirstBetween("[", "]");
+                validIds.Add(id);
+            }
 
-                var unitTipOrderedList = unitTipList.Select(u => u.Value).OrderBy(q => int.Parse(q.Id)).ToList();
-                var sb = new StringBuilder();
+            var unitTipOrderedList = unitTipList.Select(u => u.Value).OrderBy(q => int.Parse(q.Id)).ToList();
+            var sb = new StringBuilder();
 
-                var preText = @"if GetLocale() ~= ""localeCode"" then
+            var preText = @"if GetLocale() ~= ""localeCode"" then
     return
 end
 
@@ -136,38 +120,37 @@ end
 local l10n = QuestieLoader:ImportModule(""l10n"")
 
 l10n.npcNameLookup[""localeCode""] = { ";
-                preText = preText.Replace("localeCode", locale);
+            preText = preText.Replace("localeCode", locale);
 
-                sb.AppendLine(preText);
+            sb.AppendLine(preText);
 
-                foreach (var unitTips in unitTipOrderedList)
+            foreach (var unitTips in unitTipOrderedList)
+            {
+                if (!validIds.Contains(unitTips.Id))
+                    continue;
+
+                if (!unitTips.TooltipLines.Any())
+                    continue;
+
+                sb.Append("[").Append(unitTips.Id).Append("] = {\"");
+                sb.Append(unitTips.TooltipLines.First().Line);
+                sb.Append("\",");
+                if (unitTips.TooltipLines.Count >= 2)
                 {
-                    if (!validIds.Contains(unitTips.Id))
-                        continue;
-
-                    if (!unitTips.TooltipLines.Any())
-                        continue;
-
-                    sb.Append("[").Append(unitTips.Id).Append("] = {\"");
-                    sb.Append(unitTips.TooltipLines.First().Line);
-                    sb.Append("\",");
-                    if (unitTips.TooltipLines.Count >= 2)
-                    {
-                        sb.Append("\"").Append(unitTips.TooltipLines[1].Line).Append("\"},");
-                    }
-                    else
-                    {
-                        sb.Append("nil},");
-                    }
-
-                    validIds.Remove(unitTips.Id);
-                    sb.AppendLine();
+                    sb.Append("\"").Append(unitTips.TooltipLines[1].Line).Append("\"},");
+                }
+                else
+                {
+                    sb.Append("nil},");
                 }
 
-                sb.AppendLine("}");
-
-                File.WriteAllText(outputPath, sb.ToString());
+                validIds.Remove(unitTips.Id);
+                sb.AppendLine();
             }
+
+            sb.AppendLine("}");
+
+            File.WriteAllText(outputPath, sb.ToString());
         }
 
         private static void WriteToWoWEuCN(string outputPath, Dictionary<string, Tooltip> unitTipList)

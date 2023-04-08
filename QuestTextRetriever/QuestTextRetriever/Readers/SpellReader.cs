@@ -5,15 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using QuestTextRetriever.Configs;
 using QuestTextRetriever.Models;
+using QuestTextRetriever.Readers;
 using QuestTextRetriever.Utils;
 
 namespace QuestTextRetriever
 {
-    public class SpellReader
+    public class SpellReader : TooltipsReader
     {
-        public SpellReader()
+        public SpellReader(SpellConfig spellConfig)
         {
+            TooltipsConfig = spellConfig;
         }
 
         private readonly static List<string> BlackListedPostfix = new List<string>()
@@ -54,7 +57,7 @@ namespace QuestTextRetriever
             { "点流血伤害", "Ø" }
         };
 
-        public void Read(string spellTipPath, Dictionary<string, Tooltip> spellTipsList)
+        private void Read(string spellTipPath, Dictionary<string, Tooltip> spellTipsList)
         {
             var lines = File.ReadAllLines(spellTipPath);
             var usedId = new HashSet<string>();
@@ -143,32 +146,20 @@ namespace QuestTextRetriever
             }
         }
 
-        public void Write(string outputPath)
+        protected override void Write(string outputPath, List<string> inputPaths, OutputMode outputMode, string locale = "zhCN")
         {
             var spellTipList = new Dictionary<string, Tooltip>();
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spell0-400000.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells.lua", spellTipList, usedIds
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\classic_spells.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.36216.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36512.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36532.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\beta_spells_36710.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_36753.lua", spellTipList);
+            foreach (var inputPath in inputPaths)
+            {
+                Read(inputPath, spellTipList);
+            }
 
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells.37844.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_39185_1-168601.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_39170_250000.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_1.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_2.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_40843_3.lua", spellTipList, usedIds);
-            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\ptr_spells_42423.lua", spellTipList);
-            //Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\wlk_spells_45166.lua", spellTipList);
-            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_46144.lua", spellTipList);
-            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_46144.1.lua", spellTipList);
-            Read(@"G:\OneDrive\OwnProjects\WoWTranslator\Data\spells\retail_spells_46144.2.lua", spellTipList);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\units\bc_units.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\tbc_spells_38225.lua", spellTipList, usedIds);
-            //Read(@"C:\Users\qqytqqyt\OneDrive\Documents\OneDrive\OwnProjects\WoWTranslator\Data\spells\tbc_spells_38537.lua", spellTipList, usedIds);
+            if (outputMode == OutputMode.WoWeuCN)
+                WriteToWoWeuCN(outputPath, spellTipList);
+        }
+
+        private void WriteToWoWeuCN(string outputPath, Dictionary<string, Tooltip> spellTipList)
+        {
             var sb = new StringBuilder();
             var spellTipOrderedList = spellTipList.Select(s => s.Value).OrderBy(q => int.Parse(q.Id)).ToList();
             var currentIndex = 0;

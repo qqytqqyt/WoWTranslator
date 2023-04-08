@@ -53,9 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configs\RetrieverConfig.cs" />
+    <Compile Include="Configs\TooltipsConfig.cs" />
+    <Compile Include="Configs\QuestConfig.cs" />
     <Compile Include="Crawlers\ScriptCrawler.cs" />
     <Compile Include="Crawlers\JournalCrawler.cs" />
-    <Compile Include="Crawlers\Crawler.cs" />
+    <Compile Include="Crawlers\QuestCrawler.cs" />
     <Compile Include="Extensions\DBReaderExtensions.cs" />
     <Compile Include="Extensions\FieldStructureEntry.cs" />
     <Compile Include="Extensions\XmlUtils.cs" />
@@ -65,15 +68,14 @@
     <Compile Include="Readers\JournalReader.cs" />
     <Compile Include="Readers\QuestCacheReader.cs" />
     <Compile Include="Readers\QuestieMerger.cs" />
-    <Compile Include="Readers\QuestieUnitReader.cs" />
     <Compile Include="Readers\ScriptReader.cs" />
     <Compile Include="Readers\AchievementReader.cs" />
+    <Compile Include="Readers\TooltipsReader.cs" />
     <Compile Include="Readers\UnitReader.cs" />
     <Compile Include="Readers\QuestReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Quest.cs" />
-    <Compile Include="Retriever.cs" />
     <Compile Include="Readers\ItemReader.cs" />
     <Compile Include="Readers\SpellReader.cs" />
     <Compile Include="Utils\Options.cs" />
@@ -83,6 +85,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
