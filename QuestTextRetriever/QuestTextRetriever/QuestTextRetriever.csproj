@@ -66,8 +66,7 @@
     <Compile Include="Models\Script.cs" />
     <Compile Include="Readers\GlobalStringReader.cs" />
     <Compile Include="Readers\JournalReader.cs" />
-    <Compile Include="Readers\QuestCacheReader.cs" />
-    <Compile Include="Readers\QuestieMerger.cs" />
+    <Compile Include="Extensions\QuestCacheReader.cs" />
     <Compile Include="Readers\ScriptReader.cs" />
     <Compile Include="Readers\AchievementReader.cs" />
     <Compile Include="Readers\TooltipsReader.cs" />
