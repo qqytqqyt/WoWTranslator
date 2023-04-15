@@ -1,7 +1,7 @@
 ﻿## Interface: 30401
 ## Title: WoWeuCN-Tooltips
-## Version: WotLK 3.4.1.11
-## Notes_en: AddOn displays the translated tooltips information in Chinese.
+## Version: WotLK 3.4.1.12
+## Notes_en: AddOn displays the translated information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
