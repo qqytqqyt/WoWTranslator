@@ -100,6 +100,10 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_N_PS["transadvanced"] ) then
      WoWeuCN_Tooltips_N_PS["transadvanced"] = "1";   
   end  
+  -- Initiation - nameplate translation
+  if (not WoWeuCN_Tooltips_N_PS["transnameplate"] ) then
+     WoWeuCN_Tooltips_N_PS["transnameplate"] = "1";   
+  end  
   -- Initiation - font
   if (not WoWeuCN_Tooltips_N_PS["overwritefonts"]) then
     WoWeuCN_Tooltips_N_PS["overwritefonts"] = "0";
@@ -172,8 +176,9 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton4:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
   WoWeuCN_TooltipsCheckButton5:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
   WoWeuCN_TooltipsCheckButton6:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
-  WoWeuCN_TooltipsCheckButton7:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
-  WoWeuCN_TooltipsCheckButton8:SetChecked(WoWeuCN_Tooltips_N_PS["overwritefonts"]=="1");
+  WoWeuCN_TooltipsCheckButton7:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
+  WoWeuCN_TooltipsCheckButton8:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
+  WoWeuCN_TooltipsCheckButton9:SetChecked(WoWeuCN_Tooltips_N_PS["overwritefonts"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -242,15 +247,21 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 
   local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
   WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -85);
-  WoWeuCN_TooltipsCheckButton7:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton7:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
   WoWeuCN_TooltipsCheckButton7Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
-  WoWeuCN_TooltipsCheckButton7Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
+  WoWeuCN_TooltipsCheckButton7Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
   
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
   WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -105);
-  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
   WoWeuCN_TooltipsCheckButton8Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
-  WoWeuCN_TooltipsCheckButton8Text:SetText(WoWeuCN_Tooltips_Interface.overwritefonts);
+  WoWeuCN_TooltipsCheckButton8Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
+  
+  local WoWeuCN_TooltipsCheckButton9 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton9", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
+  WoWeuCN_TooltipsCheckButton9:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -125);
+  WoWeuCN_TooltipsCheckButton9:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton9Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton9Text:SetText(WoWeuCN_Tooltips_Interface.overwritefonts);
 end
 
 local function StringHash(text)        
@@ -484,6 +495,13 @@ function OnTooltipUnit(self, tooltip)
   end
 end
 
+function WoWeuCN_Tooltips_GetNameplateUnitData(id)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
+    return
+  end
+  return GetUnitData(id)
+end
+
 function GetUnitData(id)
   if (id == nil) then
     return nil
@@ -672,6 +690,27 @@ function GetSpellData(spellId)
   return spellData
 end
 
+local function InitializePlater()
+  local defaultChineseFont = "AR CrystalzcuheiGBK Demibold"
+  Plater.db.profile.plate_config.friendlynpc.actorname_text_font = "AR CrystalzcuheiGBK Demibold"
+  Plater.db.profile.plate_config.friendlynpc.big_actortitle_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.friendlynpc.big_actorname_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.enemynpc.actorname_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.enemynpc.big_actorname_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.enemynpc.big_actortitle_text_font = defaultChineseFont
+  Plater.db.profile.saved_cvars["nameplateShowFriendlyNPCs"] = 1
+  Plater.db.profile.plate_config ["friendlynpc"].only_names = true
+  Plater.db.profile.plate_config ["friendlynpc"].all_names = true
+  Plater.db.profile.plate_config ["friendlynpc"].relevance_state = 4
+  SetCVar("nameplateShowFriendlyNPCs", 1)
+  if (not IsInInstance()) then
+    SetCVar("nameplateShowFriends", 1)
+    Plater.db.profile.saved_cvars["nameplateShowFriends"] = 1
+  end
+  Plater.ImportScriptString (WoWeuCN_Plater_Mod_Text, true, true, true, false)
+  Plater.UpdateAllPlates()
+end
+
 -- Even handlers
 function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
    if (event=="ADDON_LOADED" and name=="WoWeuCN_Tooltips") then
@@ -705,8 +744,18 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
       WoWeuCN_Tooltips_wait(2, Broadcast)
       WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Tooltips.ADDON_LOADED = nil;
+
+      if (Plater) then
+        if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
+          Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
+        else
+          InitializePlater()
+        end
+      end
+
       return
    end
+   
 end
 
 local achievementHooked = false
@@ -765,6 +814,14 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     hooksecurefunc("TradeSkillFrame_SetSelection", function(...) OnTradeSkillSelectionUpdate(...) end);
     tradeSkillHooked = true
   end
+
+  if (event=="ADDON_LOADED" and name=="Plater") then
+    if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
+      Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
+    else
+      InitializePlater()
+    end
+  end
 end
 
 function Broadcast()
@@ -780,7 +837,10 @@ function Broadcast()
   end
   
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
-  print ("|cffffff00高级界面翻译已启用，如需关闭请在插件设置里更改。|r");
+  
+  if (WoWeuCN_Tooltips_N_PS["transnameplate"]~="0") then
+    print ("|cffffff00已加入姓名版翻译功能。如需使用请安装<Plater>姓名版插件并开启对应单位血条(V/Ctrl+V/Shift+V)，相关数据会自动导入进Plater中。如需完全关闭请于插件设置里禁用。|r");
+  end
 
   local name, _, rank = GetGuildInfo("player");
   if name ~= nil then
