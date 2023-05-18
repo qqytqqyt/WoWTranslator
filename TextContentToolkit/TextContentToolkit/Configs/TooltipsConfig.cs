@@ -6,6 +6,8 @@ namespace TextContentToolkit.Configs
 {
     public class TooltipsConfig
     {
+        public bool Enabled { get; set; }
+
         public string OutputPath { get; set; }
 
         public OutputMode OutputMode { get; set; } = OutputMode.WoWeuCN;

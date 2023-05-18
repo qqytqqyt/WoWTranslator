@@ -337,9 +337,6 @@ function WoWeuCN_Quests_SetCheckButtonState()
   WoWeuCN_QuestsCheckButton3:SetChecked(WoWeuCN_Quests_N_PS["transtitle"]=="1");
   WoWeuCN_QuestsCheckButton4:SetChecked(WoWeuCN_Quests_N_PS["transchat"]=="1");
   WoWeuCN_QuestsCheckButton5:SetChecked(WoWeuCN_Quests_N_PS["overwritefonts"]=="1");
-  WoWeuCN_QuestsCheckOther1:SetChecked(WoWeuCN_Quests_N_PS["other1"]=="1");
-  WoWeuCN_QuestsCheckOther2:SetChecked(WoWeuCN_Quests_N_PS["other2"]=="1");
-  WoWeuCN_QuestsCheckOther3:SetChecked(WoWeuCN_Quests_N_PS["other3"]=="1");
 end
 
 function WoweuCN_LoadOriginalHeaders()
