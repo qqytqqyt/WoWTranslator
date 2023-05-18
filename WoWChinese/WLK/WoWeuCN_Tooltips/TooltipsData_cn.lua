@@ -1,5 +1,5 @@
-﻿WoWeuCN_Tooltips_base = "3.4.1.47720";   -- version
-WoWeuCN_Tooltips_date = "2023-01-22"; -- date of creation base
+﻿WoWeuCN_Tooltips_base = "3.4.2.49658";   -- version
+WoWeuCN_Tooltips_date = "2023-05-18"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
@@ -20,7 +20,7 @@ WoWeuCN_Tooltips_Interface = {
     transunit  = "翻译NPC提示",
     transachievement = "翻译成就面板",
     transadvanced = "高级翻译模式（拾取/商人/法术书界面等）",
-    transnameplate = "翻译血条姓名版（需安装Plater插件，/reload后完全生效）",
+    transplaternameplate = "翻译血条姓名版（需安装Plater插件，/reload后完全生效）",
     overwritefonts = "使用内置字体（/reload后完全生效）"
  }; 
 
