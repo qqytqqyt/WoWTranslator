@@ -702,8 +702,8 @@ local function InitializePlater()
   Plater.db.profile.plate_config ["friendlynpc"].only_names = true
   Plater.db.profile.plate_config ["friendlynpc"].all_names = true
   Plater.db.profile.plate_config ["friendlynpc"].relevance_state = 4
-  SetCVar("nameplateShowFriendlyNPCs", 1)
   if (not IsInInstance()) then
+    SetCVar("nameplateShowFriendlyNPCs", 1)
     SetCVar("nameplateShowFriends", 1)
     Plater.db.profile.saved_cvars["nameplateShowFriends"] = 1
   end
@@ -879,7 +879,6 @@ function Broadcast()
      return
   end
   
-  local bNetTagInfo = _G["GREEN_FONT_COLOR_CODE"] .. "<>|r" 
   WoWeuCN_Tooltips_LastAnnounceDate = time()
 end
 
