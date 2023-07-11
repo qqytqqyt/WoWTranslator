@@ -6,6 +6,8 @@ namespace TextContentToolkit.Configs
 {
     public class QuestConfig
     {
+        public bool Enabled { get; set; }
+
         public string JsonDirPath { get; set; }
 
         public string TemplatePath { get; set; }

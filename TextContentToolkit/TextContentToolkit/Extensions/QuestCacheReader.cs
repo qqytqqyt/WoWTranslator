@@ -245,7 +245,7 @@ namespace TextContentToolkit.Readers
                             index++;
                             Console.WriteLine(index);
                             var id = dbReader.ReadInt32();
-                            if (id == 61479)
+                            if (id == 75407)
                                 Console.Write(true);
                             if (index == 307 || index == 6638)
                                 Console.Write(true);
@@ -262,13 +262,13 @@ namespace TextContentToolkit.Readers
                             dbReader.ReadByte(4);
                             dbReader.ReadByte(0x20);
                             dbReader.ReadByte(16);
+                            var check5 = dbReader.ReadByte(4);
                             var numObjectives = dbReader.ReadInt32();
                             var check3 = dbReader.ReadByte(8);
                             var check4 = dbReader.ReadByte(8);
                             var check1 = dbReader.ReadByte(4);
                             var check2 = dbReader.ReadByte(4);
-                            dbReader.ReadByte(12
-                            );
+                            dbReader.ReadByte(12);
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
                             var title = string.Empty;

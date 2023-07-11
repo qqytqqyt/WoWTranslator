@@ -282,22 +282,20 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 end
 
 local function translateTooltip(tooltip, data, kind)
-  for _, val in ipairs(data.args) do
-    if kind == kinds.unit and val.guidVal then
-      local id = tonumber(val.guidVal:match("-(%d+)-%x+$"), 10)
-      if id and val.guidVal:match("%a+") ~= "Player" then 
-          SetUnitTooltip(tooltip, id)
-      end
-    else
-      if val.field == "id" and val.intVal then
-        if kind == kinds.spell then
-          SetSpellTooltip(tooltip, val.intVal)
-        elseif kind == kinds.item then
-          SetItemTooltip(tooltip, val.intVal)
-        elseif kind == kinds.unit then
-          SetUnitTooltip(tooltip, val.intVal)
-        end
-      end
+  if kind == kinds.unit and data.guid then
+    local id = tonumber(data.guid:match("-(%d+)-%x+$"), 10)
+    if id and data.guid:match("%a+") ~= "Player" then 
+        SetUnitTooltip(tooltip, id)
+    end
+  elseif data.id then
+    local id = data.id
+    if type(id) == "table" and #id == 1 then id = id[1] end
+    if kind == kinds.spell then
+      SetSpellTooltip(tooltip, id)
+    elseif kind == kinds.item then
+      SetItemTooltip(tooltip, id)
+    elseif kind == kinds.unit then
+      SetUnitTooltip(tooltip, id)
     end
   end
 end

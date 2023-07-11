@@ -4,9 +4,9 @@ using TextContentToolkit.Extensions;
 
 namespace TextContentToolkit
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] _)
+        private static void Main(string[] _)
         {
             var text = File.ReadAllText(@".\Config.xml");
             var config = text.FromXml<RetrieverConfig>();
@@ -17,6 +17,7 @@ namespace TextContentToolkit
             //var hash = ScriptReader.GetHash("We're under attack! Avast, ye swabs! Repel the invaders!");
 
             #region Crawlers
+
             //var journalCrawler = new JournalCrawler();
             //journalCrawler.Execute();
             //var scriptCrawlerWowDB = new ScriptCrawler();
@@ -25,21 +26,30 @@ namespace TextContentToolkit
             //scriptCrawlerSql.ExecuteSql();
             //var questCrawler = new QuestCrawler();
             //questCrawler.Execute();
+
             #endregion
 
             if (config.RunReaders)
             {
                 var itemReader = new ItemReader(config.ItemConfig);
-                itemReader.Execute();
+                if (config.ItemConfig.Enabled)
+                    itemReader.Execute();
+
                 var achievementReader = new AchievementReader(config.AchievementConfig);
-                achievementReader.Execute();
+                if (config.AchievementConfig.Enabled)
+                    achievementReader.Execute();
+
                 var spellReader = new SpellReader(config.SpellConfig);
-                spellReader.Execute();
+                if (config.SpellConfig.Enabled)
+                    spellReader.Execute();
+
                 var unitReader = new UnitReader(config.UnitConfig);
-                unitReader.Execute();
+                if (config.UnitConfig.Enabled)
+                    unitReader.Execute();
 
                 var questReader = new QuestReader(config.QuestConfig);
-                questReader.Execute();
+                if (config.QuestConfig.Enabled)
+                    questReader.Execute();
             }
 
             if (config.RunQuestieFolders)
