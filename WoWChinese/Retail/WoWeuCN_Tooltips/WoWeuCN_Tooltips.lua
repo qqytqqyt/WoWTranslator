@@ -145,6 +145,7 @@ end
 local function loadAllUnitData()
   loadUnitData0();
   loadUnitData100000();
+  loadUnitData200000();
 end
 
 local function loadAllAchievementData()
@@ -594,6 +595,8 @@ function GetUnitData(id)
     dataIndex = WoWeuCN_Tooltips_UnitIndexData_0[num_id]
   elseif (num_id >= 100000 and num_id < 200000) then
     dataIndex = WoWeuCN_Tooltips_UnitIndexData_100000[num_id - 100000]
+  elseif (num_id >= 200000 and num_id < 300000) then
+    dataIndex = WoWeuCN_Tooltips_UnitIndexData_200000[num_id - 200000]
   end
 
   if (dataIndex == nil) then
@@ -604,6 +607,8 @@ function GetUnitData(id)
     return split(WoWeuCN_Tooltips_UnitData_0[dataIndex], '£')
   elseif (num_id >= 100000 and num_id < 200000) then
     return split(WoWeuCN_Tooltips_UnitData_100000[dataIndex], '£')
+  elseif (num_id >= 200000 and num_id < 300000) then
+    return split(WoWeuCN_Tooltips_UnitData_200000[dataIndex], '£')
   end
 
   return nil

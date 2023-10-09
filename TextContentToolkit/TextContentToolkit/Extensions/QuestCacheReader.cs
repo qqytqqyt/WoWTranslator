@@ -54,6 +54,7 @@ namespace TextContentToolkit.Readers
                             var numObjectives = dbReader.ReadInt32();
                             dbReader.ReadByte(8);
                             dbReader.ReadByte(8);
+                            dbReader.ReadByte(16);
 
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
@@ -158,6 +159,11 @@ namespace TextContentToolkit.Readers
                                     questObjects.Add(quest);
                                 else
                                 {
+                                    if (quest.Description.Length == 0 && otherObjective.Description.Length > 0)
+                                        quest.Description = otherObjective.Description;
+                                    if (quest.Objectives.Length == 0 && otherObjective.Objectives.Length > 0)
+                                        quest.Objectives = otherObjective.Objectives;
+
                                     questObjects.Remove(otherObjective);
                                     questObjects.Add(quest);
                                 }
@@ -369,6 +375,11 @@ namespace TextContentToolkit.Readers
                                     questObjects.Add(quest);
                                 else
                                 {
+                                    if (quest.Description.Length == 0 && otherObjective.Description.Length > 0)
+                                        quest.Description = otherObjective.Description;
+                                    if (quest.Objectives.Length == 0 && otherObjective.Objectives.Length > 0)
+                                        quest.Objectives = otherObjective.Objectives;
+
                                     questObjects.Remove(otherObjective);
                                     questObjects.Add(quest);
                                 }
