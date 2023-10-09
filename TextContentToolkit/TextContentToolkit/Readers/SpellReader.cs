@@ -188,7 +188,11 @@ namespace TextContentToolkit
                     maxSpellId = 1;
                     idIndexMapping = new int[100001];
 
-                    currentBlock += 100000;
+                    while (int.Parse(spellTips.Id) >= currentBlock + 100000)
+                    {
+                        currentBlock += 100000;
+                    }
+
                     currentIndex = 0;
                 }
 

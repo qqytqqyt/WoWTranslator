@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,10 +21,14 @@ namespace TextContentToolkit
             m_questConfig = questConfig;
         }
 
-        public void MergeOutputs()
+        public void MergeOutputs(bool isClassic)
         {
             var dic = new SortedDictionary<int, string>();
-            m_questConfig.FileMergeList.Add(m_questConfig.OutputPath);
+            if (!isClassic)
+                m_questConfig.FileMergeList.Add(m_questConfig.OutputPath);
+            else
+                m_questConfig.FileMergeList.Insert(0, m_questConfig.OutputPath);
+
             foreach (var file in m_questConfig.FileMergeList)
             {
                 var lines = File.ReadAllLines(file);
@@ -78,6 +83,9 @@ namespace TextContentToolkit
                     objectives.Add(objective);
                 else
                 {
+                    if (objective.Objectives.Length == 0 && otherObjective.Objectives.Length > 0)
+                        objective.Objectives = otherObjective.Objectives;
+
                     objectives.Remove(otherObjective);
                     objectives.Add(objective);
                 }
@@ -102,7 +110,7 @@ namespace TextContentToolkit
         public void Execute()
         {
             Execute(m_questConfig.OutputPath, m_questConfig.VersionMode, m_questConfig.OutputMode);
-            MergeOutputs();
+            MergeOutputs(m_questConfig.VersionMode == VersionMode.Classic);
         }
 
         private void Execute(string outputPath, VersionMode versionMode, OutputMode outputMode, string locale = "zhCN")
