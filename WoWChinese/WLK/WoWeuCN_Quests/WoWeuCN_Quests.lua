@@ -489,12 +489,12 @@ function WoWeuCN_Quests_OnLoad()
 
    -- Quest ID button in QuestLogDetailFrame
    WoWeuCN_Quests_ToggleButton2 = CreateFrame("Button",nil, QuestLogDetailFrame, "UIPanelButtonTemplate");
-   WoWeuCN_Quests_ToggleButton2:SetWidth(150);
+   WoWeuCN_Quests_ToggleButton2:SetWidth(140);
    WoWeuCN_Quests_ToggleButton2:SetHeight(20);
    WoWeuCN_Quests_ToggleButton2:SetText("Quest ID=?");
    WoWeuCN_Quests_ToggleButton2:Show();
    WoWeuCN_Quests_ToggleButton2:ClearAllPoints();
-   WoWeuCN_Quests_ToggleButton2:SetPoint("TOPLEFT", QuestLogDetailFrame, "TOPLEFT", 120, -40);
+   WoWeuCN_Quests_ToggleButton2:SetPoint("TOPLEFT", QuestLogDetailFrame, "TOPLEFT", 80, -43);
    WoWeuCN_Quests_ToggleButton2:SetScript("OnClick", WoWeuCN_Quests_ON_OFF);
 
 
