@@ -169,7 +169,10 @@ function OnToyBoxUpdate(...)
 
   for i = 1, 18 do
     local button = ToyBox.iconsFrame["spellButton"..i];
-    
+    if (not button.name:GetText()) then
+      return
+    end
+
     if (not button.nameHooked) then
       local titleLabel = self:CreateFontString(nil, "ARTWORK", "GameFontNormal");
       button.translatedName = button.name
@@ -207,6 +210,10 @@ function OnToyBoxButtonUpdate(self)
   local itemIndex = (ToyBox.PagingFrame:GetCurrentPage() - 1) * 18 + self:GetID();
 	local itemID = C_ToyBox.GetToyFromIndex(itemIndex);
   local button = ToyBox.iconsFrame["spellButton"..self:GetID()];
+
+  if (not button.name:GetText()) then
+    return
+  end
 
   if (not button.nameHooked) then
     local titleLabel = self:CreateFontString(nil, "ARTWORK", "GameFontNormal");
@@ -267,6 +274,10 @@ function OnHeirloonButtonUpdate(button)
     return
   end
 
+  if (not button.name:GetText()) then
+    return
+  end
+  
 	local itemID = button.itemID
   local itemData = GetItemData(itemID)
   
