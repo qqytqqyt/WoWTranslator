@@ -28,6 +28,17 @@ function ReplaceUIText(textItem, text, maxFontSize)
   end
 end
 
+function ReplaceJournalTabs()  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+  
+  ReplaceUIText(CollectionsJournalTab1Text, "坐骑", 12)
+  ReplaceUIText(CollectionsJournalTab2Text, "宠物手册", 12)
+  ReplaceUIText(CollectionsJournalTab3Text, "玩具箱", 12)
+  ReplaceUIText(CollectionsJournalTab4Text, "传家宝", 12)
+end
+
 function GetTradeSkillName(skillIndex)
   local link = GetTradeSkillItemLink(skillIndex)
   if link then 
@@ -148,6 +159,150 @@ function OnSpellBookUpdate(self)
     if ( spellData ) then
       ReplaceUIText(spellString, spellData[1], 15)
     end
+  end
+end
+
+function OnToyBoxUpdate(...)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  for i = 1, 18 do
+    local button = ToyBox.iconsFrame["spellButton"..i];
+    if (not button.name:GetText()) then
+      return
+    end
+
+    if (not button.nameHooked) then
+      local titleLabel = self:CreateFontString(nil, "ARTWORK", "GameFontNormal");
+      button.translatedName = button.name
+      button.name = titleLabel
+      button.nameHooked = true
+    end
+
+    local toyString = button.translatedName
+    local itemIndex = (ToyBox.PagingFrame:GetCurrentPage() - 1) * 18 + i;
+    local itemID = C_ToyBox.GetToyFromIndex(itemIndex) 
+
+    if (PlayerHasToy(itemID)) then    
+        toyString:SetTextColor(1, 0.82, 0, 1);
+        toyString:SetShadowColor(0, 0, 0, 1);
+    else    
+        toyString:SetTextColor(0.33, 0.27, 0.20, 1);
+        toyString:SetShadowColor(0, 0, 0, 0.33);
+    end
+
+    local itemData = GetItemData(itemID)
+    if itemData then
+      if (button.translatedName:GetText() ~= itemData[1]) then
+        ReplaceUIText(toyString, itemData[1], 12)
+        toyString:Show()
+      end
+    end
+  end
+end
+
+function OnToyBoxButtonUpdate(self)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  local itemIndex = (ToyBox.PagingFrame:GetCurrentPage() - 1) * 18 + self:GetID();
+	local itemID = C_ToyBox.GetToyFromIndex(itemIndex);
+  local button = ToyBox.iconsFrame["spellButton"..self:GetID()];
+
+  if (not button.name:GetText()) then
+    return
+  end
+
+  if (not button.nameHooked) then
+    local titleLabel = self:CreateFontString(nil, "ARTWORK", "GameFontNormal");
+    button.translatedName = button.name
+    button.name = titleLabel
+    button.nameHooked = true
+  end
+
+  local toyString = button.translatedName
+  if (PlayerHasToy(itemID)) then    
+			toyString:SetTextColor(1, 0.82, 0, 1);
+      toyString:SetShadowColor(0, 0, 0, 1);
+  else    
+			toyString:SetTextColor(0.33, 0.27, 0.20, 1);
+			toyString:SetShadowColor(0, 0, 0, 0.33);
+  end
+
+  local itemData = GetItemData(itemID)
+  if itemData then
+    if (button.translatedName:GetText() ~= itemData[1]) then
+      ReplaceUIText(toyString, itemData[1], 12)
+      toyString:Show()
+    end    
+  end
+end
+
+function OnMountJournalButtonInit(button, elementData)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  local creatureName, spellID, icon, active, isUsable, sourceType, isFavorite, isFactionSpecific, faction, isFiltered, isCollected, mountID, isForDragonriding = C_MountJournal.GetDisplayedMountInfo(elementData.index);
+	
+  local spellData = GetSpellData(spellID)
+  if (spellData) then
+    ReplaceUIText(button.name, spellData[1], 12)
+  end
+end
+
+function OnPetJournalButtonInit(button, elementData)  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  local index = elementData.index;
+  local empty, item2, item3, item4, item5, item6, item7, item8, item9, item10, npcID  = C_PetJournal.GetPetInfoByIndex(index);
+  local unitData = GetUnitData(npcID)
+  if (unitData) then
+    if (button.name:GetText() ~= unitData[1]) then
+      ReplaceUIText(button.name, unitData[1], 12)
+      button.name:Show()
+    end    
+  end
+end
+
+function OnHeirloonButtonUpdate(button)  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  if (not button.name:GetText()) then
+    return
+  end
+  
+	local itemID = button.itemID
+  local itemData = GetItemData(itemID)
+  
+  if (not button.nameHooked) then
+    local titleLabel = button:CreateFontString(nil, "ARTWORK", "GameFontNormal");
+    titleLabel:Hide()
+    button.translatedName = button.name
+    button.name = titleLabel
+    button.nameHooked = true
+  end
+  
+  local heriloomString = button.translatedName
+  if (C_Heirloom.PlayerHasHeirloom(itemID)) then    
+    heriloomString:SetTextColor(1, 0.82, 0, 1);
+    heriloomString:SetShadowColor(0, 0, 0, 1);
+  else    
+    heriloomString:SetTextColor(0.33, 0.27, 0.20, 1);
+    heriloomString:SetShadowColor(0, 0, 0, 0.33);
+  end
+
+  if itemData then
+    if (heriloomString:GetText() ~= itemData[1]) then
+      ReplaceUIText(heriloomString, itemData[1], 12)
+      heriloomString:Show()
+    end    
   end
 end
 
