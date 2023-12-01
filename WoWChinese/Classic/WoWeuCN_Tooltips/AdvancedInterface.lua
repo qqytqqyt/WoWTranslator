@@ -75,6 +75,7 @@ function OnTradeSkillSelectionUpdate(index)
   if not skillName then
     return
   end
+
   ReplaceUIText(TradeSkillSkillName, skillName, 15)
   
   if(numReagents == 0) then
@@ -129,8 +130,13 @@ function OnTradeSkillUpdate()
     local button = _G["TradeSkillSkill" .. i .. "Text"]
     if button then
       local skillName = GetTradeSkillName(skillIndex)
+      local _, skillType, numAvailable, isExpanded = GetTradeSkillInfo(skillIndex);
       if skillName then
-        ReplaceUIText(button, skillName, 12)
+        if (numAvailable > 0) then
+          ReplaceUIText(button, skillName .. ' [' .. numAvailable .. ']', 12)
+        else
+          ReplaceUIText(button, skillName, 12)
+        end
       end
     end
   end
@@ -339,6 +345,57 @@ function OnMerchantInfoUpdate(...)
       end
     end
   end
+end
+
+function OnRuneUpdate(index)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+	local numHeaders = 0;
+	local numRunes = 0;
+	local scrollFrame = EngravingFrame.scrollFrame;
+	local buttons = scrollFrame.buttons;
+	local offset = HybridScrollFrame_GetOffset(scrollFrame);
+	local currOffset = 0;
+
+	local currentHeader = 1;
+
+	local currButton = 1;
+	local categories = C_Engraving.GetRuneCategories(true, true);
+	numHeaders = #categories;
+	for _, category in ipairs(categories) do
+		if currOffset < offset then
+			currOffset = currOffset + 1;
+		else
+			local button = buttons[currButton];
+			if button then
+				header = _G["EngravingFrameHeader"..currentHeader];
+				if header then
+					currentHeader = currentHeader + 1;
+					currButton = currButton + 1;
+				end
+			end
+    end
+    
+    local runes = C_Engraving.GetRunesForCategory(category, true);
+    numRunes = numRunes + #runes;
+    for _, rune in ipairs(runes) do
+      if currOffset < offset then
+        currOffset = currOffset + 1;
+      else
+        local button = buttons[currButton];
+        if button and rune.learnedAbilitySpellIDs and #rune.learnedAbilitySpellIDs > 0 then
+          button.spellID = rune.learnedAbilitySpellIDs[1]
+          local spellData = GetSpellData(button.spellID)
+          if (spellData) then
+            ReplaceUIText(button.name, spellData[1])
+          end      
+					currButton = currButton + 1;    
+        end
+      end
+    end
+	end
 end
 
 function OnLootUpdate(index)

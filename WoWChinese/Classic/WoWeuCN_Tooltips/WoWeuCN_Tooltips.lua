@@ -317,6 +317,9 @@ function WoWeuCN_Tooltips_OnLoad()
    
    GameTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpell(..., GameTooltip) end)
    GameTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
+
+   hooksecurefunc(GameTooltip, "SetEngravingRune", function(...) OnTooltipEngraving(...) end)
+
    ItemRefTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
 
    EmbeddedItemTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
@@ -626,6 +629,18 @@ function OnTooltipSpellElvUi(self)
   SetSpellTooltip(self, id)
 end
 
+function OnTooltipEngraving(tooltip)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
+    return
+  end
+
+  local button = tooltip:GetOwner()
+  if (button and button.spellID) then
+	-- Case for linked spell
+    SetSpellTooltip(tooltip, button.spellID)
+  end
+end
+
 function OnTooltipSpell(self, tooltip)
   if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
     return
@@ -800,6 +815,7 @@ local toyBoxHooked = false
 local mountJournalHooked = false
 local petJournalHooked = false
 local heirloomJournalHooked = false
+local engravingFrameHooked = false
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -876,6 +892,11 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     hooksecurefunc("HeirloomsJournal_UpdateButton", function(...) OnHeirloonButtonUpdate(...) end);
     hooksecurefunc(HeirloomsJournal, "UpdateButton", function(self, ...) OnHeirloonButtonUpdate(...) end);   
     heirloomJournalHooked = true
+  end
+  
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not engravingFrameHooked and EngravingFrame) then    
+    hooksecurefunc("EngravingFrame_UpdateRuneList", function(...) OnRuneUpdate(...) end);
+    engravingFrameHooked = true
   end
   
   if (event=="ADDON_LOADED" and name=="Plater") then

@@ -479,12 +479,12 @@ function WoWeuCN_Quests_OnLoad()
    
    -- Quest ID button in Quest Log Popup Detail Frame
    WoWeuCN_Quests_ToggleButton1 = CreateFrame("Button",nil, QuestLogFrame, "UIPanelButtonTemplate");
-   WoWeuCN_Quests_ToggleButton1:SetWidth(150);
+   WoWeuCN_Quests_ToggleButton1:SetWidth(75);
    WoWeuCN_Quests_ToggleButton1:SetHeight(20);
    WoWeuCN_Quests_ToggleButton1:SetText("Unavailable");
    WoWeuCN_Quests_ToggleButton1:Show();
    WoWeuCN_Quests_ToggleButton1:ClearAllPoints();
-   WoWeuCN_Quests_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 208, -45);
+   WoWeuCN_Quests_ToggleButton1:SetPoint("TOPLEFT", QuestLogFrame, "TOPLEFT", 198, -45);
    WoWeuCN_Quests_ToggleButton1:SetScript("OnClick", WoWeuCN_Quests_ON_OFF);
 
    -- Quest ID button in QuestLogDetailFrame
@@ -841,8 +841,8 @@ function WoWeuCN_Quests_Translate_On(typ)
             QuestProgressTitleText:SetFont(WoWeuCN_Quests_Font1, 18);
             QuestProgressTitleText:SetText(WoWeuCN_Quests_quest_LG.title);
          end
-         WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
+         WoWeuCN_Quests_ToggleButton0:SetText(WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
+         WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_LG.id.." ("..WoWeuCN_Quests_lang..")");
        
          if (WoWeuCN_Quests_quest_LG.details ~= WoWeuCN_Quests_quest_EN.details) then
@@ -947,7 +947,7 @@ function WoWeuCN_Quests_Translate_Off(typ)
       numer_ID = WoWeuCN_Quests_quest_EN.id;
       if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore original subtitle version
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
-         WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
+         WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_EN.id);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
 
          QuestLogQuestDescription:SetFont(Original_Font2, Original_Font2_Size);
