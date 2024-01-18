@@ -1,4 +1,4 @@
-WoWeuCN_Quests_date = "2023-12-01"; -- date of creation base
+WoWeuCN_Quests_date = "2023-12-04"; -- date of creation base
 
 WoWeuCN_Quests_lang = "CN";      -- language
 
@@ -27,7 +27,7 @@ WoWeuCN_Quests_Messages = {
     multipleID = "该翻译可能不能准确反映原文本", 
     currquests = "当前任务", 
     avaiquests = "可用任务", 
-    author     = "Earthshaker (EU classic) - Nekomio",
+    author     = "Wild Growth (EU classic) - Hiko",
  }; 
  WoWeuCN_Quests_Interface = { 
     active     = "激活插件", 
