@@ -367,9 +367,14 @@ function WoWeuCN_Tooltips_OnLoad()
   if MerchantFrame then
     hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function(...) OnMerchantInfoUpdate(...) end);
   end
-  --if SpellBookFrame then
-    --hooksecurefunc("SpellBookFrame_UpdateSpells", function(...) OnSpellBookUpdate(...) end);
-  --end
+  
+  if SpellBookFrame then
+    for i = 1, SPELLS_PER_PAGE do
+      local currSpellButton = _G["SpellButton" .. i];
+      hooksecurefunc(currSpellButton, "UpdateButton", function(self) OnSpellButtonUpdate(self) end);   
+    end
+  end
+
   if (_G.ElvUI ~= nil) then
     local E, L, V, P, G = unpack(ElvUI)
     if E then
@@ -847,6 +852,10 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
 end
 
 local achievementHooked = false
+local toyBoxHooked = false
+local mountJournalHooked = false
+local petJournalHooked = false
+local heirloomJournalHooked = false
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -895,7 +904,30 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     hooksecurefunc("AchievementFrameSummary_UpdateAchievements", function(...) OnAchievementSummary(...) end);    
     achievementHooked = true
   end
-  
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not toyBoxHooked and ToyBox) then
+    hooksecurefunc("ToyBox_UpdateButtons", function(...) OnToyBoxUpdate(...) end);
+    hooksecurefunc("ToySpellButton_UpdateButton", function(...) OnToyBoxButtonUpdate(...) end);
+    toyBoxHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not mountJournalHooked and MountJournal) then
+    hooksecurefunc("MountJournal_InitMountButton", function(...) OnMountJournalButtonInit(...) end);
+    mountJournalHooked = true
+    ReplaceJournalTabs()
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not petJournalHooked and PetJournal) then
+    hooksecurefunc("PetJournal_InitPetButton", function(...) OnPetJournalButtonInit(...) end);
+    petJournalHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not heirloomJournalHooked and HeirloomsMixin) then    
+    hooksecurefunc("HeirloomsJournal_UpdateButton", function(...) OnHeirloonButtonUpdate(...) end);
+    hooksecurefunc(HeirloomsJournal, "UpdateButton", function(self, ...) OnHeirloonButtonUpdate(...) end);   
+    heirloomJournalHooked = true
+  end
+
   if (event=="ADDON_LOADED" and name=="Plater") then
     if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
       Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)

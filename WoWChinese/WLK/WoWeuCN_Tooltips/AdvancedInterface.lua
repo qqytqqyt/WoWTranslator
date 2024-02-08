@@ -174,9 +174,16 @@ function OnToyBoxUpdate(...)
     end
 
     if (not button.nameHooked) then
-      local titleLabel = self:CreateFontString(nil, "ARTWORK", "GameFontNormal");
-      button.translatedName = button.name
-      button.name = titleLabel
+      local titleLabel = button:CreateFontString(nil, "ARTWORK", "GameFontNormal");
+      titleLabel:SetPoint(button.name:GetPoint())
+      titleLabel:SetParent(button.name:GetParent())
+      titleLabel:SetSize(button.name:GetSize())
+      titleLabel:SetText(button.name:GetText())
+      titleLabel:SetFont(button.name:GetFont())
+      titleLabel:SetJustifyH(button.name:GetJustifyH());
+      titleLabel:SetJustifyV(button.name:GetJustifyV());
+      button.translatedName = titleLabel
+      button.name:SetSize(1, 1)
       button.nameHooked = true
     end
 
@@ -215,10 +222,17 @@ function OnToyBoxButtonUpdate(self)
     return
   end
 
-  if (not button.nameHooked) then
+  if (not button.nameHooked and self:IsShown()) then
     local titleLabel = self:CreateFontString(nil, "ARTWORK", "GameFontNormal");
-    button.translatedName = button.name
-    button.name = titleLabel
+    titleLabel:SetPoint(button.name:GetPoint())
+    titleLabel:SetParent(button.name:GetParent())
+    titleLabel:SetSize(button.name:GetSize())
+    titleLabel:SetText(button.name:GetText())
+    titleLabel:SetFont(button.name:GetFont())
+    titleLabel:SetJustifyH(button.name:GetJustifyH());
+    titleLabel:SetJustifyV(button.name:GetJustifyV());
+    button.translatedName = titleLabel
+    button.name:SetSize(1, 1)
     button.nameHooked = true
   end
 

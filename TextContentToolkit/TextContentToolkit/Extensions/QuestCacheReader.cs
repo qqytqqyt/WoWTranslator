@@ -50,11 +50,12 @@ namespace TextContentToolkit.Readers
                             dbReader.ReadByte(16);
 
                             dbReader.ReadByte(4);
+                            dbReader.ReadByte(4);
 
                             var numObjectives = dbReader.ReadInt32();
                             dbReader.ReadByte(8);
                             dbReader.ReadByte(8);
-                            dbReader.ReadByte(16);
+                            dbReader.ReadByte(12);
 
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
@@ -349,7 +350,9 @@ namespace TextContentToolkit.Readers
                                     continue;
                                 }
 
-                                if (string.IsNullOrEmpty(title) || title.Contains("\r") || description.Contains('\0') || objective.Contains('\0') || title.Contains('\0') || !IsLegalUnicode(title))
+
+                                if (string.IsNullOrEmpty(title) || title.Contains("\r") || description.Contains('\0') || objective.Contains('\0') || title.Contains('\0') || !IsLegalUnicode(title) || 
+                                    title.Trim().Length != title.Length || objective.Trim().Length != objective.Length)
                                 {
                                     ms.Position = attemptPosition;
                                     if (ms.Position + attempCount > currentPosition + length)
