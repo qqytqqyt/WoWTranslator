@@ -1,5 +1,5 @@
 ﻿WoWeuCN_Tooltips_base = "1.15.1.53247";   -- version
-WoWeuCN_Tooltips_date = "2023-02-07"; -- date of creation base
+WoWeuCN_Tooltips_date = "2023-02-10"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
@@ -9,7 +9,7 @@ WoWeuCN_Tooltips_Messages = {
     loaded     = "加载完成", 
     isactive   = "已启用", 
     isinactive = "未启用", 
-    author     = "Earthshaker (EU classic) - Nekomio",
+    author     = "Wild Growth (EU classic SoD) - Hiko",
  }; 
  
 WoWeuCN_Tooltips_Interface = { 
