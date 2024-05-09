@@ -325,6 +325,20 @@ end
 -- First function called after the add-in has been loaded
 function WoWeuCN_Tooltips_OnLoad()
    WoWeuCN_Tooltips = CreateFrame("Frame");
+      
+   local expInfo, _, _, _ = GetBuildInfo()
+   local exp, major, minor = strsplit(".", expInfo)
+   local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
+   local _, myMajor, myMinor = strsplit( ".", WoWeuCN_Tooltips_version)
+   if exp ~= myExp then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
+     return
+   end
+   if major ~= myMajor or minor ~= myMinor then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
+     return
+   end
+
    WoWeuCN_Tooltips:SetScript("OnEvent", WoWeuCN_Tooltips_OnEvent);
    WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
    
@@ -940,13 +954,6 @@ end
 function Broadcast()  
   WoWeuCN_Tooltips_PS = 1
   WoWeuCN_Quests_PS = 1
-  local expInfo, _, _, _ = GetBuildInfo()
-  local exp = split(expInfo, "%.")[1]
-  local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
-  if exp ~= myExp then
-    print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。r")
-    return
-  end
 
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);  
   
