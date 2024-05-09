@@ -456,6 +456,20 @@ end
 -- First function called after the add-in has been loaded
 function WoWeuCN_Quests_OnLoad()
    WoWeuCN_Quests = CreateFrame("Frame");
+   
+   local expInfo, _, _, _ = GetBuildInfo()
+   local exp, major, minor = strsplit(".", expInfo)
+   local myExp = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.")
+   local _, myMajor, myMinor = strsplit( ".", WoWeuCN_Quests_version)
+   if exp ~= myExp then
+     print("|cffffff00WoWeuCN-Quests加载错误，请下载对应资料片版本的客户端。r")
+     return
+   end
+   if major ~= myMajor or minor ~= myMinor then
+     print("|cffffff00WoWeuCN-Quests加载错误，请下载最新版本。|r")
+     return
+   end
+
    WoWeuCN_Quests:SetScript("OnEvent", WoWeuCN_Quests_OnEvent);
    WoWeuCN_Quests:RegisterEvent("ADDON_LOADED");
    
@@ -1225,14 +1239,6 @@ end
 function Broadcast()
    WoWeuCN_Tooltips_PS = 1
    WoWeuCN_Quests_PS = 1
-   
-   local expInfo, _, _, _ = GetBuildInfo()
-   local exp = split(expInfo, "%.")[1]
-   local myExp = string.match(WoWeuCN_Quests_version, "^.-(%d+)%.")
-   if exp ~= myExp then
-     print("|cffffff00WoWeuCN-Quests加载错误，请下载对应资料片版本的客户端。r")
-     return
-   end
 
    print ("|cffffff00WoWeuCN-Quests ver. "..WoWeuCN_Quests_version.." - "..WoWeuCN_Quests_Messages.loaded);
    print (_G["ORANGE_FONT_COLOR_CODE"] .. "如遇字体缺失/不连贯问题请手动在客户端中采用多语系字体，或在插件设置中使用内置字体选项。");

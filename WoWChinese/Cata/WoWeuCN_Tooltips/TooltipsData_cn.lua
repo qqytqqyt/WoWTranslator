@@ -1,5 +1,5 @@
-﻿WoWeuCN_Tooltips_base = "3.4.3.51572";   -- version
-WoWeuCN_Tooltips_date = "2023-10-06"; -- date of creation base
+﻿WoWeuCN_Tooltips_base = "4.4.0.54217";   -- version
+WoWeuCN_Tooltips_date = "2024-04-19"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 

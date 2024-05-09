@@ -37,6 +37,7 @@ function ReplaceJournalTabs()
   ReplaceUIText(CollectionsJournalTab2Text, "宠物手册", 12)
   ReplaceUIText(CollectionsJournalTab3Text, "玩具箱", 12)
   ReplaceUIText(CollectionsJournalTab4Text, "传家宝", 12)
+  ReplaceUIText(CollectionsJournalTab5Text, "外观", 12)
 end
 
 function GetTradeSkillName(skillIndex)
@@ -136,29 +137,21 @@ function OnTradeSkillUpdate()
   end
 end
 
-function OnSpellBookUpdate(self)
+function OnSpellButtonUpdate(self)
   if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
     return
   end
-
+  
+  local name = self:GetName()
   local slot, slotType, slotID = SpellBook_GetSpellBookSlot(self);
-  
-	if ( slot ) then
-    texture = GetSpellTexture(slot, SpellBookFrame.bookType);
-  end
-  
-	if ( not slot or not texture or (strlen(texture) == 0) or (slotType == "FUTURESPELL" and Kiosk.IsEnabled())) then
+  if name == nil or slot == nil then
     return
   end
-
-	local name = self:GetName();
+  local spellName, _, spellID = GetSpellBookItemName(slot, SpellBookFrame.bookType);
   local spellString = _G[name.."SpellName"];
-  if spellString then
-    local spellName, _, spellID = GetSpellBookItemName(slot, SpellBookFrame.bookType);
-    local spellData = GetSpellData(spellID)
-    if ( spellData ) then
-      ReplaceUIText(spellString, spellData[1], 15)
-    end
+  local spellData = GetSpellData(spellID)
+  if ( spellData ) then
+    ReplaceUIText(spellString, spellData[1], 15)
   end
 end
 

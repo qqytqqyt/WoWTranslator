@@ -312,6 +312,20 @@ end
 -- First function called after the add-in has been loaded
 function WoWeuCN_Tooltips_OnLoad()
    WoWeuCN_Tooltips = CreateFrame("Frame");
+   
+   local expInfo, _, _, _ = GetBuildInfo()
+   local exp, major, minor = strsplit(".", expInfo)
+   local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
+   local _, myMajor, myMinor = strsplit( ".", WoWeuCN_Tooltips_version)
+   if exp ~= myExp then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
+     return
+   end
+   if major ~= myMajor or minor ~= myMinor then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
+     return
+   end
+
    WoWeuCN_Tooltips:SetScript("OnEvent", WoWeuCN_Tooltips_OnEvent);
    WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
    
@@ -347,8 +361,14 @@ function WoWeuCN_Tooltips_OnLoad()
       end
     end
    end
+   
+   if SpellBookFrame then
+    for i = 1, SPELLS_PER_PAGE do
+      local currSpellButton = _G["SpellButton" .. i];
+      hooksecurefunc(currSpellButton, "UpdateButton", function(self) OnSpellButtonUpdate(self) end);   
+    end
+   end
 
-   hooksecurefunc("SpellButton_UpdateButton", function(...) OnSpellBookUpdate(...) end);
    RegisterChatFilterEvents()
 
    loadAllSpellData()
@@ -750,6 +770,7 @@ end
 -- Even handlers
 function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
    if (event=="ADDON_LOADED" and name=="WoWeuCN_Tooltips") then
+
       SlashCmdList["WOWEUCN_TOOLTIPS"] = function(msg) WoWeuCN_Tooltips_SlashCommand(msg); end
       SLASH_WOWEUCN_TOOLTIPS1 = "/woweucn-tooltips";
       WoWeuCN_Tooltips_CheckVars();
@@ -800,6 +821,7 @@ local toyBoxHooked = false
 local mountJournalHooked = false
 local petJournalHooked = false
 local heirloomJournalHooked = false
+local glyphHooked = false
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -878,6 +900,11 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     heirloomJournalHooked = true
   end
   
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not glyphHooked and GlyphFrame) then    
+    --hooksecurefunc("GlyphFrame_UpdateGlyphList", function(...) OnUpdateGlyphList(...) end);
+    glyphHooked = true
+  end
+
   if (event=="ADDON_LOADED" and name=="Plater") then
     if (WoWeuCN_Tooltips_N_PS["transplaternameplate"]=="0") then
       Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
@@ -891,14 +918,8 @@ function Broadcast()
   WoWeuCN_Tooltips_PS = 1
   WoWeuCN_Quests_PS = 1
   
-  local expInfo, _, _, _ = GetBuildInfo()
-  local exp = split(expInfo, "%.")[1]
-  local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
-  if exp ~= myExp then
-    print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。r")
-    return
-  end
-  
+ 
+
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
   
   if (WoWeuCN_Tooltips_N_PS["transplaternameplate"]~="0") then

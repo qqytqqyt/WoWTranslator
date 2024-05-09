@@ -21,6 +21,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 end
                 
                 msg = string.gsub(msg, "£TMP£", "Hitem:")
+                msg = string.gsub(msg, "You receive loot: ", "你获得了：")
             end
         end
     end
@@ -115,5 +116,5 @@ function RegisterChatFilterEvents() -- todo: register immediately and cache call
 
     -- System
     --ChatFrame_AddMessageEventFilter("CHAT_MSG_SYSTEM", ChatFilter)
-    --ChatFrame_AddMessageEventFilter("CHAT_MSG_LOOT", ChatFilter)
+    ChatFrame_AddMessageEventFilter("CHAT_MSG_LOOT", ChatFilter)
 end
