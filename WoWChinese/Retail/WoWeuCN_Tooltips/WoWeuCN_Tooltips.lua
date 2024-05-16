@@ -38,6 +38,8 @@ local WoWeuCN_Tooltips_waitFrame = nil;
 local WoWeuCN_Tooltips_waitTable = {};
 local WoWeuCN_Tooltips_Force = false
 
+local WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = nil;
+
 local check1 = {85,110,105,116,78,97,109,101}
 local check2 = {66,78,71,101,116,73,110,102,111}
 
@@ -52,6 +54,18 @@ local function Serialize(tbl)
       table.insert(t,v)
   end
   return table.concat(t)
+end
+
+local function UpdateEncounterJournalToggleButton()
+  if not WoWeuCN_Tooltips_ToggleEncounterJournalTranslation then
+    return
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Hide();
+  else
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Show();
+  end
 end
 
 function WoWeuCN_Tooltips_wait(delay, func, ...)
@@ -407,6 +421,7 @@ function WoWeuCN_Tooltips_OnLoad()
    loadAllItemData()
    loadAllUnitData()
    loadAllAchievementData()
+   loadEncounterData()
 end
 
 function split(s, delimiter)
@@ -870,6 +885,7 @@ local toyBoxHooked = false
 local mountJournalHooked = false
 local petJournalHooked = false
 local heirloomJournalHooked = false
+local encounterJournalHooked = false
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -940,6 +956,22 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     hooksecurefunc("HeirloomsJournal_UpdateButton", function(...) OnHeirloonButtonUpdate(...) end);
     hooksecurefunc(HeirloomsJournal, "UpdateButton", function(self, ...) OnHeirloonButtonUpdate(...) end);   
     heirloomJournalHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not encounterJournalHooked and EncounterJournal) then  
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = CreateFrame("Button",nil, EncounterJournalEncounterFrame, "UIPanelButtonTemplate");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetWidth(80);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetHeight(23);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetText("译文切换");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:ClearAllPoints();
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetPoint("TOPLEFT", EncounterJournalEncounterFrame, "TOPLEFT", 340, -18);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetScript("OnClick", WoWeuCN_Tooltips_EncounterButton_On_Off);
+    WoWeuCN_Tooltips_TranslateEncounterJournal = true
+    UpdateEncounterJournalToggleButton();
+    hooksecurefunc("EncounterJournal_DisplayEncounter", function(...) OnEncounterJournalDisplay(...) end);
+    hooksecurefunc("EncounterJournal_ToggleHeaders", function(...) OnEncounterJournalToggle(...) end);
+    hooksecurefunc("EncounterJournal_SetDescriptionWithBullets", function(...) OnEncounterJournalOverview(...) end);
+    encounterJournalHooked = true
   end
 
   if (event=="ADDON_LOADED" and name=="Plater") then
