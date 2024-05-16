@@ -67,8 +67,8 @@ function WoWeuCN_Scanner_ScanInit()
   if (WoWeuCN_Scanner_SpellToolTips400000 == nil) then
   WoWeuCN_Scanner_SpellToolTips400000 = {} 
   end
-  if (WoWeuCN_Scanner_SpellToolIndex == nil) then
-  WoWeuCN_Scanner_SpellToolIndex = 1
+  if (WoWeuCN_Scanner_Index == nil) then
+  WoWeuCN_Scanner_Index = 1
   end
 
   if (WoWeuCN_Scanner_UnitToolTips0 == nil) then
@@ -80,9 +80,6 @@ function WoWeuCN_Scanner_ScanInit()
   if (WoWeuCN_Scanner_UnitToolTips200000 == nil) then
   WoWeuCN_Scanner_UnitToolTips200000 = {} 
   end
-  if (WoWeuCN_Scanner_UnitIndex == nil) then
-  WoWeuCN_Scanner_UnitIndex = 1
-  end
 
   if (WoWeuCN_Scanner_ItemToolTips0 == nil) then
   WoWeuCN_Scanner_ItemToolTips0 = {} 
@@ -93,31 +90,25 @@ function WoWeuCN_Scanner_ScanInit()
   if (WoWeuCN_Scanner_ItemToolTips200000 == nil) then
   WoWeuCN_Scanner_ItemToolTips200000 = {} 
   end
-  if (WoWeuCN_Scanner_ItemIndex == nil) then
-  WoWeuCN_Scanner_ItemIndex = 1
-  end
   
   if (WoWeuCN_Scanner_Achivements0 == nil) then
     WoWeuCN_Scanner_Achivements0 = {} 
   end
-  if (WoWeuCN_Scanner_AchivementsIndex == nil) then
-    WoWeuCN_Scanner_AchivementsIndex = 1
-  end
-
   if (WoWeuCN_Scanner_QuestToolTips == nil) then
     WoWeuCN_Scanner_QuestToolTips = {} 
   end
-  if (WoWeuCN_Scanner_QuestIndex == nil) then
-    WoWeuCN_Scanner_QuestIndex = 1
+  
+  if (WoWeuCN_Scanner_EncounterSectionData == nil) then
+    WoWeuCN_Scanner_EncounterSectionData = {}
+  end
+  
+  if (WoWeuCN_Scanner_EncounterData == nil) then
+    WoWeuCN_Scanner_EncounterData = {}
   end
 end
 
 function WoWeuCN_Scanner_ScanIndex(index)
-    WoWeuCN_Scanner_SpellToolIndex = tonumber(index);
-    WoWeuCN_Scanner_ItemIndex = tonumber(index);
-    WoWeuCN_Scanner_UnitIndex = tonumber(index);
-    WoWeuCN_Scanner_AchivementsIndex = tonumber(index);
-    WoWeuCN_Scanner_QuestIndex = tonumber(index);
+    WoWeuCN_Scanner_Index = tonumber(index);
     print(index)
 end
 
@@ -185,8 +176,8 @@ function WoWeuCN_Scanner_ScanSpellAuto(startIndex, attempt, counter)
     end
   end
   print(attempt)
-  print(counter)
-  WoWeuCN_Scanner_SpellToolIndex = startIndex
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
   if (counter >= 5) then
     WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanSpellAuto, startIndex + 150, attempt + 1, 0)
   else
@@ -223,8 +214,8 @@ function WoWeuCN_Scanner_ScanUnitAuto(startIndex, attempt, counter)
     print(i)
   end
   print(attempt)
-  print(counter)
-  WoWeuCN_Scanner_UnitIndex = startIndex
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
   if (counter >= 3) then
     WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanUnitAuto, startIndex + 250, attempt + 1, 0)
   else
@@ -270,8 +261,8 @@ function WoWeuCN_Scanner_ScanItemAuto(startIndex, attempt, counter)
     end
   end
   print(attempt)
-  print(counter)
-  WoWeuCN_Scanner_ItemIndex = startIndex
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
   if (counter >= 5) then
     WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanItemAuto, startIndex + 150, attempt + 1, 0)
   else
@@ -296,8 +287,8 @@ function WoWeuCN_Scanner_ScanAchivementAuto(startIndex, attempt, counter)
     end
   end
   print(attempt)
-  print(counter)
-  WoWeuCN_Scanner_AchivementsIndex = startIndex
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
   if (counter >= 5) then
     WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanAchivementAuto, startIndex + 150, attempt + 1, 0)
   else
@@ -338,11 +329,63 @@ function WoWeuCN_Scanner_ScanQuestAuto(startIndex, attempt, counter)
   end
   print(attempt)
   print('index ' .. startIndex)
-  WoWeuCN_Scanner_QuestIndex = startIndex
+  WoWeuCN_Scanner_Index = startIndex
   if (counter >= 5) then
      WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanQuestAuto, startIndex + 100, attempt + 1, 0)
   else
      WoWeuCN_Scanner_wait(0.5, WoWeuCN_Scanner_ScanQuestAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
+function WoWeuCN_Scanner_ScanEncounterAuto(startIndex, attempt, counter)
+  if (startIndex > 25000) then
+    WoWeuCN_Scanner_Index = 0
+    return;
+  end
+  for i = startIndex, startIndex + 100 do
+    local sectionInfo = EJ_GetEncounterInfo(i)
+    if (sectionInfo) then      
+	    local ename, description, _, rootSectionID = EJ_GetEncounterInfo(i);
+      WoWeuCN_Scanner_EncounterData[i] = {}
+      WoWeuCN_Scanner_EncounterData[i]["Title"] = ename
+      WoWeuCN_Scanner_EncounterData[i]["Description"] = description
+    end
+  end
+  print(attempt)
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
+  if (counter >= 2) then
+     WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanEncounterAuto, startIndex + 100, attempt + 1, 0)
+  else
+     WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanEncounterAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
+function WoWeuCN_Scanner_ScanEncounterSectionAuto(startIndex, attempt, counter)
+  if (startIndex > 50000) then
+    WoWeuCN_Scanner_Index = 0
+    return;
+  end
+  for difficultyId = 1, 45 do
+    EJ_SetDifficulty(difficultyId)
+    for i = startIndex, startIndex + 100 do
+      local sectionInfo =  C_EncounterJournal.GetSectionInfo(i)
+      if (sectionInfo and not sectionInfo.filteredByDifficulty) then
+        WoWeuCN_Scanner_EncounterSectionData[EJ_GetDifficulty() .. 'x' .. i] = {}
+        WoWeuCN_Scanner_EncounterSectionData[EJ_GetDifficulty() .. 'x' .. i]["Title"] = sectionInfo.title
+        
+        print(sectionInfo.title)
+        WoWeuCN_Scanner_EncounterSectionData[EJ_GetDifficulty() .. 'x' .. i]["Description"] = sectionInfo.description
+      end
+    end
+  end
+  print(attempt)
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
+  if (counter >= 2) then
+     WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanEncounterSectionAuto, startIndex + 100, attempt + 1, 0)
+  else
+     WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanEncounterSectionAuto, startIndex, attempt + 1, counter + 1)
   end
 end
 
@@ -366,7 +409,7 @@ function WoWeuCN_Scanner_ScanCacheAuto(startIndex, attempt, counter)
      end
     end
     
-    WoWeuCN_Scanner_QuestIndex = startIndex
+    WoWeuCN_Scanner_Index = startIndex
     if (counter >= 5) then
       WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanCacheAuto, startIndex + 150, attempt + 1, 0)
     else

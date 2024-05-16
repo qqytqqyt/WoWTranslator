@@ -18,32 +18,42 @@ function WoWeuCN_Scanner_SlashCommand(msg)
     -- spell auto scan
     elseif (msg=="spellscanauto" or msg=="SPELLSCANAUTO") then
       WoWeuCN_Scanner_ScanInit()    
-      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanSpellAuto, WoWeuCN_Scanner_SpellToolIndex, 1, 0)
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanSpellAuto, WoWeuCN_Scanner_Index, 1, 0)
     
     -- unit auto scan
     elseif (msg=="unitscanauto" or msg=="UNITSCANAUTO") then
       WoWeuCN_Scanner_ScanInit()
-      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanUnitAuto, WoWeuCN_Scanner_UnitIndex, 1, 0)
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanUnitAuto, WoWeuCN_Scanner_Index, 1, 0)
 
     -- item auto scan
     elseif (msg=="itemscanauto" or msg=="ITEMSCANAUTO") then      
       WoWeuCN_Scanner_ScanInit()
-      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanItemAuto, WoWeuCN_Scanner_ItemIndex, 1, 0)
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanItemAuto, WoWeuCN_Scanner_Index, 1, 0)
 
     -- achivement auto scan
-    elseif (msg=="achievescanauto" or msg=="ACHIEVESCANAUTO") then      
+    elseif (msg=="achievescanauto" or msg=="ACHIVESCANAUTO") then      
       WoWeuCN_Scanner_ScanInit()
-      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanAchivementAuto, WoWeuCN_Scanner_ItemIndex, 1, 0)
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanAchivementAuto, WoWeuCN_Scanner_Index, 1, 0)
 
     -- quest scan  
     elseif (msg=="questscanauto" or msg=="QUESTSCANAUTO") then     
       WoWeuCN_Scanner_ScanInit()
-      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanQuestAuto, WoWeuCN_Scanner_QuestIndex, 1, 0)
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanQuestAuto, WoWeuCN_Scanner_Index, 1, 0)
 
-      -- quest cache scan
-      elseif (msg=="cachescanauto" or msg=="CACHESCANAUTO") then     
-        WoWeuCN_Scanner_ScanInit()
-      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanCacheAuto, WoWeuCN_Scanner_QuestIndex, 1, 0)
+    -- encounter scan  
+    elseif (msg=="encounterscanauto" or msg=="ENCOUNTERSCANAUTO") then     
+      WoWeuCN_Scanner_ScanInit()
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanEncounterAuto, WoWeuCN_Scanner_Index, 1, 0)
+
+    -- encounter scan  
+    elseif (msg=="encountersectionscanauto" or msg=="ENCOUNTERSECTIONSCANAUTO") then     
+      WoWeuCN_Scanner_ScanInit()
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanEncounterSectionAuto, WoWeuCN_Scanner_Index, 1, 0)
+
+    -- quest cache scan
+    elseif (msg=="cachescanauto" or msg=="CACHESCANAUTO") then     
+      WoWeuCN_Scanner_ScanInit()
+    WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanCacheAuto, WoWeuCN_Scanner_Index, 1, 0)
 
     elseif (msg=="") then
         InterfaceOptionsFrame_Show();
