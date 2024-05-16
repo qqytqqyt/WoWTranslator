@@ -391,3 +391,77 @@ function OnLootUpdateElvUI(self, ...)
     end
   end
 end
+
+local function PopulateBossDataProvider()
+	local dataProvider = CreateDataProvider();
+
+	local index = 1;
+	while index do
+		local name, description, bossID, rootSectionID, link = EJ_GetEncounterInfoByIndex(index);
+		if bossID and bossID > 0 then
+			dataProvider:Insert({index=index, name=name, description=description, bossID=bossID, rootSectionID=rootSectionID, link=link});
+			index = index + 1;
+		else
+			break;
+		end
+	end
+
+	return dataProvider;
+end
+
+function UpdateEncounterJournalHeaders()
+  local usedHeaders = EncounterJournal.encounter.usedHeaders;
+
+  local listEnd = #usedHeaders;
+  for index, infoHeader in pairs(usedHeaders) do
+    if (infoHeader and infoHeader.description) then      
+      local sectionID = infoHeader.myID
+      local difficultyID = EJ_GetDifficulty()
+      if WoWeuCN_Tooltips_TranslateEncounterJournal then
+        local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+        if (sectionTranslation) then
+          infoHeader.button.title:SetText(sectionTranslation["Title"])
+          infoHeader.description:SetText(sectionTranslation["Description"])
+          EncounterJournal_ShiftHeaders(index)
+        end
+      else
+        local sectionInfo =  C_EncounterJournal.GetSectionInfo(sectionID)
+        infoHeader.button.title:SetText(sectionInfo.title)
+        infoHeader.description:SetText(sectionInfo.description)
+        EncounterJournal_ShiftHeaders(index)
+      end
+    end
+  end
+end
+
+function OnEncounterJournalDisplay(encounterID, noButton)  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  local encounterTranslation = WoWeuCN_Tooltips_EncounterData[encounterID]  
+  if (encounterTranslation) then    
+	  local self = EncounterJournal.encounter;
+    self.info.encounterTitle:SetText(encounterTranslation["Title"]);
+    self.overviewFrame.loreDescription:SetText(encounterTranslation["Description"]);
+    self.infoFrame.description:SetText(encounterTranslation["Description"]);
+    self.infoFrame.descriptionHeight = self.infoFrame.description:GetHeight();
+    if self.usedHeaders[1] then
+      self.usedHeaders[1]:SetPoint("TOPRIGHT", 0 , -8 - EncounterJournal.encounter.infoFrame.descriptionHeight - 6);
+    end
+  end
+  UpdateEncounterJournalHeaders()
+end
+
+function OnEncounterJournalToggle(object, hideBullets)  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  UpdateEncounterJournalHeaders()
+end
+
+function WoWeuCN_Tooltips_EncounterButton_On_Off()
+  WoWeuCN_Tooltips_TranslateEncounterJournal = not WoWeuCN_Tooltips_TranslateEncounterJournal
+  UpdateEncounterJournalHeaders()
+end
