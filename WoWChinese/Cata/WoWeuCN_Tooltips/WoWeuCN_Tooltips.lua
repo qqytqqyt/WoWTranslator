@@ -14,6 +14,8 @@ local WoWeuCN_Tooltips_waitFrame = nil;
 local WoWeuCN_Tooltips_waitTable = {};
 local WoWeuCN_Tooltips_Force = false
 
+local WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = nil;
+
 local check1 = {85,110,105,116,78,97,109,101}
 local check2 = {66,78,71,101,116,73,110,102,111}
 
@@ -28,6 +30,18 @@ local function Serialize(tbl)
       table.insert(t,v)
   end
   return table.concat(t)
+end
+
+local function UpdateEncounterJournalToggleButton()
+  if not WoWeuCN_Tooltips_ToggleEncounterJournalTranslation then
+    return
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Hide();
+  else
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Show();
+  end
 end
 
 function WoWeuCN_Tooltips_wait(delay, func, ...)
@@ -232,7 +246,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  WoWeuCN_TooltipsCheckButton0:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
+  WoWeuCN_TooltipsCheckButton0:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; UpdateEncounterJournalToggleButton(); end);
   WoWeuCN_TooltipsCheckButton0Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton0Text:SetText(WoWeuCN_Tooltips_Interface.active);
 
@@ -277,7 +291,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "OptionsCheckButtonTemplate");
   WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -105);
-  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; UpdateEncounterJournalToggleButton(); end);
   WoWeuCN_TooltipsCheckButton8Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
   
@@ -375,6 +389,7 @@ function WoWeuCN_Tooltips_OnLoad()
    loadAllItemData()
    loadAllUnitData()
    loadAllAchievementData()
+   loadEncounterData()
 end
 
 local replacement = { 
@@ -822,6 +837,7 @@ local mountJournalHooked = false
 local petJournalHooked = false
 local heirloomJournalHooked = false
 local glyphHooked = false
+local encounterJournalHooked = false
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -905,6 +921,21 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     glyphHooked = true
   end
 
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not encounterJournalHooked and EncounterJournal) then  
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = CreateFrame("Button",nil, EncounterJournalEncounterFrame, "UIPanelButtonTemplate");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetWidth(80);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetHeight(23);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetText("译文切换");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:ClearAllPoints();
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetPoint("TOPLEFT", EncounterJournalEncounterFrame, "TOPLEFT", 320, -18);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetScript("OnClick", WoWeuCN_Tooltips_EncounterButton_On_Off);
+    WoWeuCN_Tooltips_TranslateEncounterJournal = true
+    UpdateEncounterJournalToggleButton();
+    hooksecurefunc("EncounterJournal_DisplayEncounter", function(...) OnEncounterJournalDisplay(...) end);
+    hooksecurefunc("EncounterJournal_ToggleHeaders", function(...) OnEncounterJournalToggle(...) end);
+    encounterJournalHooked = true
+  end
+
   if (event=="ADDON_LOADED" and name=="Plater") then
     if (WoWeuCN_Tooltips_N_PS["transplaternameplate"]=="0") then
       Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
@@ -917,8 +948,6 @@ end
 function Broadcast()
   WoWeuCN_Tooltips_PS = 1
   WoWeuCN_Quests_PS = 1
-  
- 
 
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
   
