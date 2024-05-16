@@ -273,3 +273,130 @@ function OnLootUpdateElvUI(self, ...)
     end
   end
 end
+
+function UpdateEncounterJournalHeaders()
+  local usedHeaders = EncounterJournal.encounter.usedHeaders;
+
+  local listEnd = #usedHeaders;
+  for index, infoHeader in pairs(usedHeaders) do
+    if (infoHeader and infoHeader.description) then      
+      local sectionID = infoHeader.myID
+      local difficultyID = EJ_GetDifficulty()
+      if WoWeuCN_Tooltips_TranslateEncounterJournal then
+        local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+        if (sectionTranslation) then
+          infoHeader.button.title:SetText(sectionTranslation["Title"])
+          infoHeader.description:SetText(sectionTranslation["Description"])
+          EncounterJournal_ShiftHeaders(index)
+        end
+      else
+        local sectionInfo =  C_EncounterJournal.GetSectionInfo(sectionID)
+        infoHeader.button.title:SetText(sectionInfo.title)
+        infoHeader.description:SetText(sectionInfo.description)
+        EncounterJournal_ShiftHeaders(index)
+      end
+    end
+  end 
+end
+
+function UpdateOverviews() 
+  local difficultyID = EJ_GetDifficulty()
+  local self = EncounterJournal.encounter.overviewFrame
+  local overviewSectionID = self.rootOverviewSectionID
+  local overviewSectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. overviewSectionID]
+  
+  if (WoWeuCN_Tooltips_TranslateEncounterJournal and overviewSectionTranslation) then
+    self.overviewDescription.Text:SetText(overviewSectionTranslation["Description"]);
+    self.overviewDescription.descriptionHeight = self.overviewDescription:GetHeight();
+  else
+    local sectionInfo =  C_EncounterJournal.GetSectionInfo(overviewSectionID)
+    self.overviewDescription.Text:SetText(sectionInfo.description);
+    self.overviewDescription.descriptionHeight = self.overviewDescription:GetHeight();
+  end
+
+  for index, infoHeader in pairs(self.overviews) do
+    if (infoHeader and infoHeader.description) then      
+      local sectionID = infoHeader.sectionID
+      if WoWeuCN_Tooltips_TranslateEncounterJournal then
+        local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+        if (sectionTranslation) then
+          infoHeader.button.title:SetText(sectionTranslation["Title"])
+          EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionTranslation["Description"], not infoHeader.expanded);
+          EncounterJournal_ShiftHeaders(index)
+        end
+      else
+        local sectionInfo =  C_EncounterJournal.GetSectionInfo(sectionID)
+        infoHeader.button.title:SetText(sectionInfo.title)
+        infoHeader.description:SetText(sectionInfo.description)
+        EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionInfo.description, not infoHeader.expanded);
+        EncounterJournal_ShiftHeaders(index)
+      end
+    end
+  end
+end
+
+function OnEncounterJournalDisplay(encounterID, noButton)  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  local encounterTranslation = WoWeuCN_Tooltips_EncounterData[encounterID]  
+  if (encounterTranslation) then    
+    local self = EncounterJournal.encounter;
+    self.info.encounterTitle:SetText(encounterTranslation["Title"]);
+    self.overviewFrame.loreDescription:SetText(encounterTranslation["Description"]);    
+    local difficultyID = EJ_GetDifficulty()
+    local sectionID = self.overviewFrame.rootOverviewSectionID
+    local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+    
+    if (sectionTranslation) then
+      self.overviewFrame.overviewDescription.Text:SetText(sectionTranslation["Description"]);
+      self.overviewFrame.overviewDescription.descriptionHeight = self.overviewFrame.overviewDescription:GetHeight();
+    end
+    
+    self.infoFrame.description:SetText(encounterTranslation["Description"]);
+    self.infoFrame.descriptionHeight = self.infoFrame.description:GetHeight();
+    if self.usedHeaders[1] then
+      self.usedHeaders[1]:SetPoint("TOPRIGHT", 0 , -8 - EncounterJournal.encounter.infoFrame.descriptionHeight - 6);
+    end
+  end
+  UpdateEncounterJournalHeaders()
+end
+
+function OnEncounterJournalToggle(object, hideBullets)  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  if (object == EncounterJournal.encounter.overviewFrame) then
+    return
+  end
+
+  UpdateEncounterJournalHeaders()
+end
+
+function OnEncounterJournalOverview(infoHeader, description)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  local sectionID = infoHeader.sectionID
+  local difficultyID = EJ_GetDifficulty()
+  if WoWeuCN_Tooltips_TranslateEncounterJournal then
+    local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+    if (sectionTranslation) then
+      infoHeader.button.title:SetText(sectionTranslation["Title"])
+      EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionTranslation["Description"], not infoHeader.expanded);
+    end
+  else
+    local sectionInfo =  C_EncounterJournal.GetSectionInfo(sectionID)
+    infoHeader.button.title:SetText(sectionInfo.title)
+    EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionInfo.description, not infoHeader.expanded);
+  end
+end
+
+function WoWeuCN_Tooltips_EncounterButton_On_Off()
+  WoWeuCN_Tooltips_TranslateEncounterJournal = not WoWeuCN_Tooltips_TranslateEncounterJournal
+  UpdateEncounterJournalHeaders()
+  UpdateOverviews()
+end
