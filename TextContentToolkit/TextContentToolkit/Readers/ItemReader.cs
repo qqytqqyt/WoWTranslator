@@ -160,15 +160,20 @@ namespace TextContentToolkit
         {
             var filterPath = TooltipsConfig.QuestieFilterPath;
 
-            var lines = File.ReadAllLines(filterPath);
-            var validIds = new HashSet<string>();
-            foreach (var line in lines)
-            {
-                if (!line.Trim().StartsWith("["))
-                    continue;
+            var useFilter = !string.IsNullOrEmpty(filterPath);
 
-                var id = line.FirstBetween("[", "]");
-                validIds.Add(id);
+            var validIds = new HashSet<string>();
+            if (useFilter)
+            {
+                var lines = File.ReadAllLines(filterPath);
+                foreach (var line in lines)
+                {
+                    if (!line.Trim().StartsWith("["))
+                        continue;
+
+                    var id = line.FirstBetween("[", "]");
+                    validIds.Add(id);
+                }
             }
 
             var sb = new StringBuilder();
@@ -185,7 +190,7 @@ l10n.itemLookup[""localeCode""] = { ";
             var itemTipOrderedList = itemTipList.Select(i => i.Value).OrderBy(q => int.Parse(q.Id)).ToList();
             foreach (var itemTips in itemTipOrderedList)
             {
-                if (!validIds.Contains(itemTips.Id))
+                if (useFilter && !validIds.Contains(itemTips.Id))
                     continue;
 
                 validIds.Remove(itemTips.Id);

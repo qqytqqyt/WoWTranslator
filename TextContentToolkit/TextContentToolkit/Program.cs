@@ -1,4 +1,9 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
 using TextContentToolkit.Configs;
 using TextContentToolkit.Extensions;
 
@@ -54,12 +59,23 @@ namespace TextContentToolkit
 
             if (config.RunQuestieFolders)
             {
-                var questieItemReader = new ItemReader(config.ItemConfig);
-                questieItemReader.ExecuteOnQuestieFolder();
-                var questieUnitReader = new UnitReader(config.UnitConfig);
-                questieUnitReader.ExecuteOnQuestieFolder();
-                var questieQuestReader = new QuestReader(config.QuestConfig);
-                questieQuestReader.ExecuteOnQuestieFolder();
+                if (config.ItemConfig.Enabled)
+                {
+                    var questieItemReader = new ItemReader(config.ItemConfig);
+                    questieItemReader.ExecuteOnQuestieFolder();
+                }
+
+                if (config.UnitConfig.Enabled)
+                {
+                    var questieUnitReader = new UnitReader(config.UnitConfig);
+                    questieUnitReader.ExecuteOnQuestieFolder();
+                }
+
+                if (config.QuestConfig.Enabled)
+                {
+                    var questieQuestReader = new QuestReader(config.QuestConfig);
+                    questieQuestReader.ExecuteOnQuestieFolder();
+                }
             }
         }
     }

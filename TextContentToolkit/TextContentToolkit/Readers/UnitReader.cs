@@ -98,15 +98,21 @@ namespace TextContentToolkit
 
         private void WriteToQuestie(string outputPath, string locale, Dictionary<string, Tooltip> unitTipList)
         {
-            var lines = File.ReadAllLines(TooltipsConfig.QuestieFilterPath);
-            var validIds = new HashSet<string>();
-            foreach (var line in lines)
-            {
-                if (!line.Trim().StartsWith("["))
-                    continue;
 
-                var id = line.FirstBetween("[", "]");
-                validIds.Add(id);
+            var useFilter = !string.IsNullOrEmpty(TooltipsConfig.QuestieFilterPath);
+
+            var validIds = new HashSet<string>();
+            if (useFilter)
+            {
+                var lines = File.ReadAllLines(TooltipsConfig.QuestieFilterPath);
+                foreach (var line in lines)
+                {
+                    if (!line.Trim().StartsWith("["))
+                        continue;
+
+                    var id = line.FirstBetween("[", "]");
+                    validIds.Add(id);
+                }
             }
 
             var unitTipOrderedList = unitTipList.Select(u => u.Value).OrderBy(q => int.Parse(q.Id)).ToList();
@@ -126,7 +132,7 @@ l10n.npcNameLookup[""localeCode""] = { ";
 
             foreach (var unitTips in unitTipOrderedList)
             {
-                if (!validIds.Contains(unitTips.Id))
+                if (useFilter && !validIds.Contains(unitTips.Id))
                     continue;
 
                 if (!unitTips.TooltipLines.Any())

@@ -34,6 +34,8 @@ namespace TextContentToolkit.Readers
                             var id = dbReader.ReadInt32();
                             if (id == 8274)
                                 Console.Write(true);
+                            if (id == 78752)
+                                Console.WriteLine(true);
 
                             var length = dbReader.ReadInt32();
                             var currentPosition = ms.Position;
@@ -92,7 +94,7 @@ namespace TextContentToolkit.Readers
                                     descriptionLength <<= 1;
                                     descriptionLength |= (lengthBytes[4] & 0x80) >> 7;
 
-                                    if (numObjectives > 2)
+                                    if (numObjectives > 1)
                                         Console.Write(true);
 
                                     for (int i = 0; i < numObjectives; ++i)
@@ -252,7 +254,7 @@ namespace TextContentToolkit.Readers
                             index++;
                             Console.WriteLine(index);
                             var id = dbReader.ReadInt32();
-                            if (id == 75407)
+                            if (id == 12022)
                                 Console.Write(true);
                             if (index == 307 || index == 6638)
                                 Console.Write(true);
@@ -275,12 +277,18 @@ namespace TextContentToolkit.Readers
                             var check4 = dbReader.ReadByte(8);
                             var check1 = dbReader.ReadByte(4);
                             var check2 = dbReader.ReadByte(4);
-                            dbReader.ReadByte(12);
+                            var check6 = dbReader.ReadByte(12);
+                            if (numObjectives > 1)
+                            {
+                                Console.Write(true);
+                                //dbReader.ReadByte((numObjectives - 1) * 6);
+                            }
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
                             var title = string.Empty;
                             var objective = string.Empty;
                             var description = string.Empty;
+
                             while (true)
                             {
                                 var abort = false;
@@ -310,6 +318,8 @@ namespace TextContentToolkit.Readers
 
                                     //if (numObjectives > 2)
                                     //    Console.Write(true);
+                                    if (numObjectives > 1)
+                                        Console.Write(true);
 
                                     for (int i = 0; i < numObjectives; ++i)
                                     {
@@ -317,8 +327,13 @@ namespace TextContentToolkit.Readers
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(20);
+                                        dbReader.ReadByte(1);
+                                        dbReader.ReadByte(1);
+                                        dbReader.ReadByte(1);
                                         var numVisual = dbReader.ReadInt32();
                                         if (numVisual != 0 && i > 0)
+                                            Console.Write(true);
+                                        if (numVisual < 0)
                                             Console.Write(true);
                                         for (int j = 0; j < numVisual; ++j)
                                             dbReader.ReadInt32();
@@ -362,6 +377,9 @@ namespace TextContentToolkit.Readers
                                     attempCount++;
                                     continue;
                                 }
+
+                                if (title.Trim().Length != title.Length || objective.Trim().Length != objective.Length)
+                                    Console.Write(true);
 
                                 Console.WriteLine("(" + attempCount + ")");
                                 attempCount = 1;
