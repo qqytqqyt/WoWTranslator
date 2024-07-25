@@ -203,13 +203,13 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
 end
 
 function WoWeuCN_Tooltips_SetCheckButtonState()
-  WoWeuCN_TooltipsCheckButton0:SetValue(WoWeuCN_Tooltips_N_PS["active"]=="1");
-  WoWeuCN_TooltipsCheckButton3:SetValue(WoWeuCN_Tooltips_N_PS["transspell"]=="1");
-  WoWeuCN_TooltipsCheckButton4:SetValue(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
-  WoWeuCN_TooltipsCheckButton5:SetValue(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
-  WoWeuCN_TooltipsCheckButton6:SetValue(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
-  WoWeuCN_TooltipsCheckButton7:SetValue(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
-  WoWeuCN_TooltipsCheckButton8:SetValue(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1");
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transspell"]=="1");
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -217,7 +217,12 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   local WoWeuCN_TooltipsOptions = CreateFrame("FRAME", "WoWeuCN_Tooltips_Options");
   WoWeuCN_TooltipsOptions.name = "WoWeuCN-Tooltips";
   WoWeuCN_TooltipsOptions.refresh = function (self) WoWeuCN_Tooltips_SetCheckButtonState() end;
-  InterfaceOptions_AddCategory(WoWeuCN_TooltipsOptions);
+  
+  if InterfaceOptions_AddCategory then
+    InterfaceOptions_AddCategory(WoWeuCN_TooltipsOptions)
+    elseif Settings and Settings.RegisterAddOnCategory and Settings.RegisterCanvasLayoutCategory then
+       Settings.RegisterAddOnCategory(select(1, Settings.RegisterCanvasLayoutCategory(WoWeuCN_TooltipsOptions, WoWeuCN_TooltipsOptions.name)));
+    end
 
   local WoWeuCN_TooltipsOptionsHeader = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
   WoWeuCN_TooltipsOptionsHeader:SetFontObject(GameFontNormalLarge);
@@ -225,7 +230,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2023");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2024");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -239,8 +244,8 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  
-  WoWeuCN_TooltipsCheckButton0.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1")
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
   WoWeuCN_TooltipsCheckButton0.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton0.Text:SetText(WoWeuCN_Tooltips_Interface.active);
 
@@ -255,42 +260,48 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   
   local WoWeuCN_TooltipsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton3", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -5);
-  WoWeuCN_TooltipsCheckButton3.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then WoWeuCN_Tooltips_N_PS["transspell"]="1" else WoWeuCN_Tooltips_N_PS["transspell"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transspell"]=="1")
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then WoWeuCN_Tooltips_N_PS["transspell"]="1" else WoWeuCN_Tooltips_N_PS["transspell"]="0" end; end);
   WoWeuCN_TooltipsCheckButton3.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton3:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton3.Text:SetText(WoWeuCN_Tooltips_Interface.transspell);
   
   local WoWeuCN_TooltipsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton4", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -35);
-  WoWeuCN_TooltipsCheckButton4.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then WoWeuCN_Tooltips_N_PS["transitem"]="1" else WoWeuCN_Tooltips_N_PS["transitem"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1")
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then WoWeuCN_Tooltips_N_PS["transitem"]="1" else WoWeuCN_Tooltips_N_PS["transitem"]="0" end; end);
   WoWeuCN_TooltipsCheckButton4.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton4:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton4.Text:SetText(WoWeuCN_Tooltips_Interface.transitem);
   
   local WoWeuCN_TooltipsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton5", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -65);
-  WoWeuCN_TooltipsCheckButton5.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transunit"]=="0") then WoWeuCN_Tooltips_N_PS["transunit"]="1" else WoWeuCN_Tooltips_N_PS["transunit"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1")
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transunit"]=="0") then WoWeuCN_Tooltips_N_PS["transunit"]="1" else WoWeuCN_Tooltips_N_PS["transunit"]="0" end; end);
   WoWeuCN_TooltipsCheckButton5.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton5:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton5.Text:SetText(WoWeuCN_Tooltips_Interface.transunit);
   
   local WoWeuCN_TooltipsCheckButton6 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton6", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -95);
-  WoWeuCN_TooltipsCheckButton6.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then WoWeuCN_Tooltips_N_PS["transachievement"]="1" else WoWeuCN_Tooltips_N_PS["transachievement"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1")
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then WoWeuCN_Tooltips_N_PS["transachievement"]="1" else WoWeuCN_Tooltips_N_PS["transachievement"]="0" end; end);
   WoWeuCN_TooltipsCheckButton6.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton6:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton6.Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
 
   local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -125);
-  WoWeuCN_TooltipsCheckButton7.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1")
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
   WoWeuCN_TooltipsCheckButton7.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton7:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton7.Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
   
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -155);
-  WoWeuCN_TooltipsCheckButton8.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1")
+  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);

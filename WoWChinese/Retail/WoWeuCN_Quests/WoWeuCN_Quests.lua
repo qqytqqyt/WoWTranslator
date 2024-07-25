@@ -331,9 +331,9 @@ end
 
 
 function WoWeuCN_Quests_SetCheckButtonState()
-  WoWeuCN_QuestsCheckButton0:SetValue(WoWeuCN_Quests_N_PS["active"]=="1");
-  WoWeuCN_QuestsCheckButton3:SetValue(WoWeuCN_Quests_N_PS["transtitle"]=="1");
-  WoWeuCN_QuestsCheckButton4:SetValue(WoWeuCN_Quests_N_PS["transobjectives"]=="1");
+  WoWeuCN_QuestsCheckButton0.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["active"]=="1");
+  WoWeuCN_QuestsCheckButton3.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtitle"]=="1");
+  WoWeuCN_QuestsCheckButton4.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transobjectives"]=="1");
 end
 
 function WoweuCN_LoadOriginalHeaders()
@@ -368,7 +368,11 @@ function WoWeuCN_Quests_BlizzardOptions()
   local WoWeuCN_QuestsOptions = CreateFrame("FRAME", "WoWeuCN_Quests_Options");
   WoWeuCN_QuestsOptions.name = "WoWeuCN-Quests";
   WoWeuCN_QuestsOptions.refresh = function (self) WoWeuCN_Quests_SetCheckButtonState() end;
-  InterfaceOptions_AddCategory(WoWeuCN_QuestsOptions);
+  if InterfaceOptions_AddCategory then
+   InterfaceOptions_AddCategory(WoWeuCN_QuestsOptions)
+   elseif Settings and Settings.RegisterAddOnCategory and Settings.RegisterCanvasLayoutCategory then
+      Settings.RegisterAddOnCategory(select(1, Settings.RegisterCanvasLayoutCategory(WoWeuCN_QuestsOptions, WoWeuCN_QuestsOptions.name)));
+   end
 
   local WoWeuCN_QuestsOptionsHeader = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
   WoWeuCN_QuestsOptionsHeader:SetFontObject(GameFontNormalLarge);
@@ -376,7 +380,7 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_QuestsOptionsHeader:ClearAllPoints();
   WoWeuCN_QuestsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2023");
+  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2024");
   WoWeuCN_QuestsOptionsHeader:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsPlayer = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
@@ -390,7 +394,8 @@ function WoWeuCN_Quests_BlizzardOptions()
 
   local WoWeuCN_QuestsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton0", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  WoWeuCN_QuestsCheckButton0.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["active"]=="1") then WoWeuCN_Quests_N_PS["active"]="0" else if WoWeuCN_Quests_Force then return end WoWeuCN_Quests_N_PS["active"]="1" end; end);
+  WoWeuCN_QuestsCheckButton0.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["active"]=="1");
+  WoWeuCN_QuestsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["active"]=="1") then WoWeuCN_Quests_N_PS["active"]="0" else if WoWeuCN_Quests_Force then return end WoWeuCN_Quests_N_PS["active"]="1" end; end);
   WoWeuCN_QuestsCheckButton0.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton0.Text:SetText(WoWeuCN_Quests_Interface.active);
 
@@ -405,14 +410,16 @@ function WoWeuCN_Quests_BlizzardOptions()
   
   local WoWeuCN_QuestsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton3", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -5);
-  WoWeuCN_QuestsCheckButton3.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transtitle"]=="0") then WoWeuCN_Quests_N_PS["transtitle"]="1" else WoWeuCN_Quests_N_PS["transtitle"]="0" end; end);
+  WoWeuCN_QuestsCheckButton3.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtitle"]=="1");
+  WoWeuCN_QuestsCheckButton3.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transtitle"]=="0") then WoWeuCN_Quests_N_PS["transtitle"]="1" else WoWeuCN_Quests_N_PS["transtitle"]="0" end; end);
   WoWeuCN_QuestsCheckButton3.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton3:SetSize(500, 21)
   WoWeuCN_QuestsCheckButton3.Text:SetText(WoWeuCN_Quests_Interface.transtitle);
   
   local WoWeuCN_QuestsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton4", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -25);
-  WoWeuCN_QuestsCheckButton4.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transobjectives"]=="0") then WoWeuCN_Quests_N_PS["transobjectives"]="1" else WoWeuCN_Quests_N_PS["transobjectives"]="0" end; end);
+  WoWeuCN_QuestsCheckButton4.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transobjectives"]=="1");
+  WoWeuCN_QuestsCheckButton4.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transobjectives"]=="0") then WoWeuCN_Quests_N_PS["transobjectives"]="1" else WoWeuCN_Quests_N_PS["transobjectives"]="0" end; end);
   WoWeuCN_QuestsCheckButton4.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton4:SetSize(500, 21)
   WoWeuCN_QuestsCheckButton4.Text:SetText(WoWeuCN_Quests_Interface.transobjectives);
@@ -533,7 +540,7 @@ function WoWeuCN_Quests_OnLoad()
    WoWeuCN_Quests_ToggleButton2:SetScript("OnClick", WoWeuCN_Quests_ON_OFF);
 
    -- function called after clicking on the quest name in QuestTracker
-   hooksecurefunc(QUEST_TRACKER_MODULE, "OnBlockHeaderClick", WoWeuCN_Quests_PrepareReload);
+   --hooksecurefunc(QUEST_TRACKER_MODULE, "OnBlockHeaderClick", WoWeuCN_Quests_PrepareReload);
    
    -- Function called after clicking on the quest name in QuestMapFrame
    hooksecurefunc("QuestMapFrame_ShowQuestDetails", WoWeuCN_Quests_PrepareReload);
