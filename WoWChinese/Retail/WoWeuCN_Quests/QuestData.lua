@@ -1,5 +1,5 @@
-WoWeuCN_Quests_base = "10.2.7.54717";   -- version
-WoWeuCN_Quests_date = "2024-05-16"; -- date of creation base
+WoWeuCN_Quests_base = "11.0.0.55818";   -- version
+WoWeuCN_Quests_date = "2024-07-23"; -- date of creation base
 
 WoWeuCN_Quests_lang = "CN";      -- language
 
