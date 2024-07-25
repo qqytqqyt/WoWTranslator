@@ -17,7 +17,8 @@ namespace TextContentToolkit
         public QuestReader(QuestConfig questConfig)
         {
             m_dirPath = questConfig.JsonDirPath;
-            m_template = File.ReadAllText(questConfig.TemplatePath);
+            if (!string.IsNullOrEmpty(questConfig.TemplatePath))
+                m_template = File.ReadAllText(questConfig.TemplatePath);
             m_questConfig = questConfig;
         }
 
@@ -32,9 +33,29 @@ namespace TextContentToolkit
             foreach (var file in m_questConfig.FileMergeList)
             {
                 var lines = File.ReadAllLines(file);
-                foreach (var line in lines)
+                foreach (var line in lines.Where(l => l.StartsWith("[")))
                 {
                     var id = int.Parse(line.FirstBetween("[\"", "\"]"));
+
+                    if (isClassic && dic.ContainsKey(id))
+                    {
+                        var text = dic[id].FirstBetween("[\"Description\"]=\"", "\", [\"Progress\"]");
+                        var newText = line.FirstBetween("[\"Description\"]=\"", "\", [\"Progress\"]");
+                        var obj = dic[id].FirstBetween("[\"Objectives\"]=\"", "\", [\"Description\"]");
+                        var newOjb = line.FirstBetween("[\"Objectives\"]=\"", "\", [\"Description\"]");
+                        var title = dic[id].FirstBetween("[\"Objectives\"]=\"", "\", [\"Description\"]");
+                        var newTitle = line.FirstBetween("[\"Title\"]=\"", "\", [\"Objectives\"]");
+                        if (string.IsNullOrEmpty(text) && string.IsNullOrEmpty(newText) 
+                            && string.IsNullOrEmpty(obj) && string.IsNullOrEmpty(newOjb) 
+                            && string.IsNullOrEmpty(title) && string.IsNullOrEmpty(newTitle))
+                        {
+                            dic[id] = line.Replace("[\"Description\"]=\"" + newText + "\", [\"Progress\"]", "[\"Description\"]=\"" + text + "\", [\"Progress\"]")
+                                .Replace("[\"Objectives\"]=\"" + newOjb + "\", [\"Description\"]", "[\"Objectives\"]=\"" + obj + "\", [\"Description\"]")
+                                .Replace("[\"Title\"]=\"" + newTitle + "\", [\"Objectives\"]", "[\"Title\"]=\"" + title + "\", [\"Objectives\"]");
+
+                            continue;
+                        }
+                    }
 
                     dic[id] = line;
                 }
@@ -103,33 +124,32 @@ namespace TextContentToolkit
                 var inputPaths = new List<string>();
                 inputPaths.Add(fileInfo.FullName);
                 var locale = fileInfo.Name.Split('.')[0];
-                Execute(outputPath, VersionMode.Classic, OutputMode.Questie, locale);
+                Execute(outputPath, inputPaths, VersionMode.Classic, OutputMode.Questie, locale);
             }
         }
 
         public void Execute()
         {
-            Execute(m_questConfig.OutputPath, m_questConfig.VersionMode, m_questConfig.OutputMode);
+            Execute(m_questConfig.OutputPath, m_questConfig.VersionMode == VersionMode.Retail ? m_questConfig.QuestObjectiveListRetail : m_questConfig.QuestObjectiveListClassic, m_questConfig.VersionMode, m_questConfig.OutputMode);
             MergeOutputs(m_questConfig.VersionMode == VersionMode.Classic);
         }
 
-        private void Execute(string outputPath, VersionMode versionMode, OutputMode outputMode, string locale = "zhCN")
+        private void Execute(string outputPath, List<string> inputPaths, VersionMode versionMode, OutputMode outputMode, string locale = "zhCN")
         {
             var objectives = new List<QuestObjectives>();
             var apis = new List<QuestApi>();
             var cachedQuests = new List<Quest>();
 
+            foreach (var inputPath in inputPaths)
+            {
+                ReadObjectives(inputPath, objectives);
+            }
 
             if (versionMode == VersionMode.Retail)
             {
                 #region legacy
                 // ReadQuestApis(dirPath, apis);
                 #endregion
-
-                foreach (var inputPath in m_questConfig.QuestObjectiveListRetail)
-                {
-                    ReadObjectives(inputPath, objectives);
-                }
 
                 foreach (var inputPath in m_questConfig.QuestCacheListRetail)
                 {
@@ -139,11 +159,6 @@ namespace TextContentToolkit
 
             if (versionMode == VersionMode.Classic)
             {
-                foreach (var inputPath in m_questConfig.QuestObjectiveListClassic)
-                {
-                    ReadObjectives(inputPath, objectives);
-                }
-
                 foreach (var inputPath in m_questConfig.QuestCacheListClassic)
                 {
                     QuestCacheReader.ReadQuestCache(inputPath, cachedQuests);
@@ -215,15 +230,20 @@ namespace TextContentToolkit
             var sb = new StringBuilder();
             var filterPath = m_questConfig.QuestieFilterPath;
 
-            var lines = File.ReadAllLines(filterPath);
-            var validIds = new HashSet<string>();
-            foreach (var line in lines)
-            {
-                if (!line.Trim().StartsWith("["))
-                    continue;
+            var useFilter = !string.IsNullOrEmpty(filterPath);
 
-                var id = line.FirstBetween("[", "]");
-                validIds.Add(id);
+            var validIds = new HashSet<string>();
+            if (useFilter)
+            {
+                var lines = File.ReadAllLines(filterPath);
+                foreach (var line in lines)
+                {
+                    if (!line.Trim().StartsWith("["))
+                        continue;
+
+                    var id = line.FirstBetween("[", "]");
+                    validIds.Add(id);
+                }
             }
 
             var preText = @"---@type l10n
@@ -234,7 +254,8 @@ l10n.questLookup[""localeCode""] = { ";
             sb.AppendLine(preText);
             foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
             {
-                validIds.Remove(questObject.Id);
+                if (useFilter && !validIds.Contains(questObject.Id))
+                    validIds.Remove(questObject.Id);
 
                 sb.Append("[" + questObject.Id + "] = {");
                 sb.Append("\"" + questObject.Title.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") +
