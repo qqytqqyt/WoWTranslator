@@ -38,6 +38,8 @@ local WoWeuCN_Tooltips_waitFrame = nil;
 local WoWeuCN_Tooltips_waitTable = {};
 local WoWeuCN_Tooltips_Force = false
 
+local WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = nil;
+
 local check1 = {85,110,105,116,78,97,109,101}
 local check2 = {66,78,71,101,116,73,110,102,111}
 
@@ -52,6 +54,18 @@ local function Serialize(tbl)
       table.insert(t,v)
   end
   return table.concat(t)
+end
+
+local function UpdateEncounterJournalToggleButton()
+  if not WoWeuCN_Tooltips_ToggleEncounterJournalTranslation then
+    return
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Hide();
+  else
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Show();
+  end
 end
 
 function WoWeuCN_Tooltips_wait(delay, func, ...)
@@ -189,13 +203,13 @@ function WoWeuCN_Tooltips_SlashCommand(msg)
 end
 
 function WoWeuCN_Tooltips_SetCheckButtonState()
-  WoWeuCN_TooltipsCheckButton0:SetValue(WoWeuCN_Tooltips_N_PS["active"]=="1");
-  WoWeuCN_TooltipsCheckButton3:SetValue(WoWeuCN_Tooltips_N_PS["transspell"]=="1");
-  WoWeuCN_TooltipsCheckButton4:SetValue(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
-  WoWeuCN_TooltipsCheckButton5:SetValue(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
-  WoWeuCN_TooltipsCheckButton6:SetValue(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
-  WoWeuCN_TooltipsCheckButton7:SetValue(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
-  WoWeuCN_TooltipsCheckButton8:SetValue(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1");
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transspell"]=="1");
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -203,7 +217,12 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   local WoWeuCN_TooltipsOptions = CreateFrame("FRAME", "WoWeuCN_Tooltips_Options");
   WoWeuCN_TooltipsOptions.name = "WoWeuCN-Tooltips";
   WoWeuCN_TooltipsOptions.refresh = function (self) WoWeuCN_Tooltips_SetCheckButtonState() end;
-  InterfaceOptions_AddCategory(WoWeuCN_TooltipsOptions);
+  
+  if InterfaceOptions_AddCategory then
+    InterfaceOptions_AddCategory(WoWeuCN_TooltipsOptions)
+    elseif Settings and Settings.RegisterAddOnCategory and Settings.RegisterCanvasLayoutCategory then
+       Settings.RegisterAddOnCategory(select(1, Settings.RegisterCanvasLayoutCategory(WoWeuCN_TooltipsOptions, WoWeuCN_TooltipsOptions.name)));
+    end
 
   local WoWeuCN_TooltipsOptionsHeader = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
   WoWeuCN_TooltipsOptionsHeader:SetFontObject(GameFontNormalLarge);
@@ -211,7 +230,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2023");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2024");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -225,8 +244,8 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
-  
-  WoWeuCN_TooltipsCheckButton0.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1")
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
   WoWeuCN_TooltipsCheckButton0.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton0.Text:SetText(WoWeuCN_Tooltips_Interface.active);
 
@@ -241,42 +260,48 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   
   local WoWeuCN_TooltipsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton3", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -5);
-  WoWeuCN_TooltipsCheckButton3.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then WoWeuCN_Tooltips_N_PS["transspell"]="1" else WoWeuCN_Tooltips_N_PS["transspell"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transspell"]=="1")
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then WoWeuCN_Tooltips_N_PS["transspell"]="1" else WoWeuCN_Tooltips_N_PS["transspell"]="0" end; end);
   WoWeuCN_TooltipsCheckButton3.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton3:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton3.Text:SetText(WoWeuCN_Tooltips_Interface.transspell);
   
   local WoWeuCN_TooltipsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton4", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -35);
-  WoWeuCN_TooltipsCheckButton4.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then WoWeuCN_Tooltips_N_PS["transitem"]="1" else WoWeuCN_Tooltips_N_PS["transitem"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1")
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then WoWeuCN_Tooltips_N_PS["transitem"]="1" else WoWeuCN_Tooltips_N_PS["transitem"]="0" end; end);
   WoWeuCN_TooltipsCheckButton4.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton4:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton4.Text:SetText(WoWeuCN_Tooltips_Interface.transitem);
   
   local WoWeuCN_TooltipsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton5", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -65);
-  WoWeuCN_TooltipsCheckButton5.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transunit"]=="0") then WoWeuCN_Tooltips_N_PS["transunit"]="1" else WoWeuCN_Tooltips_N_PS["transunit"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1")
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transunit"]=="0") then WoWeuCN_Tooltips_N_PS["transunit"]="1" else WoWeuCN_Tooltips_N_PS["transunit"]="0" end; end);
   WoWeuCN_TooltipsCheckButton5.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton5:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton5.Text:SetText(WoWeuCN_Tooltips_Interface.transunit);
   
   local WoWeuCN_TooltipsCheckButton6 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton6", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -95);
-  WoWeuCN_TooltipsCheckButton6.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then WoWeuCN_Tooltips_N_PS["transachievement"]="1" else WoWeuCN_Tooltips_N_PS["transachievement"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1")
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then WoWeuCN_Tooltips_N_PS["transachievement"]="1" else WoWeuCN_Tooltips_N_PS["transachievement"]="0" end; end);
   WoWeuCN_TooltipsCheckButton6.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton6:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton6.Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
 
   local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -125);
-  WoWeuCN_TooltipsCheckButton7.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1")
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
   WoWeuCN_TooltipsCheckButton7.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton7:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton7.Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
   
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -155);
-  WoWeuCN_TooltipsCheckButton8.CheckBox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1")
+  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
@@ -325,6 +350,20 @@ end
 -- First function called after the add-in has been loaded
 function WoWeuCN_Tooltips_OnLoad()
    WoWeuCN_Tooltips = CreateFrame("Frame");
+      
+   local expInfo, _, _, _ = GetBuildInfo()
+   local exp, major, minor = strsplit(".", expInfo)
+   local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
+   local _, myMajor, myMinor = strsplit( ".", WoWeuCN_Tooltips_version)
+   if exp ~= myExp then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
+     return
+   end
+   if major ~= myMajor or minor ~= myMinor then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
+     return
+   end
+
    WoWeuCN_Tooltips:SetScript("OnEvent", WoWeuCN_Tooltips_OnEvent);
    WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
    
@@ -393,6 +432,7 @@ function WoWeuCN_Tooltips_OnLoad()
    loadAllItemData()
    loadAllUnitData()
    loadAllAchievementData()
+   loadEncounterData()
 end
 
 function split(s, delimiter)
@@ -856,6 +896,7 @@ local toyBoxHooked = false
 local mountJournalHooked = false
 local petJournalHooked = false
 local heirloomJournalHooked = false
+local encounterJournalHooked = false
 local reminded = false
 
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
@@ -928,6 +969,22 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     heirloomJournalHooked = true
   end
 
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not encounterJournalHooked and EncounterJournal) then  
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = CreateFrame("Button",nil, EncounterJournalEncounterFrame, "UIPanelButtonTemplate");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetWidth(80);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetHeight(23);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetText("译文切换");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:ClearAllPoints();
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetPoint("TOPLEFT", EncounterJournalEncounterFrame, "TOPLEFT", 340, -18);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetScript("OnClick", WoWeuCN_Tooltips_EncounterButton_On_Off);
+    WoWeuCN_Tooltips_TranslateEncounterJournal = true
+    UpdateEncounterJournalToggleButton();
+    hooksecurefunc("EncounterJournal_DisplayEncounter", function(...) OnEncounterJournalDisplay(...) end);
+    hooksecurefunc("EncounterJournal_ToggleHeaders", function(...) OnEncounterJournalToggle(...) end);
+    hooksecurefunc("EncounterJournal_SetDescriptionWithBullets", function(...) OnEncounterJournalOverview(...) end);
+    encounterJournalHooked = true
+  end
+
   if (event=="ADDON_LOADED" and name=="Plater") then
     if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
       Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
@@ -940,13 +997,6 @@ end
 function Broadcast()  
   WoWeuCN_Tooltips_PS = 1
   WoWeuCN_Quests_PS = 1
-  local expInfo, _, _, _ = GetBuildInfo()
-  local exp = split(expInfo, "%.")[1]
-  local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
-  if exp ~= myExp then
-    print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。r")
-    return
-  end
 
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);  
   

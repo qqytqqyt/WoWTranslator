@@ -1,6 +1,6 @@
-﻿## Interface: 100205
+﻿## Interface: 110000
 ## Title: WoWeuCN-Tooltips
-## Version: 10.2.5.0
+## Version: 11.0.0.0
 ## Notes_en: AddOn displays the translated information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
@@ -14,6 +14,7 @@ ItemData_cn.lua
 SpellData_cn.lua
 UnitData_cn.lua
 AchievementData_cn.lua
+EncounterData_cn.lua
 ChatFilter.lua
 AdvancedInterface.lua
 WoWeuCN_Tooltips.lua
