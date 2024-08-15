@@ -2,7 +2,7 @@
 -- Author: qqytqqyt
 
 -- Local variables
-local WoWeuCN_Tooltips_version = GetAddOnMetadata("WoWeuCN_Tooltips", "Version");
+local WoWeuCN_Tooltips_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Tooltips", "Version");
 local WoWeuCN_Tooltips_onDebug = false;   
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 
@@ -359,7 +359,7 @@ function WoWeuCN_Tooltips_OnLoad()
      print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
      return
    end
-   if major ~= myMajor or minor ~= myMinor then
+   if tonumber(major) > tonumber(myMajor) or tonumber(minor) > tonumber(myMinor) then
      print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
      return
    end
