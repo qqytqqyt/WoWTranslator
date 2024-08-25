@@ -760,7 +760,7 @@ function Broadcast()
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:SetScript("OnEvent", OnEvent)
 
-  local name,title,_,enabled = GetAddOnInfo('WoWeuCN_Tooltips')
+  local name,title,_,enabled = C_AddOns.GetAddOnInfo('WoWeuCN_Tooltips')
   if (title == nil) then
      local addonName = _G["GREEN_FONT_COLOR_CODE"] .. "Tooltips Translator - Chinese|r"
      print ("|cffffff00欢迎使用任务汉化插件。如需法术/道具等汉化请安装 " .. addonName .. " 翻译插件。|r");

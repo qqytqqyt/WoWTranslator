@@ -1017,7 +1017,7 @@ function Broadcast()
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:RegisterEvent("ADDON_LOADED")
   f:SetScript("OnEvent", OnEvent)
-  local name,title,_,enabled = GetAddOnInfo('WoWeuCN_Quests')
+  local name,title,_,enabled = C_AddOns.GetAddOnInfo('WoWeuCN_Quests')
   if (enabled == true) then
     return
   elseif (title == nil) then
