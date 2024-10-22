@@ -12,8 +12,9 @@ namespace TextContentToolkit.Readers
 {
     public static class QuestCacheReader
     {
-        public static void ReadQuestCache(string fileName, List<Quest> questObjects)
+        public static void ReadQuestCache(string fileName, List<Quest> questObjects, List<QuestObjectives> questObjectives)
         {
+            var idTitles = questObjectives.ToDictionary(item => item.Id, item => item.Title);
             var index = 0;
             long totalLength = 0;
             try
@@ -28,6 +29,7 @@ namespace TextContentToolkit.Readers
                         while (true)
                         {
                             index++;
+                            var expectedTitle = string.Empty;
                             Console.WriteLine(index);
                             if (index == 193)
                                 Console.Write(true);
@@ -36,6 +38,8 @@ namespace TextContentToolkit.Readers
                                 Console.Write(true);
                             if (id == 78752)
                                 Console.WriteLine(true);
+                            if (idTitles.ContainsKey(id.ToString()))
+                                expectedTitle = idTitles[id.ToString()];
 
                             var length = dbReader.ReadInt32();
                             var currentPosition = ms.Position;
@@ -52,12 +56,12 @@ namespace TextContentToolkit.Readers
                             dbReader.ReadByte(16);
 
                             dbReader.ReadByte(4);
-                            dbReader.ReadByte(4);
 
                             var numObjectives = dbReader.ReadInt32();
-                            dbReader.ReadByte(8);
-                            dbReader.ReadByte(8);
-                            dbReader.ReadByte(12);
+                            var check3 = dbReader.ReadByte(8);
+                            var check4 = dbReader.ReadByte(8);
+                            var check6 = dbReader.ReadByte(12);
+                            var check7 = dbReader.ReadByte(8);
 
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
@@ -82,6 +86,9 @@ namespace TextContentToolkit.Readers
                                     titleLength <<= 1;
                                     titleLength |= (lengthBytes[1] & 0x80) >> 7;
 
+                                    if (titleLength == 21)
+                                        Console.Write(true);
+
                                     var objectiveLength = 0;
                                     objectiveLength |= lengthBytes[1] & 0x7F;
                                     objectiveLength <<= 5;
@@ -94,8 +101,8 @@ namespace TextContentToolkit.Readers
                                     descriptionLength <<= 1;
                                     descriptionLength |= (lengthBytes[4] & 0x80) >> 7;
 
-                                    if (numObjectives > 1)
-                                        Console.Write(true);
+                                    //if (numObjectives > 1)
+                                    //    Console.Write(true);
 
                                     for (int i = 0; i < numObjectives; ++i)
                                     {
@@ -104,8 +111,8 @@ namespace TextContentToolkit.Readers
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(20);
                                         var numVisual = dbReader.ReadInt32();
-                                        if (numVisual != 0 && i > 0)
-                                            Console.Write(true);
+                                        //if (numVisual != 0 && i > 0)
+                                        //    Console.Write(true);
                                         for (int j = 0; j < numVisual; ++j)
                                             dbReader.ReadInt32();
                                         var objectiveDescriptionByte = dbReader.ReadByte();
@@ -117,12 +124,33 @@ namespace TextContentToolkit.Readers
                                         }
                                     }
 
+                                    //dbReader.ReadByte(13);
+                                    var tmpPos = ms.Position;
                                     var titleBytes = dbReader.ReadByte(titleLength);
                                     title = new string(Encoding.UTF8.GetChars(titleBytes));
+
+                                    int tempAttempt = 0;
+                                    while (titleLength == expectedTitle.Length * 3 && title != expectedTitle)
+                                    {
+                                        ms.Position = tmpPos;
+                                        dbReader.ReadByte();
+                                        tmpPos = ms.Position;
+                                        titleBytes = dbReader.ReadByte(titleLength);
+                                        title = new string(Encoding.UTF8.GetChars(titleBytes));
+                                        tempAttempt++;
+                                        if (title == "生活给了你螃蟹")
+                                            Console.WriteLine(true);
+                                    }
+
                                     var objectiveBytes = dbReader.ReadByte(objectiveLength);
                                     objective = new string(Encoding.UTF8.GetChars(objectiveBytes));
                                     var descriptionBytes = dbReader.ReadByte(descriptionLength);
                                     description = new string(Encoding.UTF8.GetChars(descriptionBytes));
+
+                                    if (!string.IsNullOrEmpty(expectedTitle) && expectedTitle != title || titleLength % 3 != 0)
+                                    {
+                                        title = string.Empty;
+                                    }
 
                                 }
                                 catch (Exception e)
@@ -234,8 +262,9 @@ namespace TextContentToolkit.Readers
             }
         }
 
-        public static void ReadQuestCacheRetail(string fileName, List<Quest> questObjects)
+        public static void ReadQuestCacheRetail(string fileName, List<Quest> questObjects, List<QuestObjectives> questObjectives)
         {
+            var idTitles = questObjectives.ToDictionary(item => item.Id, item => item.Title);
             var index = 0;
             var specialQuests = new List<int>();
             long totalLength = 0;
@@ -253,9 +282,13 @@ namespace TextContentToolkit.Readers
                         {
                             index++;
                             Console.WriteLine(index);
+                            var expectedTitle = string.Empty;
                             var id = dbReader.ReadInt32();
-                            if (id == 12022)
+                            if (id == 81514)
                                 Console.Write(true);
+                            if (idTitles.ContainsKey(id.ToString()))
+                                expectedTitle = idTitles[id.ToString()];
+                            
                             if (index == 307 || index == 6638)
                                 Console.Write(true);
                             var length = dbReader.ReadInt32();
@@ -280,15 +313,15 @@ namespace TextContentToolkit.Readers
                             var check6 = dbReader.ReadByte(12);
                             if (numObjectives > 1)
                             {
-                                Console.Write(true);
+                                //Console.Write(true);
                                 //dbReader.ReadByte((numObjectives - 1) * 6);
                             }
                             var attemptPosition = ms.Position;
-                            var attempCount = 1;
+                            var attempCount = 4;
                             var title = string.Empty;
                             var objective = string.Empty;
                             var description = string.Empty;
-
+                            dbReader.ReadByte(4);
                             while (true)
                             {
                                 var abort = false;
@@ -318,8 +351,8 @@ namespace TextContentToolkit.Readers
 
                                     //if (numObjectives > 2)
                                     //    Console.Write(true);
-                                    if (numObjectives > 1)
-                                        Console.Write(true);
+                                    //if (numObjectives > 1)
+                                    //    Console.Write(true);
 
                                     for (int i = 0; i < numObjectives; ++i)
                                     {
@@ -331,10 +364,10 @@ namespace TextContentToolkit.Readers
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(1);
                                         var numVisual = dbReader.ReadInt32();
-                                        if (numVisual != 0 && i > 0)
-                                            Console.Write(true);
-                                        if (numVisual < 0)
-                                            Console.Write(true);
+                                        //if (numVisual != 0 && i > 0)
+                                        //    Console.Write(true);
+                                        //if (numVisual < 0)
+                                        //    Console.Write(true);
                                         for (int j = 0; j < numVisual; ++j)
                                             dbReader.ReadInt32();
                                         var objectiveDescriptionByte = dbReader.ReadByte();
@@ -353,6 +386,11 @@ namespace TextContentToolkit.Readers
                                     var descriptionBytes = dbReader.ReadByte(descriptionLength);
                                     description = new string(Encoding.UTF8.GetChars(descriptionBytes));
 
+                                    if (!string.IsNullOrEmpty(expectedTitle) && expectedTitle != title || titleLength % 3 != 0)
+                                    {
+                                        title = string.Empty;
+                                    }
+
                                 }
                                 catch (Exception e)
                                 {
@@ -361,7 +399,7 @@ namespace TextContentToolkit.Readers
                                         break;
 
                                     dbReader.ReadByte(attempCount);
-                                    attempCount++;
+                                    attempCount += 4;
                                     continue;
                                 }
 
@@ -374,14 +412,17 @@ namespace TextContentToolkit.Readers
                                         break;
 
                                     dbReader.ReadByte(attempCount);
-                                    attempCount++;
+                                    attempCount += 4;
                                     continue;
                                 }
 
                                 if (title.Trim().Length != title.Length || objective.Trim().Length != objective.Length)
                                     Console.Write(true);
 
-                                Console.WriteLine("(" + attempCount + ")");
+                                if (attempCount > 4)
+                                    Console.Write(true);
+
+                                Console.WriteLine("(" + attempCount / 4 + ")");
                                 attempCount = 1;
                                 var quest = new Quest();
                                 quest.Id = id.ToString();

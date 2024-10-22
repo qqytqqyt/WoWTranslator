@@ -153,7 +153,7 @@ namespace TextContentToolkit
 
                 foreach (var inputPath in m_questConfig.QuestCacheListRetail)
                 {
-                    QuestCacheReader.ReadQuestCacheRetail(inputPath, cachedQuests);
+                    QuestCacheReader.ReadQuestCacheRetail(inputPath, cachedQuests, objectives);
                 }
             }
 
@@ -161,7 +161,7 @@ namespace TextContentToolkit
             {
                 foreach (var inputPath in m_questConfig.QuestCacheListClassic)
                 {
-                    QuestCacheReader.ReadQuestCache(inputPath, cachedQuests);
+                    QuestCacheReader.ReadQuestCache(inputPath, cachedQuests, objectives);
                 }
             }
            
@@ -323,6 +323,7 @@ l10n.questLookup[""localeCode""] = { ";
         private void WriteToWoWEuCN(string outputPath, List<Quest> questObjects)
         {
             var sb = new StringBuilder();
+            sb.AppendLine("WoWeuCN_Quests_QuestData = {");
             foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
             {
                 var line = PrintLine(questObject);
@@ -339,6 +340,7 @@ l10n.questLookup[""localeCode""] = { ";
                 //line = ReplacePlayer(line, questObject, sbQuestToCheck);
                 sb.AppendLine(line);
             }
+            sb.AppendLine("}");
             var finalText = sb.ToString();
             File.WriteAllText(outputPath, finalText);
         }
