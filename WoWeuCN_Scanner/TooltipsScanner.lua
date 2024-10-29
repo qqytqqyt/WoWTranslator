@@ -30,7 +30,6 @@ local function EnumerateTooltipStyledLines(tooltip) -- good for script handlers 
 end
 
 function WoWeuCN_Scanner_ScanClear()
-    WoWeuCN_Scanner_SpellToolIndex = 1;
     WoWeuCN_Scanner_SpellToolTips0 = {} 
     WoWeuCN_Scanner_SpellToolTips100000 = {} 
     WoWeuCN_Scanner_SpellToolTips200000 = {} 
@@ -39,15 +38,14 @@ function WoWeuCN_Scanner_ScanClear()
     WoWeuCN_Scanner_ItemToolTips0 = {} 
     WoWeuCN_Scanner_ItemToolTips100000 = {} 
     WoWeuCN_Scanner_ItemToolTips200000 = {} 
-    WoWeuCN_Scanner_ItemIndex = 1
     WoWeuCN_Scanner_UnitToolTips0 = {} 
     WoWeuCN_Scanner_UnitToolTips100000 = {} 
     WoWeuCN_Scanner_UnitToolTips200000 = {} 
-    WoWeuCN_Scanner_UnitIndex = 1
     WoWeuCN_Scanner_Achivements0 = {} 
-    WoWeuCN_Scanner_AchivementsIndex = 1
     WoWeuCN_Scanner_QuestToolTips = {}
-    WoWeuCN_Scanner_QuestIndex = 1
+    WoWeuCN_Scanner_EncounterSectionData = {}
+    WoWeuCN_Scanner_EncounterData = {}
+    WoWeuCN_Scanner_Index = 1
     print("Clear");
 end
 
