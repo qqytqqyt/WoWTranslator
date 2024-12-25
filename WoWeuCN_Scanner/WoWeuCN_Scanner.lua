@@ -2,7 +2,7 @@
 -- Author: qqytqqyt
 
 -- Local variables
-local WoWeuCN_Scanner_version = GetAddOnMetadata("WoWeuCN_Scanner", "Version");
+local WoWeuCN_Scanner_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Scanner", "Version");
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 
 -- commands
