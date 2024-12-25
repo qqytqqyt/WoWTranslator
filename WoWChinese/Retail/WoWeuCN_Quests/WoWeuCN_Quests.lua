@@ -3,7 +3,7 @@
 -- Credit to: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
 
 -- Local variables
-local WoWeuCN_Quests_version = GetAddOnMetadata("WoWeuCN_Quests", "Version");
+local WoWeuCN_Quests_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_onDebug = false;      
 local WoWeuCN_Quests_name = UnitName("player");
@@ -495,7 +495,7 @@ function WoWeuCN_Quests_OnLoad()
      print("|cffffff00WoWeuCN-Quests加载错误，请下载对应资料片版本的客户端。r")
      return
    end
-   if major ~= myMajor or minor ~= myMinor then
+   if tonumber(major) > tonumber(myMajor) or tonumber(minor) > tonumber(myMinor) then
      print("|cffffff00WoWeuCN-Quests加载错误，请下载最新版本。|r")
      return
    end
@@ -760,7 +760,7 @@ function Broadcast()
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:SetScript("OnEvent", OnEvent)
 
-  local name,title,_,enabled = GetAddOnInfo('WoWeuCN_Tooltips')
+  local name,title,_,enabled = C_AddOns.GetAddOnInfo('WoWeuCN_Tooltips')
   if (title == nil) then
      local addonName = _G["GREEN_FONT_COLOR_CODE"] .. "Tooltips Translator - Chinese|r"
      print ("|cffffff00欢迎使用任务汉化插件。如需法术/道具等汉化请安装 " .. addonName .. " 翻译插件。|r");
