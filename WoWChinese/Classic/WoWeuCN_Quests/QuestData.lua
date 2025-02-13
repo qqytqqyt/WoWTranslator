@@ -1,4 +1,4 @@
-WoWeuCN_Quests_date = "2025-01-02"; -- date of creation base
+WoWeuCN_Quests_date = "2025-02-09"; -- date of creation base
 
 WoWeuCN_Quests_lang = "CN";      -- language
 

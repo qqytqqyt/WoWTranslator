@@ -1,6 +1,6 @@
-﻿## Interface: 11505
+﻿## Interface: 11506
 ## Title: WoWeuCN-Quests
-## Version: Classic 1.15.5.1
+## Version: Classic 1.15.6.1
 ## Notes_en: AddOn displays the translated quest and NPC chat information in Chinese. Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
 ## Notes: AddOn displays the translated quest information in Chinese. 
 ## Author: qqytqqyt
