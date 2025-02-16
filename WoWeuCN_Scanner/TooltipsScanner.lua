@@ -35,6 +35,7 @@ function WoWeuCN_Scanner_ScanClear()
     WoWeuCN_Scanner_SpellToolTips200000 = {} 
     WoWeuCN_Scanner_SpellToolTips300000 = {}    
     WoWeuCN_Scanner_SpellToolTips400000 = {}       
+    WoWeuCN_Scanner_SpellToolTips500000 = {}       
     WoWeuCN_Scanner_ItemToolTips0 = {} 
     WoWeuCN_Scanner_ItemToolTips100000 = {} 
     WoWeuCN_Scanner_ItemToolTips200000 = {} 
@@ -64,6 +65,9 @@ function WoWeuCN_Scanner_ScanInit()
   end
   if (WoWeuCN_Scanner_SpellToolTips400000 == nil) then
   WoWeuCN_Scanner_SpellToolTips400000 = {} 
+  end
+  if (WoWeuCN_Scanner_SpellToolTips500000 == nil) then
+  WoWeuCN_Scanner_SpellToolTips500000 = {} 
   end
   if (WoWeuCN_Scanner_Index == nil) then
   WoWeuCN_Scanner_Index = 1
@@ -169,6 +173,10 @@ function WoWeuCN_Scanner_ScanSpellAuto(startIndex, attempt, counter)
         if (WoWeuCN_Scanner_SpellToolTips400000[i .. ''] == nil or string.len(WoWeuCN_Scanner_SpellToolTips400000[i .. '']) < string.len(text)) then
           WoWeuCN_Scanner_SpellToolTips400000[i .. ''] = text
         end
+      elseif (i >=500000 and i < 600000) then
+        if (WoWeuCN_Scanner_SpellToolTips500000[i .. ''] == nil or string.len(WoWeuCN_Scanner_SpellToolTips500000[i .. '']) < string.len(text)) then
+          WoWeuCN_Scanner_SpellToolTips500000[i .. ''] = text
+        end
       end
       print(i)
     end
@@ -269,7 +277,7 @@ function WoWeuCN_Scanner_ScanItemAuto(startIndex, attempt, counter)
 end
 
 function WoWeuCN_Scanner_ScanAchivementAuto(startIndex, attempt, counter)
-  if (startIndex > 30000) then
+  if (startIndex > 60000) then
     return;
   end
   for i = startIndex, startIndex + 150 do
@@ -311,7 +319,7 @@ local function EnumerateTooltipStyledLines_new(tooltipData)
 end
 
 function WoWeuCN_Scanner_ScanQuestAuto(startIndex, attempt, counter)
-  if (startIndex > 90000) then
+  if (startIndex > 100000) then
     return;
   end
   for i = startIndex, startIndex + 100 do
@@ -388,7 +396,7 @@ function WoWeuCN_Scanner_ScanEncounterSectionAuto(startIndex, attempt, counter)
 end
 
 function WoWeuCN_Scanner_ScanCacheAuto(startIndex, attempt, counter)
-  if (startIndex > 90000) then
+  if (startIndex > 100000) then
     return;
   end
   if (counter == 0) then
