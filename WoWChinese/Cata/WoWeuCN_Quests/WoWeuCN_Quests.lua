@@ -485,9 +485,9 @@ function WoWeuCN_Quests_OnLoad()
    if exp ~= myExp then
      print("|cffffff00WoWeuCN-Quests加载错误，请下载对应资料片版本的客户端。r")
      return
-   end
-   if tonumber(major) > tonumber(myMajor) or tonumber(minor) > tonumber(myMinor) then
-     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
+   end      
+   if (tonumber(major) * 100 + tonumber(minor)) > (tonumber(myMajor) * 100 + tonumber(myMinor)) then
+     print("|cffffff00WoWeuCN-Quests加载错误，请下载最新版本。|r")
      return
    end
 
