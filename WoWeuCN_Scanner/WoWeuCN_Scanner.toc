@@ -1,15 +1,15 @@
-﻿## Interface: 100002
-## Interface-Classic: 11403
+﻿## Interface: 110107
+## Interface-Classic: 11507
 ## Interface-Wrath: 30401
 
 ## Title: WoWeuCN-Scanner
-## Version: 1.0.0.1
+## Version: 1.0.0.2
 ## Notes_en: Data scanner
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## SavedVariables: WoWeuCN_Scanner_PS, WoWeuCN_Scanner_SpellToolTips0, WoWeuCN_Scanner_SpellToolTips100000, WoWeuCN_Scanner_SpellToolTips200000, WoWeuCN_Scanner_SpellToolTips300000, WoWeuCN_Scanner_SpellToolTips400000, WoWeuCN_Scanner_Index, WoWeuCN_Scanner_ItemToolTips0, WoWeuCN_Scanner_ItemToolTips100000, WoWeuCN_Scanner_ItemToolTips200000, WoWeuCN_Scanner_UnitToolTips0, WoWeuCN_Scanner_UnitToolTips100000, WoWeuCN_Scanner_UnitToolTips200000, WoWeuCN_Scanner_Achivements0, WoWeuCN_Scanner_QuestToolTips, WoWeuCN_Scanner_EncounterData, WoWeuCN_Scanner_EncounterSectionData
+## SavedVariables: WoWeuCN_Scanner_PS, WoWeuCN_Scanner_SpellToolTips0, WoWeuCN_Scanner_SpellToolTips100000, WoWeuCN_Scanner_SpellToolTips200000, WoWeuCN_Scanner_SpellToolTips300000, WoWeuCN_Scanner_SpellToolTips400000, WoWeuCN_Scanner_SpellToolTips500000, WoWeuCN_Scanner_Index, WoWeuCN_Scanner_ItemToolTips0, WoWeuCN_Scanner_ItemToolTips100000, WoWeuCN_Scanner_ItemToolTips200000, WoWeuCN_Scanner_UnitToolTips0, WoWeuCN_Scanner_UnitToolTips100000, WoWeuCN_Scanner_UnitToolTips200000, WoWeuCN_Scanner_Achivements0, WoWeuCN_Scanner_QuestToolTips, WoWeuCN_Scanner_EncounterData, WoWeuCN_Scanner_EncounterSectionData
 ## SavedVariablesPerCharacter: WoWeuCN_Scanner_PC
 
 TooltipsScanner.lua

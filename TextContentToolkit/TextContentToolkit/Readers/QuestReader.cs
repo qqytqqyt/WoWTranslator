@@ -62,7 +62,9 @@ namespace TextContentToolkit
             }
 
 
-            var list = dic.OrderBy(l => l.Key).Select(d => d.Value);
+            var list = dic.OrderBy(l => l.Key).Select(d => d.Value).ToList();
+            list.Insert(0, "WoWeuCN_Quests_QuestData = {");
+            list.Add("}");
             File.WriteAllLines(m_questConfig.OutputPath, list);
         }
         
