@@ -154,6 +154,9 @@ local function loadAllSpellData()
   loadSpellData200000();
   loadSpellData300000();
   loadSpellData400000();
+  if loadSpellData500000 then
+    loadSpellData500000();
+  end
 end
 
 local function loadAllUnitData()
@@ -230,7 +233,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2024");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2025");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -359,7 +362,7 @@ function WoWeuCN_Tooltips_OnLoad()
      print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
      return
    end
-   if tonumber(major) > tonumber(myMajor) or tonumber(minor) > tonumber(myMinor) then
+   if (tonumber(major) * 100 + tonumber(minor)) > (tonumber(myMajor) * 100 + tonumber(myMinor)) then
      print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
      return
    end
@@ -795,6 +798,8 @@ function GetSpellData(id)
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
   elseif (num_id >= 400000 and num_id < 500000) then
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_400000[num_id - 400000]
+  elseif (num_id >= 500000 and num_id < 600000) then
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_500000[num_id - 500000]
   end
 
   if (dataIndex == nil) then
@@ -812,6 +817,8 @@ function GetSpellData(id)
     spellData = split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
   elseif (num_id >= 400000 and num_id < 500000) then
     spellData = split(WoWeuCN_Tooltips_SpellData_400000[dataIndex], '£')
+  elseif (num_id >= 500000 and num_id < 600000) then
+    spellData = split(WoWeuCN_Tooltips_SpellData_500000[dataIndex], '£')
   end
 
   if ( spellData ) then
