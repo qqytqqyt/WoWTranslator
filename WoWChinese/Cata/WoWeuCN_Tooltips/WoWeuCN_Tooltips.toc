@@ -1,6 +1,6 @@
 ﻿## Interface: 40402
 ## Title: WoWeuCN-Tooltips
-## Version: Cataclysm 4.4.2.0
+## Version: Cataclysm 4.4.2.1
 ## Notes_en: AddOn displays the translated information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com

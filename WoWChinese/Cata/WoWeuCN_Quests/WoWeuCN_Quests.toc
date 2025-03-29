@@ -1,6 +1,6 @@
 ﻿## Interface: 40402
 ## Title: WoWeuCN-Quests
-## Version: Cataclysm 4.4.2.0
+## Version: Cataclysm 4.4.2.1
 ## Notes_en: AddOn displays the translated quest and NPC chat information in Chinese. Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
 ## Notes: AddOn displays the translated quest information in Chinese. 
 ## Author: qqytqqyt
