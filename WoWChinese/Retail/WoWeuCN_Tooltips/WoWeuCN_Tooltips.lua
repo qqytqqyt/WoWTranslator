@@ -1005,7 +1005,7 @@ function Broadcast()
   WoWeuCN_Tooltips_PS = 1
   WoWeuCN_Quests_PS = 1
 
-  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);  
+  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded.." - |cffa335ee作者："..WoWeuCN_Quests_Messages.author.."|r");
   
   if (WoWeuCN_Tooltips_N_PS["transnameplate"]~="0") then
     print ("|cffffff00已加入姓名版翻译功能。如需使用请安装<Plater>姓名版插件并开启对应单位血条(V/Ctrl+V/Shift+V)，相关数据会自动导入进Plater中。如需完全关闭请于插件设置里禁用。|r");
