@@ -1,6 +1,6 @@
-﻿## Interface: 110105
+﻿## Interface: 110107
 ## Title: WoWeuCN-Quests
-## Version: 11.1.5.1
+## Version: 11.1.7.0
 ## Notes_en: AddOn displays the translated quest informations in Chinese.
 ## Notes: Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
 ## Author: qqytqqyt
