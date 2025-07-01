@@ -143,6 +143,9 @@ local function loadAllSpellData()
   if loadSpellData400000 then
     loadSpellData400000();
   end
+  if loadSpellData500000 then
+    loadSpellData500000();
+  end
 end
 
 local function loadAllUnitData()
@@ -223,7 +226,6 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
   WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2025");
-  WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
   WoWeuCN_TooltipsPlayer:SetFontObject(GameFontNormalLarge);
@@ -232,7 +234,6 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsPlayer:ClearAllPoints();
   WoWeuCN_TooltipsPlayer:SetPoint("TOPRIGHT", WoWeuCN_TooltipsOptionsHeader, "TOPRIGHT", 0, -22);
   WoWeuCN_TooltipsPlayer:SetText("作者 : "..WoWeuCN_Tooltips_Messages.author);
-  WoWeuCN_TooltipsPlayer:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
@@ -295,9 +296,10 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
-  WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
+  WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transplaternameplate);
 
   local WoWeuCN_TooltipsCheckButton9 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton9", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton9:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -185);
   WoWeuCN_TooltipsCheckButton9.Checkbox:SetChecked("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
   WoWeuCN_TooltipsCheckButton9.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton9:SetSize(850, 21)
@@ -326,8 +328,23 @@ local function StringHash(text)
 end
 
 -- First function called after the add-in has been loaded
-function WoWeuCN_Tooltips_OnLoad()
+function WoWeuCN_Tooltips_OnLoad()  
    WoWeuCN_Tooltips = CreateFrame("Frame");
+
+   local expInfo, _, _, _ = GetBuildInfo()
+   local exp, major, minor = strsplit(".", expInfo)
+   local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
+   local _, myMajor, myMinor = strsplit( ".", WoWeuCN_Tooltips_version)
+   
+   if exp ~= myExp then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
+     return
+   end
+   if (tonumber(major) * 100 + tonumber(minor)) > (tonumber(myMajor) * 100 + tonumber(myMinor)) then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
+     return
+   end
+  
    WoWeuCN_Tooltips:SetScript("OnEvent", WoWeuCN_Tooltips_OnEvent);
    WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
    
@@ -726,6 +743,8 @@ function GetSpellData(id)
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
   elseif (num_id >= 400000 and num_id < 500000) then
     dataIndex = WoWeuCN_Tooltips_SpellIndexData_400000[num_id - 400000]
+  elseif (num_id >= 500000 and num_id < 600000) then
+    dataIndex = WoWeuCN_Tooltips_SpellIndexData_500000[num_id - 500000]
   end
 
   if (dataIndex == nil) then
@@ -743,6 +762,8 @@ function GetSpellData(id)
     spellData = split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
   elseif (num_id >= 400000 and num_id < 500000) then
     spellData = split(WoWeuCN_Tooltips_SpellData_400000[dataIndex], '£')
+  elseif (num_id >= 500000 and num_id < 600000) then
+    spellData = split(WoWeuCN_Tooltips_SpellData_500000[dataIndex], '£')
   end
 
   if ( spellData ) then
@@ -927,14 +948,6 @@ end
 function Broadcast()
   WoWeuCN_Tooltips_PS = 1
   WoWeuCN_Quests_PS = 1
-  
-  local expInfo, _, _, _ = GetBuildInfo()
-  local exp = split(expInfo, "%.")[1]
-  local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
-  if exp ~= myExp then
-    print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
-    return
-  end
   
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded);
   

@@ -407,31 +407,30 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsCheckButton0.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["active"]=="1");
   WoWeuCN_QuestsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["active"]=="1") then WoWeuCN_Quests_N_PS["active"]="0" else if WoWeuCN_Quests_Force then return end WoWeuCN_Quests_N_PS["active"]="1" end; end);
   WoWeuCN_QuestsCheckButton0.Text:SetFont(WoWeuCN_Quests_Font2, 13);
-  WoWeuCN_QuestsCheckButton0:SetSize(500, 21)
   WoWeuCN_QuestsCheckButton0.Text:SetText(WoWeuCN_Quests_Interface.active);
   
   local WoWeuCN_QuestsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton3", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_QuestsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -5);
   WoWeuCN_QuestsCheckButton3.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtitle"]=="1");
   WoWeuCN_QuestsCheckButton3.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transtitle"]=="0") then WoWeuCN_Quests_N_PS["transtitle"]="1" else WoWeuCN_Quests_N_PS["transtitle"]="0" end; end);
-  WoWeuCN_QuestsCheckButton3.Text:SetFont(WoWeuCN_Quests_Font2, 13);
-  WoWeuCN_QuestsCheckButton3:SetSize(500, 21)
+  WoWeuCN_QuestsCheckButton3.Text:SetFont(WoWeuCN_Quests_Font2, 13);  
+  WoWeuCN_QuestsCheckButton3:SetSize(850, 21)
   WoWeuCN_QuestsCheckButton3.Text:SetText(WoWeuCN_Quests_Interface.transtitle);
 
   local WoWeuCN_QuestsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton4", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
-  WoWeuCN_QuestsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -25);
+  WoWeuCN_QuestsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -35);
   WoWeuCN_QuestsCheckButton4.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transchat"]=="1");
   WoWeuCN_QuestsCheckButton4.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transchat"]=="0") then WoWeuCN_Quests_N_PS["transchat"]="1" else WoWeuCN_Quests_N_PS["transchat"]="0" end; end);
   WoWeuCN_QuestsCheckButton4.Text:SetFont(WoWeuCN_Quests_Font2, 13);
-  WoWeuCN_QuestsCheckButton4:SetSize(500, 21)
+  WoWeuCN_QuestsCheckButton4:SetSize(850, 21)
   WoWeuCN_QuestsCheckButton4.Text:SetText(WoWeuCN_Quests_Interface.transchat);
 
   local WoWeuCN_QuestsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton5", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
-  WoWeuCN_QuestsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -45);
+  WoWeuCN_QuestsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -65);
   WoWeuCN_QuestsCheckButton5.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["overwritefonts"]=="1");
   WoWeuCN_QuestsCheckButton5.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["overwritefonts"]=="0") then WoWeuCN_Quests_N_PS["overwritefonts"]="1" else WoWeuCN_Quests_N_PS["overwritefonts"]="0" end; end);
   WoWeuCN_QuestsCheckButton5.Text:SetFont(WoWeuCN_Quests_Font2, 13);
-  WoWeuCN_QuestsCheckButton5:SetSize(500, 21)
+  WoWeuCN_QuestsCheckButton5:SetSize(850, 21)
   WoWeuCN_QuestsCheckButton5.Text:SetText(WoWeuCN_Quests_Interface.overwritefonts);
 end
 
@@ -477,7 +476,7 @@ function WoWeuCN_Quests_OnLoad()
      print("|cffffff00WoWeuCN-Quests加载错误，请下载对应资料片版本的客户端。r")
      return
    end
-   if tonumber(major) > tonumber(myMajor) or tonumber(minor) > tonumber(myMinor) then
+   if (tonumber(major) * 100 + tonumber(minor)) > (tonumber(myMajor) * 100 + tonumber(myMinor)) then
      print("|cffffff00WoWeuCN-Quests加载错误，请下载最新版本。|r")
      return
    end
