@@ -1,5 +1,5 @@
-﻿WoWeuCN_Tooltips_base = "4.4.2.59121";   -- version
-WoWeuCN_Tooltips_date = "2025-02-15"; -- date of creation base
+﻿WoWeuCN_Tooltips_base = "5.5.0.61632";   -- version
+WoWeuCN_Tooltips_date = "2025-06-26"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
@@ -9,7 +9,7 @@ WoWeuCN_Tooltips_Messages = {
     loaded     = "加载完成", 
     isactive   = "已启用", 
     isinactive = "未启用", 
-    author     = "Earthshaker (EU classic) - Nekomio",
+    author     = "Firemaw (EU classic) - Nekomio",
  }; 
  
 WoWeuCN_Tooltips_Interface = { 
@@ -20,7 +20,7 @@ WoWeuCN_Tooltips_Interface = {
     transunit  = "翻译NPC提示",
     transachievement = "翻译成就面板",
     transadvanced = "高级翻译模式（拾取/商人/法术书/地下城手册界面等）",
-    transplaternameplate = "翻译血条姓名版（需安装Plater插件，/reload后完全生效）",
+    transplaternameplate = "翻译姓名版（需安装Plater插件，/reload后完全生效）",
     overwritefonts = "使用内置字体（/reload后完全生效）"
  }; 
 
