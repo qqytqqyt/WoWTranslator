@@ -234,7 +234,7 @@ function WoWeuCN_Scanner_ScanItemAuto(startIndex, attempt, counter)
     return;
   end
   for i = startIndex, startIndex + 150 do
-    local itemType, itemSubType, _, _, _, _, classID, subclassID = select(6, GetItemInfo(i))
+    local itemType, itemSubType, _, _, _, _, classID, subclassID = select(6, C_Item.GetItemInfo(i))
     if (classID~=nil) then
       qcInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
       qcInformationTooltip:ClearLines()
