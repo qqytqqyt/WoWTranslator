@@ -1,0 +1,21 @@
+﻿## Interface: 50501
+## X-Min-Interface: 50500
+
+## Title: Native Links
+## Version: 5.5.1.2
+## Notes_en: Put links in English while you are using a World of Warcraft client in a different language. Also display the English name in tooltips.
+## Author: qqytqqyt
+## eMail: ytong007@hotmail.com
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: NativeLinks_PS
+## SavedVariablesPerCharacter: NativeLinks_PC
+
+ItemData_en.lua
+SpellData_en.lua
+UnitData_en.lua
+AchievementData_en.lua
+Variables.lua
+ChatFilter.lua
+NativeLinks.lua
+NativeLinks.xml
