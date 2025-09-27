@@ -2,6 +2,22 @@
 local WoWeuCN_Scanner_waitFrame = nil;
 local WoWeuCN_Scanner_waitTable = {};
 
+local function EnumerateTooltipStyledFirstLines_helper(...)
+  local texts = '';
+    for i = 1, select("#", ...) do
+      local region = select(i, ...)
+      if region and region:GetObjectType() == "FontString" then
+        local text = region:GetText() -- string or nil
+        if (text ~= nil) then
+          if (text ~= " ") then
+              return text
+            end
+        end
+      end
+	end
+	return texts
+end
+
 local function EnumerateTooltipStyledLines_helper(...)
   local texts = '';
   local hasObjectivesSet = false
@@ -25,6 +41,10 @@ local function EnumerateTooltipStyledLines_helper(...)
 	return texts
 end
 
+local function EnumerateTooltipStyledFirstLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
+  return EnumerateTooltipStyledFirstLines_helper(tooltip:GetRegions())
+end
+
 local function EnumerateTooltipStyledLines(tooltip) -- good for script handlers that pass the tooltip as the first argument.
   return EnumerateTooltipStyledLines_helper(tooltip:GetRegions())
 end
@@ -46,6 +66,10 @@ function WoWeuCN_Scanner_ScanClear()
     WoWeuCN_Scanner_QuestToolTips = {}
     WoWeuCN_Scanner_EncounterSectionData = {}
     WoWeuCN_Scanner_EncounterData = {}
+    WoWeuCN_Scanner_ItemNameData = {}
+    WoWeuCN_Scanner_SpellNameData = {}
+    WoWeuCN_Scanner_AchivementNameData = {}
+    WoWeuCN_Scanner_UnitNameData = {}
     WoWeuCN_Scanner_Index = 1
     print("Clear");
 end
@@ -73,6 +97,18 @@ function WoWeuCN_Scanner_ScanInit()
   WoWeuCN_Scanner_Index = 1
   end
 
+  if (WoWeuCN_Scanner_ItemNameData == nil) then
+  WoWeuCN_Scanner_ItemNameData = {}
+  end
+  if (WoWeuCN_Scanner_SpellNameData == nil) then 
+  WoWeuCN_Scanner_SpellNameData = {}
+  end
+  if (WoWeuCN_Scanner_AchivementNameData == nil) then
+  WoWeuCN_Scanner_AchivementNameData = {}
+  end
+  if (WoWeuCN_Scanner_UnitNameData == nil) then
+  WoWeuCN_Scanner_UnitNameData = {}
+  end
   if (WoWeuCN_Scanner_UnitToolTips0 == nil) then
   WoWeuCN_Scanner_UnitToolTips0 = {} 
   end
@@ -143,7 +179,7 @@ function WoWeuCN_Scanner_wait(delay, func, ...)
 end
 
 function WoWeuCN_Scanner_ScanSpellAuto(startIndex, attempt, counter)
-  if (startIndex > 500000) then
+  if (startIndex > 600000) then
     return;
   end
   for i = startIndex, startIndex + 150 do
@@ -229,6 +265,96 @@ function WoWeuCN_Scanner_ScanUnitAuto(startIndex, attempt, counter)
   end
 end
 
+function WoWeuCN_Scanner_ScanItemNameAuto(startIndex, attempt, counter)
+  if (startIndex > 300000) then
+    return;
+  end
+  for i = startIndex, startIndex + 150 do
+    local itemName = C_Item.GetItemInfo(i)
+    if (itemName~=nil) then
+      WoWeuCN_Scanner_ItemNameData['' .. i] = itemName
+      print(i .. ' : ' .. itemName)
+    end
+  end
+  
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
+  if (counter >= 3) then
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanItemNameAuto, startIndex + 150, attempt + 1, 0)
+  else
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanItemNameAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
+function WoWeuCN_Scanner_ScanSpellNameAuto(startIndex, attempt, counter)
+  if (startIndex > 500000) then
+    return;
+  end
+  for i = startIndex, startIndex + 150 do
+    local spellInfo = C_Spell.GetSpellInfo(i)
+    if (spellInfo~=nil and spellInfo.name~=nil) then
+      WoWeuCN_Scanner_SpellNameData['' .. i] = spellInfo.name
+      print(i .. ' : ' .. spellInfo.name)
+    end
+  end
+  
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
+  if (counter >= 3) then
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanSpellNameAuto, startIndex + 150, attempt + 1, 0)
+  else
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanSpellNameAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
+function WoWeuCN_Scanner_ScanAchievementNameAuto(startIndex, attempt, counter)
+  if (startIndex > 100000) then
+    return;
+  end
+  for i = startIndex, startIndex + 150 do
+    local id,name = GetAchievementInfo(i)
+    if (name~=nil) then
+      WoWeuCN_Scanner_AchivementNameData['' .. i] = name
+      print(i .. ' : ' .. name)
+    end
+  end
+  
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
+  if (counter >= 3) then
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanAchievementNameAuto, startIndex + 150, attempt + 1, 0)
+  else
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanAchievementNameAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
+function WoWeuCN_Scanner_ScanUnitNameAuto(startIndex, attempt, counter)
+  if (startIndex > 300000) then
+    return;
+  end
+  for i = startIndex, startIndex + 150 do
+    local npcID = tonumber(i)
+    qcInformationTooltip:SetOwner(UIParent, "ANCHOR_NONE")
+    qcInformationTooltip:ClearLines()
+    local guid = "Creature-0-0-0-0-"..i.."-0000000000";
+    qcInformationTooltip:SetHyperlink('unit:' .. guid)
+    qcInformationTooltip:Show()
+    local text = EnumerateTooltipStyledFirstLines(qcInformationTooltip)
+    if (text ~= nil and text ~= " " and text ~= "") then
+      WoWeuCN_Scanner_UnitNameData['' .. i] = text
+      print(i .. ' : ' .. text)
+    end
+  end
+  
+  print('index ' .. startIndex)
+  WoWeuCN_Scanner_Index = startIndex
+  if (counter >= 3) then
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanUnitNameAuto, startIndex + 150, attempt + 1, 0)
+  else
+    WoWeuCN_Scanner_wait(0.2, WoWeuCN_Scanner_ScanUnitNameAuto, startIndex, attempt + 1, counter + 1)
+  end
+end
+
 function WoWeuCN_Scanner_ScanItemAuto(startIndex, attempt, counter)
   if (startIndex > 300000) then
     return;
@@ -277,7 +403,7 @@ function WoWeuCN_Scanner_ScanItemAuto(startIndex, attempt, counter)
 end
 
 function WoWeuCN_Scanner_ScanAchivementAuto(startIndex, attempt, counter)
-  if (startIndex > 60000) then
+  if (startIndex > 80000) then
     return;
   end
   for i = startIndex, startIndex + 150 do

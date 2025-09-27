@@ -30,6 +30,25 @@ function WoWeuCN_Scanner_SlashCommand(msg)
       WoWeuCN_Scanner_ScanInit()
       WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanItemAuto, WoWeuCN_Scanner_Index, 1, 0)
 
+    -- item name auto scan
+    elseif (msg=="itemnamescanauto" or msg=="ITEMNAMESCANAUTO") then      
+      WoWeuCN_Scanner_ScanInit()
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanItemNameAuto, WoWeuCN_Scanner_Index, 1, 0)
+
+    -- spell name auto scan
+    elseif (msg=="spellnamescanauto" or msg=="SPELLNAMESCANAUTO") then      
+      WoWeuCN_Scanner_ScanInit()
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanSpellNameAuto, WoWeuCN_Scanner_Index, 1, 0)
+
+    -- achievement name auto scan
+    elseif (msg=="achievementnamescanauto" or msg=="ACHIEVEMENTNAMESCANAUTO") then      
+      WoWeuCN_Scanner_ScanInit()
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanAchievementNameAuto, WoWeuCN_Scanner_Index, 1, 0)
+
+    elseif (msg=="unitnamescanauto" or msg=="UNITNAMESCANAUTO") then      
+      WoWeuCN_Scanner_ScanInit()
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanUnitNameAuto, WoWeuCN_Scanner_Index, 1, 0)
+
     -- achivement auto scan
     elseif (msg=="achievescanauto" or msg=="ACHIVESCANAUTO") then      
       WoWeuCN_Scanner_ScanInit()
