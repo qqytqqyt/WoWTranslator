@@ -28,10 +28,6 @@ local SUPPORTED = {
 local function RewriteItemLinkText(link)
   if not link or not NativeLinks_PS["active"] == "1" then return link end
 
-  local _, itemID, enchant, gem1, gem2, gem3, gem4, suffixID = strsplit(":", link)
-  if suffixID ~= nil and suffixID ~= "" and suffixId ~= "0" then
-    return link -- don't rewrite random-suffix items
-  end
 
   local prefix, display, suffix = link:match("^(.-|h)%[(.-)%](|h.*)$")
   if not prefix then return link end
@@ -44,7 +40,11 @@ local function RewriteItemLinkText(link)
   local id = ExtractID(prefix, linkType)
   local newName
 
-  if linkType == "item" and id and NativeLinks_ItemNameData[id] and NativeLinks_ItemNameData[id] ~= "" then
+  if linkType == "item" and id and NativeLinks_ItemNameData[id] and NativeLinks_ItemNameData[id] ~= "" then   
+    local _, itemID, enchant, gem1, gem2, gem3, gem4, suffixID = strsplit(":", link)
+    if suffixID ~= nil and suffixID ~= "" and suffixId ~= "0" then
+      return link -- don't rewrite random-suffix items
+    end
     newName = NativeLinks_ItemNameData[id]
   elseif linkType == "spell" and id and NativeLinks_SpellNameData[id] and NativeLinks_SpellNameData[id] ~= "" then
     newName = NativeLinks_SpellNameData[id]
