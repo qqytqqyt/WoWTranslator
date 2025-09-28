@@ -4,7 +4,7 @@ local function regexEscape(str)
     return str:gsub("[%(%)%.%%%+%-%*%?%[%^%$%]]", "%%%1")
 end
 
-ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...)
+local ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...)
     if (NativeLinks_PS["active"]=="0") then
         return
     end
@@ -101,12 +101,10 @@ function RegisterChatFilterEvents() -- todo: register immediately and cache call
 
     -- Whisper
     ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER", ChatFilter)
-    ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER_INFORM", ChatFilter)
 
     -- Battle Net
     ChatFrame_AddMessageEventFilter("CHAT_MSG_BN", ChatFilter)
     ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER", ChatFilter)
-    ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER_INFORM", ChatFilter)
 
     -- Open world
     ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL", ChatFilter)

@@ -116,7 +116,7 @@ local SUPPORTED = {
 
 -- Build a new link with a swapped display name, if configured
 local function RewriteItemLinkText(link)
-  if not link or not NativeLinks_PS["active"] == "1" then return link end
+  if not link or not NativeLinks_PS["active"] == "1" or IsAltKeyDown() then return link end
 
 
   local prefix, display, suffix = link:match("^(.-|h)%[(.-)%](|h.*)$")
