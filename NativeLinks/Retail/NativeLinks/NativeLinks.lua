@@ -102,6 +102,9 @@ local function ExtractID(prefix, linkType)
   elseif linkType == "spell" then
     -- Spell links can be |Hspell:<id>|h or |Hspell:<id>:<subid>...
     return prefix:match("|Hspell:(%d+):?")
+  elseif linkType == "enchant" then
+    -- Spell links can be |Hspell:<id>|h or |Hspell:<id>:<subid>...
+    return prefix:match("|Henchant:(%d+):?")
   elseif linkType == "achievement" then
     -- Achievements: |Hachievement:<id>:<guid stuff>...
     return prefix:match("|Hachievement:(%d+):")
@@ -112,14 +115,18 @@ local SUPPORTED = {
   item = true,
   spell = true,
   achievement = true,
+  enchant = true,
 }
 
 -- Build a new link with a swapped display name, if configured
 local function RewriteItemLinkText(link)
   if not link or not NativeLinks_PS["active"] == "1" or IsAltKeyDown() then return link end
 
+  local prefix, display, bracketFlag, suffix = link:match("^(.-|h)%[([^|%]]*)|A([^%]]*)%](|h.*)$")
+  if not bracketFlag then
+    prefix, display, suffix = link:match("^(.-|h)%[(.-)%](|h.*)$")
+  end
 
-  local prefix, display, suffix = link:match("^(.-|h)%[(.-)%](|h.*)$")
   if not prefix then return link end
 
   local linkType = prefix:match("|H([^:]+):")
@@ -136,7 +143,7 @@ local function RewriteItemLinkText(link)
       return link -- don't rewrite random-suffix items
     end
     newName = GetItemName(id)
-  elseif linkType == "spell" and id then
+  elseif (linkType == "spell" or linkType == "enchant") and id then
     newName = GetSpellName(id)
   elseif linkType == "achievement" and id then
     newName = GetAchievementName(id)
@@ -144,7 +151,12 @@ local function RewriteItemLinkText(link)
 
   if newName then
     newName = newName:gsub("[%[%]]", "") -- keep brackets sane
-    return prefix .. "[" .. newName .. "]" .. suffix
+    if bracketFlag then
+      return prefix .. "[" .. newName .. " |A" .. bracketFlag .. "]" .. suffix
+    else
+      return prefix .. "[" .. newName .. "]" .. suffix
+    end
+    
   else
     return link
   end
