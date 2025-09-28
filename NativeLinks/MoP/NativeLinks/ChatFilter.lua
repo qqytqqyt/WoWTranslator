@@ -20,7 +20,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
             while (string.find(msg, "Hitem:")) do
                 local id, name = string.match(msg, "^.-Hitem:(%d+):.-%[(.-)%]")
                 local itemData = C_Item.GetItemInfo(tonumber(id))
-                if (itemData) then
+                if (itemData and itemData ~= name) then
                     msg = string.gsub(msg, regexEscape(name .. "]"), itemData .. " (" .. name .. ")]", 1)
                 end
                 msg = string.gsub(msg, "Hitem:", "£TMP£", 1)
@@ -36,7 +36,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 local id, name = string.match(msg, "^.-Hspell:(%d+):.-%[(.-)%]")
                 local spellInfo = C_Spell.GetSpellInfo(tonumber(id))
                 local spellData = spellInfo.name
-                if (spellData) then
+                if (spellData and spellData ~= name) then
                     msg = string.gsub(msg, regexEscape(name .. "]"), spellData .. " (" .. name .. ")]", 1)
                 end
                 msg = string.gsub(msg, "Hspell:", "£TMP£", 1)
@@ -51,7 +51,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 local id, name = string.match(msg, "^.-Henchant:(%d+).-%[(.-)%]")
                 local spellInfo = C_Spell.GetSpellInfo(tonumber(id))
                 local spellData = spellInfo.name
-                if (spellData) then
+                if (spellData and spellData ~= name) then
                     msg = string.gsub(msg, regexEscape(name .. "]"), spellData .. " (" .. name .. ")]", 1)
                 end
                 msg = string.gsub(msg, "Henchant:", "£TMP£", 1)
@@ -66,7 +66,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
             while (string.find(msg, "Hachievement:")) do
                 local id, name = string.match(msg, "^.-Hachievement:(%d+):.-%[(.-)%]")
                 local _, achievementData = GetAchievementInfo(tonumber(id))
-                if (achievementData) then
+                if (achievementData and achievementData ~= name) then
                     translatedName = string.gsub(achievementData, "（", " (").gsub(achievementData, "）", ")")
                     msg = string.gsub(msg, regexEscape(name .. "]"), translatedName .. " (" .. name .. ")]", 1)
                 end
