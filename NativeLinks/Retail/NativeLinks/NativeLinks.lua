@@ -5,6 +5,96 @@
 local NativeLinks_version = C_AddOns.GetAddOnMetadata("NativeLinks", "Version");
 local NativeLinks_Prefix = "NativeLinks";   
 
+local kinds = {
+  spell = "Spell",
+  item = "Item",
+  unit = "NPC",
+  quest = "Quest",
+  talent = "Talent",
+  achievement = "Achievement",
+  criteria = "Criteria",
+  ability = "Ability",
+  currency = "Currency",
+  artifactpower = "ArtifactPower",
+  enchant = "Enchant",
+  bonus = "Bonus",
+  gem = "Gem",
+  mount = "Mount",
+  companion = "Companion",
+  macro = "Macro",
+  equipmentset = "EquipmentSet",
+  visual = "Visual",
+  source = "Source",
+  species = "Species",
+  icon = "Icon",
+}
+
+local function GetItemName(id)
+  local str_id = tostring(id)
+  local num_id = tonumber(id)
+
+  local name
+  if (num_id >= 0 and num_id < 100000) then
+    name = NativeLinks_ItemNameData_0[str_id]
+  elseif (num_id >= 100000 and num_id < 200000 and NativeLinks_ItemNameData_100000) then
+    name = NativeLinks_ItemNameData_100000[str_id]
+  elseif (num_id >= 200000 and num_id < 300000 and NativeLinks_ItemNameData_200000) then
+    name = NativeLinks_ItemNameData_200000[str_id]
+  elseif (num_id >= 300000 and num_id < 400000 and NativeLinks_ItemNameData_300000) then
+    name = NativeLinks_ItemNameData_300000[str_id]
+  end
+
+  return name
+end
+
+local function GetSpellName(id)
+  local str_id = tostring(id)
+  local num_id = tonumber(id)
+  
+  local name
+  if (num_id >= 0 and num_id < 100000) then
+    name = NativeLinks_SpellNameData_0[str_id]
+  elseif (num_id >= 100000 and num_id < 200000 and NativeLinks_SpellNameData_100000) then
+    name = NativeLinks_SpellNameData_100000[str_id]
+  elseif (num_id >= 200000 and num_id < 300000 and NativeLinks_SpellNameData_200000) then
+    name = NativeLinks_SpellNameData_200000[str_id]
+  elseif (num_id >= 300000 and num_id < 400000 and NativeLinks_SpellNameData_300000) then
+    name = NativeLinks_SpellNameData_300000[str_id]
+  elseif (num_id >= 400000 and num_id < 500000 and NativeLinks_SpellNameData_400000) then
+    name = NativeLinks_SpellNameData_400000[str_id]
+  elseif (num_id >= 500000 and num_id < 600000 and NativeLinks_SpellNameData_500000) then
+    name = NativeLinks_SpellNameData_500000[str_id]
+  end
+
+  return name
+end
+
+local function GetUnitName(id)
+  local str_id = tostring(id)
+  local num_id = tonumber(id)
+  local name
+
+  if (num_id >= 0 and num_id < 100000) then
+    name = NativeLinks_UnitNameData_0[str_id]
+  elseif (num_id >= 100000 and num_id < 200000) then
+    name = NativeLinks_UnitNameData_100000[str_id]
+  elseif (num_id >= 200000 and num_id < 300000) then
+    name = NativeLinks_UnitNameData_200000[str_id]
+  elseif (num_id >= 300000 and num_id < 400000) then
+    name = NativeLinks_UnitNameData_300000[str_id]
+  end
+
+  return name
+end
+
+local function GetAchievementName(id)
+  local str_id = tostring(id)
+  local num_id = tonumber(id)
+  local name = NativeLinks_AchievementNameData[str_id]
+
+  return name
+end
+
 -- Get an ID from the |H<type>:... header
 local function ExtractID(prefix, linkType)
   if linkType == "item" then
@@ -40,16 +130,16 @@ local function RewriteItemLinkText(link)
   local id = ExtractID(prefix, linkType)
   local newName
 
-  if linkType == "item" and id and NativeLinks_ItemNameData[id] and NativeLinks_ItemNameData[id] ~= "" then   
+  if linkType == "item" and id then   
     local _, itemID, enchant, gem1, gem2, gem3, gem4, suffixID = strsplit(":", link)
     if suffixID ~= nil and suffixID ~= "" and suffixId ~= "0" then
       return link -- don't rewrite random-suffix items
     end
-    newName = NativeLinks_ItemNameData[id]
-  elseif linkType == "spell" and id and NativeLinks_SpellNameData[id] and NativeLinks_SpellNameData[id] ~= "" then
-    newName = NativeLinks_SpellNameData[id]
-  elseif linkType == "achievement" and id and NativeLinks_AchievementNameData[id] and NativeLinks_AchievementNameData[id] ~= "" then
-    newName = NativeLinks_AchievementNameData[id]
+    newName = GetItemName(id)
+  elseif linkType == "spell" and id then
+    newName = GetSpellName(id)
+  elseif linkType == "achievement" and id then
+    newName = GetAchievementName(id)
   end
 
   if newName then
@@ -101,70 +191,65 @@ function NativeLinks_SlashCommand(msg)
   end
 end
 
-local function OnTooltipItem(self, tooltip)
+local function SetItemTooltip(tooltip, id)
   if (NativeLinks_PS["active"]=="0") then
     return
   end
-	-- Case for linked spell
-  local name, itemLink = self:GetItem()
-  if (itemLink == nil) then 
-    return
-  end
-
-  local itemID = string.match(itemLink, 'Hitem:(%d+):')
-  if (itemID == nil) then 
-    return
-  end
-
-  local itemName = NativeLinks_ItemNameData[itemID]
+  
+  local itemName = GetItemName(id)
   if ( itemName ) then      
     local line = _G["GameTooltipTextLeft1"]
     local r, g, b, a = line:GetTextColor()
-    self:AddLine(" ")
-    self:AddLine(itemName, r, g, b, a)
+    tooltip:AddLine(" ")
+    tooltip:AddLine(itemName, r, g, b, a)
   end
 end
 
-local function OnTooltipSpell(self, tooltip)
+local function SetSpellTooltip(tooltip, id)
   if (NativeLinks_PS["active"]=="0") then
     return
   end
-	-- Case for linked spell
-  local name,id = self:GetSpell()
-  if (id == nil) then 
-    return
-  end
 
-  local str_id = tostring(id)
-  local spellName = NativeLinks_SpellNameData[str_id]
+  local spellName = GetSpellName(id)
   if ( spellName ) then  
     local line = _G["GameTooltipTextLeft1"]
     local r, g, b, a = line:GetTextColor()
-    self:AddLine(" ")
-    self:AddLine(spellName, r, g, b, a)
+    tooltip:AddLine(" ")
+    tooltip:AddLine(spellName, r, g, b, a)
   end
 end
 
-function OnTooltipUnit(self, tooltip)
+local function SetUnitTooltip(tooltip, id)
   if (NativeLinks_PS["active"]=="0") then
     return
   end
-	-- Case for linked unit
-  local unitName, unit = self:GetUnit()
-  if (unit == nil) then 
-    return
-  end
-
-  local unitGUID = UnitGUID(unit);
-  local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-", unitGUID);
   
-  local unitName = NativeLinks_UnitNameData[npc_id]
+  local unitName = GetUnitName(id)
 
-  if ( unitName ) then  
+  if ( unitName and unitName ~= "" ) then  
     local line = _G["GameTooltipTextLeft1"]
     local r, g, b, a = line:GetTextColor()
-    self:AddLine(" ")
-    self:AddLine(unitName, r, g, b, a)
+    tooltip:AddLine(" ")
+    tooltip:AddLine(unitName, r, g, b, a)
+  end
+end
+
+local function translateTooltip(tooltip, data, kind)
+  if kind == kinds.unit and data.guid then
+    local id = tonumber(data.guid:match("-(%d+)-%x+$"), 10)
+    if id and data.guid:match("%a+") ~= "Player" then 
+        SetUnitTooltip(tooltip, id)
+    end
+  elseif data.id then
+    local id = data.id
+    if type(id) == "table" and #id == 1 then id = id[1] end
+    if kind == kinds.spell then
+      SetSpellTooltip(tooltip, id)
+    elseif kind == kinds.item then
+      SetItemTooltip(tooltip, id)
+    elseif kind == kinds.unit then
+      SetUnitTooltip(tooltip, id)
+    end
   end
 end
 
@@ -187,17 +272,38 @@ function NativeLinks_OnLoad()
    NativeLinks:SetScript("OnEvent", NativeLinks_OnEvent);
    NativeLinks:RegisterEvent("ADDON_LOADED");
    
-   GameTooltip:HookScript("OnTooltipSetSpell", function(...) OnTooltipSpell(..., GameTooltip) end)
-   GameTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ItemRefTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-
-   EmbeddedItemTooltip:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ItemRefShoppingTooltip1:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-   ItemRefShoppingTooltip2:HookScript("OnTooltipSetItem", function(...) OnTooltipItem(..., GameTooltip) end)
-
-   GameTooltip:HookScript("OnTooltipSetUnit", function(...) OnTooltipUnit(..., GameTooltip) end)
+    if TooltipDataProcessor then
+        TooltipDataProcessor.AddTooltipPostCall(TooltipDataProcessor.AllTypes, function(tooltip, data)
+          if not data or not data.type then return end
+          if data.type == Enum.TooltipDataType.Spell then
+            translateTooltip(tooltip, data, kinds.spell)
+          elseif data.type == Enum.TooltipDataType.Item then
+            translateTooltip(tooltip, data, kinds.item)
+          elseif data.type == Enum.TooltipDataType.Unit then
+            translateTooltip(tooltip, data, kinds.unit)
+          elseif data.type == Enum.TooltipDataType.Currency then
+            translateTooltip(tooltip, data, kinds.currency)
+          elseif data.type == Enum.TooltipDataType.UnitAura then
+            translateTooltip(tooltip, data, kinds.spell)
+          elseif data.type == Enum.TooltipDataType.Mount then
+            translateTooltip(tooltip, data, kinds.mount)
+          elseif data.type == Enum.TooltipDataType.Achievement then
+            translateTooltip(tooltip, data, kinds.achievement)
+          elseif data.type == Enum.TooltipDataType.EquipmentSet then
+            translateTooltip(tooltip, data, kinds.equipmentset)
+          elseif data.type == Enum.TooltipDataType.RecipeRankInfo then
+            translateTooltip(tooltip, data, kinds.spell)
+          elseif data.type == Enum.TooltipDataType.Totem then
+            translateTooltip(tooltip, data, kinds.spell)
+          elseif data.type == Enum.TooltipDataType.Toy then
+            translateTooltip(tooltip, data, kinds.item)
+          elseif data.type == Enum.TooltipDataType.Quest then
+            translateTooltip(tooltip, data, kinds.quest)
+          elseif data.type == Enum.TooltipDataType.Macro then
+            translateTooltip(tooltip, data, kinds.macro)
+          end
+        end)
+      end
    
    hooksecurefunc('ChatEdit_InsertLink', RewriteItemLink)
 
@@ -251,6 +357,20 @@ function NativeLinks_OnEvent(self, event, name, ...)
       end
 
       NativeLinks_wait(2, Broadcast)
+
+      LoadAchievementNameData()
+      LoadItemNameData()
+      LoadItemNameData100000()
+      LoadItemNameData200000()
+      LoadSpellNameData()
+      LoadSpellNameData100000()
+      LoadSpellNameData200000()
+      LoadSpellNameData300000()
+      LoadSpellNameData400000()
+      LoadUnitNameData()
+      LoadUnitNameData100000()
+      LoadUnitNameData200000()     
+
       NativeLinks:UnregisterEvent("ADDON_LOADED");
       NativeLinks.ADDON_LOADED = nil;
       return
