@@ -148,14 +148,12 @@ local function loadAllItemData()
   loadItemData200000();
 end
 
-local function loadAllSpellData()
-  loadSpellData0();
-  loadSpellData100000();
-  loadSpellData200000();
-  loadSpellData300000();
-  loadSpellData400000();
-  if loadSpellData500000 then
-    loadSpellData500000();
+local function loadAllSpellData()  
+  for i=0,1500000,100000 do
+    local name = "loadSpellData"..i
+    if _G[name] ~= nil then
+      _G[name]();
+    end
   end
 end
 
@@ -788,37 +786,28 @@ function GetSpellData(id)
   local num_id = tonumber(id)
   
   local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_0[num_id]
-  elseif (num_id >= 100000 and num_id < 200000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_100000[num_id - 100000]
-  elseif (num_id >= 200000 and num_id < 300000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_200000[num_id - 200000]
-  elseif (num_id >= 300000 and num_id < 400000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
-  elseif (num_id >= 400000 and num_id < 500000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_400000[num_id - 400000]
-  elseif (num_id >= 500000 and num_id < 600000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_500000[num_id - 500000]
+  local offset = 0
+  local offset_id = num_id - offset
+  while (offset_id > 100000) do
+    offset = offset + 100000
+    offset_id = num_id - offset
+  end
+
+  local dbName = "WoWeuCN_Tooltips_SpellIndexData_" .. tostring(offset)
+  local dbData = _G[dbName]
+  if dbData then
+    dataIndex = dbData[offset_id]
   end
 
   if (dataIndex == nil) then
     return nil
   end
-  local spellData = nil
 
-  if (num_id >= 0 and num_id < 100000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
-  elseif (num_id >= 100000 and num_id < 200000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
-  elseif (num_id >= 200000 and num_id < 300000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
-  elseif (num_id >= 300000 and num_id < 400000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
-  elseif (num_id >= 400000 and num_id < 500000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_400000[dataIndex], '£')
-  elseif (num_id >= 500000 and num_id < 600000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_500000[dataIndex], '£')
+  local spellData = nil
+  local spellDBName = "WoWeuCN_Tooltips_SpellData_" .. tostring(offset)
+  local spellDBData = _G[spellDBName]
+  if spellDBData then
+    spellData = split(spellDBData[dataIndex], '£')
   end
 
   if ( spellData ) then

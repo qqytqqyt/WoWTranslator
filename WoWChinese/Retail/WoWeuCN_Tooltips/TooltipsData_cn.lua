@@ -1,5 +1,5 @@
-﻿WoWeuCN_Tooltips_base = "11.2.0.62417";   -- version
-WoWeuCN_Tooltips_date = "2025-08-05"; -- date of creation base
+﻿WoWeuCN_Tooltips_base = "11.2.5.63660";   -- version
+WoWeuCN_Tooltips_date = "2025-10-09"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
@@ -36,12 +36,10 @@ WoWeuCN_Tooltips_Interface = {
  WoWeuCN_Tooltips_UnitData_100000 = {};
  WoWeuCN_Tooltips_UnitData_200000 = {};
 
- WoWeuCN_Tooltips_SpellData_0 = {};
- WoWeuCN_Tooltips_SpellData_100000 = {};
- WoWeuCN_Tooltips_SpellData_200000 = {};
- WoWeuCN_Tooltips_SpellData_300000 = {};
- WoWeuCN_Tooltips_SpellData_400000 = {};
- WoWeuCN_Tooltips_SpellData_500000 = {};
+ for i=0,1500000,100000 do
+    local name = " WoWeuCN_Tooltips_SpellData_"..i
+    _G[name] = {};
+ end
 
  WoWeuCN_Tooltips_ItemIndexData_0 = {};
  WoWeuCN_Tooltips_ItemIndexData_100000 = {};
@@ -51,12 +49,10 @@ WoWeuCN_Tooltips_Interface = {
  WoWeuCN_Tooltips_UnitIndexData_100000 = {};
  WoWeuCN_Tooltips_UnitIndexData_200000 = {};
 
- WoWeuCN_Tooltips_SpellIndexData_0 = {};
- WoWeuCN_Tooltips_SpellIndexData_100000 = {};
- WoWeuCN_Tooltips_SpellIndexData_200000 = {};
- WoWeuCN_Tooltips_SpellIndexData_300000 = {};
- WoWeuCN_Tooltips_SpellIndexData_400000 = {};
- WoWeuCN_Tooltips_SpellIndexData_500000 = {};
+ for i=0,1500000,100000 do
+    local name = " WoWeuCN_Tooltips_SpellIndexData_"..i
+    _G[name] = {};
+ end
  
  WoWeuCN_Tooltips_EncounterData ={}
  WoWeuCN_Tooltips_EncounterSectionData ={}
