@@ -119,47 +119,29 @@ function WoWeuCN_Tooltips_CheckVars()
 end
 
 -- load data
-local function loadAllItemData()
-  loadItemData0();
-  if loadItemData100000 then
-    loadItemData100000();
+local function loadData(typeName)
+  for i=0,1500000,100000 do
+    local name = "load" .. typeName .. "Data".. i
+    if _G[name] ~= nil then
+      _G[name]();
+    end
   end
-  if loadItemData200000 then
-    loadItemData200000();
-  end
+end
+
+local function loadAllItemData()  
+  loadData("Item");
 end
 
 local function loadAllSpellData()
-  loadSpellData0();
-  if loadSpellData100000 then
-    loadSpellData100000();
-  end
-  if loadSpellData200000 then
-    loadSpellData200000();
-  end
-  if loadSpellData300000 then
-    loadSpellData300000();
-  end
-  if loadSpellData400000 then
-    loadSpellData400000();
-  end
-  if loadSpellData500000 then
-    loadSpellData500000();
-  end
+  loadData("Spell");
 end
 
 local function loadAllUnitData()
-  loadUnitData0();
-  if loadUnitData100000 then
-    loadUnitData100000();
-  end
-  if loadUnitData200000 then
-    loadUnitData200000();
-  end
+  loadData("Unit");
 end
 
 local function loadAllAchievementData()
-  loadAchievementData0();
+  loadData("Achievement");
 end
 
 -- commands
@@ -384,7 +366,7 @@ function WoWeuCN_Tooltips_OnLoad()
     end
    end
 
-   hooksecurefunc("SpellButton_UpdateButton", function(...) OnSpellBookUpdate(...) end);
+   --hooksecurefunc("SpellButton_UpdateButton", function(...) OnSpellBookUpdate(...) end);
    RegisterChatFilterEvents()
 
    loadAllSpellData()
@@ -431,6 +413,35 @@ function ReplaceText(s)
   end
 
   return s
+end
+
+local function FindData(num_id, name)  
+  local dataIndex = nil
+  local offset = 0
+  local offset_id = num_id - offset
+  while (offset_id > 100000) do
+    offset = offset + 100000
+    offset_id = num_id - offset
+  end
+
+  local indexDbName = "WoWeuCN_Tooltips_" .. name .. "IndexData_" .. tostring(offset)
+  local dbData = _G[indexDbName]
+  if dbData then
+    dataIndex = dbData[offset_id]
+  end
+
+  if (dataIndex == nil) then
+    return nil
+  end
+
+  local data = nil
+  local dataDbName = "WoWeuCN_Tooltips_" .. name .. "Data_" .. tostring(offset)
+  local dbData = _G[dataDbName]
+  if dbData then
+    data = split(dbData[dataIndex], '£')
+  end
+
+  return data
 end
 
 function GetFirstLineColorCode(...)
@@ -509,22 +520,9 @@ function GetAchievementData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
+  
   local num_id = tonumber(id)
-  local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_AchievementIndexData_0[num_id]
-  end
-
-  if (dataIndex == nil) then
-    return nil
-  end
-
-  if (num_id >= 0 and num_id < 100000) then    
-    return split(WoWeuCN_Tooltips_AchievementData_0[dataIndex], '£')
-  end
-
-  return nil
+  return FindData(num_id, "Achievement")
 end
 
 function OnTooltipUnit(self, tooltip)
@@ -566,30 +564,9 @@ function GetUnitData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
-  local num_id = tonumber(id)
-  local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_UnitIndexData_0[num_id]
-  elseif (num_id >= 100000 and num_id < 200000) then
-    dataIndex = WoWeuCN_Tooltips_UnitIndexData_100000[num_id - 100000]
-  elseif (num_id >= 200000 and num_id < 300000) then
-    dataIndex = WoWeuCN_Tooltips_UnitIndexData_200000[num_id - 200000]
-  end
-
-  if (dataIndex == nil) then
-    return nil
-  end
-
-  if (num_id >= 0 and num_id < 100000) then
-    return split(WoWeuCN_Tooltips_UnitData_0[dataIndex], '£')
-  elseif (num_id >= 100000 and num_id < 200000) then
-    return split(WoWeuCN_Tooltips_UnitData_100000[dataIndex], '£')
-  elseif (num_id >= 200000 and num_id < 300000) then
-    return split(WoWeuCN_Tooltips_UnitData_200000[dataIndex], '£')
-  end
-
-  return nil
+  
+  local num_id = tonumber(id)  
+  return FindData(num_id, "Unit")
 end
 
 function OnTooltipItem(self, tooltip)
@@ -627,30 +604,9 @@ function GetItemData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
-  local num_id = tonumber(id) 
-  local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_ItemIndexData_0[num_id]
-  elseif (num_id >= 100000 and num_id < 200000) then
-    dataIndex = WoWeuCN_Tooltips_ItemIndexData_100000[num_id - 100000]
-  elseif (num_id >= 200000 and num_id < 300000) then
-    dataIndex = WoWeuCN_Tooltips_ItemIndexData_200000[num_id - 200000]
-  end
-
-  if (dataIndex == nil) then
-    return nil
-  end
-
-  if (num_id >= 0 and num_id < 100000) then
-    return split(WoWeuCN_Tooltips_ItemData_0[dataIndex], '£')
-  elseif (num_id >= 100000 and num_id < 200000) then
-    return split(WoWeuCN_Tooltips_ItemData_100000[dataIndex], '£')
-  elseif (num_id >= 200000 and num_id < 300000) then
-    return split(WoWeuCN_Tooltips_ItemData_200000[dataIndex], '£')
-  end
-
-  return nil
+  
+  local num_id = tonumber(id)  
+  return FindData(num_id, "Item")
 end
 
 function OnTooltipSpellElvUi(self)
@@ -729,42 +685,9 @@ function GetSpellData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
+
   local num_id = tonumber(id)
-  
-  local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_0[num_id]
-  elseif (num_id >= 100000 and num_id < 200000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_100000[num_id - 100000]
-  elseif (num_id >= 200000 and num_id < 300000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_200000[num_id - 200000]
-  elseif (num_id >= 300000 and num_id < 400000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_300000[num_id - 300000]
-  elseif (num_id >= 400000 and num_id < 500000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_400000[num_id - 400000]
-  elseif (num_id >= 500000 and num_id < 600000) then
-    dataIndex = WoWeuCN_Tooltips_SpellIndexData_500000[num_id - 500000]
-  end
-
-  if (dataIndex == nil) then
-    return nil
-  end
-  local spellData = nil
-
-  if (num_id >= 0 and num_id < 100000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_0[dataIndex], '£')
-  elseif (num_id >= 100000 and num_id < 200000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_100000[dataIndex], '£')
-  elseif (num_id >= 200000 and num_id < 300000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_200000[dataIndex], '£')
-  elseif (num_id >= 300000 and num_id < 400000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_300000[dataIndex], '£')
-  elseif (num_id >= 400000 and num_id < 500000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_400000[dataIndex], '£')
-  elseif (num_id >= 500000 and num_id < 600000) then
-    spellData = split(WoWeuCN_Tooltips_SpellData_500000[dataIndex], '£')
-  end
+  local spellData = FindData(num_id, "Spell")
 
   if ( spellData ) then
     while (string.find(spellData[1], "¿")) do

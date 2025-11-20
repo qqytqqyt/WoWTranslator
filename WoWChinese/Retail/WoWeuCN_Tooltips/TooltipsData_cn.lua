@@ -28,31 +28,19 @@ WoWeuCN_Tooltips_Interface = {
 
  WoWeuCN_Tooltips_TranslateEncounterJournal = true;
 
- WoWeuCN_Tooltips_ItemData_0 = {};
- WoWeuCN_Tooltips_ItemData_100000 = {};
- WoWeuCN_Tooltips_ItemData_200000 = {};
- 
- WoWeuCN_Tooltips_UnitData_0 = {};
- WoWeuCN_Tooltips_UnitData_100000 = {};
- WoWeuCN_Tooltips_UnitData_200000 = {};
-
- for i=0,1500000,100000 do
-    local name = " WoWeuCN_Tooltips_SpellData_"..i
-    _G[name] = {};
+ local function initData(typeName)
+   for i=0,1500000,100000 do
+      local name = "WoWeuCN_Tooltips_" .. typeName .. "Data_".. i
+      _G[name] = {};
+      local indexName = "WoWeuCN_Tooltips_" .. typeName .. "IndexData_".. i
+      _G[indexName] = {};
+   end
  end
 
- WoWeuCN_Tooltips_ItemIndexData_0 = {};
- WoWeuCN_Tooltips_ItemIndexData_100000 = {};
- WoWeuCN_Tooltips_ItemIndexData_200000 = {};
- 
- WoWeuCN_Tooltips_UnitIndexData_0 = {};
- WoWeuCN_Tooltips_UnitIndexData_100000 = {};
- WoWeuCN_Tooltips_UnitIndexData_200000 = {};
-
- for i=0,1500000,100000 do
-    local name = " WoWeuCN_Tooltips_SpellIndexData_"..i
-    _G[name] = {};
- end
+ initData("Item");
+ initData("Spell");
+ initData("Unit");
+ initData("Achievement");
  
  WoWeuCN_Tooltips_EncounterData ={}
  WoWeuCN_Tooltips_EncounterSectionData ={}

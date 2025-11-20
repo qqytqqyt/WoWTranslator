@@ -142,29 +142,29 @@ function WoWeuCN_Tooltips_CheckVars()
 end
 
 -- load data
-local function loadAllItemData()
-  loadItemData0();
-  loadItemData100000();
-  loadItemData200000();
-end
-
-local function loadAllSpellData()  
+local function loadData(typeName)
   for i=0,1500000,100000 do
-    local name = "loadSpellData"..i
+    local name = "load" .. typeName .. "Data".. i
     if _G[name] ~= nil then
       _G[name]();
     end
   end
 end
 
+local function loadAllItemData()
+  loadData("Item");
+end
+
+local function loadAllSpellData()  
+  loadData("Spell");
+end
+
 local function loadAllUnitData()
-  loadUnitData0();
-  loadUnitData100000();
-  loadUnitData200000();
+  loadData("Unit");
 end
 
 local function loadAllAchievementData()
-  loadAchievementData0();
+  loadData("Achievement");
 end
 
 -- commands
@@ -487,6 +487,35 @@ function ReplaceText(s)
   return s
 end
 
+local function FindData(num_id, name)  
+  local dataIndex = nil
+  local offset = 0
+  local offset_id = num_id - offset
+  while (offset_id > 100000) do
+    offset = offset + 100000
+    offset_id = num_id - offset
+  end
+
+  local indexDbName = "WoWeuCN_Tooltips_" .. name .. "IndexData_" .. tostring(offset)
+  local dbData = _G[indexDbName]
+  if dbData then
+    dataIndex = dbData[offset_id]
+  end
+
+  if (dataIndex == nil) then
+    return nil
+  end
+
+  local data = nil
+  local dataDbName = "WoWeuCN_Tooltips_" .. name .. "Data_" .. tostring(offset)
+  local dbData = _G[dataDbName]
+  if dbData then
+    data = split(dbData[dataIndex], '£')
+  end
+
+  return data
+end
+
 function GetFirstLineColorCode(...)
   local colorCode = _G["ORANGE_FONT_COLOR_CODE"]
   for regionIndex = 1, select("#", ...) do
@@ -556,22 +585,9 @@ function GetAchievementData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
+
   local num_id = tonumber(id)
-  local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_AchievementIndexData_0[num_id]
-  end
-
-  if (dataIndex == nil) then
-    return nil
-  end
-
-  if (num_id >= 0 and num_id < 100000) then    
-    return split(WoWeuCN_Tooltips_AchievementData_0[dataIndex], '£')
-  end
-
-  return nil
+  return FindData(num_id, "Achievement")
 end
 
 function OnTooltipUnit(self, tooltip)
@@ -634,30 +650,9 @@ function GetUnitData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
-  local num_id = tonumber(id)
-  local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_UnitIndexData_0[num_id]
-  elseif (num_id >= 100000 and num_id < 200000) then
-    dataIndex = WoWeuCN_Tooltips_UnitIndexData_100000[num_id - 100000]
-  elseif (num_id >= 200000 and num_id < 300000) then
-    dataIndex = WoWeuCN_Tooltips_UnitIndexData_200000[num_id - 200000]
-  end
 
-  if (dataIndex == nil) then
-    return nil
-  end
-
-  if (num_id >= 0 and num_id < 100000) then
-    return split(WoWeuCN_Tooltips_UnitData_0[dataIndex], '£')
-  elseif (num_id >= 100000 and num_id < 200000) then
-    return split(WoWeuCN_Tooltips_UnitData_100000[dataIndex], '£')
-  elseif (num_id >= 200000 and num_id < 300000) then
-    return split(WoWeuCN_Tooltips_UnitData_200000[dataIndex], '£')
-  end
-
-  return nil
+  local num_id = tonumber(id)  
+  return FindData(num_id, "Unit")
 end
 
 function OnTooltipSetAction(self, slot)
@@ -712,30 +707,11 @@ function GetItemData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
+
   local num_id = tonumber(id) 
-  local dataIndex = nil
-  if (num_id >= 0 and num_id < 100000) then
-    dataIndex = WoWeuCN_Tooltips_ItemIndexData_0[num_id]
-  elseif (num_id >= 100000 and num_id < 200000) then
-    dataIndex = WoWeuCN_Tooltips_ItemIndexData_100000[num_id - 100000]
-  elseif (num_id >= 200000 and num_id < 300000) then
-    dataIndex = WoWeuCN_Tooltips_ItemIndexData_200000[num_id - 200000]
-  end
 
-  if (dataIndex == nil) then
-    return nil
-  end
-
-  if (num_id >= 0 and num_id < 100000) then
-    return split(WoWeuCN_Tooltips_ItemData_0[dataIndex], '£')
-  elseif (num_id >= 100000 and num_id < 200000) then
-    return split(WoWeuCN_Tooltips_ItemData_100000[dataIndex], '£')
-  elseif (num_id >= 200000 and num_id < 300000) then
-    return split(WoWeuCN_Tooltips_ItemData_200000[dataIndex], '£')
-  end
-
-  return nil
+  local itemData = FindData(num_id, "Item")
+  return itemData
 end
 
 function OnTooltipSpellElvUi(self)
@@ -782,33 +758,10 @@ function GetSpellData(id)
   if (id == nil) then
     return nil
   end
-  local str_id = tostring(id)
+  
   local num_id = tonumber(id)
   
-  local dataIndex = nil
-  local offset = 0
-  local offset_id = num_id - offset
-  while (offset_id > 100000) do
-    offset = offset + 100000
-    offset_id = num_id - offset
-  end
-
-  local dbName = "WoWeuCN_Tooltips_SpellIndexData_" .. tostring(offset)
-  local dbData = _G[dbName]
-  if dbData then
-    dataIndex = dbData[offset_id]
-  end
-
-  if (dataIndex == nil) then
-    return nil
-  end
-
-  local spellData = nil
-  local spellDBName = "WoWeuCN_Tooltips_SpellData_" .. tostring(offset)
-  local spellDBData = _G[spellDBName]
-  if spellDBData then
-    spellData = split(spellDBData[dataIndex], '£')
-  end
+  local spellData = FindData(num_id, "Spell")
 
   if ( spellData ) then
     while (string.find(spellData[1], "¿")) do
