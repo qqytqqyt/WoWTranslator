@@ -1,6 +1,6 @@
-﻿## Interface: 110200
+﻿## Interface: 110205
 ## Title: WoWeuCN-Tooltips
-## Version: 11.2.0.0
+## Version: 11.2.5.3
 ## Notes_en: AddOn displays the translated information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com

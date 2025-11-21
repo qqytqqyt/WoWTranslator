@@ -4,7 +4,7 @@ local function regexEscape(str)
     return str:gsub("[%(%)%.%%%+%-%*%?%[%^%$%]]", "%%%1")
 end
 
-ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...)
+local ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, playerName2, specialFlags, zoneChannelID, channelIndex, channelBaseName, unused, lineID, senderGUID, bnSenderID, ...)
     if (NativeLinks_PS["active"]=="0") then
         return
     end
@@ -20,7 +20,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
             while (string.find(msg, "Hitem:")) do
                 local id, name = string.match(msg, "^.-Hitem:(%d+):.-%[(.-)%]")
                 local itemData = C_Item.GetItemInfo(tonumber(id))
-                if (itemData) then
+                if (itemData and name ~= itemData) then
                     msg = string.gsub(msg, regexEscape(name .. "]"), itemData .. " (" .. name .. ")]", 1)
                 end
                 msg = string.gsub(msg, "Hitem:", "£TMP£", 1)
@@ -36,7 +36,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 local id, name = string.match(msg, "^.-Hspell:(%d+):.-%[(.-)%]")
                 local spellInfo = C_Spell.GetSpellInfo(tonumber(id))
                 local spellData = spellInfo.name
-                if (spellData) then
+                if (spellData and name ~= spellData) then
                     msg = string.gsub(msg, regexEscape(name .. "]"), spellData .. " (" .. name .. ")]", 1)
                 end
                 msg = string.gsub(msg, "Hspell:", "£TMP£", 1)
@@ -51,7 +51,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
                 local id, name = string.match(msg, "^.-Henchant:(%d+).-%[(.-)%]")
                 local spellInfo = C_Spell.GetSpellInfo(tonumber(id))
                 local spellData = spellInfo.name
-                if (spellData) then
+                if (spellData and name ~= spellData) then
                     msg = string.gsub(msg, regexEscape(name .. "]"), spellData .. " (" .. name .. ")]", 1)
                 end
                 msg = string.gsub(msg, "Henchant:", "£TMP£", 1)
@@ -66,7 +66,7 @@ ChatFilter = function(chatFrame, _, msg, playerName, languageName, channelName, 
             while (string.find(msg, "Hachievement:")) do
                 local id, name = string.match(msg, "^.-Hachievement:(%d+):.-%[(.-)%]")
                 local _, achievementData = GetAchievementInfo(tonumber(id))
-                if (achievementData) then
+                if (achievementData and name ~= achievementData) then
                     translatedName = string.gsub(achievementData, "（", " (").gsub(achievementData, "）", ")")
                     msg = string.gsub(msg, regexEscape(name .. "]"), translatedName .. " (" .. name .. ")]", 1)
                 end
@@ -101,12 +101,10 @@ function RegisterChatFilterEvents() -- todo: register immediately and cache call
 
     -- Whisper
     ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER", ChatFilter)
-    ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER_INFORM", ChatFilter)
 
     -- Battle Net
     ChatFrame_AddMessageEventFilter("CHAT_MSG_BN", ChatFilter)
     ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER", ChatFilter)
-    ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER_INFORM", ChatFilter)
 
     -- Open world
     ChatFrame_AddMessageEventFilter("CHAT_MSG_CHANNEL", ChatFilter)
