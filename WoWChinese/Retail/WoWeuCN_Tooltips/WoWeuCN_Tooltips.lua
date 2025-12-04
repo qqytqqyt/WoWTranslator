@@ -841,6 +841,8 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
 end
 
 local achievementHooked = false
+local houseHooked = false
+local housePreviewHooked = false
 local toyBoxHooked = false
 local mountJournalHooked = false
 local petJournalHooked = false
@@ -893,6 +895,16 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     hooksecurefunc(AchievementTemplateMixin,"Init", function(self, ...) OnAchievement(self, ...) end);
     hooksecurefunc("AchievementFrameSummary_UpdateAchievements", function(...) OnAchievementSummary(...) end);    
     achievementHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not houseHooked and HousingCatalogDecorEntryMixin) then
+    hooksecurefunc(HousingCatalogDecorEntryMixin,"AddTooltipTrackingLines", function(self, ...) OnHouseTooltip(self, ...) end);    
+    houseHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not housePreviewHooked and HousingModelPreviewMixin) then
+    hooksecurefunc(HousingModelPreviewMixin,"PreviewCatalogEntryInfo", function(self, ...) OnHousePreview(self, ...) end); 
+    housePreviewHooked = true
   end
 
   if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not toyBoxHooked and ToyBox) then

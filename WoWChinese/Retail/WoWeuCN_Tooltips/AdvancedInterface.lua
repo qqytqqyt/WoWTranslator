@@ -400,3 +400,42 @@ function WoWeuCN_Tooltips_EncounterButton_On_Off()
   UpdateEncounterJournalHeaders()
   UpdateOverviews()
 end
+
+function OnHouseTooltip(self, GameTooltip)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0") then
+    print(WoWeuCN_Tooltips_N_PS["transadvanced"])
+    return
+  end
+
+  if (WoWeuCN_Tooltips_DecorMapping ~= nil and self.entryInfo ~= nil and self.entryInfo.entryID ~= nil and self.entryInfo.entryID.recordID ~= nil) then
+    local decorID = self.entryInfo.entryID.recordID
+    local itemID = WoWeuCN_Tooltips_DecorMapping['' .. decorID]
+    if (itemID ~= nil) then
+      GameTooltip:AddLine(" ")
+      local itemData = GetItemData(itemID)
+      if ( itemData ) then  
+        local region = itemData[1]
+        GameTooltip:AddLine(region, 1, 1, 1, 1)
+        GameTooltip:Show()
+      end
+    end
+  end
+end
+
+function OnHousePreview(self, catalogEntryInfo)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    return
+  end
+
+  if (WoWeuCN_Tooltips_DecorMapping ~= nil and catalogEntryInfo ~= nil and catalogEntryInfo.entryID ~= nil and catalogEntryInfo.entryID.recordID ~= nil) then
+    local decorID = catalogEntryInfo.entryID.recordID
+    local itemID = WoWeuCN_Tooltips_DecorMapping['' .. decorID]
+    if (itemID ~= nil) then
+      GameTooltip:AddLine(" ")
+      local itemData = GetItemData(itemID)
+      if ( itemData ) then  
+        self.NameContainer.Name:SetText(itemData[1]);
+      end
+    end
+  end
+end
