@@ -302,7 +302,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -155);
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1")
-  WoWeuCN_TooltipsCheckButton8:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
@@ -647,7 +647,7 @@ function WoWeuCN_Tooltips_GetNameplateUnitData(id)
 end
 
 function GetUnitData(id)
-  if (id == nil) then
+  if (id == nil or issecretvalue(id)) then
     return nil
   end
 
@@ -704,7 +704,7 @@ function SetItemTooltip(self, itemID)
 end
 
 function GetItemData(id)
-  if (id == nil) then
+  if (id == nil or issecretvalue(id)) then
     return nil
   end
 
@@ -755,7 +755,7 @@ function SetSpellTooltip(self, id)
 end
 
 function GetSpellData(id)
-  if (id == nil) then
+  if (id == nil or issecretvalue(id)) then
     return nil
   end
   
