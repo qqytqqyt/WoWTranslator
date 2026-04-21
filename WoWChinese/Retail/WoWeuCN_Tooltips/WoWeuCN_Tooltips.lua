@@ -134,8 +134,12 @@ function WoWeuCN_Tooltips_CheckVars()
   -- Initiation - nameplate translation
   if (not WoWeuCN_Tooltips_N_PS["transnameplate"] ) then
      WoWeuCN_Tooltips_N_PS["transnameplate"] = "1";   
-  end  
-   -- Path version info
+  end
+  -- Initiation - name only mode
+  if (not WoWeuCN_Tooltips_N_PS["nameonly"] ) then
+     WoWeuCN_Tooltips_N_PS["nameonly"] = "0";
+  end
+    -- Path version info
   if (not WoWeuCN_Tooltips_N_PS["patch"]) then
      WoWeuCN_Tooltips_N_PS["patch"] = GetBuildInfo();
   end
@@ -207,6 +211,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1");
   WoWeuCN_TooltipsCheckButton3.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transspell"]=="1");
   WoWeuCN_TooltipsCheckButton4.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["nameonly"]=="1");
   WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
   WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
   WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
@@ -274,9 +279,17 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton4.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton4:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton4.Text:SetText(WoWeuCN_Tooltips_Interface.transitem);
+
+  local WoWeuCN_TooltipsCheckButton9 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton9", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton9:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -65);
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["nameonly"]=="1")
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["nameonly"]=="0") then WoWeuCN_Tooltips_N_PS["nameonly"]="1" else WoWeuCN_Tooltips_N_PS["nameonly"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton9.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton9:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton9.Text:SetText(WoWeuCN_Tooltips_Interface.nameonly);
   
   local WoWeuCN_TooltipsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton5", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
-  WoWeuCN_TooltipsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -65);
+  WoWeuCN_TooltipsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -95);
   WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1")
   WoWeuCN_TooltipsCheckButton5.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transunit"]=="0") then WoWeuCN_Tooltips_N_PS["transunit"]="1" else WoWeuCN_Tooltips_N_PS["transunit"]="0" end; end);
   WoWeuCN_TooltipsCheckButton5.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
@@ -284,7 +297,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton5.Text:SetText(WoWeuCN_Tooltips_Interface.transunit);
   
   local WoWeuCN_TooltipsCheckButton6 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton6", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
-  WoWeuCN_TooltipsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -95);
+  WoWeuCN_TooltipsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -125);
   WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1")
   WoWeuCN_TooltipsCheckButton6.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then WoWeuCN_Tooltips_N_PS["transachievement"]="1" else WoWeuCN_Tooltips_N_PS["transachievement"]="0" end; end);
   WoWeuCN_TooltipsCheckButton6.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
@@ -292,7 +305,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton6.Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
 
   local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
-  WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -125);
+  WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -155);
   WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1")
   WoWeuCN_TooltipsCheckButton7.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
   WoWeuCN_TooltipsCheckButton7.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
@@ -300,7 +313,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton7.Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
   
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
-  WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -155);
+  WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -185);
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1")
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
@@ -323,6 +336,8 @@ local function translateTooltip(tooltip, data, kind)
       SetItemTooltip(tooltip, id)
     elseif kind == kinds.unit then
       SetUnitTooltip(tooltip, id)
+    elseif kind == kinds.macro then
+      SetMacroTooltip(tooltip, id)
     end
   end
 end
@@ -534,6 +549,132 @@ function GetFirstLineColorCode(...)
   return colorCode
 end
 
+local function GetTooltipLeftLine(tooltip, index)
+  if (tooltip == nil) then
+    return nil
+  end
+
+  local tooltipName = tooltip:GetName()
+  if tooltipName then
+    return _G[tooltipName .. "TextLeft" .. index]
+  end
+  return _G[("GameTooltipTextLeft%d"):format(index)]
+end
+
+local function TooltipHasText(tooltip, text)
+  if (tooltip == nil or text == nil) then
+    return false
+  end
+
+  local lines = tooltip:NumLines()
+  for i= 1, lines do
+    local line = GetTooltipLeftLine(tooltip, i)
+    local lineText = line and line:GetText()
+    if lineText and not issecretvalue(lineText) and lineText:find(text, 1, true) then
+      return true
+    end
+  end
+  return false
+end
+
+local function GetTooltipLineStyle(tooltip, index)
+  local line = GetTooltipLeftLine(tooltip, index)
+  if not line then
+    return nil
+  end
+
+  local r, g, b, a = line:GetTextColor()
+  local font, size, flags = line:GetFont()
+  return {
+    r = r,
+    g = g,
+    b = b,
+    a = a,
+    font = font,
+    size = size,
+    flags = flags
+  }
+end
+
+local function ApplyTooltipLineStyle(tooltip, index, style, applyFont)
+  if not style then
+    return
+  end
+
+  local line = GetTooltipLeftLine(tooltip, index)
+  if not line then
+    return
+  end
+
+  if applyFont and style.font and style.size then
+    line:SetFont(style.font, style.size, style.flags)
+  end
+  if style.r then
+    line:SetTextColor(style.r, style.g, style.b, style.a or 1)
+  end
+end
+
+local function IsMostlyWhite(style)
+  if not style then
+    return false
+  end
+  return style.r and style.g and style.b and style.r > 0.9 and style.g > 0.9 and style.b > 0.9
+end
+
+local function AddTranslatedTooltipData(tooltip, translatedData, formatter)
+  if (tooltip == nil or translatedData == nil or #translatedData == 0) then
+    return
+  end
+
+  local translatedLines = #translatedData
+  if (WoWeuCN_Tooltips_N_PS["nameonly"]=="1") then
+    translatedLines = 1
+  end
+
+  local originalLineCount = tooltip:NumLines()
+  local firstColoredDescriptionStyle = nil
+  for i = 2, originalLineCount do
+    local line = GetTooltipLeftLine(tooltip, i)
+    local lineText = line and line:GetText()
+    if lineText and lineText ~= " " then
+      local style = GetTooltipLineStyle(tooltip, i)
+      if style and not IsMostlyWhite(style) then
+        firstColoredDescriptionStyle = style
+        break
+      end
+    end
+  end
+
+  local lineStyles = {}
+  for i = 1, translatedLines do
+    local sourceLineIndex = i
+    if sourceLineIndex > originalLineCount then
+      sourceLineIndex = originalLineCount
+    end
+    local style = GetTooltipLineStyle(tooltip, sourceLineIndex)
+    if i > 1 and firstColoredDescriptionStyle and (not style or IsMostlyWhite(style)) then
+      style = firstColoredDescriptionStyle
+    end
+    lineStyles[i] = style
+  end
+
+  tooltip:AddLine(" ")
+  for i = 1, translatedLines do
+    local lineText = translatedData[i]
+    if formatter then
+      lineText = formatter(lineText, i)
+    end
+
+    if lineText and lineText ~= "" then
+      tooltip:AddLine(lineText, 1, 1, 1, 1)
+      local addedLineIndex = tooltip:NumLines()
+      local style = lineStyles[i] or lineStyles[1]
+      ApplyTooltipLineStyle(tooltip, addedLineIndex, style, i == 1)
+    end
+  end
+  tooltip:Show()
+end
+
 function OnAchievement(self, elementData)  
   if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then
     return
@@ -622,24 +763,10 @@ function SetUnitTooltip(self, id)
   local unitData = GetUnitData(id)
 
   if ( unitData ) then      
-    local lines = self:NumLines()
-    for i= 1, lines do
-      local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and not issecretvalue(line:GetText()) and line:GetText():find(unitData[1]) then
-        return
-      end
+    if TooltipHasText(self, unitData[1]) then
+      return
     end
-
-    self:AddLine(" ")
-    for i = 1, #unitData do
-      local text = unitData[i]
-      if (i < 2) then
-        local colorCode = GetFirstLineColorCode(self :GetRegions())
-        self:AddLine(colorCode .. text .. "|r", 1, 1, 1, 1)
-      else
-        self:AddLine(text, 1, 1, 1, 1)
-      end
-    end
+    AddTranslatedTooltipData(self, unitData)
   end
 end
 
@@ -659,14 +786,118 @@ function GetUnitData(id)
   return FindData(num_id, "Unit")
 end
 
+local function GetItemIDFromLink(itemLink)
+  if (itemLink == nil or issecretvalue(itemLink)) then
+    return nil
+  end
+  local itemID = string.match(itemLink, 'Hitem:(%d+):')
+  if itemID then
+    return itemID
+  end
+  return string.match(itemLink, 'item:(%d+)')
+end
+
+local function ResolveItemID(value)
+  if type(value) == "number" then
+    return value
+  end
+  if type(value) == "string" then
+    local itemID = GetItemIDFromLink(value)
+    if itemID then
+      return itemID
+    end
+    if C_Item and C_Item.GetItemInfoInstant then
+      local instantItemID = C_Item.GetItemInfoInstant(value)
+      if instantItemID then
+        return instantItemID
+      end
+    end
+  end
+  return nil
+end
+
+local function ResolveMacroSpellID(macroID)
+  local macroSpell1, macroSpell2, macroSpell3 = GetMacroSpell(macroID)
+
+  if type(macroSpell1) == "number" then
+    return macroSpell1
+  end
+  if type(macroSpell2) == "number" then
+    return macroSpell2
+  end
+  if type(macroSpell3) == "number" then
+    return macroSpell3
+  end
+  if type(macroSpell1) == "string" and C_Spell and C_Spell.GetSpellInfo then
+    local spellInfo = C_Spell.GetSpellInfo(macroSpell1)
+    if spellInfo and spellInfo.spellID then
+      return spellInfo.spellID
+    end
+  end
+  return nil
+end
+
+function SetMacroTooltip(self, macroID)
+  if (macroID == nil or issecretvalue(macroID)) then
+    return
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transitem"]=="1") then
+    if self.GetItem then
+      local _, itemLink = self:GetItem()
+      local itemID = GetItemIDFromLink(itemLink)
+      if itemID then
+        SetItemTooltip(self, itemID)
+        return
+      end
+    end
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transspell"]=="1") then
+    if self.GetSpell then
+      local _, spellID = self:GetSpell()
+      if spellID then
+        SetSpellTooltip(self, spellID)
+        return
+      end
+    end
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transitem"]=="1") then
+    local macroItemName, macroItemLink = GetMacroItem(macroID)
+    local macroItemID = ResolveItemID(macroItemLink) or ResolveItemID(macroItemName)
+    if macroItemID then
+      SetItemTooltip(self, macroItemID)
+      return
+    end
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transspell"]=="1") then
+    local macroSpellID = ResolveMacroSpellID(macroID)
+    if macroSpellID then
+      SetSpellTooltip(self, macroSpellID)
+    end
+  end
+end
+
 function OnTooltipSetAction(self, slot)
-  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transitem"]=="0") then
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0") then
     return
   end
 
   local kind, id = GetActionInfo(slot)
   if (kind == "item") then
+    if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then
+      return
+    end
     SetItemTooltip(self, id)
+  elseif (kind == "spell") then
+    if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
+      return
+    end
+    SetSpellTooltip(self, id)
+  elseif (kind == "macro") then
+    SetMacroTooltip(self, id)
   end
 end
 
@@ -691,19 +922,10 @@ end
 function SetItemTooltip(self, itemID)
   local itemData = GetItemData(itemID)
   if ( itemData ) then  
-    local lines = self:NumLines()
-    for i= 1, lines do
-      local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and not issecretvalue(line:GetText()) and line:GetText():find(itemData[1]) then
-        return
-      end
+    if TooltipHasText(self, itemData[1]) then
+      return
     end
-    self:AddLine(" ")
-    for i = 1, #itemData do
-      local region = itemData[i]
-      self:AddLine(region, 1, 1, 1, 1)
-    end
-    self:Show()
+    AddTranslatedTooltipData(self, itemData)
   end
 end
 
@@ -740,21 +962,12 @@ end
 function SetSpellTooltip(self, id)
   local spellData = GetSpellData(id)
   if ( spellData ) then    
-    local lines = self:NumLines()
-    for i= 1, lines do
-      local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and not issecretvalue(line:GetText()) and line:GetText():find(spellData[1]) then
-        return
-      end
+    if TooltipHasText(self, spellData[1]) then
+      return
     end
-  
-    self:AddLine(" ")
-    for i = 1, #spellData do
-      local region = spellData[i]
-      region = ReplaceText(region)
-      self:AddLine(region, 1, 1, 1, 1)
-    end
-    self:Show()
+    AddTranslatedTooltipData(self, spellData, function(region)
+      return ReplaceText(region)
+    end)
   end
 end
 

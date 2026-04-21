@@ -17,6 +17,7 @@ WoWeuCN_Tooltips_Interface = {
     options1   = "额外选项:", 
     transspell = "翻译法术提示", 
     transitem  = "翻译道具提示",
+    nameonly   = "仅显示中文名称（Name only）",
     transunit  = "翻译NPC提示",
     transachievement = "翻译成就面板",
     transadvanced = "高级翻译模式",
