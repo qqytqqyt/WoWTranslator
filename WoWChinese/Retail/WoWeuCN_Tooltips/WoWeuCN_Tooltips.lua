@@ -309,12 +309,12 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 end
 
 local function translateTooltip(tooltip, data, kind)
-  if kind == kinds.unit and data.guid then
+  if kind == kinds.unit and data.guid and not issecretvalue(data.guid) then
     local id = tonumber(data.guid:match("-(%d+)-%x+$"), 10)
     if id and data.guid:match("%a+") ~= "Player" then 
         SetUnitTooltip(tooltip, id)
     end
-  elseif data.id then
+  elseif data.id and not issecretvalue(data.id) then
     local id = data.id
     if type(id) == "table" and #id == 1 then id = id[1] end
     if kind == kinds.spell then
@@ -606,6 +606,10 @@ function OnTooltipUnit(self, tooltip)
   end
 
   local unitGUID = UnitGUID(unit);
+  if (unitGUID == nil or issecretvalue(unitGUID)) then
+    return
+  end
+
   local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-", unitGUID);
   SetUnitTooltip(self, npc_id)
 end
@@ -621,7 +625,7 @@ function SetUnitTooltip(self, id)
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and line:GetText():find(unitData[1]) then
+      if line and line:GetText() and not issecretvalue(line:GetText()) and line:GetText():find(unitData[1]) then
         return
       end
     end
@@ -690,7 +694,7 @@ function SetItemTooltip(self, itemID)
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and line:GetText():find(itemData[1]) then
+      if line and line:GetText() and not issecretvalue(line:GetText()) and line:GetText():find(itemData[1]) then
         return
       end
     end
@@ -739,7 +743,7 @@ function SetSpellTooltip(self, id)
     local lines = self:NumLines()
     for i= 1, lines do
       local line = _G[("GameTooltipTextLeft%d"):format(i)]
-      if line and line:GetText() and line:GetText():find(spellData[1]) then
+      if line and line:GetText() and not issecretvalue(line:GetText()) and line:GetText():find(spellData[1]) then
         return
       end
     end
@@ -783,11 +787,12 @@ local function InitializePlater()
   Plater.db.profile.plate_config.enemynpc.actorname_text_font = defaultChineseFont
   Plater.db.profile.plate_config.enemynpc.big_actorname_text_font = defaultChineseFont
   Plater.db.profile.plate_config.enemynpc.big_actortitle_text_font = defaultChineseFont
-  Plater.db.profile.saved_cvars["nameplateShowFriendlyNPCs"] = 1
-  Plater.db.profile.plate_config ["friendlynpc"].only_names = true
-  Plater.db.profile.plate_config ["friendlynpc"].all_names = true
-  Plater.db.profile.plate_config ["friendlynpc"].relevance_state = 4
-  SetCVar("nameplateShowFriendlyNPCs", 1)
+  if Plater.db.profile.saved_cvars["nameplateShowFriendlyNPCs"] == 1 then
+    Plater.db.profile.plate_config ["friendlynpc"].only_names = true
+    Plater.db.profile.plate_config ["friendlynpc"].all_names = true
+    Plater.db.profile.plate_config ["friendlynpc"].relevance_state = 4
+    SetCVar("nameplateShowFriendlyNPCs", 1)
+  end
   if (not IsInInstance()) then
     SetCVar("nameplateShowFriends", 1)
     Plater.db.profile.saved_cvars["nameplateShowFriends"] = 1

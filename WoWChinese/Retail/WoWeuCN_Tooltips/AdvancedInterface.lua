@@ -303,6 +303,9 @@ function UpdateOverviews()
   local difficultyID = EJ_GetDifficulty()
   local self = EncounterJournal.encounter.overviewFrame
   local overviewSectionID = self.rootOverviewSectionID
+  if not overviewSectionID then
+    return
+  end
   local overviewSectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. overviewSectionID]
   
   if (WoWeuCN_Tooltips_TranslateEncounterJournal and overviewSectionTranslation) then
