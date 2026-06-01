@@ -590,7 +590,7 @@ local function GetTooltipLineStyle(tooltip, index)
     g = g,
     b = b,
     a = a,
-    font = font,
+    font = WoWeuCN_Tooltips_Font1,
     size = size,
     flags = flags
   }
@@ -607,7 +607,7 @@ local function ApplyTooltipLineStyle(tooltip, index, style, applyFont)
   end
 
   if applyFont and style.font and style.size then
-    line:SetFont(style.font, style.size, style.flags)
+    --line:SetFont(style.font, style.size, style.flags)
   end
   if style.r then
     line:SetTextColor(style.r, style.g, style.b, style.a or 1)
@@ -636,6 +636,9 @@ local function AddTranslatedTooltipData(tooltip, translatedData, formatter)
   for i = 2, originalLineCount do
     local line = GetTooltipLeftLine(tooltip, i)
     local lineText = line and line:GetText()
+    if issecretvalue(lineText) then
+      return
+    end
     if lineText and lineText ~= " " then
       local style = GetTooltipLineStyle(tooltip, i)
       if style and not IsMostlyWhite(style) then
@@ -1177,7 +1180,7 @@ function Broadcast()
   WoWeuCN_Tooltips_PS = 1
   WoWeuCN_Quests_PS = 1
 
-  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded.." - |cffa335ee作者："..WoWeuCN_Quests_Messages.author.."|r");
+  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded.." - |cffa335ee作者："..WoWeuCN_Tooltips_Messages.author.."|r");
   
   if (WoWeuCN_Tooltips_N_PS["transnameplate"]~="0") then
     print ("|cffffff00已加入姓名版翻译功能。如需使用请安装<Plater>姓名版插件并开启对应单位血条(V/Ctrl+V/Shift+V)，相关数据会自动导入进Plater中。如需完全关闭请于插件设置里禁用。|r");
