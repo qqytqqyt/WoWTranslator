@@ -29,7 +29,12 @@ function WoWeuCN_Scanner_SlashCommand(msg)
     elseif (msg=="itemscanauto" or msg=="ITEMSCANAUTO") then      
       WoWeuCN_Scanner_ScanInit()
       WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanItemAuto, WoWeuCN_Scanner_Index, 1, 0)
-
+      
+    -- decor auto scan
+    elseif (msg=="decorauto" or msg=="DECORAUTO") then      
+      WoWeuCN_Scanner_ScanInit()
+      WoWeuCN_Scanner_wait(0.1, WoWeuCN_Scanner_ScanDecorAuto, WoWeuCN_Scanner_Index, 1, 0)
+      
     -- item name auto scan
     elseif (msg=="itemnamescanauto" or msg=="ITEMNAMESCANAUTO") then      
       WoWeuCN_Scanner_ScanInit()
