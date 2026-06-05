@@ -5,7 +5,9 @@
 set -euo pipefail
 
 API_BASE="https://wow.curseforge.com/api"
-FLAVORS=(Anniversary Classic MoP Retail)
+# WoWChinese is limited to these flavors; NativeLinks/*/NativeLinks is
+# matched wholesale so new flavors there are picked up automatically.
+WOWCHINESE_FLAVORS=(Anniversary Classic MoP Retail)
 
 # Read a "## Field: value" entry from a .toc, tolerating UTF-8 BOM and CRLF
 toc_field() {
@@ -22,7 +24,10 @@ fi
 declare -a ADDON_DIRS=()
 
 if [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
-  ADDON_DIRS=("WoWChinese/$INPUT_FLAVOR/$INPUT_ADDON")
+  case "$INPUT_ADDON" in
+    NativeLinks) ADDON_DIRS=("NativeLinks/$INPUT_FLAVOR/NativeLinks") ;;
+    *)           ADDON_DIRS=("WoWChinese/$INPUT_FLAVOR/$INPUT_ADDON") ;;
+  esac
 else
   BEFORE="$BEFORE_SHA"
   # New branch / force push: fall back to the parent of the pushed commit
@@ -30,7 +35,8 @@ else
     BEFORE="$(git rev-parse "${AFTER_SHA}~1")"
   fi
   paths=()
-  for f in "${FLAVORS[@]}"; do paths+=("WoWChinese/$f"); done
+  for f in "${WOWCHINESE_FLAVORS[@]}"; do paths+=("WoWChinese/$f"); done
+  paths+=("NativeLinks/*/NativeLinks/*")
   mapfile -t ADDON_DIRS < <(
     git diff --name-only "$BEFORE" "$AFTER_SHA" -- "${paths[@]}" |
       awk -F/ 'NF>=4 {print $1"/"$2"/"$3}' | sort -u
@@ -101,10 +107,11 @@ for dir in "${ADDON_DIRS[@]}"; do
   case "$addon" in
     WoWeuCN_Quests)   project_id="${CF_PROJECT_ID_QUESTS:-}" ;;
     WoWeuCN_Tooltips) project_id="${CF_PROJECT_ID_TOOLTIPS:-}" ;;
+    NativeLinks)      project_id="${CF_PROJECT_ID_NATIVELINKS:-}" ;;
     *) project_id="" ;;
   esac
   if [[ -z "$project_id" ]]; then
-    echo "::error::No CurseForge project id configured for $addon (set repo variable CF_PROJECT_ID_QUESTS / CF_PROJECT_ID_TOOLTIPS)"
+    echo "::error::No CurseForge project id configured for $addon (set repo variable CF_PROJECT_ID_QUESTS / CF_PROJECT_ID_TOOLTIPS / CF_PROJECT_ID_NATIVELINKS)"
     failures=$((failures+1)); echo "::endgroup::"; continue
   fi
 
@@ -124,10 +131,15 @@ for dir in "${ADDON_DIRS[@]}"; do
   # -------------------------------------------------------------------------
   # Package: zip must contain the addon folder at its root
   # -------------------------------------------------------------------------
-  # Display name e.g. "WoWeuCN-Quests MoP 5.5.4.0" (toc Version already
-  # carries the flavor prefix where relevant; Retail is plain "12.0.5.1")
-  display_name="$title $toc_version"
-  zip_name="${addon}-$(echo "$toc_version" | tr ' /' '--').zip"
+  # Display name e.g. "WoWeuCN-Quests MoP 5.5.4.0". WoWeuCN tocs already
+  # carry the flavor prefix in Version; NativeLinks tocs do not, so prepend
+  # the flavor folder name for non-Retail builds.
+  label="$toc_version"
+  if [[ "$flavor" != "Retail" && "$toc_version" != *"$flavor"* ]]; then
+    label="$flavor $toc_version"
+  fi
+  display_name="$title $label"
+  zip_name="${addon}-$(echo "$label" | tr ' /' '--').zip"
   zip_path="/tmp/cf_out/$zip_name"
   rm -f "$zip_path"
   (cd "$(dirname "$dir")" && zip -r -q "$zip_path" "$addon" -x '*.git*')

@@ -1,8 +1,8 @@
-﻿## Interface: 110207
-## X-Min-Interface: 110207
+﻿## Interface: 120001
+## X-Min-Interface: 120001
 
 ## Title: Native Links
-## Version: 11.2.7.0
+## Version: 12.0.0.0
 ## Notes_en: Put links in English while you are using a World of Warcraft client in a different language. Also display the English name in tooltips.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
