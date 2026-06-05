@@ -1,8 +1,8 @@
-﻿## Interface: 50503
-## X-Min-Interface: 50503
+﻿## Interface: 50504
+## X-Min-Interface: 50504
 
 ## Title: Native Links
-## Version: 5.5.3.1
+## Version: 5.5.4.0
 ## Notes_en: Put links in English while you are using a World of Warcraft client in a different language. Also display the English name in tooltips.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com

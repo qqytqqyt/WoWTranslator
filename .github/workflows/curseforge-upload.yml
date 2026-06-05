@@ -1,4 +1,4 @@
-name: Upload WoWChinese addons to CurseForge
+name: Upload WoW addons to CurseForge
 
 on:
   push:
@@ -8,6 +8,7 @@ on:
       - 'WoWChinese/Classic/**'
       - 'WoWChinese/MoP/**'
       - 'WoWChinese/Retail/**'
+      - 'NativeLinks/*/NativeLinks/**'
   workflow_dispatch:
     inputs:
       flavor:
@@ -19,7 +20,7 @@ on:
         description: 'Addon to upload'
         required: true
         type: choice
-        options: [WoWeuCN_Quests, WoWeuCN_Tooltips]
+        options: [WoWeuCN_Quests, WoWeuCN_Tooltips, NativeLinks]
       changelog:
         description: 'Changelog override (optional, markdown)'
         required: false
@@ -39,6 +40,7 @@ jobs:
           CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
           CF_PROJECT_ID_QUESTS: ${{ vars.CF_PROJECT_ID_QUESTS }}
           CF_PROJECT_ID_TOOLTIPS: ${{ vars.CF_PROJECT_ID_TOOLTIPS }}
+          CF_PROJECT_ID_NATIVELINKS: ${{ vars.CF_PROJECT_ID_NATIVELINKS }}
           EVENT_NAME: ${{ github.event_name }}
           BEFORE_SHA: ${{ github.event.before }}
           AFTER_SHA: ${{ github.sha }}
