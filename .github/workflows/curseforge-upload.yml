@@ -1,0 +1,48 @@
+name: Upload WoWChinese addons to CurseForge
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'WoWChinese/Anniversary/**'
+      - 'WoWChinese/Classic/**'
+      - 'WoWChinese/MoP/**'
+      - 'WoWChinese/Retail/**'
+  workflow_dispatch:
+    inputs:
+      flavor:
+        description: 'Game flavor to upload'
+        required: true
+        type: choice
+        options: [Anniversary, Classic, MoP, Retail]
+      addon:
+        description: 'Addon to upload'
+        required: true
+        type: choice
+        options: [WoWeuCN_Quests, WoWeuCN_Tooltips]
+      changelog:
+        description: 'Changelog override (optional, markdown)'
+        required: false
+        type: string
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Package and upload changed addons
+        env:
+          CURSEFORGE_TOKEN: ${{ secrets.CURSEFORGE_TOKEN }}
+          CF_PROJECT_ID_QUESTS: ${{ vars.CF_PROJECT_ID_QUESTS }}
+          CF_PROJECT_ID_TOOLTIPS: ${{ vars.CF_PROJECT_ID_TOOLTIPS }}
+          EVENT_NAME: ${{ github.event_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+          INPUT_FLAVOR: ${{ inputs.flavor }}
+          INPUT_ADDON: ${{ inputs.addon }}
+          INPUT_CHANGELOG: ${{ inputs.changelog }}
+        run: bash .github/scripts/curseforge-upload.sh
