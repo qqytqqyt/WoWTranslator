@@ -155,7 +155,7 @@ namespace TextContentToolkit
 
                 foreach (var inputPath in m_questConfig.QuestCacheListRetail)
                 {
-                    QuestCacheReader.ReadQuestCacheRetail(inputPath, cachedQuests, objectives);
+                    SmartQuestCacheReader.ReadQuestCache(inputPath, cachedQuests, objectives);
                 }
             }
 
@@ -163,7 +163,7 @@ namespace TextContentToolkit
             {
                 foreach (var inputPath in m_questConfig.QuestCacheListClassic)
                 {
-                    QuestCacheReader.ReadQuestCache(inputPath, cachedQuests, objectives);
+                    SmartQuestCacheReader.ReadQuestCache(inputPath, cachedQuests, objectives);
                 }
             }
            

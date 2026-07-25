@@ -73,6 +73,7 @@
     <Compile Include="Readers\TooltipsReader.cs" />
     <Compile Include="Readers\UnitReader.cs" />
     <Compile Include="Readers\QuestReader.cs" />
+    <Compile Include="Readers\SmartQuestCacheReader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Quest.cs" />
@@ -81,6 +82,13 @@
     <Compile Include="Utils\Options.cs" />
     <Compile Include="Utils\StringUtils.cs" />
     <Compile Include="Models\Tooltip.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WdbToolkit\WdbToolkit.csproj">
+      <Project>{3E7C9A64-52D1-4C8B-9F3A-8B4E2D9C1A57}</Project>
+      <Name>WdbToolkit</Name>
+      <SetTargetFramework>TargetFramework=net472</SetTargetFramework>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
