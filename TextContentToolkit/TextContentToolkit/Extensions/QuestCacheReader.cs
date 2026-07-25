@@ -31,12 +31,12 @@ namespace TextContentToolkit.Readers
                             index++;
                             var expectedTitle = string.Empty;
                             Console.WriteLine(index);
-                            if (index == 193)
+                            if (index == 27)
                                 Console.Write(true);
                             var id = dbReader.ReadInt32();
                             if (id == 8274)
                                 Console.Write(true);
-                            if (id == 78752)
+                            if (id == 33007)
                                 Console.WriteLine(true);
                             if (idTitles.ContainsKey(id.ToString()))
                                 expectedTitle = idTitles[id.ToString()];
@@ -56,12 +56,13 @@ namespace TextContentToolkit.Readers
                             dbReader.ReadByte(16);
 
                             dbReader.ReadByte(4);
+                            dbReader.ReadByte(8);
 
                             var numObjectives = dbReader.ReadInt32();
                             var check3 = dbReader.ReadByte(8);
                             var check4 = dbReader.ReadByte(8);
                             var check6 = dbReader.ReadByte(12);
-                            var check7 = dbReader.ReadByte(8);
+                            var check7 = dbReader.ReadByte(4);
 
                             var attemptPosition = ms.Position;
                             var attempCount = 1;
@@ -101,8 +102,8 @@ namespace TextContentToolkit.Readers
                                     descriptionLength <<= 1;
                                     descriptionLength |= (lengthBytes[4] & 0x80) >> 7;
 
-                                    //if (numObjectives > 1)
-                                    //    Console.Write(true);
+                                    if (numObjectives > 1)
+                                        Console.Write(true);
 
                                     for (int i = 0; i < numObjectives; ++i)
                                     {
@@ -110,6 +111,7 @@ namespace TextContentToolkit.Readers
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(20);
+                                        dbReader.ReadByte(3);
                                         var numVisual = dbReader.ReadInt32();
                                         //if (numVisual != 0 && i > 0)
                                         //    Console.Write(true);
@@ -147,7 +149,7 @@ namespace TextContentToolkit.Readers
                                     var descriptionBytes = dbReader.ReadByte(descriptionLength);
                                     description = new string(Encoding.UTF8.GetChars(descriptionBytes));
 
-                                    if (!string.IsNullOrEmpty(expectedTitle) && expectedTitle != title || titleLength % 3 != 0)
+                                    if (!string.IsNullOrEmpty(expectedTitle) && expectedTitle != title || string.IsNullOrEmpty(expectedTitle) && titleLength % 3 != 0)
                                     {
                                         title = string.Empty;
                                     }
@@ -284,7 +286,7 @@ namespace TextContentToolkit.Readers
                             Console.WriteLine(index);
                             var expectedTitle = string.Empty;
                             var id = dbReader.ReadInt32();
-                            if (id == 81514)
+                            if (id == 80671)
                                 Console.Write(true);
                             if (idTitles.ContainsKey(id.ToString()))
                                 expectedTitle = idTitles[id.ToString()];
@@ -305,6 +307,8 @@ namespace TextContentToolkit.Readers
                             dbReader.ReadByte(0x20);
                             dbReader.ReadByte(16);
                             var check5 = dbReader.ReadByte(4);
+                            dbReader.ReadByte(4);
+                            dbReader.ReadByte(4);
                             var numObjectives = dbReader.ReadInt32();
                             var check3 = dbReader.ReadByte(8);
                             var check4 = dbReader.ReadByte(8);
@@ -317,11 +321,11 @@ namespace TextContentToolkit.Readers
                                 //dbReader.ReadByte((numObjectives - 1) * 6);
                             }
                             var attemptPosition = ms.Position;
-                            var attempCount = 4;
+                            var attempCount = 1;
                             var title = string.Empty;
                             var objective = string.Empty;
                             var description = string.Empty;
-                            dbReader.ReadByte(4);
+                            dbReader.ReadByte(12);
                             while (true)
                             {
                                 var abort = false;
@@ -342,6 +346,9 @@ namespace TextContentToolkit.Readers
                                     objectiveLength <<= 5;
                                     objectiveLength |= (lengthBytes[2] & 0xF8) >> 3;
 
+                                    if (titleLength == 12 && objectiveLength == 48)
+                                        Console.Write(true);
+
                                     var descriptionLength = 0;
                                     descriptionLength |= lengthBytes[2] & 0x07;
                                     descriptionLength <<= 8;
@@ -360,17 +367,30 @@ namespace TextContentToolkit.Readers
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(1);
                                         dbReader.ReadByte(20);
-                                        dbReader.ReadByte(1);
-                                        dbReader.ReadByte(1);
-                                        dbReader.ReadByte(1);
-                                        var numVisual = dbReader.ReadInt32();
+                                        dbReader.ReadByte(7);
+                                        var numVisual = dbReader.ReadInt16();
+                                        dbReader.ReadByte(4);
+                                        dbReader.ReadInt16();
+                                        //while (id == 78073 && numVisual != 1)
+                                        //{
+                                        //    ms.Position = tempPos;
+                                        //    dbReader.ReadByte(temp++);
+                                        //    numVisual = dbReader.ReadInt32();
+                                        //}
+                                        //if (id == 78073)
+                                        //    dbReader.ReadInt32();
                                         //if (numVisual != 0 && i > 0)
                                         //    Console.Write(true);
                                         //if (numVisual < 0)
                                         //    Console.Write(true);
+                                        var tempPos = ms.Position;
+                                        var temp = 1;
                                         for (int j = 0; j < numVisual; ++j)
                                             dbReader.ReadInt32();
+
                                         var objectiveDescriptionByte = dbReader.ReadByte();
+
+                                        dbReader.ReadByte(1);
                                         if (objectiveDescriptionByte > 0)
                                         {
                                             var objectiveDescriptionBytes = dbReader.ReadByte(objectiveDescriptionByte);
@@ -385,10 +405,19 @@ namespace TextContentToolkit.Readers
                                     objective = new string(Encoding.UTF8.GetChars(objectiveBytes));
                                     var descriptionBytes = dbReader.ReadByte(descriptionLength);
                                     description = new string(Encoding.UTF8.GetChars(descriptionBytes));
+                                    if (title == "是你的房屋")
+                                        Console.Write(true);
+
+                                    if (description.Contains("去"))
+                                        Console.Write(true);
 
                                     if (!string.IsNullOrEmpty(expectedTitle) && expectedTitle != title || titleLength % 3 != 0)
                                     {
                                         title = string.Empty;
+                                    }
+                                    else if (numObjectives > 0)
+                                    {
+                                        Console.WriteLine(true);
                                     }
 
                                 }
@@ -399,7 +428,7 @@ namespace TextContentToolkit.Readers
                                         break;
 
                                     dbReader.ReadByte(attempCount);
-                                    attempCount += 4;
+                                    attempCount += 1;
                                     continue;
                                 }
 
@@ -412,7 +441,7 @@ namespace TextContentToolkit.Readers
                                         break;
 
                                     dbReader.ReadByte(attempCount);
-                                    attempCount += 4;
+                                    attempCount += 1;
                                     continue;
                                 }
 

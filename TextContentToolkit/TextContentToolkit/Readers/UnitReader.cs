@@ -84,6 +84,7 @@ namespace TextContentToolkit
         protected override void Write(string outputPath, List<string> inputPaths, OutputMode outputMode, string locale = "zhCN")
         {
             var unitTipList = new Dictionary<string, Tooltip>();
+            MergeFromBaselineOutput(outputPath, unitTipList);
 
             foreach (var inputPath in inputPaths)
             {

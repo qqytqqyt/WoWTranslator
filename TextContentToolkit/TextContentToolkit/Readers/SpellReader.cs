@@ -149,6 +149,8 @@ namespace TextContentToolkit
         protected override void Write(string outputPath, List<string> inputPaths, OutputMode outputMode, string locale = "zhCN")
         {
             var spellTipList = new Dictionary<string, Tooltip>();
+            MergeFromBaselineOutput(outputPath, spellTipList);
+
             foreach (var inputPath in inputPaths)
             {
                 Read(inputPath, spellTipList);

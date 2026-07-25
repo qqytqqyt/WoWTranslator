@@ -10,6 +10,16 @@ namespace TextContentToolkit.Configs
 
         public string OutputPath { get; set; }
 
+        public bool UseOutputAsBaseline { get; set; } = true;
+
+        public bool AutoDetectLatestInputs { get; set; } = true;
+
+        public string InputFolderRetail { get; set; }
+
+        public string InputFolderClassic { get; set; }
+
+        public string InputFilePattern { get; set; } = "*.lua";
+
         public OutputMode OutputMode { get; set; } = OutputMode.WoWeuCN;
 
         public string QuestieDir { get; set; }
