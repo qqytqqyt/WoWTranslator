@@ -8,22 +8,13 @@ namespace TextContentToolkit.Readers
 {
     /// <summary>
     /// Reads quest cache (questcache.wdb) files of any client build - retail or classic -
-    /// via the self-calibrating WdbToolkit library, replacing the per-version parsers in
-    /// <see cref="QuestCacheReader"/>. The known titles from the scanner lua files are
-    /// passed to the parser as a corpus, which anchors calibration and validates results.
+    /// via the self-calibrating WdbToolkit library. The known titles (previous output plus
+    /// scanner objectives) are passed as a corpus, anchoring calibration and validating results.
     /// </summary>
     public static class SmartQuestCacheReader
     {
-        public static void ReadQuestCache(string fileName, List<Quest> questObjects, List<QuestObjectives> questObjectives)
+        public static void ReadQuestCache(string fileName, List<Quest> questObjects, IReadOnlyDictionary<int, string> expectedTitles)
         {
-            var expectedTitles = new Dictionary<int, string>();
-            foreach (var objective in questObjectives)
-            {
-                int id;
-                if (int.TryParse(objective.Id, out id) && !string.IsNullOrEmpty(objective.Title))
-                    expectedTitles[id] = objective.Title;
-            }
-
             var options = new QuestCacheParseOptions { ExpectedTitles = expectedTitles };
             var result = QuestCacheParser.ParseFile(fileName, options);
 

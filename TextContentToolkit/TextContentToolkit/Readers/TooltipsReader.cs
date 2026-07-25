@@ -3,53 +3,55 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
-using TextContentToolkit.Configs;
 using TextContentToolkit.Models;
 using TextContentToolkit.Utils;
 
 namespace TextContentToolkit.Readers
 {
+    /// <summary>
+    /// Base class of the item/spell/unit/achievement readers. Executes the shared flow:
+    /// load the previous output as baseline, apply the new inputs on top (new data wins
+    /// per record id), write the merged WoWeuCN output.
+    /// </summary>
     public abstract class TooltipsReader
     {
-        private static readonly Regex VersionRegex = new Regex(@"(?<!\d)(\d{4,})(?!\d)", RegexOptions.Compiled);
         private static readonly Regex OutputEntryRegex = new Regex("^\\s*\"(?<payload>.*)\",\\s*--(?<id>\\d+)\\s*$", RegexOptions.Compiled);
-        private static readonly Regex SegmentRegex = new Regex(@"[._-](\d+)$", RegexOptions.Compiled);
 
-        protected TooltipsConfig TooltipsConfig { get; set; }
-
-        public void Execute()
+        public void Execute(IEnumerable<string> inputPaths, string baselinePath, string outputPath)
         {
-            var inputPaths = ResolveInputPaths();
-            Write(TooltipsConfig.OutputPath, inputPaths, TooltipsConfig.OutputMode);
+            var tips = new Dictionary<string, Tooltip>();
+            LoadBaseline(baselinePath, tips);
+
+            foreach (var inputPath in inputPaths)
+                Read(inputPath, tips);
+
+            WoWeuCNTooltipWriter.Write(outputPath, Profile, tips);
         }
 
-        public void ExecuteOnQuestieFolder()
-        {
-            var dirInfo = new DirectoryInfo(TooltipsConfig.QuestieDir);
+        protected abstract void Read(string inputPath, Dictionary<string, Tooltip> tips);
 
-            foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
-            {
-                var outputPath = Path.Combine(TooltipsConfig.QuestieDir, "output", fileInfo.Name);
-                var inputPaths = new List<string> { fileInfo.FullName };
-                var locale = fileInfo.Name.Split('.')[0];
-                Write(outputPath, inputPaths, OutputMode.Questie, locale);
-            }
+        internal abstract WoWeuCNWriterProfile Profile { get; }
+
+        /// <summary>Whether a scanner SavedVariables table belongs to this reader's category.</summary>
+        protected abstract bool IsRelevantSection(string tableName);
+
+        /// <summary>Reads an input file restricted to this category's scanner sections.</summary>
+        protected IEnumerable<string> ReadCategoryLines(string inputPath)
+        {
+            return ScannerSectionFilter.FilterCategoryLines(File.ReadAllLines(inputPath), IsRelevantSection);
         }
 
-        protected void MergeFromBaselineOutput(string outputPath, Dictionary<string, Tooltip> tipsById)
+        /// <summary>Loads the "payload", --id entries of a previous output as the merge baseline.</summary>
+        protected static void LoadBaseline(string baselinePath, Dictionary<string, Tooltip> tips)
         {
-            if (!TooltipsConfig.UseOutputAsBaseline || string.IsNullOrWhiteSpace(outputPath) || !File.Exists(outputPath))
-            {
+            if (string.IsNullOrWhiteSpace(baselinePath) || !File.Exists(baselinePath))
                 return;
-            }
 
-            foreach (var line in File.ReadLines(outputPath))
+            foreach (var line in File.ReadLines(baselinePath))
             {
                 var match = OutputEntryRegex.Match(line);
                 if (!match.Success)
-                {
                     continue;
-                }
 
                 var id = match.Groups["id"].Value;
                 var payload = match.Groups["payload"].Value;
@@ -63,176 +65,35 @@ namespace TextContentToolkit.Readers
                     });
                 }
 
-                tipsById[id] = tooltip;
+                tips[id] = tooltip;
             }
         }
 
-        private List<string> ResolveInputPaths()
+        /// <summary>Stores a parsed record; an empty record never clobbers existing data for the same id.</summary>
+        protected static void Store(Dictionary<string, Tooltip> tips, Tooltip tooltip)
         {
-            var configuredPaths = (TooltipsConfig.VersionMode == VersionMode.Retail
-                    ? TooltipsConfig.ToolTipDataListRetail
-                    : TooltipsConfig.ToolTipDataListClassic)
-                .Where(path => !string.IsNullOrWhiteSpace(path))
-                .Select(Path.GetFullPath)
-                .Distinct(StringComparer.OrdinalIgnoreCase)
-                .ToList();
+            if (!tooltip.TooltipLines.Any() && tips.ContainsKey(tooltip.Id))
+                return;
 
-            if (!TooltipsConfig.AutoDetectLatestInputs)
-            {
-                return configuredPaths;
-            }
-
-            var autoDetectedPaths = ResolveLatestInputFiles(configuredPaths);
-            return autoDetectedPaths.Any() ? autoDetectedPaths : configuredPaths;
+            tips[tooltip.Id] = tooltip;
         }
 
-        private List<string> ResolveLatestInputFiles(List<string> configuredPaths)
+        /// <summary>Reads the ids of a Questie filter file ("[id] = ..." lines).</summary>
+        protected static HashSet<string> ReadQuestieFilter(string filterPath)
         {
-            var inputDirectory = ResolveInputDirectory(configuredPaths);
-            if (string.IsNullOrWhiteSpace(inputDirectory) || !Directory.Exists(inputDirectory))
+            var validIds = new HashSet<string>();
+            if (string.IsNullOrEmpty(filterPath))
+                return validIds;
+
+            foreach (var line in File.ReadAllLines(filterPath))
             {
-                return new List<string>();
-            }
-
-            var pattern = string.IsNullOrWhiteSpace(TooltipsConfig.InputFilePattern)
-                ? "*.lua"
-                : TooltipsConfig.InputFilePattern;
-
-            var outputFullPath = string.IsNullOrWhiteSpace(TooltipsConfig.OutputPath)
-                ? string.Empty
-                : Path.GetFullPath(TooltipsConfig.OutputPath);
-
-            var filePrefix = ResolveFilePrefix(configuredPaths);
-            var candidates = new List<DetectedInputFile>();
-
-            foreach (var filePath in Directory.GetFiles(inputDirectory, pattern))
-            {
-                if (!string.IsNullOrWhiteSpace(outputFullPath) &&
-                    filePath.Equals(outputFullPath, StringComparison.OrdinalIgnoreCase))
-                {
+                if (!line.Trim().StartsWith("["))
                     continue;
-                }
 
-                var fileName = Path.GetFileName(filePath);
-                if (fileName.IndexOf("_output_", StringComparison.OrdinalIgnoreCase) >= 0)
-                {
-                    continue;
-                }
-
-                if (!string.IsNullOrWhiteSpace(filePrefix) &&
-                    !fileName.StartsWith(filePrefix, StringComparison.OrdinalIgnoreCase))
-                {
-                    continue;
-                }
-
-                var fileNameWithoutExt = Path.GetFileNameWithoutExtension(filePath);
-                var versionMatches = VersionRegex.Matches(fileNameWithoutExt);
-                if (versionMatches.Count == 0)
-                {
-                    continue;
-                }
-
-                int version;
-                if (!int.TryParse(versionMatches[versionMatches.Count - 1].Value, out version))
-                {
-                    continue;
-                }
-
-                var segment = 0;
-                var segmentMatch = SegmentRegex.Match(fileNameWithoutExt);
-                if (segmentMatch.Success)
-                {
-                    int.TryParse(segmentMatch.Groups[1].Value, out segment);
-                }
-
-                candidates.Add(new DetectedInputFile
-                {
-                    Path = Path.GetFullPath(filePath),
-                    Name = fileName,
-                    Version = version,
-                    Segment = segment
-                });
+                validIds.Add(line.FirstBetween("[", "]"));
             }
 
-            if (!candidates.Any())
-            {
-                return new List<string>();
-            }
-
-            var latestVersion = candidates.Max(c => c.Version);
-            return candidates
-                .Where(c => c.Version == latestVersion)
-                .OrderBy(c => c.Segment)
-                .ThenBy(c => c.Name, StringComparer.OrdinalIgnoreCase)
-                .Select(c => c.Path)
-                .ToList();
-        }
-
-        private string ResolveInputDirectory(List<string> configuredPaths)
-        {
-            var configuredInputDirectory = TooltipsConfig.VersionMode == VersionMode.Retail
-                ? TooltipsConfig.InputFolderRetail
-                : TooltipsConfig.InputFolderClassic;
-
-            if (!string.IsNullOrWhiteSpace(configuredInputDirectory))
-            {
-                return Path.GetFullPath(configuredInputDirectory);
-            }
-
-            var firstConfiguredPath = configuredPaths.FirstOrDefault();
-            if (!string.IsNullOrWhiteSpace(firstConfiguredPath))
-            {
-                var configuredDirectory = Path.GetDirectoryName(firstConfiguredPath);
-                if (!string.IsNullOrWhiteSpace(configuredDirectory))
-                {
-                    return configuredDirectory;
-                }
-            }
-
-            if (string.IsNullOrWhiteSpace(TooltipsConfig.OutputPath))
-            {
-                return string.Empty;
-            }
-
-            return Path.GetDirectoryName(Path.GetFullPath(TooltipsConfig.OutputPath));
-        }
-
-        private string ResolveFilePrefix(List<string> configuredPaths)
-        {
-            if (!string.IsNullOrWhiteSpace(TooltipsConfig.OutputPath))
-            {
-                var outputName = Path.GetFileNameWithoutExtension(TooltipsConfig.OutputPath);
-                var markerIndex = outputName.IndexOf("_output_", StringComparison.OrdinalIgnoreCase);
-                if (markerIndex > 0)
-                {
-                    return outputName.Substring(0, markerIndex);
-                }
-            }
-
-            var firstConfiguredPath = configuredPaths.FirstOrDefault();
-            if (string.IsNullOrWhiteSpace(firstConfiguredPath))
-            {
-                return string.Empty;
-            }
-
-            var fileName = Path.GetFileNameWithoutExtension(firstConfiguredPath);
-            var versionMatch = VersionRegex.Match(fileName);
-            return versionMatch.Success
-                ? fileName.Substring(0, versionMatch.Index)
-                : fileName;
-        }
-
-        protected abstract void Write(string outputPath, List<string> inputPaths, OutputMode outputMode, string locale = "zhCN");
-
-        private sealed class DetectedInputFile
-        {
-            public string Path { get; set; }
-
-            public string Name { get; set; }
-
-            public int Version { get; set; }
-
-            public int Segment { get; set; }
+            return validIds;
         }
     }
 }
