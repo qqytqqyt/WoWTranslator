@@ -1,4 +1,6 @@
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Text;
 
 namespace WdbToolkit
@@ -29,11 +31,23 @@ namespace WdbToolkit
             result.Stats.CorpusEntries = corpusTitleBytes == null ? 0 : corpusTitleBytes.Count;
             result.Stats.TotalRecords = file.Records.Count;
 
+            Trace(options, string.Format("{0}: build {1}, {2} records, corpus {3} titles",
+                Path.GetFileName(file.FilePath ?? "<memory>"), file.Header.ClientBuild,
+                file.Records.Count, result.Stats.CorpusEntries));
+
+            var watch = Stopwatch.StartNew();
             var layout = QuestCacheCalibrator.Calibrate(file.Records, options, corpusTitleBytes);
             result.Layout = layout;
+            Trace(options, string.Format("calibrated in {0} ms: {1}", watch.ElapsedMilliseconds, layout.Describe()));
 
+            watch.Restart();
+            var processed = 0;
             foreach (var record in file.Records)
             {
+                processed++;
+                if (processed % 10000 == 0)
+                    Trace(options, string.Format("... {0}/{1} records", processed, file.Records.Count));
+
                 if (record.Payload.Length < layout.Spec.HeaderSizeBytes)
                 {
                     result.Stats.EmptyRecords++;
@@ -83,7 +97,19 @@ namespace WdbToolkit
                 }
             }
 
+            Trace(options, string.Format(
+                "extracted {0}/{1} in {2} ms (failed {3}, empty {4}, corpus {5} matched / {6} mismatched)",
+                result.Stats.Parsed, result.Stats.TotalRecords, watch.ElapsedMilliseconds,
+                result.Stats.Failed, result.Stats.EmptyRecords,
+                result.Stats.CorpusMatched, result.Stats.CorpusMismatched));
+
             return result;
+        }
+
+        private static void Trace(QuestCacheParseOptions options, string message)
+        {
+            if (options.Trace != null)
+                options.Trace(message);
         }
 
         private static Dictionary<int, byte[]> BuildCorpusBytes(IReadOnlyDictionary<int, string> expectedTitles)

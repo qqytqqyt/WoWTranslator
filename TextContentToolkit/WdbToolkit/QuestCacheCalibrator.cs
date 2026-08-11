@@ -11,15 +11,16 @@ namespace WdbToolkit
     /// Key observations that make this generic across builds:
     ///  - Each record ends with the concatenated string bytes (title, objectives text,
     ///    description, ...) whose lengths are bit-packed in a small header block.
-    ///  - The block sits after a fixed-size numeric struct whose size is what changes
-    ///    between client builds, so its offset is (nearly) constant within one file.
     ///  - Records normally have no data after the strings, so the strings are anchored
     ///    to the end of the record.
+    ///  - The block position follows one of two schemes (<see cref="QuestCacheLayoutMode"/>):
+    ///    at a fixed offset after the numeric struct (all builds up to 11.x/68256), or
+    ///    immediately before the strings (observed from retail build 68914).
     ///
-    /// Calibration therefore scans candidate header offsets on a sample of records and
-    /// keeps the offset that most consistently produces valid UTF-8 for every string
-    /// field. When an expected-title corpus is available, the title bytes are located
-    /// directly in the payload, which also measures the trailing size exactly.
+    /// Calibration builds a candidate layout for each scheme from a sample of records,
+    /// then verifies both by direct extraction and keeps the one that explains the most
+    /// payload bytes - a wrong scheme only matches tiny coincidental fragments, so the
+    /// comparison is decisive even without a title corpus.
     /// </summary>
     public static class QuestCacheCalibrator
     {
@@ -37,16 +38,38 @@ namespace WdbToolkit
 
             foreach (var spec in specs)
             {
-                var layout = CalibrateSpec(records, options, corpusTitleBytes, spec, diagnostics);
-                if (layout == null)
+                var sample = BuildSample(records, options, spec);
+                if (sample.Count == 0)
+                {
+                    diagnostics.AppendLine("spec " + spec.Name + ": no usable records.");
                     continue;
+                }
 
-                if (best == null || layout.Confidence * layout.SupportingRecords >
-                    best.Confidence * best.SupportingRecords)
-                    best = layout;
+                Trace(options, "calibrating spec " + spec.Name + " on " + sample.Count + " of " +
+                               records.Count + " records");
+
+                var candidates = new List<QuestCacheLayout>();
+                var fixedOffset = CalibrateFixedOffset(sample, spec, options, corpusTitleBytes);
+                if (fixedOffset != null)
+                    candidates.Add(fixedOffset);
+
+                var beforeStrings = CalibrateHeaderBeforeStrings(sample, spec, options, corpusTitleBytes);
+                if (beforeStrings != null)
+                    candidates.Add(beforeStrings);
+
+                foreach (var candidate in candidates)
+                {
+                    Verify(sample, candidate, options, corpusTitleBytes);
+                    var line = candidate.Describe() + " score=" + candidate.VerificationScore.ToString("F0");
+                    diagnostics.AppendLine(line);
+                    Trace(options, "candidate " + line);
+
+                    if (best == null || candidate.VerificationScore > best.VerificationScore)
+                        best = candidate;
+                }
             }
 
-            if (best == null || best.SupportingRecords == 0)
+            if (best == null || best.SupportingRecords == 0 || best.VerificationScore <= 0)
                 throw new QuestCacheFormatException(
                     "Could not infer the quest record layout - the string block format may have changed. " +
                     "Details: " + diagnostics);
@@ -54,20 +77,18 @@ namespace WdbToolkit
             return best;
         }
 
-        private static QuestCacheLayout CalibrateSpec(
-            IReadOnlyList<WdbCacheRecord> records,
-            QuestCacheParseOptions options,
-            IReadOnlyDictionary<int, byte[]> corpusTitleBytes,
-            QuestStringBlockSpec spec,
-            StringBuilder diagnostics)
+        private static void Trace(QuestCacheParseOptions options, string message)
         {
-            var headerSize = spec.HeaderSizeBytes;
-            var usable = records.Where(r => r.Payload.Length >= headerSize + 4).ToList();
+            if (options.Trace != null)
+                options.Trace(message);
+        }
+
+        private static List<WdbCacheRecord> BuildSample(
+            IReadOnlyList<WdbCacheRecord> records, QuestCacheParseOptions options, QuestStringBlockSpec spec)
+        {
+            var usable = records.Where(r => r.Payload.Length >= spec.HeaderSizeBytes + 4).ToList();
             if (usable.Count == 0)
-            {
-                diagnostics.AppendLine("spec " + spec.Name + ": no usable records.");
-                return null;
-            }
+                return usable;
 
             var sampleSize = Math.Min(options.CalibrationSampleSize, usable.Count);
             var step = Math.Max(1, usable.Count / sampleSize);
@@ -75,6 +96,20 @@ namespace WdbToolkit
             for (int i = 0; i < usable.Count && sample.Count < sampleSize; i += step)
                 sample.Add(usable[i]);
 
+            return sample;
+        }
+
+        /// <summary>
+        /// Candidate layout for <see cref="QuestCacheLayoutMode.HeaderAtFixedOffset"/>:
+        /// votes for every header offset that consistently produces valid UTF-8 for all
+        /// string fields, weighted by decoded byte count so coincidental matches lose.
+        /// </summary>
+        private static QuestCacheLayout CalibrateFixedOffset(
+            List<WdbCacheRecord> sample,
+            QuestStringBlockSpec spec,
+            QuestCacheParseOptions options,
+            IReadOnlyDictionary<int, byte[]> corpusTitleBytes)
+        {
             var offsetWeights = new Dictionary<int, long>();
             var trailingCounts = new Dictionary<int, int>();
             var supporting = 0;
@@ -95,11 +130,7 @@ namespace WdbToolkit
             }
 
             if (offsetWeights.Count == 0)
-            {
-                diagnostics.AppendLine("spec " + spec.Name + ": no candidate offsets found in " +
-                                       sample.Count + " sampled records.");
                 return null;
-            }
 
             var peak = offsetWeights.OrderByDescending(kv => kv.Value).First();
             var peakWeight = peak.Value;
@@ -119,9 +150,10 @@ namespace WdbToolkit
             if (trailingCounts.Count > 0)
                 trailing = trailingCounts.OrderByDescending(kv => kv.Value).First().Key;
 
-            var layout = new QuestCacheLayout
+            return new QuestCacheLayout
             {
                 Spec = spec,
+                Mode = QuestCacheLayoutMode.HeaderAtFixedOffset,
                 BaseStringHeaderOffset = peak.Key,
                 TrailingSize = trailing,
                 HasHeaderOffsetDrift = cluster.Count > 1,
@@ -130,9 +162,188 @@ namespace WdbToolkit
                 SupportingRecords = supporting,
                 OffsetWeights = offsetWeights,
             };
+        }
 
-            diagnostics.AppendLine("spec " + spec.Name + ": " + layout.Describe());
-            return layout;
+        /// <summary>
+        /// Candidate layout for <see cref="QuestCacheLayoutMode.HeaderBeforeStrings"/>:
+        /// per record the block offset solves offset + blockSize + sum(lengths) + trailing
+        /// == payload length, so only the trailing size needs calibrating.
+        /// </summary>
+        private static QuestCacheLayout CalibrateHeaderBeforeStrings(
+            List<WdbCacheRecord> sample,
+            QuestStringBlockSpec spec,
+            QuestCacheParseOptions options,
+            IReadOnlyDictionary<int, byte[]> corpusTitleBytes)
+        {
+            var headerSize = spec.HeaderSizeBytes;
+            var trailingCounts = new Dictionary<int, int>();
+            var supporting = 0;
+            var lengths = new int[spec.Fields.Count];
+
+            foreach (var record in sample)
+            {
+                var payload = record.Payload;
+                byte[] titleBytes = null;
+                if (corpusTitleBytes != null)
+                    corpusTitleBytes.TryGetValue(record.Id, out titleBytes);
+
+                var contributed = false;
+                if (titleBytes != null && titleBytes.Length > 0)
+                {
+                    // The title starts right after the block: offset = titlePos - blockSize.
+                    var searchFrom = 0;
+                    for (int occurrence = 0; occurrence < 8; occurrence++)
+                    {
+                        var titlePos = IndexOf(payload, titleBytes, searchFrom);
+                        if (titlePos < 0)
+                            break;
+
+                        searchFrom = titlePos + 1;
+
+                        var offset = titlePos - headerSize;
+                        if (offset < 0 || !spec.TryDecodeLengths(payload, offset, lengths))
+                            continue;
+
+                        if (lengths[0] != titleBytes.Length)
+                            continue;
+
+                        var sum = Sum(lengths);
+                        var trailing = payload.Length - (titlePos + sum);
+                        if (trailing < 0 || trailing > options.MaxTrailingScan)
+                            continue;
+
+                        if (!AllFieldsValid(payload, titlePos, lengths))
+                            continue;
+
+                        int count;
+                        trailingCounts.TryGetValue(trailing, out count);
+                        trailingCounts[trailing] = count + 1;
+                        contributed = true;
+                    }
+                }
+                else
+                {
+                    int offset, trailing;
+                    if (TrySolveEndAnchor(payload, spec, lengths, options.MaxTrailingScan, out offset, out trailing))
+                    {
+                        int count;
+                        trailingCounts.TryGetValue(trailing, out count);
+                        trailingCounts[trailing] = count + 1;
+                        contributed = true;
+                    }
+                }
+
+                if (contributed)
+                    supporting++;
+            }
+
+            if (supporting == 0)
+                return null;
+
+            return new QuestCacheLayout
+            {
+                Spec = spec,
+                Mode = QuestCacheLayoutMode.HeaderBeforeStrings,
+                BaseStringHeaderOffset = -1,
+                TrailingSize = trailingCounts.OrderByDescending(kv => kv.Value).First().Key,
+                HasHeaderOffsetDrift = false,
+                Confidence = (double)supporting / sample.Count,
+                SampleSize = sample.Count,
+                SupportingRecords = supporting,
+                OffsetWeights = null,
+            };
+        }
+
+        /// <summary>
+        /// Finds the best block position satisfying the end-anchor equation. Preference
+        /// order: header bytes that do not read as text (the true block is bit noise while
+        /// false hits sit inside the text), then the largest explained byte count.
+        /// </summary>
+        internal static bool TrySolveEndAnchor(
+            byte[] payload,
+            QuestStringBlockSpec spec,
+            int[] lengths,
+            int maxTrailing,
+            out int bestOffset,
+            out int bestTrailing)
+        {
+            var headerSize = spec.HeaderSizeBytes;
+            bestOffset = -1;
+            bestTrailing = 0;
+            var bestSum = -1;
+            var bestHeaderIsText = true;
+
+            for (int offset = 0; offset + headerSize <= payload.Length; offset++)
+            {
+                if (!spec.TryDecodeLengths(payload, offset, lengths))
+                    break;
+
+                if (lengths[0] == 0)
+                    continue;
+
+                var sum = Sum(lengths);
+                var trailing = payload.Length - offset - headerSize - sum;
+                if (trailing < 0 || trailing > maxTrailing)
+                    continue;
+
+                if (!AllFieldsValid(payload, offset + headerSize, lengths))
+                    continue;
+
+                string title;
+                if (!TextValidation.TryDecodeUtf8(payload, offset + headerSize, lengths[0], out title) ||
+                    !TextValidation.IsPlausibleTitle(title))
+                    continue;
+
+                var headerIsText = TextValidation.IsValidUtf8(payload, offset, headerSize);
+                var better = bestOffset < 0 ||
+                             !headerIsText && bestHeaderIsText ||
+                             headerIsText == bestHeaderIsText && sum > bestSum;
+
+                if (better)
+                {
+                    bestOffset = offset;
+                    bestTrailing = trailing;
+                    bestSum = sum;
+                    bestHeaderIsText = headerIsText;
+                }
+            }
+
+            if (bestOffset < 0)
+                return false;
+
+            spec.TryDecodeLengths(payload, bestOffset, lengths);
+            return true;
+        }
+
+        /// <summary>
+        /// Scores a candidate layout by direct extraction over the sample: the sum of string
+        /// bytes it explains (with corpus agreement where known), averaged per record.
+        /// </summary>
+        private static void Verify(
+            List<WdbCacheRecord> sample,
+            QuestCacheLayout layout,
+            QuestCacheParseOptions options,
+            IReadOnlyDictionary<int, byte[]> corpusTitleBytes)
+        {
+            long explained = 0;
+            var accepted = 0;
+
+            foreach (var record in sample)
+            {
+                byte[] titleBytes = null;
+                if (corpusTitleBytes != null)
+                    corpusTitleBytes.TryGetValue(record.Id, out titleBytes);
+
+                var bytes = QuestRecordExtractor.MeasureDirect(record, layout, options, titleBytes);
+                if (bytes > 0)
+                {
+                    explained += bytes;
+                    accepted++;
+                }
+            }
+
+            layout.VerificationRate = sample.Count == 0 ? 0 : (double)accepted / sample.Count;
+            layout.VerificationScore = sample.Count == 0 ? 0 : (double)explained / sample.Count;
         }
 
         /// <summary>
@@ -166,18 +377,22 @@ namespace WdbToolkit
                 var maxOffset = Math.Min(titlePos - headerSize, options.MaxHeaderOffset);
                 for (int offset = 0; offset <= maxOffset; offset++)
                 {
-                    if (!spec.TryDecodeLengths(payload, offset, lengths))
+                    int firstLength;
+                    if (!spec.TryDecodeFirstLength(payload, offset, out firstLength))
                         break;
 
-                    if (lengths[0] != titleBytes.Length)
+                    if (firstLength != titleBytes.Length)
                         continue;
+
+                    if (!spec.TryDecodeLengths(payload, offset, lengths))
+                        break;
 
                     var sum = Sum(lengths);
                     var trailing = payload.Length - (titlePos + sum);
                     if (trailing < 0 || trailing > options.MaxTrailingScan)
                         continue;
 
-                    if (!AllFieldsDecode(payload, titlePos, lengths))
+                    if (!AllFieldsValid(payload, titlePos, lengths))
                         continue;
 
                     long weight;
@@ -223,12 +438,12 @@ namespace WdbToolkit
                 if (start < offset + headerSize)
                     continue;
 
+                if (!AllFieldsValid(payload, start, lengths))
+                    continue;
+
                 string title;
                 if (!TextValidation.TryDecodeUtf8(payload, start, lengths[0], out title) ||
                     !TextValidation.IsPlausibleTitle(title))
-                    continue;
-
-                if (!AllFieldsDecode(payload, start, lengths))
                     continue;
 
                 long weight;
@@ -240,18 +455,18 @@ namespace WdbToolkit
             return contributed;
         }
 
-        internal static bool AllFieldsDecode(byte[] payload, int stringsStart, int[] lengths)
+        /// <summary>Validates every string field as UTF-8 without allocating strings.</summary>
+        internal static bool AllFieldsValid(byte[] payload, int stringsStart, int[] lengths)
         {
             var pos = stringsStart;
             for (int i = 0; i < lengths.Length; i++)
             {
-                string value;
-                if (!TextValidation.TryDecodeUtf8(payload, pos, lengths[i], out value))
+                if (lengths[i] > 0 && !TextValidation.IsValidUtf8(payload, pos, lengths[i]))
                     return false;
                 pos += lengths[i];
             }
 
-            return true;
+            return pos <= payload.Length;
         }
 
         internal static int Sum(int[] values)

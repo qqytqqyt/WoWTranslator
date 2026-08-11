@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -118,6 +119,9 @@ namespace WdbToolkit
 
         /// <summary>Maximum trailing byte count scanned per record.</summary>
         public int MaxTrailingScan { get; set; } = 2048;
+
+        /// <summary>Optional sink for concise progress traces (null = silent).</summary>
+        public Action<string> Trace { get; set; }
     }
 
     public sealed class QuestCacheParseResult

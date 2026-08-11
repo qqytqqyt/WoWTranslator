@@ -149,16 +149,20 @@ public static class Program
             try
             {
                 var corpus = corpusDir != null ? FindCorpusFor(file, corpusDir) : null;
-                var result = Parse(file, corpus);
+                var result = Parse(file, corpus, options.ContainsKey("trace"));
                 var matchRate = result.Stats.CorpusEntries == 0
                     ? "-"
                     : $"{100.0 * result.Stats.CorpusMatched / Math.Max(1, result.Stats.CorpusMatched + result.Stats.CorpusMismatched):F1}%";
 
+                var position = result.Layout.Mode == QuestCacheLayoutMode.HeaderBeforeStrings
+                    ? "F=preStrings"
+                    : $"F={result.Layout.BaseStringHeaderOffset}{(result.Layout.HasHeaderOffsetDrift ? "+4n" : "")}";
+
                 Console.WriteLine(
                     $"{Path.GetFileName(file),-42} {result.Header.ClientBuild,7} {result.Stats.TotalRecords,8} " +
                     $"{result.Stats.Parsed,8} {result.Stats.Failed,7} {matchRate,7} " +
-                    $"F={result.Layout.BaseStringHeaderOffset}{(result.Layout.HasHeaderOffsetDrift ? "+4n" : "")} " +
-                    $"t={result.Layout.TrailingSize} conf={result.Layout.Confidence:P0}" +
+                    $"{position} t={result.Layout.TrailingSize} conf={result.Layout.Confidence:P0} " +
+                    $"verified={result.Layout.VerificationRate:P0}" +
                     (corpus != null ? $" corpus={Path.GetFileName(corpus)}" : ""));
 
                 if (result.Stats.Failed > 0)
@@ -177,14 +181,16 @@ public static class Program
     private static QuestCacheParseResult Parse(string wdbPath, Dictionary<string, string> options)
     {
         options.TryGetValue("corpus", out var corpusPath);
-        return Parse(wdbPath, corpusPath);
+        return Parse(wdbPath, corpusPath, options.ContainsKey("trace"));
     }
 
-    private static QuestCacheParseResult Parse(string wdbPath, string corpusPath)
+    private static QuestCacheParseResult Parse(string wdbPath, string corpusPath, bool trace = false)
     {
         var parseOptions = new QuestCacheParseOptions();
         if (corpusPath != null)
             parseOptions.ExpectedTitles = QuestTitleCorpus.LoadFromScannerLua(corpusPath);
+        if (trace)
+            parseOptions.Trace = message => Console.Error.WriteLine("[trace] " + message);
 
         return QuestCacheParser.ParseFile(wdbPath, parseOptions);
     }
@@ -272,9 +278,9 @@ public static class Program
             wdbtool - self-calibrating WoW quest cache (questcache.wdb) reader
 
             usage:
-              wdbtool analyze <file.wdb> [--corpus titles.lua] [--samples N] [--failures N]
-              wdbtool export  <file.wdb> --out out.json [--corpus titles.lua]
-              wdbtool batch   <directory> [--corpus-dir dir] [--pattern *.wdb] [--recurse]
+              wdbtool analyze <file.wdb> [--corpus titles.lua] [--samples N] [--failures N] [--trace]
+              wdbtool export  <file.wdb> --out out.json [--corpus titles.lua] [--trace]
+              wdbtool batch   <directory> [--corpus-dir dir] [--pattern *.wdb] [--recurse] [--trace]
 
             The corpus is an in-game scanner lua file with ["questId"] = "{{title}}..." entries;
             it is optional but improves calibration and validates results.

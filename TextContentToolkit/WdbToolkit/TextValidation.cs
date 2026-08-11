@@ -8,36 +8,83 @@ namespace WdbToolkit
     /// </summary>
     public static class TextValidation
     {
-        private static readonly UTF8Encoding StrictUtf8 = new UTF8Encoding(false, true);
+        /// <summary>
+        /// Exception-free strict UTF-8 validation (rejects invalid sequences, overlongs,
+        /// surrogates, out-of-range code points and embedded NULs). The parser probes vast
+        /// numbers of wrong candidate positions, so this must never throw or allocate.
+        /// </summary>
+        public static bool IsValidUtf8(byte[] buffer, int offset, int count)
+        {
+            if (offset < 0 || count < 0 || offset + count > buffer.Length)
+                return false;
+
+            int i = offset;
+            int end = offset + count;
+            while (i < end)
+            {
+                var b = buffer[i];
+                if (b < 0x80)
+                {
+                    if (b == 0)
+                        return false;
+                    i++;
+                    continue;
+                }
+
+                int extra;
+                if (b >= 0xC2 && b <= 0xDF)
+                    extra = 1;
+                else if (b >= 0xE0 && b <= 0xEF)
+                    extra = 2;
+                else if (b >= 0xF0 && b <= 0xF4)
+                    extra = 3;
+                else
+                    return false;
+
+                if (i + extra >= end)
+                    return false;
+
+                var b1 = buffer[i + 1];
+                if (b1 < 0x80 || b1 > 0xBF)
+                    return false;
+                if (b == 0xE0 && b1 < 0xA0 ||
+                    b == 0xED && b1 > 0x9F ||
+                    b == 0xF0 && b1 < 0x90 ||
+                    b == 0xF4 && b1 > 0x8F)
+                    return false;
+
+                for (int j = 2; j <= extra; j++)
+                {
+                    var bj = buffer[i + j];
+                    if (bj < 0x80 || bj > 0xBF)
+                        return false;
+                }
+
+                i += extra + 1;
+            }
+
+            return true;
+        }
 
         /// <summary>
         /// Strictly decodes UTF-8 (rejecting invalid sequences and embedded NULs).
         /// </summary>
         public static bool TryDecodeUtf8(byte[] buffer, int offset, int count, out string value)
         {
-            value = null;
-            if (offset < 0 || count < 0 || offset + count > buffer.Length)
-                return false;
-
-            if (count == 0)
+            if (count == 0 && offset >= 0 && offset <= buffer.Length)
             {
                 value = string.Empty;
                 return true;
             }
 
-            try
+            if (!IsValidUtf8(buffer, offset, count))
             {
-                var decoded = StrictUtf8.GetString(buffer, offset, count);
-                if (decoded.IndexOf('\0') >= 0)
-                    return false;
-
-                value = decoded;
-                return true;
-            }
-            catch (DecoderFallbackException)
-            {
+                value = null;
                 return false;
             }
+
+            value = Encoding.UTF8.GetString(buffer, offset, count);
+            return true;
         }
 
         /// <summary>

@@ -71,6 +71,10 @@ Rules:
   target folder (i.e. the scan happened after the last parse);
 - a scanner lua is only taken when it **actually contains data for the category**
   (the matching SavedVariables tables are non-empty - see "Scanner sections" below);
+- the copy is **stripped to the category's own sections**: unrelated tables keep
+  their declaration but lose their entries, so a scan that accidentally captured
+  several categories never carries foreign data into the folder (the scan time is
+  preserved on the copy for parse ordering);
 - copies are named `scanner_<branch>_<timestamp>.lua` / `questcache_<branch>_<timestamp>.wdb`,
   so live and PTR scans and still-unparsed older inputs never overwrite each other -
   everything is kept for the next parse (the toolkit parses build-less inputs in

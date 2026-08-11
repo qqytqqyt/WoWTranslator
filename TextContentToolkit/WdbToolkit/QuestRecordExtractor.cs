@@ -27,6 +27,126 @@ namespace WdbToolkit
             out QuestRecordText text,
             out string failureReason)
         {
+            if (record.Payload.Length < layout.Spec.HeaderSizeBytes)
+            {
+                text = null;
+                failureReason = "payload too small (" + record.Payload.Length + " bytes)";
+                return ExtractOutcome.Failed;
+            }
+
+            return layout.Mode == QuestCacheLayoutMode.HeaderBeforeStrings
+                ? ExtractHeaderBeforeStrings(record, layout, options, expectedTitleBytes, expectedTitle,
+                    out text, out failureReason)
+                : ExtractHeaderAtFixedOffset(record, layout, options, expectedTitleBytes, expectedTitle,
+                    out text, out failureReason);
+        }
+
+        /// <summary>
+        /// Verification probe used during calibration: how many string bytes the layout's
+        /// direct strategy explains for this record (0 when it does not apply cleanly or
+        /// disagrees with the corpus title).
+        /// </summary>
+        public static int MeasureDirect(
+            WdbCacheRecord record,
+            QuestCacheLayout layout,
+            QuestCacheParseOptions options,
+            byte[] expectedTitleBytes)
+        {
+            var payload = record.Payload;
+            var spec = layout.Spec;
+            var headerSize = spec.HeaderSizeBytes;
+            var lengths = new int[spec.Fields.Count];
+
+            if (payload.Length < headerSize)
+                return 0;
+
+            if (layout.Mode == QuestCacheLayoutMode.HeaderBeforeStrings)
+            {
+                if (expectedTitleBytes != null && expectedTitleBytes.Length > 0)
+                {
+                    var searchFrom = 0;
+                    for (int occurrence = 0; occurrence < 8; occurrence++)
+                    {
+                        var titlePos = QuestCacheCalibrator.IndexOf(payload, expectedTitleBytes, searchFrom);
+                        if (titlePos < 0)
+                            break;
+
+                        searchFrom = titlePos + 1;
+
+                        var offset = titlePos - headerSize;
+                        if (offset < 0 || !spec.TryDecodeLengths(payload, offset, lengths))
+                            continue;
+
+                        if (lengths[0] != expectedTitleBytes.Length)
+                            continue;
+
+                        var sum = QuestCacheCalibrator.Sum(lengths);
+                        var trailing = payload.Length - (titlePos + sum);
+                        if (trailing < 0 || trailing > options.MaxTrailingScan)
+                            continue;
+
+                        if (QuestCacheCalibrator.AllFieldsValid(payload, titlePos, lengths))
+                            return sum;
+                    }
+
+                    return 0;
+                }
+
+                int solvedOffset, solvedTrailing;
+                return QuestCacheCalibrator.TrySolveEndAnchor(payload, spec, lengths,
+                    options.MaxTrailingScan, out solvedOffset, out solvedTrailing)
+                    ? QuestCacheCalibrator.Sum(lengths)
+                    : 0;
+            }
+
+            foreach (var offset in HeaderOffsetCandidates(layout, options, payload.Length))
+            {
+                if (!spec.TryDecodeLengths(payload, offset, lengths))
+                    continue;
+
+                if (lengths[0] == 0)
+                    continue;
+
+                var sum = QuestCacheCalibrator.Sum(lengths);
+                var start = payload.Length - layout.TrailingSize - sum;
+                if (start < offset + headerSize)
+                    continue;
+
+                if (!QuestCacheCalibrator.AllFieldsValid(payload, start, lengths))
+                    continue;
+
+                if (expectedTitleBytes != null && expectedTitleBytes.Length > 0)
+                {
+                    if (lengths[0] == expectedTitleBytes.Length &&
+                        RangeEquals(payload, start, expectedTitleBytes))
+                        return sum;
+
+                    continue;
+                }
+
+                string title;
+                if (TextValidation.TryDecodeUtf8(payload, start, lengths[0], out title) &&
+                    TextValidation.IsPlausibleTitle(title))
+                    return sum;
+            }
+
+            return 0;
+        }
+
+        /// <summary>
+        /// Extraction for layouts where the length block immediately precedes the strings:
+        /// one end-anchored sweep solves offset + blockSize + sum + trailing == payload
+        /// length for every trailing size at once.
+        /// </summary>
+        private static ExtractOutcome ExtractHeaderBeforeStrings(
+            WdbCacheRecord record,
+            QuestCacheLayout layout,
+            QuestCacheParseOptions options,
+            byte[] expectedTitleBytes,
+            string expectedTitle,
+            out QuestRecordText text,
+            out string failureReason)
+        {
             text = null;
             failureReason = null;
 
@@ -35,11 +155,131 @@ namespace WdbToolkit
             var headerSize = spec.HeaderSizeBytes;
             var lengths = new int[spec.Fields.Count];
 
-            if (payload.Length < headerSize)
+            // 1) Corpus title anchors the block exactly: it starts blockSize bytes before the title.
+            if (expectedTitleBytes != null && expectedTitleBytes.Length > 0)
             {
-                failureReason = "payload too small (" + payload.Length + " bytes)";
-                return ExtractOutcome.Failed;
+                var searchFrom = 0;
+                for (int occurrence = 0; occurrence < 8; occurrence++)
+                {
+                    var titlePos = QuestCacheCalibrator.IndexOf(payload, expectedTitleBytes, searchFrom);
+                    if (titlePos < 0)
+                        break;
+
+                    searchFrom = titlePos + 1;
+
+                    var offset = titlePos - headerSize;
+                    if (offset < 0 || !spec.TryDecodeLengths(payload, offset, lengths))
+                        continue;
+
+                    if (lengths[0] != expectedTitleBytes.Length)
+                        continue;
+
+                    var sum = QuestCacheCalibrator.Sum(lengths);
+                    var trailing = payload.Length - (titlePos + sum);
+                    if (trailing < 0 || trailing > options.MaxTrailingScan)
+                        continue;
+
+                    var candidate = BuildCandidate(record, spec, lengths, offset, titlePos, trailing,
+                        expectedTitle, ExtractionStrategy.CorpusLocate);
+
+                    if (candidate != null && candidate.LogTitle == expectedTitle)
+                    {
+                        text = candidate;
+                        return ExtractOutcome.Extracted;
+                    }
+                }
             }
+
+            // 2) End-anchored sweep collecting every consistent interpretation, preferring
+            //    corpus matches, then non-text header bytes (the real block is bit noise,
+            //    false hits sit inside the text), calibrated trailing, and explained bytes.
+            QuestRecordText bestTitled = null, bestUntitled = null;
+            long bestTitledRank = -1, bestUntitledRank = -1;
+            var sawEmptyInterpretation = false;
+
+            for (int offset = 0; offset + headerSize <= payload.Length; offset++)
+            {
+                if (!spec.TryDecodeLengths(payload, offset, lengths))
+                    break;
+
+                var sum = QuestCacheCalibrator.Sum(lengths);
+                var trailing = payload.Length - offset - headerSize - sum;
+                if (trailing < 0 || trailing > options.MaxTrailingScan)
+                    continue;
+
+                if (sum == 0)
+                {
+                    sawEmptyInterpretation = true;
+                    continue;
+                }
+
+                if (!QuestCacheCalibrator.AllFieldsValid(payload, offset + headerSize, lengths))
+                    continue;
+
+                var strategy = trailing == layout.TrailingSize
+                    ? ExtractionStrategy.Calibrated
+                    : ExtractionStrategy.TrailingScan;
+                var candidate = BuildCandidate(record, spec, lengths, offset, offset + headerSize,
+                    trailing, expectedTitle, strategy);
+                if (candidate == null)
+                    continue;
+
+                if (expectedTitle != null && candidate.LogTitle == expectedTitle)
+                {
+                    text = candidate;
+                    return ExtractOutcome.Extracted;
+                }
+
+                var headerIsText = TextValidation.IsValidUtf8(payload, offset, headerSize);
+                var rank = (headerIsText ? 0L : 1L << 40) +
+                           (trailing == layout.TrailingSize ? 1L << 30 : 0L) +
+                           sum;
+
+                if (candidate.LogTitle.Length > 0)
+                {
+                    if (rank > bestTitledRank)
+                    {
+                        bestTitledRank = rank;
+                        bestTitled = candidate;
+                    }
+                }
+                else if (rank > bestUntitledRank)
+                {
+                    bestUntitledRank = rank;
+                    bestUntitled = candidate;
+                }
+            }
+
+            text = bestTitled ?? bestUntitled;
+            if (text != null)
+            {
+                // Without a corpus expectation the sweep winner is accepted as-is.
+                return ExtractOutcome.Extracted;
+            }
+
+            if (sawEmptyInterpretation)
+                return ExtractOutcome.Empty;
+
+            failureReason = "no consistent end-anchored interpretation over " + payload.Length + " payload bytes";
+            return ExtractOutcome.Failed;
+        }
+
+        private static ExtractOutcome ExtractHeaderAtFixedOffset(
+            WdbCacheRecord record,
+            QuestCacheLayout layout,
+            QuestCacheParseOptions options,
+            byte[] expectedTitleBytes,
+            string expectedTitle,
+            out QuestRecordText text,
+            out string failureReason)
+        {
+            text = null;
+            failureReason = null;
+
+            var payload = record.Payload;
+            var spec = layout.Spec;
+            var headerSize = spec.HeaderSizeBytes;
+            var lengths = new int[spec.Fields.Count];
 
             // Fallback candidates by decreasing structural confidence:
             //  - a valid non-empty title that differs from the corpus (text revision in cache),
@@ -66,32 +306,8 @@ namespace WdbToolkit
                 }
             }
 
-            // 2) Trailing-size scan around the calibrated offset (records with conditional
-            //    quest texts or other data appended after the strings).
-            for (int shift = -16; shift <= 32; shift += 4)
-            {
-                var offset = layout.BaseStringHeaderOffset + shift;
-                if (offset < 0 || offset + headerSize > payload.Length)
-                    continue;
-
-                var maxTrailing = Math.Min(options.MaxTrailingScan, payload.Length - offset - headerSize);
-                for (int trailing = 0; trailing <= maxTrailing; trailing++)
-                {
-                    if (trailing == layout.TrailingSize)
-                        continue;
-
-                    var candidate = TryCandidate(record, spec, lengths, offset, trailing,
-                        expectedTitle, ExtractionStrategy.TrailingScan, ref sawEmptyInterpretation);
-
-                    if (Accept(candidate, expectedTitle, ref tier2Titled, ref tier2Untitled))
-                    {
-                        text = candidate;
-                        return ExtractOutcome.Extracted;
-                    }
-                }
-            }
-
-            // 3) Locate the expected title bytes directly (strongest evidence, needs the corpus).
+            // 2) Locate the expected title bytes directly (strongest evidence, needs the corpus).
+            //    Cheap when the corpus title is absent from the record: one substring scan.
             if (expectedTitleBytes != null && expectedTitleBytes.Length > 0)
             {
                 var searchFrom = 0;
@@ -106,10 +322,12 @@ namespace WdbToolkit
                     var maxOffset = Math.Min(titlePos - headerSize, options.MaxHeaderOffset);
                     for (int offset = 0; offset <= maxOffset; offset++)
                     {
-                        if (!spec.TryDecodeLengths(payload, offset, lengths))
+                        int firstLength;
+                        if (!spec.TryDecodeFirstLength(payload, offset, out firstLength))
                             break;
 
-                        if (lengths[0] != expectedTitleBytes.Length)
+                        if (firstLength != expectedTitleBytes.Length ||
+                            !spec.TryDecodeLengths(payload, offset, lengths))
                             continue;
 
                         var sum = QuestCacheCalibrator.Sum(lengths);
@@ -129,8 +347,58 @@ namespace WdbToolkit
                 }
             }
 
-            // No corpus-confirmed interpretation; fall back by structural confidence.
-            text = tier1Titled ?? tier1Untitled ?? tier2Titled ?? tier2Untitled;
+            // A structurally valid interpretation that merely disagrees with the corpus is
+            // returned now - the cache is authoritative and the expensive trailing scan is
+            // reserved for records where nothing was found at all.
+            text = tier1Titled ?? tier1Untitled;
+            if (text != null)
+                return ExtractOutcome.Extracted;
+
+            // 3) Trailing-size scan around the calibrated offset (records with conditional
+            //    quest texts or other data appended after the strings). The lengths do not
+            //    depend on the trailing size, so decode once per offset and slide the
+            //    strings window.
+            for (int shift = -16; shift <= 32; shift += 4)
+            {
+                var offset = layout.BaseStringHeaderOffset + shift;
+                if (offset < 0 || offset + headerSize > payload.Length)
+                    continue;
+
+                if (!spec.TryDecodeLengths(payload, offset, lengths))
+                    continue;
+
+                var sum = QuestCacheCalibrator.Sum(lengths);
+                if (sum == 0)
+                {
+                    sawEmptyInterpretation = true;
+                    continue;
+                }
+
+                var maxTrailing = Math.Min(options.MaxTrailingScan, payload.Length - offset - headerSize - sum);
+                for (int trailing = 0; trailing <= maxTrailing; trailing++)
+                {
+                    if (trailing == layout.TrailingSize)
+                        continue;
+
+                    var stringsStart = payload.Length - trailing - sum;
+                    if (stringsStart < offset + headerSize)
+                        break;
+
+                    if (!QuestCacheCalibrator.AllFieldsValid(payload, stringsStart, lengths))
+                        continue;
+
+                    var candidate = BuildCandidate(record, spec, lengths, offset, stringsStart, trailing,
+                        expectedTitle, ExtractionStrategy.TrailingScan);
+
+                    if (Accept(candidate, expectedTitle, ref tier2Titled, ref tier2Untitled))
+                    {
+                        text = candidate;
+                        return ExtractOutcome.Extracted;
+                    }
+                }
+            }
+
+            text = tier2Titled ?? tier2Untitled;
             if (text != null)
                 return ExtractOutcome.Extracted;
 
@@ -145,7 +413,7 @@ namespace WdbToolkit
             QuestCacheLayout layout, QuestCacheParseOptions options, int payloadLength)
         {
             var baseOffset = layout.BaseStringHeaderOffset;
-            if (baseOffset + layout.Spec.HeaderSizeBytes <= payloadLength)
+            if (baseOffset >= 0 && baseOffset + layout.Spec.HeaderSizeBytes <= payloadLength)
                 yield return baseOffset;
 
             for (int step = 1; step <= options.MaxHeaderShiftSteps; step++)
@@ -286,12 +554,26 @@ namespace WdbToolkit
             };
         }
 
+        private static bool RangeEquals(byte[] buffer, int offset, byte[] expected)
+        {
+            if (offset < 0 || offset + expected.Length > buffer.Length)
+                return false;
+
+            for (int i = 0; i < expected.Length; i++)
+            {
+                if (buffer[offset + i] != expected[i])
+                    return false;
+            }
+
+            return true;
+        }
+
         private static string DescribeFailure(
             byte[] payload, QuestStringBlockSpec spec, int[] lengths, QuestCacheLayout layout)
         {
-            if (spec.TryDecodeLengths(payload, layout.BaseStringHeaderOffset, lengths))
+            if (layout.BaseStringHeaderOffset >= 0 &&
+                spec.TryDecodeLengths(payload, layout.BaseStringHeaderOffset, lengths))
             {
-                var sum = QuestCacheCalibrator.Sum(lengths);
                 return string.Format(
                     "no consistent interpretation (calibrated offset {0} decodes lengths [{1}] over {2} payload bytes)",
                     layout.BaseStringHeaderOffset, string.Join(",", ToStrings(lengths)), payload.Length);

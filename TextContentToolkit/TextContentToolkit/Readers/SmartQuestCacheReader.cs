@@ -15,12 +15,20 @@ namespace TextContentToolkit.Readers
     {
         public static void ReadQuestCache(string fileName, List<Quest> questObjects, IReadOnlyDictionary<int, string> expectedTitles)
         {
-            var options = new QuestCacheParseOptions { ExpectedTitles = expectedTitles };
+            var options = new QuestCacheParseOptions
+            {
+                ExpectedTitles = expectedTitles,
+                Trace = message => Console.WriteLine("  [wdb] " + message),
+            };
             var result = QuestCacheParser.ParseFile(fileName, options);
 
             Console.WriteLine(result.BuildSummary());
             foreach (var failure in result.Failures.Take(20))
                 Console.WriteLine("  unparsed quest " + failure.Id + ": " + failure.Reason);
+
+            var indexById = new Dictionary<string, int>(questObjects.Count);
+            for (int i = 0; i < questObjects.Count; i++)
+                indexById[questObjects[i].Id] = i;
 
             foreach (var record in result.Quests)
             {
@@ -33,18 +41,22 @@ namespace TextContentToolkit.Readers
                 quest.Objectives = record.LogDescription.Replace("\"", "\\\"");
                 quest.Description = ReplaceGender(record.QuestDescription.Replace("\"", "\\\""));
 
-                var existing = questObjects.FirstOrDefault(o => o.Id == quest.Id);
-                if (existing != null)
+                int existingIndex;
+                if (indexById.TryGetValue(quest.Id, out existingIndex))
                 {
+                    var existing = questObjects[existingIndex];
                     if (quest.Description.Length == 0 && existing.Description.Length > 0)
                         quest.Description = existing.Description;
                     if (quest.Objectives.Length == 0 && existing.Objectives.Length > 0)
                         quest.Objectives = existing.Objectives;
 
-                    questObjects.Remove(existing);
+                    questObjects[existingIndex] = quest;
                 }
-
-                questObjects.Add(quest);
+                else
+                {
+                    indexById[quest.Id] = questObjects.Count;
+                    questObjects.Add(quest);
+                }
             }
         }
 

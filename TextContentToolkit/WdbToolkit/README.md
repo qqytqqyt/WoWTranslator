@@ -19,18 +19,29 @@ payload = [fixed numeric block]                  <- size changes between builds 
 
 Two facts are stable across every build from Shadowlands/classic-modern through current
 retail: the bit widths of the string-length block, and the strings sitting at the *end*
-of the record. Everything that changes per build (the fixed block size F, per-record
-drift from variable arrays such as TreasurePickerID, trailing size t) can therefore be
-*inferred* per file:
+of the record. The block position follows one of two schemes (`QuestCacheLayoutMode`):
 
-1. **Calibration** (`QuestCacheCalibrator`): sample records, scan candidate offsets for
-   the length block, keep offsets whose decoded lengths partition the record tail into
-   valid UTF-8 for all nine fields. Votes are weighted by decoded byte count so tiny
-   coincidental matches lose. When a corpus of known titles (scanner lua) is supplied,
-   the title bytes are located directly, which also measures t exactly.
+- **HeaderAtFixedOffset** (all builds up to retail 68256 and all classic builds): the
+  block sits right after the fixed numeric struct, so its offset F is (nearly) constant
+  per build, with per-record +4n drift from variable arrays such as TreasurePickerID.
+- **HeaderBeforeStrings** (observed from retail build 68914): the block moved to sit
+  immediately before the string bytes, so its offset varies per record and is solved
+  from the end-anchor equation `offset + 12 + sum(lengths) + trailing == payload length`.
+
+Inference per file:
+
+1. **Calibration** (`QuestCacheCalibrator`): sample records and build a candidate layout
+   for each scheme - offset voting weighted by decoded byte count for the fixed scheme,
+   trailing-size voting for the adjacent scheme. Both candidates are then *verified* by
+   direct extraction, scored by how many payload bytes they explain; a wrong scheme only
+   matches tiny coincidental fragments (a few bytes) while the true one accounts for the
+   whole text block (hundreds), so the comparison is decisive even without a corpus.
+   When a corpus of known titles (scanner lua) is supplied, the title bytes are located
+   directly, which also measures the trailing size exactly.
 2. **Extraction** (`QuestRecordExtractor`): apply the calibrated layout per record and
    recover deviants via +-4-byte header shifts, trailing-size scans, and corpus title
-   search. Untitled hidden quests (title length 0) are supported.
+   search. Untitled hidden quests (title length 0) are supported. All candidate probing
+   uses exception-free byte-level UTF-8 validation - the hot loops must never throw.
 
 If a future build changes the bit widths themselves, add a new
 `QuestStringBlockSpec` and pass it in `QuestCacheParseOptions.Specs`; calibration
@@ -68,5 +79,11 @@ with a corpus lua by build number in the file name.
 
 Reference layout history recovered from the data on hand: F=444 (9.x) -> 456 (SL/DF)
 -> 460 -> 464 -> 468 -> 476 -> 480 -> 484 (11.x retail, with per-record +4n drift);
-classic: 452 (TBC) -> 456 (WLK) -> 472 (Cata) -> 476 -> 480 (MoP). Trailing size is 0
-except for rare records carrying conditional quest texts.
+classic: 452 (TBC) -> 456 (WLK) -> 472 (Cata) -> 476 -> 480 (MoP); build 68914+ uses
+the header-before-strings scheme instead of a fixed offset. Trailing size is 0 except
+for rare records carrying conditional quest texts.
+
+Performance: a full directory sweep (~450k records over 36 builds) takes a few seconds.
+A fresh build with no corpus yet still calibrates from structure alone; passing stale
+titles (e.g. a previous build's output) is fine - mismatching records fall back to the
+cache text without triggering expensive scans.

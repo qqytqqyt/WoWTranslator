@@ -87,5 +87,20 @@ namespace WdbToolkit
 
             return true;
         }
+
+        /// <summary>
+        /// Decodes only the first length field (the title). Used as a cheap filter in the
+        /// hot search loops before paying for a full decode.
+        /// </summary>
+        public bool TryDecodeFirstLength(byte[] payload, int byteOffset, out int length)
+        {
+            length = 0;
+            if (byteOffset < 0 || byteOffset + HeaderSizeBytes > payload.Length)
+                return false;
+
+            var reader = new MsbBitReader(payload, byteOffset);
+            length = reader.ReadBits(Fields[0].Bits);
+            return true;
+        }
     }
 }
