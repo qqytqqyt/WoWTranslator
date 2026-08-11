@@ -1,76 +1,122 @@
-﻿using System;
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using Newtonsoft.Json;
-using TextContentToolkit.Configs;
+using System.Text.RegularExpressions;
 using TextContentToolkit.Models;
 using TextContentToolkit.Readers;
 using TextContentToolkit.Utils;
 
 namespace TextContentToolkit
 {
+    /// <summary>
+    /// Builds the WoWeuCN quest data file from scanner objectives (*.lua) and client
+    /// quest caches (*.wdb), merged on top of the previous output. Merging is per field:
+    /// a new non-empty value wins, except that translated (Chinese) text is never
+    /// replaced by untranslated text.
+    /// </summary>
     public class QuestReader
     {
-        public QuestReader(QuestConfig questConfig)
+        private const string TemplateLine =
+            "[\"$Id$\"]={[\"Title\"]=\"$Title$\", [\"Objectives\"]=\"$Objectives$\", [\"Description\"]=\"$Description$\", [\"Progress\"]=\"$Progress$\", [\"Completion\"]=\"$Completion$\", [\"Translator\"]=\"$Translator$\"},";
+
+        private static readonly Regex BaselineLineRegex = new Regex(
+            "^\\s*\\[\"(?<id>\\d+)\"\\]=\\{\\[\"Title\"\\]=\"(?<title>.*?)\", \\[\"Objectives\"\\]=\"(?<objectives>.*?)\", \\[\"Description\"\\]=\"(?<description>.*?)\", \\[\"Progress\"\\]=\"(?<progress>.*?)\", \\[\"Completion\"\\]=\"(?<completion>.*?)\", \\[\"Translator\"\\]=\"(?<translator>.*?)\"\\},?\\s*$",
+            RegexOptions.Compiled);
+
+        private sealed class QuestRow
         {
-            m_dirPath = questConfig.JsonDirPath;
-            if (!string.IsNullOrEmpty(questConfig.TemplatePath))
-                m_template = File.ReadAllText(questConfig.TemplatePath);
-            m_questConfig = questConfig;
+            public Quest Quest;
+
+            public string RawLine;
+
+            public bool Touched;
         }
 
-        public void MergeOutputs(bool isClassic)
+        public void Execute(List<string> objectivePaths, List<string> cachePaths, string baselinePath, string outputPath)
         {
-            var dic = new SortedDictionary<int, string>();
-            if (!isClassic)
-                m_questConfig.FileMergeList.Add(m_questConfig.OutputPath);
-            else
-                m_questConfig.FileMergeList.Insert(0, m_questConfig.OutputPath);
+            var baseline = LoadBaseline(baselinePath);
 
-            foreach (var file in m_questConfig.FileMergeList)
+            var objectives = new List<QuestObjectives>();
+            foreach (var objectivePath in objectivePaths)
+                ReadObjectives(objectivePath, objectives);
+
+            // Known titles anchor the wdb parser calibration: previous output plus fresh objectives.
+            var expectedTitles = new Dictionary<int, string>();
+            foreach (var row in baseline.Where(r => r.Value.Quest != null && !string.IsNullOrEmpty(r.Value.Quest.Title)))
+                expectedTitles[row.Key] = row.Value.Quest.Title;
+            foreach (var objective in objectives)
             {
-                var lines = File.ReadAllLines(file);
-                foreach (var line in lines.Where(l => l.StartsWith("[")))
-                {
-                    var id = int.Parse(line.FirstBetween("[\"", "\"]"));
-
-                    if (isClassic && dic.ContainsKey(id))
-                    {
-                        var text = dic[id].FirstBetween("[\"Description\"]=\"", "\", [\"Progress\"]");
-                        var newText = line.FirstBetween("[\"Description\"]=\"", "\", [\"Progress\"]");
-                        var obj = dic[id].FirstBetween("[\"Objectives\"]=\"", "\", [\"Description\"]");
-                        var newOjb = line.FirstBetween("[\"Objectives\"]=\"", "\", [\"Description\"]");
-                        var title = dic[id].FirstBetween("[\"Objectives\"]=\"", "\", [\"Description\"]");
-                        var newTitle = line.FirstBetween("[\"Title\"]=\"", "\", [\"Objectives\"]");
-                        if (string.IsNullOrEmpty(text) && string.IsNullOrEmpty(newText) 
-                            && string.IsNullOrEmpty(obj) && string.IsNullOrEmpty(newOjb) 
-                            && string.IsNullOrEmpty(title) && string.IsNullOrEmpty(newTitle))
-                        {
-                            dic[id] = line.Replace("[\"Description\"]=\"" + newText + "\", [\"Progress\"]", "[\"Description\"]=\"" + text + "\", [\"Progress\"]")
-                                .Replace("[\"Objectives\"]=\"" + newOjb + "\", [\"Description\"]", "[\"Objectives\"]=\"" + obj + "\", [\"Description\"]")
-                                .Replace("[\"Title\"]=\"" + newTitle + "\", [\"Objectives\"]", "[\"Title\"]=\"" + title + "\", [\"Objectives\"]");
-
-                            continue;
-                        }
-                    }
-
-                    dic[id] = line;
-                }
+                int id;
+                if (int.TryParse(objective.Id, out id) && !string.IsNullOrEmpty(objective.Title))
+                    expectedTitles[id] = objective.Title;
             }
 
+            var cachedQuests = new List<Quest>();
+            foreach (var cachePath in cachePaths)
+                SmartQuestCacheReader.ReadQuestCache(cachePath, cachedQuests, expectedTitles);
 
-            var list = dic.OrderBy(l => l.Key).Select(d => d.Value).ToList();
-            list.Insert(0, "WoWeuCN_Quests_QuestData = {");
-            list.Add("}");
-            File.WriteAllLines(m_questConfig.OutputPath, list);
+            var newQuests = Compose(cachedQuests, objectives);
+            foreach (var quest in newQuests)
+                NormalizeQuest(quest);
+
+            foreach (var quest in newQuests)
+                MergeIntoBaseline(baseline, quest);
+
+            var lines = new List<string> { "WoWeuCN_Quests_QuestData = {" };
+            foreach (var row in baseline.Values)
+                lines.Add(row.Touched || row.RawLine == null ? Render(row.Quest) : row.RawLine);
+            lines.Add("}");
+            File.WriteAllLines(outputPath, lines);
         }
-        
+
+        private static List<Quest> Compose(List<Quest> cachedQuests, List<QuestObjectives> objectives)
+        {
+            var usedId = new HashSet<string>();
+            var questObjects = new List<Quest>();
+
+            foreach (var cachedQuest in cachedQuests)
+            {
+                usedId.Add(cachedQuest.Id);
+
+                var questObject = new Quest();
+                questObject.Id = cachedQuest.Id;
+                questObject.Title = cachedQuest.Title;
+
+                var objective = objectives.FirstOrDefault(o => o.Id == questObject.Id);
+                questObject.Objectives = objective != null && cachedQuest.Objectives.Contains(@"oa")
+                    ? objective.Objectives
+                    : cachedQuest.Objectives;
+
+                questObject.Description = cachedQuest.Description;
+                questObject.Progress = string.Empty;
+                questObject.Completion = string.Empty;
+                questObjects.Add(questObject);
+            }
+
+            // objectives without a cache record still contribute title + objectives
+            foreach (var questObjective in objectives.Where(o => !usedId.Contains(o.Id)))
+            {
+                usedId.Add(questObjective.Id);
+
+                var questObject = new Quest();
+                questObject.Id = questObjective.Id;
+                questObject.Title = questObjective.Title;
+                questObject.Objectives = questObjective.Objectives;
+                questObject.Description = string.Empty;
+                questObject.Progress = string.Empty;
+                questObject.Completion = string.Empty;
+                questObjects.Add(questObject);
+            }
+
+            return questObjects;
+        }
+
         public void ReadObjectives(string objectivesPath, List<QuestObjectives> objectives)
         {
-            var lines = File.ReadAllLines(objectivesPath);
+            var lines = ScannerSectionFilter.FilterCategoryLines(
+                File.ReadAllLines(objectivesPath), ScannerSectionFilter.IsQuestSection);
             foreach (var line in lines)
             {
                 var objective = new QuestObjectives();
@@ -79,8 +125,8 @@ namespace TextContentToolkit
                 if (string.IsNullOrEmpty(text) || !text.StartsWith("["))
                     continue;
 
-                var id = text.Split(new[] {"[\""}, StringSplitOptions.None)[1]
-                    .Split(new[] {"\"]"}, StringSplitOptions.None)[0]
+                var id = text.Split(new[] { "[\"" }, StringSplitOptions.None)[1]
+                    .Split(new[] { "\"]" }, StringSplitOptions.None)[0]
                     .Trim();
 
                 if (!int.TryParse(id, out _))
@@ -114,137 +160,162 @@ namespace TextContentToolkit
                 }
             }
         }
-        
-        public void ExecuteOnQuestieFolder()
+
+        private static SortedDictionary<int, QuestRow> LoadBaseline(string baselinePath)
         {
-            var dirInfo = new DirectoryInfo(m_questConfig.QuestieDir);
+            var rows = new SortedDictionary<int, QuestRow>();
+            if (string.IsNullOrWhiteSpace(baselinePath) || !File.Exists(baselinePath))
+                return rows;
 
-            foreach (var fileInfo in dirInfo.GetFiles("*.lua"))
+            foreach (var line in File.ReadLines(baselinePath))
             {
-                var outputPath = Path.Combine(m_questConfig.QuestieDir, "output", fileInfo.Name);
+                if (!line.TrimStart().StartsWith("[\""))
+                    continue;
 
-                var inputPaths = new List<string>();
-                inputPaths.Add(fileInfo.FullName);
-                var locale = fileInfo.Name.Split('.')[0];
-                Execute(outputPath, inputPaths, VersionMode.Classic, OutputMode.Questie, locale);
-            }
-        }
-
-        public void Execute()
-        {
-            Execute(m_questConfig.OutputPath, m_questConfig.VersionMode == VersionMode.Retail ? m_questConfig.QuestObjectiveListRetail : m_questConfig.QuestObjectiveListClassic, m_questConfig.VersionMode, m_questConfig.OutputMode);
-            MergeOutputs(m_questConfig.VersionMode == VersionMode.Classic);
-        }
-
-        private void Execute(string outputPath, List<string> inputPaths, VersionMode versionMode, OutputMode outputMode, string locale = "zhCN")
-        {
-            var objectives = new List<QuestObjectives>();
-            var apis = new List<QuestApi>();
-            var cachedQuests = new List<Quest>();
-
-            foreach (var inputPath in inputPaths)
-            {
-                ReadObjectives(inputPath, objectives);
-            }
-
-            if (versionMode == VersionMode.Retail)
-            {
-                #region legacy
-                // ReadQuestApis(dirPath, apis);
-                #endregion
-
-                foreach (var inputPath in m_questConfig.QuestCacheListRetail)
+                var match = BaselineLineRegex.Match(line);
+                if (match.Success)
                 {
-                    QuestCacheReader.ReadQuestCacheRetail(inputPath, cachedQuests, objectives);
+                    var quest = new Quest
+                    {
+                        Id = match.Groups["id"].Value,
+                        Title = match.Groups["title"].Value,
+                        Objectives = match.Groups["objectives"].Value,
+                        Description = match.Groups["description"].Value,
+                        Progress = match.Groups["progress"].Value,
+                        Completion = match.Groups["completion"].Value,
+                        Translator = match.Groups["translator"].Value
+                    };
+                    rows[int.Parse(quest.Id)] = new QuestRow { Quest = quest, RawLine = line };
+                }
+                else
+                {
+                    int id;
+                    if (int.TryParse(line.FirstBetween("[\"", "\"]"), out id))
+                        rows[id] = new QuestRow { RawLine = line };
                 }
             }
 
-            if (versionMode == VersionMode.Classic)
-            {
-                foreach (var inputPath in m_questConfig.QuestCacheListClassic)
-                {
-                    QuestCacheReader.ReadQuestCache(inputPath, cachedQuests, objectives);
-                }
-            }
-           
-            var usedId = new HashSet<string>();
-            var questObjects = new List<Quest>();
-            foreach (var cachedQuest in cachedQuests)
-            {
-                usedId.Add(cachedQuest.Id);
-
-                var questObject = new Quest();
-                questObject.Id = cachedQuest.Id;
-                questObject.Title = cachedQuest.Title;
-                
-                var objective = objectives.FirstOrDefault(o => o.Id == questObject.Id);
-
-                questObject.Objectives = objective != null && cachedQuest.Objectives.Contains(@"oa") ? objective.Objectives : cachedQuest.Objectives;
-
-                questObject.Description = cachedQuest.Description;
-                questObject.Progress = string.Empty;
-                questObject.Completion = string.Empty;
-                questObjects.Add(questObject);
-            }
-
-            foreach (var questApi in apis.Where(a => !usedId.Contains(a.Id)))
-            {
-                usedId.Add(questApi.Id);
-
-                var questObject = new Quest();
-                questObject.Id = questApi.Id;
-                questObject.Title = questApi.Title;
-
-                var objective = objectives.FirstOrDefault(o => o.Id == questApi.Id);
-                questObject.Objectives = objective != null ? objective.Objectives : string.Empty;
-
-                questObject.Description = questApi.Description;
-                questObject.Progress = string.Empty;
-                questObject.Completion = string.Empty;
-                questObjects.Add(questObject);
-            }
-
-            // Objectives not present in apis
-            foreach (var questObjective in objectives.Where(o => !usedId.Contains(o.Id)))
-            {
-                usedId.Add(questObjective.Id);
-
-                var questObject = new Quest();
-                questObject.Id = questObjective.Id;
-                questObject.Title = questObjective.Title;
-                questObject.Objectives = questObjective.Objectives;
-                questObject.Description = string.Empty;
-                questObject.Progress = string.Empty;
-                questObject.Completion = string.Empty;
-                questObjects.Add(questObject);
-            }
-
-            if (outputMode == OutputMode.WoWeuCN)
-                WriteToWoWEuCN(outputPath, questObjects);
-
-            if (outputMode == OutputMode.Questie)
-                WrtieToQuestie(outputPath, locale, questObjects);
-
+            return rows;
         }
 
-        private void WrtieToQuestie(string outputPath, string locale, List<Quest> questObjects)
+        private static void MergeIntoBaseline(SortedDictionary<int, QuestRow> baseline, Quest incoming)
+        {
+            int id;
+            if (!int.TryParse(incoming.Id, out id))
+                return;
+
+            QuestRow row;
+            if (!baseline.TryGetValue(id, out row) || row.Quest == null)
+            {
+                baseline[id] = new QuestRow { Quest = incoming, Touched = true };
+                return;
+            }
+
+            var quest = row.Quest;
+            row.Touched |= ApplyField(quest.Title, incoming.Title, v => quest.Title = v);
+            row.Touched |= ApplyField(quest.Objectives, incoming.Objectives, v => quest.Objectives = v);
+            row.Touched |= ApplyField(quest.Description, incoming.Description, v => quest.Description = v);
+            row.Touched |= ApplyField(quest.Progress, incoming.Progress, v => quest.Progress = v);
+            row.Touched |= ApplyField(quest.Completion, incoming.Completion, v => quest.Completion = v);
+        }
+
+        /// <summary>New non-empty text wins, but translated text is never replaced by untranslated text.</summary>
+        private static bool ApplyField(string oldValue, string newValue, Action<string> setter)
+        {
+            if (string.IsNullOrEmpty(newValue) || newValue.Trim().Length == 0)
+                return false;
+
+            if (!string.IsNullOrEmpty(oldValue) && oldValue.HasChinese() && !newValue.HasChinese())
+                return false;
+
+            if (newValue == oldValue)
+                return false;
+
+            setter(newValue);
+            return true;
+        }
+
+        private static void NormalizeQuest(Quest quest)
+        {
+            quest.Title = Normalize(quest.Title);
+            quest.Objectives = Normalize(quest.Objectives);
+            quest.Description = Normalize(quest.Description);
+            quest.Progress = Normalize(quest.Progress);
+            quest.Completion = Normalize(quest.Completion);
+        }
+
+        private static string Normalize(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+                return text ?? string.Empty;
+
+            text = text.Replace(Environment.NewLine, @"NEW_LINE").Replace("\n", @"NEW_LINE");
+
+            text = text.Replace(@"$r", @"{race}").Replace(@"$R", @"{race}");
+            text = text.Replace(@"$c", @"{class}").Replace(@"$C", @"{class}");
+            text = text.Replace(@"$n", @"{name}").Replace(@"$N", @"{name}");
+            text = text.Replace(@"$p", @"{name}").Replace(@"$P", @"{name}");
+            text = text.Replace(@"$b", @"NEW_LINE").Replace(@"$B", @"NEW_LINE");
+
+            return ReplaceGender(text);
+        }
+
+        private static string Render(Quest quest)
+        {
+            return TemplateLine.Replace("$Id$", quest.Id)
+                .Replace("$Title$", quest.Title)
+                .Replace("$Objectives$", quest.Objectives)
+                .Replace("$Description$", quest.Description)
+                .Replace("$Progress$", quest.Progress)
+                .Replace("$Completion$", quest.Completion)
+                .Replace("$Translator$", quest.Translator ?? string.Empty);
+        }
+
+        private static string ReplaceGender(string text)
+        {
+            foreach (var genderText in new[] { "$g", "$G" })
+            {
+                while (text.Contains(genderText))
+                {
+                    var index = text.IndexOf(genderText, StringComparison.Ordinal);
+
+                    var tempText = text.Substring(index + genderText.Length);
+
+                    var index2 = tempText.IndexOf(":", StringComparison.Ordinal);
+                    if (index2 < 0)
+                        break;
+                    var genderFirstText = tempText.Substring(0, index2);
+                    tempText = tempText.Substring(index2 + 1);
+                    var index3 = tempText.IndexOf(";", StringComparison.Ordinal);
+                    if (index3 < 0)
+                        break;
+                    var gender2ndText = tempText.Substring(0, index3);
+
+                    var newText = "YOUR_GENDER" + "(" + genderFirstText + ";" + gender2ndText + ")";
+                    var oldText = genderText + genderFirstText + ":" + gender2ndText + ";";
+                    text = text.Replace(oldText, newText);
+                }
+            }
+
+            return text;
+        }
+
+        #region Questie output (legacy --questie mode)
+
+        public void WriteToQuestie(string outputPath, string locale, List<Quest> questObjects, string filterPath = null)
         {
             var sb = new StringBuilder();
-            var filterPath = m_questConfig.QuestieFilterPath;
-
-            var useFilter = !string.IsNullOrEmpty(filterPath);
 
             var validIds = new HashSet<string>();
+            var useFilter = !string.IsNullOrEmpty(filterPath);
             if (useFilter)
             {
-                var lines = File.ReadAllLines(filterPath);
-                foreach (var line in lines)
+                foreach (var line in File.ReadAllLines(filterPath))
                 {
                     if (!line.Trim().StartsWith("["))
                         continue;
 
-                    var id = line.FirstBetween("[", "]");
-                    validIds.Add(id);
+                    validIds.Add(line.FirstBetween("[", "]"));
                 }
             }
 
@@ -257,323 +328,85 @@ l10n.questLookup[""localeCode""] = { ";
             foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
             {
                 if (useFilter && !validIds.Contains(questObject.Id))
-                    validIds.Remove(questObject.Id);
+                    continue;
 
                 sb.Append("[" + questObject.Id + "] = {");
                 sb.Append("\"" + questObject.Title.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") +
                           "\", ");
-                if (string.IsNullOrEmpty(questObject.Description.Trim()))
-                    sb.Append("nil, ");
-                else
-                {
-                    var questLines = questObject.Description.Split(new[] {"$b", "$B", Environment.NewLine},
-                        StringSplitOptions.RemoveEmptyEntries);
-                    var questLinesModified = new List<string>();
-                    foreach (var questLine in questLines)
-                    {
-                        var line = questLine;
-
-                        line = line.Replace(@"$r", @"<race>").Replace(@"$R", @"<race>");
-                        line = line.Replace(@"$c", @"<class>").Replace(@"$C", @"<class>");
-                        line = line.Replace(@"$n", @"<name>").Replace(@"$N", @"<name>");
-                        line = line.Replace(@"$p", @"<name>").Replace(@"$P", @",name>");
-
-                        line = ReplaceGenderQuestie(line);
-                        questLinesModified.Add(line);
-                    }
-
-                    string questDescText = string.Join(",",
-                        questLinesModified.Select(s =>
-                            "\"" + s.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\""));
-                    sb.Append("{" + questDescText + "}, ");
-                }
-
-                if (string.IsNullOrEmpty(questObject.Objectives.Trim()))
-                    sb.Append("nil}");
-                else
-                {
-                    var questLines = questObject.Objectives.Split(new[] {"$b", "$B", Environment.NewLine},
-                        StringSplitOptions.RemoveEmptyEntries);
-                    var questLinesModified = new List<string>();
-                    foreach (var questLine in questLines)
-                    {
-                        var line = questLine;
-
-                        line = line.Replace(@"$r", @"<race>").Replace(@"$R", @"<race>");
-                        line = line.Replace(@"$c", @"<class>").Replace(@"$C", @"<class>");
-                        line = line.Replace(@"$n", @"<name>").Replace(@"$N", @"<name>");
-                        line = line.Replace(@"$p", @"<name>").Replace(@"$P", @",name>");
-
-                        line = ReplaceGenderQuestie(line);
-                        questLinesModified.Add(line);
-                    }
-
-                    string questDescText = string.Join(",",
-                        questLinesModified.Select(s =>
-                            "\"" + s.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\""));
-                    sb.Append("{" + questDescText + "}").Append("}");
-                }
-
+                AppendQuestieBlock(sb, questObject.Description, false);
+                AppendQuestieBlock(sb, questObject.Objectives, true);
                 sb.AppendLine(",");
             }
 
             sb.AppendLine("}");
-            var finalText = sb.ToString();
-            File.WriteAllText(outputPath, finalText);
+            File.WriteAllText(outputPath, sb.ToString());
         }
 
-        private void WriteToWoWEuCN(string outputPath, List<Quest> questObjects)
+        private static void AppendQuestieBlock(StringBuilder sb, string text, bool isLast)
         {
-            var sb = new StringBuilder();
-            sb.AppendLine("WoWeuCN_Quests_QuestData = {");
-            foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
+            if (string.IsNullOrEmpty(text) || string.IsNullOrEmpty(text.Trim()))
             {
-                var line = PrintLine(questObject);
-                //line = SpecialTreatment(line);
-                line = line.Replace(Environment.NewLine, @"NEW_LINE").Replace("\n", @"NEW_LINE");
-
-                line = line.Replace(@"$r", @"{race}").Replace(@"$R", @"{race}");
-                line = line.Replace(@"$c", @"{class}").Replace(@"$C", @"{class}");
-                line = line.Replace(@"$n", @"{name}").Replace(@"$N", @"{name}");
-                line = line.Replace(@"$p", @"{name}").Replace(@"$P", @"{name}");
-                line = line.Replace(@"$b", @"NEW_LINE").Replace(@"$B", @"NEW_LINE");
-
-                line = ReplaceGender(line);
-                //line = ReplacePlayer(line, questObject, sbQuestToCheck);
-                sb.AppendLine(line);
+                sb.Append(isLast ? "nil}" : "nil, ");
+                return;
             }
-            sb.AppendLine("}");
-            var finalText = sb.ToString();
-            File.WriteAllText(outputPath, finalText);
-        }
 
-        private static void ReadQuestApis(DirectoryInfo dirPath, List<QuestApi> apis)
-        {
-            foreach (var filePath in dirPath.GetFiles(@"*.json"))
+            var questLines = text.Split(new[] { "$b", "$B", Environment.NewLine }, StringSplitOptions.RemoveEmptyEntries);
+            var questLinesModified = new List<string>();
+            foreach (var questLine in questLines)
             {
-                var text = File.ReadAllText(filePath.FullName);
-                var questApi = JsonConvert.DeserializeObject<QuestApi>(text);
-                questApi.Description = questApi.Description?.Replace("\"", string.Empty).Replace("“", string.Empty);
-                apis.Add(questApi);
+                var line = questLine;
+
+                line = line.Replace(@"$r", @"<race>").Replace(@"$R", @"<race>");
+                line = line.Replace(@"$c", @"<class>").Replace(@"$C", @"<class>");
+                line = line.Replace(@"$n", @"<name>").Replace(@"$N", @"<name>");
+                line = line.Replace(@"$p", @"<name>").Replace(@"$P", @"<name>");
+
+                line = ReplaceGenderQuestie(line);
+                questLinesModified.Add(line);
             }
+
+            var questDescText = string.Join(",",
+                questLinesModified.Select(s =>
+                    "\"" + s.Replace("\\\"", "#$#$").Replace("\"", "\\\"").Replace("#$#$", "\\\"") + "\""));
+            sb.Append("{" + questDescText + "}").Append(isLast ? "}" : ", ");
         }
-
-        //public void Execute(string outputPath, string samplePath)
-        //{
-        //    m_sampleText = File.ReadAllLines(samplePath);
-        //    var sb = new StringBuilder();
-        //    var dirPath = new DirectoryInfo(m_dirPath);
-        //    var questObjects = new List<Quest>();
-        //    foreach (var filePath in dirPath.GetFiles(@"*.html"))
-        //    {
-        //        var text = File.ReadAllText(filePath.FullName);
-        //        var id = filePath.Name.Replace(@".html", string.Empty);
-        //        var title = GetValueFromString(text, "<h1 title=\"", "</h1>", ref text);
-        //        var objectives = GetValueFromString(text, "<h3>任务需求</h3>", "</div", ref text);
-        //        var description = GetValueFromString(text, "<h3>任务描述</h3>", "</div", ref text);
-        //        var progress = GetValueFromString(text, "<h3>任务返回</h3>", "</div", ref text);
-        //        var completion = GetValueFromString(text, "<h3>任务完成</h3>", "<div ", ref text);
-
-        //        var questObject = new Quest();
-        //        questObject.Id = id;
-        //        questObject.Title = title;
-        //        questObject.Objectives = objectives;
-        //        questObject.Description = description;
-        //        questObject.Progress = progress;
-        //        questObject.Completion = completion;
-        //        questObjects.Add(questObject);
-        //    }
-
-        //    var sbQuestToCheck = new StringBuilder();
-        //    foreach (var questObject in questObjects.OrderBy(q => int.Parse(q.Id)))
-        //    {
-        //        var line = PrintLine(questObject);
-        //        line = SpecialTreatment(line);
-        //        line = ReplaceGender(line);
-        //        line = ReplacePlayer(line, questObject, sbQuestToCheck);
-        //        sb.AppendLine(line);
-        //    }
-
-        //    File.WriteAllText(outputPath + ".log", sbQuestToCheck.ToString());
-        //    var finalText = sb.ToString();
-        //    File.WriteAllText(outputPath, finalText);
-        //}
-
-        //public static string SpecialTreatment(string text)
-        //{
-        //    return text.Replace("麽", "么").Replace("；", ";").Replace("<Class>", "YOUR_CLASS").Replace("萨丁巴我", "萨丁和我").Replace("於", "于")
-        //        .Replace("―", "─")
-        //        .Replace("：", ":").Replace("；", ";")
-        //        .Replace("$G魅魔; 在她找到你之前你就来了", "YOUR_GENDER(魅魔;地狱火)跟着你，以便引起你的注意，但看起来你在它找到你之前就来到这里了")
-        //        .Replace("(玩家);指挥官雷尔松咧嘴笑着。$g;", "NEW_LINENEW_LINE<指挥官雷尔松咧嘴笑着。>");
-        //}
-
-        //private string ReplacePlayer(string text, Quest questObject, StringBuilder sbQuestToCheck)
-        //{
-        //    var playerText = "(玩家)";
-
-        //    if (questObject.Id == "218")
-        //        Console.WriteLine(true);
-        //    text = ChineseConverter.Convert(text, ChineseConversionDirection.TraditionalToSimplified);
-        //    var sampleLine = m_sampleText.First(l => l.StartsWith("    [\"" + questObject.Id));
-        //    sampleLine = ChineseConverter.Convert(sampleLine, ChineseConversionDirection.TraditionalToSimplified);
-
-        //    while (text.Contains(playerText))
-        //    {
-        //        var index = text.IndexOf(playerText);
-        //        var checkTextBefore = text.Substring(index - 6, 6);
-        //        var checkTextAfter = text.Substring(index + playerText.Length, 6);
-
-        //        var indexOriginBefore = sampleLine.IndexOf(checkTextBefore);
-        //        var indexOriginAfter = -1;
-        //        if (indexOriginBefore > 0)
-        //            indexOriginAfter = sampleLine.Substring(indexOriginBefore).IndexOf(checkTextAfter) + indexOriginBefore;
-        //        var newText = string.Empty;
-        //        if (indexOriginBefore == -1 || indexOriginAfter < indexOriginBefore)
-        //        {
-        //            sbQuestToCheck.AppendLine(questObject.Id);
-        //            newText = checkTextBefore + "YOUR_PLAYER" + checkTextAfter;
-        //        }
-        //        else
-        //        {
-        //            newText = checkTextBefore + sampleLine.Substring(indexOriginBefore + 6, indexOriginAfter - indexOriginBefore - 6) + checkTextAfter;
-        //        }
-
-        //        var oldText = checkTextBefore + playerText + checkTextAfter;
-        //        text = text.Replace(oldText, newText);
-        //    }
-
-        //    return text;
-        //}
 
         private static string ReplaceGenderQuestie(string text)
         {
-            var genderText = "$g";
-            while (text.Contains(genderText))
+            foreach (var genderText in new[] { "$g", "$G" })
             {
-                var index = text.IndexOf(genderText);
+                while (text.Contains(genderText))
+                {
+                    var index = text.IndexOf(genderText, StringComparison.Ordinal);
 
-                var tempText = text.Substring(index + genderText.Length);
+                    var tempText = text.Substring(index + genderText.Length);
 
-                var index2 = tempText.IndexOf(":");
-                var genderFirstText = tempText.Substring(0, index2);
-                if (genderFirstText.Contains("[")) Console.Write(true);
-                tempText = tempText.Substring(index2 + 1);
-                var index3 = tempText.IndexOf(";");
-                var gender2ndText = tempText.Substring(0, index3);
+                    var index2 = tempText.IndexOf(":", StringComparison.Ordinal);
+                    if (index2 < 0)
+                        break;
+                    var genderFirstText = tempText.Substring(0, index2);
+                    tempText = tempText.Substring(index2 + 1);
+                    var index3 = tempText.IndexOf(";", StringComparison.Ordinal);
+                    if (index3 < 0)
+                        break;
+                    var gender2ndText = tempText.Substring(0, index3);
 
-                if (gender2ndText.Contains("[")) Console.Write(true);
-                var newText = "<" + genderFirstText + "/" + gender2ndText + ">";
-                var oldText = genderText + genderFirstText + ":" + gender2ndText + ";";
-                text = text.Replace(oldText, newText);
-            }
-
-            genderText = "$G";
-            while (text.Contains(genderText))
-            {
-                var index = text.IndexOf(genderText);
-
-                var tempText = text.Substring(index + genderText.Length);
-
-                var index2 = tempText.IndexOf(":");
-                var genderFirstText = tempText.Substring(0, index2);
-                if (genderFirstText.Contains("[")) Console.Write(true);
-                tempText = tempText.Substring(index2 + 1);
-                var index3 = tempText.IndexOf(";");
-                var gender2ndText = tempText.Substring(0, index3);
-
-                if (gender2ndText.Contains("[")) Console.Write(true);
-                var newText = "<" + genderFirstText + "/" + gender2ndText + ">";
-                var oldText = genderText + genderFirstText + ":" + gender2ndText + ";";
-                text = text.Replace(oldText, newText);
+                    var newText = "<" + genderFirstText + "/" + gender2ndText + ">";
+                    var oldText = genderText + genderFirstText + ":" + gender2ndText + ";";
+                    text = text.Replace(oldText, newText);
+                }
             }
 
             return text;
         }
 
-
-        private static string ReplaceGender(string text)
+        public List<Quest> ComposeFromObjectives(string objectivesPath)
         {
-            var genderText = "$g";
-            while (text.Contains(genderText))
-            {
-                var index = text.IndexOf(genderText);
-
-                var tempText = text.Substring(index + genderText.Length);
-
-                var index2 = tempText.IndexOf(":");
-                var genderFirstText = tempText.Substring(0, index2);
-                if (genderFirstText.Contains("[")) Console.Write(true);
-                tempText = tempText.Substring(index2 + 1);
-                var index3 = tempText.IndexOf(";");
-                var gender2ndText = tempText.Substring(0, index3);
-
-                if (gender2ndText.Contains("[")) Console.Write(true);
-                var newText = "YOUR_GENDER" + "(" + genderFirstText + ";" + gender2ndText + ")";
-                var oldText = genderText + genderFirstText + ":" + gender2ndText + ";";
-                text = text.Replace(oldText, newText);
-            }
-
-            genderText = "$G";
-            while (text.Contains(genderText))
-            {
-                var index = text.IndexOf(genderText);
-
-                var tempText = text.Substring(index + genderText.Length);
-
-                var index2 = tempText.IndexOf(":");
-                var genderFirstText = tempText.Substring(0, index2);
-                if (genderFirstText.Contains("[")) Console.Write(true);
-                tempText = tempText.Substring(index2 + 1);
-                var index3 = tempText.IndexOf(";");
-                var gender2ndText = tempText.Substring(0, index3);
-
-                if (gender2ndText.Contains("[")) Console.Write(true);
-                var newText = "YOUR_GENDER" + "(" + genderFirstText + ";" + gender2ndText + ")";
-                var oldText = genderText + genderFirstText + ":" + gender2ndText + ";";
-                text = text.Replace(oldText, newText);
-            }
-
-            return text;
+            var objectives = new List<QuestObjectives>();
+            ReadObjectives(objectivesPath, objectives);
+            return Compose(new List<Quest>(), objectives);
         }
 
-        //private static string GetValueFromString(string inputString, string keyword, string endKeyword, ref string text)
-        //{
-        //    var startText = keyword;
-        //    int index = inputString.IndexOf(keyword, StringComparison.OrdinalIgnoreCase);
-        //    if (index < 0)
-        //        return string.Empty;
-
-        //    inputString = inputString.Substring(index + startText.Length);
-
-        //    int indexStart = inputString.IndexOf("\">", StringComparison.OrdinalIgnoreCase);
-        //    if (indexStart < 0)
-        //        throw new Exception(inputString + Environment.NewLine + keyword);
-
-        //    inputString = inputString.Substring(indexStart + 2);
-
-        //    int indexEnd = inputString.IndexOf(endKeyword, StringComparison.OrdinalIgnoreCase);
-        //    var output = inputString.Substring(0, indexEnd);
-        //    text = inputString.Substring(indexEnd);
-        //    output = output.Replace("\n", string.Empty);
-        //    if (output.EndsWith("<br>"))
-        //        output = output.Substring(0, output.Length - 4);
-        //    return output.Replace("<br>", "NEW_LINENEW_LINE");
-
-        //}
-
-        public string PrintLine(Quest quest)
-        {
-            var text = m_template.Replace("$Id$", quest.Id).Replace("$Title$", quest.Title)
-                .Replace("$Objectives$", quest.Objectives).Replace("$Description$", quest.Description)
-                .Replace("$Progress$", quest.Progress).Replace("$Completion$", quest.Completion);
-            return text;
-        }
-
-        private readonly string m_dirPath;
-
-        private string[] m_sampleText;
-        private readonly string m_template;
-        private QuestConfig m_questConfig;
+        #endregion
     }
 }
