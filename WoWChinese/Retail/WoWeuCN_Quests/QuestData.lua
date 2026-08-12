@@ -33,9 +33,10 @@ WoWeuCN_Quests_Messages = {
  WoWeuCN_Quests_Interface = { 
     active     = "激活插件", 
     options1   = "额外选项:", 
-    transtitle = "翻译任务标题", 
-    transobjectives = "翻译任务目标"
- }; 
+    transtitle = "翻译任务标题",
+    transobjectives = "翻译任务目标",
+    transtracker = "翻译任务追踪列表"
+ };
 
 WoWeuCN_Quests_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 
 WoWeuCN_Quests_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 

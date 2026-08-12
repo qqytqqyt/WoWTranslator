@@ -35,9 +35,10 @@ WoWeuCN_Quests_Messages = {
     mode1      = "直接替换任务窗口文本", 
     options1   = "额外选项:", 
     transtitle = "翻译任务标题", 
-    transchat  = "翻译NPC对话", 
-    overwritefonts  = "尝试使用内置对话字体 (/RELOAD后生效)"
- }; 
+    transchat  = "翻译NPC对话",
+    overwritefonts  = "尝试使用内置对话字体 (/RELOAD后生效)",
+    transtracker = "翻译任务追踪列表"
+ };
 
 WoWeuCN_Quests_Font1 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf";
 WoWeuCN_Quests_Font2 = "Interface\\AddOns\\WoWeuCN_Quests\\Fonts\\woweucn.ttf"; 

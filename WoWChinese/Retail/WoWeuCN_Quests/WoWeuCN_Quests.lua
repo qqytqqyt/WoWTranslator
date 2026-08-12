@@ -177,7 +177,10 @@ function WoWeuCN_Quests_CheckVars()
      WoWeuCN_Quests_N_PS["transtitle"] = "1";   
   end
   if (not WoWeuCN_Quests_N_PS["transobjectives"] ) then
-     WoWeuCN_Quests_N_PS["transobjectives"] = "1";   
+     WoWeuCN_Quests_N_PS["transobjectives"] = "1";
+  end
+  if (not WoWeuCN_Quests_N_PS["transtracker"] ) then
+     WoWeuCN_Quests_N_PS["transtracker"] = "1";
   end
   -- Special variable of the GetQuestID function availability
   if ( WoWeuCN_Quests_N_PS["isGetQuestID"] ) then
@@ -313,6 +316,29 @@ function WoWeuCN_Quests_SlashCommand(msg)
       else
          print ("WOWeuCN - 翻译任务目标状态 : 禁用.");
       end
+      -- tracker option
+   elseif (msg=="tracker on" or msg=="TRACKER ON" or msg=="tracker 1") then
+      if (WoWeuCN_Quests_N_PS["transtracker"]=="1") then
+         print ("WOWeuCN - 翻译任务追踪 : 启用.");
+      else
+         print ("|cffffff00WOWeuCN - 翻译任务追踪 : 启用.");
+         WoWeuCN_Quests_N_PS["transtracker"] = "1";
+         WoWeuCN_Quests_RefreshTracker();
+      end
+   elseif (msg=="tracker off" or msg=="TRACKER OFF" or msg=="tracker 0") then
+      if (WoWeuCN_Quests_N_PS["transtracker"]=="0") then
+         print ("WOWeuCN - 翻译任务追踪 : 禁用.");
+      else
+         print ("|cffffff00WOWeuCN - 翻译任务追踪 : 禁用. (完全恢复原文可能需要 /reload)");
+         WoWeuCN_Quests_N_PS["transtracker"] = "0";
+         WoWeuCN_Quests_RefreshTracker();
+      end
+   elseif (msg=="tracker" or msg=="TRACKER") then
+      if (WoWeuCN_Quests_N_PS["transtracker"]=="1") then
+         print ("WOWeuCN - 翻译任务追踪状态 : 启用.");
+      else
+         print ("WOWeuCN - 翻译任务追踪状态 : 禁用.");
+      end
 
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
@@ -325,6 +351,8 @@ function WoWeuCN_Quests_SlashCommand(msg)
       print ("      /woweucn title off - 禁用标题翻译");
       print ("      /woweucn objectives on  - 启用任务目标翻译");
       print ("      /woweucn objectives off - 禁用任务目标翻译");
+      print ("      /woweucn tracker on  - 启用任务追踪翻译");
+      print ("      /woweucn tracker off - 禁用任务追踪翻译");
    end
 end
 
@@ -334,6 +362,7 @@ function WoWeuCN_Quests_SetCheckButtonState()
   WoWeuCN_QuestsCheckButton0.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["active"]=="1");
   WoWeuCN_QuestsCheckButton3.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtitle"]=="1");
   WoWeuCN_QuestsCheckButton4.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transobjectives"]=="1");
+  WoWeuCN_QuestsCheckButton5.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtracker"]=="1");
 end
 
 function WoweuCN_LoadOriginalHeaders()
@@ -423,6 +452,14 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsCheckButton4.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton4:SetSize(500, 21)
   WoWeuCN_QuestsCheckButton4.Text:SetText(WoWeuCN_Quests_Interface.transobjectives);
+
+  local WoWeuCN_QuestsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton5", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_QuestsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -45);
+  WoWeuCN_QuestsCheckButton5.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtracker"]=="1");
+  WoWeuCN_QuestsCheckButton5.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transtracker"]=="0") then WoWeuCN_Quests_N_PS["transtracker"]="1" else WoWeuCN_Quests_N_PS["transtracker"]="0" end; WoWeuCN_Quests_RefreshTracker(); end);
+  WoWeuCN_QuestsCheckButton5.Text:SetFont(WoWeuCN_Quests_Font2, 13);
+  WoWeuCN_QuestsCheckButton5:SetSize(500, 21)
+  WoWeuCN_QuestsCheckButton5.Text:SetText(WoWeuCN_Quests_Interface.transtracker or "翻译任务追踪列表");
 end
 
 
@@ -630,6 +667,140 @@ function OnQuestLogUpdate(poiTable)
 	QuestScrollFrame.Contents:Layout();
 end
 
+-- ===========================================================================
+-- Objective tracker (quest tracking list below the minimap) translation
+-- ===========================================================================
+
+-- Tracker modules whose blocks are keyed by questID (safe to look up in QuestData)
+local WoWeuCN_Quests_TrackerQuestModules = {
+   ["CampaignQuestObjectiveTracker"] = true,
+   ["QuestObjectiveTracker"]         = true,
+   ["WorldQuestObjectiveTracker"]    = true,
+   ["BonusObjectiveTracker"]         = true,
+};
+
+-- Translated category headers of the tracker modules
+local WoWeuCN_Quests_TrackerHeaders = {
+   ["CampaignQuestObjectiveTracker"]     = "战役",
+   ["QuestObjectiveTracker"]             = "任务",
+   ["WorldQuestObjectiveTracker"]        = "世界任务",
+   ["BonusObjectiveTracker"]             = "附加目标",
+   ["AchievementObjectiveTracker"]       = "成就",
+   ["ScenarioObjectiveTracker"]          = "场景",
+   ["MonthlyActivitiesObjectiveTracker"] = "旅行者日志",
+   ["ProfessionsRecipeTracker"]          = "专业配方",
+   ["AdventureObjectiveTracker"]         = "收藏",
+};
+
+-- Well-known objective line texts (matched exactly against the client strings)
+local WoWeuCN_Quests_TrackerLines = {};
+if (QUEST_WATCH_QUEST_READY) then
+   WoWeuCN_Quests_TrackerLines[QUEST_WATCH_QUEST_READY] = "可以交还任务";
+end
+if (QUEST_WATCH_CLICK_TO_COMPLETE) then
+   WoWeuCN_Quests_TrackerLines[QUEST_WATCH_CLICK_TO_COMPLETE] = "点击以完成任务";
+end
+
+local function WoWeuCN_Quests_TrackerActive()
+   return (WoWeuCN_Quests_N_PS and WoWeuCN_Quests_N_PS["active"]=="1" and WoWeuCN_Quests_N_PS["transtracker"]=="1");
+end
+
+local function WoWeuCN_Quests_SetTrackerText(fontString, text)
+   if (fontString and text and text~="" and fontString:GetText()~=text) then
+      local _, fontHeight = fontString:GetFont();
+      fontString:SetFont(WoWeuCN_Quests_Font2, fontHeight or 13);
+      fontString:SetText(text);
+   end
+end
+
+local function WoWeuCN_Quests_TranslateTrackerBlock(block)
+   if (type(block)~="table") then
+      return
+   end
+   -- quest title (block header)
+   local questID = block.id;
+   if (type(questID)=="number" and block.HeaderText) then
+      local data = WoWeuCN_Quests_QuestData[tostring(questID)];
+      if (data and data["Title"] and data["Title"]~="") then
+         local title = WoWeuCN_Quests_ExpandUnitInfo(data["Title"]);
+         if (block.HeaderText:GetText()~=title) then
+            local oldHeight = block.HeaderText:GetHeight();
+            WoWeuCN_Quests_SetTrackerText(block.HeaderText, title);
+            local newHeight = block.HeaderText:GetHeight();
+            if (oldHeight and newHeight and oldHeight~=newHeight) then
+               block:SetHeight(block:GetHeight() + newHeight - oldHeight);
+            end
+         end
+      end
+   end
+   -- well-known lines ("Ready for turn-in" etc.)
+   if (block.usedLines) then
+      for _, line in pairs(block.usedLines) do
+         if (line.Text) then
+            local translated = WoWeuCN_Quests_TrackerLines[line.Text:GetText()];
+            if (translated) then
+               WoWeuCN_Quests_SetTrackerText(line.Text, translated);
+            end
+         end
+      end
+   end
+end
+
+local function WoWeuCN_Quests_TranslateTrackerModule(module, moduleName)
+   if (not WoWeuCN_Quests_TrackerActive()) then
+      return
+   end
+   -- module category header ("Quests", "Campaign", ...)
+   if (module.Header and module.Header.Text) then
+      WoWeuCN_Quests_SetTrackerText(module.Header.Text, WoWeuCN_Quests_TrackerHeaders[moduleName]);
+   end
+   -- quest blocks (only for modules whose block ids are questIDs)
+   if (WoWeuCN_Quests_TrackerQuestModules[moduleName] and module.usedBlocks) then
+      for _, blocks in pairs(module.usedBlocks) do
+         for _, block in pairs(blocks) do
+            WoWeuCN_Quests_TranslateTrackerBlock(block);
+         end
+      end
+   end
+end
+
+function WoWeuCN_Quests_RefreshTracker()
+   if (ObjectiveTrackerFrame and ObjectiveTrackerFrame.Update) then
+      pcall(ObjectiveTrackerFrame.Update, ObjectiveTrackerFrame);
+   end
+end
+
+local WoWeuCN_Quests_TrackerHooked = false;
+function WoWeuCN_Quests_InitTracker()
+   if (WoWeuCN_Quests_TrackerHooked) then
+      return
+   end
+   -- The tracker modules are created by Blizzard_ObjectiveTracker; retry if not present yet
+   if (not QuestObjectiveTracker) then
+      WoWeuCN_Quests_wait(2, WoWeuCN_Quests_InitTracker);
+      return
+   end
+   WoWeuCN_Quests_TrackerHooked = true;
+   -- main header ("All Objectives")
+   if (ObjectiveTrackerFrame and ObjectiveTrackerFrame.Update and ObjectiveTrackerFrame.Header and ObjectiveTrackerFrame.Header.Text) then
+      hooksecurefunc(ObjectiveTrackerFrame, "Update", function(self)
+         if (WoWeuCN_Quests_TrackerActive()) then
+            WoWeuCN_Quests_SetTrackerText(self.Header.Text, "所有目标");
+         end
+      end);
+   end
+   -- per-module hooks: re-apply translation after every tracker layout update
+   for moduleName in pairs(WoWeuCN_Quests_TrackerHeaders) do
+      local module = _G[moduleName];
+      if (module and module.Update) then
+         hooksecurefunc(module, "Update", function(self)
+            WoWeuCN_Quests_TranslateTrackerModule(self, moduleName);
+         end);
+      end
+   end
+   WoWeuCN_Quests_RefreshTracker();
+end
+
 -- Even handlers
 function WoWeuCN_Quests_OnEvent(self, event, name, ...)
    if (WoWeuCN_Quests_onDebug) then
@@ -665,6 +836,7 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       WoWeuCN_Quests_BlizzardOptions();
       WoWeuCN_Quests_wait(2, Broadcast)
       hooksecurefunc("QuestLogQuests_Update", function(...) OnQuestLogUpdate(...) end);
+      WoWeuCN_Quests_InitTracker();
       WoWeuCN_Quests:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Quests.ADDON_LOADED = nil;
       if (not isGetQuestID) then
