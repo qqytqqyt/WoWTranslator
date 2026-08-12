@@ -166,6 +166,10 @@ function WoWeuCN_Quests_CheckVars()
   if (not WoWeuCN_Quests_N_PS["overwritefonts"]) then
      WoWeuCN_Quests_N_PS["overwritefonts"] = "0";
   end
+  -- Initiation - tracker
+  if (not WoWeuCN_Quests_N_PS["transtracker"]) then
+     WoWeuCN_Quests_N_PS["transtracker"] = "1";
+  end
   -- Special variable of the GetQuestID function availability
   if ( WoWeuCN_Quests_N_PS["isGetQuestID"] ) then
      isGetQuestID=WoWeuCN_Quests_N_PS["isGetQuestID"];
@@ -317,6 +321,29 @@ function WoWeuCN_Quests_SlashCommand(msg)
       else
          print ("WoWeuCN - 翻译NPC对话状态 : 禁用.");
       end
+   -- tracker setting
+   elseif (msg=="tracker on" or msg=="TRACKER ON" or msg=="tracker 1") then
+      if (WoWeuCN_Quests_N_PS["transtracker"]=="1") then
+         print ("WoWeuCN - 翻译任务追踪 : 启用.");
+      else
+         print ("|cffffff00WoWeuCN - 翻译任务追踪 : 启用.");
+         WoWeuCN_Quests_N_PS["transtracker"] = "1";
+         WoWeuCN_Quests_RefreshTracker();
+      end
+   elseif (msg=="tracker off" or msg=="TRACKER OFF" or msg=="tracker 0") then
+      if (WoWeuCN_Quests_N_PS["transtracker"]=="0") then
+         print ("WoWeuCN - 翻译任务追踪 : 禁用.");
+      else
+         print ("|cffffff00WoWeuCN - 翻译任务追踪 : 禁用.");
+         WoWeuCN_Quests_N_PS["transtracker"] = "0";
+         WoWeuCN_Quests_RefreshTracker();
+      end
+   elseif (msg=="tracker" or msg=="TRACKER") then
+      if (WoWeuCN_Quests_N_PS["transtracker"]=="1") then
+         print ("WoWeuCN - 翻译任务追踪状态 : 启用.");
+      else
+         print ("WoWeuCN - 翻译任务追踪状态 : 禁用.");
+      end
 
    elseif (msg=="") then
       InterfaceOptionsFrame_Show();
@@ -327,6 +354,8 @@ function WoWeuCN_Quests_SlashCommand(msg)
       print ("      /WoWeuCN off - 禁用翻译模块");
       print ("      /WoWeuCN title on - 启用标题翻译");
       print ("      /WoWeuCN title off - 禁用标题翻译");
+      print ("      /WoWeuCN tracker on - 启用任务追踪翻译");
+      print ("      /WoWeuCN tracker off - 禁用任务追踪翻译");
    end
 end
 
@@ -337,6 +366,7 @@ function WoWeuCN_Quests_SetCheckButtonState()
   WoWeuCN_QuestsCheckButton3.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtitle"]=="1");
   WoWeuCN_QuestsCheckButton4.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transchat"]=="1");
   WoWeuCN_QuestsCheckButton5.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["overwritefonts"]=="1");
+  WoWeuCN_QuestsCheckButton6.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtracker"]=="1");
 end
 
 function WoweuCN_LoadOriginalHeaders()
@@ -432,6 +462,14 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsCheckButton5.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton5:SetSize(850, 21)
   WoWeuCN_QuestsCheckButton5.Text:SetText(WoWeuCN_Quests_Interface.overwritefonts);
+
+  local WoWeuCN_QuestsCheckButton6 = CreateFrame("CheckButton", "WoWeuCN_QuestsCheckButton6", WoWeuCN_QuestsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_QuestsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_QuestsOptionsMode1, "BOTTOMLEFT", 0, -95);
+  WoWeuCN_QuestsCheckButton6.Checkbox:SetChecked(WoWeuCN_Quests_N_PS["transtracker"]=="1");
+  WoWeuCN_QuestsCheckButton6.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Quests_N_PS["transtracker"]=="0") then WoWeuCN_Quests_N_PS["transtracker"]="1" else WoWeuCN_Quests_N_PS["transtracker"]="0" end; WoWeuCN_Quests_RefreshTracker(); end);
+  WoWeuCN_QuestsCheckButton6.Text:SetFont(WoWeuCN_Quests_Font2, 13);
+  WoWeuCN_QuestsCheckButton6:SetSize(850, 21)
+  WoWeuCN_QuestsCheckButton6.Text:SetText(WoWeuCN_Quests_Interface.transtracker or "翻译任务追踪列表");
 end
 
 
@@ -1157,6 +1195,133 @@ function OnQuestLogUpdate(...)
    end
 end
 
+-- ===========================================================================
+-- Quest tracker (quest watch list below the minimap) translation
+-- ===========================================================================
+
+local function WoWeuCN_Quests_TrackerActive()
+   return (WoWeuCN_Quests_N_PS and WoWeuCN_Quests_N_PS["active"]=="1" and WoWeuCN_Quests_N_PS["transtracker"]=="1");
+end
+
+-- Builds a map: watched quest original title -> translated title
+local function WoWeuCN_Quests_GetWatchedTitleMap()
+   local map = {};
+   for i=1, GetNumQuestWatches() do
+      local questIndex = GetQuestIndexForWatch(i);
+      if (questIndex) then
+         local title, _, _, _, _, _, _, questID = GetQuestLogTitle(questIndex);
+         if ((not questID) and GetQuestIDFromLogIndex) then
+            questID = GetQuestIDFromLogIndex(questIndex);
+         end
+         if (title and questID) then
+            local data = WoWeuCN_Quests_QuestData[tostring(questID)];
+            if (data and data["Title"] and data["Title"]~="") then
+               map[title] = WoWeuCN_Quests_ExpandUnitInfo(data["Title"]);
+            end
+         end
+      end
+   end
+   return map;
+end
+
+local function WoWeuCN_Quests_TranslateWatchText(fontString, titleMap)
+   if (not fontString) then
+      return
+   end
+   local text = fontString:GetText();
+   if (not text or text=="") then
+      return
+   end
+   local translated = titleMap[text];
+   if (not translated) then
+      -- the quest title may carry a level prefix like "[12] Title"
+      local stripped = string.match(text, "^%[.-%]%s*(.+)$");
+      if (stripped) then
+         translated = titleMap[stripped];
+      end
+   end
+   if (translated and translated~=text) then
+      ReplaceUIText(fontString, translated, 25);
+   end
+end
+
+-- Classic style tracker: QuestWatchFrame with QuestWatchLine1..n font strings
+local function WoWeuCN_Quests_TranslateQuestWatch()
+   if (not WoWeuCN_Quests_TrackerActive()) then
+      return
+   end
+   local titleMap = WoWeuCN_Quests_GetWatchedTitleMap();
+   for i=1, (QUEST_WATCH_MAX_LINES or 30) do
+      local line = _G["QuestWatchLine"..i];
+      if (not line) then
+         break
+      end
+      if (line:IsShown()) then
+         WoWeuCN_Quests_TranslateWatchText(line, titleMap);
+      end
+   end
+end
+
+-- WatchFrame style tracker (WotLK/Cata/MoP): WatchFrameLine1..n frames with .text
+local function WoWeuCN_Quests_TranslateWatchFrame()
+   if (not WoWeuCN_Quests_TrackerActive()) then
+      return
+   end
+   local titleMap = WoWeuCN_Quests_GetWatchedTitleMap();
+   if (WatchFrame and WatchFrame.linePool and WatchFrame.linePool.EnumerateActive) then
+      -- MoP: lines live in an anonymous frame pool (WatchFrame.linePool)
+      for line in WatchFrame.linePool:EnumerateActive() do
+         if (line.text) then
+            WoWeuCN_Quests_TranslateWatchText(line.text, titleMap);
+         end
+      end
+   else
+      -- WotLK/Cata style: globally named lines WatchFrameLine1..n
+      local i = 1;
+      local line = _G["WatchFrameLine"..i];
+      while (line) do
+         if (line.text) then
+            WoWeuCN_Quests_TranslateWatchText(line.text, titleMap);
+         end
+         i = i + 1;
+         line = _G["WatchFrameLine"..i];
+      end
+   end
+   -- tracker header ("Objectives")
+   if (WatchFrameTitle and WatchFrameTitle.GetText) then
+      local headerText = WatchFrameTitle:GetText();
+      if (headerText and headerText~="" and headerText~=WoWeuCN_Quests_Messages.objectives) then
+         ReplaceUIText(WatchFrameTitle, WoWeuCN_Quests_Messages.objectives, 18);
+      end
+   end
+end
+
+function WoWeuCN_Quests_RefreshTracker()
+   if (type(QuestWatch_Update)=="function") then
+      pcall(QuestWatch_Update);
+   end
+   if (type(WatchFrame_Update)=="function") then
+      pcall(WatchFrame_Update);
+   end
+end
+
+local WoWeuCN_Quests_TrackerHooked = false;
+function WoWeuCN_Quests_InitTracker()
+   if (WoWeuCN_Quests_TrackerHooked) then
+      return
+   end
+   -- hook whichever tracker implementation this client provides
+   if (type(QuestWatch_Update)=="function") then
+      WoWeuCN_Quests_TrackerHooked = true;
+      hooksecurefunc("QuestWatch_Update", WoWeuCN_Quests_TranslateQuestWatch);
+   end
+   if (type(WatchFrame_Update)=="function") then
+      WoWeuCN_Quests_TrackerHooked = true;
+      hooksecurefunc("WatchFrame_Update", WoWeuCN_Quests_TranslateWatchFrame);
+   end
+   WoWeuCN_Quests_RefreshTracker();
+end
+
 -- Even handlers
 function WoWeuCN_Quests_OnEvent(self, event, name, ...)
    if (WoWeuCN_Quests_onDebug) then
@@ -1203,6 +1368,7 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
 
       WoWeuCN_Quests_wait(2, Broadcast)      
       hooksecurefunc("QuestLog_Update", function(...) OnQuestLogUpdate(...) end);
+      WoWeuCN_Quests_InitTracker();
       --hooksecurefunc("QuestLogTitleButton_Resize", function(...) OnQuestLogUpdate(...) end);
       WoWeuCN_Quests:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Quests.ADDON_LOADED = nil;
