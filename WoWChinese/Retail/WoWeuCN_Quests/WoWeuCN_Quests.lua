@@ -679,14 +679,16 @@ local WoWeuCN_Quests_TrackerQuestModules = {
    ["BonusObjectiveTracker"]         = true,
 };
 
--- Translated category headers of the tracker modules
+-- Translated category headers of the tracker modules.
+-- ScenarioObjectiveTracker is deliberately NOT listed: its header carries the
+-- dynamic scenario name (not a static category) and the module reads secret
+-- aura data during layout, so it must never see addon-tainted state.
 local WoWeuCN_Quests_TrackerHeaders = {
    ["CampaignQuestObjectiveTracker"]     = "战役",
    ["QuestObjectiveTracker"]             = "任务",
    ["WorldQuestObjectiveTracker"]        = "世界任务",
    ["BonusObjectiveTracker"]             = "附加目标",
    ["AchievementObjectiveTracker"]       = "成就",
-   ["ScenarioObjectiveTracker"]          = "场景",
    ["MonthlyActivitiesObjectiveTracker"] = "旅行者日志",
    ["ProfessionsRecipeTracker"]          = "专业配方",
    ["AdventureObjectiveTracker"]         = "收藏",
@@ -723,14 +725,9 @@ local function WoWeuCN_Quests_TranslateTrackerBlock(block)
       local data = WoWeuCN_Quests_QuestData[tostring(questID)];
       if (data and data["Title"] and data["Title"]~="") then
          local title = WoWeuCN_Quests_ExpandUnitInfo(data["Title"]);
-         if (block.HeaderText:GetText()~=title) then
-            local oldHeight = block.HeaderText:GetHeight();
-            WoWeuCN_Quests_SetTrackerText(block.HeaderText, title);
-            local newHeight = block.HeaderText:GetHeight();
-            if (oldHeight and newHeight and oldHeight~=newHeight) then
-               block:SetHeight(block:GetHeight() + newHeight - oldHeight);
-            end
-         end
+         -- only the text is replaced; sizes and anchors stay whatever the secure
+         -- layout computed (resizing blocks from addon code taints the layout)
+         WoWeuCN_Quests_SetTrackerText(block.HeaderText, title);
       end
    end
    -- well-known lines ("Ready for turn-in" etc.)
@@ -764,10 +761,41 @@ local function WoWeuCN_Quests_TranslateTrackerModule(module, moduleName)
    end
 end
 
-function WoWeuCN_Quests_RefreshTracker()
-   if (ObjectiveTrackerFrame and ObjectiveTrackerFrame.Update) then
-      pcall(ObjectiveTrackerFrame.Update, ObjectiveTrackerFrame);
+-- The translation pass must never run inside Blizzard's secure tracker update,
+-- and addon code must never call ObjectiveTrackerFrame:Update() itself: both
+-- taint the tracker state, and in 12.x the scenario module then fails with
+-- "GetAuraDataByIndex(): Auras cannot be accessed when secret while tainted",
+-- which freezes scenario stage blocks and progress bars. The hooks below only
+-- queue a pass that runs on the next frame, after the secure update finished.
+local WoWeuCN_Quests_TrackerPassQueued = false;
+
+local function WoWeuCN_Quests_TrackerTranslationPass()
+   WoWeuCN_Quests_TrackerPassQueued = false;
+   if (not WoWeuCN_Quests_TrackerActive()) then
+      return
    end
+   -- main header ("All Objectives")
+   if (ObjectiveTrackerFrame and ObjectiveTrackerFrame.Header and ObjectiveTrackerFrame.Header.Text) then
+      WoWeuCN_Quests_SetTrackerText(ObjectiveTrackerFrame.Header.Text, "所有目标");
+   end
+   for moduleName in pairs(WoWeuCN_Quests_TrackerHeaders) do
+      local module = _G[moduleName];
+      if (module) then
+         WoWeuCN_Quests_TranslateTrackerModule(module, moduleName);
+      end
+   end
+end
+
+local function WoWeuCN_Quests_QueueTrackerPass()
+   if (WoWeuCN_Quests_TrackerPassQueued) then
+      return
+   end
+   WoWeuCN_Quests_TrackerPassQueued = true;
+   C_Timer.After(0, WoWeuCN_Quests_TrackerTranslationPass);
+end
+
+function WoWeuCN_Quests_RefreshTracker()
+   WoWeuCN_Quests_QueueTrackerPass();
 end
 
 local WoWeuCN_Quests_TrackerHooked = false;
@@ -781,24 +809,14 @@ function WoWeuCN_Quests_InitTracker()
       return
    end
    WoWeuCN_Quests_TrackerHooked = true;
-   -- main header ("All Objectives")
-   if (ObjectiveTrackerFrame and ObjectiveTrackerFrame.Update and ObjectiveTrackerFrame.Header and ObjectiveTrackerFrame.Header.Text) then
-      hooksecurefunc(ObjectiveTrackerFrame, "Update", function(self)
-         if (WoWeuCN_Quests_TrackerActive()) then
-            WoWeuCN_Quests_SetTrackerText(self.Header.Text, "所有目标");
-         end
-      end);
-   end
-   -- per-module hooks: re-apply translation after every tracker layout update
+   -- per-module hooks: queue a deferred re-translation after every layout update
    for moduleName in pairs(WoWeuCN_Quests_TrackerHeaders) do
       local module = _G[moduleName];
       if (module and module.Update) then
-         hooksecurefunc(module, "Update", function(self)
-            WoWeuCN_Quests_TranslateTrackerModule(self, moduleName);
-         end);
+         hooksecurefunc(module, "Update", WoWeuCN_Quests_QueueTrackerPass);
       end
    end
-   WoWeuCN_Quests_RefreshTracker();
+   WoWeuCN_Quests_QueueTrackerPass();
 end
 
 -- Even handlers
