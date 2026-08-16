@@ -761,20 +761,20 @@ local function WoWeuCN_Quests_TranslateTrackerModule(module, moduleName)
    end
 end
 
--- The translation pass must never run inside Blizzard's secure tracker update,
--- and addon code must never call ObjectiveTrackerFrame:Update() itself: both
--- taint the tracker state, and in 12.x the scenario module then fails with
--- "GetAuraDataByIndex(): Auras cannot be accessed when secret while tainted",
--- which freezes scenario stage blocks and progress bars. The hooks below only
--- queue a pass that runs on the next frame, after the secure update finished.
-local WoWeuCN_Quests_TrackerPassQueued = false;
+-- Taint rules for everything below (12.x breaks scenarios otherwise, e.g.
+-- "GetAuraDataByIndex(): Auras cannot be accessed when secret while tainted"):
+--  * never call ObjectiveTrackerFrame:Update() or any Blizzard update function
+--  * never write sizes/anchors or module state, only fontString text
+--  * never let an error escape into Blizzard's secure update loop (pcall)
+-- Text writes are re-applied synchronously in a post-hook of each module's
+-- Update so the English text set by the secure layout is replaced within the
+-- same frame (no flicker while moving, when the tracker relayouts constantly).
 
 local function WoWeuCN_Quests_TrackerTranslationPass()
-   WoWeuCN_Quests_TrackerPassQueued = false;
    if (not WoWeuCN_Quests_TrackerActive()) then
       return
    end
-   -- main header ("All Objectives")
+   -- main header ("All Objectives"; Blizzard only writes it once at init)
    if (ObjectiveTrackerFrame and ObjectiveTrackerFrame.Header and ObjectiveTrackerFrame.Header.Text) then
       WoWeuCN_Quests_SetTrackerText(ObjectiveTrackerFrame.Header.Text, "所有目标");
    end
@@ -786,16 +786,8 @@ local function WoWeuCN_Quests_TrackerTranslationPass()
    end
 end
 
-local function WoWeuCN_Quests_QueueTrackerPass()
-   if (WoWeuCN_Quests_TrackerPassQueued) then
-      return
-   end
-   WoWeuCN_Quests_TrackerPassQueued = true;
-   C_Timer.After(0, WoWeuCN_Quests_TrackerTranslationPass);
-end
-
 function WoWeuCN_Quests_RefreshTracker()
-   WoWeuCN_Quests_QueueTrackerPass();
+   pcall(WoWeuCN_Quests_TrackerTranslationPass);
 end
 
 local WoWeuCN_Quests_TrackerHooked = false;
@@ -809,14 +801,16 @@ function WoWeuCN_Quests_InitTracker()
       return
    end
    WoWeuCN_Quests_TrackerHooked = true;
-   -- per-module hooks: queue a deferred re-translation after every layout update
+   -- per-module hooks: re-apply the text translation right after each layout
    for moduleName in pairs(WoWeuCN_Quests_TrackerHeaders) do
       local module = _G[moduleName];
       if (module and module.Update) then
-         hooksecurefunc(module, "Update", WoWeuCN_Quests_QueueTrackerPass);
+         hooksecurefunc(module, "Update", function(self)
+            pcall(WoWeuCN_Quests_TranslateTrackerModule, self, moduleName);
+         end);
       end
    end
-   WoWeuCN_Quests_QueueTrackerPass();
+   WoWeuCN_Quests_RefreshTracker();
 end
 
 -- Even handlers
