@@ -116,16 +116,17 @@ for dir in "${ADDON_DIRS[@]}"; do
   fi
 
   # -------------------------------------------------------------------------
-  # Changelog: manual override, or commit subjects touching this addon
+  # Changelog: manual override, or the subject line of the latest commit
+  # touching this addon. Kept to a single short line - CurseForge rejects
+  # long descriptions.
   # -------------------------------------------------------------------------
   if [[ "$EVENT_NAME" == "workflow_dispatch" && -n "${INPUT_CHANGELOG:-}" ]]; then
     changelog="$INPUT_CHANGELOG"
-  elif [[ "$EVENT_NAME" == "workflow_dispatch" ]]; then
-    changelog="$(git log -1 --format='- %s' -- "$dir")"
   else
-    changelog="$(git log --format='- %s' "$BEFORE..$AFTER_SHA" -- "$dir")"
+    changelog="$(git log -1 --format='%s' "$AFTER_SHA" -- "$dir")"
   fi
-  [[ -z "$changelog" ]] && changelog="- Update"
+  [[ -z "$changelog" ]] && changelog="Update"
+  changelog="${changelog:0:250}"
   echo "Changelog:"; echo "$changelog"
 
   # -------------------------------------------------------------------------

@@ -647,9 +647,12 @@ function OnQuestLogUpdate(poiTable)
       return
    end
 
+   -- Text-only replacement. This hook runs tainted, so it must not resize the
+   -- pooled buttons and above all must not call Contents:Layout(): an insecure
+   -- Layout() cascades into the quest map refresh (map pin acquisition calls
+   -- the protected Button:SetPassThroughButtons -> ADDON_ACTION_BLOCKED) and
+   -- taints Blizzard's layout state.
    for button in QuestScrollFrame.titleFramePool:EnumerateActive() do
-      local oldHeight = button.Text:GetHeight();
-      local buttonHeight = button:GetHeight() 
       if button.Text then
          local num_id = button.questID
          if (num_id) then
@@ -657,14 +660,10 @@ function OnQuestLogUpdate(poiTable)
             if (WoWeuCN_Quests_QuestData[id]) then
                local title = WoWeuCN_Quests_QuestData[id]["Title"]
                ReplaceUIText(button.Text,title,20)
-               local newHeight = button.Text:GetHeight();
-               button:SetHeight(buttonHeight + newHeight - oldHeight)
             end
          end
       end
    end
-   
-	QuestScrollFrame.Contents:Layout();
 end
 
 -- ===========================================================================
@@ -702,7 +701,6 @@ end
 if (QUEST_WATCH_CLICK_TO_COMPLETE) then
    WoWeuCN_Quests_TrackerLines[QUEST_WATCH_CLICK_TO_COMPLETE] = "点击以完成任务";
 end
-
 local function WoWeuCN_Quests_TrackerActive()
    return (WoWeuCN_Quests_N_PS and WoWeuCN_Quests_N_PS["active"]=="1" and WoWeuCN_Quests_N_PS["transtracker"]=="1");
 end
@@ -725,8 +723,8 @@ local function WoWeuCN_Quests_TranslateTrackerBlock(block)
       local data = WoWeuCN_Quests_QuestData[tostring(questID)];
       if (data and data["Title"] and data["Title"]~="") then
          local title = WoWeuCN_Quests_ExpandUnitInfo(data["Title"]);
-         -- only the text is replaced; sizes and anchors stay whatever the secure
-         -- layout computed (resizing blocks from addon code taints the layout)
+         -- only the text is replaced; sizes, anchors and fonts stay whatever
+         -- the secure layout computed
          WoWeuCN_Quests_SetTrackerText(block.HeaderText, title);
       end
    end
@@ -764,11 +762,15 @@ end
 -- Taint rules for everything below (12.x breaks scenarios otherwise, e.g.
 -- "GetAuraDataByIndex(): Auras cannot be accessed when secret while tainted"):
 --  * never call ObjectiveTrackerFrame:Update() or any Blizzard update function
---  * never write sizes/anchors or module state, only fontString text
---  * never let an error escape into Blizzard's secure update loop (pcall)
--- Text writes are re-applied synchronously in a post-hook of each module's
--- Update so the English text set by the secure layout is replaced within the
--- same frame (no flicker while moving, when the tracker relayouts constantly).
+--  * NEVER write to any tracker widget from inside the secure update chain -
+--    not even SetText: state written mid-update is read back by the rest of
+--    the same secure update and poisons it (empirically proven: synchronous
+--    hook writes reproduce the scenario error, deferred writes do not)
+--  * the Update post-hooks therefore only raise a flag; all writes happen in
+--    our own OnUpdate afterwards. Our driver frame is created after
+--    Blizzard's RunNextFrame dispatcher, so within one frame tick the
+--    tracker's dirty update runs first and our pass re-applies the
+--    translation before the frame is rendered (no visible flicker).
 
 local function WoWeuCN_Quests_TrackerTranslationPass()
    if (not WoWeuCN_Quests_TrackerActive()) then
@@ -786,13 +788,48 @@ local function WoWeuCN_Quests_TrackerTranslationPass()
    end
 end
 
+local WoWeuCN_Quests_TrackerPassQueued = false;
+
+local function WoWeuCN_Quests_QueueTrackerPass()
+   WoWeuCN_Quests_TrackerPassQueued = true;
+end
+
+local WoWeuCN_Quests_QuestLogPassQueued = false;
+
+function WoWeuCN_Quests_QueueQuestLogPass()
+   WoWeuCN_Quests_QuestLogPassQueued = true;
+end
+
+local WoWeuCN_Quests_TrackerDriver = CreateFrame("Frame");
+WoWeuCN_Quests_TrackerDriver:SetScript("OnUpdate", function()
+   if (WoWeuCN_Quests_TrackerPassQueued) then
+      WoWeuCN_Quests_TrackerPassQueued = false;
+      pcall(WoWeuCN_Quests_TrackerTranslationPass);
+   end
+   if (WoWeuCN_Quests_QuestLogPassQueued) then
+      WoWeuCN_Quests_QuestLogPassQueued = false;
+      pcall(OnQuestLogUpdate);
+   end
+end);
+
+-- Only ever called from addon context (init, slash command, options panel),
+-- never from inside the secure update hooks.
 function WoWeuCN_Quests_RefreshTracker()
-   pcall(WoWeuCN_Quests_TrackerTranslationPass);
+   -- installs the hooks if the tracker option was just turned on
+   -- (InitTracker self-guards: no-op when already hooked or option off)
+   WoWeuCN_Quests_InitTracker();
+   WoWeuCN_Quests_QueueTrackerPass();
 end
 
 local WoWeuCN_Quests_TrackerHooked = false;
 function WoWeuCN_Quests_InitTracker()
    if (WoWeuCN_Quests_TrackerHooked) then
+      return
+   end
+   -- true kill-switch: with the tracker option off no hook is installed at
+   -- all, so the addon provably never runs inside the tracker update chain
+   -- (turning the option on later installs the hooks without a /reload)
+   if (not WoWeuCN_Quests_TrackerActive()) then
       return
    end
    -- The tracker modules are created by Blizzard_ObjectiveTracker; retry if not present yet
@@ -801,16 +838,15 @@ function WoWeuCN_Quests_InitTracker()
       return
    end
    WoWeuCN_Quests_TrackerHooked = true;
-   -- per-module hooks: re-apply the text translation right after each layout
+   -- per-module hooks: only raise the flag; the writes happen in our own
+   -- OnUpdate, outside the secure update chain (see taint rules above)
    for moduleName in pairs(WoWeuCN_Quests_TrackerHeaders) do
       local module = _G[moduleName];
       if (module and module.Update) then
-         hooksecurefunc(module, "Update", function(self)
-            pcall(WoWeuCN_Quests_TranslateTrackerModule, self, moduleName);
-         end);
+         hooksecurefunc(module, "Update", WoWeuCN_Quests_QueueTrackerPass);
       end
    end
-   WoWeuCN_Quests_RefreshTracker();
+   WoWeuCN_Quests_QueueTrackerPass();
 end
 
 -- Even handlers
@@ -847,7 +883,15 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Quests_BlizzardOptions();
       WoWeuCN_Quests_wait(2, Broadcast)
-      hooksecurefunc("QuestLogQuests_Update", function(...) OnQuestLogUpdate(...) end);
+      -- the hook only raises a flag; the quest log title writes happen in
+      -- our own OnUpdate, outside the secure update chain (writing inside
+      -- QuestLogQuests_Update's chain tainted the quest map refresh, e.g.
+      -- blocked SetPassThroughButtons on map pins); with the title option
+      -- off the hook is not installed at all (kill-switch, needs /reload
+      -- after re-enabling)
+      if (WoWeuCN_Quests_N_PS["transtitle"]=="1" and WoWeuCN_Quests_N_PS["active"]=="1") then
+         hooksecurefunc("QuestLogQuests_Update", WoWeuCN_Quests_QueueQuestLogPass);
+      end
       WoWeuCN_Quests_InitTracker();
       WoWeuCN_Quests:UnregisterEvent("ADDON_LOADED");
       WoWeuCN_Quests.ADDON_LOADED = nil;
