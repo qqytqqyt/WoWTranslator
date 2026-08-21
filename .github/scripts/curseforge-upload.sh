@@ -105,13 +105,14 @@ for dir in "${ADDON_DIRS[@]}"; do
   # Resolve CurseForge project id
   # -------------------------------------------------------------------------
   case "$addon" in
-    WoWeuCN_Quests)   project_id="${CF_PROJECT_ID_QUESTS:-}" ;;
-    WoWeuCN_Tooltips) project_id="${CF_PROJECT_ID_TOOLTIPS:-}" ;;
-    NativeLinks)      project_id="${CF_PROJECT_ID_NATIVELINKS:-}" ;;
+    WoWeuCN_Quests)    project_id="${CF_PROJECT_ID_QUESTS:-}" ;;
+    WoWeuCN_Tooltips)  project_id="${CF_PROJECT_ID_TOOLTIPS:-}" ;;
+    WoWeuCN_Interface) project_id="${CF_PROJECT_ID_INTERFACE:-}" ;;
+    NativeLinks)       project_id="${CF_PROJECT_ID_NATIVELINKS:-}" ;;
     *) project_id="" ;;
   esac
   if [[ -z "$project_id" ]]; then
-    echo "::error::No CurseForge project id configured for $addon (set repo variable CF_PROJECT_ID_QUESTS / CF_PROJECT_ID_TOOLTIPS / CF_PROJECT_ID_NATIVELINKS)"
+    echo "::error::No CurseForge project id configured for $addon (set repo variable CF_PROJECT_ID_QUESTS / CF_PROJECT_ID_TOOLTIPS / CF_PROJECT_ID_INTERFACE / CF_PROJECT_ID_NATIVELINKS)"
     failures=$((failures+1)); echo "::endgroup::"; continue
   fi
 
