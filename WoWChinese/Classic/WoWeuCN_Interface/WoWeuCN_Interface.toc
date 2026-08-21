@@ -12,6 +12,5 @@
 
 InterfaceData_cn.lua
 GlobalStringsData_cn.lua
-TaintVocabData_cn.lua
 WoWeuCN_Interface.lua
 WoWeuCN_Interface.xml

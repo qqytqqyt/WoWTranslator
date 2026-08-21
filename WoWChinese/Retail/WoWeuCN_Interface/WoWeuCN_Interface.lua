@@ -7,183 +7,39 @@ local WoWeuCN_AddonPrefix = "WoWeuCN";
 local WoWeuCN_Interface_VersionReminded = false;
 
 WoWeuCN_Interface_Reverse = {};
-local WoWeuCN_Interface_Applied = 0;
+local WoWeuCN_Interface_ReverseUpper = {};
+local WoWeuCN_Interface_ContextOverrides = {};
 local WoWeuCN_Interface_Swept = 0;
 local WoWeuCN_Interface_FontsDone = {};
 local WoWeuCN_Interface_Initialized = false;
 local WoWeuCN_Interface_SuppressHook = false;
 WoWeuCN_Interface_SettingsCategory = nil;
 
-local WoWeuCN_Interface_BlockedExact = {
-
-  ["RANGE_INDICATOR"] = true,
-
-  ["DEAD"] = true, ["PLAYER_OFFLINE"] = true, ["PLAYER_ENTERING_WORLD"] = true,
-  ["UNKNOWN"] = true, ["UNKNOWNOBJECT"] = true,
-
-  ["SET_FOCUS"] = true, ["CLEAR_FOCUS"] = true, ["PET_DISMISS"] = true,
-  ["VEHICLE_LEAVE"] = true,
-
-  ["INTERRUPTED"] = true, ["FAILED"] = true,
-
-  ["RETRIEVING_ITEM_INFO"] = true,
-  ["ITEM_SOULBOUND"] = true, ["ITEM_ACCOUNTBOUND"] = true,
-  ["ITEM_BNETACCOUNTBOUND"] = true, ["ITEM_ACCOUNTBOUND_UNTIL_EQUIP"] = true,
-  ["ITEM_BIND_ON_PICKUP"] = true, ["ITEM_BIND_ON_EQUIP"] = true,
-  ["ITEM_BIND_ON_USE"] = true, ["ITEM_BIND_QUEST"] = true,
-  ["ITEM_BIND_TO_ACCOUNT"] = true, ["ITEM_BIND_TO_BNETACCOUNT"] = true,
-  ["ITEM_UNIQUE"] = true, ["ITEM_UNIQUE_EQUIPPABLE"] = true,
-  ["ITEM_UNIQUE_MULTIPLE"] = true,
-  ["ITEM_LEVEL"] = true, ["ITEM_MIN_LEVEL"] = true,
-  ["ITEM_LEVEL_AND_MIN_LEVEL"] = true, ["ITEM_STARTS_QUEST"] = true,
-  ["ITEM_SET_BONUS"] = true, ["ITEM_SET_BONUS_GRAY"] = true,
-  ["ITEM_CLASSES_ALLOWED"] = true, ["ITEM_RACES_ALLOWED"] = true,
-  ["ITEM_SPELL_TRIGGER_ONUSE"] = true, ["ITEM_SPELL_TRIGGER_ONEQUIP"] = true,
-  ["ITEM_SPELL_TRIGGER_ONPROC"] = true,
-  ["SELL_PRICE"] = true, ["DURABILITY_TEMPLATE"] = true,
-  ["COOLDOWN_REMAINING"] = true, ["CURRENTLY_EQUIPPED"] = true,
-  ["ENCHANTED_TOOLTIP_LINE"] = true,
-  ["TRANSMOGRIFIED"] = true, ["TRANSMOGRIFIED_HEADER"] = true,
-
-  ["HEALTH"] = true, ["MANA"] = true, ["RAGE"] = true, ["FOCUS"] = true,
-  ["ENERGY"] = true, ["COMBO_POINTS"] = true, ["RUNES"] = true,
-  ["RUNIC_POWER"] = true, ["SOUL_SHARDS"] = true, ["LUNAR_POWER"] = true,
-  ["HOLY_POWER"] = true, ["MAELSTROM"] = true, ["CHI"] = true,
-  ["INSANITY"] = true, ["ARCANE_CHARGES"] = true, ["FURY"] = true,
-  ["PAIN"] = true, ["ESSENCE"] = true, ["STAGGER"] = true,
-  ["LOST_HEALTH"] = true,
-
-  ["FIRST_NUMBER_CAP"] = true, ["FIRST_NUMBER_CAP_NO_SPACE"] = true,
-  ["SECOND_NUMBER_CAP"] = true, ["SECOND_NUMBER_CAP_NO_SPACE"] = true,
-  ["THIRD_NUMBER_CAP"] = true, ["THIRD_NUMBER_CAP_NO_SPACE"] = true,
-  ["FOURTH_NUMBER_CAP"] = true, ["FOURTH_NUMBER_CAP_NO_SPACE"] = true,
-  ["FIRST_NUMBER"] = true, ["SECOND_NUMBER"] = true,
-  ["THIRD_NUMBER"] = true, ["FOURTH_NUMBER"] = true,
-  ["LARGE_NUMBER_SEPERATOR"] = true, ["DECIMAL_SEPERATOR"] = true,
-  ["D_SECONDS"] = true, ["D_MINUTES"] = true, ["D_HOURS"] = true, ["D_DAYS"] = true,
-  ["SECONDS_ABBR"] = true, ["MINUTES_ABBR"] = true, ["HOURS_ABBR"] = true,
-  ["DAYS_ABBR"] = true,
-
-  ["CONFIRM_RANK_AUTHENTICATOR_REMOVE"] = true,
-
-  ["BALANCE_NEGATIVE_ENERGY"] = true, ["COMBAT_LOG_UNIT_YOU_ENABLED"] = true,
-  ["DAMAGE_SHIELD"] = true, ["ENVIRONMENTAL_DAMAGE"] = true,
-  ["UNIT_YOU_DEST"] = true, ["UNIT_YOU_DEST_POSSESSIVE"] = true,
-  ["UNIT_YOU_SOURCE"] = true, ["UNIT_YOU_SOURCE_POSSESSIVE"] = true,
-  ["UNIT_YOU"] = true, ["STRING_SCHOOL_UNKNOWN"] = true,
-
-  ["GUILD_AND_COMMUNITIES"] = true,
-
-  ["FOREIGN_SERVER_LABEL"] = true, ["INTERACTIVE_SERVER_LABEL"] = true,
+local WoWeuCN_Interface_PreferredKeys = {
+  ["PROFESSIONS_CRAFTING_FORM_BACK"] = 2,
+  ["CATALOG_SHOP_BACK"] = 2,
+  ["BACK"] = 1,
+  ["LEADER"] = 1,
+  ["OFFICER"] = 1,
+  ["AVAILABLE"] = 1,
+  ["DEPOSIT"] = 1,
+  ["FILTER"] = 1,
+  ["POI_FOCUS"] = 1,
+  ["POWER_TYPE_FURY"] = 1,
+  ["RAID_FINDER"] = 1,
 };
 
-local WoWeuCN_Interface_BlockedPrefix = {
-  "KEY_",
-  "TRACKER_",
-  "OBJECTIVES_",
-  "PROFESSIONS_TRACKER",
-  "SCENARIO_",
-  "MAW_BUFF",
-  "SPELL_TIME_REMAINING",
-  "ERR_",
-  "SPELL_FAILED_",
-  "LOOT_ITEM",
-  "LOOT_MONEY",
-  "YOU_LOOT_MONEY",
-  "CURRENCY_GAINED",
-  "EMPTY_SOCKET",
-  "SLASH_",
-  "COOLDOWN_VIEWER",
-  "HUD_EDIT_MODE",
-  "GUILDCONTROL",
-  "GUILD_CONTROL_",
-  "AUTHENTICATOR_GUILD_RANK",
-  "DISCORD_",
-  "SETTING_GROUP_",
-
-  "ACTION_",
-  "TEXT_MODE_",
-  "COMBATLOG_",
-  "COMBAT_TEXT_",
-  "DAMAGE_METER",
-
-  "BLIZZARD_COMBAT_LOG",
-  "QUICKBUTTON_NAME_",
-  "RAID_TARGET_",
-  "COMBAT_CONFIG_",
-  "PING_",
-  "ADDON_LIST_",
-
-  "UNIT_POPUP_",
+local WoWeuCN_Interface_ContextSpecs = {
+  { key = "BACKSLOT", roots = {
+      ["CharacterFrame"] = true, ["InspectFrame"] = true,
+      ["EquipmentFlyoutFrame"] = true, ["DressUpFrame"] = true,
+      ["WardrobeFrame"] = true, ["CollectionsJournal"] = true,
+      ["ItemUpgradeFrame"] = true, ["AuctionFrame"] = true } },
+  { key = "AUCTION_HOUSE_DEPOSIT_LABEL", roots = {
+      ["AuctionHouseFrame"] = true } },
+  { key = "MAIL_RETURN", roots = {
+      ["MailFrame"] = true, ["OpenMailFrame"] = true } },
 };
-
-local WoWeuCN_Interface_BlockedSuffix = {
-  "_ONELETTER_ABBR",
-  "_CMD",
-};
-
-local WoWeuCN_Interface_DeferredOnly = {
-  ["RETURN_TO_GAME"] = true, ["LOG_OUT"] = true, ["EXIT_GAME"] = true,
-  ["QUIT"] = true, ["MACROS"] = true, ["ADDONS"] = true,
-  ["GAMEMENU_OPTIONS"] = true, ["GAMEMENU_SUPPORT"] = true,
-  ["GAMEMENU_NEW_BUTTON"] = true, ["GAMEMENU_EXTERNALEVENT"] = true,
-  ["BLIZZARD_STORE"] = true, ["RATINGS_MENU"] = true,
-  ["GAME_MENU_SHOW_REWARDS"] = true,
-};
-
-function WoWeuCN_Interface_IsBlocked(key)
-  if (WoWeuCN_Interface_BlockedExact[key] or WoWeuCN_Interface_DeferredOnly[key]) then
-    return true;
-  end
-
-  if (WoWeuCN_Interface_BlockedGenerated and WoWeuCN_Interface_BlockedGenerated[key]) then
-    return true;
-  end
-
-  if (key == "NARRATION_CONTEXT_GAME_MENU") then
-    return true;
-  end
-  for i = 1, #WoWeuCN_Interface_BlockedPrefix do
-    local prefix = WoWeuCN_Interface_BlockedPrefix[i];
-    if (string.sub(key, 1, string.len(prefix)) == prefix) then
-      return true;
-    end
-  end
-  for i = 1, #WoWeuCN_Interface_BlockedSuffix do
-    local suffix = WoWeuCN_Interface_BlockedSuffix[i];
-    if (string.len(key) > string.len(suffix) and string.sub(key, -string.len(suffix)) == suffix) then
-      return true;
-    end
-  end
-  return false;
-end
-
-function WoWeuCN_Interface_ApplyGlobalStrings()
-  if (type(WoWeuCN_Interface_GS) ~= "table") then
-    return 0;
-  end
-  local count = 0;
-  for key, translated in pairs(WoWeuCN_Interface_GS) do
-    local original = rawget(_G, key);
-    if (type(original) == "string" and original ~= translated) then
-      if (not WoWeuCN_Interface_IsBlocked(key)) then
-        if (WoWeuCN_Interface_Reverse[original] == nil) then
-          WoWeuCN_Interface_Reverse[original] = translated;
-        end
-        _G[key] = translated;
-        count = count + 1;
-      elseif (WoWeuCN_Interface_DeferredOnly[key]) then
-
-        if (WoWeuCN_Interface_Reverse[original] == nil) then
-          WoWeuCN_Interface_Reverse[original] = translated;
-        end
-      end
-    end
-  end
-  WoWeuCN_Interface_Applied = count;
-  WoWeuCN_Interface_GS = nil;
-  return count;
-end
 
 local WoWeuCN_Interface_PatternBuckets = nil;
 local WoWeuCN_Interface_PatternCount = 0;
@@ -336,7 +192,7 @@ function WoWeuCN_Interface_TryPatternTranslate(text)
 end
 
 local function WoWeuCN_Interface_CoreTranslate(text)
-  return WoWeuCN_Interface_Reverse[text] or WoWeuCN_Interface_TryPatternTranslate(text);
+  return WoWeuCN_Interface_Reverse[text] or WoWeuCN_Interface_ReverseUpper[text] or WoWeuCN_Interface_TryPatternTranslate(text);
 end
 
 function WoWeuCN_Interface_TryDecoratedTranslate(text)
@@ -458,16 +314,48 @@ function WoWeuCN_Interface_BuildReverseMap()
     return 0;
   end
   WoWeuCN_Interface_PatternBuckets = {};
+  local chosenKey = {};
   local count = 0;
   for key, translated in pairs(WoWeuCN_Interface_GS) do
     local original = rawget(_G, key);
     if (type(original) == "string" and original ~= translated) then
-      if (WoWeuCN_Interface_Reverse[original] == nil) then
+      local existing = chosenKey[original];
+      if (existing == nil) then
         WoWeuCN_Interface_Reverse[original] = translated;
+        chosenKey[original] = key;
         count = count + 1;
+      else
+        local newPri = WoWeuCN_Interface_PreferredKeys[key] or 0;
+        local oldPri = WoWeuCN_Interface_PreferredKeys[existing] or 0;
+        if (newPri > oldPri or (newPri == oldPri and key < existing)) then
+          WoWeuCN_Interface_Reverse[original] = translated;
+          chosenKey[original] = key;
+        end
       end
-      if (string.find(original, "%", 1, true)) then
-        WoWeuCN_Interface_AddPatternEntry(original, translated);
+    end
+  end
+  for original, translated in pairs(WoWeuCN_Interface_Reverse) do
+    if (string.find(original, "%", 1, true)) then
+      WoWeuCN_Interface_AddPatternEntry(original, translated);
+    end
+  end
+  for i = 1, #WoWeuCN_Interface_ContextSpecs do
+    local spec = WoWeuCN_Interface_ContextSpecs[i];
+    local original = rawget(_G, spec.key);
+    local translated = WoWeuCN_Interface_GS[spec.key];
+    if (type(original) == "string" and type(translated) == "string"
+        and translated ~= original and WoWeuCN_Interface_Reverse[original] ~= translated) then
+      WoWeuCN_Interface_ContextOverrides[original] = { roots = spec.roots, translated = translated };
+    end
+  end
+  local upperSource = {};
+  for original, translated in pairs(WoWeuCN_Interface_Reverse) do
+    local upper = string.upper(original);
+    if (upper ~= original and WoWeuCN_Interface_Reverse[upper] == nil) then
+      local existing = upperSource[upper];
+      if (existing == nil or original < existing) then
+        upperSource[upper] = original;
+        WoWeuCN_Interface_ReverseUpper[upper] = translated;
       end
     end
   end
@@ -540,6 +428,24 @@ local function WoWeuCN_Interface_IsInExcludedFrame(frame)
   return false;
 end
 
+local function WoWeuCN_Interface_ResolveContext(fontString, text)
+  local override = WoWeuCN_Interface_ContextOverrides[text];
+  if (not override) then
+    return nil;
+  end
+  local parent = fontString:GetParent();
+  local depth = 0;
+  while (parent and depth < 20) do
+    local name = parent.GetName and parent:GetName();
+    if (name and override.roots[name]) then
+      return override.translated;
+    end
+    parent = parent:GetParent();
+    depth = depth + 1;
+  end
+  return nil;
+end
+
 local function WoWeuCN_Interface_TranslateFontString(fontString)
   local text = fontString:GetText();
   if (issecretvalue and issecretvalue(text)) then
@@ -548,7 +454,13 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
   if (type(text) ~= "string" or text == "") then
     return 0;
   end
-  local translated = WoWeuCN_Interface_Reverse[text];
+  local translated = WoWeuCN_Interface_ResolveContext(fontString, text);
+  if (translated == nil) then
+    translated = WoWeuCN_Interface_Reverse[text];
+  end
+  if (translated == nil) then
+    translated = WoWeuCN_Interface_ReverseUpper[text];
+  end
   if (translated == nil) then
     translated = WoWeuCN_Interface_TryPatternTranslate(text);
   end
@@ -600,7 +512,7 @@ function WoWeuCN_Interface_ScanExistingText()
   if (not WoWeuCN_Interface_N_PS) then
     return 0;
   end
-  if (WoWeuCN_Interface_N_PS["active"] == "0" or WoWeuCN_Interface_N_PS["transexisting"] == "0") then
+  if (WoWeuCN_Interface_N_PS["active"] == "0") then
     return 0;
   end
   if (type(EnumerateFrames) ~= "function" or InCombatLockdown()) then
@@ -677,7 +589,7 @@ function WoWeuCN_Interface_InitPanelHook()
   if (WoWeuCN_Interface_PanelHooked) then
     return;
   end
-  if (WoWeuCN_Interface_N_PS["active"] == "0" or WoWeuCN_Interface_N_PS["transexisting"] == "0") then
+  if (WoWeuCN_Interface_N_PS["active"] == "0") then
     return;
   end
   if (type(ShowUIPanel) ~= "function") then
@@ -716,7 +628,7 @@ local function WoWeuCN_Interface_PeriodicPass()
   if (not WoWeuCN_Interface_Initialized or not WoWeuCN_Interface_N_PS) then
     return;
   end
-  if (WoWeuCN_Interface_N_PS["active"] == "0" or WoWeuCN_Interface_N_PS["transexisting"] == "0") then
+  if (WoWeuCN_Interface_N_PS["active"] == "0") then
     return;
   end
   if (type(EnumerateFrames) ~= "function" or InCombatLockdown()) then
@@ -786,7 +698,7 @@ function WoWeuCN_Interface_InitLiveHook()
   if (WoWeuCN_Interface_LiveHooked) then
     return;
   end
-  if (WoWeuCN_Interface_N_PS["active"] == "0" or WoWeuCN_Interface_N_PS["transexisting"] == "0") then
+  if (WoWeuCN_Interface_N_PS["active"] == "0") then
     return;
   end
   if (not UIParent or not UIParent.CreateFontString) then
@@ -852,7 +764,7 @@ function WoWeuCN_Interface_InitPopupHook()
     return;
   end
 
-  if (WoWeuCN_Interface_N_PS["active"] == "0" or WoWeuCN_Interface_N_PS["transpopup"] == "0") then
+  if (WoWeuCN_Interface_N_PS["active"] == "0") then
     return;
   end
   if (type(StaticPopup_Show) ~= "function") then
@@ -871,29 +783,20 @@ function WoWeuCN_Interface_CheckVars()
     WoWeuCN_Interface_N_PS["active"] = "1";
   end
 
-  if (not WoWeuCN_Interface_N_PS["transglobal"]) then
-    WoWeuCN_Interface_N_PS["transglobal"] = "0";
-  end
-
   if (not WoWeuCN_Interface_N_PS["transfont"]) then
     WoWeuCN_Interface_N_PS["transfont"] = "0";
   end
 
-  if (WoWeuCN_Interface_N_PS["optver"] ~= "3") then
-    if (WoWeuCN_Interface_N_PS["optver"] ~= "2") then
+  if (WoWeuCN_Interface_N_PS["optver"] ~= "4") then
+    if (WoWeuCN_Interface_N_PS["optver"] ~= "2" and WoWeuCN_Interface_N_PS["optver"] ~= "3") then
       WoWeuCN_Interface_N_PS["transfont"] = "0";
     end
-    WoWeuCN_Interface_N_PS["optver"] = "3";
-    WoWeuCN_Interface_N_PS["transglobal"] = "0";
+    WoWeuCN_Interface_N_PS["optver"] = "4";
   end
 
-  if (not WoWeuCN_Interface_N_PS["transexisting"]) then
-    WoWeuCN_Interface_N_PS["transexisting"] = "1";
-  end
-
-  if (not WoWeuCN_Interface_N_PS["transpopup"]) then
-    WoWeuCN_Interface_N_PS["transpopup"] = "1";
-  end
+  WoWeuCN_Interface_N_PS["transglobal"] = nil;
+  WoWeuCN_Interface_N_PS["transexisting"] = nil;
+  WoWeuCN_Interface_N_PS["transpopup"] = nil;
 
   if (not WoWeuCN_Interface_N_PS["patch"]) then
     WoWeuCN_Interface_N_PS["patch"] = GetBuildInfo();
@@ -909,11 +812,7 @@ function WoWeuCN_Interface_SlashCommand(msg)
       WoWeuCN_Interface_N_PS["active"] = "1";
       print("|cffffff00WOWeuCN - Interface 翻译模块已启用, 输入 /reload 完全生效.");
       if (not InCombatLockdown()) then
-        if (WoWeuCN_Interface_N_PS["transglobal"] == "1" and WoWeuCN_Interface_Applied == 0) then
-          WoWeuCN_Interface_ApplyGlobalStrings();
-        else
-          WoWeuCN_Interface_BuildReverseMap();
-        end
+        WoWeuCN_Interface_BuildReverseMap();
         WoWeuCN_Interface_ApplyFonts();
         WoWeuCN_Interface_ScanExistingText();
         WoWeuCN_Interface_InitPopupHook();
@@ -932,7 +831,7 @@ function WoWeuCN_Interface_SlashCommand(msg)
     print("WOWeuCN - Interface: 重新扫描完成, 本次修复 " .. n .. " 处界面文本.");
   elseif (msg == "status") then
     local state = (WoWeuCN_Interface_N_PS["active"] == "1") and WoWeuCN_Interface_Messages.isactive or WoWeuCN_Interface_Messages.isinactive;
-    print("WOWeuCN - Interface " .. state .. ": 已翻译 " .. WoWeuCN_Interface_Applied .. " 条全局字符串, 修复 " .. WoWeuCN_Interface_Swept .. " 处界面文本.");
+    print("WOWeuCN - Interface " .. state .. ": 已翻译 " .. WoWeuCN_Interface_Swept .. " 处界面文本.");
   elseif (msg == "") then
     if (Settings and Settings.OpenToCategory and WoWeuCN_Interface_SettingsCategory) then
       Settings.OpenToCategory(WoWeuCN_Interface_SettingsCategory:GetID());
@@ -948,10 +847,7 @@ end
 
 function WoWeuCN_Interface_SetCheckButtonState()
   WoWeuCN_InterfaceCheckButton0.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["active"] == "1");
-  WoWeuCN_InterfaceCheckButton1.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["transglobal"] == "1");
-  WoWeuCN_InterfaceCheckButton2.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["transfont"] == "1");
-  WoWeuCN_InterfaceCheckButton3.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["transexisting"] == "1");
-  WoWeuCN_InterfaceCheckButton4.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["transpopup"] == "1");
+  WoWeuCN_InterfaceCheckButton1.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["transfont"] == "1");
 end
 
 local function WoWeuCN_Interface_CreateCheckButton(index, parent, anchorTo, offsetY, option, label)
@@ -1023,17 +919,14 @@ function WoWeuCN_Interface_BlizzardOptions()
   optionsLabel:SetFont(WoWeuCN_Interface_Font2, 13);
   optionsLabel:SetText(WoWeuCN_Interface_Options.options1);
 
-  WoWeuCN_Interface_CreateCheckButton(1, WoWeuCN_InterfaceOptions, optionsLabel, -5, "transglobal", WoWeuCN_Interface_Options.transglobal);
-  WoWeuCN_Interface_CreateCheckButton(2, WoWeuCN_InterfaceOptions, optionsLabel, -35, "transfont", WoWeuCN_Interface_Options.transfont);
-  WoWeuCN_Interface_CreateCheckButton(3, WoWeuCN_InterfaceOptions, optionsLabel, -65, "transexisting", WoWeuCN_Interface_Options.transexisting);
-  WoWeuCN_Interface_CreateCheckButton(4, WoWeuCN_InterfaceOptions, optionsLabel, -95, "transpopup", WoWeuCN_Interface_Options.transpopup);
+  WoWeuCN_Interface_CreateCheckButton(1, WoWeuCN_InterfaceOptions, optionsLabel, -5, "transfont", WoWeuCN_Interface_Options.transfont);
 
   local reloadNote = WoWeuCN_InterfaceOptions:CreateFontString(nil, "ARTWORK");
   reloadNote:SetFontObject(GameFontWhite);
   reloadNote:SetJustifyH("LEFT");
   reloadNote:SetJustifyV("TOP");
   reloadNote:ClearAllPoints();
-  reloadNote:SetPoint("TOPLEFT", optionsLabel, "BOTTOMLEFT", 0, -135);
+  reloadNote:SetPoint("TOPLEFT", optionsLabel, "BOTTOMLEFT", 0, -45);
   reloadNote:SetFont(WoWeuCN_Interface_Font2, 13);
   reloadNote:SetText(WoWeuCN_Interface_Options.reloadnote);
 
@@ -1092,11 +985,7 @@ end
 
 function WoWeuCN_Interface_RunDeferredInit()
   if (WoWeuCN_Interface_N_PS["active"] == "1") then
-    if (WoWeuCN_Interface_N_PS["transglobal"] == "1") then
-      WoWeuCN_Interface_ApplyGlobalStrings();
-    else
-      WoWeuCN_Interface_BuildReverseMap();
-    end
+    WoWeuCN_Interface_BuildReverseMap();
   end
   WoWeuCN_Interface_InitGameMenuHook();
   WoWeuCN_Interface_InitPanelHook();
