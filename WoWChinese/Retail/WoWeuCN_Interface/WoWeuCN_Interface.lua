@@ -446,6 +446,31 @@ local function WoWeuCN_Interface_ResolveContext(fontString, text)
   return nil;
 end
 
+local function WoWeuCN_Interface_IsTitleRegion(fontString)
+  local paperDoll = _G["PaperDollFrame"];
+  local titlePane = paperDoll and paperDoll.TitleManagerPane;
+  local parent = fontString:GetParent();
+  local depth = 0;
+  while (parent and depth < 20) do
+    if (titlePane and parent == titlePane) then
+      return true;
+    end
+    local name = parent.GetName and parent:GetName();
+    if (name == "PlayerTitleDropdown") then
+      return true;
+    end
+    if (type(parent.GetOwnerRegion) == "function") then
+      local ok, owner = pcall(parent.GetOwnerRegion, parent);
+      if (ok and owner and owner.GetName and owner:GetName() == "PlayerTitleDropdown") then
+        return true;
+      end
+    end
+    parent = parent:GetParent();
+    depth = depth + 1;
+  end
+  return false;
+end
+
 local function WoWeuCN_Interface_TranslateFontString(fontString)
   local text = fontString:GetText();
   if (issecretvalue and issecretvalue(text)) then
@@ -468,6 +493,9 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
     translated = WoWeuCN_Interface_TryDecoratedTranslate(text);
   end
   if (translated == nil) then
+    return 0;
+  end
+  if (WoWeuCN_Interface_IsTitleRegion(fontString)) then
     return 0;
   end
 
