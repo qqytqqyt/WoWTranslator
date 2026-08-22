@@ -1,6 +1,6 @@
 ## Interface: 20506
 ## Title: WoWeuCN-Interface
-## Version: Anniversary 2.5.6.0
+## Version: Anniversary 2.5.6.1
 ## Notes_en: AddOn translates the game interface (global strings) into Chinese.
 ## Category: Translation
 ## Author: qqytqqyt
@@ -12,6 +12,5 @@
 
 InterfaceData_cn.lua
 GlobalStringsData_cn.lua
-TaintVocabData_cn.lua
 WoWeuCN_Interface.lua
 WoWeuCN_Interface.xml
