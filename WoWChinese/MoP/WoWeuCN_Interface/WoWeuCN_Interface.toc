@@ -1,6 +1,6 @@
 ## Interface: 50504
 ## Title: WoWeuCN-Interface
-## Version: MoP 5.5.4.1
+## Version: MoP 5.5.4.2
 ## Notes_en: AddOn translates the game interface (global strings) into Chinese.
 ## Category: Translation
 ## Author: qqytqqyt

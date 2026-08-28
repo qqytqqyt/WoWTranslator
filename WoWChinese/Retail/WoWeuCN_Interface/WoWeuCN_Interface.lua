@@ -29,6 +29,50 @@ local WoWeuCN_Interface_PreferredKeys = {
   ["RAID_FINDER"] = 1,
 };
 
+local WoWeuCN_Interface_PatternBlockedKeys = {
+  "TITLE_TEMPLATE",
+  "DECLENSION_SET",
+  "GUILD_TEMPLATE",
+  "GUILD_TITLE_TEMPLATE",
+  "CALL_PET_SPELL_NAME",
+  "ASSIST_ACTION_LOUNGING_PLAYER_NAME",
+  "ASSIST_ACTION_PLAYER_GUARDIAN_NAME",
+  "ASSIST_ACTION_PLAYER_SLAYER_TITLE",
+  "BATTLE_PET_CAGE_ITEM_NAME",
+  "CHALLENGE_MODE_KEYSTONE_NAME",
+};
+
+local WoWeuCN_Interface_NameFontStrings = {
+  "^MerchantItem%d+Name$",
+  "^MerchantBuyBackItemName$",
+  "^LootButton%d+Text$",
+  "^GroupLootFrame%d+Name$",
+  "^SpellButton%d+SpellName$",
+  "^TradePlayerItem%d+Name$",
+  "^TradeRecipientItem%d+Name$",
+  "^QuestInfoRewardsFrameQuestInfoItem%d+Name$",
+  "^QuestInfoSpellObjectiveFrameName$",
+  "^QuestInfoSkillPointFrameName$",
+  "^QuestProgressItem%d+Name$",
+  "^QuestLogItem%d+Name$",
+  "^ActionButton%d+Name$",
+  "^MultiBar%w+Button%d+Name$",
+  "^TradeSkillSkill%d+Text$",
+  "^TradeSkillSkillName$",
+  "^TradeSkillReagent%d+Name$",
+  "^Craft%d+Text$",
+  "^CraftName$",
+  "^CraftReagent%d+Name$",
+  "^ClassTrainerSkill%d+Text$",
+  "^ClassTrainerSkillName$",
+  "^PrimaryProfession%dSpellButton%a+SpellName$",
+  "^SecondaryProfession%dSpellButton%a+SpellName$",
+  "^BrowseButton%d+Name$",
+  "^AuctionsButton%d+Name$",
+  "^BidButton%d+Name$",
+  "^AuctionsItemButtonName$",
+};
+
 local WoWeuCN_Interface_ContextSpecs = {
   { key = "BACKSLOT", roots = {
       ["CharacterFrame"] = true, ["InspectFrame"] = true,
@@ -334,8 +378,15 @@ function WoWeuCN_Interface_BuildReverseMap()
       end
     end
   end
+  local blockedPatternSources = {};
+  for i = 1, #WoWeuCN_Interface_PatternBlockedKeys do
+    local blockedValue = rawget(_G, WoWeuCN_Interface_PatternBlockedKeys[i]);
+    if (type(blockedValue) == "string") then
+      blockedPatternSources[blockedValue] = true;
+    end
+  end
   for original, translated in pairs(WoWeuCN_Interface_Reverse) do
-    if (string.find(original, "%", 1, true)) then
+    if (string.find(original, "%", 1, true) and not blockedPatternSources[original]) then
       WoWeuCN_Interface_AddPatternEntry(original, translated);
     end
   end
@@ -471,6 +522,45 @@ local function WoWeuCN_Interface_IsTitleRegion(fontString)
   return false;
 end
 
+local function WoWeuCN_Interface_IsNameRegion(fontString)
+  local fsName = fontString.GetName and fontString:GetName();
+  if (fsName) then
+    for i = 1, #WoWeuCN_Interface_NameFontStrings do
+      if (string.find(fsName, WoWeuCN_Interface_NameFontStrings[i])) then
+        return true;
+      end
+    end
+  end
+  local parent = fontString:GetParent();
+  if (not parent) then
+    return false;
+  end
+  if ((parent.Name == fontString or parent.Text == fontString) and parent.NameFrame ~= nil) then
+    return true;
+  end
+  if (parent.Name == fontString and (parent.ItemButton or parent.Button or parent.IconFrame or parent.SubName)) then
+    return true;
+  end
+  if (parent.ItemName == fontString) then
+    return true;
+  end
+  if (parent.Text == fontString and parent.IconBorder ~= nil) then
+    return true;
+  end
+  if (parent.name == fontString and (parent.icon or parent.IconBorder)) then
+    return true;
+  end
+  if (parent.Label == fontString and (parent.SkillUps or parent.LockedIcon)) then
+    return true;
+  end
+  if (parent.OutputText == fontString or parent.RecraftingOutputText == fontString
+      or parent.RecipeName == fontString or parent.RecraftRecipeName == fontString
+      or parent.RewardName == fontString) then
+    return true;
+  end
+  return false;
+end
+
 local function WoWeuCN_Interface_TranslateFontString(fontString)
   local text = fontString:GetText();
   if (issecretvalue and issecretvalue(text)) then
@@ -495,7 +585,7 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
   if (translated == nil) then
     return 0;
   end
-  if (WoWeuCN_Interface_IsTitleRegion(fontString)) then
+  if (WoWeuCN_Interface_IsTitleRegion(fontString) or WoWeuCN_Interface_IsNameRegion(fontString)) then
     return 0;
   end
 
