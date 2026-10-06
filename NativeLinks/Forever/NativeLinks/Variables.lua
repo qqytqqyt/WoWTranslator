@@ -1,4 +1,4 @@
-﻿NativeLinks_base = "5.5.4.70032";   -- version
+﻿NativeLinks_base = "1.60.1.70235";   -- version
 NativeLinks_date = "2026-10-06"; -- date of creation base
 
 NativeLinks_lang = "en";      -- language
@@ -11,7 +11,7 @@ if (GetLocale() == "zhCN") then
         newversion = "NativeLinks有新版本，请及时在CurseForge或其他平台更新。",
         isactive   = "已启用",
         isinactive = "未启用",
-        author     = "作者：Shek'zeer (EU classic) - Nekomio",
+        author     = "作者：qqytqqyt",
 
         cmdon          = "NativeLinks 已启用。",
         cmdoff         = "NativeLinks 已停用。",
@@ -46,7 +46,7 @@ else
         newversion = "NativeLinks has a more recent version, please update it from CurseForge or other platform.",
         isactive   = "Active",
         isinactive = "InActive",
-        author     = "Author: Shek'zeer (EU classic) - Nekomio",
+        author     = "Author: qqytqqyt",
 
         cmdon          = "NativeLinks enabled.",
         cmdoff         = "NativeLinks disabled.",
