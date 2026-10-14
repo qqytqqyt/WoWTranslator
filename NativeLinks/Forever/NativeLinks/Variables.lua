@@ -1,5 +1,5 @@
-﻿NativeLinks_base = "1.60.1.70235";   -- version
-NativeLinks_date = "2026-10-06"; -- date of creation base
+﻿NativeLinks_base = "1.60.1.70374";   -- version
+NativeLinks_date = "2026-10-14"; -- date of creation base
 
 NativeLinks_lang = "en";      -- language
 
