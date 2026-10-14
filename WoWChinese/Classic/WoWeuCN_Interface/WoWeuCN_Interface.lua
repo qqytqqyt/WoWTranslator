@@ -609,14 +609,21 @@ local function WoWeuCN_Interface_ProcessFrame(frame)
   if (frame:GetObjectType() == "EditBox") then
     return 0;
   end
-  if (WoWeuCN_Interface_IsInExcludedFrame(frame)) then
+  if (frame.GetNumRegions and frame:GetNumRegions() == 0) then
     return 0;
   end
   local count = 0;
+  local excludedChecked = false;
   local regions = { frame:GetRegions() };
   for i = 1, #regions do
     local region = regions[i];
     if (region and region.IsObjectType and region:IsObjectType("FontString")) then
+      if (not excludedChecked) then
+        excludedChecked = true;
+        if (WoWeuCN_Interface_IsInExcludedFrame(frame)) then
+          return 0;
+        end
+      end
       local ok, n = pcall(WoWeuCN_Interface_TranslateFontString, region);
       if (ok and n) then
         count = count + n;
@@ -626,27 +633,94 @@ local function WoWeuCN_Interface_ProcessFrame(frame)
   return count;
 end
 
-function WoWeuCN_Interface_ScanExistingText()
-  if (not WoWeuCN_Interface_N_PS) then
-    return 0;
+local WoWeuCN_Interface_FullScanActive = false;
+local WoWeuCN_Interface_FullScanCursor = nil;
+local WoWeuCN_Interface_FullScanTotal = 0;
+local WoWeuCN_Interface_FullScanCallback = nil;
+local WoWeuCN_Interface_FullScanBudgetMs = 12;
+local WoWeuCN_Interface_FullScanMaxFrames = 5000;
+
+local function WoWeuCN_Interface_ClockMs()
+  if (type(GetTimePreciseSec) == "function") then
+    return GetTimePreciseSec() * 1000;
   end
-  if (WoWeuCN_Interface_N_PS["active"] == "0") then
-    return 0;
+  if (type(debugprofilestop) == "function") then
+    return debugprofilestop();
   end
-  if (type(EnumerateFrames) ~= "function" or InCombatLockdown()) then
-    return 0;
+  return 0;
+end
+
+function WoWeuCN_Interface_ScanExistingText(callback)
+  if (not WoWeuCN_Interface_N_PS or WoWeuCN_Interface_N_PS["active"] == "0") then
+    return false;
   end
-  local total = 0;
-  local frame = EnumerateFrames();
-  while (frame) do
+  if (type(EnumerateFrames) ~= "function") then
+    return false;
+  end
+  WoWeuCN_Interface_FullScanActive = true;
+  WoWeuCN_Interface_FullScanCursor = nil;
+  WoWeuCN_Interface_FullScanTotal = 0;
+  WoWeuCN_Interface_FullScanCallback = callback;
+  return true;
+end
+
+function WoWeuCN_Interface_IsFullScanActive()
+  return WoWeuCN_Interface_FullScanActive;
+end
+
+local function WoWeuCN_Interface_FinishFullScan()
+  local total = WoWeuCN_Interface_FullScanTotal;
+  local callback = WoWeuCN_Interface_FullScanCallback;
+  WoWeuCN_Interface_FullScanActive = false;
+  WoWeuCN_Interface_FullScanCursor = nil;
+  WoWeuCN_Interface_FullScanCallback = nil;
+  if (type(callback) == "function") then
+    pcall(callback, total);
+  end
+end
+
+function WoWeuCN_Interface_FullScanStep(budgetMs, maxFrames)
+  if (not WoWeuCN_Interface_FullScanActive) then
+    return true;
+  end
+  if (InCombatLockdown()) then
+    return false;
+  end
+  local deadline = WoWeuCN_Interface_ClockMs() + (budgetMs or WoWeuCN_Interface_FullScanBudgetMs);
+  local limit = maxFrames or WoWeuCN_Interface_FullScanMaxFrames;
+  local processed = 0;
+  local cursor = WoWeuCN_Interface_FullScanCursor;
+  while true do
+    local frame = EnumerateFrames(cursor);
+    if (not frame) then
+      WoWeuCN_Interface_FinishFullScan();
+      return true;
+    end
+    cursor = frame;
+    WoWeuCN_Interface_FullScanCursor = cursor;
     local ok, n = pcall(WoWeuCN_Interface_ProcessFrame, frame);
     if (ok and n) then
-      total = total + n;
+      WoWeuCN_Interface_FullScanTotal = WoWeuCN_Interface_FullScanTotal + n;
+      WoWeuCN_Interface_Swept = WoWeuCN_Interface_Swept + n;
     end
-    frame = EnumerateFrames(frame);
+    processed = processed + 1;
+    if (processed >= limit or WoWeuCN_Interface_ClockMs() >= deadline) then
+      return false;
+    end
   end
-  WoWeuCN_Interface_Swept = WoWeuCN_Interface_Swept + total;
-  return total;
+end
+
+local function WoWeuCN_Interface_ReportRescan(total)
+  print("WOWeuCN - Interface: 重新扫描完成, 本次修复 " .. total .. " 处界面文本.");
+end
+
+function WoWeuCN_Interface_RequestRescan()
+  if (not WoWeuCN_Interface_ScanExistingText(WoWeuCN_Interface_ReportRescan)) then
+    print("WOWeuCN - Interface: 翻译模块未启用, 无法重新扫描.");
+    return false;
+  end
+  print("WOWeuCN - Interface: 正在重新扫描界面文本...");
+  return true;
 end
 
 local WoWeuCN_Interface_PopupPassQueued = false;
@@ -869,10 +943,19 @@ WoWeuCN_Interface_Driver:SetScript("OnUpdate", function(self, elapsed)
       end
     end
   end
-  WoWeuCN_Interface_ScanAccum = WoWeuCN_Interface_ScanAccum + (elapsed or 0);
-  if (WoWeuCN_Interface_ScanAccum >= 0.4) then
+  if (WoWeuCN_Interface_FullScanActive) then
+    local ok = pcall(WoWeuCN_Interface_FullScanStep, WoWeuCN_Interface_FullScanBudgetMs, WoWeuCN_Interface_FullScanMaxFrames);
+    if (not ok) then
+      WoWeuCN_Interface_FullScanActive = false;
+      WoWeuCN_Interface_FullScanCallback = nil;
+    end
     WoWeuCN_Interface_ScanAccum = 0;
-    pcall(WoWeuCN_Interface_PeriodicPass);
+  else
+    WoWeuCN_Interface_ScanAccum = WoWeuCN_Interface_ScanAccum + (elapsed or 0);
+    if (WoWeuCN_Interface_ScanAccum >= 0.4) then
+      WoWeuCN_Interface_ScanAccum = 0;
+      pcall(WoWeuCN_Interface_PeriodicPass);
+    end
   end
 end);
 
@@ -945,8 +1028,7 @@ function WoWeuCN_Interface_SlashCommand(msg)
       print("|cffffff00WOWeuCN - Interface 翻译模块已关闭, 输入 /reload 完全生效.");
     end
   elseif (msg == "rescan") then
-    local n = WoWeuCN_Interface_ScanExistingText();
-    print("WOWeuCN - Interface: 重新扫描完成, 本次修复 " .. n .. " 处界面文本.");
+    WoWeuCN_Interface_RequestRescan();
   elseif (msg == "status") then
     local state = (WoWeuCN_Interface_N_PS["active"] == "1") and WoWeuCN_Interface_Messages.isactive or WoWeuCN_Interface_Messages.isinactive;
     print("WOWeuCN - Interface " .. state .. ": 已翻译 " .. WoWeuCN_Interface_Swept .. " 处界面文本.");
@@ -1057,8 +1139,7 @@ function WoWeuCN_Interface_BlizzardOptions()
     rescanLabel:SetFont(WoWeuCN_Interface_Font2, 13);
   end
   rescanButton:SetScript("OnClick", function()
-    local n = WoWeuCN_Interface_ScanExistingText();
-    print("WOWeuCN - Interface: 重新扫描完成, 本次修复 " .. n .. " 处界面文本.");
+    WoWeuCN_Interface_RequestRescan();
   end);
 end
 
