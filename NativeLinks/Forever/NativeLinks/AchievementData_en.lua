@@ -433,4 +433,6 @@ NativeLinks_AchievementNameData = {
 ["64184"] = "Total 40-player raids entered",
 ["64185"] = "Total deaths in 40-player raids",
 ["64208"] = "<Hidden> Completed New Player Experience (Account)",
+["64222"] = "Times camped",
+["64283"] = "Played in the WoW: Forever Beta",
 }
