@@ -1,0 +1,1225 @@
+﻿-- Addon: WoWeuCN-Tooltips
+-- Author: qqytqqyt
+
+-- Local variables
+local WoWeuCN_Tooltips_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Tooltips", "Version");
+local WoWeuCN_Tooltips_onDebug = false;   
+local WoWeuCN_AddonPrefix = "WoWeuCN";   
+
+local last_time = GetTime();
+local last_text = 0;
+
+local kinds = {
+  spell = "Spell",
+  item = "Item",
+  unit = "NPC",
+  quest = "Quest",
+  talent = "Talent",
+  achievement = "Achievement",
+  criteria = "Criteria",
+  ability = "Ability",
+  currency = "Currency",
+  artifactpower = "ArtifactPower",
+  enchant = "Enchant",
+  bonus = "Bonus",
+  gem = "Gem",
+  mount = "Mount",
+  companion = "Companion",
+  macro = "Macro",
+  equipmentset = "EquipmentSet",
+  visual = "Visual",
+  source = "Source",
+  species = "Species",
+  icon = "Icon",
+}
+
+-- wait functions from QTR
+local WoWeuCN_Tooltips_waitFrame = nil;
+local WoWeuCN_Tooltips_waitTable = {};
+local WoWeuCN_Tooltips_Force = false
+
+local WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = nil;
+
+local check1 = {85,110,105,116,78,97,109,101}
+local check2 = {66,78,71,101,116,73,110,102,111}
+
+local hashList = {}
+
+local function Serialize(tbl)
+  local t = {}
+  for k,v in pairs(tbl) do
+      if type(v) == "number" then
+          v = strchar(v)
+      end
+      table.insert(t,v)
+  end
+  return table.concat(t)
+end
+
+local function UpdateEncounterJournalToggleButton()
+  if not WoWeuCN_Tooltips_ToggleEncounterJournalTranslation then
+    return
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Hide();
+  else
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:Show();
+  end
+end
+
+function WoWeuCN_Tooltips_wait(delay, func, ...)
+  if(type(delay)~="number" or type(func)~="function") then
+    return false;
+  end
+  if (WoWeuCN_Tooltips_waitFrame == nil) then
+    WoWeuCN_Tooltips_waitFrame = CreateFrame("Frame","WoWeuCN_Tooltips_waitFrame", UIParent);
+    WoWeuCN_Tooltips_waitFrame:SetScript("onUpdate",function (self,elapse)
+      local count = #WoWeuCN_Tooltips_waitTable;
+      local i = 1;
+      while(i<=count) do
+        local waitRecord = tremove(WoWeuCN_Tooltips_waitTable,i);
+        local d = tremove(waitRecord,1);
+        local f = tremove(waitRecord,1);
+        local p = tremove(waitRecord,1);
+        if(d>elapse) then
+          tinsert(WoWeuCN_Tooltips_waitTable,i,{d-elapse,f,p});
+          i = i + 1;
+        else
+          count = count - 1;
+          f(unpack(p));
+        end
+      end
+    end);
+  end
+  tinsert(WoWeuCN_Tooltips_waitTable,{delay,func,{...}});
+  return true;
+end
+
+-- Global variables initialtion
+function WoWeuCN_Tooltips_CheckVars()
+  WoWeuCN_Quests_PS = 1
+  WoWeuCN_Tooltips_PS = 1
+
+  if (not WoWeuCN_Tooltips_LastAnnounceDate) then
+    WoWeuCN_Tooltips_LastAnnounceDate = 0;
+  end
+  if (not WoWeuCN_Tooltips_N_PS) then
+     WoWeuCN_Tooltips_N_PS = {};
+  end
+  -- Initiation - active
+  if (not WoWeuCN_Tooltips_N_PS["active"]) then
+     WoWeuCN_Tooltips_N_PS["active"] = "1";
+  end
+  -- Initiation - spell translation
+  if (not WoWeuCN_Tooltips_N_PS["transspell"] ) then
+     WoWeuCN_Tooltips_N_PS["transspell"] = "1";   
+  end
+  -- Initiation - item translation
+  if (not WoWeuCN_Tooltips_N_PS["transitem"] ) then
+     WoWeuCN_Tooltips_N_PS["transitem"] = "1";   
+  end
+    -- Initiation - unit translation
+  if (not WoWeuCN_Tooltips_N_PS["transunit"] ) then
+     WoWeuCN_Tooltips_N_PS["transunit"] = "1";   
+  end
+  -- Initiation - achievement translation
+  if (not WoWeuCN_Tooltips_N_PS["transachievement"] ) then
+     WoWeuCN_Tooltips_N_PS["transachievement"] = "1";   
+  end  
+  -- Initiation - advanced translation
+  if (not WoWeuCN_Tooltips_N_PS["transadvanced"] ) then
+     WoWeuCN_Tooltips_N_PS["transadvanced"] = "1";   
+  end
+  -- Initiation - nameplate translation
+  if (not WoWeuCN_Tooltips_N_PS["transnameplate"] ) then
+     WoWeuCN_Tooltips_N_PS["transnameplate"] = "1";   
+  end
+  -- Initiation - name only mode
+  if (not WoWeuCN_Tooltips_N_PS["nameonly"] ) then
+     WoWeuCN_Tooltips_N_PS["nameonly"] = "0";
+  end
+    -- Path version info
+  if (not WoWeuCN_Tooltips_N_PS["patch"]) then
+     WoWeuCN_Tooltips_N_PS["patch"] = GetBuildInfo();
+  end
+end
+
+-- load data
+local function loadData(typeName)
+  for i=0,1500000,100000 do
+    local name = "load" .. typeName .. "Data".. i
+    if _G[name] ~= nil then
+      _G[name]();
+    end
+  end
+end
+
+local function loadAllItemData()
+  loadData("Item");
+end
+
+local function loadAllSpellData()  
+  loadData("Spell");
+end
+
+local function loadAllUnitData()
+  loadData("Unit");
+end
+
+local function loadAllAchievementData()
+  loadData("Achievement");
+end
+
+-- commands
+function WoWeuCN_Tooltips_SlashCommand(msg)
+   if (msg=="on" or msg=="ON") then
+      if (WoWeuCN_Tooltips_N_PS["active"]=="1") then
+         print ("WOWeuCN - Tooltips 翻译模块已启用.");
+      else
+         print ("|cffffff00WOWeuCN - Tooltips 翻译模块已启用.");         
+         if WoWeuCN_Tooltips_Force then return end
+         WoWeuCN_Tooltips_N_PS["active"] = "1";
+         WoWeuCN_Tooltips_ToggleButton0:Enable();
+         WoWeuCN_Tooltips_ToggleButton1:Enable();
+         WoWeuCN_Tooltips_ToggleButton2:Enable();
+         WoWeuCN_Tooltips_ToggleButton3:Enable();
+      end
+   elseif (msg=="off" or msg=="OFF") then
+      if (WoWeuCN_Tooltips_N_PS["active"]=="0") then
+         print ("WOWeuCN - Tooltips 翻译模块已关闭.");
+      else
+         print ("|cffffff00WOWeuCN - Tooltips 翻译模块已关闭.");
+         WoWeuCN_Tooltips_N_PS["active"] = "0";
+         WoWeuCN_Tooltips_ToggleButton0:Disable();
+         WoWeuCN_Tooltips_ToggleButton1:Disable();
+         WoWeuCN_Tooltips_ToggleButton2:Disable();
+         WoWeuCN_Tooltips_ToggleButton3:Disable();
+      end
+
+    elseif (msg=="") then
+        InterfaceOptionsFrame_Show();
+        InterfaceOptionsFrame_OpenToCategory("WoWeuCN-Tooltips");
+    else
+      print ("WOWeuCN-Tooltips - 指令说明:");
+      print ("      /woweucn-tooltips on  - 启用Tooltips翻译模块");
+      print ("      /woweucn-tooltips off - 禁用Tooltips翻译模块");
+   end
+end
+
+function WoWeuCN_Tooltips_SetCheckButtonState()
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1");
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transspell"]=="1");
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1");
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["nameonly"]=="1");
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1");
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
+end
+
+function WoWeuCN_Tooltips_BlizzardOptions()
+  -- Create main frame for information text
+  local WoWeuCN_TooltipsOptions = CreateFrame("FRAME", "WoWeuCN_Tooltips_Options");
+  WoWeuCN_TooltipsOptions.name = "WoWeuCN-Tooltips";
+  WoWeuCN_TooltipsOptions.refresh = function (self) WoWeuCN_Tooltips_SetCheckButtonState() end;
+  
+  if InterfaceOptions_AddCategory then
+    InterfaceOptions_AddCategory(WoWeuCN_TooltipsOptions)
+    elseif Settings and Settings.RegisterAddOnCategory and Settings.RegisterCanvasLayoutCategory then
+       Settings.RegisterAddOnCategory(select(1, Settings.RegisterCanvasLayoutCategory(WoWeuCN_TooltipsOptions, WoWeuCN_TooltipsOptions.name)));
+    end
+
+  local WoWeuCN_TooltipsOptionsHeader = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
+  WoWeuCN_TooltipsOptionsHeader:SetFontObject(GameFontNormalLarge);
+  WoWeuCN_TooltipsOptionsHeader:SetJustifyH("LEFT"); 
+  WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
+  WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
+  WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2025");
+  WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
+
+  local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
+  WoWeuCN_TooltipsPlayer:SetFontObject(GameFontNormalLarge);
+  WoWeuCN_TooltipsPlayer:SetJustifyH("LEFT"); 
+  WoWeuCN_TooltipsPlayer:SetJustifyV("TOP");
+  WoWeuCN_TooltipsPlayer:ClearAllPoints();
+  WoWeuCN_TooltipsPlayer:SetPoint("TOPRIGHT", WoWeuCN_TooltipsOptionsHeader, "TOPRIGHT", 0, -22);
+  WoWeuCN_TooltipsPlayer:SetText("作者 : "..WoWeuCN_Tooltips_Messages.author);
+  WoWeuCN_TooltipsPlayer:SetFont(WoWeuCN_Tooltips_Font2, 16);
+
+  local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1")
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
+  WoWeuCN_TooltipsCheckButton0.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton0.Text:SetText(WoWeuCN_Tooltips_Interface.active);
+
+  local WoWeuCN_TooltipsOptionsMode1 = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
+  WoWeuCN_TooltipsOptionsMode1:SetFontObject(GameFontWhite);
+  WoWeuCN_TooltipsOptionsMode1:SetJustifyH("LEFT");
+  WoWeuCN_TooltipsOptionsMode1:SetJustifyV("TOP");
+  WoWeuCN_TooltipsOptionsMode1:ClearAllPoints();
+  WoWeuCN_TooltipsOptionsMode1:SetPoint("TOPLEFT", WoWeuCN_TooltipsCheckButton0, "BOTTOMLEFT", 30, -20);
+  WoWeuCN_TooltipsOptionsMode1:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsOptionsMode1:SetText(WoWeuCN_Tooltips_Interface.options1);
+  
+  local WoWeuCN_TooltipsCheckButton3 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton3", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton3:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -5);
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transspell"]=="1")
+  WoWeuCN_TooltipsCheckButton3.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then WoWeuCN_Tooltips_N_PS["transspell"]="1" else WoWeuCN_Tooltips_N_PS["transspell"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton3.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton3:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton3.Text:SetText(WoWeuCN_Tooltips_Interface.transspell);
+  
+  local WoWeuCN_TooltipsCheckButton4 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton4", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton4:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -35);
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transitem"]=="1")
+  WoWeuCN_TooltipsCheckButton4.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then WoWeuCN_Tooltips_N_PS["transitem"]="1" else WoWeuCN_Tooltips_N_PS["transitem"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton4.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton4:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton4.Text:SetText(WoWeuCN_Tooltips_Interface.transitem);
+
+  local WoWeuCN_TooltipsCheckButton9 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton9", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton9:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -65);
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["nameonly"]=="1")
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["nameonly"]=="0") then WoWeuCN_Tooltips_N_PS["nameonly"]="1" else WoWeuCN_Tooltips_N_PS["nameonly"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton9.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton9:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton9.Text:SetText(WoWeuCN_Tooltips_Interface.nameonly);
+  
+  local WoWeuCN_TooltipsCheckButton5 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton5", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton5:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -95);
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transunit"]=="1")
+  WoWeuCN_TooltipsCheckButton5.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transunit"]=="0") then WoWeuCN_Tooltips_N_PS["transunit"]="1" else WoWeuCN_Tooltips_N_PS["transunit"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton5.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton5:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton5.Text:SetText(WoWeuCN_Tooltips_Interface.transunit);
+  
+  local WoWeuCN_TooltipsCheckButton6 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton6", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton6:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -125);
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1")
+  WoWeuCN_TooltipsCheckButton6.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then WoWeuCN_Tooltips_N_PS["transachievement"]="1" else WoWeuCN_Tooltips_N_PS["transachievement"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton6.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton6:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton6.Text:SetText(WoWeuCN_Tooltips_Interface.transachievement);
+
+  local WoWeuCN_TooltipsCheckButton7 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton7", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton7:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -155);
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1")
+  WoWeuCN_TooltipsCheckButton7.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transadvanced"]=="0") then WoWeuCN_Tooltips_N_PS["transadvanced"]="1" else WoWeuCN_Tooltips_N_PS["transadvanced"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton7.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton7:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton7.Text:SetText(WoWeuCN_Tooltips_Interface.transadvanced);
+  
+  local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -185);
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1")
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
+end
+
+local function translateTooltip(tooltip, data, kind)
+  if kind == kinds.unit and data.guid and not issecretvalue(data.guid) then
+    local id = tonumber(data.guid:match("-(%d+)-%x+$"), 10)
+    if id and data.guid:match("%a+") ~= "Player" then 
+        SetUnitTooltip(tooltip, id)
+    end
+  elseif data.id and not issecretvalue(data.id) then
+    local id = data.id
+    if type(id) == "table" and #id == 1 then id = id[1] end
+    if kind == kinds.spell then
+      SetSpellTooltip(tooltip, id)
+    elseif kind == kinds.item then
+      SetItemTooltip(tooltip, id)
+    elseif kind == kinds.unit then
+      SetUnitTooltip(tooltip, id)
+    elseif kind == kinds.macro then
+      SetMacroTooltip(tooltip, id)
+    end
+  end
+end
+
+local function StringHash(text)        
+  if (text == nil) then
+     return 9999;
+  end
+
+  text = string.gsub(text, " ", "");
+  local counter = 1;
+  local pomoc = 0;
+  local dlug = string.len(text);
+  for i = 1, dlug, 3 do 
+    counter = math.fmod(counter*8161, 4294967279);  -- 2^32 - 17: Prime!
+    pomoc = (string.byte(text,i)*16776193);
+    counter = counter + pomoc;
+    pomoc = ((string.byte(text,i+1) or (dlug-i+256))*8372226);
+    counter = counter + pomoc;
+    pomoc = ((string.byte(text,i+2) or (dlug-i+256))*3932164);
+    counter = counter + pomoc;
+  end
+  return math.fmod(counter, 4294967291) -- 2^32 - 5: Prime (and different from the prime in the loop)
+end
+
+-- First function called after the add-in has been loaded
+function WoWeuCN_Tooltips_OnLoad()
+   WoWeuCN_Tooltips = CreateFrame("Frame");
+      
+   local expInfo, _, _, _ = GetBuildInfo()
+   local exp, major, minor = strsplit(".", expInfo)
+   local myExp = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.")
+   local _, myMajor, myMinor = strsplit( ".", WoWeuCN_Tooltips_version)
+   if exp ~= myExp then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载对应资料片版本的客户端。|r")
+     return
+   end
+   if (tonumber(major) * 100 + tonumber(minor)) > (tonumber(myMajor) * 100 + tonumber(myMinor)) then
+     print("|cffffff00WoWeuCN-Tooltips加载错误，请下载最新版本。|r")
+     return
+   end
+
+   WoWeuCN_Tooltips:SetScript("OnEvent", WoWeuCN_Tooltips_OnEvent);
+   WoWeuCN_Tooltips:RegisterEvent("ADDON_LOADED");
+   
+  if TooltipDataProcessor then
+    TooltipDataProcessor.AddTooltipPostCall(TooltipDataProcessor.AllTypes, function(tooltip, data)
+      if not data or not data.type then return end
+      if data.type == Enum.TooltipDataType.Spell then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Item then
+        translateTooltip(tooltip, data, kinds.item)
+      elseif data.type == Enum.TooltipDataType.Unit then
+        translateTooltip(tooltip, data, kinds.unit)
+      elseif data.type == Enum.TooltipDataType.Currency then
+        translateTooltip(tooltip, data, kinds.currency)
+      elseif data.type == Enum.TooltipDataType.UnitAura then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Mount then
+        translateTooltip(tooltip, data, kinds.mount)
+      elseif data.type == Enum.TooltipDataType.Achievement then
+        translateTooltip(tooltip, data, kinds.achievement)
+      elseif data.type == Enum.TooltipDataType.EquipmentSet then
+        translateTooltip(tooltip, data, kinds.equipmentset)
+      elseif data.type == Enum.TooltipDataType.RecipeRankInfo then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Totem then
+        translateTooltip(tooltip, data, kinds.spell)
+      elseif data.type == Enum.TooltipDataType.Toy then
+        translateTooltip(tooltip, data, kinds.item)
+      elseif data.type == Enum.TooltipDataType.Quest then
+        translateTooltip(tooltip, data, kinds.quest)
+      elseif data.type == Enum.TooltipDataType.Macro then
+        translateTooltip(tooltip, data, kinds.macro)
+      end
+    end)
+  end
+
+  if LootFrame then
+    hooksecurefunc(LootFrameElementMixin, "Init", function(self, ...) OnLootUpdate(self, ...) end);
+  end
+  if MerchantFrame then
+    hooksecurefunc("MerchantFrame_UpdateMerchantInfo", function(...) OnMerchantInfoUpdate(...) end);
+  end
+  
+  if SpellBookFrame then
+    for i = 1, SPELLS_PER_PAGE do
+      local currSpellButton = _G["SpellButton" .. i];
+      hooksecurefunc(currSpellButton, "UpdateButton", function(self) OnSpellButtonUpdate(self) end);   
+    end
+  end
+
+  if (_G.ElvUI ~= nil) then
+    local E, L, V, P, G = unpack(ElvUI)
+    if E then
+      local M = E:GetModule('Misc')
+      if M then
+        hooksecurefunc(M, "LOOT_OPENED", function(self, ...) OnLootUpdateElvUI(self, ...) end);
+      end
+    end
+    end
+
+  hooksecurefunc(GameTooltip, "SetAction", function(...) OnTooltipSetAction(...) end)
+   
+   RegisterChatFilterEvents()
+
+   loadAllSpellData()
+   loadAllItemData()
+   loadAllUnitData()
+   loadAllAchievementData()
+   -- Forever does not load the encounter journal, so it ships no encounter data
+   if loadEncounterData then
+      loadEncounterData()
+   end
+end
+
+function split(s, delimiter)
+  if (s == nil) then
+    return nil
+  end
+  result = {};
+  for match in (s..delimiter):gmatch("(.-)"..delimiter) do
+      table.insert(result, match);
+  end
+  return result;
+end
+
+local replacement = { 
+  ["瞬发"] = "À",
+  ["施法时间"] = "Á",
+  ["码射程"] = "Â",
+  ["秒"] = "Ã",
+  ["冷却时间"] = "Ä",
+  ["|cffffd100"] = "Å",
+  ["|r|cff7f7f7f"] = "Æ",
+  ["|r"] = "Ç",
+  ["近战范围"] = "È",
+  ["持续"] = "É",
+  ["造成"] = "Ê",
+
+  ["点伤害"] = "Ë",
+  ["点治疗"] = "Ì",
+  ["点生命值"] = "Í",
+  ["点法力值"] = "Î",
+  ["点物理伤害"] = "Ï",
+  ["点魔法伤害"] = "Ð",
+  ["点火焰伤害"] = "Ñ",
+  ["点冰霜伤害"] = "Ò",
+  ["点暗影伤害"] = "Ó",
+  ["点神圣伤害"] = "Ô",
+  ["点奥术伤害"] = "Õ",
+  ["点混乱伤害"] = "Ö",
+  ["点流血伤害"] = "Ø"
+}
+
+function ReplaceText(s)
+  if (s == nil) then
+    return nil
+  end
+
+  for origin,new in pairs(replacement) do
+    s = string.gsub(s, new, origin)
+  end
+
+  return s
+end
+
+local function FindData(num_id, name)  
+  local dataIndex = nil
+  local offset = 0
+  local offset_id = num_id - offset
+  while (offset_id > 100000) do
+    offset = offset + 100000
+    offset_id = num_id - offset
+  end
+
+  local indexDbName = "WoWeuCN_Tooltips_" .. name .. "IndexData_" .. tostring(offset)
+  local dbData = _G[indexDbName]
+  if dbData then
+    dataIndex = dbData[offset_id]
+  end
+
+  if (dataIndex == nil) then
+    return nil
+  end
+
+  local data = nil
+  local dataDbName = "WoWeuCN_Tooltips_" .. name .. "Data_" .. tostring(offset)
+  local dbData = _G[dataDbName]
+  if dbData then
+    data = split(dbData[dataIndex], '£')
+  end
+
+  return data
+end
+
+function GetFirstLineColorCode(...)
+  local colorCode = _G["ORANGE_FONT_COLOR_CODE"]
+  for regionIndex = 1, select("#", ...) do
+    local region = select(regionIndex, ...)
+    if region and region:GetObjectType() == "FontString" then
+      local text = region:GetText() -- string or nil
+      if (text ~= nil) then
+        if (text ~= " ") then
+          local r, g, b, a = region:GetTextColor()
+          colorCode = string.format("%02x", a * 255) .. string.format("%02x", r * 255) .. string.format("%02x", g * 255) .. string.format("%02x", b * 255)
+          return "|c" .. colorCode
+        end
+      end
+    end
+  end
+  return colorCode
+end
+
+local function GetTooltipLeftLine(tooltip, index)
+  if (tooltip == nil) then
+    return nil
+  end
+
+  local tooltipName = tooltip:GetName()
+  if tooltipName then
+    return _G[tooltipName .. "TextLeft" .. index]
+  end
+  return _G[("GameTooltipTextLeft%d"):format(index)]
+end
+
+local function TooltipHasText(tooltip, text)
+  if (tooltip == nil or text == nil) then
+    return false
+  end
+
+  local lines = tooltip:NumLines()
+  for i= 1, lines do
+    local line = GetTooltipLeftLine(tooltip, i)
+    local lineText = line and line:GetText()
+    if lineText and not issecretvalue(lineText) and lineText:find(text, 1, true) then
+      return true
+    end
+  end
+  return false
+end
+
+local function GetTooltipLineStyle(tooltip, index)
+  local line = GetTooltipLeftLine(tooltip, index)
+  if not line then
+    return nil
+  end
+
+  local r, g, b, a = line:GetTextColor()
+  local font, size, flags = line:GetFont()
+  return {
+    r = r,
+    g = g,
+    b = b,
+    a = a,
+    font = WoWeuCN_Tooltips_Font1,
+    size = size,
+    flags = flags
+  }
+end
+
+local function ApplyTooltipLineStyle(tooltip, index, style, applyFont)
+  if not style then
+    return
+  end
+
+  local line = GetTooltipLeftLine(tooltip, index)
+  if not line then
+    return
+  end
+
+  if applyFont and style.font and style.size then
+    --line:SetFont(style.font, style.size, style.flags)
+  end
+  if style.r then
+    line:SetTextColor(style.r, style.g, style.b, style.a or 1)
+  end
+end
+
+local function IsMostlyWhite(style)
+  if not style then
+    return false
+  end
+  return style.r and style.g and style.b and style.r > 0.9 and style.g > 0.9 and style.b > 0.9
+end
+
+local function AddTranslatedTooltipData(tooltip, translatedData, formatter)
+  if (tooltip == nil or translatedData == nil or #translatedData == 0) then
+    return
+  end
+
+  local translatedLines = #translatedData
+  if (WoWeuCN_Tooltips_N_PS["nameonly"]=="1") then
+    translatedLines = 1
+  end
+
+  local originalLineCount = tooltip:NumLines()
+  local firstColoredDescriptionStyle = nil
+  for i = 2, originalLineCount do
+    local line = GetTooltipLeftLine(tooltip, i)
+    local lineText = line and line:GetText()
+    if issecretvalue(lineText) then
+      return
+    end
+    if lineText and lineText ~= " " then
+      local style = GetTooltipLineStyle(tooltip, i)
+      if style and not IsMostlyWhite(style) then
+        firstColoredDescriptionStyle = style
+        break
+      end
+    end
+  end
+
+  local lineStyles = {}
+  for i = 1, translatedLines do
+    local sourceLineIndex = i
+    if sourceLineIndex > originalLineCount then
+      sourceLineIndex = originalLineCount
+    end
+    local style = GetTooltipLineStyle(tooltip, sourceLineIndex)
+    if i > 1 and firstColoredDescriptionStyle and (not style or IsMostlyWhite(style)) then
+      style = firstColoredDescriptionStyle
+    end
+    lineStyles[i] = style
+  end
+
+  tooltip:AddLine(" ")
+  for i = 1, translatedLines do
+    local lineText = translatedData[i]
+    if formatter then
+      lineText = formatter(lineText, i)
+    end
+
+    if lineText and lineText ~= "" then
+      tooltip:AddLine(lineText, 1, 1, 1, 1)
+      local addedLineIndex = tooltip:NumLines()
+      local style = lineStyles[i] or lineStyles[1]
+      ApplyTooltipLineStyle(tooltip, addedLineIndex, style, i == 1)
+    end
+  end
+  tooltip:Show()
+end
+
+function OnAchievement(self, elementData)  
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then
+    return
+  end
+
+  local id = self.id
+  if id then
+      local achievementData = GetAchievementData(id)
+      if ( achievementData ) then
+        local title = achievementData[1]
+        self.Label:SetText(title);
+        local description = achievementData[2]
+        if ( description ) then
+          if (self.Description) then
+            self.Description:SetText(description);
+          end
+          if (self.HiddenDescription) then
+            self.HiddenDescription:SetText(description);
+          end
+        end
+      end
+
+  end
+end
+
+function OnAchievementSummary(...)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transachievement"]=="0") then
+    return
+  end
+
+  for i=1, 4 do
+    id = select(i, ...);
+    local button = _G["AchievementFrameSummaryAchievement"..i];	
+    if button and id then
+      local achievementData = GetAchievementData(id)
+      if ( achievementData ) then
+        local title = achievementData[1]
+        button.Label:SetText(title);
+        local description = achievementData[2]
+        if ( description and button.Description ) then
+          button.Description:SetText(description);
+        end
+      end
+    end
+  end
+end
+
+function GetAchievementData(id)
+  if (id == nil) then
+    return nil
+  end
+
+  local num_id = tonumber(id)
+  return FindData(num_id, "Achievement")
+end
+
+function OnTooltipUnit(self, tooltip)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transunit"]=="0") then
+    return
+  end
+
+  if (self ~= tooltip) then
+    return
+  end
+
+	-- Case for linked unit
+  local unitName, unit = self:GetUnit()
+  if (unit == nil) then 
+    return
+  end
+
+  local unitGUID = UnitGUID(unit);
+  if (unitGUID == nil or issecretvalue(unitGUID)) then
+    return
+  end
+
+  local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-", unitGUID);
+  SetUnitTooltip(self, npc_id)
+end
+
+function SetUnitTooltip(self, id)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transunit"]=="0") then
+    return
+  end
+  
+  local unitData = GetUnitData(id)
+
+  if ( unitData ) then      
+    if TooltipHasText(self, unitData[1]) then
+      return
+    end
+    AddTranslatedTooltipData(self, unitData)
+  end
+end
+
+function WoWeuCN_Tooltips_GetNameplateUnitData(id)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
+    return
+  end
+  return GetUnitData(id)
+end
+
+function GetUnitData(id)
+  if (id == nil or issecretvalue(id)) then
+    return nil
+  end
+
+  local num_id = tonumber(id)  
+  return FindData(num_id, "Unit")
+end
+
+local function GetItemIDFromLink(itemLink)
+  if (itemLink == nil or issecretvalue(itemLink)) then
+    return nil
+  end
+  local itemID = string.match(itemLink, 'Hitem:(%d+):')
+  if itemID then
+    return itemID
+  end
+  return string.match(itemLink, 'item:(%d+)')
+end
+
+local function ResolveItemID(value)
+  if type(value) == "number" then
+    return value
+  end
+  if type(value) == "string" then
+    local itemID = GetItemIDFromLink(value)
+    if itemID then
+      return itemID
+    end
+    if C_Item and C_Item.GetItemInfoInstant then
+      local instantItemID = C_Item.GetItemInfoInstant(value)
+      if instantItemID then
+        return instantItemID
+      end
+    end
+  end
+  return nil
+end
+
+local function ResolveMacroSpellID(macroID)
+  local macroSpell1, macroSpell2, macroSpell3 = GetMacroSpell(macroID)
+
+  if type(macroSpell1) == "number" then
+    return macroSpell1
+  end
+  if type(macroSpell2) == "number" then
+    return macroSpell2
+  end
+  if type(macroSpell3) == "number" then
+    return macroSpell3
+  end
+  if type(macroSpell1) == "string" and C_Spell and C_Spell.GetSpellInfo then
+    local spellInfo = C_Spell.GetSpellInfo(macroSpell1)
+    if spellInfo and spellInfo.spellID then
+      return spellInfo.spellID
+    end
+  end
+  return nil
+end
+
+function SetMacroTooltip(self, macroID)
+  if (macroID == nil or issecretvalue(macroID)) then
+    return
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transitem"]=="1") then
+    if self.GetItem then
+      local _, itemLink = self:GetItem()
+      local itemID = GetItemIDFromLink(itemLink)
+      if itemID then
+        SetItemTooltip(self, itemID)
+        return
+      end
+    end
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transspell"]=="1") then
+    if self.GetSpell then
+      local _, spellID = self:GetSpell()
+      if spellID then
+        SetSpellTooltip(self, spellID)
+        return
+      end
+    end
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transitem"]=="1") then
+    local macroItemName, macroItemLink = GetMacroItem(macroID)
+    local macroItemID = ResolveItemID(macroItemLink) or ResolveItemID(macroItemName)
+    if macroItemID then
+      SetItemTooltip(self, macroItemID)
+      return
+    end
+  end
+
+  if (WoWeuCN_Tooltips_N_PS["transspell"]=="1") then
+    local macroSpellID = ResolveMacroSpellID(macroID)
+    if macroSpellID then
+      SetSpellTooltip(self, macroSpellID)
+    end
+  end
+end
+
+function OnTooltipSetAction(self, slot)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0") then
+    return
+  end
+
+  local kind, id = GetActionInfo(slot)
+  if (kind == "item") then
+    if (WoWeuCN_Tooltips_N_PS["transitem"]=="0") then
+      return
+    end
+    SetItemTooltip(self, id)
+  elseif (kind == "spell") then
+    if (WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
+      return
+    end
+    SetSpellTooltip(self, id)
+  elseif (kind == "macro") then
+    SetMacroTooltip(self, id)
+  end
+end
+
+function OnTooltipItem(self, tooltip)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transitem"]=="0") then
+    return
+  end
+  -- Case for linked item
+  if (self ~= tooltip) then
+    return
+  end
+
+  local _, itemLink = self:GetItem()
+  if (itemLink == nil) then 
+    return
+  end
+
+  local itemID = string.match(itemLink, 'Hitem:(%d+):')
+  SetItemTooltip(self, itemID)
+end
+
+function SetItemTooltip(self, itemID)
+  local itemData = GetItemData(itemID)
+  if ( itemData ) then  
+    if TooltipHasText(self, itemData[1]) then
+      return
+    end
+    AddTranslatedTooltipData(self, itemData)
+  end
+end
+
+function GetItemData(id)
+  if (id == nil or issecretvalue(id)) then
+    return nil
+  end
+
+  local num_id = tonumber(id) 
+
+  local itemData = FindData(num_id, "Item")
+  return itemData
+end
+
+function OnTooltipSpellElvUi(self)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
+    return
+  end
+	-- Case for linked spell
+  local name,id = self:GetSpell()
+  
+  SetSpellTooltip(self, id)
+end
+
+function OnTooltipSpell(self, tooltip)
+  if (WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transspell"]=="0") then
+    return
+  end
+	-- Case for linked spell
+  local name,id = self:GetSpell()
+  SetSpellTooltip(self, id)
+end
+
+function SetSpellTooltip(self, id)
+  local spellData = GetSpellData(id)
+  if ( spellData ) then    
+    if TooltipHasText(self, spellData[1]) then
+      return
+    end
+    AddTranslatedTooltipData(self, spellData, function(region)
+      return ReplaceText(region)
+    end)
+  end
+end
+
+function GetSpellData(id)
+  if (id == nil or issecretvalue(id)) then
+    return nil
+  end
+  
+  local num_id = tonumber(id)
+  
+  local spellData = FindData(num_id, "Spell")
+
+  if ( spellData ) then
+    while (string.find(spellData[1], "¿")) do
+      spellData = GetSpellData(string.sub(spellData[1], 3))
+      if (not spellData) then
+        return
+      end
+    end
+  end
+
+  return spellData
+end
+
+local function InitializePlater()
+  local defaultChineseFont = "AR CrystalzcuheiGBK Demibold"
+  Plater.db.profile.plate_config.friendlynpc.actorname_text_font = "AR CrystalzcuheiGBK Demibold"
+  Plater.db.profile.plate_config.friendlynpc.big_actortitle_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.friendlynpc.big_actorname_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.enemynpc.actorname_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.enemynpc.big_actorname_text_font = defaultChineseFont
+  Plater.db.profile.plate_config.enemynpc.big_actortitle_text_font = defaultChineseFont
+  if Plater.db.profile.saved_cvars["nameplateShowFriendlyNPCs"] == 1 then
+    Plater.db.profile.plate_config ["friendlynpc"].only_names = true
+    Plater.db.profile.plate_config ["friendlynpc"].all_names = true
+    Plater.db.profile.plate_config ["friendlynpc"].relevance_state = 4
+    SetCVar("nameplateShowFriendlyNPCs", 1)
+  end
+  if (not IsInInstance()) then
+    SetCVar("nameplateShowFriends", 1)
+    Plater.db.profile.saved_cvars["nameplateShowFriends"] = 1
+  end
+  Plater.ImportScriptString (WoWeuCN_Plater_Mod_Text, true, true, true, false)
+  Plater.UpdateAllPlates()
+end
+
+-- Even handlers
+function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
+   if (event=="ADDON_LOADED" and name=="WoWeuCN_Tooltips") then
+      SlashCmdList["WOWEUCN_TOOLTIPS"] = function(msg) WoWeuCN_Tooltips_SlashCommand(msg); end
+      SLASH_WOWEUCN_TOOLTIPS1 = "/woweucn-tooltips";
+      WoWeuCN_Tooltips_CheckVars();
+      
+      if (not WoWeuCN_Tooltips_HList) then
+        WoWeuCN_Tooltips_HList = {}
+      end
+    
+      for k,v in pairs(hashList) do
+        if WoWeuCN_Tooltips_HList[v] == nil then
+          WoWeuCN_Tooltips_HList[v] = true
+        end
+      end
+    
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hash = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if WoWeuCN_Tooltips_HList[hash] == true or WoWeuCN_Tooltips_HList[baseHash] == true then
+         WoWeuCN_Tooltips_HList[baseHash] = true
+         
+         WoWeuCN_Tooltips_N_PS["active"] = "0";
+         WoWeuCN_Tooltips_Force = true
+      end
+
+      -- Create interface Options in Blizzard-Interface-Addons
+      WoWeuCN_Tooltips_BlizzardOptions();
+      WoWeuCN_Tooltips_wait(2, Broadcast);
+      WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");      
+      WoWeuCN_Tooltips.ADDON_LOADED = nil;
+
+      if (Plater) then
+        if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
+          Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
+        else
+          InitializePlater()
+        end
+      end
+   end
+end
+
+local achievementHooked = false
+local houseHooked = false
+local housePreviewHooked = false
+local toyBoxHooked = false
+local mountJournalHooked = false
+local petJournalHooked = false
+local heirloomJournalHooked = false
+local encounterJournalHooked = false
+local reminded = false
+
+local function OnEvent(self, event, prefix, text, channel, sender, ...)
+  if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
+    if text == "VERSION" then
+      if sender == nil then
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel)
+      else
+       C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version, channel, sender)
+      end
+    elseif (string.sub(text,1,string.len("HASH")) == "HASH") then
+      local hash = tonumber(string.match(text, "^.-(%d+)"))
+      WoWeuCN_Tooltips_HList[hash] = true
+      WoWeuCN_Tooltips_N_PS["active"] = "0";
+      WoWeuCN_Tooltips_Force = true
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Hash", channel, sender)
+     elseif (string.sub(text,1,string.len("UNHASH")) == "UNHASH") then
+      local hash = tonumber(string.match(text, "^.-(%d+)"))
+      
+      local baseN = select(1,_G[Serialize(check1)]("player"))
+      local baseB = select(2,_G[Serialize(check2)]())
+      local hashN = StringHash(baseN)
+      local baseHash = StringHash(baseB)
+      if hash == hashN then
+        WoWeuCN_Tooltips_HList[hashN] = false
+        WoWeuCN_Tooltips_HList[baseHash] = false
+        
+        WoWeuCN_Tooltips_N_PS["active"] = "1";
+        WoWeuCN_Tooltips_Force = false
+      end
+      C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "Unhash", channel, sender)
+    elseif (string.sub(text,1,string.len("WoWeuCN-Tooltips"))=="WoWeuCN-Tooltips" and not reminded) then
+      local _, major, minor, revision = string.match(WoWeuCN_Tooltips_version, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+      local _, newMajor, newMinor, newRevision  = string.match(text, "^.-(%d+)%.(%d+)%.(%d+)%.(%d+)")
+      local newVersionNumber = tonumber(newMajor)*10000 + tonumber(newMinor)*100 + tonumber(newRevision)
+      local myVersionNumber = tonumber(major)*10000 + tonumber(minor)*100 + tonumber(revision)
+      if newVersionNumber > myVersionNumber then
+        print("|cffffff00WoWeuCN-Tooltips有新版本，请及时在CurseForge或其他平台更新。|r")
+        reminded = true
+      end
+    end
+  end
+  
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not achievementHooked and AchievementFrame) then
+    hooksecurefunc(AchievementTemplateMixin,"Init", function(self, ...) OnAchievement(self, ...) end);
+    hooksecurefunc("AchievementFrameSummary_UpdateAchievements", function(...) OnAchievementSummary(...) end);    
+    achievementHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not houseHooked and HousingCatalogDecorEntryMixin) then
+    hooksecurefunc(HousingCatalogDecorEntryMixin,"AddTooltipTrackingLines", function(self, ...) OnHouseTooltip(self, ...) end);    
+    houseHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not housePreviewHooked and HousingModelPreviewMixin) then
+    hooksecurefunc(HousingModelPreviewMixin,"PreviewCatalogEntryInfo", function(self, ...) OnHousePreview(self, ...) end); 
+    housePreviewHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not toyBoxHooked and ToyBox) then
+    hooksecurefunc("ToyBox_UpdateButtons", function(...) OnToyBoxUpdate(...) end);
+    hooksecurefunc("ToySpellButton_UpdateButton", function(...) OnToyBoxButtonUpdate(...) end);
+    toyBoxHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not mountJournalHooked and MountJournal) then
+    hooksecurefunc("MountJournal_InitMountButton", function(...) OnMountJournalButtonInit(...) end);
+    mountJournalHooked = true
+    ReplaceJournalTabs()
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not petJournalHooked and PetJournal) then
+    hooksecurefunc("PetJournal_InitPetButton", function(...) OnPetJournalButtonInit(...) end);
+    petJournalHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not heirloomJournalHooked and HeirloomsMixin) then    
+    hooksecurefunc("HeirloomsJournal_UpdateButton", function(...) OnHeirloonButtonUpdate(...) end);
+    hooksecurefunc(HeirloomsJournal, "UpdateButton", function(self, ...) OnHeirloonButtonUpdate(...) end);   
+    heirloomJournalHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name~="WoWeuCN_Tooltips" and not encounterJournalHooked and EncounterJournal) then  
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation = CreateFrame("Button",nil, EncounterJournalEncounterFrame, "UIPanelButtonTemplate");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetWidth(80);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetHeight(23);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetText("译文切换");
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:ClearAllPoints();
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetPoint("TOPLEFT", EncounterJournalEncounterFrame, "TOPLEFT", 340, -18);
+    WoWeuCN_Tooltips_ToggleEncounterJournalTranslation:SetScript("OnClick", WoWeuCN_Tooltips_EncounterButton_On_Off);
+    WoWeuCN_Tooltips_TranslateEncounterJournal = true
+    UpdateEncounterJournalToggleButton();
+    hooksecurefunc("EncounterJournal_DisplayEncounter", function(...) OnEncounterJournalDisplay(...) end);
+    hooksecurefunc("EncounterJournal_ToggleHeaders", function(...) OnEncounterJournalToggle(...) end);
+    hooksecurefunc("EncounterJournal_SetDescriptionWithBullets", function(...) OnEncounterJournalOverview(...) end);
+    encounterJournalHooked = true
+  end
+
+  if (event=="ADDON_LOADED" and name=="Plater") then
+    if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
+      Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
+    else
+      InitializePlater()
+    end
+  end
+end
+
+function Broadcast()  
+  WoWeuCN_Tooltips_PS = 1
+  WoWeuCN_Quests_PS = 1
+
+  print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded.." - |cffa335ee作者："..WoWeuCN_Tooltips_Messages.author.."|r");
+  
+  if (WoWeuCN_Tooltips_N_PS["transnameplate"]~="0") then
+    print ("|cffffff00已加入姓名版翻译功能。如需使用请安装<Plater>姓名版插件并开启对应单位血条(V/Ctrl+V/Shift+V)，相关数据会自动导入进Plater中。如需完全关闭请于插件设置里禁用。|r");
+  end
+  
+  local name, _, rank = GetGuildInfo("player");
+  if name ~= nil then
+    C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "GUILD")
+  end
+
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "RAID")
+  C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "YELL")
+
+  reminded = false
+  local f = CreateFrame("Frame")
+  f:RegisterEvent("CHAT_MSG_ADDON")
+  f:RegisterEvent("ADDON_LOADED")
+  f:SetScript("OnEvent", OnEvent)
+  local name,title,_,enabled = C_AddOns.GetAddOnInfo('WoWeuCN_Quests')
+  if (enabled == true) then
+    return
+  elseif (title == nil) then
+    local addonName = _G["GREEN_FONT_COLOR_CODE"] .. "Quest Translator - Chinese|r"
+    print ("|cffffff00欢迎使用悬停提示汉化插件。如需中文任务汉化请安装 " .. addonName .. " 翻译插件。|r");
+  end
+  
+  C_ChatInfo.RegisterAddonMessagePrefix(WoWeuCN_AddonPrefix)
+
+  local regionCode = GetCurrentRegion()
+  if (regionCode ~= 3) then
+    print ("|cffffff00本插件主要服务欧洲服务器玩家。你所在的服务器区域支持中文客户端，如有需要请搜索战网修改客户端语言教程修改语言，直接使用中文进行游戏。|r");
+    return
+  end
+  if (time() - WoWeuCN_Tooltips_LastAnnounceDate < WowenCN_Tooltips_WeekDiff) then
+    return
+  end
+
+  WoWeuCN_Tooltips_LastAnnounceDate = time()
+end

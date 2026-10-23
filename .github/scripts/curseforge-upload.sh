@@ -7,7 +7,7 @@ set -euo pipefail
 API_BASE="https://wow.curseforge.com/api"
 # WoWChinese is limited to these flavors; NativeLinks/*/NativeLinks is
 # matched wholesale so new flavors there are picked up automatically.
-WOWCHINESE_FLAVORS=(Anniversary Classic MoP Retail)
+WOWCHINESE_FLAVORS=(Anniversary Classic Forever MoP Retail)
 
 # Read a "## Field: value" entry from a .toc, tolerating UTF-8 BOM and CRLF
 toc_field() {

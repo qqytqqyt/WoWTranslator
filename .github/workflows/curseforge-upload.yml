@@ -6,6 +6,7 @@ on:
     paths:
       - 'WoWChinese/Anniversary/**'
       - 'WoWChinese/Classic/**'
+      - 'WoWChinese/Forever/**'
       - 'WoWChinese/MoP/**'
       - 'WoWChinese/Retail/**'
       - 'NativeLinks/*/NativeLinks/**'
@@ -15,7 +16,7 @@ on:
         description: 'Game flavor to upload'
         required: true
         type: choice
-        options: [Anniversary, Classic, MoP, Retail]
+        options: [Anniversary, Classic, Forever, MoP, Retail]
       addon:
         description: 'Addon to upload'
         required: true
