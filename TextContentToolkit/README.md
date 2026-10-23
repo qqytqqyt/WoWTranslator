@@ -19,7 +19,8 @@ is derived from where a file sits and what it is named.
    | Units         | `Data\units\<variant>\`       | scanner `*.lua`                              |
    | Achievements  | `Data\achievements\<variant>\`| scanner `*.lua`                              |
 
-   `<variant>` is `wow` (retail), `wow_classic` or `wow_classic_era`. New variant
+   `<variant>` is `wow` (retail), `wow_classic`, `wow_classic_era`, `wow_anniversary` or
+   `wow_forever` (WoW: Forever, seeded from the classic era outputs). New variant
    folders can simply be created and are picked up automatically.
 
    The file name does not matter - every `.lua`/`.wdb` file that is not an output and
@@ -62,9 +63,10 @@ matching variant folder — test branches land in their live folder:
 | WoW branch                          | Data variant folder |
 |-------------------------------------|---------------------|
 | `_retail_`, `_ptr_`, `_xptr_`, `_beta_` | `wow`           |
-| `_classic_`, `_classic_ptr_`, `_classic_beta_` | `wow_classic` |
+| `_classic_`, `_classic_ptr_`        | `wow_classic`       |
 | `_classic_era_`, `_classic_era_ptr_`   | `wow_classic_era` |
 | `_anniversary_`, `_anniversary_ptr_`   | `wow_anniversary` |
+| `_forever_`, `_classic_beta_` (the Forever beta) | `wow_forever` |
 
 Rules:
 - a file is only taken when it is **newer than the newest `*output*` file** of the
