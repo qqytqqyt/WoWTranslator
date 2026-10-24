@@ -139,6 +139,10 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_N_PS["nameonly"] ) then
      WoWeuCN_Tooltips_N_PS["nameonly"] = "0";
   end
+  -- Initiation - live numbers in spell and item translations
+  if (not WoWeuCN_Tooltips_N_PS["livenumbers"] ) then
+     WoWeuCN_Tooltips_N_PS["livenumbers"] = "1";
+  end
     -- Path version info
   if (not WoWeuCN_Tooltips_N_PS["patch"]) then
      WoWeuCN_Tooltips_N_PS["patch"] = GetBuildInfo();
@@ -216,6 +220,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton6.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transachievement"]=="1");
   WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
+  WoWeuCN_TooltipsCheckButton10.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["livenumbers"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -319,6 +324,14 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
+
+  local WoWeuCN_TooltipsCheckButton10 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton10", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton10:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -215);
+  WoWeuCN_TooltipsCheckButton10.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["livenumbers"]=="1")
+  WoWeuCN_TooltipsCheckButton10.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["livenumbers"]=="0") then WoWeuCN_Tooltips_N_PS["livenumbers"]="1" else WoWeuCN_Tooltips_N_PS["livenumbers"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton10.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton10:SetSize(850, 21)
+  WoWeuCN_TooltipsCheckButton10.Text:SetText(WoWeuCN_Tooltips_Interface.livenumbers);
 end
 
 local function translateTooltip(tooltip, data, kind)
@@ -621,7 +634,7 @@ local function IsMostlyWhite(style)
   return style.r and style.g and style.b and style.r > 0.9 and style.g > 0.9 and style.b > 0.9
 end
 
-local function AddTranslatedTooltipData(tooltip, translatedData, formatter)
+local function AddTranslatedTooltipData(tooltip, translatedData, formatter, kind)
   if (tooltip == nil or translatedData == nil or #translatedData == 0) then
     return
   end
@@ -661,13 +674,22 @@ local function AddTranslatedTooltipData(tooltip, translatedData, formatter)
     lineStyles[i] = style
   end
 
-  tooltip:AddLine(" ")
+  local displayData = {}
   for i = 1, translatedLines do
     local lineText = translatedData[i]
     if formatter then
       lineText = formatter(lineText, i)
     end
+    displayData[i] = lineText
+  end
+  -- spell and item lines get the numbers of the tooltip itself (LiveNumbers.lua)
+  if kind and WoWeuCN_Tooltips_LiveNumbers then
+    displayData = WoWeuCN_Tooltips_LiveNumbers(tooltip, displayData, kind)
+  end
 
+  tooltip:AddLine(" ")
+  for i = 1, translatedLines do
+    local lineText = displayData[i]
     if lineText and lineText ~= "" then
       tooltip:AddLine(lineText, 1, 1, 1, 1)
       local addedLineIndex = tooltip:NumLines()
@@ -928,7 +950,7 @@ function SetItemTooltip(self, itemID)
     if TooltipHasText(self, itemData[1]) then
       return
     end
-    AddTranslatedTooltipData(self, itemData)
+    AddTranslatedTooltipData(self, itemData, nil, "item")
   end
 end
 
@@ -970,7 +992,7 @@ function SetSpellTooltip(self, id)
     end
     AddTranslatedTooltipData(self, spellData, function(region)
       return ReplaceText(region)
-    end)
+    end, "spell")
   end
 end
 
