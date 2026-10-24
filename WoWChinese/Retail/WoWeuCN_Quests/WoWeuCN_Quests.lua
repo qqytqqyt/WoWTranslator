@@ -642,6 +642,30 @@ local function ReplaceUIText(textItem, text, maxFontSize)
    end
  end
 
+-- Swaps the English title inside a quest log button for the Chinese one and keeps what the client
+-- puts around it: the "[60] " level prefix (Retail with Show Quest Level or colorblind mode on,
+-- always "[60+] " on Forever), the "[2] " party member count and quest type markup. Falls back to
+-- replacing the whole text.
+local function TranslateQuestLogTitle(textItem, questID, title)
+   local current = textItem:GetText()
+   if (current == nil or title == nil or title == "" or (issecretvalue and issecretvalue(current))) then
+      return
+   end
+   if (string.find(current, title, 1, true)) then
+      return
+   end
+   local english = C_QuestLog.GetTitleForQuestID(questID)
+   local first, last = nil, nil
+   if (english and english ~= "") then
+      first, last = string.find(current, english, 1, true)
+   end
+   if (first) then
+      textItem:SetText(string.sub(current, 1, first - 1) .. title .. string.sub(current, last + 1))
+   else
+      ReplaceUIText(textItem, title, 20)
+   end
+end
+
 function OnQuestLogUpdate(poiTable)
    if (WoWeuCN_Quests_N_PS["transtitle"]~="1" or WoWeuCN_Quests_N_PS["active"]~="1" ) then
       return
@@ -659,7 +683,7 @@ function OnQuestLogUpdate(poiTable)
             local id = tostring(num_id)
             if (WoWeuCN_Quests_QuestData[id]) then
                local title = WoWeuCN_Quests_QuestData[id]["Title"]
-               ReplaceUIText(button.Text,title,20)
+               TranslateQuestLogTitle(button.Text, num_id, title)
             end
          end
       end

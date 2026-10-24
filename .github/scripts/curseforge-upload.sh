@@ -5,8 +5,10 @@
 set -euo pipefail
 
 API_BASE="https://wow.curseforge.com/api"
-# WoWChinese is limited to these flavors; NativeLinks/*/NativeLinks is
-# matched wholesale so new flavors there are picked up automatically.
+# WoWChinese flavors uploaded automatically on push; NativeLinks/*/NativeLinks
+# is matched wholesale so new flavors there are picked up automatically.
+# Forever is left out until WoW: Forever goes live (no updated data yet) -
+# a workflow_dispatch run with flavor Forever still uploads it on purpose.
 WOWCHINESE_FLAVORS=(Anniversary Classic MoP Retail)
 
 # Read a "## Field: value" entry from a .toc, tolerating UTF-8 BOM and CRLF

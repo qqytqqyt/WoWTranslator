@@ -22,6 +22,7 @@ WoWeuCN_Tooltips_Interface = {
     transachievement = "翻译成就面板",
     transadvanced = "高级翻译模式",
     transnameplate = "翻译血条姓名版（需安装Plater插件，/reload后生效）",
+    livenumbers = "法术/物品翻译同步显示当前数值（Live numbers）",
  }; 
 
  WoWeuCN_Tooltips_Font1 = "Interface\\AddOns\\WoWeuCN_Tooltips\\Fonts\\woweucn.ttf"; 

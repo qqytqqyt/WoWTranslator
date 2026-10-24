@@ -14,6 +14,7 @@
 | 经典旧世 Classic Era | 1.15.x |
 | 周年庆服 Anniversary (TBC) | 2.5.x |
 | 熊猫人之谜怀旧服 MoP Classic | 5.5.x |
+| WoW: Forever | 1.60.x |
 
 ### 特色
 
@@ -23,7 +24,7 @@
 - **不改动字体**：默认不替换任何字体，英文文本外观保持原样；中文由客户端自带的字体回退机制渲染。若中文显示为方块，可在设置中开启“全局替换界面字体”。
 - **完整选项**：ESC → 选项 → 插件 → WoWeuCN-Interface，或使用命令 `/wcni`（`on` / `off` / `rescan` / `status`）。
 
-### 有意保留英文的部分（正式服）
+### 有意保留英文的部分（正式服、WoW: Forever）
 
 战斗记录、浮动战斗文字、冷却管理器、伤害统计等界面在 12.x 中直接处理机密数值，为保证战斗功能绝不被阻断，这些界面刻意保持英文。
 
@@ -51,6 +52,7 @@
 | Classic Era | 1.15.x |
 | Anniversary (TBC) | 2.5.x |
 | MoP Classic | 5.5.x |
+| WoW: Forever | 1.60.x |
 
 ### Highlights
 
@@ -60,7 +62,7 @@
 - **Fonts untouched**: no fonts are replaced by default — English text keeps its original look, and Chinese renders through the client's built-in font fallback. An optional global font swap is available in the settings if your client shows squares instead of Chinese.
 - **Full options**: ESC → Options → AddOns → WoWeuCN-Interface, or `/wcni` (`on` / `off` / `rescan` / `status`).
 
-### Deliberately kept in English (Retail)
+### Deliberately kept in English (Retail, WoW: Forever)
 
 The combat log, floating combat text, cooldown manager and damage meter process secret combat values in 12.x; these surfaces intentionally stay English so combat functionality can never be blocked.
 
