@@ -3,10 +3,11 @@ name: Upload WoW addons to CurseForge
 on:
   push:
     branches: [master]
+    # WoWChinese/Forever is not uploaded automatically until WoW: Forever goes live (no updated
+    # data yet); use workflow_dispatch with flavor Forever for a deliberate upload.
     paths:
       - 'WoWChinese/Anniversary/**'
       - 'WoWChinese/Classic/**'
-      - 'WoWChinese/Forever/**'
       - 'WoWChinese/MoP/**'
       - 'WoWChinese/Retail/**'
       - 'NativeLinks/*/NativeLinks/**'
