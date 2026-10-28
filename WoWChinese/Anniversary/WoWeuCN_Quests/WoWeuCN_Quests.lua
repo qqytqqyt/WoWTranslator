@@ -3,6 +3,9 @@
 -- Credit to: Platine https://wowpopolsku.pl
 
 -- Local variables
+local _, DataStore = ...
+local QuestData = DataStore.R("Quest", { "Title", "Objectives", "Description", "Progress", "Completion", "Translator" })
+local ScriptData = DataStore.V("Script")
 local WoWeuCN_Quests_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_CtrFrame = CreateFrame("FRAME", "WoWEenCN-BubblesFrame");
@@ -693,8 +696,8 @@ local function OnNpcChat(self, event, arg1, arg2, arg3, arg4, arg5, ...)
       end
 
       local HashCode = StringHash(original_txt);
-      if (WoWeuCN_Quests_ScriptData[HashCode]) then        
-         newMessage = WoWeuCN_Quests_ScriptData[HashCode];
+      if (ScriptData[HashCode]) then        
+         newMessage = ScriptData[HashCode];
          if (arg5 ~= "") then                            
             newMessage = string.gsub(newMessage, "{name}", arg5);    
          end
@@ -759,14 +762,14 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
       WoWeuCN_Quests_ToggleButton2:Enable();
       curr_trans = "1";
       OnQuestLogUpdate()
-      if ( WoWeuCN_Quests_QuestData[str_ID] ) then   -- Display only when there is a translation
-         WoWeuCN_Quests_quest_LG.title = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Title"]);
+      if ( QuestData[str_ID] ) then   -- Display only when there is a translation
+         WoWeuCN_Quests_quest_LG.title = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Title"]);
          WoWeuCN_Quests_quest_EN.title = GetTitleText();
          if (WoWeuCN_Quests_quest_EN.title=="") then
             WoWeuCN_Quests_quest_EN.title=GetQuestLogTitle(GetQuestLogSelection());
          end
-         WoWeuCN_Quests_quest_LG.details = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Description"]);
-         WoWeuCN_Quests_quest_LG.objectives = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Objectives"]);
+         WoWeuCN_Quests_quest_LG.details = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Description"]);
+         WoWeuCN_Quests_quest_LG.objectives = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Objectives"]);
 --         WoWeuCN_Quests_quest_EN.details = QuestLogQuestDescription:GetText();
 --         WoWeuCN_Quests_quest_EN.objectives = QuestLogObjectivesText:GetText();
          if (questEvent=="QUEST_DETAIL") then
@@ -786,11 +789,11 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          end   
          if (questEvent=="QUEST_PROGRESS") then
             WoWeuCN_Quests_quest_EN.progress = GetProgressText();
-            WoWeuCN_Quests_quest_LG.progress = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Progress"]);
+            WoWeuCN_Quests_quest_LG.progress = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Progress"]);
          end
          if (questEvent=="QUEST_COMPLETE") then
             WoWeuCN_Quests_quest_EN.completion = GetRewardText();
-            WoWeuCN_Quests_quest_LG.completion = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Completion"]);
+            WoWeuCN_Quests_quest_LG.completion = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Completion"]);
             WoWeuCN_Quests_quest_EN.itemchoose = WoWeuCN_Quests_MessOrig.itemchoose2;
             WoWeuCN_Quests_quest_LG.itemchoose = WoWeuCN_Quests_Messages.itemchoose2;
             WoWeuCN_Quests_quest_EN.itemreceive = WoWeuCN_Quests_MessOrig.itemreceiv2;
@@ -850,7 +853,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
 --         if (isImmersion()) then
 --            WoWeuCN_Quests_ToggleButton4:Disable();
 --         end
-      if ( WoWeuCN_Quests_QuestData[str_ID] ) then	-- ...but there is a translation in the database
+      if ( QuestData[str_ID] ) then	-- ...but there is a translation in the database
          WoWeuCN_Quests_ToggleButton1:SetText(str_ID);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..str_ID);
       else
@@ -895,7 +898,7 @@ function WoWeuCN_Quests_Translate_On(typ)
       QuestLogItemReceiveText:SetText(WoWeuCN_Quests_Messages.itemreceiv1);
       numer_ID = WoWeuCN_Quests_quest_LG.id;
       str_ID = tostring(numer_ID);
-      if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore translated subtitle version
+      if (numer_ID>0 and QuestData[str_ID]) then	-- restore translated subtitle version
          if (WoWeuCN_Quests_N_PS["transtitle"]=="1") then
             QuestLogQuestTitle:SetFont(WoWeuCN_Quests_Font1, 18);
             QuestLogQuestTitle:SetText(WoWeuCN_Quests_quest_LG.title);
@@ -1008,7 +1011,7 @@ function WoWeuCN_Quests_Translate_Off(typ)
       QuestLogItemChooseText:SetText(WoWeuCN_Quests_MessOrig.itemchoose1);
       QuestLogItemReceiveText:SetText(WoWeuCN_Quests_MessOrig.itemreceiv1);
       numer_ID = WoWeuCN_Quests_quest_EN.id;
-      if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore original subtitle version
+      if (numer_ID>0 and QuestData[str_ID]) then	-- restore original subtitle version
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
          WoWeuCN_Quests_ToggleButton1:SetText(WoWeuCN_Quests_quest_EN.id);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
@@ -1187,8 +1190,8 @@ function OnQuestLogUpdate(...)
       local num_id = GetQuestIDFromLogIndex(questIndex)
       if num_id then
          local id = tostring(num_id)
-         if (WoWeuCN_Quests_QuestData[id]) then
-            local title = WoWeuCN_Quests_QuestData[id]["Title"]
+         if (QuestData[id]) then
+            local title = QuestData[id]["Title"]
             SetQuestLogTitle(title, questLogTitle, questNormalText, questTitleTag, questCheck)
          end
       end
@@ -1214,7 +1217,7 @@ local function WoWeuCN_Quests_GetWatchedTitleMap()
             questID = GetQuestIDFromLogIndex(questIndex);
          end
          if (title and questID) then
-            local data = WoWeuCN_Quests_QuestData[tostring(questID)];
+            local data = QuestData[tostring(questID)];
             if (data and data["Title"] and data["Title"]~="") then
                map[title] = WoWeuCN_Quests_ExpandUnitInfo(data["Title"]);
             end

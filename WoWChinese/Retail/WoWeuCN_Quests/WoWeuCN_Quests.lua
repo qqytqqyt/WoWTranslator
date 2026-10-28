@@ -3,6 +3,8 @@
 -- Credit to: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
 
 -- Local variables
+local _, DataStore = ...
+local QuestData = DataStore.R("Quest", { "Title", "Objectives", "Description", "Progress", "Completion", "Translator" })
 local WoWeuCN_Quests_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_onDebug = false;      
@@ -681,8 +683,8 @@ function OnQuestLogUpdate(poiTable)
          local num_id = button.questID
          if (num_id) then
             local id = tostring(num_id)
-            if (WoWeuCN_Quests_QuestData[id]) then
-               local title = WoWeuCN_Quests_QuestData[id]["Title"]
+            if (QuestData[id]) then
+               local title = QuestData[id]["Title"]
                TranslateQuestLogTitle(button.Text, num_id, title)
             end
          end
@@ -744,7 +746,7 @@ local function WoWeuCN_Quests_TranslateTrackerBlock(block)
    -- quest title (block header)
    local questID = block.id;
    if (type(questID)=="number" and block.HeaderText) then
-      local data = WoWeuCN_Quests_QuestData[tostring(questID)];
+      local data = QuestData[tostring(questID)];
       if (data and data["Title"] and data["Title"]~="") then
          local title = WoWeuCN_Quests_ExpandUnitInfo(data["Title"]);
          -- only the text is replaced; sizes, anchors and fonts stay whatever
@@ -1037,15 +1039,15 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
       WoWeuCN_Quests_ToggleButton1:Enable();
       WoWeuCN_Quests_ToggleButton2:Enable();
       curr_trans = "1";
-      if ( WoWeuCN_Quests_QuestData[str_ID] ) then   -- Display only when there is a translation
-         WoWeuCN_Quests_quest_LG.title = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Title"]);
+      if ( QuestData[str_ID] ) then   -- Display only when there is a translation
+         WoWeuCN_Quests_quest_LG.title = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Title"]);
          WoWeuCN_Quests_quest_EN.title = GetTitleText();
          if (WoWeuCN_Quests_quest_EN.title=="") then
             WoWeuCN_Quests_quest_EN.title = C_QuestLog.GetTitleForQuestID(str_ID); 
          end
 
-         WoWeuCN_Quests_quest_LG.details = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Description"]);
-         WoWeuCN_Quests_quest_LG.objectives = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Objectives"]);
+         WoWeuCN_Quests_quest_LG.details = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Description"]);
+         WoWeuCN_Quests_quest_LG.objectives = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Objectives"]);
          if (questEvent=="QUEST_DETAIL") then
             WoWeuCN_Quests_quest_EN.details = GetQuestText();
             WoWeuCN_Quests_quest_EN.objectives = GetObjectiveText();
@@ -1069,7 +1071,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          end   
          if (questEvent=="QUEST_PROGRESS") then
             WoWeuCN_Quests_quest_EN.progress = GetProgressText();
-            WoWeuCN_Quests_quest_LG.progress = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Progress"]);
+            WoWeuCN_Quests_quest_LG.progress = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Progress"]);
             --if (strlen(WoWeuCN_Quests_quest_EN.progress)>0 and strlen(WoWeuCN_Quests_quest_LG.progress)==0) then
             --   WoWeuCN_Quests_MISSING[WoWeuCN_Quests_quest_EN.id.." PROGRESS"]=WoWeuCN_Quests_quest_EN.progress;     -- save missing translation part
             --end
@@ -1079,7 +1081,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
          end
          if (questEvent=="QUEST_COMPLETE") then
             WoWeuCN_Quests_quest_EN.completion = GetRewardText();
-            WoWeuCN_Quests_quest_LG.completion = WoWeuCN_Quests_ExpandUnitInfo(WoWeuCN_Quests_QuestData[str_ID]["Completion"]);
+            WoWeuCN_Quests_quest_LG.completion = WoWeuCN_Quests_ExpandUnitInfo(QuestData[str_ID]["Completion"]);
             WoWeuCN_Quests_quest_EN.itemchoose = WoWeuCN_Quests_MessOrig.itemchoose2;
             WoWeuCN_Quests_quest_LG.itemchoose = WoWeuCN_Quests_Messages.itemchoose2;
             WoWeuCN_Quests_quest_EN.itemreceive = WoWeuCN_Quests_MessOrig.itemreceiv2;
@@ -1129,7 +1131,7 @@ function WoWeuCN_Quests_QuestPrepare(questEvent)
       WoWeuCN_Quests_ToggleButton0:Disable();
       WoWeuCN_Quests_ToggleButton1:Disable();
       WoWeuCN_Quests_ToggleButton2:Disable();
-      if ( WoWeuCN_Quests_QuestData[str_ID] ) then	-- ...but there is a translation in the database
+      if ( QuestData[str_ID] ) then	-- ...but there is a translation in the database
          WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..str_ID);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..str_ID);
       else
@@ -1173,7 +1175,7 @@ function WoWeuCN_Quests_Translate_On(typ)
       QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_Messages.itemreceiv1);
       numer_ID = WoWeuCN_Quests_quest_LG.id;
       str_ID = tostring(numer_ID);
-      if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore translated subtitle version
+      if (numer_ID>0 and QuestData[str_ID]) then	-- restore translated subtitle version
          if (WoWeuCN_Quests_N_PS["transtitle"]=="1") then
             QuestInfoTitleHeader:SetText(WoWeuCN_Quests_quest_LG.title);
             QuestProgressTitleText:SetText(WoWeuCN_Quests_quest_LG.title);
@@ -1251,7 +1253,7 @@ function WoWeuCN_Quests_Translate_Off(typ)
       QuestInfoRewardsFrame.ItemChooseText:SetText(WoWeuCN_Quests_MessOrig.itemchoose1);
       QuestInfoRewardsFrame.ItemReceiveText:SetText(WoWeuCN_Quests_MessOrig.itemreceiv1);
       numer_ID = WoWeuCN_Quests_quest_EN.id;
-      if (numer_ID>0 and WoWeuCN_Quests_QuestData[str_ID]) then	-- restore original subtitle version
+      if (numer_ID>0 and QuestData[str_ID]) then	-- restore original subtitle version
          WoWeuCN_Quests_ToggleButton0:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
          WoWeuCN_Quests_ToggleButton1:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
          WoWeuCN_Quests_ToggleButton2:SetText("Quest ID="..WoWeuCN_Quests_quest_EN.id);
