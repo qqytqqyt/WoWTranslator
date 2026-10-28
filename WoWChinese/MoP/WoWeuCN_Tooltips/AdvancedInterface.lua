@@ -1,3 +1,7 @@
+local _, DataStore = ...
+local EncounterData = DataStore.R("Encounter", { "Title", "Description" })
+local EncounterSectionData = DataStore.R("EncounterSection", { "Title", "Description" })
+
 function RemoveColourCode(s)
   if (s == nil) then
     return nil
@@ -418,7 +422,7 @@ function UpdateEncounterJournalHeaders()
       local sectionID = infoHeader.myID
       local difficultyID = EJ_GetDifficulty()
       if WoWeuCN_Tooltips_TranslateEncounterJournal then
-        local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+        local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
         if (sectionTranslation) then
           infoHeader.button.title:SetText(sectionTranslation["Title"])
           infoHeader.description:SetText(sectionTranslation["Description"])
@@ -439,7 +443,7 @@ function OnEncounterJournalDisplay(encounterID, noButton)
     return
   end
 
-  local encounterTranslation = WoWeuCN_Tooltips_EncounterData[encounterID]  
+  local encounterTranslation = EncounterData[encounterID]  
   if (encounterTranslation) then    
 	  local self = EncounterJournal.encounter;
     self.info.encounterTitle:SetText(encounterTranslation["Title"]);

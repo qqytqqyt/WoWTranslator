@@ -1,3 +1,7 @@
+local _, DataStore = ...
+local EncounterData = DataStore.R("Encounter", { "Title", "Description" })
+local EncounterSectionData = DataStore.R("EncounterSection", { "Title", "Description" })
+
 function RemoveColourCode(s)
   if (s == nil) then
     return nil
@@ -283,7 +287,7 @@ function UpdateEncounterJournalHeaders()
       local sectionID = infoHeader.myID
       local difficultyID = EJ_GetDifficulty()
       if WoWeuCN_Tooltips_TranslateEncounterJournal then
-        local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+        local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
         if (sectionTranslation) then
           infoHeader.button.title:SetText(sectionTranslation["Title"])
           infoHeader.description:SetText(sectionTranslation["Description"])
@@ -306,7 +310,7 @@ function UpdateOverviews()
   if not overviewSectionID then
     return
   end
-  local overviewSectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. overviewSectionID]
+  local overviewSectionTranslation = EncounterSectionData[difficultyID .. 'x' .. overviewSectionID]
   
   if (WoWeuCN_Tooltips_TranslateEncounterJournal and overviewSectionTranslation) then
     self.overviewDescription.Text:SetText(overviewSectionTranslation["Description"]);
@@ -321,7 +325,7 @@ function UpdateOverviews()
     if (infoHeader and infoHeader.description) then      
       local sectionID = infoHeader.sectionID
       if WoWeuCN_Tooltips_TranslateEncounterJournal then
-        local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+        local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
         if (sectionTranslation) then
           infoHeader.button.title:SetText(sectionTranslation["Title"])
           EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionTranslation["Description"], not infoHeader.expanded);
@@ -343,14 +347,14 @@ function OnEncounterJournalDisplay(encounterID, noButton)
     return
   end
 
-  local encounterTranslation = WoWeuCN_Tooltips_EncounterData[encounterID]  
+  local encounterTranslation = EncounterData[encounterID]  
   if (encounterTranslation) then    
     local self = EncounterJournal.encounter;
     self.info.encounterTitle:SetText(encounterTranslation["Title"]);
     self.overviewFrame.loreDescription:SetText(encounterTranslation["Description"]);    
     local difficultyID = EJ_GetDifficulty()
     local sectionID = self.overviewFrame.rootOverviewSectionID
-    local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+    local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
     
     if (sectionTranslation) then
       self.overviewFrame.overviewDescription.Text:SetText(sectionTranslation["Description"]);
@@ -386,7 +390,7 @@ function OnEncounterJournalOverview(infoHeader, description)
   local sectionID = infoHeader.sectionID
   local difficultyID = EJ_GetDifficulty()
   if WoWeuCN_Tooltips_TranslateEncounterJournal then
-    local sectionTranslation = WoWeuCN_Tooltips_EncounterSectionData[difficultyID .. 'x' .. sectionID]
+    local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
     if (sectionTranslation) then
       infoHeader.button.title:SetText(sectionTranslation["Title"])
       EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionTranslation["Description"], not infoHeader.expanded);
