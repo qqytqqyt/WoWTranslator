@@ -1,6 +1,8 @@
 ﻿-- Addon: WoWeuCN-Tooltips
 -- Author: qqytqqyt
 
+local _, DataStore = ...
+
 -- Local variables
 local WoWeuCN_Tooltips_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Tooltips", "Version");
 local WoWeuCN_Tooltips_onDebug = false;   
@@ -149,31 +151,6 @@ function WoWeuCN_Tooltips_CheckVars()
   end
 end
 
--- load data
-local function loadData(typeName)
-  for i=0,1500000,100000 do
-    local name = "load" .. typeName .. "Data".. i
-    if _G[name] ~= nil then
-      _G[name]();
-    end
-  end
-end
-
-local function loadAllItemData()
-  loadData("Item");
-end
-
-local function loadAllSpellData()  
-  loadData("Spell");
-end
-
-local function loadAllUnitData()
-  loadData("Unit");
-end
-
-local function loadAllAchievementData()
-  loadData("Achievement");
-end
 
 -- commands
 function WoWeuCN_Tooltips_SlashCommand(msg)
@@ -457,14 +434,6 @@ function WoWeuCN_Tooltips_OnLoad()
    
    RegisterChatFilterEvents()
 
-   loadAllSpellData()
-   loadAllItemData()
-   loadAllUnitData()
-   loadAllAchievementData()
-   -- Forever does not load the encounter journal, so it ships no encounter data
-   if loadEncounterData then
-      loadEncounterData()
-   end
 end
 
 function split(s, delimiter)
@@ -518,33 +487,13 @@ function ReplaceText(s)
   return s
 end
 
-local function FindData(num_id, name)  
-  local dataIndex = nil
-  local offset = 0
-  local offset_id = num_id - offset
-  while (offset_id > 100000) do
-    offset = offset + 100000
-    offset_id = num_id - offset
-  end
-
-  local indexDbName = "WoWeuCN_Tooltips_" .. name .. "IndexData_" .. tostring(offset)
-  local dbData = _G[indexDbName]
-  if dbData then
-    dataIndex = dbData[offset_id]
-  end
-
-  if (dataIndex == nil) then
+local function FindData(num_id, name)
+  local data = DataStore.G(name, num_id)
+  if (data == nil) then
     return nil
   end
 
-  local data = nil
-  local dataDbName = "WoWeuCN_Tooltips_" .. name .. "Data_" .. tostring(offset)
-  local dbData = _G[dataDbName]
-  if dbData then
-    data = split(dbData[dataIndex], '£')
-  end
-
-  return data
+  return split(data, '£')
 end
 
 function GetFirstLineColorCode(...)

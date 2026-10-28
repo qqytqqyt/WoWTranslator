@@ -1,6 +1,6 @@
 ﻿## Interface: 16001
 ## Title: WoWeuCN-Tooltips
-## Version: Forever 1.60.1.1
+## Version: Forever 1.60.1.2
 ## Notes_en: AddOn displays the translated information in Chinese.
 ## Category: Translation
 ## Author: qqytqqyt
@@ -11,6 +11,7 @@
 ## SavedVariablesPerCharacter: WoWeuCN_Tooltips_LastAnnounceDate
 ## IconTexture: Interface\AddOns\WoWeuCN_Tooltips\icon.tga
 
+DataStore.lua
 TooltipsData_cn.lua
 ItemData_cn.lua
 SpellData_cn.lua
