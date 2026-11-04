@@ -1,5 +1,5 @@
-WoWeuCN_Interface_base = "1.60.1.70532";   -- version
-WoWeuCN_Interface_date = "2026-10-23"; -- date of creation base
+WoWeuCN_Interface_base = "1.60.1.70790";   -- version
+WoWeuCN_Interface_date = "2026-11-04"; -- date of creation base
 
 WoWeuCN_Interface_lang = "CN";      -- language
 
@@ -7,7 +7,7 @@ WoWeuCN_Interface_Messages = {
     loaded     = "加载完成",
     isactive   = "已启用",
     isinactive = "未启用",
-    author     = "Silvermoon (EU) - Voidguji",
+    author     = "PVE (EU) - Vibe Coding",
  };
 
 WoWeuCN_Interface_Options = {

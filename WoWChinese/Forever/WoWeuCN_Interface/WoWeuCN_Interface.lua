@@ -561,12 +561,25 @@ local function WoWeuCN_Interface_IsNameRegion(fontString)
   return false;
 end
 
+local function WoWeuCN_Interface_IsHotKeyRegion(fontString)
+  local fsName = fontString.GetName and fontString:GetName();
+  if (fsName and (string.find(fsName, "HotKey%d*$") or string.find(fsName, "Hotkey%d*$"))) then
+    return true;
+  end
+  local parent = fontString:GetParent();
+  if (parent and (parent.HotKey == fontString or parent.Hotkey == fontString
+      or parent.hotKey == fontString or parent.hotkey == fontString)) then
+    return true;
+  end
+  return false;
+end
+
 local function WoWeuCN_Interface_TranslateFontString(fontString)
   local text = fontString:GetText();
   if (issecretvalue and issecretvalue(text)) then
     return 0;
   end
-  if (type(text) ~= "string" or text == "") then
+  if (type(text) ~= "string" or string.len(text) < 2) then
     return 0;
   end
   local translated = WoWeuCN_Interface_ResolveContext(fontString, text);
@@ -585,7 +598,8 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
   if (translated == nil) then
     return 0;
   end
-  if (WoWeuCN_Interface_IsTitleRegion(fontString) or WoWeuCN_Interface_IsNameRegion(fontString)) then
+  if (WoWeuCN_Interface_IsTitleRegion(fontString) or WoWeuCN_Interface_IsNameRegion(fontString)
+      or WoWeuCN_Interface_IsHotKeyRegion(fontString)) then
     return 0;
   end
 
