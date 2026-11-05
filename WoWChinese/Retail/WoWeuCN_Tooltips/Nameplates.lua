@@ -5,8 +5,10 @@
 --
 -- Taint: Blizzard's nameplate code never reads the name's text (only its shown state, and the click area is
 -- anchored to its rectangle), so only the text is written - never Show/Hide or anchors. The
--- CompactUnitFrame_UpdateName post-hook only flags the unit frame; the name is rewritten afterwards from the
--- addon's own OnUpdate, outside Blizzard's update chain, before the frame is drawn.
+-- CompactUnitFrame_UpdateName post-hook flags the unit frame and the name is rewritten from the addon's own
+-- OnUpdate, outside Blizzard's update chain. The one write inside the hook is putting back the Chinese text of
+-- a name already translated (see RestoreKnownName) - nothing in Blizzard's chain reads the name's text or size
+-- after UpdateName.
 
 -- nameplate UnitFrame -> { text = Chinese set, english = name it replaced, font = { object, file, size, flags } }
 local states = setmetatable({}, { __mode = "k" })
@@ -139,13 +141,40 @@ function WoWeuCN_Tooltips_RefreshNameplates()
   refreshAll = true
 end
 
+-- Blizzard rewrote the English name the frame already had (UPDATE_MOUSEOVER_UNIT on every plate at each hover
+-- change, target changes): put the Chinese name back straight away. The event comes after this tick's OnUpdate,
+-- so waiting for the deferred pass would draw the English name for a frame. Only the text set earlier for the
+-- same English name goes back here; a new unit or font is left to the deferred pass.
+local function RestoreKnownName(frame, state)
+  local name = frame.name
+  if not state.text or not state.english or not WoWeuCN_Tooltips_N_PS or not IsUsable(frame) or not name
+      or not IsNamePlateUnit(frame.unit) or IsPlaterLoaded() then
+    return
+  end
+  local current = name:GetText()
+  if not IsReadable(current) or current ~= state.english then
+    return
+  end
+  if WoWeuCN_Tooltips_UseAddonFont and WoWeuCN_Tooltips_UseAddonFont() and name:GetFont() ~= WoWeuCN_Tooltips_Font1 then
+    return
+  end
+  name:SetText(state.text)
+end
+
 local function HookUpdateName()
   if nameHooked or not CompactUnitFrame_UpdateName then
     return
   end
   hooksecurefunc("CompactUnitFrame_UpdateName", function(frame)
-    -- runs inside Blizzard's update: only flag the frame (raid frames are skipped)
-    if frame and (states[frame] or IsNamePlateUnit(frame.unit)) then
+    -- raid frames are skipped; the deferred pass still checks the unit (pooled frames, renames, options)
+    if not frame then
+      return
+    end
+    local state = states[frame]
+    if state then
+      RestoreKnownName(frame, state)
+      dirty[frame] = true
+    elseif IsNamePlateUnit(frame.unit) then
       dirty[frame] = true
     end
   end)
