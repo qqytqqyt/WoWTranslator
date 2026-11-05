@@ -14,8 +14,13 @@ local dirty = {}  -- nameplate UnitFrame -> true, updated on the next OnUpdate
 local refreshAll = false
 local nameHooked = false
 
+-- UnitGUID and the name text are secret while unit identity is restricted; a secret must go through
+-- issecretvalue before anything else (comparing or testing it errors in addon code)
 local function IsReadable(value)
-  return value ~= nil and not (issecretvalue and issecretvalue(value))
+  if issecretvalue and issecretvalue(value) then
+    return false
+  end
+  return value ~= nil
 end
 
 local function IsPlaterLoaded()
@@ -26,7 +31,7 @@ local function IsPlaterLoaded()
 end
 
 local function IsNamePlateUnit(unit)
-  return type(unit) == "string" and IsReadable(unit) and string.find(unit, "^nameplate") ~= nil
+  return IsReadable(unit) and type(unit) == "string" and string.find(unit, "^nameplate") ~= nil
 end
 
 local function IsUsable(frame)
