@@ -21,8 +21,9 @@ WoWeuCN_Tooltips_Interface = {
     transachievement = "翻译成就面板",
     transadvanced = "高级翻译模式（拾取/商人/法术书/地下城手册界面等）",
     transplaternameplate = "翻译姓名版（需安装Plater插件，/reload后完全生效）",
-    overwritefonts = "使用内置字体（/reload后完全生效）"
- }; 
+    overwritefonts = "始终使用插件内置字体（客户端缺少中文字体时会自动使用，/reload后完全生效）",
+    fontmissing = "（当前客户端缺少中文字体，已自动使用内置字体）",
+ };
 
  WoWeuCN_Tooltips_Font1 = "Interface\\AddOns\\WoWeuCN_Tooltips\\Fonts\\woweucn.ttf"; 
  WoWeuCN_Tooltips_Font2 = "Interface\\AddOns\\WoWeuCN_Tooltips\\Fonts\\woweucn.ttf"; 

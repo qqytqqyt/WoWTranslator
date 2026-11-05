@@ -17,7 +17,7 @@ function ReplaceUIText(textItem, text, maxFontSize)
     return
   end
 
-  if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then    
+  if (not WoWeuCN_Tooltips_UseAddonFont()) then
     textItem:SetText(RemoveColourCode(ReplaceText(text)))
     return
   end
@@ -424,6 +424,8 @@ function UpdateEncounterJournalHeaders()
       if WoWeuCN_Tooltips_TranslateEncounterJournal then
         local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
         if (sectionTranslation) then
+          WoWeuCN_Tooltips_ApplyAddonFont(infoHeader.button.title)
+          WoWeuCN_Tooltips_ApplyAddonFont(infoHeader.description)
           infoHeader.button.title:SetText(sectionTranslation["Title"])
           infoHeader.description:SetText(sectionTranslation["Description"])
           EncounterJournal_ShiftHeaders(index)
@@ -446,6 +448,9 @@ function OnEncounterJournalDisplay(encounterID, noButton)
   local encounterTranslation = EncounterData[encounterID]  
   if (encounterTranslation) then    
 	  local self = EncounterJournal.encounter;
+    WoWeuCN_Tooltips_ApplyAddonFont(self.info.encounterTitle)
+    WoWeuCN_Tooltips_ApplyAddonFont(self.overviewFrame.loreDescription)
+    WoWeuCN_Tooltips_ApplyAddonFont(self.infoFrame.description)
     self.info.encounterTitle:SetText(encounterTranslation["Title"]);
     self.overviewFrame.loreDescription:SetText(encounterTranslation["Description"]);
     self.infoFrame.description:SetText(encounterTranslation["Description"]);
