@@ -145,6 +145,10 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_N_PS["livenumbers"] ) then
      WoWeuCN_Tooltips_N_PS["livenumbers"] = "1";
   end
+  -- Initiation - always use the addon font (it is used anyway when the client lacks the Chinese font)
+  if (not WoWeuCN_Tooltips_N_PS["overwritefonts"] ) then
+     WoWeuCN_Tooltips_N_PS["overwritefonts"] = "0";
+  end
     -- Path version info
   if (not WoWeuCN_Tooltips_N_PS["patch"]) then
      WoWeuCN_Tooltips_N_PS["patch"] = GetBuildInfo();
@@ -198,6 +202,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
   WoWeuCN_TooltipsCheckButton10.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["livenumbers"]=="1");
+  WoWeuCN_TooltipsCheckButton11.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["overwritefonts"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -309,6 +314,18 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton10.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton10:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton10.Text:SetText(WoWeuCN_Tooltips_Interface.livenumbers);
+
+  local WoWeuCN_TooltipsCheckButton11 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton11", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton11:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -245);
+  WoWeuCN_TooltipsCheckButton11.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["overwritefonts"]=="1")
+  WoWeuCN_TooltipsCheckButton11.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton11.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton11:SetSize(850, 21)
+  local fontLabel = WoWeuCN_Tooltips_Interface.overwritefonts
+  if WoWeuCN_Tooltips_IsClientChineseFontMissing() then
+    fontLabel = fontLabel .. "|cffffd100" .. WoWeuCN_Tooltips_Interface.fontmissing .. "|r"
+  end
+  WoWeuCN_TooltipsCheckButton11.Text:SetText(fontLabel);
 end
 
 local function translateTooltip(tooltip, data, kind)
@@ -656,6 +673,7 @@ local function AddTranslatedTooltipData(tooltip, translatedData, formatter, kind
       local addedLineIndex = tooltip:NumLines()
       local style = lineStyles[i] or lineStyles[1]
       ApplyTooltipLineStyle(tooltip, addedLineIndex, style, i == 1)
+      WoWeuCN_Tooltips_ApplyTooltipLineFont(tooltip, addedLineIndex)
     end
   end
   tooltip:Show()
@@ -671,13 +689,16 @@ function OnAchievement(self, elementData)
       local achievementData = GetAchievementData(id)
       if ( achievementData ) then
         local title = achievementData[1]
+        WoWeuCN_Tooltips_ApplyAddonFont(self.Label)
         self.Label:SetText(title);
         local description = achievementData[2]
         if ( description ) then
           if (self.Description) then
+            WoWeuCN_Tooltips_ApplyAddonFont(self.Description)
             self.Description:SetText(description);
           end
           if (self.HiddenDescription) then
+            WoWeuCN_Tooltips_ApplyAddonFont(self.HiddenDescription)
             self.HiddenDescription:SetText(description);
           end
         end
@@ -698,9 +719,11 @@ function OnAchievementSummary(...)
       local achievementData = GetAchievementData(id)
       if ( achievementData ) then
         local title = achievementData[1]
+        WoWeuCN_Tooltips_ApplyAddonFont(button.Label)
         button.Label:SetText(title);
         local description = achievementData[2]
         if ( description and button.Description ) then
+          WoWeuCN_Tooltips_ApplyAddonFont(button.Description)
           button.Description:SetText(description);
         end
       end
@@ -980,7 +1003,11 @@ end
 
 local function InitializePlater()
   local defaultChineseFont = "AR CrystalzcuheiGBK Demibold"
-  Plater.db.profile.plate_config.friendlynpc.actorname_text_font = "AR CrystalzcuheiGBK Demibold"
+  if WoWeuCN_Tooltips_UseAddonFont() then
+    -- that font is Fonts\ARHei.ttf, absent on clients never installed in Chinese
+    defaultChineseFont = WoWeuCN_Tooltips_Font1
+  end
+  Plater.db.profile.plate_config.friendlynpc.actorname_text_font = defaultChineseFont
   Plater.db.profile.plate_config.friendlynpc.big_actortitle_text_font = defaultChineseFont
   Plater.db.profile.plate_config.friendlynpc.big_actorname_text_font = defaultChineseFont
   Plater.db.profile.plate_config.enemynpc.actorname_text_font = defaultChineseFont
