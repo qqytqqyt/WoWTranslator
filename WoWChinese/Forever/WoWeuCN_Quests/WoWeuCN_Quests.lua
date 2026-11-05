@@ -411,7 +411,7 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_QuestsOptionsHeader:ClearAllPoints();
   WoWeuCN_QuestsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2025");
+  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2026");
   WoWeuCN_QuestsOptionsHeader:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsPlayer = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
