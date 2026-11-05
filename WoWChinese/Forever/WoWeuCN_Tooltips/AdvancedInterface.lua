@@ -292,6 +292,8 @@ function UpdateEncounterJournalHeaders()
       if WoWeuCN_Tooltips_TranslateEncounterJournal then
         local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
         if (sectionTranslation) then
+          WoWeuCN_Tooltips_ApplyAddonFont(infoHeader.button.title)
+          WoWeuCN_Tooltips_ApplyAddonFont(infoHeader.description)
           infoHeader.button.title:SetText(sectionTranslation["Title"])
           infoHeader.description:SetText(sectionTranslation["Description"])
           EncounterJournal_ShiftHeaders(index)
@@ -316,6 +318,7 @@ function UpdateOverviews()
   local overviewSectionTranslation = EncounterSectionData[difficultyID .. 'x' .. overviewSectionID]
   
   if (WoWeuCN_Tooltips_TranslateEncounterJournal and overviewSectionTranslation) then
+    WoWeuCN_Tooltips_ApplyAddonFont(self.overviewDescription.Text)
     self.overviewDescription.Text:SetText(overviewSectionTranslation["Description"]);
     self.overviewDescription.descriptionHeight = self.overviewDescription:GetHeight();
   else
@@ -330,6 +333,7 @@ function UpdateOverviews()
       if WoWeuCN_Tooltips_TranslateEncounterJournal then
         local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
         if (sectionTranslation) then
+          WoWeuCN_Tooltips_ApplyAddonFont(infoHeader.button.title)
           infoHeader.button.title:SetText(sectionTranslation["Title"])
           EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionTranslation["Description"], not infoHeader.expanded);
           EncounterJournal_ShiftHeaders(index)
@@ -353,13 +357,17 @@ function OnEncounterJournalDisplay(encounterID, noButton)
   local encounterTranslation = EncounterData[encounterID]  
   if (encounterTranslation) then    
     local self = EncounterJournal.encounter;
+    WoWeuCN_Tooltips_ApplyAddonFont(self.info.encounterTitle)
+    WoWeuCN_Tooltips_ApplyAddonFont(self.overviewFrame.loreDescription)
+    WoWeuCN_Tooltips_ApplyAddonFont(self.infoFrame.description)
     self.info.encounterTitle:SetText(encounterTranslation["Title"]);
-    self.overviewFrame.loreDescription:SetText(encounterTranslation["Description"]);    
+    self.overviewFrame.loreDescription:SetText(encounterTranslation["Description"]);
     local difficultyID = EJ_GetDifficulty()
     local sectionID = self.overviewFrame.rootOverviewSectionID
     local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
     
     if (sectionTranslation) then
+      WoWeuCN_Tooltips_ApplyAddonFont(self.overviewFrame.overviewDescription.Text)
       self.overviewFrame.overviewDescription.Text:SetText(sectionTranslation["Description"]);
       self.overviewFrame.overviewDescription.descriptionHeight = self.overviewFrame.overviewDescription:GetHeight();
     end
@@ -395,6 +403,7 @@ function OnEncounterJournalOverview(infoHeader, description)
   if WoWeuCN_Tooltips_TranslateEncounterJournal then
     local sectionTranslation = EncounterSectionData[difficultyID .. 'x' .. sectionID]
     if (sectionTranslation) then
+      WoWeuCN_Tooltips_ApplyAddonFont(infoHeader.button.title)
       infoHeader.button.title:SetText(sectionTranslation["Title"])
       EncounterJournal_SetBullets(infoHeader.overviewDescription, sectionTranslation["Description"], not infoHeader.expanded);
     end
@@ -426,6 +435,7 @@ function OnHouseTooltip(self, GameTooltip)
       if ( itemData ) then  
         local region = itemData[1]
         GameTooltip:AddLine(region, 1, 1, 1, 1)
+        WoWeuCN_Tooltips_ApplyTooltipLineFont(GameTooltip, GameTooltip:NumLines())
         GameTooltip:Show()
       end
     end
@@ -443,7 +453,8 @@ function OnHousePreview(self, catalogEntryInfo)
     if (itemID ~= nil) then
       GameTooltip:AddLine(" ")
       local itemData = GetItemData(itemID)
-      if ( itemData ) then  
+      if ( itemData ) then
+        WoWeuCN_Tooltips_ApplyAddonFont(self.NameContainer.Name)
         self.NameContainer.Name:SetText(itemData[1]);
       end
     end
