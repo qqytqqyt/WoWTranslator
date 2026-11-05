@@ -457,3 +457,101 @@ function OnHousePreview(self, catalogEntryInfo)
     end
   end
 end
+
+-- Profession window (mainline ProfessionsFrame): names that come from item and spell ids.
+-- Category headers, recipe names and the "Requires:" line are database names: WoWeuCN_Interface does those.
+local function ProfessionsOff()
+  return WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0"
+end
+
+local function ReplaceColouredText(fontString, english, chinese)
+  local text = fontString:GetText()
+  if not text or not english or english == "" then
+    return false
+  end
+  local open, inner, close = string.match(text, "^(|c%x%x%x%x%x%x%x%x)(.-)(|r)$")
+  local plain = inner or text
+  if string.sub(plain, -string.len(english)) ~= english then
+    return false
+  end
+  plain = string.sub(plain, 1, string.len(plain) - string.len(english)) .. chinese
+  WoWeuCN_Tooltips_ApplyAddonFont(fontString)
+  fontString:SetText(open and (open .. plain .. close) or plain)
+  return true
+end
+
+function OnProfessionsOutputItem(form)
+  if ProfessionsOff() or not form.transaction or not form.OutputText:IsShown() or form.isRecraft then
+    return
+  end
+  local recipeID = form.transaction:GetRecipeID()
+  local ok, outputInfo = pcall(C_TradeSkillUI.GetRecipeOutputItemData, recipeID)
+  local itemID = ok and outputInfo and outputInfo.itemID
+  local itemData = itemID and GetItemData(itemID)
+  local english = itemID and C_Item.GetItemNameByID(itemID)
+  if not itemData or not english then
+    return
+  end
+  local fontString = form.OutputText
+  if ReplaceColouredText(fontString, english, RemoveColourCode(ReplaceText(itemData[1]))) then
+    -- same fitting as Blizzard's SetTextToFit, the Chinese name has a different width
+    local minimized = ProfessionsUtil and ProfessionsUtil.IsCraftingMinimized()
+    fontString:SetWidth(minimized and 250 or 800)
+    if not minimized then
+      fontString:SetWidth(fontString:GetStringWidth())
+    end
+    fontString:SetHeight(fontString:GetStringHeight())
+  end
+end
+
+function OnProfessionsRecipeDescription(form)
+  if ProfessionsOff() or not form.currentRecipeInfo or not form.Description:IsShown() then
+    return
+  end
+  local current = form.Description:GetText()
+  if not current or current == "" then
+    return
+  end
+  local spellData = GetSpellData(form.currentRecipeInfo.recipeID)
+  if not spellData then
+    return
+  end
+  -- the scanned spell tooltip: line 1 is the name, the description is the first gold line before the
+  -- crafted item's own block (which starts on a new line and carries its own gold flavour text)
+  for i = 2, #spellData do
+    if string.find(RemoveColourCode(ReplaceText(spellData[i])), "^\n") then
+      return
+    end
+    if string.sub(spellData[i], 1, 2) == "Å" then
+      WoWeuCN_Tooltips_ApplyAddonFont(form.Description)
+      form.Description:SetText(RemoveColourCode(ReplaceText(spellData[i])))
+      form.Description:SetHeight(600)
+      form.Description:SetHeight(form.Description:GetStringHeight() + 1)
+      return
+    end
+  end
+end
+
+function OnProfessionsReagentSlotUpdate(slot)
+  if ProfessionsOff() or not slot.Name:IsShown() or not slot.nameText then
+    return
+  end
+  local schematic = slot:GetReagentSlotSchematic()
+  local candidates = {}
+  local current = slot:GetReagent()
+  if current then
+    candidates[#candidates + 1] = current
+  end
+  if schematic and schematic.reagents then
+    for _, reagent in ipairs(schematic.reagents) do
+      candidates[#candidates + 1] = reagent
+    end
+  end
+  for _, reagent in ipairs(candidates) do
+    local itemData = reagent.itemID and GetItemData(reagent.itemID)
+    local english = reagent.itemID and C_Item.GetItemNameByID(reagent.itemID)
+    if itemData and english and ReplaceColouredText(slot.Name, english, RemoveColourCode(ReplaceText(itemData[1]))) then
+      return
+    end
+  end
+end
