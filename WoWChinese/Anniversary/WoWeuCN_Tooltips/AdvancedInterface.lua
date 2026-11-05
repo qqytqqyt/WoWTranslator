@@ -17,7 +17,7 @@ function ReplaceUIText(textItem, text, maxFontSize)
     return
   end
 
-  if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then    
+  if (not WoWeuCN_Tooltips_UseAddonFont()) then
     textItem:SetText(RemoveColourCode(ReplaceText(text)))
     return
   end

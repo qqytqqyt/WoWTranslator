@@ -184,7 +184,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2025");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2026");
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
   WoWeuCN_TooltipsPlayer:SetFontObject(GameFontNormalLarge);
@@ -259,10 +259,15 @@ function WoWeuCN_Tooltips_BlizzardOptions()
 
   local WoWeuCN_TooltipsCheckButton9 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton9", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton9:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -185);
-  WoWeuCN_TooltipsCheckButton9.Checkbox:SetChecked("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["overwritefonts"]=="1")
+  WoWeuCN_TooltipsCheckButton9.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
   WoWeuCN_TooltipsCheckButton9.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton9:SetSize(850, 21)
-  WoWeuCN_TooltipsCheckButton9.Text:SetText(WoWeuCN_Tooltips_Interface.overwritefonts);
+  local fontLabel = WoWeuCN_Tooltips_Interface.overwritefonts
+  if WoWeuCN_Tooltips_IsClientChineseFontMissing() then
+    fontLabel = fontLabel .. "|cffffd100" .. WoWeuCN_Tooltips_Interface.fontmissing .. "|r"
+  end
+  WoWeuCN_TooltipsCheckButton9.Text:SetText(fontLabel);
 end
 
 local function StringHash(text)        
@@ -502,6 +507,7 @@ function OnTooltipUnit(self, tooltip)
       else
         self:AddLine(text, 1, 1, 1, 1)
       end
+      WoWeuCN_Tooltips_ApplyTooltipLineFont(self, self:NumLines())
     end
   end
 end
@@ -549,6 +555,7 @@ function OnTooltipItem(self, tooltip)
     for i = 1, #itemData do
       local region = itemData[i]
       self:AddLine(region, 1, 1, 1, 1)
+      WoWeuCN_Tooltips_ApplyTooltipLineFont(self, self:NumLines())
     end
   end
 end
@@ -629,6 +636,7 @@ function SetSpellTooltip(self, id)
       local region = spellData[i]
       region = ReplaceText(region)
       self:AddLine(region, 1, 1, 1, 1)
+      WoWeuCN_Tooltips_ApplyTooltipLineFont(self, self:NumLines())
     end
     self:Show()
   end
