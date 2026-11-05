@@ -1,5 +1,5 @@
 WoWeuCN_Interface_base = "1.60.1.70790";   -- version
-WoWeuCN_Interface_date = "2026-11-04"; -- date of creation base
+WoWeuCN_Interface_date = "2026-11-05"; -- date of creation base
 
 WoWeuCN_Interface_lang = "CN";      -- language
 

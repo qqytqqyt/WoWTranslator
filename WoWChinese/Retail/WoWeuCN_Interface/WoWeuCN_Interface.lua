@@ -747,13 +747,251 @@ local function WoWeuCN_Interface_BuildSubClassText()
   return map;
 end
 
+local function WoWeuCN_Interface_BuildMapText()
+  local map = {};
+  local function add(text, zh)
+    if (type(text) == "string" and text ~= "" and type(zh) == "string" and zh ~= "" and map[text] == nil) then
+      map[text] = zh;
+    end
+  end
+  local maps = WoWeuCN_Interface_UiMaps;
+  if (type(C_Map.GetMapInfo) == "function") then
+    for i = 1, #maps do
+      local ok, info = pcall(C_Map.GetMapInfo, maps[i][1]);
+      if (ok and type(info) == "table") then
+        add(info.name, maps[i][2]);
+      end
+    end
+  end
+  local areas = WoWeuCN_Interface_Areas;
+  if (type(areas) == "table" and type(C_Map.GetAreaInfo) == "function") then
+    for i = 1, #areas do
+      local ok, name = pcall(C_Map.GetAreaInfo, areas[i][1]);
+      if (ok) then
+        add(name, areas[i][2]);
+      end
+    end
+  end
+  local sorts = WoWeuCN_Interface_QuestSorts;
+  if (type(sorts) == "table") then
+    for i = 1, #sorts do
+      add(sorts[i][1], sorts[i][2]);
+    end
+  end
+  return map;
+end
+
+local WoWeuCN_Interface_SpellNames = nil;
+
+local function WoWeuCN_Interface_GetSpellNameMap()
+  if (WoWeuCN_Interface_SpellNames) then
+    return WoWeuCN_Interface_SpellNames;
+  end
+  local map = {};
+  local getSpellName = (C_Spell and C_Spell.GetSpellName) or GetSpellInfo;
+  local spells = WoWeuCN_Interface_SkillSpells;
+  if (type(getSpellName) == "function" and type(spells) == "table") then
+    for i = 1, #spells do
+      local ok, name = pcall(getSpellName, spells[i][1]);
+      if (ok and type(name) == "string" and name ~= "" and map[name] == nil
+          and not (issecretvalue and issecretvalue(name))) then
+        map[name] = spells[i][2];
+      end
+    end
+  end
+  WoWeuCN_Interface_SpellNames = map;
+  return map;
+end
+
+local WoWeuCN_Interface_StaticProfessionText = nil;
+
+local function WoWeuCN_Interface_BuildStaticProfessionText()
+  local map = {};
+  local function add(text, zh)
+    if (type(text) == "string" and text ~= "" and type(zh) == "string" and zh ~= "" and map[text] == nil) then
+      map[text] = zh;
+    end
+  end
+  for text, zh in pairs(WoWeuCN_Interface_GetSpellNameMap()) do
+    add(text, zh);
+  end
+  local displayName = C_TradeSkillUI.GetTradeSkillDisplayName;
+  local lines = WoWeuCN_Interface_SkillLines;
+  if (type(displayName) == "function" and type(lines) == "table") then
+    for id, entry in pairs(lines) do
+      local ok, name = pcall(displayName, id);
+      if (ok) then
+        add(name, entry[1]);
+      end
+    end
+  end
+  local byText = { WoWeuCN_Interface_TotemCategories, WoWeuCN_Interface_SpellFocusObjects };
+  for i = 1, #byText do
+    local rows = byText[i];
+    if (type(rows) == "table") then
+      for j = 1, #rows do
+        add(rows[j][1], rows[j][2]);
+      end
+    end
+  end
+  return map;
+end
+
+local function WoWeuCN_Interface_BuildProfessionText()
+  if (not WoWeuCN_Interface_StaticProfessionText) then
+    WoWeuCN_Interface_StaticProfessionText = WoWeuCN_Interface_BuildStaticProfessionText();
+  end
+  local map = {};
+  local categories = WoWeuCN_Interface_TradeSkillCategories;
+  if (type(C_TradeSkillUI.GetCategoryInfo) == "function") then
+    for i = 1, #categories do
+      local ok, info = pcall(C_TradeSkillUI.GetCategoryInfo, categories[i][1]);
+      if (ok and type(info) == "table" and type(info.name) == "string" and info.name ~= ""
+          and map[info.name] == nil) then
+        map[info.name] = categories[i][2];
+      end
+    end
+  end
+  for text, zh in pairs(WoWeuCN_Interface_StaticProfessionText) do
+    if (map[text] == nil) then
+      map[text] = zh;
+    end
+  end
+  return map;
+end
+
+local function WoWeuCN_Interface_BuildSpellBookText()
+  local map = {};
+  for text, zh in pairs(WoWeuCN_Interface_GetSpellNameMap()) do
+    map[text] = zh;
+  end
+  local lines = WoWeuCN_Interface_SpellBookSkillLines;
+  if (type(lines) == "table") then
+    for i = 1, #lines do
+      if (map[lines[i][1]] == nil) then
+        map[lines[i][1]] = lines[i][2];
+      end
+    end
+  end
+  return map;
+end
+
+local function WoWeuCN_Interface_TranslateNameList(map, list)
+  local parts = {};
+  local start = 1;
+  while (true) do
+    local sepStart, sepEnd = string.find(list, ", ", start, true);
+    local item = string.sub(list, start, (sepStart or 0) - 1);
+    local open, inner, close = string.match(item, "^(|c%x%x%x%x%x%x%x%x)(.-)(|r)$");
+    local zh = map[inner or item];
+    if (type(zh) ~= "string") then
+      return nil;
+    end
+    parts[#parts + 1] = open and (open .. zh .. close) or zh;
+    if (not sepStart) then
+      break;
+    end
+    start = sepEnd + 1;
+  end
+  return table.concat(parts, "，");
+end
+
+local function WoWeuCN_Interface_ComposeProfessionText(map, text)
+  local en = rawget(_G, "PROFESSIONS_REQUIRED_TOOLS");
+  local zh = type(en) == "string" and WoWeuCN_Interface_Reverse[en];
+  if (type(en) ~= "string" or type(zh) ~= "string") then
+    return nil;
+  end
+  local prefix = string.match(en, "^(.-)%%s$");
+  local zhPrefix = string.match(zh, "^(.-)%%s$");
+  if (not prefix or not zhPrefix or prefix == "" or string.sub(text, 1, string.len(prefix)) ~= prefix) then
+    return nil;
+  end
+  local list = WoWeuCN_Interface_TranslateNameList(map, string.sub(text, string.len(prefix) + 1));
+  return list and (zhPrefix .. list);
+end
+
 local WoWeuCN_Interface_DbContexts = {
-  { root = "SkillsFrame", data = "SkillLines", api = "C_SkillInfo", build = WoWeuCN_Interface_BuildSkillText,
+  { roots = { "SkillsFrame" }, data = "SkillLines", api = "C_SkillInfo", build = WoWeuCN_Interface_BuildSkillText,
     event = "SKILL_LINES_CHANGED" },
-  { root = "ReputationFrame", data = "Factions", api = "C_Reputation", build = WoWeuCN_Interface_BuildFactionText,
+  { roots = { "ReputationFrame" }, data = "Factions", api = "C_Reputation", build = WoWeuCN_Interface_BuildFactionText,
     event = "UPDATE_FACTION" },
-  { root = "AuctionHouseFrame", data = "ItemSubClasses", build = WoWeuCN_Interface_BuildSubClassText },
+  { roots = { "AuctionHouseFrame" }, data = "ItemSubClasses", build = WoWeuCN_Interface_BuildSubClassText },
+  { roots = { "WorldMapFrame", "QuestMapFrame", "BattlefieldMapFrame", "MinimapCluster", "ZoneTextFrame",
+      "SubZoneTextFrame" }, data = "UiMaps", api = "C_Map", build = WoWeuCN_Interface_BuildMapText },
+  { roots = { "ProfessionsFrame" }, data = "SkillSpells", api = "C_TradeSkillUI",
+    build = WoWeuCN_Interface_BuildProfessionText, event = "TRADE_SKILL_LIST_UPDATE",
+    compose = WoWeuCN_Interface_ComposeProfessionText, names = true },
+  { roots = { "PlayerSpellsFrame" }, data = "SkillSpells", api = "C_Spell",
+    build = WoWeuCN_Interface_BuildSpellBookText, names = true },
 };
+
+local function WoWeuCN_Interface_DbMapGet(map, text, context)
+  local value = map[text];
+  if (value ~= nil) then
+    return value;
+  end
+  local open, inner, close = string.match(text, "^(|c%x%x%x%x%x%x%x%x)(.-)(|r)$");
+  if (inner and type(map[inner]) == "string") then
+    return open .. map[inner] .. close;
+  end
+  if (context and context.compose) then
+    local composed = context.compose(map, text);
+    if (composed) then
+      return composed;
+    end
+  end
+  local core, suffix = string.match(text, "^(.-)(|c%x%x%x%x%x%x%x%x%s*%(.*)$");
+  if (core and core ~= "") then
+    local zh = map[core];
+    if (zh) then
+      return zh .. suffix;
+    end
+  end
+  return nil;
+end
+
+local function WoWeuCN_Interface_DbContextRoot(context)
+  for i = 1, #context.roots do
+    local root = _G[context.roots[i]];
+    if (root) then
+      return root;
+    end
+  end
+  return nil;
+end
+
+local function WoWeuCN_Interface_DbContextVisible(context)
+  for i = 1, #context.roots do
+    local root = _G[context.roots[i]];
+    if (root and root.IsVisible and root:IsVisible()) then
+      return true;
+    end
+  end
+  return false;
+end
+
+local function WoWeuCN_Interface_IsUnderDbRoot(fontString, context)
+  local parent = fontString:GetParent();
+  local depth = 0;
+  while (parent and depth < 20) do
+    for i = 1, #context.roots do
+      if (parent == _G[context.roots[i]]) then
+        return true;
+      end
+    end
+    local nextParent = parent:GetParent();
+    if (type(parent.GetOwnerRegion) == "function") then
+      local ok, owner = pcall(parent.GetOwnerRegion, parent);
+      if (ok and owner) then
+        nextParent = owner;
+      end
+    end
+    parent = nextParent;
+    depth = depth + 1;
+  end
+  return false;
+end
 
 function WoWeuCN_Interface_MarkDbTextDirty(event)
   for i = 1, #WoWeuCN_Interface_DbContexts do
@@ -783,11 +1021,10 @@ local function WoWeuCN_Interface_DbContextMap(context)
       or (context.api and type(_G[context.api]) ~= "table")) then
     return nil;
   end
-  local root = _G[context.root];
-  if (not root) then
+  if (not WoWeuCN_Interface_DbContextRoot(context)) then
     return nil;
   end
-  if (not context.map or (context.dirty and root.IsVisible and root:IsVisible())) then
+  if (not context.map or (context.dirty and WoWeuCN_Interface_DbContextVisible(context))) then
     local ok, map = pcall(context.build);
     if (not ok or type(map) ~= "table") then
       context.disabled = true;
@@ -801,8 +1038,9 @@ end
 
 local function WoWeuCN_Interface_DbTextKnown(text)
   for i = 1, #WoWeuCN_Interface_DbContexts do
-    local map = WoWeuCN_Interface_DbContextMap(WoWeuCN_Interface_DbContexts[i]);
-    if (map and map[text] ~= nil) then
+    local context = WoWeuCN_Interface_DbContexts[i];
+    local map = WoWeuCN_Interface_DbContextMap(context);
+    if (map and WoWeuCN_Interface_DbMapGet(map, text, context) ~= nil) then
       return true;
     end
   end
@@ -813,18 +1051,9 @@ local function WoWeuCN_Interface_ResolveDbText(fontString, text)
   for i = 1, #WoWeuCN_Interface_DbContexts do
     local context = WoWeuCN_Interface_DbContexts[i];
     local map = WoWeuCN_Interface_DbContextMap(context);
-    local value = map and map[text];
-    if (value ~= nil) then
-      local root = _G[context.root];
-      local parent = fontString:GetParent();
-      local depth = 0;
-      while (parent and depth < 20) do
-        if (parent == root) then
-          return value;
-        end
-        parent = parent:GetParent();
-        depth = depth + 1;
-      end
+    local value = map and WoWeuCN_Interface_DbMapGet(map, text, context);
+    if (value ~= nil and WoWeuCN_Interface_IsUnderDbRoot(fontString, context)) then
+      return value, context.names;
     end
   end
   return nil;
@@ -916,12 +1145,14 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
     return 0;
   end
   local translated = WoWeuCN_Interface_ResolveContext(fontString, text);
+  local isDbName = false;
   if (translated == nil) then
-    local dbText = WoWeuCN_Interface_ResolveDbText(fontString, text);
+    local dbText, names = WoWeuCN_Interface_ResolveDbText(fontString, text);
     if (dbText == false) then
       return 0;
     end
     translated = dbText;
+    isDbName = (dbText ~= nil and names == true);
   end
   if (translated == nil) then
     translated = WoWeuCN_Interface_CachedTranslate(text);
@@ -929,8 +1160,8 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
   if (translated == nil) then
     return 0;
   end
-  if (WoWeuCN_Interface_IsTitleRegion(fontString) or WoWeuCN_Interface_IsNameRegion(fontString)
-      or WoWeuCN_Interface_IsHotKeyRegion(fontString)) then
+  if (WoWeuCN_Interface_IsTitleRegion(fontString) or WoWeuCN_Interface_IsHotKeyRegion(fontString)
+      or (not isDbName and WoWeuCN_Interface_IsNameRegion(fontString))) then
     return 0;
   end
 
@@ -1654,7 +1885,7 @@ function WoWeuCN_Interface_OnEvent(self, event, arg1, arg2, arg3, arg4)
 
       WoWeuCN_Interface_ApplyFonts();
     end
-  elseif (event == "SKILL_LINES_CHANGED" or event == "UPDATE_FACTION") then
+  elseif (event == "SKILL_LINES_CHANGED" or event == "UPDATE_FACTION" or event == "TRADE_SKILL_LIST_UPDATE") then
     WoWeuCN_Interface_MarkDbTextDirty(event);
   elseif (event == "CHAT_MSG_ADDON") then
     WoWeuCN_Interface_OnAddonMessage(arg1, arg2, arg3, arg4);
