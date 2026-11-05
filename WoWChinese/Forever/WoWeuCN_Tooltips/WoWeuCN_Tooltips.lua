@@ -218,7 +218,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2025");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2026");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -586,6 +586,12 @@ local function IsMostlyWhite(style)
   return style.r and style.g and style.b and style.r > 0.9 and style.g > 0.9 and style.b > 0.9
 end
 
+-- The Forever item data keeps the zhCN sell price line ("卖价: 1|A:coin-copper:...|a"), stored white
+local SELL_PRICE_STYLE = { r = 1, g = 1, b = 1, a = 1 }
+local function IsSellPriceLine(text)
+  return text ~= nil and text:sub(1, 6) == "卖价"
+end
+
 local function AddTranslatedTooltipData(tooltip, translatedData, formatter, kind)
   if (tooltip == nil or translatedData == nil or #translatedData == 0) then
     return
@@ -620,7 +626,10 @@ local function AddTranslatedTooltipData(tooltip, translatedData, formatter, kind
       sourceLineIndex = originalLineCount
     end
     local style = GetTooltipLineStyle(tooltip, sourceLineIndex)
-    if i > 1 and firstColoredDescriptionStyle and (not style or IsMostlyWhite(style)) then
+    if i > 1 and IsSellPriceLine(translatedData[i]) then
+      -- the client draws the sell price white; borrowing a positional colour paints it like the line above
+      style = SELL_PRICE_STYLE
+    elseif i > 1 and firstColoredDescriptionStyle and (not style or IsMostlyWhite(style)) then
       style = firstColoredDescriptionStyle
     end
     lineStyles[i] = style
