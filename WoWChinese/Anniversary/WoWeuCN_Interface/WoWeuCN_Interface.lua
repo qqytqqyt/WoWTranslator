@@ -364,6 +364,29 @@ function WoWeuCN_Interface_TranslateText(text)
       or WoWeuCN_Interface_TryDecoratedTranslate(text);
 end
 
+local WoWeuCN_Interface_TextCache = {};
+local WoWeuCN_Interface_TextCacheCount = 0;
+local WoWeuCN_Interface_TextCacheLimit = 20000;
+
+function WoWeuCN_Interface_ClearTextCache()
+  WoWeuCN_Interface_TextCache = {};
+  WoWeuCN_Interface_TextCacheCount = 0;
+end
+
+function WoWeuCN_Interface_CachedTranslate(text)
+  local cached = WoWeuCN_Interface_TextCache[text];
+  if (cached ~= nil) then
+    return cached or nil;
+  end
+  local translated = WoWeuCN_Interface_TranslateText(text);
+  if (WoWeuCN_Interface_TextCacheCount >= WoWeuCN_Interface_TextCacheLimit) then
+    WoWeuCN_Interface_ClearTextCache();
+  end
+  WoWeuCN_Interface_TextCache[text] = translated or false;
+  WoWeuCN_Interface_TextCacheCount = WoWeuCN_Interface_TextCacheCount + 1;
+  return translated;
+end
+
 local function WoWeuCN_Interface_ExpandPlurals(s)
   local variants = { s };
   while true do
@@ -478,6 +501,7 @@ function WoWeuCN_Interface_BuildReverseMap()
     return 0;
   end
   WoWeuCN_Interface_PatternBuckets = {};
+  WoWeuCN_Interface_ClearTextCache();
   local chosenKey = {};
   local count = 0;
   for key, translated in pairs(WoWeuCN_Interface_GS) do
@@ -635,6 +659,177 @@ local function WoWeuCN_Interface_ResolveContext(fontString, text)
   return nil;
 end
 
+local function WoWeuCN_Interface_AddDbText(map, text, zh, id)
+  if (type(text) ~= "string" or text == "") then
+    return;
+  end
+  if (type(zh) == "string" and zh ~= "") then
+    map[text] = zh;
+  elseif (map[text] == nil and type(id) == "number" and id > 0) then
+    map[text] = false;
+  end
+end
+
+local function WoWeuCN_Interface_BuildSkillText()
+  local map = {};
+  local lines = WoWeuCN_Interface_SkillLines;
+  local categories = WoWeuCN_Interface_SkillCategories or {};
+  local count = C_SkillInfo.GetNumSkillLines() or 0;
+  for i = 1, count do
+    local ok, info = pcall(C_SkillInfo.GetSkillLineInfo, i);
+    if (ok and type(info) == "table") then
+      if (info.isHeader and not info.isChild) then
+        WoWeuCN_Interface_AddDbText(map, info.name, categories[info.skillID], info.skillID);
+      else
+        local entry = lines[info.skillID] or {};
+        WoWeuCN_Interface_AddDbText(map, info.name, entry[1], info.skillID);
+        WoWeuCN_Interface_AddDbText(map, info.description, entry[2], info.skillID);
+      end
+    end
+  end
+  return map;
+end
+
+local function WoWeuCN_Interface_BuildFactionText()
+  local map = {};
+  local factions = WoWeuCN_Interface_Factions;
+  local count = C_Reputation.GetNumFactions() or 0;
+  for i = 1, count do
+    local ok, data = pcall(C_Reputation.GetFactionDataByIndex, i);
+    if (ok and type(data) == "table") then
+      local entry = factions[data.factionID] or {};
+      WoWeuCN_Interface_AddDbText(map, data.name, entry[1], data.factionID);
+      WoWeuCN_Interface_AddDbText(map, data.description, entry[2], data.factionID);
+    end
+  end
+  return map;
+end
+
+local WoWeuCN_Interface_AuctionCategoryKeys = {
+  "AUCTION_CATEGORY_ARMOR", "AUCTION_CATEGORY_BATTLE_PETS", "AUCTION_CATEGORY_CONSUMABLES",
+  "AUCTION_CATEGORY_CONTAINERS", "AUCTION_CATEGORY_GEMS", "AUCTION_CATEGORY_GLYPHS",
+  "AUCTION_CATEGORY_HOUSING", "AUCTION_CATEGORY_ITEM_ENHANCEMENT", "AUCTION_CATEGORY_MISCELLANEOUS",
+  "AUCTION_CATEGORY_PROFESSION_EQUIPMENT", "AUCTION_CATEGORY_PROJECTILE", "AUCTION_CATEGORY_QUEST_ITEMS",
+  "AUCTION_CATEGORY_RECIPES", "AUCTION_CATEGORY_TRADE_GOODS", "AUCTION_CATEGORY_WEAPONS",
+  "TOKEN_FILTER_LABEL",
+};
+
+local function WoWeuCN_Interface_BuildSubClassText()
+  local map = {};
+  local blocked = {};
+  for i = 1, #WoWeuCN_Interface_AuctionCategoryKeys do
+    local value = rawget(_G, WoWeuCN_Interface_AuctionCategoryKeys[i]);
+    if (type(value) == "string") then
+      blocked[value] = true;
+    end
+  end
+  local getInfo = (C_Item and C_Item.GetItemSubClassInfo) or GetItemSubClassInfo;
+  local rows = WoWeuCN_Interface_ItemSubClasses;
+  for i = 1, #rows do
+    local row = rows[i];
+    local ok, text = pcall(getInfo, row[1], row[2]);
+    if (ok and type(text) == "string" and text ~= "" and not blocked[text]) then
+      local zh;
+      if (text == row[3]) then
+        zh = row[5];
+      elseif (text == row[4]) then
+        zh = row[6];
+      elseif (row[6] ~= "") then
+        zh = row[6];
+      else
+        zh = row[5];
+      end
+      if (map[text] == nil or map[text] == false) then
+        WoWeuCN_Interface_AddDbText(map, text, zh, 1);
+      end
+    end
+  end
+  return map;
+end
+
+local WoWeuCN_Interface_DbContexts = {
+  { root = "SkillsFrame", data = "SkillLines", api = "C_SkillInfo", build = WoWeuCN_Interface_BuildSkillText,
+    event = "SKILL_LINES_CHANGED" },
+  { root = "ReputationFrame", data = "Factions", api = "C_Reputation", build = WoWeuCN_Interface_BuildFactionText,
+    event = "UPDATE_FACTION" },
+  { root = "AuctionHouseFrame", data = "ItemSubClasses", build = WoWeuCN_Interface_BuildSubClassText },
+};
+
+function WoWeuCN_Interface_MarkDbTextDirty(event)
+  for i = 1, #WoWeuCN_Interface_DbContexts do
+    local context = WoWeuCN_Interface_DbContexts[i];
+    if (event == nil or context.event == event) then
+      context.dirty = true;
+    end
+  end
+end
+
+function WoWeuCN_Interface_GetDbTextEvents()
+  local events = {};
+  for i = 1, #WoWeuCN_Interface_DbContexts do
+    local context = WoWeuCN_Interface_DbContexts[i];
+    if (context.event and type(_G["WoWeuCN_Interface_" .. context.data]) == "table") then
+      events[#events + 1] = context.event;
+    end
+  end
+  return events;
+end
+
+local function WoWeuCN_Interface_DbContextMap(context)
+  if (context.disabled) then
+    return nil;
+  end
+  if (type(_G["WoWeuCN_Interface_" .. context.data]) ~= "table"
+      or (context.api and type(_G[context.api]) ~= "table")) then
+    return nil;
+  end
+  local root = _G[context.root];
+  if (not root) then
+    return nil;
+  end
+  if (not context.map or (context.dirty and root.IsVisible and root:IsVisible())) then
+    local ok, map = pcall(context.build);
+    if (not ok or type(map) ~= "table") then
+      context.disabled = true;
+      return nil;
+    end
+    context.map = map;
+    context.dirty = false;
+  end
+  return context.map;
+end
+
+local function WoWeuCN_Interface_DbTextKnown(text)
+  for i = 1, #WoWeuCN_Interface_DbContexts do
+    local map = WoWeuCN_Interface_DbContextMap(WoWeuCN_Interface_DbContexts[i]);
+    if (map and map[text] ~= nil) then
+      return true;
+    end
+  end
+  return false;
+end
+
+local function WoWeuCN_Interface_ResolveDbText(fontString, text)
+  for i = 1, #WoWeuCN_Interface_DbContexts do
+    local context = WoWeuCN_Interface_DbContexts[i];
+    local map = WoWeuCN_Interface_DbContextMap(context);
+    local value = map and map[text];
+    if (value ~= nil) then
+      local root = _G[context.root];
+      local parent = fontString:GetParent();
+      local depth = 0;
+      while (parent and depth < 20) do
+        if (parent == root) then
+          return value;
+        end
+        parent = parent:GetParent();
+        depth = depth + 1;
+      end
+    end
+  end
+  return nil;
+end
+
 local function WoWeuCN_Interface_IsTitleRegion(fontString)
   local paperDoll = _G["PaperDollFrame"];
   local titlePane = paperDoll and paperDoll.TitleManagerPane;
@@ -722,7 +917,14 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
   end
   local translated = WoWeuCN_Interface_ResolveContext(fontString, text);
   if (translated == nil) then
-    translated = WoWeuCN_Interface_TranslateText(text);
+    local dbText = WoWeuCN_Interface_ResolveDbText(fontString, text);
+    if (dbText == false) then
+      return 0;
+    end
+    translated = dbText;
+  end
+  if (translated == nil) then
+    translated = WoWeuCN_Interface_CachedTranslate(text);
   end
   if (translated == nil) then
     return 0;
@@ -985,30 +1187,72 @@ local function WoWeuCN_Interface_PeriodicPass()
 end
 
 local WoWeuCN_Interface_LiveQueue = {};
+local WoWeuCN_Interface_LiveQueued = {};
+local WoWeuCN_Interface_LiveQueueHead = 1;
 local WoWeuCN_Interface_LiveQueueCount = 0;
+local WoWeuCN_Interface_LiveQueueMax = 5000;
+local WoWeuCN_Interface_LiveBudgetMs = 6;
+
+local function WoWeuCN_Interface_IsLiveCandidate(text)
+  if (issecretvalue and issecretvalue(text)) then
+    return false;
+  end
+  return type(text) == "string" and string.len(text) >= 2 and string.find(text, "[^%s%p%d%c]") ~= nil;
+end
+
+local function WoWeuCN_Interface_EnqueueLive(fontString)
+  if (WoWeuCN_Interface_LiveQueued[fontString]) then
+    return;
+  end
+  if (WoWeuCN_Interface_LiveQueueCount - WoWeuCN_Interface_LiveQueueHead + 1 >= WoWeuCN_Interface_LiveQueueMax) then
+    return;
+  end
+  WoWeuCN_Interface_LiveQueued[fontString] = true;
+  WoWeuCN_Interface_LiveQueueCount = WoWeuCN_Interface_LiveQueueCount + 1;
+  WoWeuCN_Interface_LiveQueue[WoWeuCN_Interface_LiveQueueCount] = fontString;
+end
 
 local function WoWeuCN_Interface_OnFontStringSetText(fontString, text)
   if (WoWeuCN_Interface_SuppressHook or not WoWeuCN_Interface_Initialized) then
     return;
   end
-  if (WoWeuCN_Interface_LiveQueueCount >= 200) then
-    return;
-  end
-  if (issecretvalue and issecretvalue(text)) then
-    return;
-  end
-
-  if (type(text) ~= "string" or string.len(text) < 2 or not string.find(text, "[^%s%p%d%c]")) then
+  if (not WoWeuCN_Interface_IsLiveCandidate(text)) then
     return;
   end
   if (fontString.IsForbidden and fontString:IsForbidden()) then
     return;
   end
-  WoWeuCN_Interface_LiveQueueCount = WoWeuCN_Interface_LiveQueueCount + 1;
-  WoWeuCN_Interface_LiveQueue[WoWeuCN_Interface_LiveQueueCount] = fontString;
+  WoWeuCN_Interface_EnqueueLive(fontString);
+end
+
+local function WoWeuCN_Interface_OnButtonSetText(button, text)
+  if (WoWeuCN_Interface_SuppressHook or not WoWeuCN_Interface_Initialized) then
+    return;
+  end
+  if (not WoWeuCN_Interface_IsLiveCandidate(text)) then
+    return;
+  end
+  if (button.IsForbidden and button:IsForbidden()) then
+    return;
+  end
+  local fontString = button.GetFontString and button:GetFontString();
+  if (fontString) then
+    WoWeuCN_Interface_EnqueueLive(fontString);
+  end
 end
 
 local function WoWeuCN_Interface_TranslateQueuedRegion(region)
+  local text = region:GetText();
+  if (issecretvalue and issecretvalue(text)) then
+    return;
+  end
+  if (type(text) ~= "string" or string.len(text) < 2) then
+    return;
+  end
+  if (not WoWeuCN_Interface_ContextOverrides[text] and not WoWeuCN_Interface_DbTextKnown(text)
+      and not WoWeuCN_Interface_CachedTranslate(text)) then
+    return;
+  end
   local parent = region:GetParent();
   if (not parent) then
     return;
@@ -1026,6 +1270,38 @@ local function WoWeuCN_Interface_TranslateQueuedRegion(region)
     return;
   end
   WoWeuCN_Interface_TranslateFontString(region);
+end
+
+function WoWeuCN_Interface_ProcessLiveQueue(budgetMs)
+  if (WoWeuCN_Interface_LiveQueueHead > WoWeuCN_Interface_LiveQueueCount) then
+    return true;
+  end
+  local deadline = WoWeuCN_Interface_ClockMs() + (budgetMs or WoWeuCN_Interface_LiveBudgetMs);
+  local processed = 0;
+  while (WoWeuCN_Interface_LiveQueueHead <= WoWeuCN_Interface_LiveQueueCount) do
+    local i = WoWeuCN_Interface_LiveQueueHead;
+    local region = WoWeuCN_Interface_LiveQueue[i];
+    WoWeuCN_Interface_LiveQueue[i] = nil;
+    WoWeuCN_Interface_LiveQueueHead = i + 1;
+    if (region) then
+      WoWeuCN_Interface_LiveQueued[region] = nil;
+      pcall(WoWeuCN_Interface_TranslateQueuedRegion, region);
+    end
+    processed = processed + 1;
+    if (processed % 32 == 0 and WoWeuCN_Interface_ClockMs() >= deadline) then
+      break;
+    end
+  end
+  if (WoWeuCN_Interface_LiveQueueHead > WoWeuCN_Interface_LiveQueueCount) then
+    WoWeuCN_Interface_LiveQueueHead = 1;
+    WoWeuCN_Interface_LiveQueueCount = 0;
+    return true;
+  end
+  return false;
+end
+
+function WoWeuCN_Interface_GetLiveQueueSize()
+  return WoWeuCN_Interface_LiveQueueCount - WoWeuCN_Interface_LiveQueueHead + 1;
 end
 
 local WoWeuCN_Interface_LiveHooked = false;
@@ -1049,26 +1325,39 @@ function WoWeuCN_Interface_InitLiveHook()
     return;
   end
   WoWeuCN_Interface_LiveHooked = true;
-  hooksecurefunc(methods, "SetText", WoWeuCN_Interface_OnFontStringSetText);
-  if (type(methods.SetFormattedText) == "function") then
-    hooksecurefunc(methods, "SetFormattedText", WoWeuCN_Interface_OnFontStringSetText);
+  local hooked = {};
+  local function hookMethods(widgetMethods, handler)
+    if (type(widgetMethods) ~= "table" or hooked[widgetMethods] or type(widgetMethods.SetText) ~= "function") then
+      return;
+    end
+    hooked[widgetMethods] = true;
+    hooksecurefunc(widgetMethods, "SetText", handler);
+    if (type(widgetMethods.SetFormattedText) == "function") then
+      hooksecurefunc(widgetMethods, "SetFormattedText", handler);
+    end
+  end
+  hookMethods(methods, WoWeuCN_Interface_OnFontStringSetText);
+
+  local buttonTypes = { "Button", "CheckButton" };
+  for i = 1, #buttonTypes do
+    local ok, widget = pcall(CreateFrame, buttonTypes[i]);
+    if (ok and widget) then
+      local widgetMeta = getmetatable(widget);
+      local widgetMethods = widgetMeta and widgetMeta.__index;
+      if (widgetMethods ~= methods) then
+        hookMethods(widgetMethods, WoWeuCN_Interface_OnButtonSetText);
+      end
+      if (widget.Hide) then
+        widget:Hide();
+      end
+    end
   end
 end
 
 local WoWeuCN_Interface_Driver = CreateFrame("Frame");
 WoWeuCN_Interface_Driver:SetScript("OnUpdate", function(self, elapsed)
   WoWeuCN_Interface_SuppressHook = false;
-  if (WoWeuCN_Interface_LiveQueueCount > 0) then
-    local count = WoWeuCN_Interface_LiveQueueCount;
-    WoWeuCN_Interface_LiveQueueCount = 0;
-    for i = 1, count do
-      local region = WoWeuCN_Interface_LiveQueue[i];
-      WoWeuCN_Interface_LiveQueue[i] = nil;
-      if (region) then
-        pcall(WoWeuCN_Interface_TranslateQueuedRegion, region);
-      end
-    end
-  end
+  WoWeuCN_Interface_ProcessLiveQueue(WoWeuCN_Interface_LiveBudgetMs);
   if (WoWeuCN_Interface_PopupPassQueued) then
     WoWeuCN_Interface_PopupPassQueued = false;
     pcall(WoWeuCN_Interface_PopupTranslationPass);
@@ -1208,6 +1497,7 @@ local function WoWeuCN_Interface_CreateCheckButton(index, parent, anchorTo, offs
     else
       WoWeuCN_Interface_N_PS[option] = "0";
     end
+    WoWeuCN_Interface_ClearTextCache();
   end);
   button.Text:SetFont(WoWeuCN_Interface_Font2, 13);
   button:SetSize(850, 21);
@@ -1364,6 +1654,8 @@ function WoWeuCN_Interface_OnEvent(self, event, arg1, arg2, arg3, arg4)
 
       WoWeuCN_Interface_ApplyFonts();
     end
+  elseif (event == "SKILL_LINES_CHANGED" or event == "UPDATE_FACTION") then
+    WoWeuCN_Interface_MarkDbTextDirty(event);
   elseif (event == "CHAT_MSG_ADDON") then
     WoWeuCN_Interface_OnAddonMessage(arg1, arg2, arg3, arg4);
   elseif (event == "PLAYER_ENTERING_WORLD") then
@@ -1396,4 +1688,8 @@ function WoWeuCN_Interface_OnLoad()
   WoWeuCN_Interface:RegisterEvent("ADDON_LOADED");
   WoWeuCN_Interface:RegisterEvent("PLAYER_ENTERING_WORLD");
   WoWeuCN_Interface:RegisterEvent("CHAT_MSG_ADDON");
+  local dbEvents = WoWeuCN_Interface_GetDbTextEvents();
+  for i = 1, #dbEvents do
+    pcall(WoWeuCN_Interface.RegisterEvent, WoWeuCN_Interface, dbEvents[i]);
+  end
 end
