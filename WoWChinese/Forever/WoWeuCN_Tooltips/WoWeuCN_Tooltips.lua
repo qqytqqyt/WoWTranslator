@@ -238,7 +238,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
   WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1")
-  WoWeuCN_TooltipsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; WoWeuCN_Tooltips_RefreshNameplates(); end);
   WoWeuCN_TooltipsCheckButton0.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton0.Text:SetText(WoWeuCN_Tooltips_Interface.active);
 
@@ -302,7 +302,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -185);
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1")
-  WoWeuCN_TooltipsCheckButton8.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; WoWeuCN_Tooltips_RefreshNameplates(); end);
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
@@ -1193,7 +1193,7 @@ function Broadcast()
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded.." - |cffa335ee作者："..WoWeuCN_Tooltips_Messages.author.."|r");
   
   if (WoWeuCN_Tooltips_N_PS["transnameplate"]~="0") then
-    print ("|cffffff00已加入姓名版翻译功能。如需使用请安装<Plater>姓名版插件并开启对应单位血条(V/Ctrl+V/Shift+V)，相关数据会自动导入进Plater中。如需完全关闭请于插件设置里禁用。|r");
+    print ("|cffffff00已加入姓名版翻译功能，请开启对应单位血条(V/Ctrl+V/Shift+V)。已安装<Plater>姓名版插件时相关数据会自动导入进Plater中，否则将游戏自带姓名版上的NPC名字替换为中文名。如需完全关闭请于插件设置里禁用。|r");
   end
   
   local name, _, rank = GetGuildInfo("player");
