@@ -1,5 +1,5 @@
-﻿WoWeuCN_Tooltips_base = "1.60.1.70532";   -- version
-WoWeuCN_Tooltips_date = "2026-10-23"; -- date of creation base
+﻿WoWeuCN_Tooltips_base = "1.60.1.70790";   -- version
+WoWeuCN_Tooltips_date = "2026-11-04"; -- date of creation base
 
 WoWeuCN_Tooltips_lang = "CN";      -- language
 
@@ -9,7 +9,7 @@ WoWeuCN_Tooltips_Messages = {
     loaded     = "加载完成", 
     isactive   = "已启用", 
     isinactive = "未启用", 
-    author     = "Silvermoon (EU) - Nekonia",
+    author     = "PVE (EU) - Vibe Coding",
  }; 
  
 WoWeuCN_Tooltips_Interface = { 
