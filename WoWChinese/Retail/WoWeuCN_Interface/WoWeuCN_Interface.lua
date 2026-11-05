@@ -747,133 +747,113 @@ local function WoWeuCN_Interface_BuildSubClassText()
   return map;
 end
 
+local function WoWeuCN_Interface_AddFirst(map, text, zh)
+  if (type(text) == "string" and text ~= "" and type(zh) == "string" and zh ~= "" and map[text] == nil
+      and not (issecretvalue and issecretvalue(text))) then
+    map[text] = zh;
+  end
+end
+
+local function WoWeuCN_Interface_AddFlatById(map, pairsList, lookup)
+  if (type(pairsList) ~= "table" or type(lookup) ~= "function") then
+    return;
+  end
+  for i = 1, #pairsList, 2 do
+    local ok, text = pcall(lookup, pairsList[i]);
+    if (ok) then
+      WoWeuCN_Interface_AddFirst(map, text, pairsList[i + 1]);
+    end
+  end
+end
+
+local function WoWeuCN_Interface_AddFlatByText(map, pairsList)
+  if (type(pairsList) ~= "table") then
+    return;
+  end
+  for i = 1, #pairsList, 2 do
+    WoWeuCN_Interface_AddFirst(map, pairsList[i], pairsList[i + 1]);
+  end
+end
+
+local function WoWeuCN_Interface_MapName(id)
+  local info = C_Map.GetMapInfo(id);
+  return type(info) == "table" and info.name or nil;
+end
+
 local function WoWeuCN_Interface_BuildMapText()
   local map = {};
-  local function add(text, zh)
-    if (type(text) == "string" and text ~= "" and type(zh) == "string" and zh ~= "" and map[text] == nil) then
-      map[text] = zh;
-    end
-  end
-  local maps = WoWeuCN_Interface_UiMaps;
   if (type(C_Map.GetMapInfo) == "function") then
-    for i = 1, #maps do
-      local ok, info = pcall(C_Map.GetMapInfo, maps[i][1]);
-      if (ok and type(info) == "table") then
-        add(info.name, maps[i][2]);
-      end
-    end
+    WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_UiMaps, WoWeuCN_Interface_MapName);
   end
-  local areas = WoWeuCN_Interface_Areas;
-  if (type(areas) == "table" and type(C_Map.GetAreaInfo) == "function") then
-    for i = 1, #areas do
-      local ok, name = pcall(C_Map.GetAreaInfo, areas[i][1]);
-      if (ok) then
-        add(name, areas[i][2]);
-      end
-    end
-  end
-  local sorts = WoWeuCN_Interface_QuestSorts;
-  if (type(sorts) == "table") then
-    for i = 1, #sorts do
-      add(sorts[i][1], sorts[i][2]);
-    end
-  end
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_Areas, C_Map.GetAreaInfo);
+  WoWeuCN_Interface_AddFlatByText(map, WoWeuCN_Interface_QuestSorts);
   return map;
 end
 
-local WoWeuCN_Interface_SpellNames = nil;
+local function WoWeuCN_Interface_SpellNameLookup()
+  return (C_Spell and C_Spell.GetSpellName) or GetSpellInfo;
+end
+
+local WoWeuCN_Interface_SpellNameMap = nil;
 
 local function WoWeuCN_Interface_GetSpellNameMap()
-  if (WoWeuCN_Interface_SpellNames) then
-    return WoWeuCN_Interface_SpellNames;
+  if (not WoWeuCN_Interface_SpellNameMap) then
+    local map = {};
+    WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_SpellNames, WoWeuCN_Interface_SpellNameLookup());
+    WoWeuCN_Interface_SpellNameMap = map;
   end
-  local map = {};
-  local getSpellName = (C_Spell and C_Spell.GetSpellName) or GetSpellInfo;
-  local spells = WoWeuCN_Interface_SkillSpells;
-  if (type(getSpellName) == "function" and type(spells) == "table") then
-    for i = 1, #spells do
-      local ok, name = pcall(getSpellName, spells[i][1]);
-      if (ok and type(name) == "string" and name ~= "" and map[name] == nil
-          and not (issecretvalue and issecretvalue(name))) then
-        map[name] = spells[i][2];
-      end
-    end
-  end
-  WoWeuCN_Interface_SpellNames = map;
-  return map;
+  return WoWeuCN_Interface_SpellNameMap;
 end
 
 local WoWeuCN_Interface_StaticProfessionText = nil;
 
-local function WoWeuCN_Interface_BuildStaticProfessionText()
+local function WoWeuCN_Interface_GetStaticProfessionText()
+  if (WoWeuCN_Interface_StaticProfessionText) then
+    return WoWeuCN_Interface_StaticProfessionText;
+  end
   local map = {};
-  local function add(text, zh)
-    if (type(text) == "string" and text ~= "" and type(zh) == "string" and zh ~= "" and map[text] == nil) then
-      map[text] = zh;
-    end
-  end
-  for text, zh in pairs(WoWeuCN_Interface_GetSpellNameMap()) do
-    add(text, zh);
-  end
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_RecipeNames, WoWeuCN_Interface_SpellNameLookup());
   local displayName = C_TradeSkillUI.GetTradeSkillDisplayName;
   local lines = WoWeuCN_Interface_SkillLines;
   if (type(displayName) == "function" and type(lines) == "table") then
-    for id, entry in pairs(lines) do
-      local ok, name = pcall(displayName, id);
+    local ids = {};
+    for id in pairs(lines) do
+      ids[#ids + 1] = id;
+    end
+    table.sort(ids);
+    for i = 1, #ids do
+      local ok, name = pcall(displayName, ids[i]);
       if (ok) then
-        add(name, entry[1]);
+        WoWeuCN_Interface_AddFirst(map, name, lines[ids[i]][1]);
       end
     end
   end
-  local byText = { WoWeuCN_Interface_TotemCategories, WoWeuCN_Interface_SpellFocusObjects };
-  for i = 1, #byText do
-    local rows = byText[i];
-    if (type(rows) == "table") then
-      for j = 1, #rows do
-        add(rows[j][1], rows[j][2]);
-      end
-    end
+  WoWeuCN_Interface_AddFlatByText(map, WoWeuCN_Interface_TotemCategories);
+  WoWeuCN_Interface_AddFlatByText(map, WoWeuCN_Interface_SpellFocusObjects);
+  for text, zh in pairs(WoWeuCN_Interface_GetSpellNameMap()) do
+    WoWeuCN_Interface_AddFirst(map, text, zh);
   end
+  WoWeuCN_Interface_StaticProfessionText = map;
   return map;
 end
 
+local function WoWeuCN_Interface_CategoryName(id)
+  local info = C_TradeSkillUI.GetCategoryInfo(id);
+  return type(info) == "table" and info.name or nil;
+end
+
 local function WoWeuCN_Interface_BuildProfessionText()
-  if (not WoWeuCN_Interface_StaticProfessionText) then
-    WoWeuCN_Interface_StaticProfessionText = WoWeuCN_Interface_BuildStaticProfessionText();
-  end
   local map = {};
-  local categories = WoWeuCN_Interface_TradeSkillCategories;
   if (type(C_TradeSkillUI.GetCategoryInfo) == "function") then
-    for i = 1, #categories do
-      local ok, info = pcall(C_TradeSkillUI.GetCategoryInfo, categories[i][1]);
-      if (ok and type(info) == "table" and type(info.name) == "string" and info.name ~= ""
-          and map[info.name] == nil) then
-        map[info.name] = categories[i][2];
-      end
-    end
+    WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_TradeSkillCategories, WoWeuCN_Interface_CategoryName);
   end
-  for text, zh in pairs(WoWeuCN_Interface_StaticProfessionText) do
-    if (map[text] == nil) then
-      map[text] = zh;
-    end
-  end
-  return map;
+  return setmetatable(map, { __index = WoWeuCN_Interface_GetStaticProfessionText() });
 end
 
 local function WoWeuCN_Interface_BuildSpellBookText()
   local map = {};
-  for text, zh in pairs(WoWeuCN_Interface_GetSpellNameMap()) do
-    map[text] = zh;
-  end
-  local lines = WoWeuCN_Interface_SpellBookSkillLines;
-  if (type(lines) == "table") then
-    for i = 1, #lines do
-      if (map[lines[i][1]] == nil) then
-        map[lines[i][1]] = lines[i][2];
-      end
-    end
-  end
-  return map;
+  WoWeuCN_Interface_AddFlatByText(map, WoWeuCN_Interface_SpellBookSkillLines);
+  return setmetatable(map, { __index = WoWeuCN_Interface_GetSpellNameMap() });
 end
 
 local function WoWeuCN_Interface_TranslateNameList(map, list)
@@ -919,10 +899,10 @@ local WoWeuCN_Interface_DbContexts = {
   { roots = { "AuctionHouseFrame" }, data = "ItemSubClasses", build = WoWeuCN_Interface_BuildSubClassText },
   { roots = { "WorldMapFrame", "QuestMapFrame", "BattlefieldMapFrame", "MinimapCluster", "ZoneTextFrame",
       "SubZoneTextFrame" }, data = "UiMaps", api = "C_Map", build = WoWeuCN_Interface_BuildMapText },
-  { roots = { "ProfessionsFrame" }, data = "SkillSpells", api = "C_TradeSkillUI",
+  { roots = { "ProfessionsFrame", "ProfessionsBookFrame" }, data = "RecipeNames", api = "C_TradeSkillUI",
     build = WoWeuCN_Interface_BuildProfessionText, event = "TRADE_SKILL_LIST_UPDATE",
     compose = WoWeuCN_Interface_ComposeProfessionText, names = true },
-  { roots = { "PlayerSpellsFrame" }, data = "SkillSpells", api = "C_Spell",
+  { roots = { "PlayerSpellsFrame" }, data = "SpellNames", api = "C_Spell",
     build = WoWeuCN_Interface_BuildSpellBookText, names = true },
 };
 
