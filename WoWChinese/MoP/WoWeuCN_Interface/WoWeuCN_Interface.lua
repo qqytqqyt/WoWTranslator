@@ -8,6 +8,7 @@ local WoWeuCN_Interface_VersionReminded = false;
 
 WoWeuCN_Interface_Reverse = {};
 local WoWeuCN_Interface_ReverseUpper = {};
+local WoWeuCN_Interface_ReverseLower = {};
 local WoWeuCN_Interface_ContextOverrides = {};
 local WoWeuCN_Interface_Swept = 0;
 local WoWeuCN_Interface_FontsDone = {};
@@ -27,6 +28,15 @@ local WoWeuCN_Interface_PreferredKeys = {
   ["POI_FOCUS"] = 1,
   ["POWER_TYPE_FURY"] = 1,
   ["RAID_FINDER"] = 1,
+  ["TRAIN"] = 1,
+  ["FRONT_END_LOBBY_SOLO"] = 1,
+  ["COOLDOWN_VIEWER_SETTINGS_BUTTON_REVERT_CHANGES"] = 1,
+  ["HUD_EDIT_MODE_SETTING_AURA_FRAME_OPACITY"] = 1,
+  ["PET_BATTLE_STAT_QUALITY"] = 1,
+  ["AUCTION_CATEGORY_MISCELLANEOUS"] = 1,
+  ["JOURNEYS_OVERVIEW_LABEL"] = 1,
+  ["AUCTION_HOUSE_HEADER_CURRENT_BID"] = 1,
+  ["BATTLEFIELDMINIMAP_OPACITY_LABEL"] = 1,
 };
 
 local WoWeuCN_Interface_PatternBlockedKeys = {
@@ -87,6 +97,7 @@ local WoWeuCN_Interface_ContextSpecs = {
 
 local WoWeuCN_Interface_PatternBuckets = nil;
 local WoWeuCN_Interface_PatternCount = 0;
+local WoWeuCN_Interface_PendingEntries = {};
 
 local WoWeuCN_Interface_WORD = "[^%s%p%d%c]+";
 
@@ -154,14 +165,22 @@ local function WoWeuCN_Interface_CompilePatternEntry(en, zh)
       lastTokenPiece = enPieces[i];
     end
   end
-  local indexWord = nil;
+  local words = {};
+  local looseWords = {};
+  local litLen = 0;
   for i = 1, #enPieces do
     local piece = enPieces[i];
     if (piece.lit) then
+      litLen = litLen + string.len(piece.lit);
       pat = pat .. WoWeuCN_Interface_EscapePattern(piece.lit);
-      for word in string.gmatch(piece.lit, WoWeuCN_Interface_WORD) do
-        if (string.len(word) >= 3 and (not indexWord or string.len(word) > string.len(indexWord))) then
-          indexWord = word;
+      local pieceLen = string.len(piece.lit);
+      for startPos, word, endPos in string.gmatch(piece.lit, "()(" .. WoWeuCN_Interface_WORD .. ")()") do
+        if (string.len(word) >= 3) then
+          if ((startPos > 1 or i == 1) and (endPos <= pieceLen or i == #enPieces)) then
+            words[word] = true;
+          else
+            looseWords[word] = true;
+          end
         end
       end
     else
@@ -180,7 +199,10 @@ local function WoWeuCN_Interface_CompilePatternEntry(en, zh)
       end
     end
   end
-  if (not indexWord) then
+  if (next(words) == nil) then
+    words = looseWords;
+  end
+  if (next(words) == nil) then
     return nil;
   end
   pat = pat .. "$";
@@ -198,14 +220,40 @@ local function WoWeuCN_Interface_CompilePatternEntry(en, zh)
       out[#out + 1] = { cap = cap };
     end
   end
-  return { pat = pat, out = out, word = indexWord };
+  return { pat = pat, out = out, words = words, litLen = litLen };
+end
+
+function WoWeuCN_Interface_HasForeignLetters(s)
+  if (not string.find(s, "[%a\195-\223]")) then
+    return false;
+  end
+  s = string.gsub(s, "|c%x%x%x%x%x%x%x%x", "");
+  s = string.gsub(s, "|cn[%w_]+:", "");
+  s = string.gsub(s, "|H.-|h", "");
+  s = string.gsub(s, "|T.-|t", "");
+  s = string.gsub(s, "|A.-|a", "");
+  s = string.gsub(s, "|K.-|k", "");
+  s = string.gsub(s, "|[rhn]", "");
+  return (string.find(s, "%a%a") ~= nil) or (string.find(s, "[\195-\223][\128-\191]") ~= nil);
+end
+
+local function WoWeuCN_Interface_ExactTranslate(text)
+  return WoWeuCN_Interface_Reverse[text] or WoWeuCN_Interface_ReverseUpper[text]
+      or WoWeuCN_Interface_ReverseLower[string.lower(text)];
+end
+
+local function WoWeuCN_Interface_TranslateCapture(cap)
+  return WoWeuCN_Interface_ExactTranslate(cap)
+      or WoWeuCN_Interface_TryDecoratedTranslate(cap, WoWeuCN_Interface_ExactTranslate);
 end
 
 function WoWeuCN_Interface_TryPatternTranslate(text)
   if (not WoWeuCN_Interface_PatternBuckets or string.len(text) > 300) then
     return nil;
   end
+  local allowMixed = WoWeuCN_Interface_N_PS and WoWeuCN_Interface_N_PS["transmixed"] == "1";
   local tried = 0;
+  local best, bestLeft, bestLit = nil, nil, nil;
   for word in string.gmatch(text, WoWeuCN_Interface_WORD) do
     local bucket = WoWeuCN_Interface_PatternBuckets[word];
     if (bucket) then
@@ -213,37 +261,56 @@ function WoWeuCN_Interface_TryPatternTranslate(text)
         local entry = bucket[j];
         tried = tried + 1;
         if (tried > 40) then
-          return nil;
+          break;
         end
         local c1, c2, c3, c4, c5, c6, c7, c8 = string.match(text, entry.pat);
         if (c1 ~= nil) then
           local caps = { c1, c2, c3, c4, c5, c6, c7, c8 };
           local parts = {};
+          local left = 0;
           for k = 1, #entry.out do
             local piece = entry.out[k];
             if (piece.lit) then
               parts[#parts + 1] = piece.lit;
             else
-              parts[#parts + 1] = caps[piece.cap] or "";
+              local cap = caps[piece.cap] or "";
+              if (WoWeuCN_Interface_HasForeignLetters(cap)) then
+                local sub = WoWeuCN_Interface_TranslateCapture(cap);
+                if (sub) then
+                  cap = sub;
+                else
+                  left = left + string.len(cap);
+                end
+              end
+              parts[#parts + 1] = cap;
             end
           end
-          return table.concat(parts);
+          if (best == nil or left < bestLeft or (left == bestLeft and entry.litLen > bestLit)) then
+            best, bestLeft, bestLit = table.concat(parts), left, entry.litLen;
+          end
         end
       end
     end
+    if (tried > 40) then
+      break;
+    end
+  end
+  if (best ~= nil and (bestLeft == 0 or allowMixed)) then
+    return best;
   end
   return nil;
 end
 
 local function WoWeuCN_Interface_CoreTranslate(text)
-  return WoWeuCN_Interface_Reverse[text] or WoWeuCN_Interface_ReverseUpper[text] or WoWeuCN_Interface_TryPatternTranslate(text);
+  return WoWeuCN_Interface_ExactTranslate(text) or WoWeuCN_Interface_TryPatternTranslate(text);
 end
 
-function WoWeuCN_Interface_TryDecoratedTranslate(text)
+function WoWeuCN_Interface_TryDecoratedTranslate(text, core)
+  core = core or WoWeuCN_Interface_CoreTranslate;
 
   local colorOpen, inner, colorClose = string.match(text, "^(|c%x%x%x%x%x%x%x%x)(.-)(|r)$");
   if (inner and inner ~= "") then
-    local translated = WoWeuCN_Interface_CoreTranslate(inner) or WoWeuCN_Interface_TryDecoratedTranslate(inner);
+    local translated = core(inner) or WoWeuCN_Interface_TryDecoratedTranslate(inner, core);
     if (translated) then
       return colorOpen .. translated .. colorClose;
     end
@@ -252,15 +319,29 @@ function WoWeuCN_Interface_TryDecoratedTranslate(text)
 
   local head, colonTail = string.match(text, "^(.-)(%s*[:：]%s*)$");
   if (head and head ~= "") then
-    local translated = WoWeuCN_Interface_CoreTranslate(head);
+    local translated = core(head);
     if (translated) then
       return translated .. colonTail;
     end
   end
 
+  local label, sep, value = string.match(text, "^([^:]-)(%s*:%s*)(.+)$");
+  if (label and label ~= "") then
+    local translatedLabel = core(label);
+    if (translatedLabel) then
+      if (not WoWeuCN_Interface_HasForeignLetters(value)) then
+        return translatedLabel .. sep .. value;
+      end
+      local translatedValue = core(value);
+      if (translatedValue) then
+        return translatedLabel .. sep .. translatedValue;
+      end
+    end
+  end
+
   local lead, mid, trail = string.match(text, "^(%s*)(.-)(%s*)$");
   if (mid and mid ~= text and mid ~= "") then
-    local translated = WoWeuCN_Interface_CoreTranslate(mid);
+    local translated = core(mid);
     if (translated) then
       return lead .. translated .. trail;
     end
@@ -268,12 +349,19 @@ function WoWeuCN_Interface_TryDecoratedTranslate(text)
 
   local beforeDots = string.match(text, "^(.-)%.%.%.$");
   if (beforeDots and beforeDots ~= "") then
-    local translated = WoWeuCN_Interface_CoreTranslate(beforeDots);
+    local translated = core(beforeDots);
     if (translated) then
       return translated .. "...";
     end
   end
   return nil;
+end
+
+function WoWeuCN_Interface_TranslateText(text)
+  return WoWeuCN_Interface_ExactTranslate(text)
+      or WoWeuCN_Interface_TryDecoratedTranslate(text, WoWeuCN_Interface_ExactTranslate)
+      or WoWeuCN_Interface_TryPatternTranslate(text)
+      or WoWeuCN_Interface_TryDecoratedTranslate(text);
 end
 
 local function WoWeuCN_Interface_ExpandPlurals(s)
@@ -328,14 +416,46 @@ end
 local function WoWeuCN_Interface_AddCompiledEntry(en, zh)
   local ok, entry = pcall(WoWeuCN_Interface_CompilePatternEntry, en, zh);
   if (ok and entry) then
-    local bucket = WoWeuCN_Interface_PatternBuckets[entry.word];
+    WoWeuCN_Interface_PendingEntries[#WoWeuCN_Interface_PendingEntries + 1] = entry;
+  end
+end
+
+local function WoWeuCN_Interface_FinishPatternBuckets()
+  local pending = WoWeuCN_Interface_PendingEntries;
+  local freq = {};
+  for i = 1, #pending do
+    for word in pairs(pending[i].words) do
+      freq[word] = (freq[word] or 0) + 1;
+    end
+  end
+  for i = 1, #pending do
+    local entry = pending[i];
+    local best = nil;
+    for word in pairs(entry.words) do
+      if (best == nil or freq[word] < freq[best]
+          or (freq[word] == freq[best] and (string.len(word) > string.len(best)
+            or (string.len(word) == string.len(best) and word < best)))) then
+        best = word;
+      end
+    end
+    entry.words = nil;
+    local bucket = WoWeuCN_Interface_PatternBuckets[best];
     if (not bucket) then
       bucket = {};
-      WoWeuCN_Interface_PatternBuckets[entry.word] = bucket;
+      WoWeuCN_Interface_PatternBuckets[best] = bucket;
     end
     bucket[#bucket + 1] = entry;
     WoWeuCN_Interface_PatternCount = WoWeuCN_Interface_PatternCount + 1;
   end
+  for _, bucket in pairs(WoWeuCN_Interface_PatternBuckets) do
+    table.sort(bucket, function(a, b)
+      if (a.litLen ~= b.litLen) then
+        return a.litLen > b.litLen;
+      end
+      return a.pat < b.pat;
+    end);
+  end
+  WoWeuCN_Interface_PendingEntries = {};
 end
 
 local function WoWeuCN_Interface_AddPatternEntry(en, zh)
@@ -371,6 +491,14 @@ function WoWeuCN_Interface_BuildReverseMap()
       else
         local newPri = WoWeuCN_Interface_PreferredKeys[key] or 0;
         local oldPri = WoWeuCN_Interface_PreferredKeys[existing] or 0;
+        if (newPri == oldPri) then
+          local canonical = string.gsub(string.gsub(string.upper(original), "[^%w]+", "_"), "^_*(.-)_*$", "%1");
+          if (key == canonical) then
+            newPri = newPri + 0.5;
+          elseif (existing == canonical) then
+            oldPri = oldPri + 0.5;
+          end
+        end
         if (newPri > oldPri or (newPri == oldPri and key < existing)) then
           WoWeuCN_Interface_Reverse[original] = translated;
           chosenKey[original] = key;
@@ -390,6 +518,7 @@ function WoWeuCN_Interface_BuildReverseMap()
       WoWeuCN_Interface_AddPatternEntry(original, translated);
     end
   end
+  WoWeuCN_Interface_FinishPatternBuckets();
   for i = 1, #WoWeuCN_Interface_ContextSpecs do
     local spec = WoWeuCN_Interface_ContextSpecs[i];
     local original = rawget(_G, spec.key);
@@ -408,6 +537,15 @@ function WoWeuCN_Interface_BuildReverseMap()
         upperSource[upper] = original;
         WoWeuCN_Interface_ReverseUpper[upper] = translated;
       end
+    end
+  end
+  local lowerSource = {};
+  for original, translated in pairs(WoWeuCN_Interface_Reverse) do
+    local lower = string.lower(original);
+    local existing = lowerSource[lower];
+    if (existing == nil or original == lower or (existing ~= lower and original < existing)) then
+      lowerSource[lower] = original;
+      WoWeuCN_Interface_ReverseLower[lower] = translated;
     end
   end
   WoWeuCN_Interface_GS = nil;
@@ -584,16 +722,7 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
   end
   local translated = WoWeuCN_Interface_ResolveContext(fontString, text);
   if (translated == nil) then
-    translated = WoWeuCN_Interface_Reverse[text];
-  end
-  if (translated == nil) then
-    translated = WoWeuCN_Interface_ReverseUpper[text];
-  end
-  if (translated == nil) then
-    translated = WoWeuCN_Interface_TryPatternTranslate(text);
-  end
-  if (translated == nil) then
-    translated = WoWeuCN_Interface_TryDecoratedTranslate(text);
+    translated = WoWeuCN_Interface_TranslateText(text);
   end
   if (translated == nil) then
     return 0;
@@ -1002,6 +1131,10 @@ function WoWeuCN_Interface_CheckVars()
     WoWeuCN_Interface_N_PS["transfont"] = "0";
   end
 
+  if (not WoWeuCN_Interface_N_PS["transmixed"]) then
+    WoWeuCN_Interface_N_PS["transmixed"] = "0";
+  end
+
   if (WoWeuCN_Interface_N_PS["optver"] ~= "4") then
     if (WoWeuCN_Interface_N_PS["optver"] ~= "2" and WoWeuCN_Interface_N_PS["optver"] ~= "3") then
       WoWeuCN_Interface_N_PS["transfont"] = "0";
@@ -1062,6 +1195,7 @@ end
 function WoWeuCN_Interface_SetCheckButtonState()
   WoWeuCN_InterfaceCheckButton0.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["active"] == "1");
   WoWeuCN_InterfaceCheckButton1.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["transfont"] == "1");
+  WoWeuCN_InterfaceCheckButton2.Checkbox:SetChecked(WoWeuCN_Interface_N_PS["transmixed"] == "1");
 end
 
 local function WoWeuCN_Interface_CreateCheckButton(index, parent, anchorTo, offsetY, option, label)
@@ -1133,14 +1267,15 @@ function WoWeuCN_Interface_BlizzardOptions()
   optionsLabel:SetFont(WoWeuCN_Interface_Font2, 13);
   optionsLabel:SetText(WoWeuCN_Interface_Options.options1);
 
-  WoWeuCN_Interface_CreateCheckButton(1, WoWeuCN_InterfaceOptions, optionsLabel, -5, "transfont", WoWeuCN_Interface_Options.transfont);
+  local fontButton = WoWeuCN_Interface_CreateCheckButton(1, WoWeuCN_InterfaceOptions, optionsLabel, -5, "transfont", WoWeuCN_Interface_Options.transfont);
+  local mixedButton = WoWeuCN_Interface_CreateCheckButton(2, WoWeuCN_InterfaceOptions, fontButton, -5, "transmixed", WoWeuCN_Interface_Options.transmixed);
 
   local reloadNote = WoWeuCN_InterfaceOptions:CreateFontString(nil, "ARTWORK");
   reloadNote:SetFontObject(GameFontWhite);
   reloadNote:SetJustifyH("LEFT");
   reloadNote:SetJustifyV("TOP");
   reloadNote:ClearAllPoints();
-  reloadNote:SetPoint("TOPLEFT", optionsLabel, "BOTTOMLEFT", 0, -45);
+  reloadNote:SetPoint("TOPLEFT", mixedButton, "BOTTOMLEFT", 0, -20);
   reloadNote:SetFont(WoWeuCN_Interface_Font2, 13);
   reloadNote:SetText(WoWeuCN_Interface_Options.reloadnote);
 
