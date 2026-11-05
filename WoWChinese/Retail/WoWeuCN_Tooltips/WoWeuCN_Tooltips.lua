@@ -145,6 +145,10 @@ function WoWeuCN_Tooltips_CheckVars()
   if (not WoWeuCN_Tooltips_N_PS["livenumbers"] ) then
      WoWeuCN_Tooltips_N_PS["livenumbers"] = "1";
   end
+  -- Initiation - always use the addon font (it is used anyway when the client lacks the Chinese font)
+  if (not WoWeuCN_Tooltips_N_PS["overwritefonts"] ) then
+     WoWeuCN_Tooltips_N_PS["overwritefonts"] = "0";
+  end
     -- Path version info
   if (not WoWeuCN_Tooltips_N_PS["patch"]) then
      WoWeuCN_Tooltips_N_PS["patch"] = GetBuildInfo();
@@ -198,6 +202,7 @@ function WoWeuCN_Tooltips_SetCheckButtonState()
   WoWeuCN_TooltipsCheckButton7.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transadvanced"]=="1");
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1");
   WoWeuCN_TooltipsCheckButton10.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["livenumbers"]=="1");
+  WoWeuCN_TooltipsCheckButton11.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["overwritefonts"]=="1");
 end
 
 function WoWeuCN_Tooltips_BlizzardOptions()
@@ -218,7 +223,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_TooltipsOptionsHeader:ClearAllPoints();
   WoWeuCN_TooltipsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2025");
+  WoWeuCN_TooltipsOptionsHeader:SetText("WoWeuCN-Tooltips, ver. "..WoWeuCN_Tooltips_version.." ("..WoWeuCN_Tooltips_base..") by qqytqqyt © 2026");
   WoWeuCN_TooltipsOptionsHeader:SetFont(WoWeuCN_Tooltips_Font2, 16);
 
   local WoWeuCN_TooltipsPlayer = WoWeuCN_TooltipsOptions:CreateFontString(nil, "ARTWORK");
@@ -233,7 +238,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   local WoWeuCN_TooltipsCheckButton0 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton0", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton0:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsHeader, "BOTTOMLEFT", 0, -44);
   WoWeuCN_TooltipsCheckButton0.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["active"]=="1")
-  WoWeuCN_TooltipsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; end);
+  WoWeuCN_TooltipsCheckButton0.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["active"]=="1") then WoWeuCN_Tooltips_N_PS["active"]="0" else if WoWeuCN_Tooltips_Force then return end WoWeuCN_Tooltips_N_PS["active"]="1" end; WoWeuCN_Tooltips_RefreshNameplates(); end);
   WoWeuCN_TooltipsCheckButton0.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton0.Text:SetText(WoWeuCN_Tooltips_Interface.active);
 
@@ -297,7 +302,7 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   local WoWeuCN_TooltipsCheckButton8 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton8", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
   WoWeuCN_TooltipsCheckButton8:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -185);
   WoWeuCN_TooltipsCheckButton8.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["transnameplate"]=="1")
-  WoWeuCN_TooltipsCheckButton8.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton8.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then WoWeuCN_Tooltips_N_PS["transnameplate"]="1" else WoWeuCN_Tooltips_N_PS["transnameplate"]="0" end; WoWeuCN_Tooltips_RefreshNameplates(); end);
   WoWeuCN_TooltipsCheckButton8.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton8:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton8.Text:SetText(WoWeuCN_Tooltips_Interface.transnameplate);
@@ -309,6 +314,18 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton10.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton10:SetSize(850, 21)
   WoWeuCN_TooltipsCheckButton10.Text:SetText(WoWeuCN_Tooltips_Interface.livenumbers);
+
+  local WoWeuCN_TooltipsCheckButton11 = CreateFrame("CheckButton", "WoWeuCN_TooltipsCheckButton11", WoWeuCN_TooltipsOptions, "SettingsCheckBoxControlTemplate");
+  WoWeuCN_TooltipsCheckButton11:SetPoint("TOPLEFT", WoWeuCN_TooltipsOptionsMode1, "BOTTOMLEFT", 0, -245);
+  WoWeuCN_TooltipsCheckButton11.Checkbox:SetChecked(WoWeuCN_Tooltips_N_PS["overwritefonts"]=="1")
+  WoWeuCN_TooltipsCheckButton11.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
+  WoWeuCN_TooltipsCheckButton11.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
+  WoWeuCN_TooltipsCheckButton11:SetSize(850, 21)
+  local fontLabel = WoWeuCN_Tooltips_Interface.overwritefonts
+  if WoWeuCN_Tooltips_IsClientChineseFontMissing() then
+    fontLabel = fontLabel .. "|cffffd100" .. WoWeuCN_Tooltips_Interface.fontmissing .. "|r"
+  end
+  WoWeuCN_TooltipsCheckButton11.Text:SetText(fontLabel);
 end
 
 local function translateTooltip(tooltip, data, kind)
@@ -647,6 +664,7 @@ local function AddTranslatedTooltipData(tooltip, translatedData, formatter, kind
       local addedLineIndex = tooltip:NumLines()
       local style = lineStyles[i] or lineStyles[1]
       ApplyTooltipLineStyle(tooltip, addedLineIndex, style, i == 1)
+      WoWeuCN_Tooltips_ApplyTooltipLineFont(tooltip, addedLineIndex)
     end
   end
   tooltip:Show()
@@ -662,13 +680,16 @@ function OnAchievement(self, elementData)
       local achievementData = GetAchievementData(id)
       if ( achievementData ) then
         local title = achievementData[1]
+        WoWeuCN_Tooltips_ApplyAddonFont(self.Label)
         self.Label:SetText(title);
         local description = achievementData[2]
         if ( description ) then
           if (self.Description) then
+            WoWeuCN_Tooltips_ApplyAddonFont(self.Description)
             self.Description:SetText(description);
           end
           if (self.HiddenDescription) then
+            WoWeuCN_Tooltips_ApplyAddonFont(self.HiddenDescription)
             self.HiddenDescription:SetText(description);
           end
         end
@@ -689,9 +710,11 @@ function OnAchievementSummary(...)
       local achievementData = GetAchievementData(id)
       if ( achievementData ) then
         local title = achievementData[1]
+        WoWeuCN_Tooltips_ApplyAddonFont(button.Label)
         button.Label:SetText(title);
         local description = achievementData[2]
         if ( description and button.Description ) then
+          WoWeuCN_Tooltips_ApplyAddonFont(button.Description)
           button.Description:SetText(description);
         end
       end
@@ -971,7 +994,11 @@ end
 
 local function InitializePlater()
   local defaultChineseFont = "AR CrystalzcuheiGBK Demibold"
-  Plater.db.profile.plate_config.friendlynpc.actorname_text_font = "AR CrystalzcuheiGBK Demibold"
+  if WoWeuCN_Tooltips_UseAddonFont() then
+    -- that font is Fonts\ARHei.ttf, absent on clients never installed in Chinese
+    defaultChineseFont = WoWeuCN_Tooltips_Font1
+  end
+  Plater.db.profile.plate_config.friendlynpc.actorname_text_font = defaultChineseFont
   Plater.db.profile.plate_config.friendlynpc.big_actortitle_text_font = defaultChineseFont
   Plater.db.profile.plate_config.friendlynpc.big_actorname_text_font = defaultChineseFont
   Plater.db.profile.plate_config.enemynpc.actorname_text_font = defaultChineseFont
@@ -1157,7 +1184,7 @@ function Broadcast()
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded.." - |cffa335ee作者："..WoWeuCN_Tooltips_Messages.author.."|r");
   
   if (WoWeuCN_Tooltips_N_PS["transnameplate"]~="0") then
-    print ("|cffffff00已加入姓名版翻译功能。如需使用请安装<Plater>姓名版插件并开启对应单位血条(V/Ctrl+V/Shift+V)，相关数据会自动导入进Plater中。如需完全关闭请于插件设置里禁用。|r");
+    print ("|cffffff00已加入姓名版翻译功能，请开启对应单位血条(V/Ctrl+V/Shift+V)。已安装<Plater>姓名版插件时相关数据会自动导入进Plater中，否则将游戏自带姓名版上的NPC名字替换为中文名。如需完全关闭请于插件设置里禁用。|r");
   end
   
   local name, _, rank = GetGuildInfo("player");

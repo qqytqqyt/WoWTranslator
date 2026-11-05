@@ -1,4 +1,4 @@
-local ADDON, T = ...
+local origin, T = ...
 local floor, char, byte, gsub, gmatch, sub, match = math.floor, string.char, string.byte, string.gsub, string.gmatch, string.sub, string.match
 local tostring, tonumber, rawset, pairs, ipairs, setmetatable = tostring, tonumber, rawset, pairs, ipairs, setmetatable
 local M = 4294967296
@@ -36,7 +36,7 @@ local K = 0xEA6E * 65536 + 0xF372
 
 local function fileseed(salt)
   local h = 7
-  for i = 1, #ADDON do h = (h * 31 + byte(ADDON, i)) % M end
+  for i = 1, #origin do h = (h * 31 + byte(origin, i)) % M end
   local x = lcg(salt % M)
   x = lcg((x + K) % M)
   return lcg((x + h) % M)
