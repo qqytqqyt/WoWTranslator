@@ -411,7 +411,7 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsOptionsHeader:SetJustifyV("TOP");
   WoWeuCN_QuestsOptionsHeader:ClearAllPoints();
   WoWeuCN_QuestsOptionsHeader:SetPoint("TOPLEFT", 16, -16);
-  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2025");
+  WoWeuCN_QuestsOptionsHeader:SetText("WoWeuCN-Quests, ver. "..WoWeuCN_Quests_version.." ("..WoWeuCN_Quests_base..") by qqytqqyt © 2026");
   WoWeuCN_QuestsOptionsHeader:SetFont(WoWeuCN_Quests_Font2, 16);
 
   local WoWeuCN_QuestsPlayer = WoWeuCN_QuestsOptions:CreateFontString(nil, "ARTWORK");
@@ -462,6 +462,8 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsCheckButton5.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton5:SetSize(500, 21)
   WoWeuCN_QuestsCheckButton5.Text:SetText(WoWeuCN_Quests_Interface.transtracker or "翻译任务追踪列表");
+
+  WoWeuCN_Quests_CreateFontOptions(WoWeuCN_QuestsOptions, WoWeuCN_QuestsCheckButton5, -18);
 end
 
 
@@ -908,6 +910,8 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
 
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Quests_BlizzardOptions();
+      -- only now: the options panel built above keeps the bundled font whatever font is picked
+      WoWeuCN_Quests_ApplyFontChoice();
       WoWeuCN_Quests_wait(2, Broadcast)
       -- the hook only raises a flag; the quest log title writes happen in
       -- our own OnUpdate, outside the secure update chain (writing inside

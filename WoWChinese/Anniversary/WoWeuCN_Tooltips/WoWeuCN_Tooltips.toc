@@ -1,6 +1,6 @@
 ﻿## Interface: 20506
 ## Title: WoWeuCN-Tooltips
-## Version: Anniversary 2.5.6.2
+## Version: Anniversary 2.5.6.3
 ## Notes_en: AddOn displays the translated information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
@@ -16,6 +16,7 @@ SpellData_cn.lua
 UnitData_cn.lua
 AchievementData_cn.lua
 ChatFilter.lua
+FontChoice.lua
 FontFallback.lua
 AdvancedInterface.lua
 WoWeuCN_Tooltips.lua

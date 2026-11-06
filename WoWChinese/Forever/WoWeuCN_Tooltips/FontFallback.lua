@@ -2,6 +2,7 @@
 -- The client draws Chinese glyphs in its default fonts by falling back to Fonts\ARKai_T.ttf, which only
 -- exists if the client was ever installed in Chinese; without it translated text renders as boxes.
 -- In that case (or when the "overwritefonts" option is on) translated text is drawn in the addon font.
+-- The addon font is WoWeuCN_Tooltips_Font1: the bundled font, or the one picked in the options (FontChoice.lua).
 
 local CLIENT_CHINESE_FONT = "Fonts\\ARKai_T.ttf"
 local clientFontMissing = nil

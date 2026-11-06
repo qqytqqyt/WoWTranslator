@@ -23,8 +23,8 @@ WoWeuCN_Tooltips_Interface = {
     transadvanced = "高级翻译模式",
     transnameplate = "翻译血条姓名版（支持Plater与游戏自带姓名版，Plater需/reload后生效）",
     livenumbers = "法术/物品翻译同步显示当前数值（Live numbers）",
-    overwritefonts = "始终使用插件内置字体（客户端缺少中文字体时会自动使用）",
-    fontmissing = "（当前客户端缺少中文字体，已自动使用内置字体）",
+    overwritefonts = "翻译文本始终使用插件字体（客户端缺少中文字体时会自动使用）",
+    fontmissing = "翻译文本始终使用插件字体|cffffd100（当前客户端缺少中文字体，已自动使用）|r",
  };
 
  WoWeuCN_Tooltips_Font1 = "Interface\\AddOns\\WoWeuCN_Tooltips\\Fonts\\woweucn.ttf"; 
