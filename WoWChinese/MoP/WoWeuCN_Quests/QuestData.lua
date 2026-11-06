@@ -36,7 +36,7 @@ WoWeuCN_Quests_Messages = {
     options1   = "额外选项:", 
     transtitle = "翻译任务标题", 
     transchat  = "翻译NPC对话",
-    overwritefonts  = "尝试使用内置对话字体 (/RELOAD后生效)",
+    overwritefonts  = "尝试使用插件字体显示对话 (/RELOAD后生效)",
     transtracker = "翻译任务追踪列表"
  };
 

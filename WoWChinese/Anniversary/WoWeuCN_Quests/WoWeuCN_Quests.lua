@@ -473,6 +473,8 @@ function WoWeuCN_Quests_BlizzardOptions()
   WoWeuCN_QuestsCheckButton6.Text:SetFont(WoWeuCN_Quests_Font2, 13);
   WoWeuCN_QuestsCheckButton6:SetSize(850, 21)
   WoWeuCN_QuestsCheckButton6.Text:SetText(WoWeuCN_Quests_Interface.transtracker or "翻译任务追踪列表");
+
+  WoWeuCN_Quests_CreateFontOptions(WoWeuCN_QuestsOptions, WoWeuCN_QuestsCheckButton6, -18);
 end
 
 
@@ -1368,6 +1370,8 @@ function WoWeuCN_Quests_OnEvent(self, event, name, ...)
 
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Quests_BlizzardOptions();
+      -- only now: the options panel built above keeps the bundled font whatever font is picked
+      WoWeuCN_Quests_ApplyFontChoice();
 
       WoWeuCN_Quests_wait(2, Broadcast)      
       hooksecurefunc("QuestLog_Update", function(...) OnQuestLogUpdate(...) end);
