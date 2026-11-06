@@ -321,11 +321,52 @@ function WoWeuCN_Tooltips_BlizzardOptions()
   WoWeuCN_TooltipsCheckButton11.Checkbox:SetScript("OnClick", function(self) if (WoWeuCN_Tooltips_N_PS["overwritefonts"]=="0") then WoWeuCN_Tooltips_N_PS["overwritefonts"]="1" else WoWeuCN_Tooltips_N_PS["overwritefonts"]="0" end; end);
   WoWeuCN_TooltipsCheckButton11.Text:SetFont(WoWeuCN_Tooltips_Font2, 13);
   WoWeuCN_TooltipsCheckButton11:SetSize(850, 21)
+  -- one label or the other: the two notes after each other are wider than the panel
   local fontLabel = WoWeuCN_Tooltips_Interface.overwritefonts
   if WoWeuCN_Tooltips_IsClientChineseFontMissing() then
-    fontLabel = fontLabel .. "|cffffd100" .. WoWeuCN_Tooltips_Interface.fontmissing .. "|r"
+    fontLabel = WoWeuCN_Tooltips_Interface.fontmissing
   end
   WoWeuCN_TooltipsCheckButton11.Text:SetText(fontLabel);
+
+  -- The template puts each checkbox 80 px left of the middle of its row, which is under the longer labels.
+  -- Line the checkboxes up to the right of the widest label instead. Widths are final once the fonts are
+  -- loaded, so this runs again every time the panel is shown.
+  local optionRows = {}
+  for i = 1, 20 do
+    local row = _G["WoWeuCN_TooltipsCheckButton" .. i]
+    if row and row.Text and row.Checkbox then
+      optionRows[#optionRows + 1] = row
+    end
+  end
+  local function AlignCheckboxes()
+    local widest = 0
+    for _, row in ipairs(optionRows) do
+      local label = row.Text
+      local width = (label.GetUnboundedStringWidth and label:GetUnboundedStringWidth()) or label:GetStringWidth() or 0
+      if width > widest then
+        widest = width
+      end
+    end
+    if widest > 0 then
+      for _, row in ipairs(optionRows) do
+        row.Checkbox:ClearAllPoints()
+        row.Checkbox:SetPoint("LEFT", row, "LEFT", widest + 20, 0)
+      end
+    end
+  end
+  AlignCheckboxes()
+  WoWeuCN_TooltipsOptions:HookScript("OnShow", AlignCheckboxes)
+
+  local fontOptions = WoWeuCN_Tooltips_CreateFontOptions(WoWeuCN_TooltipsOptions, WoWeuCN_TooltipsCheckButton11, -18);
+  if fontOptions then
+    -- the font is only drawn with while the addon font is in use (the option above is ticked, or the
+    -- client lacks the Chinese font): its controls show only then
+    local function ShowFontOptions()
+      fontOptions:SetShown(WoWeuCN_Tooltips_UseAddonFont())
+    end
+    WoWeuCN_TooltipsCheckButton11.Checkbox:HookScript("OnClick", ShowFontOptions)
+    ShowFontOptions()
+  end
 end
 
 local function translateTooltip(tooltip, data, kind)
@@ -1048,6 +1089,8 @@ function WoWeuCN_Tooltips_OnEvent(self, event, name, ...)
 
       -- Create interface Options in Blizzard-Interface-Addons
       WoWeuCN_Tooltips_BlizzardOptions();
+      -- only now: the options panel built above keeps the bundled font whatever font is picked
+      WoWeuCN_Tooltips_ApplyFontChoice();
       WoWeuCN_Tooltips_wait(2, Broadcast);
       WoWeuCN_Tooltips:UnregisterEvent("ADDON_LOADED");      
       WoWeuCN_Tooltips.ADDON_LOADED = nil;

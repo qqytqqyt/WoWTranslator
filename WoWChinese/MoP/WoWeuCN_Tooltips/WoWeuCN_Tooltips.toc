@@ -1,6 +1,6 @@
 ﻿## Interface: 50504
 ## Title: WoWeuCN-Tooltips
-## Version: MoP 5.5.4.2
+## Version: MoP 5.5.4.3
 ## Notes_en: AddOn displays the translated information in Chinese.
 ## Author: qqytqqyt
 ## eMail: ytong007@hotmail.com
@@ -17,6 +17,7 @@ UnitData_cn.lua
 AchievementData_cn.lua
 EncounterData_cn.lua
 ChatFilter.lua
+FontChoice.lua
 FontFallback.lua
 AdvancedInterface.lua
 WoWeuCN_Tooltips.lua
