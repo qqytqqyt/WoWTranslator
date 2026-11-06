@@ -1072,6 +1072,29 @@ local heirloomJournalHooked = false
 local encounterJournalHooked = false
 local reminded = false
 
+local professionsHooked = false
+
+-- Blizzard_Professions loads on demand; this runs on every later ADDON_LOADED and once at start-up
+function WoWeuCN_Tooltips_HookProfessions()
+  if professionsHooked or not ProfessionsFrame or not ProfessionsFrame.CraftingPage
+      or not ProfessionsFrame.CraftingPage.SchematicForm or not ProfessionsReagentSlotMixin then
+    return
+  end
+  -- the crafting page and, on Retail, the crafting order view each have their own schematic form
+  local orderView = ProfessionsFrame.OrdersPage and ProfessionsFrame.OrdersPage.OrderView
+  local forms = { ProfessionsFrame.CraftingPage.SchematicForm,
+                  orderView and orderView.OrderDetails and orderView.OrderDetails.SchematicForm }
+  for _, form in pairs(forms) do
+    if form.UpdateOutputItem and form.UpdateRecipeDescription then
+      hooksecurefunc(form, "UpdateOutputItem", function(self) OnProfessionsOutputItem(self) end);
+      hooksecurefunc(form, "UpdateRecipeDescription", function(self) OnProfessionsRecipeDescription(self) end);
+    end
+  end
+  -- reagent slots are pooled frames created when a recipe is first shown, so they copy the hooked mixin
+  hooksecurefunc(ProfessionsReagentSlotMixin, "Update", function(self) OnProfessionsReagentSlotUpdate(self) end);
+  professionsHooked = true
+end
+
 local function OnEvent(self, event, prefix, text, channel, sender, ...)
   if event == "CHAT_MSG_ADDON" and prefix == WoWeuCN_AddonPrefix then
     if text == "VERSION" then
@@ -1168,6 +1191,10 @@ local function OnEvent(self, event, prefix, text, channel, sender, ...)
     encounterJournalHooked = true
   end
 
+  if (event=="ADDON_LOADED") then
+    WoWeuCN_Tooltips_HookProfessions()
+  end
+
   if (event=="ADDON_LOADED" and name=="Plater") then
     if (WoWeuCN_Tooltips_N_PS["transnameplate"]=="0") then
       Plater.ImportScriptString (WoWeuCN_Plater_Mod_Empty, true, true, true, false)
@@ -1200,6 +1227,7 @@ function Broadcast()
   f:RegisterEvent("CHAT_MSG_ADDON")
   f:RegisterEvent("ADDON_LOADED")
   f:SetScript("OnEvent", OnEvent)
+  WoWeuCN_Tooltips_HookProfessions()
   local name,title,_,enabled = C_AddOns.GetAddOnInfo('WoWeuCN_Quests')
   if (enabled == true) then
     return

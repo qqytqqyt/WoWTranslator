@@ -460,7 +460,7 @@ function OnHousePreview(self, catalogEntryInfo)
     end
   end
 end
--- Profession window (Forever's mainline ProfessionsFrame): names that come from item and spell ids.
+-- Profession window (mainline ProfessionsFrame): names that come from item and spell ids.
 -- Category headers, recipe names and the "Requires:" line are database names: WoWeuCN_Interface does those.
 local function ProfessionsOff()
   return WoWeuCN_Tooltips_N_PS["active"]=="0" or WoWeuCN_Tooltips_N_PS["transadvanced"]=="0"
@@ -518,8 +518,12 @@ function OnProfessionsRecipeDescription(form)
   if not spellData then
     return
   end
-  -- the scanned spell tooltip: line 1 is the name, the description is the next line drawn in gold
+  -- the scanned spell tooltip: line 1 is the name, the description is the first gold line before the
+  -- crafted item's own block (which starts on a new line and carries its own gold flavour text)
   for i = 2, #spellData do
+    if string.find(RemoveColourCode(ReplaceText(spellData[i])), "^\n") then
+      return
+    end
     if string.sub(spellData[i], 1, 2) == "Å" then
       WoWeuCN_Tooltips_ApplyAddonFont(form.Description)
       form.Description:SetText(RemoveColourCode(ReplaceText(spellData[i])))

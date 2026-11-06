@@ -1089,9 +1089,16 @@ function WoWeuCN_Tooltips_HookProfessions()
       or not ProfessionsFrame.CraftingPage.SchematicForm or not ProfessionsReagentSlotMixin then
     return
   end
-  local form = ProfessionsFrame.CraftingPage.SchematicForm
-  hooksecurefunc(form, "UpdateOutputItem", function(self) OnProfessionsOutputItem(self) end);
-  hooksecurefunc(form, "UpdateRecipeDescription", function(self) OnProfessionsRecipeDescription(self) end);
+  -- the crafting page and, on Retail, the crafting order view each have their own schematic form
+  local orderView = ProfessionsFrame.OrdersPage and ProfessionsFrame.OrdersPage.OrderView
+  local forms = { ProfessionsFrame.CraftingPage.SchematicForm,
+                  orderView and orderView.OrderDetails and orderView.OrderDetails.SchematicForm }
+  for _, form in pairs(forms) do
+    if form.UpdateOutputItem and form.UpdateRecipeDescription then
+      hooksecurefunc(form, "UpdateOutputItem", function(self) OnProfessionsOutputItem(self) end);
+      hooksecurefunc(form, "UpdateRecipeDescription", function(self) OnProfessionsRecipeDescription(self) end);
+    end
+  end
   -- reagent slots are pooled frames created when a recipe is first shown, so they copy the hooked mixin
   hooksecurefunc(ProfessionsReagentSlotMixin, "Update", function(self) OnProfessionsReagentSlotUpdate(self) end);
   professionsHooked = true
