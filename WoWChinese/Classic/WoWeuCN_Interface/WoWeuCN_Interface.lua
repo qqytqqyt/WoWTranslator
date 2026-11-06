@@ -589,7 +589,7 @@ function WoWeuCN_Interface_ApplyFonts()
   local fonts = GetFonts();
   for i = 1, #fonts do
     local name = fonts[i];
-    if (type(name) == "string" and not WoWeuCN_Interface_FontsDone[name]) then
+    if (type(name) == "string" and not WoWeuCN_Interface_FontsDone[name] and not string.find(name, "^WoWeuCN_")) then
       WoWeuCN_Interface_FontsDone[name] = true;
       local fontObject = _G[name];
       if (type(fontObject) == "table" and fontObject.GetFont and fontObject.SetFont) then
@@ -613,6 +613,13 @@ function WoWeuCN_Interface_ApplyFonts()
       end
     end
   end
+end
+
+function WoWeuCN_Interface_OnFontChanged()
+  for name in pairs(WoWeuCN_Interface_FontsDone) do
+    WoWeuCN_Interface_FontsDone[name] = nil;
+  end
+  WoWeuCN_Interface_ApplyFonts();
 end
 
 local function WoWeuCN_Interface_IsInExcludedFrame(frame)
@@ -1791,6 +1798,16 @@ function WoWeuCN_Interface_BlizzardOptions()
   rescanButton:SetScript("OnClick", function()
     WoWeuCN_Interface_RequestRescan();
   end);
+
+  local fontOptions = WoWeuCN_Interface_CreateFontOptions(WoWeuCN_InterfaceOptions, rescanButton, -18);
+  if (fontOptions) then
+
+    local function ShowFontOptions()
+      fontOptions:SetShown(WoWeuCN_Interface_N_PS["transfont"] == "1");
+    end
+    fontButton.Checkbox:HookScript("OnClick", ShowFontOptions);
+    ShowFontOptions();
+  end
 end
 
 function WoWeuCN_Interface_BroadcastVersion()
@@ -1858,6 +1875,8 @@ function WoWeuCN_Interface_OnEvent(self, event, arg1, arg2, arg3, arg4)
       SLASH_WOWEUCN_INTERFACE2 = "/wcni";
       WoWeuCN_Interface_CheckVars();
       WoWeuCN_Interface_BlizzardOptions();
+
+      WoWeuCN_Interface_ApplyFontChoice();
       WoWeuCN_Interface_InitPopupHook();
       WoWeuCN_Interface_InitGameMenuHook();
 

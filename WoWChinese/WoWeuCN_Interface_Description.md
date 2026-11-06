@@ -21,7 +21,7 @@
 - **安全翻译架构**：本插件**从不修改任何暴雪全局字符串、不调用任何保护函数**。所有翻译都通过插件自身的延迟渲染通道改写界面文字，从根本上避免了 12.x 版本因 taint（污染）与 secret（机密值）机制导致的“界面操作被阻止”、战斗功能失效等问题。
 - **实时翻译**：界面刷新后毫秒级重新翻译，打开任何面板即刻显示中文。
 - **格式化文本支持**：内置数千条格式模板，`Abandon "任务名"?`、`Level 80` 这类带参数的动态文本也能正确翻译并保留参数。
-- **不改动字体**：默认不替换任何字体，英文文本外观保持原样；中文由客户端自带的字体回退机制渲染。若中文显示为方块，可在设置中开启“全局替换界面字体”。
+- **不改动字体**：默认不替换任何字体，英文文本外观保持原样；中文由客户端自带的字体回退机制渲染。若中文显示为方块，可在设置中开启“全局替换界面字体”；替换所用的字体可在设置中选择（内置字体、游戏默认字体或任意字体文件）。
 - **完整选项**：ESC → 选项 → 插件 → WoWeuCN-Interface，或使用命令 `/wcni`（`on` / `off` / `rescan` / `status`）。
 
 ### 有意保留英文的部分（正式服、WoW: Forever）
@@ -59,7 +59,7 @@
 - **Taint-safe architecture**: the addon **never modifies any Blizzard global string and never calls protected functions**. All translation is done by rewriting rendered text from the addon's own deferred passes, which structurally avoids the 12.x taint/secret-value problems ("Interface action failed", broken combat features) that plague global-replacement approaches.
 - **Live retranslation**: text is re-translated within the same frame whenever the UI refreshes, so panels show Chinese the moment they open.
 - **Formatted text support**: thousands of built-in format templates translate parameterized text like `Abandon "QuestName"?` or `Level 80` while preserving the values.
-- **Fonts untouched**: no fonts are replaced by default — English text keeps its original look, and Chinese renders through the client's built-in font fallback. An optional global font swap is available in the settings if your client shows squares instead of Chinese.
+- **Fonts untouched**: no fonts are replaced by default — English text keeps its original look, and Chinese renders through the client's built-in font fallback. An optional global font swap is available in the settings if your client shows squares instead of Chinese; the font it uses can be picked there too (the bundled font, the client's own font file or any font file of yours).
 - **Full options**: ESC → Options → AddOns → WoWeuCN-Interface, or `/wcni` (`on` / `off` / `rescan` / `status`).
 
 ### Deliberately kept in English (Retail, WoW: Forever)
