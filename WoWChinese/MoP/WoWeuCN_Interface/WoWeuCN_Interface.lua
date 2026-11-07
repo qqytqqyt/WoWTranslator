@@ -1123,6 +1123,184 @@ local function WoWeuCN_Interface_IsHotKeyRegion(fontString)
   return false;
 end
 
+local WoWeuCN_Interface_AddonRegionCache = setmetatable({}, { __mode = "k" });
+local WoWeuCN_Interface_UnitPopupMenu = nil;
+local WoWeuCN_Interface_UnitPopupOwner = nil;
+
+local function WoWeuCN_Interface_Binding(node)
+  local name = node.GetName and node:GetName();
+  if (type(name) == "string" and name ~= "" and rawequal(_G[name], node)) then
+    return issecurevariable(name), true;
+  end
+  local parent = node.GetParent and node:GetParent();
+  if (parent and type(node.GetParentKey) == "function") then
+    local key = node:GetParentKey();
+    if (type(key) == "string" and key ~= "" and rawequal(rawget(parent, key), node)) then
+      return issecurevariable(parent, key), false;
+    end
+  end
+  return nil, false;
+end
+
+local function WoWeuCN_Interface_MenuOwner(node)
+  if (type(node.GetOwnerRegion) == "function") then
+    local ok, owner = pcall(node.GetOwnerRegion, node);
+    if (ok) then
+      local isUnitPopup = WoWeuCN_Interface_UnitPopupMenu ~= nil
+          and rawequal(node, WoWeuCN_Interface_UnitPopupMenu)
+          and rawequal(owner, WoWeuCN_Interface_UnitPopupOwner);
+      return true, owner, isUnitPopup;
+    end
+  end
+  local name = node.GetName and node:GetName();
+  if (type(name) == "string" and string.find(name, "^DropDownList%d+$")) then
+    local owner = rawget(node, "dropdown");
+    if (type(owner) ~= "table") then
+      owner = nil;
+    end
+    return true, owner, false;
+  end
+  return false, nil, false;
+end
+
+local function WoWeuCN_Interface_SettingsHosts()
+  local panel = _G["SettingsPanel"];
+  if (type(panel) ~= "table") then
+    return nil, nil, nil;
+  end
+  local container = rawget(panel, "Container");
+  if (type(container) ~= "table") then
+    return nil, nil, nil;
+  end
+  local list = rawget(container, "SettingsList");
+  local listBox = (type(list) == "table") and rawget(list, "ScrollBox") or nil;
+  return panel, rawget(container, "SettingsCanvas"), listBox;
+end
+
+local function WoWeuCN_Interface_IsAddOnSettingsCategory(panel)
+  local categorySets = (type(Settings) == "table") and Settings.CategorySet or nil;
+  if (type(categorySets) ~= "table" or type(panel.GetCurrentCategory) ~= "function") then
+    return false;
+  end
+  local category = panel:GetCurrentCategory();
+  if (type(category) ~= "table" or type(category.GetCategorySet) ~= "function") then
+    return false;
+  end
+  return category:GetCategorySet() == categorySets.AddOns;
+end
+
+local function WoWeuCN_Interface_ComputeAddonRegion(region)
+  local chain = {};
+  local node = region;
+  local dynamic = false;
+  local steps = 0;
+  while (node and steps < 60) do
+    steps = steps + 1;
+    if (rawequal(node, UIParent) or rawequal(node, WorldFrame)) then
+      break;
+    end
+    if (node.IsForbidden and node:IsForbidden()) then
+      return false, false;
+    end
+    local isMenu, owner, isUnitPopup = WoWeuCN_Interface_MenuOwner(node);
+    if (isMenu) then
+      dynamic = true;
+      if (isUnitPopup) then
+        return false, false;
+      end
+      chain = {};
+      node = owner;
+    else
+      chain[#chain + 1] = node;
+      node = node:GetParent();
+    end
+  end
+
+  local panel, canvas, listBox = WoWeuCN_Interface_SettingsHosts();
+  local keyed = nil;
+  for i = 1, #chain do
+    local current = chain[i];
+    if (panel and ((canvas and rawequal(current, canvas)) or (listBox and rawequal(current, listBox)))) then
+      dynamic = true;
+      if (WoWeuCN_Interface_IsAddOnSettingsCategory(panel)) then
+        return true, false;
+      end
+    end
+    local secure, named = WoWeuCN_Interface_Binding(current);
+    if (secure ~= nil) then
+      if (named) then
+        return not secure, not dynamic;
+      end
+      if (keyed == nil) then
+        keyed = not secure;
+      end
+    end
+  end
+  if (keyed ~= nil) then
+    return keyed, not dynamic;
+  end
+  return true, false;
+end
+
+function WoWeuCN_Interface_IsAddonRegion(region)
+  if (type(issecurevariable) ~= "function") then
+    return false;
+  end
+  local cached = WoWeuCN_Interface_AddonRegionCache[region];
+  if (cached ~= nil) then
+    return cached;
+  end
+  local ok, isAddon, cacheable = pcall(WoWeuCN_Interface_ComputeAddonRegion, region);
+  if (not ok) then
+    return false;
+  end
+  if (cacheable) then
+    WoWeuCN_Interface_AddonRegionCache[region] = isAddon;
+  end
+  return isAddon;
+end
+
+function WoWeuCN_Interface_ClearAddonRegionCache()
+  WoWeuCN_Interface_AddonRegionCache = setmetatable({}, { __mode = "k" });
+end
+
+local function WoWeuCN_Interface_OnUnitPopupOpened()
+  WoWeuCN_Interface_UnitPopupMenu = nil;
+  WoWeuCN_Interface_UnitPopupOwner = nil;
+  local menuApi = _G["Menu"];
+  if (type(menuApi) ~= "table" or type(menuApi.GetManager) ~= "function") then
+    return;
+  end
+  local ok, manager = pcall(menuApi.GetManager);
+  if (not ok or type(manager) ~= "table" or type(manager.GetOpenMenu) ~= "function") then
+    return;
+  end
+  local menuOk, menu = pcall(manager.GetOpenMenu, manager);
+  if (not menuOk or type(menu) ~= "table" or type(menu.GetOwnerRegion) ~= "function") then
+    return;
+  end
+  local ownerOk, owner = pcall(menu.GetOwnerRegion, menu);
+  if (ownerOk) then
+    WoWeuCN_Interface_UnitPopupMenu = menu;
+    WoWeuCN_Interface_UnitPopupOwner = owner;
+  end
+end
+
+local WoWeuCN_Interface_MenuHooked = false;
+function WoWeuCN_Interface_InitMenuHook()
+  if (WoWeuCN_Interface_MenuHooked) then
+    return;
+  end
+  if (WoWeuCN_Interface_N_PS["active"] == "0") then
+    return;
+  end
+  if (type(UnitPopup_OpenMenu) ~= "function") then
+    return;
+  end
+  WoWeuCN_Interface_MenuHooked = true;
+  hooksecurefunc("UnitPopup_OpenMenu", WoWeuCN_Interface_OnUnitPopupOpened);
+end
+
 local function WoWeuCN_Interface_TranslateFontString(fontString)
   local text = fontString:GetText();
   if (issecretvalue and issecretvalue(text)) then
@@ -1148,7 +1326,8 @@ local function WoWeuCN_Interface_TranslateFontString(fontString)
     return 0;
   end
   if (WoWeuCN_Interface_IsTitleRegion(fontString) or WoWeuCN_Interface_IsHotKeyRegion(fontString)
-      or (not isDbName and WoWeuCN_Interface_IsNameRegion(fontString))) then
+      or (not isDbName and WoWeuCN_Interface_IsNameRegion(fontString))
+      or WoWeuCN_Interface_IsAddonRegion(fontString)) then
     return 0;
   end
 
@@ -1278,6 +1457,7 @@ local function WoWeuCN_Interface_ReportRescan(total)
 end
 
 function WoWeuCN_Interface_RequestRescan()
+  WoWeuCN_Interface_ClearAddonRegionCache();
   if (not WoWeuCN_Interface_ScanExistingText(WoWeuCN_Interface_ReportRescan)) then
     print("WOWeuCN - Interface: 翻译模块未启用, 无法重新扫描.");
     return false;
@@ -1672,6 +1852,7 @@ function WoWeuCN_Interface_SlashCommand(msg)
         WoWeuCN_Interface_ScanExistingText();
         WoWeuCN_Interface_InitPopupHook();
         WoWeuCN_Interface_InitGameMenuHook();
+        WoWeuCN_Interface_InitMenuHook();
       end
     end
   elseif (msg == "off") then
@@ -1686,6 +1867,21 @@ function WoWeuCN_Interface_SlashCommand(msg)
   elseif (msg == "status") then
     local state = (WoWeuCN_Interface_N_PS["active"] == "1") and WoWeuCN_Interface_Messages.isactive or WoWeuCN_Interface_Messages.isinactive;
     print("WOWeuCN - Interface " .. state .. ": 已翻译 " .. WoWeuCN_Interface_Swept .. " 处界面文本.");
+  elseif (msg == "who") then
+    local focus = nil;
+    if (type(GetMouseFoci) == "function") then
+      local foci = GetMouseFoci();
+      focus = foci and foci[1];
+    elseif (type(GetMouseFocus) == "function") then
+      focus = GetMouseFocus();
+    end
+    if (type(focus) ~= "table" or (focus.IsForbidden and focus:IsForbidden())) then
+      print("WOWeuCN - Interface: 鼠标下没有可检查的界面.");
+    else
+      local label = (focus.GetDebugName and focus:GetDebugName()) or (focus.GetName and focus:GetName()) or "?";
+      local owner = WoWeuCN_Interface_IsAddonRegion(focus) and "插件界面, 不翻译" or "暴雪界面, 翻译";
+      print("WOWeuCN - Interface: " .. tostring(label) .. " - " .. owner .. ".");
+    end
   elseif (msg == "") then
     if (Settings and Settings.OpenToCategory and WoWeuCN_Interface_SettingsCategory) then
       Settings.OpenToCategory(WoWeuCN_Interface_SettingsCategory:GetID());
@@ -1696,6 +1892,7 @@ function WoWeuCN_Interface_SlashCommand(msg)
     print("      /woweucn-interface off    - 禁用界面翻译模块");
     print("      /woweucn-interface rescan - 重新扫描并修复界面文本");
     print("      /woweucn-interface status - 显示当前状态");
+    print("      /woweucn-interface who    - 显示鼠标下的界面是否属于暴雪界面");
   end
 end
 
@@ -1856,6 +2053,7 @@ function WoWeuCN_Interface_RunDeferredInit()
   WoWeuCN_Interface_InitGameMenuHook();
   WoWeuCN_Interface_InitPanelHook();
   WoWeuCN_Interface_InitLiveHook();
+  WoWeuCN_Interface_InitMenuHook();
   WoWeuCN_Interface_ApplyFonts();
   WoWeuCN_Interface_ScanExistingText();
   if (WoWeuCN_Interface_N_PS["active"] == "1") then
