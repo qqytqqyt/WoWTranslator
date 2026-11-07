@@ -1,6 +1,6 @@
 ## Interface: 16001
 ## Title: WoWeuCN-Interface
-## Version: Forever 1.60.1.7
+## Version: Forever 1.60.1.8
 ## Notes_en: AddOn translates the game interface (global strings) into Chinese.
 ## Category: Translation
 ## Author: qqytqqyt
@@ -14,5 +14,6 @@ InterfaceData_cn.lua
 GlobalStringsData_cn.lua
 DatabaseNames_cn.lua
 FontChoice.lua
+LoginNotice.lua
 WoWeuCN_Interface.lua
 WoWeuCN_Interface.xml

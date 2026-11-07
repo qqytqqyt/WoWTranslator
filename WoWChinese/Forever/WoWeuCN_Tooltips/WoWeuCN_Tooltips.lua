@@ -1262,10 +1262,6 @@ function Broadcast()
 
   print ("|cffffff00WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version.." - "..WoWeuCN_Tooltips_Messages.loaded.." - |cffa335ee作者："..WoWeuCN_Tooltips_Messages.author.."|r");
   
-  if (WoWeuCN_Tooltips_N_PS["transnameplate"]~="0") then
-    print ("|cffffff00已加入姓名版翻译功能，请开启对应单位血条(V/Ctrl+V/Shift+V)。已安装<Plater>姓名版插件时相关数据会自动导入进Plater中，否则将游戏自带姓名版上的NPC名字替换为中文名。如需完全关闭请于插件设置里禁用。|r");
-  end
-  
   local name, _, rank = GetGuildInfo("player");
   if name ~= nil then
     C_ChatInfo.SendAddonMessage(WoWeuCN_AddonPrefix, "WoWeuCN-Tooltips ver. "..WoWeuCN_Tooltips_version .. " Loaded", "GUILD")
