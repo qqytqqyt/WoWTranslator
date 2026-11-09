@@ -646,10 +646,29 @@ local function ReplaceUIText(textItem, text, maxFontSize)
    end
  end
 
--- Swaps the English title inside a quest log button for the Chinese one and keeps what the client
--- puts around it: the "[60] " level prefix (Retail with Show Quest Level or colorblind mode on,
--- always "[60+] " on Forever), the "[2] " party member count and quest type markup. Falls back to
--- replacing the whole text.
+-- Returns the client's quest title text with the English title swapped for the Chinese one, keeping
+-- what the client puts around it: the "[60] " level prefix (Retail with Show Quest Level or
+-- colorblind mode on, always "[60+] " on Forever), the "[2] " party member count, quest type markup
+-- and the difficulty colour code the objective tracker wraps the title in (the tracker header's own
+-- text colour is the plain yellow header colour, so dropping the code turns every title yellow).
+-- When the English title is not in the text, the whole text is replaced, keeping a leading colour code.
+local function SwapQuestTitle(current, questID, title)
+   local english = C_QuestLog.GetTitleForQuestID(questID)
+   local first, last = nil, nil
+   if (english and english ~= "") then
+      first, last = string.find(current, english, 1, true)
+   end
+   if (first) then
+      return string.sub(current, 1, first - 1) .. title .. string.sub(current, last + 1)
+   end
+   local colour = string.match(current, "^|c%x%x%x%x%x%x%x%x")
+   if (colour) then
+      return colour .. title .. "|r"
+   end
+   return title
+end
+
+-- Swaps the English title inside a quest log button for the Chinese one (see SwapQuestTitle).
 local function TranslateQuestLogTitle(textItem, questID, title)
    local current = textItem:GetText()
    if (current == nil or title == nil or title == "" or (issecretvalue and issecretvalue(current))) then
@@ -658,16 +677,7 @@ local function TranslateQuestLogTitle(textItem, questID, title)
    if (string.find(current, title, 1, true)) then
       return
    end
-   local english = C_QuestLog.GetTitleForQuestID(questID)
-   local first, last = nil, nil
-   if (english and english ~= "") then
-      first, last = string.find(current, english, 1, true)
-   end
-   if (first) then
-      textItem:SetText(string.sub(current, 1, first - 1) .. title .. string.sub(current, last + 1))
-   else
-      ReplaceUIText(textItem, title, 20)
-   end
+   ReplaceUIText(textItem, SwapQuestTitle(current, questID, title), 20)
 end
 
 function OnQuestLogUpdate(poiTable)
@@ -749,11 +759,16 @@ local function WoWeuCN_Quests_TranslateTrackerBlock(block)
    local questID = block.id;
    if (type(questID)=="number" and block.HeaderText) then
       local data = QuestData[tostring(questID)];
-      if (data and data["Title"] and data["Title"]~="") then
+      local current = block.HeaderText:GetText();
+      if (data and data["Title"] and data["Title"]~="" and current
+          and not (issecretvalue and issecretvalue(current))) then
          local title = WoWeuCN_Quests_ExpandUnitInfo(data["Title"]);
-         -- only the text is replaced; sizes, anchors and fonts stay whatever
-         -- the secure layout computed
-         WoWeuCN_Quests_SetTrackerText(block.HeaderText, title);
+         -- only the English title inside the text is swapped, so the difficulty
+         -- colour code and level prefix Blizzard wrapped around it stay; sizes,
+         -- anchors and colours stay whatever the secure layout computed
+         if (not string.find(current, title, 1, true)) then
+            WoWeuCN_Quests_SetTrackerText(block.HeaderText, SwapQuestTitle(current, questID, title));
+         end
       end
    end
    -- well-known lines ("Ready for turn-in" etc.)
