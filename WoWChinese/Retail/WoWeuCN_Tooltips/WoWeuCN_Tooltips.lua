@@ -644,6 +644,8 @@ local function IsMostlyWhite(style)
   return style.r and style.g and style.b and style.r > 0.9 and style.g > 0.9 and style.b > 0.9
 end
 
+local WHITE_STYLE = { r = 1, g = 1, b = 1, a = 1 }
+
 local function AddTranslatedTooltipData(tooltip, translatedData, formatter, kind)
   if (tooltip == nil or translatedData == nil or #translatedData == 0) then
     return
@@ -671,15 +673,25 @@ local function AddTranslatedTooltipData(tooltip, translatedData, formatter, kind
     end
   end
 
+  -- Spell and item data carry their own colours: every line that was not white in the scan is stored
+  -- wrapped in |cff...|r, so a bare line was white. Borrowing a colour of the English tooltip for it
+  -- paints it like an unrelated line (a recipe's green item name turned all lines after it green).
+  -- Unit data is stored without colours and still borrows them.
+  local dataHasColours = kind == "spell" or kind == "item"
   local lineStyles = {}
   for i = 1, translatedLines do
-    local sourceLineIndex = i
-    if sourceLineIndex > originalLineCount then
-      sourceLineIndex = originalLineCount
-    end
-    local style = GetTooltipLineStyle(tooltip, sourceLineIndex)
-    if i > 1 and firstColoredDescriptionStyle and (not style or IsMostlyWhite(style)) then
-      style = firstColoredDescriptionStyle
+    local style
+    if i > 1 and dataHasColours then
+      style = WHITE_STYLE
+    else
+      local sourceLineIndex = i
+      if sourceLineIndex > originalLineCount then
+        sourceLineIndex = originalLineCount
+      end
+      style = GetTooltipLineStyle(tooltip, sourceLineIndex)
+      if i > 1 and firstColoredDescriptionStyle and (not style or IsMostlyWhite(style)) then
+        style = firstColoredDescriptionStyle
+      end
     end
     lineStyles[i] = style
   end
