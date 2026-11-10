@@ -787,13 +787,19 @@ local function WoWeuCN_Interface_MapName(id)
   return type(info) == "table" and info.name or nil;
 end
 
+local WoWeuCN_Interface_MapText = nil;
+
 local function WoWeuCN_Interface_BuildMapText()
+  if (WoWeuCN_Interface_MapText) then
+    return WoWeuCN_Interface_MapText;
+  end
   local map = {};
   if (type(C_Map.GetMapInfo) == "function") then
     WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_UiMaps, WoWeuCN_Interface_MapName);
   end
   WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_Areas, C_Map.GetAreaInfo);
   WoWeuCN_Interface_AddFlatByText(map, WoWeuCN_Interface_QuestSorts);
+  WoWeuCN_Interface_MapText = map;
   return map;
 end
 
@@ -906,6 +912,8 @@ local WoWeuCN_Interface_DbContexts = {
   { roots = { "AuctionHouseFrame" }, data = "ItemSubClasses", build = WoWeuCN_Interface_BuildSubClassText },
   { roots = { "WorldMapFrame", "QuestMapFrame", "BattlefieldMapFrame", "MinimapCluster", "ZoneTextFrame",
       "SubZoneTextFrame" }, data = "UiMaps", api = "C_Map", build = WoWeuCN_Interface_BuildMapText },
+  { roots = { "CommunitiesFrame" }, regions = { Zone = true, ZoneText = true, BossLocationText = true },
+    data = "UiMaps", api = "C_Map", build = WoWeuCN_Interface_BuildMapText },
   { roots = { "ProfessionsFrame", "ProfessionsBookFrame" }, data = "RecipeNames", api = "C_TradeSkillUI",
     build = WoWeuCN_Interface_BuildProfessionText, event = "TRADE_SKILL_LIST_UPDATE",
     compose = WoWeuCN_Interface_ComposeProfessionText, names = true },
@@ -959,6 +967,12 @@ local function WoWeuCN_Interface_DbContextVisible(context)
 end
 
 local function WoWeuCN_Interface_IsUnderDbRoot(fontString, context)
+  if (context.regions) then
+    local key = type(fontString.GetParentKey) == "function" and fontString:GetParentKey();
+    if (type(key) ~= "string" or not context.regions[key]) then
+      return false;
+    end
+  end
   local parent = fontString:GetParent();
   local depth = 0;
   while (parent and depth < 20) do
