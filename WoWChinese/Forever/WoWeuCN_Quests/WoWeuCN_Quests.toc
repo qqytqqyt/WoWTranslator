@@ -1,6 +1,6 @@
 ﻿## Interface: 16001
 ## Title: WoWeuCN-Quests
-## Version: Forever 1.60.1.9
+## Version: Forever 1.60.1.10
 ## Notes_en: AddOn displays the translated quest informations in Chinese.
 ## Notes: Inspired from WoWpoPolsku-Quests (https://wowpopolsku.pl).
 ## Category: Translation
@@ -14,6 +14,7 @@
 DataStore.lua
 QuestData.lua
 QuestData_cn.lua
+QuestData_2_cn.lua
 FontChoice.lua
 LoginNotice.lua
 WoWeuCN_Quests.lua
