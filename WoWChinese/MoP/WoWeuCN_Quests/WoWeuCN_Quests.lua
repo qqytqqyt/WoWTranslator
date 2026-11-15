@@ -3,9 +3,9 @@
 -- Credit to: Platine https://wowpopolsku.pl
 
 -- Local variables
-local _, DataStore = ...
-local QuestData = DataStore.R("Quest", { "Title", "Objectives", "Description", "Progress", "Completion", "Translator" })
-local ScriptData = DataStore.V("Script")
+local _, Data = ...
+local QuestData = Data.Records("Quest")
+local ScriptData = Data.Values("Script")
 local WoWeuCN_Quests_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_CtrFrame = CreateFrame("FRAME", "WoWEenCN-BubblesFrame");
