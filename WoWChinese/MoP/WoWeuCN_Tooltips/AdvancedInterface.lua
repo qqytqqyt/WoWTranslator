@@ -1,6 +1,6 @@
-local _, DataStore = ...
-local EncounterData = DataStore.R("Encounter", { "Title", "Description" })
-local EncounterSectionData = DataStore.R("EncounterSection", { "Title", "Description" })
+local _, Data = ...
+local EncounterData = Data.Records("Encounter")
+local EncounterSectionData = Data.Records("EncounterSection")
 
 function RemoveColourCode(s)
   if (s == nil) then
