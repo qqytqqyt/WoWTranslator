@@ -1,6 +1,6 @@
 ﻿## Interface: 120105
 ## Title: WoWeuCN-Tooltips
-## Version: 12.1.5.8
+## Version: 12.1.5.9
 ## Notes_en: AddOn displays the translated information in Chinese.
 ## Category: Translation
 ## Author: qqytqqyt
@@ -12,6 +12,7 @@
 ## IconTexture: Interface\AddOns\WoWeuCN_Tooltips\icon.tga
 
 DataStore.lua
+DataBlocks.lua
 TooltipsData_cn.lua
 ItemData_cn.lua
 SpellData_cn.lua

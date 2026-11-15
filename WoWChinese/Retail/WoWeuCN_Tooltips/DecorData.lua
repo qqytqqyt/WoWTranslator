@@ -1,3 +1,4 @@
+-- Data is self-funded and scanned by qqytqqyt. Please note the source for any redistribution.
 WoWeuCN_Tooltips_DecorMapping = {
 ["9476"] = 253599,
 ["8988"] = 252040,

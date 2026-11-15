@@ -1,7 +1,7 @@
 ﻿-- Addon: WoWeuCN-Tooltips
 -- Author: qqytqqyt
 
-local _, DataStore = ...
+local _, Data = ...
 
 -- Local variables
 local WoWeuCN_Tooltips_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Tooltips", "Version");
@@ -435,7 +435,7 @@ function ReplaceText(s)
 end
 
 local function FindData(num_id, name)
-  local data = DataStore.G(name, num_id)
+  local data = Data.Get(name, num_id)
   if (data == nil) then
     return nil
   end
