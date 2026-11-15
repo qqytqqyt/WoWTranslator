@@ -3,8 +3,8 @@
 -- Credit to: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
 
 -- Local variables
-local _, DataStore = ...
-local QuestData = DataStore.R("Quest", { "Title", "Objectives", "Description", "Progress", "Completion", "Translator" })
+local _, Data = ...
+local QuestData = Data.Records("Quest")
 local WoWeuCN_Quests_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_onDebug = false;      

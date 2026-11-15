@@ -3,22 +3,8 @@
 -- Credit to: Platine  (e-mail: platine.wow@gmail.com) https://wowpopolsku.pl
 
 -- Local variables
-local _, DataStore = ...
-local QuestFields = { "Title", "Objectives", "Description", "Progress", "Completion", "Translator" }
-local D1 = DataStore.R("Quest", QuestFields)
-local D2 = DataStore.R("Quest2", QuestFields)
-local QuestData = setmetatable({}, { __index = function(_, id)
-   local data = D2[id]
-   if (data == nil) then
-      return D1[id]
-   end
-   for i = 1, #QuestFields do
-      if (data[QuestFields[i]] ~= "") then
-         return data
-      end
-   end
-   return nil
-end })
+local _, Data = ...
+local QuestData = Data.Records("Quest")
 local WoWeuCN_Quests_version = C_AddOns.GetAddOnMetadata("WoWeuCN_Quests", "Version");
 local WoWeuCN_AddonPrefix = "WoWeuCN";   
 local WoWeuCN_Quests_onDebug = false;      
