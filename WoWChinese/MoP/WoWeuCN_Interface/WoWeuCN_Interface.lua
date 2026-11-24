@@ -966,6 +966,40 @@ local function WoWeuCN_Interface_DbContextVisible(context)
   return false;
 end
 
+local function WoWeuCN_Interface_ParentMenuRow(menu)
+  local _, row = menu:GetPoint(1);
+  if ((issecretvalue and issecretvalue(row)) or type(row) ~= "table") then
+    return nil;
+  end
+  local node = row:GetParent();
+  local depth = 0;
+  while (node and depth < 10) do
+    if (type(node.GetOwnerRegion) == "function") then
+      return row;
+    end
+    node = node:GetParent();
+    depth = depth + 1;
+  end
+  return nil;
+end
+
+local function WoWeuCN_Interface_OwnerRegion(node)
+  if (type(node.GetOwnerRegion) ~= "function") then
+    return false, nil;
+  end
+  local ok, owner = pcall(node.GetOwnerRegion, node);
+  if (not ok) then
+    return false, nil;
+  end
+  if (owner == nil) then
+    local rowOk, row = pcall(WoWeuCN_Interface_ParentMenuRow, node);
+    if (rowOk) then
+      owner = row;
+    end
+  end
+  return true, owner;
+end
+
 local function WoWeuCN_Interface_IsUnderDbRoot(fontString, context)
   if (context.regions) then
     local key = type(fontString.GetParentKey) == "function" and fontString:GetParentKey();
@@ -982,11 +1016,9 @@ local function WoWeuCN_Interface_IsUnderDbRoot(fontString, context)
       end
     end
     local nextParent = parent:GetParent();
-    if (type(parent.GetOwnerRegion) == "function") then
-      local ok, owner = pcall(parent.GetOwnerRegion, parent);
-      if (ok and owner) then
-        nextParent = owner;
-      end
+    local ok, owner = WoWeuCN_Interface_OwnerRegion(parent);
+    if (ok and owner) then
+      nextParent = owner;
     end
     parent = nextParent;
     depth = depth + 1;
@@ -1157,14 +1189,12 @@ local function WoWeuCN_Interface_Binding(node)
 end
 
 local function WoWeuCN_Interface_MenuOwner(node)
-  if (type(node.GetOwnerRegion) == "function") then
-    local ok, owner = pcall(node.GetOwnerRegion, node);
-    if (ok) then
-      local isUnitPopup = WoWeuCN_Interface_UnitPopupMenu ~= nil
-          and rawequal(node, WoWeuCN_Interface_UnitPopupMenu)
-          and rawequal(owner, WoWeuCN_Interface_UnitPopupOwner);
-      return true, owner, isUnitPopup;
-    end
+  local ok, owner = WoWeuCN_Interface_OwnerRegion(node);
+  if (ok) then
+    local isUnitPopup = WoWeuCN_Interface_UnitPopupMenu ~= nil
+        and rawequal(node, WoWeuCN_Interface_UnitPopupMenu)
+        and rawequal(owner, WoWeuCN_Interface_UnitPopupOwner);
+    return true, owner, isUnitPopup;
   end
   local name = node.GetName and node:GetName();
   if (type(name) == "string" and string.find(name, "^DropDownList%d+$")) then
@@ -1738,14 +1768,16 @@ function WoWeuCN_Interface_InitLiveHook()
   end
   WoWeuCN_Interface_LiveHooked = true;
   local hooked = {};
+  local setters = { "SetText", "SetFormattedText", "SetTextToFit" };
   local function hookMethods(widgetMethods, handler)
     if (type(widgetMethods) ~= "table" or hooked[widgetMethods] or type(widgetMethods.SetText) ~= "function") then
       return;
     end
     hooked[widgetMethods] = true;
-    hooksecurefunc(widgetMethods, "SetText", handler);
-    if (type(widgetMethods.SetFormattedText) == "function") then
-      hooksecurefunc(widgetMethods, "SetFormattedText", handler);
+    for i = 1, #setters do
+      if (type(widgetMethods[setters[i]]) == "function") then
+        hooksecurefunc(widgetMethods, setters[i], handler);
+      end
     end
   end
   hookMethods(methods, WoWeuCN_Interface_OnFontStringSetText);
