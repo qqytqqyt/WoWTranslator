@@ -639,7 +639,8 @@ local function WoWeuCN_Interface_IsInExcludedFrame(frame)
     if (name and (string.find(name, "CooldownViewer", 1, true)
         or name == "BuffFrame" or name == "DebuffFrame"
         or string.find(name, "CastingBar", 1, true)
-        or string.find(name, "Tooltip", 1, true))) then
+        or (string.find(name, "Tooltip", 1, true)
+            and not (name == "LFGBrowseSearchEntryTooltip" and WoWeuCN_Interface_LfgActivities)))) then
       return true;
     end
     parent = parent:GetParent();
@@ -803,6 +804,54 @@ local function WoWeuCN_Interface_BuildMapText()
   return map;
 end
 
+local function WoWeuCN_Interface_LfgCategoryName(id)
+  local info = C_LFGList.GetLfgCategoryInfo(id);
+  return type(info) == "table" and info.name or nil;
+end
+
+local function WoWeuCN_Interface_LfgShortName(id)
+  local info = C_LFGList.GetActivityInfoTable(id);
+  return type(info) == "table" and info.shortName or nil;
+end
+
+local function WoWeuCN_Interface_LfgFullName(id)
+  local info = C_LFGList.GetActivityInfoTable(id);
+  return type(info) == "table" and info.fullName or nil;
+end
+
+local function WoWeuCN_Interface_BuildLfgText()
+  local map = {};
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_LfgCategories, WoWeuCN_Interface_LfgCategoryName);
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_LfgActivityGroups, C_LFGList.GetActivityGroupInfo);
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_LfgShortNames, WoWeuCN_Interface_LfgShortName);
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_LfgActivities, WoWeuCN_Interface_LfgFullName);
+  return map;
+end
+
+local function WoWeuCN_Interface_ComposeLfgText(map, text)
+  local indent, name = string.match(text, "^(%s+)(.+)$");
+  if (name and type(map[name]) == "string") then
+    return indent .. map[name];
+  end
+  local group, open, count, close = string.match(text, "^(.-) (|c%x%x%x%x%x%x%x%x%()(.-)(%)|r)$");
+  if (group and type(map[group]) == "string") then
+    return map[group] .. " " .. open .. (WoWeuCN_Interface_CachedTranslate(count) or count) .. close;
+  end
+  return nil;
+end
+
+local function WoWeuCN_Interface_StatisticName(id)
+  local _, name = GetAchievementInfo(id);
+  return name;
+end
+
+local function WoWeuCN_Interface_BuildStatisticText()
+  local map = {};
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_StatisticCategories, GetCategoryInfo);
+  WoWeuCN_Interface_AddFlatById(map, WoWeuCN_Interface_Statistics, WoWeuCN_Interface_StatisticName);
+  return map;
+end
+
 local function WoWeuCN_Interface_SpellNameLookup()
   return (C_Spell and C_Spell.GetSpellName) or GetSpellInfo;
 end
@@ -911,9 +960,17 @@ local WoWeuCN_Interface_DbContexts = {
     event = "UPDATE_FACTION" },
   { roots = { "AuctionHouseFrame" }, data = "ItemSubClasses", build = WoWeuCN_Interface_BuildSubClassText },
   { roots = { "WorldMapFrame", "QuestMapFrame", "BattlefieldMapFrame", "MinimapCluster", "ZoneTextFrame",
-      "SubZoneTextFrame" }, data = "UiMaps", api = "C_Map", build = WoWeuCN_Interface_BuildMapText },
-  { roots = { "CommunitiesFrame" }, regions = { Zone = true, ZoneText = true, BossLocationText = true },
+      "SubZoneTextFrame", { "LFGWhoListFrame", "FilterDropdown" } },
     data = "UiMaps", api = "C_Map", build = WoWeuCN_Interface_BuildMapText },
+  { roots = { "CommunitiesFrame", "LFGWhoListFrame" },
+    regions = { Zone = true, ZoneText = true, BossLocationText = true, Variable = true },
+    data = "UiMaps", api = "C_Map", build = WoWeuCN_Interface_BuildMapText },
+  { roots = { "LFGListingFrame", "LFGBrowseFrameCategoryDropdown", "LFGBrowseFrameActivityDropdown",
+      "LFGBrowseFrame", "LFGBrowseSearchEntryTooltip" },
+    rootRegions = { LFGBrowseFrame = { ActivityName = true }, LFGBrowseSearchEntryTooltip = { [""] = true } },
+    data = "LfgActivities", api = "C_LFGList", build = WoWeuCN_Interface_BuildLfgText,
+    event = "LFG_LIST_AVAILABILITY_UPDATE", compose = WoWeuCN_Interface_ComposeLfgText },
+  { roots = { "StatisticsFrame" }, data = "Statistics", build = WoWeuCN_Interface_BuildStatisticText },
   { roots = { "ProfessionsFrame", "ProfessionsBookFrame" }, data = "RecipeNames", api = "C_TradeSkillUI",
     build = WoWeuCN_Interface_BuildProfessionText, event = "TRADE_SKILL_LIST_UPDATE",
     compose = WoWeuCN_Interface_ComposeProfessionText, names = true },
@@ -926,9 +983,12 @@ local function WoWeuCN_Interface_DbMapGet(map, text, context)
   if (value ~= nil) then
     return value;
   end
-  local open, inner, close = string.match(text, "^(|c%x%x%x%x%x%x%x%x)(.-)(|r)$");
-  if (inner and type(map[inner]) == "string") then
-    return open .. map[inner] .. close;
+  local colored = string.find(text, "|c", 1, true);
+  if (colored) then
+    local open, inner, close = string.match(text, "^(|c%x%x%x%x%x%x%x%x)(.-)(|r)$");
+    if (inner and type(map[inner]) == "string") then
+      return open .. map[inner] .. close;
+    end
   end
   if (context and context.compose) then
     local composed = context.compose(map, text);
@@ -936,19 +996,29 @@ local function WoWeuCN_Interface_DbMapGet(map, text, context)
       return composed;
     end
   end
-  local core, suffix = string.match(text, "^(.-)(|c%x%x%x%x%x%x%x%x%s*%(.*)$");
-  if (core and core ~= "") then
-    local zh = map[core];
-    if (zh) then
-      return zh .. suffix;
+  if (colored) then
+    local core, suffix = string.match(text, "^(.-)(|c%x%x%x%x%x%x%x%x%s*%(.*)$");
+    if (core and core ~= "") then
+      local zh = map[core];
+      if (zh) then
+        return zh .. suffix;
+      end
     end
   end
   return nil;
 end
 
+local function WoWeuCN_Interface_DbRootFrame(root)
+  if (type(root) == "table") then
+    local parent = _G[root[1]];
+    return type(parent) == "table" and rawget(parent, root[2]) or nil;
+  end
+  return _G[root];
+end
+
 local function WoWeuCN_Interface_DbContextRoot(context)
   for i = 1, #context.roots do
-    local root = _G[context.roots[i]];
+    local root = WoWeuCN_Interface_DbRootFrame(context.roots[i]);
     if (root) then
       return root;
     end
@@ -958,7 +1028,7 @@ end
 
 local function WoWeuCN_Interface_DbContextVisible(context)
   for i = 1, #context.roots do
-    local root = _G[context.roots[i]];
+    local root = WoWeuCN_Interface_DbRootFrame(context.roots[i]);
     if (root and root.IsVisible and root:IsVisible()) then
       return true;
     end
@@ -1001,18 +1071,24 @@ local function WoWeuCN_Interface_OwnerRegion(node)
 end
 
 local function WoWeuCN_Interface_IsUnderDbRoot(fontString, context)
-  if (context.regions) then
-    local key = type(fontString.GetParentKey) == "function" and fontString:GetParentKey();
-    if (type(key) ~= "string" or not context.regions[key]) then
-      return false;
+  local key = "";
+  if (context.regions or context.rootRegions) then
+    local parentKey = type(fontString.GetParentKey) == "function" and fontString:GetParentKey();
+    if (type(parentKey) == "string") then
+      key = parentKey;
     end
+  end
+  if (context.regions and not context.regions[key]) then
+    return false;
   end
   local parent = fontString:GetParent();
   local depth = 0;
   while (parent and depth < 20) do
     for i = 1, #context.roots do
-      if (parent == _G[context.roots[i]]) then
-        return true;
+      local root = context.roots[i];
+      if (parent == WoWeuCN_Interface_DbRootFrame(root)) then
+        local regions = context.rootRegions and context.rootRegions[root];
+        return not regions or regions[key] == true;
       end
     end
     local nextParent = parent:GetParent();
@@ -1134,6 +1210,16 @@ local function WoWeuCN_Interface_IsNameRegion(fontString)
     return true;
   end
   if (parent.Name == fontString and (parent.ItemButton or parent.Button or parent.IconFrame or parent.SubName)) then
+    return true;
+  end
+  if (parent.Name == fontString and (parent.ActivityName or (parent.Variable and parent.GuildName)
+      or (parent.Level and parent.Role))) then
+    return true;
+  end
+  if (parent.GuildName == fontString and parent.Variable) then
+    return true;
+  end
+  if (parent.Comment == fontString and (parent.MemberCount or parent.Solo)) then
     return true;
   end
   if (parent.ItemName == fontString) then
@@ -2128,7 +2214,8 @@ function WoWeuCN_Interface_OnEvent(self, event, arg1, arg2, arg3, arg4)
 
       WoWeuCN_Interface_ApplyFonts();
     end
-  elseif (event == "SKILL_LINES_CHANGED" or event == "UPDATE_FACTION" or event == "TRADE_SKILL_LIST_UPDATE") then
+  elseif (event == "SKILL_LINES_CHANGED" or event == "UPDATE_FACTION" or event == "TRADE_SKILL_LIST_UPDATE"
+      or event == "LFG_LIST_AVAILABILITY_UPDATE") then
     WoWeuCN_Interface_MarkDbTextDirty(event);
   elseif (event == "CHAT_MSG_ADDON") then
     WoWeuCN_Interface_OnAddonMessage(arg1, arg2, arg3, arg4);
